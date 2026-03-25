@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude for Physicians — 2026 Guide | AI Tools for Pros</title>
+  <meta name="description" content="How physicians are using Claude in 2026 — clinical document synthesis, protocol drafting, evidence review, and the HIPAA compliance reality every doctor needs to understand.">
+  <meta property="og:title" content="Claude for Physicians — 2026 Guide | AI Tools for Pros">
+  <meta property="og:description" content="How physicians are using Claude in 2026 — clinical document synthesis, protocol drafting, evidence review, and the HIPAA compliance reality every doctor needs to understand.">
+  <meta property="og:image" content="https://aitoolsforpros.com/og-image.jpg">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aitoolsforpros.com/claude/physicians.html">
+  <link rel="canonical" href="https://aitoolsforpros.com/claude/physicians.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { body: ['Inter','sans-serif'], heading: ['Cardo','serif'] } } } }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #111111; margin: 0; padding: 0; }
+    .font-heading { font-family: 'Cardo', serif; }
+    .nav-link { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #636363; text-decoration: none; transition: color 0.15s; }
+    .nav-link:hover { color: #111111; }
+    .nav-dropdown { position: relative; }
+    .nav-link-caret { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #636363; cursor: default; display: inline-flex; align-items: center; gap: 5px; transition: color 0.15s; user-select: none; }
+    .nav-link-caret:hover, .nav-dropdown:hover .nav-link-caret { color: #111111; }
+    .dropdown-menu { position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%); background: #ffffff; border: 1px solid #ebebeb; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.09); padding: 6px; min-width: 196px; opacity: 0; visibility: hidden; transition: opacity 0.15s, visibility 0.15s; z-index: 200; }
+    .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; }
+    .dropdown-item { display: block; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .dropdown-item:hover { background: #f5f5f5; color: #111111; }
+    .submenu-item { position: relative; }
+    .submenu-trigger { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; cursor: pointer; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .submenu-item:hover .submenu-trigger { background: #f5f5f5; color: #111111; }
+    .submenu { position: absolute; left: calc(100% + 6px); top: -6px; background: #ffffff; border: 1px solid #ebebeb; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.09); padding: 6px; min-width: 196px; opacity: 0; visibility: hidden; transition: opacity 0.15s, visibility 0.15s; z-index: 201; }
+    .submenu-item:hover .submenu { opacity: 1; visibility: visible; }
+    .submenu a { display: block; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .submenu a:hover { background: #f5f5f5; color: #111111; }
+    .prompt-block { background: #f8f9fa; border-left: 3px solid #2563EB; padding: 16px 20px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 13px; color: #333333; line-height: 1.7; margin-bottom: 20px; }
+  </style>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../site.js" defer></script>
+
+  <!-- Google Analytics — replace G-XXXXXXXXXX with your Measurement ID to activate -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Claude for Physicians — 2026 Guide",
+        "description": "How physicians are using Claude in 2026 — clinical document synthesis, protocol drafting, evidence review, and the HIPAA compliance reality every doctor needs to understand.",
+        "author": {"@type": "Person", "name": "Rich M."},
+        "publisher": {"@type": "Organization", "name": "AI Tools for Pros", "url": "https://aitoolsforpros.com"},
+        "datePublished": "2026-02-01",
+        "dateModified": "2026-03-18",
+        "mainEntityOfPage": {"@type": "WebPage", "@id": "https://aitoolsforpros.com/claude/physicians.html"},
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolsforpros.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Claude", "item": "https://aitoolsforpros.com/claude.html"},
+          {"@type": "ListItem", "position": 3, "name": "Physicians", "item": "https://aitoolsforpros.com/claude/physicians.html"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the most valuable use of Claude for physicians?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — clinical document synthesis. Claude's 200,000-token context window lets you paste a full discharge summary, specialist consultation notes, operative report, and medication list into a single session and ask for a coherent clinical narrative or a gap analysis. This is categorically different from what shorter-context tools can do. De-identify the record before uploading, and treat Claude's output as a draft requiring your clinical review."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Claude HIPAA compliant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on your plan. Standard Claude (claude.ai) does not currently offer a Business Associate Agreement (BAA), which means it cannot legally be used with patient-identifiable information (PHI) under HIPAA. Anthropic offers Claude for Enterprise, which may include data handling controls and BAA eligibility — verify this directly with Anthropic before clinical use. For most physicians, the practical workflow is to de-identify all records before using any AI tool, regardless of plan. [VERIFY DETAILS]"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Claude compare to ChatGPT for clinical documentation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on the task. Claude holds a clear edge for tasks that require reading long documents in full — complete patient records, lengthy clinical guidelines, multi-specialist notes. ChatGPT has broader plugin and integration support and is faster for shorter, high-volume tasks. For research lookup and live literature access, Perplexity AI is stronger than both. For structured transcription of clinical encounters, Otter.ai is purpose-built for that workflow."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Claude review a full patient record?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, with de-identified data. Claude can process a complete de-identified medical record — including discharge summaries, specialist notes, labs, and medication history — and produce a structured clinical summary, flag documentation gaps, or identify conditions that appear undertreated. The key guardrail is to include the instruction: do not add information that is not in the document. Without it, Claude may fill gaps with plausible but invented clinical detail."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Claude search PubMed or access live medical literature?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Claude does not have real-time web access and cannot search PubMed, UpToDate, or any live clinical database. Its training data has a knowledge cutoff, so it may not reflect the most recent trials or guideline updates. For current evidence, Perplexity AI provides cited, real-time search results. Use Claude for synthesizing evidence you supply, not for discovering it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Claude worth the cost for physicians?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, if you regularly produce complex clinical documentation. Physicians who use Claude to draft department protocols, synthesize multi-study evidence, or create patient education materials from clinical guidelines typically recover the $20/month Pro cost in a single hour of saved work. The tool is less useful for physicians who primarily need real-time information lookup or structured clinical note templates — other tools are better suited for those workflows. [VERIFY DETAILS]"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<!-- NAV -->
+<nav style="padding:18px min(2rem,8vw);position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;justify-content:space-between;">
+  <a href="../index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+    <img src="../logo.svg" width="32" height="32" alt="AI Tools for Pros" style="border-radius:8px;display:block;">
+    <span style="font-size:13px;font-weight:500;color:#111111;">AI Tools for Pros</span>
+  </a>
+  <div id="nav-desktop" style="display:flex;align-items:center;gap:36px;">
+    <a href="../our-process.html" class="nav-link">Our Process</a>
+    <div class="nav-dropdown">
+      <span class="nav-link-caret">AI Tools <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="dropdown-menu">
+        <a href="../chatgpt.html" class="dropdown-item">ChatGPT</a>
+        <a href="../claude.html" class="dropdown-item">Claude</a>
+        <a href="../perplexity.html" class="dropdown-item">Perplexity AI</a>
+        <a href="../gemini.html" class="dropdown-item">Google Gemini</a>
+        <a href="../copilot.html" class="dropdown-item">Microsoft Copilot</a>
+        <a href="../midjourney.html" class="dropdown-item">Midjourney</a>
+        <a href="../cursor.html" class="dropdown-item">Cursor</a>
+        <a href="../notion-ai.html" class="dropdown-item">Notion AI</a>
+        <a href="../grammarly.html" class="dropdown-item">Grammarly</a>
+        <a href="../otter.html" class="dropdown-item">Otter.ai</a>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <span class="nav-link-caret">Professions <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="dropdown-menu">
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../legal.html">Legal Counsel <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/legal.html">ChatGPT</a>
+            <a href="../claude/legal.html">Claude</a>
+            <a href="../perplexity/legal.html">Perplexity AI</a>
+            <a href="../gemini/legal.html">Google Gemini</a>
+            <a href="../copilot/legal.html">Microsoft Copilot</a>
+            <a href="../grammarly/legal.html">Grammarly</a>
+            <a href="../notion-ai/legal.html">Notion AI</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../physicians.html">Physicians <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/physicians.html">ChatGPT</a>
+            <a href="../claude/physicians.html">Claude</a>
+            <a href="../perplexity/physicians.html">Perplexity AI</a>
+            <a href="../copilot/physicians.html">Microsoft Copilot</a>
+            <a href="../otter/physicians.html">Otter.ai</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../real-estate.html">Real Estate <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/real-estate.html">ChatGPT</a>
+            <a href="../claude/real-estate.html">Claude</a>
+            <a href="../gemini/real-estate.html">Google Gemini</a>
+            <a href="../copilot/real-estate.html">Microsoft Copilot</a>
+            <a href="../grammarly/real-estate.html">Grammarly</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../engineers.html">Engineers <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/engineers.html">ChatGPT</a>
+            <a href="../claude/engineers.html">Claude</a>
+            <a href="../cursor/engineers.html">Cursor</a>
+            <a href="../copilot/engineers.html">Microsoft Copilot</a>
+            <a href="../notion-ai/engineers.html">Notion AI</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../finance.html">Finance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/finance.html">ChatGPT</a>
+            <a href="../claude/finance.html">Claude</a>
+            <a href="../perplexity/finance.html">Perplexity AI</a>
+            <a href="../copilot/finance.html">Microsoft Copilot</a>
+            <a href="../gemini/finance.html">Google Gemini</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../insurance.html">Insurance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/insurance.html">ChatGPT</a>
+            <a href="../claude/insurance.html">Claude</a>
+            <a href="../copilot/insurance.html">Microsoft Copilot</a>
+            <a href="../perplexity/insurance.html">Perplexity AI</a>
+            <a href="../grammarly/insurance.html">Grammarly</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../architects.html">Architects <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/architects.html">ChatGPT</a>
+            <a href="../claude/architects.html">Claude</a>
+            <a href="../gemini/architects.html">Google Gemini</a>
+            <a href="../midjourney/architects.html">Midjourney</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../creatives.html">Creatives <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/creatives.html">ChatGPT</a>
+            <a href="../claude/creatives.html">Claude</a>
+            <a href="../midjourney/creatives.html">Midjourney</a>
+            <a href="../grammarly/creatives.html">Grammarly</a>
+            <a href="../notion-ai/creatives.html">Notion AI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="../newsletter.html" class="nav-link">Newsletter</a>
+  </div>
+</nav>
+
+<main style="max-width:860px;margin:0 auto;padding:28px 24px 56px;">
+
+  <!-- Breadcrumb -->
+  <div style="font-size:12px;color:#636363;margin:8px 0 18px;">
+    <a href="../index.html" style="color:#636363;text-decoration:none;" onmouseover="this.style.color='#111111'" onmouseout="this.style.color='#636363'">Home</a>
+    <span style="margin:0 8px;color:#c0c0c0;">/</span>
+    <a href="../claude.html" style="color:#636363;text-decoration:none;" onmouseover="this.style.color='#111111'" onmouseout="this.style.color='#636363'">Claude</a>
+    <span style="margin:0 8px;color:#c0c0c0;">/</span>
+    <span style="color:#111111;">Physicians</span>
+  </div>
+
+  <!-- Page header -->
+  <p style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#636363;margin:0 0 10px;">Claude · Physicians</p>
+  <h1 class="font-heading" style="font-size:40px;line-height:1.12;margin:0 0 10px;">Claude for Physicians: What Actually Works in 2026</h1>
+
+  <p style="font-size:17px;line-height:1.7;color:#636363;margin:0 0 14px;">
+    Claude is most useful to physicians when the task involves reading something long and dense and turning it into something actionable. Full patient records, multi-specialist consultation notes, lengthy clinical guidelines, and protocol drafts are where it earns its keep. Knowing where it falls short is just as important.
+  </p>
+
+  <p style="font-size:13px;color:#636363;margin:0 0 20px;">By <strong style="color:#111111;font-weight:600;">Rich M.</strong>&nbsp;&middot;&nbsp;Fact-checked by <strong style="color:#111111;font-weight:600;">Rob M.</strong>&nbsp;&middot;&nbsp;March 19, 2026&nbsp;&middot;&nbsp;March 19, 2026<span id="reading-time"></span></p>
+
+  <!-- Verdict banner -->
+  <div style="background:#eff6ff;border-left:4px solid #2563EB;border-radius:10px;padding:18px 22px;margin:0 0 28px;max-width:760px;">
+    <div style="display:flex;align-items:center;gap:12px;margin:0 0 8px;flex-wrap:wrap;">
+      <span class="verdict-badge-recommended">Recommended</span>
+    </div>
+    <p style="font-size:14px;color:#1e40af;line-height:1.55;margin:0;"><strong>Bottom line:</strong> Claude is the strongest general-purpose AI for physicians who work with long clinical documents. Its 200K context window enables full-record analysis that shorter-context tools cannot match. The HIPAA constraint is real: de-identify everything before it enters any AI tool, and verify your plan's BAA status before clinical use.</p>
+  </div>
+
+  <!-- Consistency blocks -->
+  <div style="background:#ffffff;border:1px solid #f0f0f0;border-radius:12px;padding:24px 28px;margin-bottom:20px;max-width:760px;">
+    <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#2563EB;margin:0 0 14px;">Key Takeaway</p>
+    <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+      <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> The 200K context window lets you paste a complete de-identified record and get a structured clinical summary in minutes.</li>
+      <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> Claude follows complex formatting instructions well, which matters for operative reports, H&amp;Ps, and protocol documents.</li>
+      <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> Standard claude.ai does not offer a BAA. Do not input PHI without verifying your plan's compliance status first.</li>
+      <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> Claude has no live access to PubMed, UpToDate, or current guidelines. Supply the literature yourself for synthesis tasks.</li>
+      <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> All AI-generated clinical content requires physician review before use in any patient care context.</li>
+    </ul>
+  </div>
+
+  <!-- Best For / Avoid If grid -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin-bottom:20px;">
+    <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:20px 24px;">
+      <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#166534;margin:0 0 12px;">Best For</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+        <li style="font-size:13px;color:#166534;">De-identified full-record synthesis and gap analysis</li>
+        <li style="font-size:13px;color:#166534;">Protocol and policy drafting for departments</li>
+        <li style="font-size:13px;color:#166534;">Synthesizing evidence from multiple study abstracts</li>
+        <li style="font-size:13px;color:#166534;">Drafting patient education materials from guidelines</li>
+        <li style="font-size:13px;color:#166534;">Complex H&amp;P and operative report structuring</li>
+      </ul>
+    </div>
+    <div style="background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:20px 24px;">
+      <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#991b1b;margin:0 0 12px;">Avoid If</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+        <li style="font-size:13px;color:#991b1b;">You need real-time literature search or guideline lookup</li>
+        <li style="font-size:13px;color:#991b1b;">Your plan does not have a confirmed BAA for PHI</li>
+        <li style="font-size:13px;color:#991b1b;">You need medical imaging or radiology image analysis</li>
+        <li style="font-size:13px;color:#991b1b;">You need structured clinical note templates or EHR integration</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Mini Workflow -->
+  <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;padding:24px 28px;max-width:760px;margin-bottom:28px;">
+    <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#1d4ed8;margin:0 0 12px;">If You Only Do One Thing</p>
+    <p style="font-size:13px;color:#1e40af;margin:0 0 12px;">Use Claude to draft your next department protocol from scratch.</p>
+    <ol style="padding:0 0 0 18px;margin:0;display:flex;flex-direction:column;gap:6px;">
+      <li style="font-size:13px;color:#1e40af;">Paste the relevant clinical guideline section or consensus statement into Claude.</li>
+      <li style="font-size:13px;color:#1e40af;">Ask: "Draft a clinical protocol for [procedure or condition] including indication, contraindications, step-by-step procedure, monitoring parameters, escalation criteria, and documentation requirements. Format as a numbered procedure document."</li>
+      <li style="font-size:13px;color:#1e40af;">Review the draft with your department, correct any clinical inaccuracies, and adapt to your facility's specific requirements.</li>
+      <li style="font-size:13px;color:#1e40af;">Use it as a structured starting point — not a finished product.</li>
+    </ol>
+  </div>
+
+  <!-- Quick Facts Bar -->
+  <div class="fact-bar" style="max-width:860px;margin:0 0 28px;">
+    <div class="fact-item">
+      <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Made By</p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Anthropic</p>
+    </div>
+    <div class="fact-item">
+      <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Best For</p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Long clinical document analysis</p>
+    </div>
+    <div class="fact-item">
+      <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Pricing</p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Free / Pro $20/mo [VERIFY DETAILS]</p>
+    </div>
+    <div class="fact-item">
+      <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Context Window</p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">200,000 tokens</p>
+    </div>
+    <div class="fact-item">
+      <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">HIPAA BAA</p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Enterprise only [VERIFY DETAILS]</p>
+    </div>
+  </div>
+
+  <!-- HIPAA notice -->
+  <div style="background:#fef3c7;border-left:4px solid #f59e0b;padding:18px 22px;border-radius:8px;margin:0 0 28px;max-width:760px;">
+    <p style="font-size:13px;font-weight:700;color:#92400e;margin:0 0 6px;">HIPAA Notice</p>
+    <p style="font-size:13px;color:#78350f;margin:0;line-height:1.65;">Standard claude.ai does not provide a Business Associate Agreement (BAA) and should not be used with patient-identifiable information (PHI). De-identify all records before use. If your organization requires a BAA, contact Anthropic about Enterprise options and confirm the arrangement in writing before use in any clinical setting. AI tools are not medical devices and cannot replace clinical judgment.</p>
+  </div>
+
+  <!-- Main content intro -->
+  <p style="margin:0 0 12px;color:#111111;line-height:1.65;">
+    Claude is Anthropic's flagship AI assistant, built with a deliberate emphasis on careful reasoning and handling long, complex text without losing context. For physicians, the practical advantage is not writing quality alone. It is the ability to ingest a complete clinical record, a set of specialist notes, or a full clinical guideline and produce something useful from the entire document, not just the last few pages.
+  </p>
+
+  <p style="margin:0 0 28px;color:#111111;line-height:1.65;">
+    This guide covers where Claude genuinely helps in a clinical setting and where it does not, based on real physician workflows rather than feature comparisons. The HIPAA limitation is not a footnote here. It is the first filter for any clinical use case.
+  </p>
+
+  <!-- H2 #1 — Full Record Analysis -->
+  <h2 class="font-heading" style="font-size:28px;margin:0 0 10px;">Full Clinical Record Analysis: Where the 200K Window Changes Things</h2>
+  <p style="margin:0 0 16px;color:#636363;line-height:1.7;">
+    A complete patient record can run 30 to 80 pages once you account for the discharge summary, specialist consultation notes, operative reports, lab trends, and medication history. Most AI tools hit their context limit somewhere in that stack. Claude processes the full document in a single session.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Documentation gap analysis</h3>
+  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+    Paste a complete de-identified record and ask Claude to identify conditions mentioned but not addressed in the documented plan, discrepancies between specialist notes and the primary team's assessment, and gaps in the documented medication reconciliation. This is useful for chart review, quality improvement, and case preparation, not for real-time clinical decisions.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Clinical narrative from fragmented notes</h3>
+  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+    Patients transferred across facilities often arrive with fragmented records from three different EHR systems, inconsistent problem list formats, and specialist notes written in isolation. Claude can read the full stack and produce a coherent clinical narrative with a unified timeline, which saves significant time at the start of a complex case.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Prompt to try: full record review</h3>
+  <div class="prompt-block">Goal: Structured summary of a complex de-identified patient record
+Input: Complete de-identified record (discharge summary, specialist notes, labs, medications)
+Ask Claude: "Review the following de-identified patient record and provide: 1) a timeline of key clinical events in chronological order, 2) the primary working diagnoses and their documented status, 3) any gaps or inconsistencies in the documented history or plan, 4) conditions that appear present but not formally addressed, and 5) a one-paragraph clinical summary. Do not add information that is not in the document."
+Output: Structured report with numbered sections</div>
+  <p style="margin:0 0 24px;color:#111111;line-height:1.7;">
+    The guardrail at the end is critical for clinical use. Without it, Claude may fill documentation gaps with plausible-sounding but fabricated clinical details. For medical records, you want only what is in the text.
+  </p>
+
+  <!-- H2 #2 — Evidence Synthesis -->
+  <h2 class="font-heading" style="font-size:28px;margin:0 0 10px;">Evidence Synthesis for Clinical Decisions</h2>
+  <p style="margin:0 0 16px;color:#636363;line-height:1.7;">
+    Claude cannot search PubMed or access live databases, but it is genuinely useful for synthesizing literature you supply. Pasting three to five study abstracts and asking for a structured summary with grade of evidence is a task where Claude outperforms most tools.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Multi-study synthesis for rounds preparation</h3>
+  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+    Before a case discussion or journal club, paste the relevant study abstracts or guideline excerpts into Claude and ask for a structured synthesis. Claude will summarize each study's population, intervention, primary outcome, limitations, and level of evidence, then provide an overall recommendation with the evidence grade. This is considerably faster than reading each abstract in sequence and writing your own notes.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Prompt to try: clinical evidence synthesis</h3>
+  <div class="prompt-block">Goal: Structured evidence summary for a treatment decision
+Input: 3-5 study abstracts or guideline excerpts
+Ask Claude: "I am evaluating treatment options for [CONDITION] in [PATIENT POPULATION]. Below are abstracts from recent studies. For each study: summarize the population, intervention, primary outcome, and key limitations. Then provide an overall synthesis and a recommendation with the strength of evidence (using GRADE or Oxford levels). Flag if the evidence is insufficient to support a clear recommendation. Studies: [PASTE ABSTRACTS]"
+Output: Structured table or numbered sections per study, followed by synthesis paragraph</div>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Guideline section to patient-friendly explanation</h3>
+  <p style="margin:0 0 24px;color:#111111;line-height:1.7;">
+    Copy a relevant section of a clinical guideline and ask Claude to translate it into plain language for a specific patient population, specifying reading level and any cultural considerations. The output is a usable draft patient education document, not a finished one. Review it for clinical accuracy and have it approved through your institution's patient education process before distribution.
+  </p>
+
+  <!-- H2 #3 — Protocol and Documentation Drafting -->
+  <h2 class="font-heading" style="font-size:28px;margin:0 0 10px;">Protocol and Clinical Documentation Drafting</h2>
+  <p style="margin:0 0 16px;color:#636363;line-height:1.7;">
+    Claude follows multi-step formatting instructions reliably, which matters for structured clinical documents. Department protocols, quality improvement checklists, and complex H&amp;P templates are tasks where the formatting precision pays off.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Department protocol from guideline source</h3>
+  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+    Paste the relevant ACC/AHA, IDSA, or other consensus guideline section and ask Claude to draft a department-specific protocol in a numbered format. This gives you a strong structural starting point that your team can revise for local facility requirements, formulary constraints, and department norms. Claude's output handles technical medical language accurately, though clinical review remains essential before any protocol goes into use.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Prompt to try: department protocol draft</h3>
+  <div class="prompt-block">Goal: Draft a clinical protocol for department use
+Input: Relevant guideline text or consensus statement
+Ask Claude: "Draft a clinical protocol for [PROCEDURE OR CONDITION MANAGEMENT] for a [SPECIALTY] department. Include: indication, contraindications, step-by-step procedure, monitoring parameters, escalation criteria, and documentation requirements. Format as a numbered procedure document with clear section headers. Note any areas where local adaptation is needed."
+Output: Numbered protocol document with section headers</div>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">H&amp;P and operative report structuring</h3>
+  <p style="margin:0 0 24px;color:#111111;line-height:1.7;">
+    Claude can take a set of clinical notes or a dictated narrative and restructure it into a standard H&amp;P format with appropriate sections. For operative reports, you can describe the procedure and key decision points in plain language and ask Claude to draft a formal operative note template. The result requires physician review and editing, but the structural scaffolding is accurate.
+  </p>
+
+  <!-- H2 #4 — Limitations -->
+  <h2 class="font-heading" style="font-size:28px;margin:0 0 10px;">Where Claude Falls Short for Physicians</h2>
+  <p style="margin:0 0 16px;color:#636363;line-height:1.7;">
+    The limitations here are not minor caveats. They define which clinical tasks Claude is and is not appropriate for.
+  </p>
+
+  <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:28px;">
+    <div style="border:1px solid #fecaca;border-radius:10px;padding:18px 20px;background:#fef2f2;">
+      <p style="font-size:14px;font-weight:700;color:#991b1b;margin:0 0 6px;">No live literature access</p>
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.65;">Claude cannot search PubMed, UpToDate, or any clinical database. Its training data has a cutoff date, so recent trials, updated guidelines, and drug approvals after that date will not appear in its responses. For current evidence, use <a href="../perplexity.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity AI</a> or access primary literature directly.</p>
+    </div>
+    <div style="border:1px solid #fecaca;border-radius:10px;padding:18px 20px;background:#fef2f2;">
+      <p style="font-size:14px;font-weight:700;color:#991b1b;margin:0 0 6px;">No imaging or radiology analysis</p>
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.65;">Claude is a text-based tool. It cannot analyze DICOM images, X-rays, CT scans, or pathology slides. It can discuss radiology reports in text form, but it has no image interpretation capability.</p>
+    </div>
+    <div style="border:1px solid #fecaca;border-radius:10px;padding:18px 20px;background:#fef2f2;">
+      <p style="font-size:14px;font-weight:700;color:#991b1b;margin:0 0 6px;">HIPAA and PHI restrictions</p>
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.65;">Standard claude.ai does not provide a BAA and cannot legally be used with PHI. This is a hard constraint, not a general caution. De-identify all records before use, and verify your organization's policy on AI data handling before any clinical deployment.</p>
+    </div>
+    <div style="border:1px solid #fecaca;border-radius:10px;padding:18px 20px;background:#fef2f2;">
+      <p style="font-size:14px;font-weight:700;color:#991b1b;margin:0 0 6px;">Prompt quality drives output quality</p>
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.65;">Claude produces generic results with vague instructions. The structured prompts in this guide work because they are specific. Physicians who try Claude once with a casual question and get a disappointing result are often using it the wrong way, not experiencing its actual ceiling.</p>
+    </div>
+  </div>
+
+  <!-- Comparison Table -->
+  <h2 class="font-heading" style="font-size:28px;margin:0 0 14px;">How Claude Compares to Other AI Tools for Physicians</h2>
+  <div style="overflow-x:auto;margin-bottom:32px;">
+    <table style="width:100%;border-collapse:collapse;font-size:14px;">
+      <thead>
+        <tr style="background:#f9fafb;border-bottom:2px solid #e5e7eb;">
+          <th style="text-align:left;padding:12px 14px;color:#374151;font-weight:700;">Tool</th>
+          <th style="text-align:left;padding:12px 14px;color:#374151;font-weight:700;">Strongest Use Case</th>
+          <th style="text-align:left;padding:12px 14px;color:#374151;font-weight:700;">Context Window</th>
+          <th style="text-align:left;padding:12px 14px;color:#374151;font-weight:700;">Live Web Access</th>
+          <th style="text-align:left;padding:12px 14px;color:#374151;font-weight:700;">HIPAA BAA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#eff6ff;border-bottom:1px solid #bfdbfe;">
+          <td style="padding:12px 14px;font-weight:700;color:#1e40af;">Claude</td>
+          <td style="padding:12px 14px;color:#1e40af;">Long document analysis, protocol drafting</td>
+          <td style="padding:12px 14px;color:#1e40af;">200,000 tokens</td>
+          <td style="padding:12px 14px;color:#1e40af;">No</td>
+          <td style="padding:12px 14px;color:#1e40af;">Enterprise only [VERIFY DETAILS]</td>
+        </tr>
+        <tr style="border-bottom:1px solid #e5e7eb;">
+          <td style="padding:12px 14px;font-weight:600;color:#111111;">ChatGPT</td>
+          <td style="padding:12px 14px;color:#374151;">Broad drafting, integrations</td>
+          <td style="padding:12px 14px;color:#374151;">128,000 tokens</td>
+          <td style="padding:12px 14px;color:#374151;">Yes (Pro)</td>
+          <td style="padding:12px 14px;color:#374151;">Enterprise [VERIFY DETAILS]</td>
+        </tr>
+        <tr style="border-bottom:1px solid #e5e7eb;">
+          <td style="padding:12px 14px;font-weight:600;color:#111111;">Perplexity AI</td>
+          <td style="padding:12px 14px;color:#374151;">Real-time literature and guideline search</td>
+          <td style="padding:12px 14px;color:#374151;">Standard</td>
+          <td style="padding:12px 14px;color:#374151;">Yes (core feature)</td>
+          <td style="padding:12px 14px;color:#374151;">Not offered [VERIFY DETAILS]</td>
+        </tr>
+        <tr style="border-bottom:1px solid #e5e7eb;">
+          <td style="padding:12px 14px;font-weight:600;color:#111111;">Microsoft Copilot</td>
+          <td style="padding:12px 14px;color:#374151;">Microsoft 365 integration, clinical admin</td>
+          <td style="padding:12px 14px;color:#374151;">Standard</td>
+          <td style="padding:12px 14px;color:#374151;">Yes</td>
+          <td style="padding:12px 14px;color:#374151;">Enterprise [VERIFY DETAILS]</td>
+        </tr>
+        <tr style="border-bottom:1px solid #e5e7eb;">
+          <td style="padding:12px 14px;font-weight:600;color:#111111;">Otter.ai</td>
+          <td style="padding:12px 14px;color:#374151;">Clinical encounter transcription</td>
+          <td style="padding:12px 14px;color:#374151;">N/A (audio)</td>
+          <td style="padding:12px 14px;color:#374151;">No</td>
+          <td style="padding:12px 14px;color:#374151;">Yes [VERIFY DETAILS]</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FAQ -->
+  <h2 class="font-heading" style="font-size:28px;margin:0 0 20px;">Frequently Asked Questions</h2>
+  <div style="display:flex;flex-direction:column;gap:0;margin-bottom:32px;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="padding:20px 24px;border-bottom:1px solid #e5e7eb;">
+      <h3 itemprop="name" style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">What is the most valuable use of Claude for physicians?</h3>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text" style="font-size:14px;color:#374151;margin:0;line-height:1.65;">Yes — clinical document synthesis. Claude's 200,000-token context window lets you paste a full discharge summary, specialist consultation notes, operative report, and medication list into a single session and ask for a coherent clinical narrative or a gap analysis. This is categorically different from what shorter-context tools can do. De-identify the record before uploading, and treat Claude's output as a draft requiring your clinical review.</p>
+      </div>
+    </div>
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="padding:20px 24px;border-bottom:1px solid #e5e7eb;">
+      <h3 itemprop="name" style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Is Claude HIPAA compliant?</h3>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text" style="font-size:14px;color:#374151;margin:0;line-height:1.65;">It depends on your plan. Standard Claude (claude.ai) does not currently offer a Business Associate Agreement (BAA), which means it cannot legally be used with patient-identifiable information (PHI) under HIPAA. Anthropic offers Claude for Enterprise, which may include data handling controls and BAA eligibility. Verify this directly with Anthropic before clinical use. For most physicians, the practical workflow is to de-identify all records before using any AI tool, regardless of plan. [VERIFY DETAILS]</p>
+      </div>
+    </div>
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="padding:20px 24px;border-bottom:1px solid #e5e7eb;">
+      <h3 itemprop="name" style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">How does Claude compare to ChatGPT for clinical documentation?</h3>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text" style="font-size:14px;color:#374151;margin:0;line-height:1.65;">It depends on the task. Claude holds a clear edge for tasks that require reading long documents in full — complete patient records, lengthy clinical guidelines, multi-specialist notes. <a href="../chatgpt.html" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a> has broader integration support and performs better for shorter, high-volume tasks. For research lookup and live literature access, Perplexity AI is stronger than both. For structured transcription of clinical encounters, <a href="../otter.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Otter.ai</a> is purpose-built for that workflow.</p>
+      </div>
+    </div>
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="padding:20px 24px;border-bottom:1px solid #e5e7eb;">
+      <h3 itemprop="name" style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Can Claude review a full patient record?</h3>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text" style="font-size:14px;color:#374151;margin:0;line-height:1.65;">Yes, with de-identified data. Claude can process a complete de-identified medical record — including discharge summaries, specialist notes, labs, and medication history — and produce a structured clinical summary, flag documentation gaps, or identify conditions that appear undertreated. The key guardrail is to include: "Do not add information that is not in the document." Without it, Claude may fill gaps with plausible but fabricated clinical detail.</p>
+      </div>
+    </div>
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="padding:20px 24px;border-bottom:1px solid #e5e7eb;">
+      <h3 itemprop="name" style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Can Claude search PubMed or access live medical literature?</h3>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text" style="font-size:14px;color:#374151;margin:0;line-height:1.65;">No. Claude does not have real-time web access and cannot search PubMed, UpToDate, or any live clinical database. Its training data has a knowledge cutoff, so it may not reflect the most recent trials or guideline updates. For current evidence, Perplexity AI provides cited, real-time search results. Use Claude for synthesizing evidence you supply, not for discovering it.</p>
+      </div>
+    </div>
+
+    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="padding:20px 24px;">
+      <h3 itemprop="name" style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Is Claude worth the cost for physicians?</h3>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text" style="font-size:14px;color:#374151;margin:0;line-height:1.65;">Yes, if you regularly produce complex clinical documentation. Physicians who use Claude to draft department protocols, synthesize multi-study evidence, or create patient education materials from clinical guidelines typically recover the Pro subscription cost in a single hour of saved work. The tool is less useful if you primarily need real-time information lookup or structured EHR-integrated note templates — other tools are better suited for those workflows. [VERIFY DETAILS]</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Sources Checked -->
+  <h2 class="font-heading" style="font-size:24px;margin:0 0 16px;">Sources Checked</h2>
+  <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px;">
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <div style="flex-shrink:0;width:28px;height:28px;border-radius:50%;background:#dbeafe;color:#2563eb;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">1</div>
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.6;">Anthropic — Claude model card and acceptable use policy (claude.ai)</p>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <div style="flex-shrink:0;width:28px;height:28px;border-radius:50%;background:#dbeafe;color:#2563eb;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">2</div>
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.6;">Anthropic — Claude for Enterprise plan documentation and data privacy terms [VERIFY DETAILS]</p>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <div style="flex-shrink:0;width:28px;height:28px;border-radius:50%;background:#dbeafe;color:#2563eb;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">3</div>
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.6;">Anthropic — Claude context window and technical specifications (anthropic.com)</p>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <div style="flex-shrink:0;width:28px;height:28px;border-radius:50%;background:#dbeafe;color:#2563eb;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">4</div>
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.6;">HHS.gov — HIPAA guidance on the use of AI tools and protected health information in clinical settings</p>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <div style="flex-shrink:0;width:28px;height:28px;border-radius:50%;background:#dbeafe;color:#2563eb;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">5</div>
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.6;">JAMA Network — Research on AI documentation burden reduction in clinical practice</p>
+    </div>
+  </div>
+
+  <!-- What Most Reviews Miss -->
+  <h2 class="font-heading" style="font-size:24px;margin:0 0 16px;">What Most Reviews Miss</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-bottom:20px;">
+    <div style="border:1px solid #e5e7eb;border-radius:8px;padding:16px;">
+      <h4 style="font-size:14px;font-weight:700;color:#111111;margin:0 0 8px;">The context window is the differentiator, not the model</h4>
+      <p style="font-size:13px;color:#374151;margin:0;line-height:1.6;">Most comparisons focus on writing quality. For physicians, the meaningful difference is that Claude can ingest an entire complex medical record in one session. You cannot do that with a shorter-context tool without chunking, and chunking loses the cross-document connections that matter most.</p>
+    </div>
+    <div style="border:1px solid #e5e7eb;border-radius:8px;padding:16px;">
+      <h4 style="font-size:14px;font-weight:700;color:#111111;margin:0 0 8px;">Your de-identification process matters more than the tool you choose</h4>
+      <p style="font-size:13px;color:#374151;margin:0;line-height:1.6;">Every physician using AI needs a consistent, documented de-identification workflow before touching any AI tool. The choice between Claude and ChatGPT is secondary to having a reliable process for removing PHI before any record enters any AI interface. This is where clinical AI deployments fail most often, and it is rarely covered in tool reviews.</p>
+    </div>
+    <div style="border:1px solid #e5e7eb;border-radius:8px;padding:16px;">
+      <h4 style="font-size:14px;font-weight:700;color:#111111;margin:0 0 8px;">Claude is more calibrated about what it does not know</h4>
+      <p style="font-size:13px;color:#374151;margin:0;line-height:1.6;">In clinical contexts, how a tool handles uncertainty matters as much as accuracy. Claude is more likely to say "the evidence in the documents you provided does not address this question" rather than confidently generating a plausible but incorrect clinical statement. That calibration is particularly important in medical settings.</p>
+    </div>
+  </div>
+  <div style="background:#eff6ff;border-radius:10px;padding:20px 24px;margin-bottom:32px;">
+    <p style="font-size:15px;font-style:italic;color:#1e40af;margin:0;line-height:1.6;">"Use Claude for the document you cannot read fast enough, not for the question you could look up in UpToDate."</p>
+  </div>
+
+  <!-- Related Guides -->
+  <h2 class="font-heading" style="font-size:24px;margin:0 0 16px;">Related Guides</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:40px;">
+    <a href="../claude.html" style="display:block;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;text-decoration:none;background:#fff;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
+      <p style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#9ca3af;margin:0 0 4px;">Claude</p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;line-height:1.4;">Claude Hub: All Professions</p>
+    </a>
+    <a href="../chatgpt/physicians.html" style="display:block;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;text-decoration:none;background:#fff;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
+      <p style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#9ca3af;margin:0 0 4px;">ChatGPT</p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;line-height:1.4;">ChatGPT for Physicians</p>
+    </a>
+    <a href="../copilot/physicians.html" style="display:block;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;text-decoration:none;background:#fff;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
+      <p style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#9ca3af;margin:0 0 4px;"><a href="../copilot.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Microsoft Copilot</a></p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;line-height:1.4;">Copilot for Physicians</p>
+    </a>
+    <a href="../otter/physicians.html" style="display:block;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;text-decoration:none;background:#fff;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
+      <p style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#9ca3af;margin:0 0 4px;">Otter.ai</p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;line-height:1.4;">Otter.ai for Physicians</p>
+    </a>
+    <a href="../claude/legal.html" style="display:block;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;text-decoration:none;background:#fff;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
+      <p style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#9ca3af;margin:0 0 4px;">Claude</p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;line-height:1.4;">Claude for Legal Counsel</p>
+    </a>
+      <a href="../physicians.html" style="display:block;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;text-decoration:none;background:#fff;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
+      <p style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#9ca3af;margin:0 0 4px;">All Physicians Tools</p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;line-height:1.4;">All AI tools for physicians</p>
+    </a>
+</div>
+
+</main>
+
+<!-- AUTHOR PROFILE CARD -->
+<section style="padding:48px 24px;background:#f9fafb;border-top:1px solid #e5e7eb;">
+  <div style="max-width:860px;margin:0 auto;">
+    <div style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:28px 32px;display:flex;align-items:flex-start;gap:20px;">
+      <div style="flex-shrink:0;">
+        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="border-radius:50%;display:block;">
+          <rect width="72" height="72" rx="36" fill="#f0f4ff"/>
+          <circle cx="36" cy="28" r="12" fill="#bfcfff"/>
+          <ellipse cx="36" cy="56" rx="20" ry="14" fill="#bfcfff"/>
+          <circle cx="36" cy="28" r="10" fill="#d6e0ff">
+            <animate attributeName="r" values="10;10.5;10" dur="4s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+      </div>
+      <div>
+        <p style="font-size:14px;font-weight:600;color:#111111;margin:0 0 4px;">Rich M.</p>
+        <p style="font-size:12px;color:#9ca3af;margin:0 0 10px;">Editor, AI Tools for Pros</p>
+        <p style="font-size:13px;color:#636363;line-height:1.7;margin:0 0 10px;">I test AI tools inside real professional workflows and write honest, first-person assessments. My goal is straightforward guidance on AI tools, without agenda or affiliate incentives.</p>
+        <a href="../about-us.html" style="font-size:12px;color:#2563EB;text-decoration:none;font-weight:500;" onmouseover="this.style.color='#1d4ed8'" onmouseout="this.style.color='#2563EB'">Read more about our editorial process</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#07091a;border-radius:28px 28px 0 0;padding:56px min(6.5rem,8vw);">
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:52px;">
+
+    <!-- Directory -->
+    <div>
+      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Directory</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li><a href="../legal.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Legal Counsel</a></li>
+        <li><a href="../architects.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Architects</a></li>
+        <li><a href="../physicians.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Physicians</a></li>
+        <li><a href="../engineers.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Engineers</a></li>
+        <li><a href="../finance.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Finance</a></li>
+        <li><a href="../creatives.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Creatives</a></li>
+      </ul>
+    </div>
+
+    <!-- Company -->
+    <div>
+      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Company</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li><a href="../about-us.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">About</a></li>
+        <li><a href="../our-process.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Our Process</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div>
+      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Resources</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li><a href="../newsletter.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Newsletter</a></li>
+      </ul>
+    </div>
+
+    <!-- Legal -->
+    <div>
+      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Legal</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li><a href="../privacy-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Privacy Policy</a></li>
+        <li><a href="../cookie-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Cookie Policy</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div style="border-top:1px solid #111e38;margin-bottom:48px;"></div>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;">
+    <div>
+      <p style="color:#1e2a45;font-size:11px;font-weight:500;margin:0 0 4px;letter-spacing:0.05em;opacity:0.6;">AI Tools for Pros</p>
+      <p style="font-family:'Cardo',Georgia,serif;color:#2563EB;font-size:48px;font-weight:700;margin:0 0 10px;line-height:1;">2026.</p>
+      <p style="color:#4a5568;font-size:13px;margin:0;">Join 15,000+ professionals receiving our monthly tool audit.</p>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="position:relative;display:flex;align-items:center;">
+        <input type="email" placeholder="professional@email.com" style="background:#0d1228;color:#4a5568;font-size:13px;padding:13px 48px 13px 18px;border-radius:999px;border:1px solid #1a2444;outline:none;width:248px;font-family:'Inter',sans-serif;">
+        <div style="position:absolute;right:8px;width:28px;height:28px;background:#1a2444;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="#4a5568" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+      <button style="background:#ffffff;color:#111111;font-size:13px;font-weight:500;padding:13px 24px;border-radius:999px;border:none;cursor:pointer;font-family:'Inter',sans-serif;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='#ffffff'">Subscribe</button>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:28px;right:28px;width:44px;height:44px;background:#111111;color:#ffffff;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.2);z-index:999;opacity:0;transition:opacity 0.25s,background 0.15s,transform 0.15s;pointer-events:none;" onmouseover="this.style.background='#2563eb';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#111111';this.style.transform='translateY(0)'">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<script>
+(function(){
+  var btn=document.getElementById('btt');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>300){btn.style.opacity='1';btn.style.pointerEvents='auto';}
+    else{btn.style.opacity='0';btn.style.pointerEvents='none';}
+  },{passive:true});
+})();
+</script>
+</body>
+</html>

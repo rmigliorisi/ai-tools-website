@@ -1,0 +1,1709 @@
+/* ================================================================
+   AI Tools for Pros — Shared Stylesheet
+   Mobile-first responsive design + Dark Mode
+   ================================================================ */
+
+/* === BASE FONT ===
+   Ensures consistent Inter rendering on every page — including pages that
+   have no self-contained <style> block and rely entirely on style.css.
+   Falls back gracefully to system-ui → sans-serif if Inter hasn't loaded. */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* === CSS CUSTOM PROPERTIES (light mode defaults) === */
+:root {
+  --color-bg:          #f9f9f9;
+  --color-surface:     #ffffff;
+  --color-border:      #f0f0f0;
+  --color-border-2:    #e5e7eb;
+  --color-text:        #111111;
+  --color-text-2:      #333333;
+  --color-text-3:      #444444;
+  --color-text-4:      #636363;
+  --color-text-muted:  #9ca3af;
+  --color-accent:      #2563EB;
+  --color-accent-2:    #1d4ed8;
+
+  /* Tinted block backgrounds */
+  --color-green-bg:    #f0fdf4;
+  --color-green-border:#bbf7d0;
+  --color-green-text:  #15803d;
+  --color-green-body:  #166534;
+  --color-red-bg:      #fef2f2;
+  --color-red-border:  #fecaca;
+  --color-red-text:    #dc2626;
+  --color-red-body:    #991b1b;
+  --color-blue-bg:     #eff6ff;
+  --color-blue-border: #bfdbfe;
+  --color-blue-text:   #1d4ed8;
+  --color-blue-body:   #1e40af;
+}
+
+/* === DARK MODE OVERRIDE === */
+/* Applied via body.dark-mode (toggled by site.js + localStorage) */
+body.dark-mode {
+  background-color: #0a0a0a !important;
+  color: #f0f0f0 !important;
+}
+
+/* -- Nav -- */
+body.dark-mode nav {
+  background: #0f0f0f !important;
+  border-bottom-color: #1e1e1e !important;
+}
+body.dark-mode nav > a span { color: #e0e0e0 !important; }
+body.dark-mode .nav-link { color: #b0b0b0 !important; }
+body.dark-mode .nav-link:hover { color: #f0f0f0 !important; }
+body.dark-mode .nav-link-caret { color: #b0b0b0 !important; }
+body.dark-mode .nav-dropdown:hover .nav-link-caret { color: #f0f0f0 !important; }
+body.dark-mode .dropdown-menu {
+  background: #141414 !important;
+  border-color: #252525 !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5) !important;
+}
+body.dark-mode .dropdown-item { color: #cccccc !important; }
+body.dark-mode .dropdown-item:hover { background: #252525 !important; color: #f0f0f0 !important; }
+body.dark-mode .submenu {
+  background: #141414 !important;
+  border-color: #252525 !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5) !important;
+}
+body.dark-mode .submenu-trigger { color: #cccccc !important; }
+body.dark-mode .submenu-item:hover .submenu-trigger { background: #252525 !important; color: #f0f0f0 !important; }
+body.dark-mode .submenu a { color: #cccccc !important; }
+body.dark-mode .submenu a:hover { background: #252525 !important; color: #f0f0f0 !important; }
+body.dark-mode #nav-browse-btn {
+  background: #f0f0f0 !important;
+  color: #111111 !important;
+}
+body.dark-mode #nav-browse-btn:hover { background: #d0d0d0 !important; }
+
+/* -- Breadcrumb -- */
+body.dark-mode [style*="background:#ffffff;border-bottom:1px solid #f5f5f5"] {
+  background: #0f0f0f !important;
+  border-bottom-color: #1e1e1e !important;
+}
+
+/* -- White surfaces and cards -- */
+body.dark-mode [style*="background:#ffffff"] {
+  background: #141414 !important;
+}
+body.dark-mode [style*="background: #ffffff"] {
+  background: #141414 !important;
+}
+
+/* -- Page background -- */
+body.dark-mode [style*="background:#f9f9f9"] {
+  background: #0a0a0a !important;
+}
+body.dark-mode [style*="background:#f9fafb"] {
+  background: #0f0f0f !important;
+}
+body.dark-mode [style*="background:#f8f9fa"] {
+  background: #111827 !important;
+}
+
+/* -- Tinted consistency blocks -- */
+body.dark-mode [style*="background:#f0fdf4"] {
+  background: #071a0e !important;
+  border-color: #1a4a28 !important;
+}
+body.dark-mode [style*="background:#fef2f2"] {
+  background: #1a0707 !important;
+  border-color: #4a1a1a !important;
+}
+body.dark-mode [style*="background:#eff6ff"] {
+  background: #07101a !important;
+  border-color: #1a3050 !important;
+}
+
+/* -- Text colors -- */
+body.dark-mode [style*="color:#111111"] { color: #f0f0f0 !important; }
+body.dark-mode [style*="color:#333333"] { color: #d8d8d8 !important; }
+body.dark-mode [style*="color:#444444"] { color: #c8c8c8 !important; }
+body.dark-mode [style*="color:#636363"] { color: #909090 !important; }
+body.dark-mode [style*="color:#9ca3af"] { color: #6b7280 !important; }
+/* Tinted block text — keep hues but lighten */
+body.dark-mode [style*="color:#15803d"] { color: #4ade80 !important; }
+body.dark-mode [style*="color:#166534"] { color: #86efac !important; }
+body.dark-mode [style*="color:#dc2626"] { color: #f87171 !important; }
+body.dark-mode [style*="color:#991b1b"] { color: #fca5a5 !important; }
+body.dark-mode [style*="color:#1d4ed8"] { color: #60a5fa !important; }
+body.dark-mode [style*="color:#1e40af"] { color: #93c5fd !important; }
+
+/* -- Borders -- */
+body.dark-mode [style*="border:1px solid #f0f0f0"] { border-color: #222222 !important; }
+body.dark-mode [style*="border: 1px solid #f0f0f0"] { border-color: #222222 !important; }
+body.dark-mode [style*="border-bottom:1px solid #f0f0f0"] { border-bottom-color: #222222 !important; }
+body.dark-mode [style*="border-top:1px solid #e5e7eb"] { border-top-color: #222222 !important; }
+body.dark-mode [style*="border-right:1px solid #f0f0f0"] { border-right-color: #222222 !important; }
+body.dark-mode [style*="border-bottom:1px solid #f5f5f5"] { border-bottom-color: #1a1a1a !important; }
+body.dark-mode [style*="border-bottom:1px solid #111e38"] { border-bottom-color: #1e1e1e !important; }
+
+/* -- Prompt blocks -- */
+body.dark-mode .prompt-block {
+  background: #0d1526 !important;
+  border-left-color: #3b82f6 !important;
+  color: #c8d8f8 !important;
+}
+
+/* -- Industry / profession cards -- */
+body.dark-mode .industry-card {
+  background: #141414 !important;
+  border-color: #222222 !important;
+}
+
+/* -- Verdict badges -- */
+body.dark-mode .verdict-badge-recommended { background: #1d4ed8 !important; }
+body.dark-mode .verdict-badge-specialized { background: #6d28d9 !important; }
+
+/* -- Browse Tools pill + similar dark pills -- */
+body.dark-mode [style*="background:#111111;color:#ffffff"] {
+  background: #e0e0e0 !important;
+  color: #111111 !important;
+}
+
+/* -- Footer (already dark, preserve it) -- */
+body.dark-mode footer {
+  filter: none !important;
+  /* Footer always uses dark bg (#07091a), keep as-is */
+}
+/* Footer label text — match global footer contrast fix */
+body.dark-mode footer [style*="color:#1e2a45"] { color: #6a80a8 !important; opacity: 1 !important; }
+body.dark-mode footer [style*="color:#4a5568"] { color: #8898b8 !important; }
+/* Footer links in dark mode — use element selector (attribute selector can't beat :visited) */
+body.dark-mode footer a:link,
+body.dark-mode footer a:visited { color: #8ab8d8 !important; }
+body.dark-mode footer a:hover  { color: #ffffff !important; }
+
+/* -- Dark toggle button -- */
+body.dark-mode #dark-toggle {
+  border-color: #333333 !important;
+  color: #f0f0f0 !important;
+}
+body.dark-mode #dark-toggle:hover { background: #1a1a1a !important; }
+
+/* -- Hamburger button -- */
+body.dark-mode #nav-burger { color: #c0c0c0 !important; }
+body.dark-mode #nav-burger:hover { background: #1a1a1a !important; }
+
+/* -- Mobile nav overlay -- */
+/* (Dark mode panel nav styles are in the MOBILE NAV section above) */
+
+/* -- Back-to-top button -- */
+body.dark-mode #btt { background: #e0e0e0 !important; color: #111111 !important; }
+
+/* -- Comparison tables -- */
+body.dark-mode [style*="background:#EBF2FF"] { background: #0c1a30 !important; }
+body.dark-mode [style*="background:#ebf2ff"] { background: #0c1a30 !important; }
+body.dark-mode [style*="background:#f2eeff"] { background: #1a0c30 !important; }
+
+/* -- Quick Facts Bar (CSS class-based, not inline style) -- */
+body.dark-mode .fact-bar {
+  background: #141414 !important;
+  border-color: #222222 !important;
+}
+body.dark-mode .fact-item {
+  border-right-color: #222222 !important;
+  border-bottom-color: #222222 !important;
+}
+body.dark-mode .fact-label  { color: #6b7280 !important; }
+body.dark-mode .fact-value  { color: #f0f0f0 !important; }
+body.dark-mode .fact-sub    { color: #9ca3af !important; }
+body.dark-mode .quick-facts { background: #141414 !important; border-color: #222222 !important; }
+
+/* -- Table cells -- */
+body.dark-mode td { color: #d0d0d0 !important; border-color: #222 !important; }
+body.dark-mode th { color: #a0a0a0 !important; border-color: #222 !important; }
+
+/* === DARK MODE TOGGLE BUTTON === */
+#dark-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: transparent;
+  cursor: pointer;
+  color: #636363;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+  padding: 0;
+  line-height: 1;
+}
+#dark-toggle:hover {
+  background: #f5f5f5;
+  color: #111111;
+}
+#dark-toggle svg { display: block; }
+
+/* === HAMBURGER BUTTON === */
+#nav-burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #636363;
+  transition: background 0.15s;
+  flex-shrink: 0;
+  padding: 0;
+}
+#nav-burger:hover { background: #f5f5f5; }
+#nav-burger svg { display: block; }
+
+/* === MOBILE NAV — RIGHT DRAWER WITH INLINE ACCORDIONS === */
+
+/* Wrapper: full-viewport backdrop.
+   display is toggled by JS (none ↔ block).
+   .open is added after a forced reflow so the CSS transition fires correctly. */
+#mobile-nav {
+  display: none;              /* JS sets display:block before adding .open */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.25s;
+}
+#mobile-nav.open {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Panel: slides in from the right */
+.mnav-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(320px, 88vw);
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateX(105%); /* slightly past edge to hide shadow */
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.28s;
+  box-shadow: none;
+  pointer-events: auto;       /* panel is always interactive */
+}
+#mobile-nav.open .mnav-panel {
+  transform: translateX(0);
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.14);
+}
+
+/* Header */
+.mnav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 14px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #ffffff;
+  flex-shrink: 0;
+}
+.mnav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex: 1;
+  min-width: 0;
+}
+.mnav-logo span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mnav-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #636363;
+  border-radius: 8px;
+  padding: 0;
+  flex-shrink: 0;
+  transition: background 0.1s, color 0.1s;
+}
+.mnav-close:hover { background: #f5f5f5; color: #111111; }
+
+/* Scrollable body */
+.mnav-body {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding: 8px 0 8px;
+}
+
+/* Plain link rows (Our Process, Newsletter, tool/profession links) */
+.mnav-row-link {
+  display: block;
+  padding: 12px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111111;
+  text-decoration: none;
+  transition: background 0.1s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mnav-row-link:hover { background: #f5f5f5; }
+
+/* Indented sub-links (tools / profession-tool links) */
+.mnav-sub-link {
+  display: block;
+  padding: 10px 20px 10px 32px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #444444;
+  text-decoration: none;
+  transition: background 0.1s, color 0.1s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mnav-sub-link:hover { background: #f5f5f5; color: #111111; }
+
+/* Accordion toggle rows */
+.mnav-acc-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 18px 12px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111111;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.1s;
+  gap: 8px;
+}
+.mnav-acc-row:hover { background: #f5f5f5; }
+.mnav-acc-row span { flex: 1; }
+
+/* Level-2 accordion rows (individual professions) */
+.mnav-acc-l2 {
+  padding-left: 32px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #444444;
+}
+.mnav-acc-l2:hover { background: #f5f5f5; color: #111111; }
+
+/* Chevron icon — rotates when open */
+.mnav-chevron { flex-shrink: 0; color: #9ca3af; transition: transform 0.2s; }
+.mnav-chevron-open { transform: rotate(180deg); }
+
+/* Accordion content wrapper */
+.mnav-acc-content { /* no extra padding needed — sub-links handle their own */ }
+
+/* Divider between top-level sections */
+.mnav-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 6px 0;
+}
+
+/* Footer CTA */
+.mnav-footer {
+  padding: 12px 20px 24px;
+  border-top: 1px solid #f0f0f0;
+  flex-shrink: 0;
+}
+.mnav-cta {
+  display: block;
+  background: #111111;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.mnav-cta:hover { background: #2d2d2d; }
+
+/* Dark mode */
+body.dark-mode #mobile-nav.open { background: rgba(0, 0, 0, 0.65); }
+body.dark-mode .mnav-panel         { background: #0f0f0f; box-shadow: -8px 0 32px rgba(0,0,0,0.5); }
+body.dark-mode .mnav-header        { background: #0f0f0f; border-bottom-color: #1e1e1e; }
+body.dark-mode .mnav-logo span     { color: #e0e0e0; }
+body.dark-mode .mnav-close         { color: #909090; }
+body.dark-mode .mnav-close:hover   { background: #1a1a1a; color: #f0f0f0; }
+body.dark-mode .mnav-row-link      { color: #e0e0e0; }
+body.dark-mode .mnav-row-link:hover { background: #1a1a1a; }
+body.dark-mode .mnav-sub-link      { color: #aaaaaa; }
+body.dark-mode .mnav-sub-link:hover { background: #1a1a1a; color: #e0e0e0; }
+body.dark-mode .mnav-acc-row       { color: #e0e0e0; }
+body.dark-mode .mnav-acc-row:hover { background: #1a1a1a; }
+body.dark-mode .mnav-acc-l2        { color: #aaaaaa; }
+body.dark-mode .mnav-acc-l2:hover  { background: #1a1a1a; color: #e0e0e0; }
+body.dark-mode .mnav-chevron       { color: #555555; }
+body.dark-mode .mnav-divider       { background: #1e1e1e; }
+body.dark-mode .mnav-footer        { border-top-color: #1e1e1e; }
+body.dark-mode .mnav-cta           { background: #e0e0e0; color: #111111; }
+body.dark-mode .mnav-cta:hover     { background: #c8c8c8; }
+
+/* === QUICK FACTS BAR — base styles (shared across all pages) === */
+/* Hub pages also define these in their per-page <style> block;
+   this ensures cross-reference pages using .fact-bar also get them. */
+.fact-bar {
+  display: grid;
+  /* Column count is set per-page (hub pages: repeat(5,1fr) in their <style> block;
+     cross-reference pages: inline style on the element). */
+  gap: 0;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 36px;
+}
+
+/* Prose-page cross-reference pages use .fact-bar without an inline grid-template-columns.
+   Default to 4 columns. Hub pages define repeat(5,1fr) in their own <style> block which
+   loads before style.css; the hub-page rule has equal specificity but lower cascade order,
+   so we scope this to .prose-page to avoid overriding hub pages. */
+.prose-page .fact-bar {
+  grid-template-columns: repeat(4, 1fr);
+}
+.fact-item {
+  padding: 16px 20px;
+  border-right: 1px solid #f0f0f0;
+}
+.fact-item:last-child {
+  border-right: none;
+}
+.fact-label {
+  font-size:      11px;
+  font-weight:    700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color:          #6b7280;
+  margin-bottom:  4px;
+}
+.fact-value {
+  font-size:   14px;
+  font-weight: 600;
+  color:       #0f172a;
+  line-height: 1.4;
+}
+.fact-sub {
+  font-size:  12px;
+  color:      #6b7280;
+  margin-top: 2px;
+}
+
+/* === NAV LINK — consistent across all pages ===
+   index.html defines these in its <style> block; style.css loads after so these
+   win everywhere. font-size/weight/transform/spacing bring content pages in line
+   with the homepage nav appearance. */
+.nav-link {
+  font-size:      10px;
+  font-weight:    600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color:          #444444;
+  text-decoration: none;
+  transition:     color 0.15s;
+}
+.nav-link:hover { color: #111111; }
+.nav-link-caret {
+  font-size:      10px;
+  font-weight:    600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color:          #444444;
+  display:        inline-flex;
+  align-items:    center;
+  gap:            5px;
+  cursor:         default;
+  user-select:    none;
+  transition:     color 0.15s;
+}
+.nav-link-caret:hover,
+.nav-dropdown:hover .nav-link-caret { color: #111111; }
+
+/* === VERDICT BADGES — base styles (used on all page types) === */
+/* Hub pages also define these in their per-page <style> block;
+   this ensures cross-reference pages get the styles from style.css. */
+.verdict-badge-recommended {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2563EB;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.verdict-badge-specialized {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #7c3aed;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* === BODY PROSE BULLETS === */
+/* Gives ::marker a blue accent color on unordered lists in article body.
+   Lists with list-style:none (consistency blocks) show no markers and are unaffected. */
+main ul li::marker {
+  color: #2563EB;
+  font-size: 1.1em;
+}
+body.dark-mode main ul li::marker {
+  color: #60a5fa;
+}
+
+/* === FOOTER TEXT CONTRAST FIXES === */
+/* Footer background is always dark (#07091a) in both light and dark mode.
+   Original inline colors fail WCAG AA (or are compounded by opacity:0.6). */
+/* "AI Tools for Pros" label: color:#1e2a45 + opacity:0.6 = nearly invisible */
+footer [style*="color:#1e2a45"] { color: #6a80a8 !important; opacity: 1 !important; }
+/* Section column labels (#4a5568 ~2.1:1) → #8898b8 (~7:1) */
+footer [style*="color:#4a5568"] { color: #8898b8 !important; }
+/* Links — use element selectors, NOT attribute selectors.
+   CSS attribute selectors cannot override the browser's :visited pseudo-class color,
+   which is why Privacy Policy / Cookie Policy (frequently visited) appeared different. */
+footer a:link,
+footer a:visited { color: #8ab8d8 !important; }
+footer a:hover   { color: #ffffff !important; }
+
+/* === CONTENT COLUMN CONSISTENCY ===
+   Goal: cap the readable content column at 900px and center it on wide screens.
+
+   Two page structures exist:
+   A) Hub pages — <main> (no inline style) + full-bleed <section> tags.
+      Fix: increase section horizontal padding on wide screens so content never
+      exceeds 900px. Sections' background-color still spans the full viewport.
+      !important is required to override the inline-style padding shorthand.
+
+   B) Cross-reference pages — <main style="padding:..."> + single inner wrapper.
+      Fix: add max-width + centering to main. The inline padding stays unchanged. */
+
+/* A) Hub pages: cap content at 900px on viewports wider than that */
+@media (min-width: 1060px) {
+  main:not([style]) > section {
+    padding-left:  calc((100% - 900px) / 2) !important;
+    padding-right: calc((100% - 900px) / 2) !important;
+  }
+}
+
+/* B) Cross-reference pages: center main column at max 900px */
+main[style] {
+  max-width:    900px;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+/* C) New-template pages: .page-wrap divs inside pages that have their own
+   <style> block define max-width:760px. Override to 860px so all
+   cross-reference pages share the same readable column width. */
+.page-wrap {
+  max-width:    860px !important;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+/* === TEMPLATE B NORMALIZATION ===
+   Pages using .page-wrap (architects/creatives style) were generated with a
+   slightly different visual style than the reference (chatgpt/legal.html).
+   These rules align them to the reference without touching HTML. */
+
+/* Remove H2 underline — Template B pages define h2 { border-bottom: 2px solid … }
+   in their own <style> block. Reference page (legal.html) has no h2 underline. */
+.page-wrap h2 {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+/* Normalize quick-facts border/radius to match .fact-bar */
+.quick-facts {
+  border-color:  #f0f0f0 !important;
+  border-radius: 12px !important;
+  margin-bottom: 36px !important;
+}
+.qf-item {
+  border-right-color: #f0f0f0 !important;
+}
+
+/* Align .qf-label/.qf-value/.qf-sub to match .fact-label/.fact-value/.fact-sub */
+.qf-label {
+  font-size:      11px !important;
+  font-weight:    700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .06em !important;
+  color:          #6b7280 !important;
+  margin-bottom:  4px !important;
+}
+.qf-value {
+  font-size:   14px !important;
+  font-weight: 600 !important;
+  color:       #0f172a !important;
+  line-height: 1.4 !important;
+}
+.qf-sub {
+  font-size:  12px !important;
+  color:      #6b7280 !important;
+  margin-top: 2px !important;
+}
+
+/* === SECTION VERTICAL SPACING REDUCTION ===
+   Reduces section top/bottom padding by ~33-44%, eliminating excess
+   whitespace between adjacent sections.
+   Old-template pages use fixed pixel values; new hub pages use min() fluid values. */
+
+/* Old-template pages: 64px → 36px (-44%) */
+section[style*="padding:64px 24px"] {
+  padding-top:    36px !important;
+  padding-bottom: 36px !important;
+}
+/* Hero 3-value variant (top:64, bottom:48): override bottom to 28px */
+section[style*="padding:64px 24px 48px"] {
+  padding-bottom: 28px !important;
+}
+/* Old-template 48px sections → 28px (-42%) */
+section[style*="padding:48px 24px"] {
+  padding-top:    28px !important;
+  padding-bottom: 28px !important;
+}
+
+/* New hub pages: fluid min() sections — reduce on tablet and wider only
+   (leaves mobile unchanged; zero-top sections like "padding:0 min..." unaffected
+   since [style^="padding:min"] does not match "padding:0 ...") */
+@media (min-width: 769px) {
+  main:not([style]) > section[style^="padding:min"] {
+    padding-top:    min(2rem, 2.5vw) !important;
+    padding-bottom: min(2rem, 2.5vw) !important;
+  }
+}
+
+/* === RESPONSIVE OVERRIDES === */
+
+/* — Global mobile safety — prevent horizontal blowout on any device */
+html { overflow-x: hidden; }
+body { overflow-x: hidden; max-width: 100%; }
+
+/* — Main content: ensure readable padding on all phones — */
+@media (max-width: 390px) {
+  main {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* — Consistency blocks: ensure max-width never exceeds viewport — */
+@media (max-width: 600px) {
+  [style*="max-width:760px"],
+  [style*="max-width: 760px"] {
+    max-width: 100% !important;
+  }
+  [style*="max-width:860px"],
+  [style*="max-width: 860px"] {
+    max-width: 100% !important;
+  }
+}
+
+/* — Quick Facts Bar — 2-column at tablet, single column at phone */
+@media (max-width: 700px) {
+  .fact-bar {
+    grid-template-columns: 1fr 1fr !important;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .fact-item {
+    border-bottom: 1px solid #f0f0f0 !important;
+  }
+  .fact-item:nth-child(even) {
+    border-right: none !important;
+  }
+  /* Remove bottom border from the last row (items in the last 2) */
+  .fact-bar > .fact-item:nth-last-child(-n+2):nth-child(odd) ~ .fact-item,
+  .fact-bar > .fact-item:nth-last-child(-n+2) {
+    border-bottom: none !important;
+  }
+}
+@media (max-width: 440px) {
+  .fact-bar {
+    grid-template-columns: 1fr !important;
+  }
+  .fact-item {
+    border-right: none !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+  }
+  .fact-item:last-child {
+    border-bottom: none !important;
+  }
+}
+
+/* — Footer grid — 4 col → 2 col → 1 col */
+@media (max-width: 680px) {
+  footer > div:first-child {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px !important;
+  }
+}
+@media (max-width: 360px) {
+  footer > div:first-child {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+
+/* — Footer bottom row (email + subscribe) — */
+@media (max-width: 680px) {
+  footer > div:last-child {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+  }
+  footer > div:last-child > div:last-child {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+  footer > div:last-child > div:last-child > div {
+    width: 100% !important;
+  }
+  footer input[type="email"] {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  footer button {
+    width: 100% !important;
+  }
+}
+
+/* — Best/Avoid 2-column grid — inline style: grid-template-columns:1fr 1fr */
+@media (max-width: 560px) {
+  /* Target via parent section styles */
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* — Browse Tools pill: reduce size on narrow desktop/tablet widths — */
+@media (max-width: 900px) and (min-width: 769px) {
+  #nav-browse-btn {
+    font-size: 9px !important;
+    padding: 8px 14px !important;
+  }
+}
+
+/* — Nav — hide desktop links, show hamburger on mobile — */
+@media (max-width: 768px) {
+  #nav-desktop { display: none !important; }
+  #nav-browse-btn { display: none !important; }
+  #nav-burger { display: flex !important; }
+  nav {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+}
+
+/* — Profession cards grid on hub pages — */
+@media (max-width: 600px) {
+  .industry-card { padding: 20px !important; }
+}
+
+/* — Main content: reduce side padding on mobile — */
+@media (max-width: 480px) {
+  main[style*="padding:28px 24px"] {
+    padding: 20px 16px 48px !important;
+  }
+}
+
+/* — Quick Facts Bar in cross-reference pages (no .fact-bar class, uses inline 4-col) — */
+@media (max-width: 640px) {
+  [style*="grid-template-columns:repeat(4,1fr)"],
+  [style*="grid-template-columns: repeat(4, 1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (max-width: 400px) {
+  [style*="grid-template-columns:repeat(4,1fr)"],
+  [style*="grid-template-columns: repeat(4, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* — Hub page fact bar: 5 col — */
+@media (max-width: 640px) {
+  [style*="grid-template-columns:repeat(5,1fr)"],
+  [style*="grid-template-columns: repeat(5, 1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (max-width: 400px) {
+  [style*="grid-template-columns:repeat(5,1fr)"],
+  [style*="grid-template-columns: repeat(5, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* — Hub page comparison table — horizontal scroll on mobile — */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* — Related guides grid — */
+@media (max-width: 600px) {
+  [style*="grid-template-columns:repeat(3"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* — Heading font size clamp for cross-reference H1 — */
+@media (max-width: 480px) {
+  h1[style*="font-size:40px"] {
+    font-size: clamp(1.6rem, 6vw, 2.2rem) !important;
+    line-height: 1.15 !important;
+  }
+}
+
+/* === TOUCH DROPDOWN SUPPORT === */
+/* Show dropdowns on touch devices via .touch-open class (set by site.js) */
+.nav-dropdown.touch-open .dropdown-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.submenu-item.touch-open .submenu {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* — Author card: stack avatar above text on very small screens — */
+@media (max-width: 440px) {
+  [style*="display:flex;align-items:flex-start;gap:20px"] {
+    flex-direction: column !important;
+  }
+}
+
+/* — Footer: tighten padding on mobile — */
+@media (max-width: 680px) {
+  footer {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 40px !important;
+  }
+}
+
+/* — Prompt blocks: don't let long lines blow out on phones — */
+@media (max-width: 600px) {
+  .prompt-block {
+    font-size: 12px !important;
+    overflow-x: auto;
+    word-break: break-word;
+  }
+}
+
+/* — Verdict banner: reduce padding on phones — */
+@media (max-width: 480px) {
+  [style*="border-left:4px solid #2563EB"][style*="border-radius:10px"],
+  [style*="border-left:4px solid #7c3aed"][style*="border-radius:10px"] {
+    padding: 14px 16px !important;
+  }
+}
+
+/* — Long words / URLs in body copy won't break layout — */
+main { word-break: break-word; overflow-wrap: break-word; }
+
+/* === FOCUS STYLES (accessibility) === */
+:focus-visible {
+  outline: 2px solid #2563EB;
+  outline-offset: 2px;
+}
+
+/* === CANONICAL NAV DROPDOWN STYLES ===
+   Matches the homepage (index.html) dropdown design exactly.
+   nav prefix = higher specificity than any page <style> block's .dropdown-menu,
+   ensuring these rules win over self-contained dark-nav CSS on inner pages.
+   style.css loads after every page's own <style> block, so same-specificity
+   rules in style.css would lose — the nav prefix raises specificity to win. */
+
+/* ── Nav container layout ── */
+nav .nav-dropdown { position: relative; }
+
+/* ── Dropdown panel (matches homepage: centered under trigger) ── */
+nav .dropdown-menu {
+  display: block;                          /* override legacy display:none */
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.09);
+  padding: 6px;
+  min-width: 196px;
+  z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .15s, visibility .15s;
+}
+
+nav .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; }
+
+/* ── Dropdown item links ── */
+nav .dropdown-item {
+  display: block;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333333;
+  border-radius: 7px;
+  transition: background .1s, color .1s;
+  white-space: nowrap;
+}
+nav .dropdown-item:hover { background: #f5f5f5; color: #111111; }
+
+/* ── Submenu items ── */
+nav .submenu-item { position: relative; }
+
+nav .submenu {
+  display: block;                          /* override legacy display:none */
+  position: absolute;
+  left: calc(100% + 6px);
+  top: -6px;
+  background: #ffffff;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.09);
+  padding: 6px;
+  min-width: 196px;
+  z-index: 201;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .15s, visibility .15s;
+}
+
+nav .submenu-item:hover .submenu { opacity: 1; visibility: visible; }
+
+/* ── Submenu trigger (profession label row) ── */
+nav .submenu-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333333;
+  border-radius: 7px;
+  cursor: default;
+  transition: background .1s, color .1s;
+  white-space: nowrap;
+}
+nav .submenu-trigger:hover,
+nav .submenu-item:hover .submenu-trigger { background: #f5f5f5; color: #111111; }
+
+/* ── Tool links inside profession submenu ── */
+nav .submenu a {
+  display: block;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333333;
+  border-radius: 7px;
+  transition: background .1s, color .1s;
+  white-space: nowrap;
+}
+nav .submenu a:hover { background: #f5f5f5; color: #111111; }
+
+/* === NAV INLINE STYLE DARK MODE ===
+   The canonical nav uses inline styles for background/text colors.
+   These attribute-selector rules ensure dark mode applies to the nav bar. */
+body.dark-mode nav {
+  background-color: #0f0f0f !important;
+  border-bottom-color: #1e1e1e !important;
+}
+body.dark-mode nav span[style*="color:#111111"] { color: #e0e0e0 !important; }
+
+/* === SELF-CONTAINED PAGE DARK MODE (class-based) ===
+   Pages written with self-contained CSS use class names (.c-block, .c-block-label,
+   .quick-facts, .qf-item, etc.) that need explicit dark mode overrides. */
+body.dark-mode .c-block            { background: #111827 !important; border-left-color: #4c1d95 !important; }
+body.dark-mode .c-block-label      { color: #a78bfa !important; }
+body.dark-mode .c-block p          { color: #d1d5db !important; }
+body.dark-mode .c-block-green      { background: #071a0e !important; border-color: #1a4a28 !important; }
+body.dark-mode .c-block-green .c-block-label,
+body.dark-mode .c-block-green p    { color: #4ade80 !important; }
+body.dark-mode .c-block-red        { background: #1a0707 !important; border-color: #4a1a1a !important; }
+body.dark-mode .c-block-red .c-block-label,
+body.dark-mode .c-block-red p      { color: #fca5a5 !important; }
+body.dark-mode .mini-workflow       { background: #0f0f0f !important; border-color: #2d1f63 !important; }
+body.dark-mode .workflow-step       { background: #1e1b4b !important; color: #a5b4fc !important; }
+body.dark-mode .quick-facts        { border-color: #222 !important; }
+body.dark-mode .qf-item            { border-right-color: #222 !important; }
+body.dark-mode .qf-label           { color: #6b7280 !important; }
+body.dark-mode .qf-value           { color: #f0f0f0 !important; }
+body.dark-mode .qf-sub             { color: #9ca3af !important; }
+body.dark-mode .content-section p,
+body.dark-mode .content-section li  { color: #d1d5db !important; }
+body.dark-mode h1, body.dark-mode h2 { color: #f0f0f0 !important; }
+body.dark-mode h3                  { color: #c4b5fd !important; }
+body.dark-mode .limitation-card    { background: #1a0707 !important; border-color: #4a1a1a !important; }
+body.dark-mode .limitation-title   { color: #fca5a5 !important; }
+body.dark-mode .limitation-card p  { color: #d1d5db !important; }
+body.dark-mode .comparison-table th { background: #111827 !important; color: #9ca3af !important; }
+body.dark-mode .comparison-table .highlight-row td { background: #1e1b4b !important; }
+body.dark-mode .faq-item           { border-bottom-color: #222 !important; }
+body.dark-mode .faq-question       { color: #f0f0f0 !important; }
+body.dark-mode .faq-answer         { color: #d1d5db !important; }
+body.dark-mode .related-card       { background: #141414 !important; border-color: #222 !important; }
+body.dark-mode .related-card-label { color: #6b7280 !important; }
+body.dark-mode .insight-card       { background: #111827 !important; border-top-color: #4c1d95 !important; }
+body.dark-mode .insight-card h3    { color: #f0f0f0 !important; }
+body.dark-mode .insight-card p     { color: #d1d5db !important; }
+body.dark-mode .insight-banner     { background: #111827 !important; border-left-color: #4c1d95 !important; color: #c4b5fd !important; }
+body.dark-mode .author-card        { background: #111827 !important; border-color: #222 !important; }
+body.dark-mode .author-bio         { color: #9ca3af !important; }
+body.dark-mode .section-divider    { border-top-color: #222 !important; }
+body.dark-mode .page-wrapper       { background: #0a0a0a !important; }
+body.dark-mode .container          { background: #0a0a0a !important; }
+
+/* Breadcrumb + tool badge in dark mode */
+body.dark-mode .breadcrumb         { color: #6b7280 !important; }
+body.dark-mode .breadcrumb a       { color: #a78bfa !important; }
+body.dark-mode .tool-badge         { background: #1f1f1f !important; border-color: #333 !important; color: #9ca3af !important; }
+body.dark-mode .meta-row           { color: #6b7280 !important; }
+body.dark-mode .meta-date,
+body.dark-mode .meta-read          { color: #6b7280 !important; }
+
+/* Source badges dark mode */
+body.dark-mode .source-badge       { background: #1e1b4b !important; color: #a5b4fc !important; }
+body.dark-mode .sources-list li    { color: #d1d5db !important; }
+
+/* === MOBILE NAV: overscroll containment ===
+   Prevents a touch-scroll gesture reaching the end of the panel list
+   from propagating through to the page behind the overlay. */
+.mnav-panel {
+  overscroll-behavior: contain;
+}
+
+/* === MOBILE TOUCH TARGETS ===
+   Hamburger and dark-mode toggle must hit the 44×44 px minimum on
+   touch screens (WCAG 2.5.5 / Apple HIG). Desktop sizes stay unchanged. */
+@media (max-width: 768px) {
+  #dark-toggle {
+    width: 44px;
+    height: 44px;
+  }
+  #nav-burger {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ================================================================
+   PROSE-PAGE TEMPLATE CLASSES
+   Used by finance, insurance, and engineers cross-reference pages.
+   These pages have no self-contained <style> block — all content
+   presentation comes from style.css.
+   ================================================================ */
+
+/* ── Page layout ── */
+.prose-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 28px 24px 64px;
+}
+
+/* ── Page header ── */
+.page-header { margin-bottom: 28px; }
+
+.page-h1 {
+  font-family: 'Cardo', Georgia, serif;
+  font-size: clamp(26px, 5vw, 38px);
+  font-weight: 700;
+  line-height: 1.18;
+  color: #0f172a;
+  margin: 8px 0 12px;
+}
+
+.page-subtitle {
+  font-size: 17px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  max-width: 720px;
+}
+
+.byline-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #6b7280;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.byline-sep { color: #d1d5db; }
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+/* ── Tool badge (base) ── */
+.tool-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: 10px;
+}
+
+/* ── Breadcrumb (ol/li variant used in prose-page) ── */
+.breadcrumb ol {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  font-size: 13px;
+  color: #6b7280;
+  flex-wrap: wrap;
+}
+.breadcrumb li { display: flex; align-items: center; }
+.breadcrumb a  { color: #6b7280; }
+.breadcrumb a:hover { color: #2563eb; }
+
+/* ── Prose-page element defaults (Tailwind resets these to 0) ── */
+.prose-page h2 {
+  font-family: 'Cardo', Georgia, serif;
+  font-size: clamp(20px, 3.5vw, 26px);
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 14px;
+  margin-top: 40px;
+}
+
+.prose-page h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+  margin-top: 24px;
+}
+
+.prose-page p {
+  margin-bottom: 14px;
+  color: #374151;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.prose-page ul,
+.prose-page ol { margin: 0 0 16px; padding-left: 20px; }
+
+.prose-page li {
+  margin-bottom: 6px;
+  color: #374151;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ── Consistency blocks ── */
+.consistency-block {
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+
+.consistency-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin-bottom: 6px;
+}
+
+.consistency-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14.5px;
+  color: #374151;
+  line-height: 1.55;
+}
+
+/* ── Best For / Avoid If ── */
+.bestfor-avoid-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.bestfor-block,
+.avoidif-block { border-radius: 8px; padding: 14px 16px; }
+
+.bestfor-block ul,
+.avoidif-block ul {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 6px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ── Mini workflow ── */
+.mini-workflow { border-radius: 8px; padding: 16px 20px; margin-bottom: 32px; }
+
+.mini-workflow-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 6px 0 10px;
+}
+
+.mini-workflow-steps {
+  list-style: decimal;
+  padding-left: 20px;
+  margin: 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14.5px;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.mini-workflow-note {
+  font-size: 13px;
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* ── Prompt blocks ── */
+.prompt-block {
+  background: #f8fafc;
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 13.5px;
+  color: #1e293b;
+  line-height: 1.65;
+}
+
+.prompt-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin-bottom: 8px;
+}
+
+.prompt-note {
+  font-size: 12.5px;
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* ── Limitations grid ── */
+.limitations-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.limitation-card { border-radius: 8px; padding: 14px 16px; }
+
+.limitation-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #b91c1c;
+  margin-bottom: 6px;
+}
+
+/* ── Comparison table ── */
+.comparison-table-wrapper { overflow-x: auto; margin: 20px 0 32px; }
+
+.comparison-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+
+.comparison-table th {
+  background: #f8fafc;
+  font-weight: 700;
+  color: #374151;
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 2px solid #e5e7eb;
+  font-size: 12.5px;
+}
+
+.comparison-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #374151;
+  vertical-align: top;
+}
+
+.comparison-table td:first-child { font-weight: 600; color: #0f172a; }
+.comparison-table .highlight-row td { background: #eff6ff; font-weight: 600; color: #1e3a5f; }
+
+/* ── FAQ ── */
+.faq-list { margin-bottom: 40px; }
+
+.faq-item { border-bottom: 1px solid #f0f0f0; padding: 16px 0; }
+.faq-item:last-child { border-bottom: none; }
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: left;
+  font-family: inherit;
+  line-height: 1.45;
+}
+
+.faq-icon {
+  font-size: 18px;
+  font-weight: 400;
+  color: #6b7280;
+  flex-shrink: 0;
+  margin-left: 12px;
+  transition: transform .2s;
+}
+
+.faq-answer {
+  display: none;
+  font-size: 14.5px;
+  color: #374151;
+  line-height: 1.65;
+  padding-top: 10px;
+}
+
+/* ── Sources ── */
+.sources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.source-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.source-badge {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+/* ── Related guides ── */
+.related-guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.read-guide-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: border-color .15s, box-shadow .15s;
+  color: inherit;
+}
+
+.read-guide-link:hover {
+  border-color: #2563eb;
+  box-shadow: 0 2px 8px rgba(37,99,235,.1);
+}
+
+.read-guide-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--badge-color, #2563eb);
+}
+
+.read-guide-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.4;
+}
+
+.read-guide-arrow {
+  font-size: 14px;
+  color: var(--badge-color, #2563eb);
+  margin-top: 4px;
+}
+
+/* ── Insights ── */
+.insights-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 16px; }
+
+.insight-card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; }
+
+.insight-number {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin-bottom: 6px;
+}
+
+.insight-card h3 { font-size: 15px; font-weight: 700; color: #0f172a; margin-bottom: 6px; margin-top: 0; }
+.insight-card p  { font-size: 14px; color: #374151; margin: 0; line-height: 1.6; }
+
+.insight-banner { border-radius: 8px; padding: 16px 20px; margin-top: 16px; margin-bottom: 32px; }
+.insight-banner p { font-size: 14px; color: #374151; margin: 0; line-height: 1.6; font-style: italic; }
+
+/* ── Author card ── */
+.author-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 18px;
+  margin: 40px 0 16px;
+}
+
+.author-avatar { width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0; overflow: hidden; }
+.author-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.author-info   { flex: 1; }
+.author-name   { font-size: 15px; font-weight: 700; color: #0f172a; }
+.author-bio    { font-size: 13.5px; color: #374151; margin-top: 4px; line-height: 1.55; }
+
+/* ── Footer (prose-page variant) ── */
+.site-footer { background: #0f172a; color: #94a3b8; padding: 48px 24px 32px; margin-top: 64px; }
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer-tagline { font-size: 14px; line-height: 1.6; color: #94a3b8; }
+
+.footer-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+.footer-col-title {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin-bottom: 12px;
+}
+
+.footer-col ul  { list-style: none; padding: 0; margin: 0; }
+.footer-col a   { display: block; color: #94a3b8; font-size: 14px; margin-bottom: 8px; transition: color .15s; }
+.footer-col a:hover { color: #fff; }
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 24px;
+  border-top: 1px solid #1e293b;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* ── Floating back-to-top (injected by site.js) ── */
+#btt-float {
+  position:   fixed;
+  bottom:     28px;
+  right:      28px;
+  width:      44px;
+  height:     44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border:     2px solid #e5e7eb;
+  color:      #2563eb;
+  display:    flex;
+  align-items: center;
+  justify-content: center;
+  cursor:     pointer;
+  z-index:    500;
+  opacity:    0;
+  visibility: hidden;
+  transform:  translateY(8px);
+  transition: opacity 0.22s, visibility 0.22s, transform 0.22s,
+              border-color 0.15s, background 0.15s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  padding:    0;
+  font-family: inherit;
+}
+#btt-float.btt-visible {
+  opacity:   1;
+  visibility: visible;
+  transform: translateY(0);
+}
+#btt-float:hover {
+  border-color: #2563eb;
+  background:   #eff6ff;
+}
+body.dark-mode #btt-float {
+  background:   #1a1a1a;
+  border-color: #333333;
+  color:        #60a5fa;
+  box-shadow:   0 2px 12px rgba(0,0,0,0.4);
+}
+body.dark-mode #btt-float:hover {
+  border-color: #60a5fa;
+  background:   #0c1a30;
+}
+@media (max-width: 480px) {
+  #btt-float { bottom: 20px; right: 16px; }
+}
+
+/* ── Back to top (inline content variant) ── */
+.back-to-top {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--btn-hover-color, #2563eb);
+  margin: 32px auto 0;
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+  font-family: inherit;
+}
+
+.back-to-top:hover { border-color: var(--btn-hover-color, #2563eb); }
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .bestfor-avoid-grid { grid-template-columns: 1fr; }
+  .limitations-grid   { grid-template-columns: 1fr; }
+  .footer-inner       { grid-template-columns: 1fr; }
+  .footer-links       { grid-template-columns: 1fr 1fr; }
+}
+
+/* === PROSE-PAGE DARK MODE === */
+body.dark-mode .page-h1            { color: #f0f0f0 !important; }
+body.dark-mode .page-subtitle      { color: #9ca3af !important; }
+body.dark-mode .byline-row         { color: #6b7280 !important; }
+body.dark-mode .prose-page h2,
+body.dark-mode .prose-page h3      { color: #f0f0f0 !important; }
+body.dark-mode .prose-page p,
+body.dark-mode .prose-page li      { color: #d1d5db !important; }
+body.dark-mode .consistency-block  { background: #111827 !important; }
+body.dark-mode .consistency-list   { color: #d1d5db !important; }
+body.dark-mode .bestfor-block      { background: #071a0e !important; border-color: #1a4a28 !important; color: #4ade80 !important; }
+body.dark-mode .avoidif-block      { background: #1a0707 !important; border-color: #4a1a1a !important; color: #fca5a5 !important; }
+body.dark-mode .mini-workflow-title { color: #e0e0e0 !important; }
+body.dark-mode .mini-workflow-steps { color: #d1d5db !important; }
+body.dark-mode .mini-workflow-note  { color: #9ca3af !important; }
+body.dark-mode .prompt-block        { background: #1e293b !important; color: #e2e8f0 !important; }
+body.dark-mode .prompt-note         { color: #9ca3af !important; }
+body.dark-mode .comparison-table td:first-child { color: #f0f0f0 !important; }
+body.dark-mode .faq-question        { color: #f0f0f0 !important; }
+body.dark-mode .faq-answer          { color: #d1d5db !important; }
+body.dark-mode .source-item         { color: #d1d5db !important; }
+body.dark-mode .read-guide-link     { background: #141414 !important; border-color: #222 !important; }
+body.dark-mode .read-guide-title    { color: #f0f0f0 !important; }
+body.dark-mode .author-name         { color: #f0f0f0 !important; }
+body.dark-mode .author-bio          { color: #9ca3af !important; }
+body.dark-mode .back-to-top         { background: #1a1a1a !important; border-color: #333 !important; color: #c4b5fd !important; }
+body.dark-mode .back-to-top:hover   { border-color: #7c3aed !important; }

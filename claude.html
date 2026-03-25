@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude for Professionals — Honest Review (2026) | AI Tools for Pros</title>
+  <meta name="description" content="An honest review of Claude by Anthropic for working professionals in 2026. Long-document analysis, pricing, HIPAA compliance, and how it compares to ChatGPT.">
+  <meta property="og:title" content="Claude for Professionals — Honest Review (2026) | AI Tools for Pros">
+  <meta property="og:description" content="An honest review of Claude by Anthropic for working professionals in 2026. Long-document analysis, pricing, HIPAA compliance, and how it compares to ChatGPT.">
+  <meta property="og:image" content="https://aitoolsforpros.com/og-image.jpg">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aitoolsforpros.com/claude">
+  <link rel="canonical" href="https://aitoolsforpros.com/claude">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { body: ['Inter','sans-serif'], heading: ['Cardo','serif'] } } }
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #111111; margin: 0; padding: 0; }
+    .font-heading { font-family: 'Cardo', serif; }
+    .nav-link { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #636363; text-decoration: none; transition: color 0.15s; }
+    .nav-link:hover { color: #111111; }
+    .nav-dropdown { position: relative; }
+    .nav-link-caret { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #636363; cursor: default; display: inline-flex; align-items: center; gap: 5px; transition: color 0.15s; user-select: none; }
+    .nav-link-caret:hover, .nav-dropdown:hover .nav-link-caret { color: #111111; }
+    .dropdown-menu { position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%); background: #ffffff; border: 1px solid #ebebeb; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.09); padding: 6px; min-width: 196px; opacity: 0; visibility: hidden; transition: opacity 0.15s, visibility 0.15s; z-index: 200; }
+    .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; }
+    .dropdown-item { display: block; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .dropdown-item:hover { background: #f5f5f5; color: #111111; }
+    .submenu-item { position: relative; }
+    .submenu-trigger { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; cursor: pointer; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .submenu-item:hover .submenu-trigger { background: #f5f5f5; color: #111111; }
+    .submenu { position: absolute; left: calc(100% + 6px); top: -6px; background: #ffffff; border: 1px solid #ebebeb; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.09); padding: 6px; min-width: 196px; opacity: 0; visibility: hidden; transition: opacity 0.15s, visibility 0.15s; z-index: 201; }
+    .submenu-item:hover .submenu { opacity: 1; visibility: visible; }
+    .submenu a { display: block; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .submenu a:hover { background: #f5f5f5; color: #111111; }
+    .prompt-block { background: #f8f9fa; border-left: 3px solid #2563EB; padding: 16px 20px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 13px; color: #333333; line-height: 1.7; margin-bottom: 20px; }
+    .industry-card { background: #ffffff; border-radius: 16px; padding: 28px; position: relative; overflow: hidden; border: 1px solid #f0f0f0; transition: box-shadow 0.2s; }
+    .industry-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.07); }
+    .read-guide-link { font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #111111; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+    .read-guide-link:hover { color: #2563EB; }
+    .verdict-badge-recommended { display: inline-flex; align-items: center; gap: 8px; background: #2563EB; color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 16px; border-radius: 999px; }
+    .fact-bar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; background: #ffffff; border: 1px solid #f0f0f0; border-radius: 12px; overflow: hidden; }
+    .fact-item { padding: 16px 20px; border-right: 1px solid #f0f0f0; }
+    .fact-item:last-child { border-right: none; }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Claude for Professionals — Honest Review (2026)",
+        "description": "An honest review of Claude by Anthropic for working professionals in 2026. Long-document analysis, pricing, HIPAA compliance, and how it compares to ChatGPT.",
+        "url": "https://aitoolsforpros.com/claude",
+        "datePublished": "2026-02-24",
+        "dateModified": "2026-03-18",
+        "isAccessibleForFree": true,
+        "author": {"@type": "Organization", "name": "AI Tools for Pros", "url": "https://aitoolsforpros.com"},
+        "publisher": {"@type": "Organization", "name": "AI Tools for Pros", "url": "https://aitoolsforpros.com"},
+        "mainEntityOfPage": {"@type": "WebPage", "@id": "https://aitoolsforpros.com/claude"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolsforpros.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Claude", "item": "https://aitoolsforpros.com/claude"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Claude worth it for professionals?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes, particularly for professionals who work with long documents or produce client-facing written output. Claude's 200,000-token context window and writing quality advantage pay dividends for lawyers, analysts, and researchers dealing with dense source material. Solo professionals who primarily need quick drafts and multimodal tasks may find ChatGPT a better starting point."}
+          },
+          {
+            "@type": "Question",
+            "name": "What is Claude's context window and why does it matter?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Claude supports a 200,000-token context window, which is approximately 150,000 words, the equivalent of a 600-page book or a full legal contract package. In practice, this means Claude can hold an entire document in memory and answer questions about it without losing track of earlier sections. For professionals working with long contracts, medical records, or research corpora, this is a decisive workflow advantage over tools with smaller context limits."}
+          },
+          {
+            "@type": "Question",
+            "name": "Is Claude HIPAA compliant?",
+            "acceptedAnswer": {"@type": "Answer", "text": "It depends on your plan. Standard Claude.ai (Free and Pro) does not include a Business Associate Agreement and should not be used with PHI. Claude Team and Enterprise plans include data privacy controls and BAA availability [VERIFY DETAILS]. The practical rule: do not enter patient-identifiable information into Claude without confirming your current plan's BAA status with Anthropic directly."}
+          },
+          {
+            "@type": "Question",
+            "name": "Does Claude hallucinate facts?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes, Claude can generate inaccurate information, including citations, statistics, and legal references. It tends to flag uncertainty more explicitly than ChatGPT. Phrases like 'I'm not certain about this' appear more often. However, explicit uncertainty flags are not exhaustive: Claude can still state incorrect information confidently. Every factual claim used in client-facing or compliance-sensitive work must be verified against a primary source."}
+          },
+          {
+            "@type": "Question",
+            "name": "How does Claude compare to ChatGPT for professional writing?",
+            "acceptedAnswer": {"@type": "Answer", "text": "It depends on what you mean by writing quality. Claude consistently produces less template-sounding prose. The output is less likely to open with 'Certainly! Here is...' and more likely to match a professional voice. For long-form analytical writing, legal memos, and client-facing reports, Claude's first drafts typically require less editing. ChatGPT has an edge in speed, multimodal tasks, and integration breadth. Most professionals who use both route fast-turnaround drafts to ChatGPT and nuanced analytical work to Claude."}
+          },
+          {
+            "@type": "Question",
+            "name": "Can Claude analyze a full contract or legal document?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes, and this is one of Claude's clearest professional advantages. A 50-page contract uploaded to Claude can be analyzed in full: extracting clause relationships, flagging inconsistencies, summarizing obligations, and answering specific questions. This works without requiring the document to be split or truncated. ChatGPT on standard plans handles shorter documents better; very long contracts should be routed to Claude. Always verify any specific clause interpretation against the original document before relying on it professionally."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Google Analytics — replace G-XXXXXXXXXX with your Measurement ID to activate -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+  <script src="site.js" defer></script>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <!-- NAV -->
+<nav style="padding:18px min(2rem,8vw);position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;justify-content:space-between;">
+  <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+    <img src="logo.svg" width="32" height="32" alt="AI Tools for Pros" style="border-radius:8px;display:block;">
+    <span style="font-size:13px;font-weight:500;color:#111111;">AI Tools for Pros</span>
+  </a>
+  <div id="nav-desktop" style="display:flex;align-items:center;gap:36px;">
+    <a href="our-process.html" class="nav-link">Our Process</a>
+    <div class="nav-dropdown">
+      <span class="nav-link-caret">AI Tools <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="dropdown-menu">
+        <a href="chatgpt.html" class="dropdown-item">ChatGPT</a>
+        <a href="claude.html" class="dropdown-item">Claude</a>
+        <a href="perplexity.html" class="dropdown-item">Perplexity AI</a>
+        <a href="gemini.html" class="dropdown-item">Google Gemini</a>
+        <a href="copilot.html" class="dropdown-item">Microsoft Copilot</a>
+        <a href="midjourney.html" class="dropdown-item">Midjourney</a>
+        <a href="cursor.html" class="dropdown-item">Cursor</a>
+        <a href="notion-ai.html" class="dropdown-item">Notion AI</a>
+        <a href="grammarly.html" class="dropdown-item">Grammarly</a>
+        <a href="otter.html" class="dropdown-item">Otter.ai</a>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <span class="nav-link-caret">Professions <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="dropdown-menu">
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="legal.html">Legal Counsel <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/legal.html">ChatGPT</a>
+            <a href="claude/legal.html">Claude</a>
+            <a href="perplexity/legal.html">Perplexity AI</a>
+            <a href="gemini/legal.html">Google Gemini</a>
+            <a href="copilot/legal.html">Microsoft Copilot</a>
+            <a href="grammarly/legal.html">Grammarly</a>
+            <a href="notion-ai/legal.html">Notion AI</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="physicians.html">Physicians <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/physicians.html">ChatGPT</a>
+            <a href="claude/physicians.html">Claude</a>
+            <a href="perplexity/physicians.html">Perplexity AI</a>
+            <a href="copilot/physicians.html">Microsoft Copilot</a>
+            <a href="otter/physicians.html">Otter.ai</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="real-estate.html">Real Estate <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/real-estate.html">ChatGPT</a>
+            <a href="claude/real-estate.html">Claude</a>
+            <a href="gemini/real-estate.html">Google Gemini</a>
+            <a href="copilot/real-estate.html">Microsoft Copilot</a>
+            <a href="grammarly/real-estate.html">Grammarly</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="engineers.html">Engineers <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/engineers.html">ChatGPT</a>
+            <a href="claude/engineers.html">Claude</a>
+            <a href="cursor/engineers.html">Cursor</a>
+            <a href="copilot/engineers.html">Microsoft Copilot</a>
+            <a href="notion-ai/engineers.html">Notion AI</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="finance.html">Finance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/finance.html">ChatGPT</a>
+            <a href="claude/finance.html">Claude</a>
+            <a href="perplexity/finance.html">Perplexity AI</a>
+            <a href="copilot/finance.html">Microsoft Copilot</a>
+            <a href="gemini/finance.html">Google Gemini</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="insurance.html">Insurance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/insurance.html">ChatGPT</a>
+            <a href="claude/insurance.html">Claude</a>
+            <a href="copilot/insurance.html">Microsoft Copilot</a>
+            <a href="perplexity/insurance.html">Perplexity AI</a>
+            <a href="grammarly/insurance.html">Grammarly</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="architects.html">Architects <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/architects.html">ChatGPT</a>
+            <a href="claude/architects.html">Claude</a>
+            <a href="gemini/architects.html">Google Gemini</a>
+            <a href="midjourney/architects.html">Midjourney</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="creatives.html">Creatives <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/creatives.html">ChatGPT</a>
+            <a href="claude/creatives.html">Claude</a>
+            <a href="midjourney/creatives.html">Midjourney</a>
+            <a href="grammarly/creatives.html">Grammarly</a>
+            <a href="notion-ai/creatives.html">Notion AI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="newsletter.html" class="nav-link">Newsletter</a>
+  </div>
+</nav>
+
+  <!-- BREADCRUMB -->
+  <div style="padding:14px min(6.5rem,8vw);font-size:12px;color:#9ca3af;background:#ffffff;border-bottom:1px solid #f5f5f5;">
+    <a href="index.html" style="color:#9ca3af;text-decoration:none;" onmouseover="this.style.color='#636363'" onmouseout="this.style.color='#9ca3af'">Home</a>
+    <span style="margin:0 8px;">/</span>
+    <span style="color:#111111;">Claude</span>
+  </div>
+
+  <main>
+
+  <!-- PAGE HEADER -->
+  <section style="padding:min(4rem,6vw) min(6.5rem,8vw) min(2rem,3vw);">
+    <p style="font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#636363;margin:0 0 16px;">Independent Review &middot; March 19, 2026</p>
+    <h1 class="font-heading" style="font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;line-height:1.1;margin:0 0 20px;color:#111111;max-width:800px;">Claude for Professionals: An Honest Review (2026)</h1>
+
+    <!-- Definition sentence -->
+    <p style="font-size:16px;color:#444444;line-height:1.75;max-width:680px;margin:0 0 24px;">Claude is an AI assistant built by Anthropic and used by legal, medical, finance, and research professionals who need to process long documents, produce high-quality written output, and work with an AI that flags uncertainty rather than papering over it.</p>
+
+    <!-- Positioning statement -->
+    <p style="font-size:13px;color:#636363;font-style:italic;margin:0 0 24px;">Claude is evaluated here as a general professional AI assistant with a focus on long-document analysis and writing quality, not as a profession-specific workflow guide.</p>
+
+    <!-- Byline -->
+    <p style="font-size:13px;color:#636363;margin:0 0 32px;">By <strong style="color:#111111;font-weight:600;">Rich M.</strong>&nbsp;&middot;&nbsp;Fact-checked by <strong style="color:#111111;font-weight:600;">Rob M.</strong>&nbsp;&middot;&nbsp;March 19, 2026</p>
+
+    <!-- Verdict badge -->
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:40px;flex-wrap:wrap;">
+      <span class="verdict-badge-recommended">Recommended</span>
+      <span style="font-size:14px;color:#444444;">Best choice when long-document analysis and writing quality are the priority. Pair with ChatGPT for multimodal tasks.</span>
+    </div>
+
+    <!-- CONSISTENCY BLOCK 1: Bottom line -->
+    <div style="background:#ffffff;border:1px solid #f0f0f0;border-radius:12px;padding:24px 28px;margin-bottom:28px;max-width:760px;">
+      <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#2563EB;margin:0 0 10px;">Bottom Line</p>
+      <p style="font-size:14px;color:#333333;line-height:1.7;margin:0;">Claude is the strongest general-purpose AI for professionals who work with long, dense documents or need written output that doesn't read like a template. Its 200,000-token context window and instruction-following precision make it the right tool for legal, finance, and research workflows where document depth matters. It is not the right default when multimodal tasks, integrations, or real-time data are the primary need.</p>
+    </div>
+
+    <!-- CONSISTENCY BLOCK 2: Key takeaways -->
+    <div style="background:#ffffff;border:1px solid #f0f0f0;border-radius:12px;padding:24px 28px;margin-bottom:28px;max-width:760px;">
+      <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#2563EB;margin:0 0 14px;">Key Takeaways</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> 200,000-token context window processes ~150,000 words. That is an entire contract package in one session</li>
+        <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> Writing quality is consistently more nuanced and less template-like than ChatGPT</li>
+        <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> HIPAA compliance requires Team or Enterprise plan with BAA [VERIFY DETAILS]</li>
+        <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> No image generation. Claude is text-only. Use ChatGPT or Midjourney for visual tasks</li>
+        <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> Claude flags uncertainty more explicitly than most AI tools. This is a meaningful advantage in regulated work</li>
+        <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> Smaller third-party integration ecosystem than ChatGPT; Claude Projects handles persistent context</li>
+      </ul>
+    </div>
+
+    <!-- CONSISTENCY BLOCK 3 & 4: Best use cases + Avoid -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin-bottom:28px;">
+      <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:20px 24px;">
+        <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#15803d;margin:0 0 12px;">Best Use Cases</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+          <li style="font-size:13px;color:#166534;">Full-document contract and policy analysis</li>
+          <li style="font-size:13px;color:#166534;">Drafting analytical memos and client reports</li>
+          <li style="font-size:13px;color:#166534;">Research synthesis across multiple uploaded documents</li>
+          <li style="font-size:13px;color:#166534;">Complex multi-step instruction tasks requiring precision</li>
+          <li style="font-size:13px;color:#166534;">Code review and technical documentation</li>
+        </ul>
+      </div>
+      <div style="background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:20px 24px;">
+        <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#dc2626;margin:0 0 12px;">Avoid Using It For</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+          <li style="font-size:13px;color:#991b1b;">Image or visual content generation</li>
+          <li style="font-size:13px;color:#991b1b;">Real-time data, market prices, or live regulatory lookups</li>
+          <li style="font-size:13px;color:#991b1b;">PHI without a signed BAA at Team or Enterprise tier</li>
+          <li style="font-size:13px;color:#991b1b;">Workflows requiring deep third-party app integrations</li>
+          <li style="font-size:13px;color:#991b1b;">Any output sent to clients without human factual review</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CONSISTENCY BLOCK 5: If you only do one thing -->
+    <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;padding:24px 28px;max-width:760px;margin-bottom:0;">
+      <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#1d4ed8;margin:0 0 12px;">If You Only Do One Thing</p>
+      <p style="font-size:13px;color:#1e40af;margin:0 0 12px;">Upload a long document you've been dreading and ask Claude to analyze it end-to-end:</p>
+      <ol style="padding:0 0 0 18px;margin:0;display:flex;flex-direction:column;gap:6px;">
+        <li style="font-size:13px;color:#1e40af;">Upload the full document (contract, report, policy) into Claude</li>
+        <li style="font-size:13px;color:#1e40af;">Prompt: "Read this document in full and give me: key obligations, critical dates, notable risks, and any clauses that appear unusual or contradictory."</li>
+        <li style="font-size:13px;color:#1e40af;">Follow up with specific questions: "What does section 12.3 require of us if the project is delayed?"</li>
+        <li style="font-size:13px;color:#1e40af;">Verify any specific clause interpretations against the original before using them professionally</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- QUICK FACTS BAR -->
+  <section style="padding:0 min(6.5rem,8vw) min(3rem,4vw);">
+    <div class="fact-bar" style="max-width:900px;">
+      <div class="fact-item">
+        <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Made by</p>
+        <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Anthropic</p>
+      </div>
+      <div class="fact-item">
+        <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Best for</p>
+        <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Long docs, nuanced writing</p>
+      </div>
+      <div class="fact-item">
+        <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Starting price</p>
+        <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">$20/mo (Pro)</p>
+      </div>
+      <div class="fact-item">
+        <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Model</p>
+        <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Claude Sonnet 4.6</p>
+      </div>
+      <div class="fact-item">
+        <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">HIPAA/Compliance</p>
+        <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Team/Enterprise + BAA [VERIFY DETAILS]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT CLAUDE IS AND ISN'T -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw);">
+    <div style="max-width:760px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 20px;">What Claude Is — And What It Isn't</h2>
+
+      <p style="font-size:14px;color:#444444;line-height:1.8;margin:0 0 16px;">Claude is a text-focused AI assistant built by Anthropic, a safety-focused AI research company. It processes text, analyzes documents, generates written content, and writes code. Unlike ChatGPT, it does not generate images, does not have a native voice mode, and does not have the same breadth of third-party integrations. What it does have is a significantly larger context window and a writing quality advantage that matters in professional output.</p>
+
+      <h3 style="font-size:16px;font-weight:600;color:#111111;margin:24px 0 12px;">What professional tasks does Claude handle reliably?</h3>
+      <p style="font-size:14px;color:#444444;line-height:1.8;margin:0 0 14px;">Claude's clearest professional strengths are in tasks where the volume of input text is large and the required output is analytical or precise. Legal professionals use it to analyze full contract packages. Finance professionals use it to synthesize lengthy regulatory filings and research documents. Engineers use it for code review and technical documentation where Claude's ability to hold a large codebase in context matters.</p>
+      <ul style="list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:8px;">
+        <li style="font-size:14px;color:#444444;padding-left:16px;border-left:2px solid #e5e7eb;">Full-document analysis of contracts, reports, and research papers</li>
+        <li style="font-size:14px;color:#444444;padding-left:16px;border-left:2px solid #e5e7eb;">Analytical memo and report drafting with minimal template feel</li>
+        <li style="font-size:14px;color:#444444;padding-left:16px;border-left:2px solid #e5e7eb;">Multi-document research synthesis, comparing and cross-referencing sources</li>
+        <li style="font-size:14px;color:#444444;padding-left:16px;border-left:2px solid #e5e7eb;">Complex instruction execution where multiple constraints must all be honored</li>
+        <li style="font-size:14px;color:#444444;padding-left:16px;border-left:2px solid #e5e7eb;">Code generation, debugging, and technical explanation across major languages</li>
+      </ul>
+
+      <h3 style="font-size:16px;font-weight:600;color:#111111;margin:24px 0 12px;">What Claude is not designed for</h3>
+      <p style="font-size:14px;color:#444444;line-height:1.8;margin:0 0 14px;">Claude does not browse the web by default and does not access real-time data. If your professional tasks depend on current market prices, recent case law, or live regulatory updates, Perplexity AI is better suited to that use case. Claude also does not generate images. Professionals who need visual content alongside text should use ChatGPT (DALL-E integration) or <a href="midjourney.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Midjourney</a>.</p>
+      <p style="font-size:14px;color:#444444;line-height:1.8;margin:0;">Compared to ChatGPT, Claude has a narrower feature surface but executes its core capabilities at a higher level for complex professional tasks: text analysis, synthesis, and writing. Most professionals who need both multimodal flexibility and long-document depth maintain accounts with both tools and route work by task type.</p>
+    </div>
+  </section>
+
+  <!-- WHO IT'S RIGHT FOR -->
+  <section style="padding:min(2rem,3vw) min(6.5rem,8vw) min(3rem,4vw);background:#ffffff;">
+    <div style="max-width:760px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 24px;">Who Claude Is Right For</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <div style="border:1px solid #bbf7d0;border-radius:12px;padding:24px;">
+          <p style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#15803d;margin:0 0 14px;">Good Fit</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+            <li style="font-size:14px;color:#166534;line-height:1.6;">Lawyers and paralegals who regularly analyze long contracts and legal filings</li>
+            <li style="font-size:14px;color:#166534;line-height:1.6;">Finance professionals synthesizing annual reports, prospectuses, and regulatory documents</li>
+            <li style="font-size:14px;color:#166534;line-height:1.6;">Researchers consolidating large bodies of literature or source material</li>
+            <li style="font-size:14px;color:#166534;line-height:1.6;">Professionals who produce written reports and want less editing overhead</li>
+            <li style="font-size:14px;color:#166534;line-height:1.6;">Engineers doing code review or documentation on large codebases</li>
+          </ul>
+        </div>
+        <div style="border:1px solid #fecaca;border-radius:12px;padding:24px;">
+          <p style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#dc2626;margin:0 0 14px;">Poor Fit</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+            <li style="font-size:14px;color:#991b1b;line-height:1.6;">Architects and creatives who need image generation in the same workflow</li>
+            <li style="font-size:14px;color:#991b1b;line-height:1.6;">Professionals relying on live web search with cited sources as a primary use case</li>
+            <li style="font-size:14px;color:#991b1b;line-height:1.6;">Teams needing deep integrations with Salesforce, HubSpot, or niche industry software</li>
+            <li style="font-size:14px;color:#991b1b;line-height:1.6;">Healthcare professionals handling PHI without a confirmed BAA at Team/Enterprise tier</li>
+            <li style="font-size:14px;color:#991b1b;line-height:1.6;">Users who want a voice assistant for hands-free professional tasks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES THAT MATTER -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw);">
+    <div style="max-width:760px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 8px;">Features That Matter for Professional Workflows</h2>
+      <p style="font-size:14px;color:#636363;margin:0 0 32px;">An honest assessment of seven capabilities professionals actually rely on, with real-world caveats for each.</p>
+
+      <div style="display:flex;flex-direction:column;gap:24px;">
+
+        <div style="border-bottom:1px solid #f0f0f0;padding-bottom:24px;">
+          <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">200,000-Token Context Window</h3>
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">This is Claude's most significant professional differentiator. 200,000 tokens is approximately 150,000 words, enough for a 600-page legal agreement, a complete corporate annual report, or the entire source code of a mid-sized software project. In practice, this means Claude can hold the entire document in memory and answer questions about clause relationships, cross-references, and inconsistencies without requiring you to segment or summarize the content first. For professionals working with documents of this scale, this capability is genuinely transformative compared to tools with 8,000 or 32,000 token limits.</p>
+        </div>
+
+        <div style="border-bottom:1px solid #f0f0f0;padding-bottom:24px;">
+          <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Writing Quality and Register</h3>
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Claude produces written output that is more likely to match a professional register and less likely to default to generic AI phrasing. The output of a well-structured Claude prompt typically requires less editing for tone and structure than equivalent ChatGPT output on analytical tasks. Legal memos, financial summaries, executive briefings, and client-facing reports all benefit from this. The gap narrows on shorter, more transactional writing tasks where format matters more than nuance.</p>
+        </div>
+
+        <div style="border-bottom:1px solid #f0f0f0;padding-bottom:24px;">
+          <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Instruction-Following Precision</h3>
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Claude is exceptional at multi-constraint instruction following. If you provide a prompt with six specific requirements: specific format, tone, length, included sections, excluded topics, and citation style. Claude honors all six more reliably than most alternatives. This matters in professional contexts where output consistency and specification compliance reduce review time. It is why legal and compliance teams tend to gravitate toward Claude for template-following tasks.</p>
+        </div>
+
+        <div style="border-bottom:1px solid #f0f0f0;padding-bottom:24px;">
+          <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Uncertainty Flagging</h3>
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Claude is notably more likely to explicitly flag when it is uncertain, when information may be outdated, or when a question requires professional judgment beyond what an AI should provide. Phrases like "I'm not certain this is current" or "you should verify this with a licensed professional" appear frequently. This is not a weakness. In regulated professional contexts, a tool that models appropriate uncertainty is less dangerous than one that answers confidently across the board. Note that uncertainty flags are not exhaustive: Claude can still be wrong without flagging it, and all factual claims require verification.</p>
+        </div>
+
+        <div style="border-bottom:1px solid #f0f0f0;padding-bottom:24px;">
+          <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Claude Projects</h3>
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Claude Projects allows professionals to create persistent AI workspaces pre-loaded with documents, context, and instructions that persist across sessions. A legal team can create a project pre-loaded with their firm's contract templates, client matter context, and drafting guidelines. Every conversation starts with that context already in place. This is one of the most underused features for teams that run repetitive professional workflows, and it substantially reduces the overhead of re-providing context in each new session.</p>
+        </div>
+
+        <div style="border-bottom:1px solid #f0f0f0;padding-bottom:24px;">
+          <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Code Generation and Technical Tasks</h3>
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Claude is a strong code generation and review tool across Python, JavaScript, SQL, and major languages. Its large context window gives it an edge when reviewing large codebases or multi-file projects, where ChatGPT on standard plans struggles with truncation. Engineers and data professionals frequently use Claude for explaining complex code, writing technical documentation, and debugging where detailed reasoning about the code's intent matters more than raw completion speed.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">API and Integrations</h3>
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Anthropic's API has broad but narrower adoption than OpenAI's across third-party professional software. The Claude API is integrated into legal technology, coding tools (including <a href="cursor.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Cursor</a>), and enterprise document platforms. For developers and teams building internal tools, Claude's API performs well on document-heavy tasks. For professionals looking for plug-and-play integration with existing business software, ChatGPT's ecosystem currently offers more options. This gap has been closing as Anthropic expands enterprise partnerships.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw);background:#ffffff;">
+    <div style="max-width:760px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 8px;">Pricing — What You Actually Need</h2>
+      <p style="font-size:14px;color:#636363;margin:0 0 28px;">Current pricing as of February 2026. [VERIFY DETAILS]</p>
+
+      <div style="border:1px solid #f0f0f0;border-radius:12px;overflow:hidden;margin-bottom:24px;">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f9fafb;border-bottom:1px solid #f0f0f0;">
+              <th style="text-align:left;padding:12px 16px;font-weight:700;color:#111111;">Plan</th>
+              <th style="text-align:left;padding:12px 16px;font-weight:700;color:#111111;">Price</th>
+              <th style="text-align:left;padding:12px 16px;font-weight:700;color:#111111;">For professionals</th>
+              <th style="text-align:left;padding:12px 16px;font-weight:700;color:#111111;">Data privacy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #f5f5f5;">
+              <td style="padding:12px 16px;color:#444444;font-weight:500;">Free</td>
+              <td style="padding:12px 16px;color:#444444;">$0</td>
+              <td style="padding:12px 16px;color:#636363;">Rate-limited access to Sonnet. Useful for evaluation; insufficient for daily professional use.</td>
+              <td style="padding:12px 16px;color:#dc2626;font-size:12px;">Review Anthropic's data policy</td>
+            </tr>
+            <tr style="border-bottom:1px solid #f5f5f5;background:#f0fdf4;">
+              <td style="padding:12px 16px;color:#111111;font-weight:700;">Pro</td>
+              <td style="padding:12px 16px;color:#111111;font-weight:700;">$20/mo</td>
+              <td style="padding:12px 16px;color:#166534;font-size:13px;font-weight:500;">Right tier for solo professionals. Full access to Sonnet 4.6 and Opus with generous usage limits.</td>
+              <td style="padding:12px 16px;color:#636363;font-size:12px;">Training opt-out available</td>
+            </tr>
+            <tr style="border-bottom:1px solid #f5f5f5;">
+              <td style="padding:12px 16px;color:#444444;font-weight:500;">Team</td>
+              <td style="padding:12px 16px;color:#444444;">$25/user/mo (annual)</td>
+              <td style="padding:12px 16px;color:#636363;">Shared workspaces, admin controls, and BAA availability for regulated data [VERIFY DETAILS].</td>
+              <td style="padding:12px 16px;color:#15803d;font-size:12px;">BAA available [VERIFY DETAILS]</td>
+            </tr>
+            <tr>
+              <td style="padding:12px 16px;color:#444444;font-weight:500;">Enterprise</td>
+              <td style="padding:12px 16px;color:#444444;">Custom</td>
+              <td style="padding:12px 16px;color:#636363;">Custom deployment, SSO, advanced compliance, and dedicated support.</td>
+              <td style="padding:12px 16px;color:#15803d;font-size:12px;">SOC 2 Type II, BAA available [VERIFY DETAILS]</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 12px;">Which plan does a solo professional actually need?</h3>
+      <p style="font-size:14px;color:#444444;line-height:1.75;margin:0 0 14px;">Pro at $20/month is the right answer for solo professionals who do not handle regulated client data. It provides full access to Claude Sonnet 4.6 and Opus models with usage limits that cover daily professional workflows. The context window and feature set are identical to Team. The difference is multi-user management and compliance controls.</p>
+      <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">If you work in healthcare, law, or finance and use Claude with identifiable client data, verify with Anthropic whether your current plan includes a BAA before proceeding. The compliance posture at Team vs. Enterprise tier is an area worth confirming directly, as the details can change as Anthropic updates its enterprise agreements.</p>
+    </div>
+  </section>
+
+  <!-- PROFESSION CARDS -->
+  <section id="professions" style="padding:min(3rem,4vw) min(6.5rem,8vw) min(4rem,5vw);">
+    <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 8px;">How Claude Works for Your Profession</h2>
+    <p style="color:#636363;font-size:14px;margin:0 0 32px;">I've reviewed Claude across 8 professional fields. Each guide covers real workflows, verified limitations, and copy-paste prompts.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;">
+      <div class="industry-card"><h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Legal Counsel</h3><p style="color:#636363;font-size:13px;line-height:1.6;margin:0 0 20px;">Contract analysis, brief drafting, and research synthesis. Claude's 200K context window changes the workflow for long-document legal work.</p><a href="claude/legal.html" class="read-guide-link">Claude for Lawyers <span>&#8594;</span></a></div>
+      <div class="industry-card"><h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Physicians</h3><p style="color:#636363;font-size:13px;line-height:1.6;margin:0 0 20px;">Clinical documentation, research synthesis, and patient communication. Includes HIPAA compliance requirements and what requires Team or Enterprise.</p><a href="claude/physicians.html" class="read-guide-link">Claude for Physicians <span>&#8594;</span></a></div>
+      <div class="industry-card"><h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Real Estate</h3><p style="color:#636363;font-size:13px;line-height:1.6;margin:0 0 20px;">Listing copy, offer letters, and client communications. Claude's writing quality advantage produces polished, client-ready output faster.</p><a href="claude/real-estate.html" class="read-guide-link">Claude for Real Estate <span>&#8594;</span></a></div>
+      <div class="industry-card"><h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Engineers</h3><p style="color:#636363;font-size:13px;line-height:1.6;margin:0 0 20px;">Code review, large codebase analysis, and technical documentation. The large context window handles full projects without truncation.</p><a href="claude/engineers.html" class="read-guide-link">Claude for Engineers <span>&#8594;</span></a></div>
+      <div class="industry-card"><h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Financial Advisors</h3><p style="color:#636363;font-size:13px;line-height:1.6;margin:0 0 20px;">Regulatory document synthesis, client report drafting, and long-form financial analysis, with honest compliance notes for regulated workflows.</p><a href="claude/finance.html" class="read-guide-link">Claude for Finance <span>&#8594;</span></a></div>
+      <div class="industry-card"><h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Insurance Professionals</h3><p style="color:#636363;font-size:13px;line-height:1.6;margin:0 0 20px;">Policy analysis, claims documentation, and underwriting support. Claude handles dense policy language and multi-party agreements well.</p><a href="claude/insurance.html" class="read-guide-link">Claude for Insurance <span>&#8594;</span></a></div>
+      <div class="industry-card"><h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Architects</h3><p style="color:#636363;font-size:13px;line-height:1.6;margin:0 0 20px;">Specification drafting, code compliance review, and project proposal writing. Claude's writing precision gives architects better first drafts.</p><a href="claude/architects.html" class="read-guide-link">Claude for Architects <span>&#8594;</span></a></div>
+      <div class="industry-card"><h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Creative Professionals</h3><p style="color:#636363;font-size:13px;line-height:1.6;margin:0 0 20px;">Long-form copywriting, brand voice development, and content strategy. Creatives who prioritize writing quality reach for Claude over ChatGPT.</p><a href="claude/creatives.html" class="read-guide-link">Claude for Creatives <span>&#8594;</span></a></div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw);background:#ffffff;">
+    <div style="max-width:900px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 8px;">Claude vs. The Alternatives</h2>
+      <p style="font-size:14px;color:#636363;margin:0 0 28px;">Compared to professional alternatives. Focus is on workflow fit, not benchmark scores.</p>
+
+      <div style="border:1px solid #f0f0f0;border-radius:12px;overflow:hidden;">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f9fafb;border-bottom:1px solid #f0f0f0;">
+              <th style="text-align:left;padding:14px 16px;font-weight:700;color:#111111;min-width:120px;">Tool</th>
+              <th style="text-align:left;padding:14px 16px;font-weight:700;color:#111111;">Best for</th>
+              <th style="text-align:left;padding:14px 16px;font-weight:700;color:#111111;">Weak for</th>
+              <th style="text-align:left;padding:14px 16px;font-weight:700;color:#111111;">Price range</th>
+              <th style="text-align:left;padding:14px 16px;font-weight:700;color:#111111;">One-line verdict</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #f5f5f5;background:#eff6ff;">
+              <td style="padding:14px 16px;font-weight:700;color:#2563EB;">Claude</td>
+              <td style="padding:14px 16px;color:#444444;">Long-doc analysis, nuanced writing, instruction precision</td>
+              <td style="padding:14px 16px;color:#444444;">Image generation, multimodal tasks, integrations</td>
+              <td style="padding:14px 16px;color:#444444;">$20/mo Pro</td>
+              <td style="padding:14px 16px;color:#444444;">Best for document-heavy, writing-intensive professional workflows.</td>
+            </tr>
+            <tr style="border-bottom:1px solid #f5f5f5;">
+              <td style="padding:14px 16px;font-weight:600;color:#111111;"><a href="chatgpt.html" style="color:#111111;text-decoration:none;">ChatGPT</a></td>
+              <td style="padding:14px 16px;color:#444444;">Multimodal tasks, integrations, team workspaces</td>
+              <td style="padding:14px 16px;color:#444444;">Very long documents, nuanced analytical writing</td>
+              <td style="padding:14px 16px;color:#444444;">$20–$200/mo+</td>
+              <td style="padding:14px 16px;color:#444444;">Broader feature surface; the right default for most new users.</td>
+            </tr>
+            <tr style="border-bottom:1px solid #f5f5f5;">
+              <td style="padding:14px 16px;font-weight:600;color:#111111;"><a href="perplexity.html" style="color:#111111;text-decoration:none;">Perplexity AI</a></td>
+              <td style="padding:14px 16px;color:#444444;">Research with live citations, regulatory lookups</td>
+              <td style="padding:14px 16px;color:#444444;">Long document synthesis, drafting</td>
+              <td style="padding:14px 16px;color:#444444;">Free–$20/mo</td>
+              <td style="padding:14px 16px;color:#444444;">The right choice when cited real-time sources are non-negotiable.</td>
+            </tr>
+            <tr style="border-bottom:1px solid #f5f5f5;">
+              <td style="padding:14px 16px;font-weight:600;color:#111111;"><a href="gemini.html" style="color:#111111;text-decoration:none;">Google Gemini</a></td>
+              <td style="padding:14px 16px;color:#444444;">Google Workspace integration (Docs, Gmail, Sheets)</td>
+              <td style="padding:14px 16px;color:#444444;">Standalone use, long-form analytical output</td>
+              <td style="padding:14px 16px;color:#444444;">Free–$19.99/mo</td>
+              <td style="padding:14px 16px;color:#444444;">Win for Google Workspace users; limited advantage outside it.</td>
+            </tr>
+            <tr>
+              <td style="padding:14px 16px;font-weight:600;color:#111111;"><a href="copilot.html" style="color:#111111;text-decoration:none;">Microsoft Copilot</a></td>
+              <td style="padding:14px 16px;color:#444444;">In-app AI inside Word, Excel, Outlook, Teams</td>
+              <td style="padding:14px 16px;color:#444444;">Standalone document analysis, complex reasoning</td>
+              <td style="padding:14px 16px;color:#444444;">Free–$30/user/mo</td>
+              <td style="padding:14px 16px;color:#444444;">Win for Microsoft 365 shops; redundant if you're not on M365.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="font-size:13px;color:#636363;margin:16px 0 0;">The typical professional power user does not choose between Claude and ChatGPT. They use both. Claude handles long-document analysis and precision writing; ChatGPT handles multimodal tasks, quick-turn drafts, and integrated workflows. The $40/month for both is often justified by the task split.</p>
+    </div>
+  </section>
+
+  <!-- VERDICT -->
+  <section id="verdict" style="padding:min(3rem,4vw) min(6.5rem,8vw);">
+    <div style="max-width:760px;background:#ffffff;border-radius:16px;padding:36px;border:1px solid #f0f0f0;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 20px;">My Verdict</h2>
+      <p style="font-size:14px;color:#444444;line-height:1.8;margin:0 0 16px;">Claude is the AI tool we most often recommend when a professional says: "I've been using ChatGPT but the output feels generic" or "the document is too long and ChatGPT keeps losing context." Those are exactly the problems Claude is built to solve. If either of those complaints sounds familiar, a two-week trial of Claude Pro at $20/month is a low-risk way to find out.</p>
+      <p style="font-size:14px;color:#444444;line-height:1.8;margin:0 0 16px;">For legal work, research-intensive roles, and anyone producing significant volumes of client-facing written output, Claude deserves to be in the primary toolset. Its instruction precision, context capacity, and writing quality separate it meaningfully from alternatives on high-complexity professional tasks.</p>
+      <p style="font-size:14px;color:#444444;line-height:1.8;margin:0 0 24px;">The case for choosing Claude exclusively over ChatGPT is weaker than the case for using both. Claude's gap on multimodal tasks, integrations, and voice is real. The professionals who extract the most value from AI tools typically maintain Claude for analytical depth and ChatGPT for breadth and speed.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid #f0f0f0;">
+        <p style="font-size:14px;color:#111111;margin:0;"><strong>Best for:</strong> Legal, finance, and research professionals who work with long documents and need high-quality analytical writing.</p>
+        <p style="font-size:14px;color:#111111;margin:0;"><strong>Skip it if:</strong> Your primary need is image generation, real-time cited research, or deep third-party software integration.</p>
+        <p style="font-size:13px;color:#636363;line-height:1.7;margin:10px 0 0;">We re-test this tool when major updates ship. Get notified via our <a href="newsletter.html" style="color:#2563eb;text-decoration:none;font-weight:600;">monthly briefing</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw);background:#ffffff;">
+    <div style="max-width:760px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 32px;">Frequently Asked Questions</h2>
+      <div style="display:flex;flex-direction:column;gap:0;">
+
+        <div style="border-top:1px solid #e5e7eb;padding:22px 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" style="font-size:15px;font-weight:600;color:#111111;margin:0 0 10px;">Is Claude worth it for professionals?</h3>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text" style="font-size:14px;color:#636363;line-height:1.75;margin:0;">Yes, particularly for document-heavy or writing-intensive work. The practical rule: if your daily work involves analyzing documents longer than 20 pages or producing written output that will be reviewed critically before going to clients, Claude Pro at $20/month typically pays for itself within the first week. If your primary need is quick conversational tasks and integrations, ChatGPT offers more flexibility at the same price point.</p>
+          </div>
+        </div>
+
+        <div style="border-top:1px solid #e5e7eb;padding:22px 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" style="font-size:15px;font-weight:600;color:#111111;margin:0 0 10px;">What is Claude's context window and why does it matter?</h3>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text" style="font-size:14px;color:#636363;line-height:1.75;margin:0;">Claude supports 200,000 tokens, which is approximately 150,000 words in context at once. In practical professional terms, this means a full legal contract, a complete annual report, or a multi-hundred-page regulatory filing can be analyzed in a single session without needing to split the document. The practical rule: if your document exceeds 50 pages, route it to Claude rather than ChatGPT to avoid context truncation issues that cause the tool to lose track of earlier sections.</p>
+          </div>
+        </div>
+
+        <div style="border-top:1px solid #e5e7eb;padding:22px 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" style="font-size:15px;font-weight:600;color:#111111;margin:0 0 10px;">Is Claude HIPAA compliant?</h3>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text" style="font-size:14px;color:#636363;line-height:1.75;margin:0;">It depends on your plan. Claude Free and Pro plans do not include a Business Associate Agreement and should not be used to process PHI. Claude Team and Enterprise plans include BAA availability for regulated data workflows [VERIFY DETAILS]. The practical rule: assume no HIPAA coverage unless you have a signed BAA in hand. Contact Anthropic's enterprise team before using any patient-identifiable information with Claude, regardless of plan.</p>
+          </div>
+        </div>
+
+        <div style="border-top:1px solid #e5e7eb;padding:22px 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" style="font-size:15px;font-weight:600;color:#111111;margin:0 0 10px;">Does Claude hallucinate facts?</h3>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text" style="font-size:14px;color:#636363;line-height:1.75;margin:0;">Yes, Claude can generate inaccurate information, including specific case citations, statutes, and numerical data. It tends to flag uncertainty more explicitly than ChatGPT, which is useful but not exhaustive. Claude can still be confidently wrong on factual details. The practical rule: any specific factual claim that will be used in client-facing or compliance-sensitive work must be verified against a primary source before use, regardless of how credible it appears in Claude's output.</p>
+          </div>
+        </div>
+
+        <div style="border-top:1px solid #e5e7eb;padding:22px 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" style="font-size:15px;font-weight:600;color:#111111;margin:0 0 10px;">How does Claude compare to ChatGPT for professional writing?</h3>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text" style="font-size:14px;color:#636363;line-height:1.75;margin:0;">It depends on the type of writing. For analytical, nuanced professional writing: legal memos, financial reports, and client briefings. Claude produces first drafts that typically require less editing for tone and structure. For shorter, more transactional writing like follow-up emails or meeting summaries, the gap is minimal and ChatGPT's speed advantage becomes more relevant. The practical rule: route long-form analytical output to Claude, quick-turnaround drafts to ChatGPT, and iterate from there based on your own quality threshold.</p>
+          </div>
+        </div>
+
+        <div style="border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;padding:22px 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name" style="font-size:15px;font-weight:600;color:#111111;margin:0 0 10px;">Can Claude analyze a full contract or legal document?</h3>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text" style="font-size:14px;color:#636363;line-height:1.75;margin:0;">Yes, and this is one of Claude's clearest professional advantages. A 200-page contract can be uploaded in full and analyzed end-to-end: clause relationships, obligations, deadlines, unusual terms, and inconsistencies. This works without requiring segmentation. The practical rule: upload the full document, ask Claude for a structured analysis first (obligations, risks, notable clauses), then follow up with specific questions about sections that warrant closer review. Always verify any specific clause interpretation against the original document before relying on it professionally.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOURCES CHECKED -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw);">
+    <div style="max-width:760px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 20px;">Sources Checked</h2>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li style="font-size:13px;color:#636363;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:#2563EB;font-weight:700;">[1]</span> Anthropic — claude.ai/pricing (plan names, pricing tiers, model access by tier)</li>
+        <li style="font-size:13px;color:#636363;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:#2563EB;font-weight:700;">[2]</span> Anthropic — Privacy Policy and data handling page (training opt-out by plan)</li>
+        <li style="font-size:13px;color:#636363;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:#2563EB;font-weight:700;">[3]</span> Anthropic — Claude model documentation (context window specifications, model family)</li>
+        <li style="font-size:13px;color:#636363;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:#2563EB;font-weight:700;">[4]</span> Anthropic — Enterprise page (BAA availability, compliance features) [VERIFY DETAILS]</li>
+        <li style="font-size:13px;color:#636363;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:#2563EB;font-weight:700;">[5]</span> Anthropic — Security overview (SOC 2 Type II certification status) [VERIFY DETAILS]</li>
+        <li style="font-size:13px;color:#636363;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:#2563EB;font-weight:700;">[6]</span> Anthropic — Claude Projects documentation (persistent workspace features, context management)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHAT MOST REVIEWS MISS -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw);background:#ffffff;">
+    <div style="max-width:760px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 20px;">What Most Reviews Miss</h2>
+
+      <div style="display:flex;flex-direction:column;gap:20px;margin-bottom:28px;">
+        <div style="background:#f9fafb;border-radius:10px;padding:20px 24px;">
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Most Claude reviews focus on context window size as if it were simply a larger storage bucket. The actual advantage is qualitative: Claude doesn't just hold more text. It reasons across the entire document simultaneously. Ask it "Does the indemnification clause in section 8 conflict with the limitation of liability in section 14?" and it can answer that question because it has genuinely processed both clauses in the same reasoning session. That capability is not a context window size story; it's an architecture story, and it's why legal and finance professionals specifically reach for Claude on complex document tasks.</p>
+        </div>
+        <div style="background:#f9fafb;border-radius:10px;padding:20px 24px;">
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Claude's Constitutional AI training is rarely discussed in practical professional terms. The short version: Anthropic trained Claude to reason about the appropriateness of its own responses before delivering them. The practical result is a model that is more likely to tell you when it's uncertain, more likely to decline to fabricate a source, and more likely to flag when a question requires professional judgment that an AI shouldn't substitute for. This doesn't eliminate hallucination. It reduces confident hallucination, which is the more dangerous kind.</p>
+        </div>
+        <div style="background:#f9fafb;border-radius:10px;padding:20px 24px;">
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Claude Projects is treated as a minor feature in most coverage. For professional teams with repetitive workflows, it is the most valuable thing Anthropic has shipped for enterprise use. A team that builds a Claude Project pre-loaded with their standard contracts, style guides, and firm-specific instructions gets consistent output from day one of any new matter, without anyone having to re-provide context. The setup cost is a few hours. The ongoing time savings are substantial.</p>
+        </div>
+      </div>
+
+      <!-- Unique insight anchor -->
+      <p style="font-size:15px;font-weight:600;color:#111111;background:#fffbeb;border-left:3px solid #f59e0b;padding:14px 18px;border-radius:0 8px 8px 0;margin:0 0 16px;">Most Claude users significantly underestimate how much of their remaining editing time is spent correcting tone rather than content. Claude's writing quality advantage reduces exactly that overhead, which is the least visible but most time-consuming part of AI-assisted drafting.</p>
+
+      <p style="font-size:14px;color:#444444;line-height:1.75;margin:0 0 10px;"><strong>One thing Claude does better than most:</strong> Precision execution on complex multi-constraint prompts. When you specify six requirements: format, tone, length, included sections, excluded topics, and output structure. Claude honors all six more reliably than any alternative we've tested. This matters significantly in compliance-sensitive professional environments where output deviation from a specified format creates rework.</p>
+      <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;"><strong>One thing Claude gets wrong in real workflows:</strong> Real-time data. Claude does not browse the web by default and will not retrieve current pricing, recent regulatory updates, or live market data. Professionals who mistake Claude's confident tone for current information can be seriously misled by outdated knowledge, particularly in fast-moving areas like securities law, FDA guidance, or technology compliance.</p>
+    </div>
+  </section>
+
+  <!-- RELATED GUIDES -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw) min(5rem,6vw);">
+    <div style="max-width:760px;">
+      <h2 style="font-size:20px;font-weight:700;color:#111111;margin:0 0 20px;">Related Guides</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <a href="chatgpt.html" style="font-size:14px;color:#2563EB;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">ChatGPT overview: multimodal tasks and integrations for professionals</a>
+        <a href="perplexity.html" style="font-size:14px;color:#2563EB;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Perplexity AI overview: when cited real-time research matters more than document depth</a>
+        <a href="claude/legal.html" style="font-size:14px;color:#2563EB;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Claude for Lawyers: full contract analysis, brief drafting, and research workflows</a>
+        <a href="claude/physicians.html" style="font-size:14px;color:#2563EB;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Claude for Physicians: clinical documentation and HIPAA compliance guide</a>
+        <a href="claude/finance.html" style="font-size:14px;color:#2563EB;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Claude for Financial Advisors: regulatory synthesis and client report workflows</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHOR PROFILE -->
+  <section style="padding:0 min(6.5rem,8vw) min(4rem,6vw);">
+    <div style="max-width:760px;border-top:1px solid #f0f0f0;padding-top:36px;">
+      <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#636363;margin:0 0 20px;">About the Author</p>
+      <div style="display:flex;align-items:flex-start;gap:24px;">
+        <div style="flex-shrink:0;">
+          <div style="width:72px;height:72px;border-radius:50%;overflow:hidden;background:#e2ecf4;">
+            <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" width="72" height="72">
+              <circle cx="70" cy="70" r="70" fill="#e2ecf4"/>
+              <path d="M 0 140 Q 5 105 28 96 Q 45 89 70 91 Q 95 89 112 96 Q 135 105 140 140 Z" fill="#1e293b"/>
+              <path d="M 58 93 L 70 112 L 82 93 Q 70 88 58 93 Z" fill="#f8fafc"/>
+              <rect x="61" y="82" width="18" height="16" rx="5" fill="#e8b090"/>
+              <ellipse cx="70" cy="64" rx="30" ry="33" fill="#e8b090"/>
+              <path d="M 40 58 Q 40 28 70 26 Q 100 28 100 58 Q 98 36 70 33 Q 42 36 40 58 Z" fill="#2c1f14"/>
+              <path d="M 40 58 Q 39 50 41 44 Q 39 52 41 62 Z" fill="#2c1f14"/>
+              <path d="M 100 58 Q 101 50 99 44 Q 101 52 99 62 Z" fill="#2c1f14"/>
+              <ellipse cx="40" cy="67" rx="5.5" ry="7" fill="#d4956a"/>
+              <ellipse cx="100" cy="67" rx="5.5" ry="7" fill="#d4956a"/>
+              <rect x="44" y="58" width="20" height="14" rx="3.5" fill="none" stroke="#1a1a2e" stroke-width="2"/>
+              <rect x="76" y="58" width="20" height="14" rx="3.5" fill="none" stroke="#1a1a2e" stroke-width="2"/>
+              <line x1="64" y1="64" x2="76" y2="64" stroke="#1a1a2e" stroke-width="2"/>
+              <line x1="36" y1="64" x2="44" y2="64" stroke="#1a1a2e" stroke-width="1.8"/>
+              <line x1="96" y1="64" x2="104" y2="64" stroke="#1a1a2e" stroke-width="1.8"/>
+              <circle cx="54" cy="65" r="4" fill="#3d5a80"/>
+              <circle cx="86" cy="65" r="4" fill="#3d5a80"/>
+              <circle cx="55.5" cy="63.5" r="1.2" fill="#ffffff" opacity="0.7"/>
+              <circle cx="87.5" cy="63.5" r="1.2" fill="#ffffff" opacity="0.7"/>
+              <path d="M 70 73 Q 67 78 69 80 Q 70 81 71 80 Q 73 78 70 73" fill="none" stroke="#c07850" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M 61 87 Q 70 93 79 87" stroke="#b07040" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:15px;font-weight:600;color:#111111;margin:0 0 2px;">Rich M.</p>
+          <p style="font-size:12px;color:#636363;margin:0 0 12px;">Founder, AI Tools for Pros &nbsp;&middot;&nbsp; 8+ years in SEO</p>
+          <p style="font-size:14px;color:#444444;line-height:1.7;margin:0 0 12px;">Rich has spent over eight years in SEO across demanding industries including iGaming, sports entertainment, and affiliate marketing. He built AI Tools for Pros to give working professionals honest, independent guidance on AI tools, without the hype and without vendor influence.</p>
+          <a href="about-us.html" style="font-size:12px;font-weight:600;color:#2563EB;text-decoration:none;letter-spacing:0.03em;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">More about Rich &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="background:#07091a;border-radius:28px 28px 0 0;padding:56px min(6.5rem,8vw);">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:52px;">
+      <div>
+        <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Directory</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="legal.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Legal Counsel</a></li>
+          <li><a href="architects.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Architects</a></li>
+          <li><a href="physicians.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Physicians</a></li>
+          <li><a href="engineers.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Engineers</a></li>
+          <li><a href="finance.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Finance</a></li>
+          <li><a href="creatives.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Creatives</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Company</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="about-us.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">About</a></li>
+          <li><a href="our-process.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Our Process</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Resources</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="newsletter.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Legal</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="privacy-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid #111e38;margin-bottom:48px;"></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;">
+      <div>
+        <p style="color:#1e2a45;font-size:11px;font-weight:500;margin:0 0 4px;letter-spacing:0.05em;opacity:0.6;">AI Tools for Pros</p>
+        <p class="font-heading" style="color:#2563EB;font-size:48px;font-weight:700;margin:0 0 10px;line-height:1;">2026.</p>
+        <p style="color:#4a5568;font-size:13px;margin:0;">Join 15,000+ professionals receiving our monthly tool audit.</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="position:relative;display:flex;align-items:center;">
+          <input type="email" placeholder="professional@email.com" style="background:#0d1228;color:#4a5568;font-size:13px;padding:13px 48px 13px 18px;border-radius:999px;border:1px solid #1a2444;outline:none;width:248px;font-family:'Inter',sans-serif;">
+          <div style="position:absolute;right:8px;width:28px;height:28px;background:#1a2444;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="#4a5568" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <button style="background:#ffffff;color:#111111;font-size:13px;font-weight:500;padding:13px 24px;border-radius:999px;border:none;cursor:pointer;font-family:'Inter',sans-serif;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='#ffffff'">Subscribe</button>
+      </div>
+    </div>
+  </footer>
+
+<!-- Back to top -->
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:28px;right:28px;width:44px;height:44px;background:#111111;color:#ffffff;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.2);z-index:999;opacity:0;transition:opacity 0.25s,background 0.15s,transform 0.15s;pointer-events:none;" onmouseover="this.style.background='#2563eb';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#111111';this.style.transform='translateY(0)'">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<script>
+(function(){
+  var btn=document.getElementById('btt');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>300){btn.style.opacity='1';btn.style.pointerEvents='auto';}
+    else{btn.style.opacity='0';btn.style.pointerEvents='none';}
+  },{passive:true});
+})();
+</script>
+
+</body>
+</html>

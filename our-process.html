@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Review Process — AI Tools for Pros</title>
+  <meta name="description" content="How AI Tools for Pros tests and reviews AI tools for working professionals. Our methodology covers real-world workflows, profession-specific use cases, accuracy testing, and pricing transparency.">
+  <meta property="og:title" content="Our Review Process — AI Tools for Pros">
+  <meta property="og:description" content="How AI Tools for Pros tests and reviews AI tools for working professionals. Hands-on testing in real professional workflows, not benchmarks.">
+  <meta property="og:image" content="https://aitoolsforpros.com/og-image.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Our Review Process — AI Tools for Pros",
+        "description": "How AI Tools for Pros tests and reviews AI tools for working professionals, covering real-world workflows, accuracy testing, and pricing transparency.",
+        "url": "https://aitoolsforpros.com/our-process",
+        "publisher": {
+          "@type": "Organization",
+          "name": "AI Tools for Pros",
+          "url": "https://aitoolsforpros.com"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolsforpros.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Our Process", "item": "https://aitoolsforpros.com/our-process"}
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How AI Tools for Pros Reviews AI Tools",
+        "description": "The five-step methodology we use to evaluate AI tools for working professionals.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Subscribe and use the tool independently",
+            "text": "We purchase our own subscriptions at full price with no vendor discounts or free access arrangements, then use the tool daily for a minimum of four weeks."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Test inside real professional workflows",
+            "text": "We evaluate tools against actual tasks from each profession — drafting legal documents, analyzing financial data, writing listing descriptions, and more — rather than artificial benchmarks."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Document what fails, not just what works",
+            "text": "We actively probe for failure modes: hallucinations, citation errors, formatting breakdowns, and edge cases that matter in professional settings."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Compare against direct alternatives",
+            "text": "Every tool is evaluated in context of its competitors. We run the same tasks through multiple tools and report the differences honestly."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Update reviews when tools change",
+            "text": "We revisit reviews when a tool releases a major model update, changes pricing, or when a competitor changes the landscape significantly."
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            body: ['Inter', 'sans-serif'],
+            heading: ['Cardo', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #111111; margin: 0; padding: 0; }
+    .font-heading { font-family: 'Cardo', serif; }
+    .nav-link { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #636363; text-decoration: none; transition: color 0.15s; }
+    .nav-link:hover { color: #111111; }
+    .nav-dropdown { position: relative; }
+    .nav-link-caret { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #636363; cursor: default; display: inline-flex; align-items: center; gap: 5px; transition: color 0.15s; user-select: none; }
+    .nav-link-caret:hover, .nav-dropdown:hover .nav-link-caret { color: #111111; }
+    .dropdown-menu { position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%); background: #ffffff; border: 1px solid #ebebeb; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.09); padding: 6px; min-width: 196px; opacity: 0; visibility: hidden; transition: opacity 0.15s, visibility 0.15s; z-index: 200; }
+    .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; }
+    .dropdown-item { display: block; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .dropdown-item:hover { background: #f5f5f5; color: #111111; }
+    .submenu-item { position: relative; }
+    .submenu-trigger { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; cursor: pointer; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .submenu-item:hover .submenu-trigger { background: #f5f5f5; color: #111111; }
+    .submenu { position: absolute; left: calc(100% + 6px); top: -6px; background: #ffffff; border: 1px solid #ebebeb; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.09); padding: 6px; min-width: 196px; opacity: 0; visibility: hidden; transition: opacity 0.15s, visibility 0.15s; z-index: 201; }
+    .submenu-item:hover .submenu { opacity: 1; visibility: visible; }
+    .submenu a { display: block; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .submenu a:hover { background: #f5f5f5; color: #111111; }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Analytics — replace G-XXXXXXXXXX with your Measurement ID to activate -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+  <script src="site.js" defer></script>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <!-- NAV -->
+<nav style="padding:18px min(2rem,8vw);position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;justify-content:space-between;">
+  <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+    <img src="logo.svg" width="32" height="32" alt="AI Tools for Pros" style="border-radius:8px;display:block;">
+    <span style="font-size:13px;font-weight:500;color:#111111;">AI Tools for Pros</span>
+  </a>
+  <div id="nav-desktop" style="display:flex;align-items:center;gap:36px;">
+    <a href="our-process.html" class="nav-link">Our Process</a>
+    <div class="nav-dropdown">
+      <span class="nav-link-caret">AI Tools <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="dropdown-menu">
+        <a href="chatgpt.html" class="dropdown-item">ChatGPT</a>
+        <a href="claude.html" class="dropdown-item">Claude</a>
+        <a href="perplexity.html" class="dropdown-item">Perplexity AI</a>
+        <a href="gemini.html" class="dropdown-item">Google Gemini</a>
+        <a href="copilot.html" class="dropdown-item">Microsoft Copilot</a>
+        <a href="midjourney.html" class="dropdown-item">Midjourney</a>
+        <a href="cursor.html" class="dropdown-item">Cursor</a>
+        <a href="notion-ai.html" class="dropdown-item">Notion AI</a>
+        <a href="grammarly.html" class="dropdown-item">Grammarly</a>
+        <a href="otter.html" class="dropdown-item">Otter.ai</a>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <span class="nav-link-caret">Professions <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="dropdown-menu">
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="legal.html">Legal Counsel <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/legal.html">ChatGPT</a>
+            <a href="claude/legal.html">Claude</a>
+            <a href="perplexity/legal.html">Perplexity AI</a>
+            <a href="gemini/legal.html">Google Gemini</a>
+            <a href="copilot/legal.html">Microsoft Copilot</a>
+            <a href="grammarly/legal.html">Grammarly</a>
+            <a href="notion-ai/legal.html">Notion AI</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="physicians.html">Physicians <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/physicians.html">ChatGPT</a>
+            <a href="claude/physicians.html">Claude</a>
+            <a href="perplexity/physicians.html">Perplexity AI</a>
+            <a href="copilot/physicians.html">Microsoft Copilot</a>
+            <a href="otter/physicians.html">Otter.ai</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="real-estate.html">Real Estate <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/real-estate.html">ChatGPT</a>
+            <a href="claude/real-estate.html">Claude</a>
+            <a href="gemini/real-estate.html">Google Gemini</a>
+            <a href="copilot/real-estate.html">Microsoft Copilot</a>
+            <a href="grammarly/real-estate.html">Grammarly</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="engineers.html">Engineers <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/engineers.html">ChatGPT</a>
+            <a href="claude/engineers.html">Claude</a>
+            <a href="cursor/engineers.html">Cursor</a>
+            <a href="copilot/engineers.html">Microsoft Copilot</a>
+            <a href="notion-ai/engineers.html">Notion AI</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="finance.html">Finance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/finance.html">ChatGPT</a>
+            <a href="claude/finance.html">Claude</a>
+            <a href="perplexity/finance.html">Perplexity AI</a>
+            <a href="copilot/finance.html">Microsoft Copilot</a>
+            <a href="gemini/finance.html">Google Gemini</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="insurance.html">Insurance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/insurance.html">ChatGPT</a>
+            <a href="claude/insurance.html">Claude</a>
+            <a href="copilot/insurance.html">Microsoft Copilot</a>
+            <a href="perplexity/insurance.html">Perplexity AI</a>
+            <a href="grammarly/insurance.html">Grammarly</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="architects.html">Architects <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/architects.html">ChatGPT</a>
+            <a href="claude/architects.html">Claude</a>
+            <a href="gemini/architects.html">Google Gemini</a>
+            <a href="midjourney/architects.html">Midjourney</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="creatives.html">Creatives <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/creatives.html">ChatGPT</a>
+            <a href="claude/creatives.html">Claude</a>
+            <a href="midjourney/creatives.html">Midjourney</a>
+            <a href="grammarly/creatives.html">Grammarly</a>
+            <a href="notion-ai/creatives.html">Notion AI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="newsletter.html" class="nav-link">Newsletter</a>
+  </div>
+</nav>
+
+  <!-- BREADCRUMB -->
+  <div style="padding: 16px min(6.5rem, 8vw); font-size: 12px; color: #9ca3af;">
+    <a href="index.html" style="color:#9ca3af;text-decoration:none;" onmouseover="this.style.color='#636363'" onmouseout="this.style.color='#9ca3af'">Home</a>
+    <span style="margin: 0 8px;">/</span>
+    <span style="color:#111111;">Our Process</span>
+  </div>
+
+  <!-- HERO -->
+  <section style="padding: min(4rem,6vw) min(6.5rem, 8vw) min(3rem,4vw);">
+    <div style="display:inline-flex;align-items:center;background:#111111;color:#ffffff;font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;padding:8px 20px;border-radius:999px;margin-bottom:32px;">
+      Review Methodology
+    </div>
+    <h1 class="font-heading" style="font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;line-height:1.1;margin:0 0 20px;color:#111111;max-width:680px;">
+      How we review AI tools for professionals
+    </h1>
+    <p style="color:#636363;font-size:16px;line-height:1.75;max-width:560px;margin:0 0 36px;">
+      We don't run benchmarks. We don't ask for demo accounts. We test AI tools the same way you'd use them: under real working conditions, against real professional tasks, with no special treatment.
+    </p>
+    <!-- Key stats -->
+    <div style="display:flex;align-items:center;gap:40px;padding:24px 0;border-top:1px solid #f0f0f0;border-bottom:1px solid #f0f0f0;">
+      <div>
+        <p style="font-size:24px;font-weight:700;color:#111111;margin:0 0 4px;">4+ weeks</p>
+        <p style="font-size:12px;color:#9ca3af;margin:0;">Minimum testing period per tool</p>
+      </div>
+      <div style="width:1px;height:40px;background:#e5e7eb;"></div>
+      <div>
+        <p style="font-size:24px;font-weight:700;color:#111111;margin:0 0 4px;">8 professions</p>
+        <p style="font-size:12px;color:#9ca3af;margin:0;">Evaluated per tool</p>
+      </div>
+      <div style="width:1px;height:40px;background:#e5e7eb;"></div>
+      <div>
+        <p style="font-size:24px;font-weight:700;color:#111111;margin:0 0 4px;">100% paid</p>
+        <p style="font-size:12px;color:#9ca3af;margin:0;">Own subscriptions, no comp access</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE 5 STEPS -->
+  <section style="padding: 0 min(6.5rem, 8vw) min(4rem,6vw);">
+    <h2 class="font-heading" style="font-size:2rem;font-weight:700;color:#111111;margin:0 0 40px;">The five steps of every review</h2>
+    <div style="display:flex;flex-direction:column;gap:0;">
+
+      <div style="display:grid;grid-template-columns:60px 1fr;gap:28px;padding:36px 0;border-bottom:1px solid #f0f0f0;align-items:start;">
+        <div style="width:52px;height:52px;border-radius:16px;background:#111111;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="font-size:20px;font-weight:700;color:#ffffff;font-family:'Cardo',serif;">1</span>
+        </div>
+        <div>
+          <h3 style="font-size:17px;font-weight:700;color:#111111;margin:0 0 10px;">Subscribe and use the tool independently</h3>
+          <p style="font-size:14px;line-height:1.75;color:#636363;margin:0 0 12px;">We purchase our own subscriptions at full price. No vendor discounts, no free access arrangements, no early reviewer programs. Every tool is evaluated as a paying customer, which means we experience the same onboarding, limitations, and pricing tiers that you do.</p>
+          <p style="font-size:14px;line-height:1.75;color:#636363;margin:0;">Minimum testing period is four continuous weeks of daily use before we write a word.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:60px 1fr;gap:28px;padding:36px 0;border-bottom:1px solid #f0f0f0;align-items:start;">
+        <div style="width:52px;height:52px;border-radius:16px;background:#2563EB;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="font-size:20px;font-weight:700;color:#ffffff;font-family:'Cardo',serif;">2</span>
+        </div>
+        <div>
+          <h3 style="font-size:17px;font-weight:700;color:#111111;margin:0 0 10px;">Test inside real professional workflows</h3>
+          <p style="font-size:14px;line-height:1.75;color:#636363;margin:0 0 12px;">For each of the eight professions we cover, we run the tool against actual tasks from that field: drafting NDAs, analyzing real estate contracts, summarizing financial statements, writing physician notes, generating code, creating architectural briefs.</p>
+          <p style="font-size:14px;line-height:1.75;color:#636363;margin:0;">We don't use toy examples. We use the kind of prompts a working professional would write on a Tuesday afternoon.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:60px 1fr;gap:28px;padding:36px 0;border-bottom:1px solid #f0f0f0;align-items:start;">
+        <div style="width:52px;height:52px;border-radius:16px;background:#111111;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="font-size:20px;font-weight:700;color:#ffffff;font-family:'Cardo',serif;">3</span>
+        </div>
+        <div>
+          <h3 style="font-size:17px;font-weight:700;color:#111111;margin:0 0 10px;">Document what fails, not just what works</h3>
+          <p style="font-size:14px;line-height:1.75;color:#636363;margin:0 0 12px;">Most AI tool reviews are written by people who want the tool to be good. We actively probe for failure modes: hallucinated citations, factual errors, formatting breakdowns under edge cases, and limitations that only surface in professional contexts.</p>
+          <p style="font-size:14px;line-height:1.75;color:#636363;margin:0;">Every review includes a dedicated limitations section. A tool that scores well on our site has genuinely earned it.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:60px 1fr;gap:28px;padding:36px 0;border-bottom:1px solid #f0f0f0;align-items:start;">
+        <div style="width:52px;height:52px;border-radius:16px;background:#2563EB;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="font-size:20px;font-weight:700;color:#ffffff;font-family:'Cardo',serif;">4</span>
+        </div>
+        <div>
+          <h3 style="font-size:17px;font-weight:700;color:#111111;margin:0 0 10px;">Compare against direct alternatives</h3>
+          <p style="font-size:14px;line-height:1.75;color:#636363;margin:0 0 12px;">Every tool is evaluated in the context of its closest competitors. We run the same prompts through <a href="chatgpt.html" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>, <a href="claude.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a>, <a href="perplexity.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity</a>, and others. We report the differences honestly, including when a cheaper or free alternative performs comparably.</p>
+          <p style="font-size:14px;line-height:1.75;color:#636363;margin:0;">Our profession × tool cross-reference pages exist specifically to answer the question: "Is this the right tool for my situation, or should I use something else?"</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:60px 1fr;gap:28px;padding:36px 0;align-items:start;">
+        <div style="width:52px;height:52px;border-radius:16px;background:#111111;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="font-size:20px;font-weight:700;color:#ffffff;font-family:'Cardo',serif;">5</span>
+        </div>
+        <div>
+          <h3 style="font-size:17px;font-weight:700;color:#111111;margin:0 0 10px;">Update reviews when tools change</h3>
+          <p style="font-size:14px;line-height:1.75;color:#636363;margin:0 0 12px;">An AI tool review from six months ago may as well be ancient history. We revisit every review when a tool releases a major model update, changes its pricing, adds or removes features, or when a new competitor changes the landscape.</p>
+          <p style="font-size:14px;line-height:1.75;color:#636363;margin:0;">Every page shows its last updated date. If you notice that a review is out of date, email us. We take that seriously.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT WE SCORE -->
+  <section style="padding: 0 min(6.5rem, 8vw) min(5rem,7vw);">
+    <h2 class="font-heading" style="font-size:2rem;font-weight:700;color:#111111;margin:0 0 12px;">What we evaluate in every review</h2>
+    <p style="font-size:15px;color:#636363;margin:0 0 36px;max-width:560px;">We don't use a single score. Professionals have different priorities. Instead we evaluate each of these dimensions and report them honestly.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <div style="background:#ffffff;border-radius:16px;padding:28px;border:1px solid #f0f0f0;">
+        <h3 style="font-size:14px;font-weight:700;color:#111111;margin:0 0 8px;">Output quality</h3>
+        <p style="font-size:13px;line-height:1.7;color:#636363;margin:0;">Is the output accurate, coherent, and usable for professional work without significant editing?</p>
+      </div>
+      <div style="background:#ffffff;border-radius:16px;padding:28px;border:1px solid #f0f0f0;">
+        <h3 style="font-size:14px;font-weight:700;color:#111111;margin:0 0 8px;">Instruction following</h3>
+        <p style="font-size:13px;line-height:1.7;color:#636363;margin:0;">Does the tool reliably follow complex, multi-part professional prompts, or does it drift, simplify, or ignore constraints?</p>
+      </div>
+      <div style="background:#ffffff;border-radius:16px;padding:28px;border:1px solid #f0f0f0;">
+        <h3 style="font-size:14px;font-weight:700;color:#111111;margin:0 0 8px;">Hallucination risk</h3>
+        <p style="font-size:13px;line-height:1.7;color:#636363;margin:0;">How often does the tool fabricate facts, citations, or data in professional contexts, and how detectable are those errors?</p>
+      </div>
+      <div style="background:#ffffff;border-radius:16px;padding:28px;border:1px solid #f0f0f0;">
+        <h3 style="font-size:14px;font-weight:700;color:#111111;margin:0 0 8px;">Workflow integration</h3>
+        <p style="font-size:13px;line-height:1.7;color:#636363;margin:0;">Does the tool fit inside existing professional software and workflows, or does it require context-switching that adds friction?</p>
+      </div>
+      <div style="background:#ffffff;border-radius:16px;padding:28px;border:1px solid #f0f0f0;">
+        <h3 style="font-size:14px;font-weight:700;color:#111111;margin:0 0 8px;">Value at price</h3>
+        <p style="font-size:13px;line-height:1.7;color:#636363;margin:0;">Does the paid tier offer enough over the free alternative to justify the cost for a working professional?</p>
+      </div>
+      <div style="background:#ffffff;border-radius:16px;padding:28px;border:1px solid #f0f0f0;">
+        <h3 style="font-size:14px;font-weight:700;color:#111111;margin:0 0 8px;">Privacy and data handling</h3>
+        <p style="font-size:13px;line-height:1.7;color:#636363;margin:0;">Is the tool safe to use with sensitive client or patient data? What data does it train on, and can you opt out?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#07091a;border-radius:28px 28px 0 0;padding: 56px min(6.5rem, 8vw);">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:52px;">
+      <div>
+        <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Directory</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="legal.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Legal Counsel</a></li>
+          <li><a href="architects.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Architects</a></li>
+          <li><a href="physicians.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Physicians</a></li>
+          <li><a href="engineers.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Engineers</a></li>
+          <li><a href="finance.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Finance</a></li>
+          <li><a href="creatives.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Creatives</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Company</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="about-us.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">About</a></li>
+          <li><a href="our-process.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Our Process</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Resources</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="newsletter.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Legal</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="privacy-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid #111e38;margin-bottom:48px;"></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;">
+      <div>
+        <p style="color:#1e2a45;font-size:11px;font-weight:500;margin:0 0 4px;letter-spacing:0.05em;opacity:0.6;">AI Tools for Pros</p>
+        <p class="font-heading" style="color:#2563EB;font-size:48px;font-weight:700;margin:0 0 10px;line-height:1;">2026.</p>
+        <p style="color:#4a5568;font-size:13px;margin:0;">Join 15,000+ professionals receiving our monthly tool audit.</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="position:relative;display:flex;align-items:center;">
+          <input type="email" placeholder="professional@email.com" style="background:#0d1228;color:#4a5568;font-size:13px;padding:13px 48px 13px 18px;border-radius:999px;border:1px solid #1a2444;outline:none;width:248px;font-family:'Inter',sans-serif;">
+          <div style="position:absolute;right:8px;width:28px;height:28px;background:#1a2444;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="#4a5568" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <button style="background:#ffffff;color:#111111;font-size:13px;font-weight:500;padding:13px 24px;border-radius:999px;border:none;cursor:pointer;font-family:'Inter',sans-serif;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='#ffffff'">Subscribe</button>
+      </div>
+    </div>
+  </footer>
+
+
+<!-- Back to top -->
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:28px;right:28px;width:44px;height:44px;background:#111111;color:#ffffff;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.2);z-index:999;opacity:0;transition:opacity 0.25s,background 0.15s,transform 0.15s;pointer-events:none;" onmouseover="this.style.background='#2563eb';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#111111';this.style.transform='translateY(0)'">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<script>
+(function(){
+  var btn=document.getElementById('btt');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>300){btn.style.opacity='1';btn.style.pointerEvents='auto';}
+    else{btn.style.opacity='0';btn.style.pointerEvents='none';}
+  },{passive:true});
+})();
+</script>
+</body>
+</html>

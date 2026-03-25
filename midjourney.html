@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Midjourney for Professionals — Honest Review (2026) | AI Tools for Pros</title>
+  <meta name="description" content="An honest review of Midjourney for working professionals in 2026. Best-in-class AI image generation for architects, creatives, and design-adjacent professions.">
+  <meta property="og:title" content="Midjourney for Professionals — Honest Review (2026) | AI Tools for Pros">
+  <meta property="og:description" content="An honest review of Midjourney for working professionals in 2026. Best-in-class AI image generation for architects, creatives, and design-adjacent professions.">
+  <meta property="og:image" content="https://aitoolsforpros.com/og-image.jpg">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aitoolsforpros.com/midjourney">
+  <link rel="canonical" href="https://aitoolsforpros.com/midjourney">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { body: ['Inter','sans-serif'], heading: ['Cardo','serif'] } } }
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #111111; margin: 0; padding: 0; }
+    .font-heading { font-family: 'Cardo', serif; }
+    .nav-link { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #636363; text-decoration: none; transition: color 0.15s; }
+    .nav-link:hover { color: #111111; }
+    .nav-dropdown { position: relative; }
+    .nav-link-caret { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #636363; cursor: default; display: inline-flex; align-items: center; gap: 5px; transition: color 0.15s; user-select: none; }
+    .nav-link-caret:hover, .nav-dropdown:hover .nav-link-caret { color: #111111; }
+    .dropdown-menu { position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%); background: #ffffff; border: 1px solid #ebebeb; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.09); padding: 6px; min-width: 196px; opacity: 0; visibility: hidden; transition: opacity 0.15s, visibility 0.15s; z-index: 200; }
+    .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; }
+    .dropdown-item { display: block; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .dropdown-item:hover { background: #f5f5f5; color: #111111; }
+    .submenu-item { position: relative; }
+    .submenu-trigger { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; cursor: pointer; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .submenu-item:hover .submenu-trigger { background: #f5f5f5; color: #111111; }
+    .submenu { position: absolute; left: calc(100% + 6px); top: -6px; background: #ffffff; border: 1px solid #ebebeb; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.09); padding: 6px; min-width: 196px; opacity: 0; visibility: hidden; transition: opacity 0.15s, visibility 0.15s; z-index: 201; }
+    .submenu-item:hover .submenu { opacity: 1; visibility: visible; }
+    .submenu a { display: block; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .submenu a:hover { background: #f5f5f5; color: #111111; }
+    .prompt-block { background: #f8f9fa; border-left: 3px solid #7c3aed; padding: 16px 20px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 13px; color: #333333; line-height: 1.7; margin-bottom: 20px; }
+    .industry-card { background: #ffffff; border-radius: 16px; padding: 28px; position: relative; overflow: hidden; border: 1px solid #f0f0f0; transition: box-shadow 0.2s; }
+    .industry-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.07); }
+    .read-guide-link { font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #111111; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+    .read-guide-link:hover { color: #7c3aed; }
+    .verdict-badge-specialized { display: inline-flex; align-items: center; gap: 8px; background: #7c3aed; color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 16px; border-radius: 999px; }
+    .fact-bar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; background: #ffffff; border: 1px solid #f0f0f0; border-radius: 12px; overflow: hidden; }
+    .fact-item { padding: 16px 20px; border-right: 1px solid #f0f0f0; }
+    .fact-item:last-child { border-right: none; }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Midjourney for Professionals — Honest Review (2026)",
+        "description": "An honest review of Midjourney for working professionals in 2026. Best-in-class AI image generation for architects, creatives, and design-adjacent professions.",
+        "url": "https://aitoolsforpros.com/midjourney",
+        "datePublished": "2026-02-24",
+        "dateModified": "2026-03-18",
+        "isAccessibleForFree": true,
+        "author": {"@type": "Organization", "name": "AI Tools for Pros", "url": "https://aitoolsforpros.com"},
+        "publisher": {"@type": "Organization", "name": "AI Tools for Pros", "url": "https://aitoolsforpros.com"},
+        "mainEntityOfPage": {"@type": "WebPage", "@id": "https://aitoolsforpros.com/midjourney"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolsforpros.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Midjourney", "item": "https://aitoolsforpros.com/midjourney"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Midjourney worth it for professionals?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes, for professionals in design-adjacent fields who need high-quality visual concepts quickly. Architects use it for conceptual renderings and client presentations. Creatives use it for mood boards, campaign concepts, and visual direction. Real estate marketers use it for lifestyle imagery. If generating or sourcing visual content is a meaningful part of your professional work, Midjourney's image quality is the best available from any AI image generator as of early 2026 [VERIFY DETAILS]. If your work is primarily text-based, it has no professional relevance."}
+          },
+          {
+            "@type": "Question",
+            "name": "How does Midjourney compare to DALL-E in ChatGPT?",
+            "acceptedAnswer": {"@type": "Answer", "text": "It depends on the use case. Midjourney produces more aesthetically refined, photorealistic, and architecturally accurate images on average. DALL-E 3 (accessed through ChatGPT) is more convenient for professionals who want image generation alongside text generation in a single interface, and it handles specific text-in-image requests more reliably. For serious visual work where image quality is the primary criterion, most professionals in design and architecture fields use Midjourney. For occasional image generation as part of a broader AI workflow, ChatGPT's DALL-E integration is more convenient."}
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need a Discord account to use Midjourney?",
+            "acceptedAnswer": {"@type": "Answer", "text": "No, not anymore for most users. Midjourney launched a web interface at midjourney.com that no longer requires Discord for image generation. The Discord bot interface still exists for users who prefer it. The web interface is more accessible for professionals who are not regular Discord users and provides a cleaner workflow for managing generated images, versioning, and upscaling. [VERIFY DETAILS]"}
+          },
+          {
+            "@type": "Question",
+            "name": "What are the commercial use rights for Midjourney images?",
+            "acceptedAnswer": {"@type": "Answer", "text": "It depends on your plan. Midjourney Pro and Mega plans include commercial use rights for generated images. Free and Basic plans may have restrictions on commercial use [VERIFY DETAILS]. For professional use where generated images will appear in client deliverables, marketing materials, or published work, confirm your plan tier includes the necessary commercial license before relying on generated images in client-facing work."}
+          },
+          {
+            "@type": "Question",
+            "name": "Can Midjourney generate architectural renderings?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes, and this is one of its strongest professional applications. Midjourney can generate photorealistic architectural exterior and interior renderings from descriptive prompts, including specific materials, lighting conditions, styles, and spatial relationships. Architects and interior designers use these for early-stage client presentations and concept exploration before committing to full rendering software outputs. The key limitation is precise control: Midjourney cannot render a specific floor plan or honor exact dimensional constraints. It produces conceptual imagery, not technical documentation."}
+          },
+          {
+            "@type": "Question",
+            "name": "Is Midjourney HIPAA compliant?",
+            "acceptedAnswer": {"@type": "Answer", "text": "No, and this is not relevant to its intended professional use. Midjourney is an image generation tool. It processes text prompts to generate images and does not store or process protected health information in any meaningful way. Healthcare professionals should not input patient-identifying information into Midjourney prompts, but the tool itself is not designed for any healthcare data workflow. The HIPAA question does not apply to Midjourney in the same way it applies to AI writing or documentation tools."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Google Analytics — replace G-XXXXXXXXXX with your Measurement ID to activate -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+  <script src="site.js" defer></script>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <!-- NAV -->
+<nav style="padding:18px min(2rem,8vw);position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;justify-content:space-between;">
+  <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+    <img src="logo.svg" width="32" height="32" alt="AI Tools for Pros" style="border-radius:8px;display:block;">
+    <span style="font-size:13px;font-weight:500;color:#111111;">AI Tools for Pros</span>
+  </a>
+  <div id="nav-desktop" style="display:flex;align-items:center;gap:36px;">
+    <a href="our-process.html" class="nav-link">Our Process</a>
+    <div class="nav-dropdown">
+      <span class="nav-link-caret">AI Tools <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="dropdown-menu">
+        <a href="chatgpt.html" class="dropdown-item">ChatGPT</a>
+        <a href="claude.html" class="dropdown-item">Claude</a>
+        <a href="perplexity.html" class="dropdown-item">Perplexity AI</a>
+        <a href="gemini.html" class="dropdown-item">Google Gemini</a>
+        <a href="copilot.html" class="dropdown-item">Microsoft Copilot</a>
+        <a href="midjourney.html" class="dropdown-item">Midjourney</a>
+        <a href="cursor.html" class="dropdown-item">Cursor</a>
+        <a href="notion-ai.html" class="dropdown-item">Notion AI</a>
+        <a href="grammarly.html" class="dropdown-item">Grammarly</a>
+        <a href="otter.html" class="dropdown-item">Otter.ai</a>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <span class="nav-link-caret">Professions <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="dropdown-menu">
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="legal.html">Legal Counsel <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/legal.html">ChatGPT</a>
+            <a href="claude/legal.html">Claude</a>
+            <a href="perplexity/legal.html">Perplexity AI</a>
+            <a href="gemini/legal.html">Google Gemini</a>
+            <a href="copilot/legal.html">Microsoft Copilot</a>
+            <a href="grammarly/legal.html">Grammarly</a>
+            <a href="notion-ai/legal.html">Notion AI</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="physicians.html">Physicians <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/physicians.html">ChatGPT</a>
+            <a href="claude/physicians.html">Claude</a>
+            <a href="perplexity/physicians.html">Perplexity AI</a>
+            <a href="copilot/physicians.html">Microsoft Copilot</a>
+            <a href="otter/physicians.html">Otter.ai</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="real-estate.html">Real Estate <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/real-estate.html">ChatGPT</a>
+            <a href="claude/real-estate.html">Claude</a>
+            <a href="gemini/real-estate.html">Google Gemini</a>
+            <a href="copilot/real-estate.html">Microsoft Copilot</a>
+            <a href="grammarly/real-estate.html">Grammarly</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="engineers.html">Engineers <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/engineers.html">ChatGPT</a>
+            <a href="claude/engineers.html">Claude</a>
+            <a href="cursor/engineers.html">Cursor</a>
+            <a href="copilot/engineers.html">Microsoft Copilot</a>
+            <a href="notion-ai/engineers.html">Notion AI</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="finance.html">Finance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/finance.html">ChatGPT</a>
+            <a href="claude/finance.html">Claude</a>
+            <a href="perplexity/finance.html">Perplexity AI</a>
+            <a href="copilot/finance.html">Microsoft Copilot</a>
+            <a href="gemini/finance.html">Google Gemini</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="insurance.html">Insurance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/insurance.html">ChatGPT</a>
+            <a href="claude/insurance.html">Claude</a>
+            <a href="copilot/insurance.html">Microsoft Copilot</a>
+            <a href="perplexity/insurance.html">Perplexity AI</a>
+            <a href="grammarly/insurance.html">Grammarly</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="architects.html">Architects <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/architects.html">ChatGPT</a>
+            <a href="claude/architects.html">Claude</a>
+            <a href="gemini/architects.html">Google Gemini</a>
+            <a href="midjourney/architects.html">Midjourney</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="creatives.html">Creatives <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="chatgpt/creatives.html">ChatGPT</a>
+            <a href="claude/creatives.html">Claude</a>
+            <a href="midjourney/creatives.html">Midjourney</a>
+            <a href="grammarly/creatives.html">Grammarly</a>
+            <a href="notion-ai/creatives.html">Notion AI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="newsletter.html" class="nav-link">Newsletter</a>
+  </div>
+</nav>
+
+  <!-- BREADCRUMB -->
+  <div style="padding:14px min(6.5rem,8vw);font-size:12px;color:#9ca3af;background:#ffffff;border-bottom:1px solid #f5f5f5;">
+    <a href="index.html" style="color:#9ca3af;text-decoration:none;" onmouseover="this.style.color='#636363'" onmouseout="this.style.color='#9ca3af'">Home</a>
+    <span style="margin:0 8px;">/</span>
+    <span style="color:#111111;">Midjourney</span>
+  </div>
+
+  <main>
+
+  <!-- PAGE HEADER -->
+  <section style="padding:min(4rem,6vw) min(6.5rem,8vw) min(2rem,3vw);">
+    <p style="font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#636363;margin:0 0 16px;">Independent Review &middot; March 19, 2026</p>
+    <h1 class="font-heading" style="font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;line-height:1.1;margin:0 0 20px;color:#111111;max-width:800px;">Midjourney for Professionals: An Honest Review (2026)</h1>
+
+    <p style="font-size:16px;color:#444444;line-height:1.75;max-width:680px;margin:0 0 24px;">Midjourney is an AI image generation tool that produces photorealistic, architectural, and artistic images from text prompts. It is used by architects for conceptual renderings, by creative professionals for campaign ideation and visual direction, and by any professional who needs high-quality AI-generated imagery as part of their workflow. It is not a general AI assistant and has no text or document capabilities.</p>
+
+    <p style="font-size:13px;color:#636363;font-style:italic;margin:0 0 24px;">Midjourney is evaluated here exclusively as an AI image generation tool. It does not write, analyze documents, or perform any text-based task. Its entire professional value is visual.</p>
+
+    <!-- Byline -->
+    <p style="font-size:13px;color:#636363;margin:0 0 32px;">By <strong style="color:#111111;font-weight:600;">Rich M.</strong>&nbsp;&middot;&nbsp;Fact-checked by <strong style="color:#111111;font-weight:600;">Rob M.</strong>&nbsp;&middot;&nbsp;March 19, 2026</p>
+
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:40px;flex-wrap:wrap;">
+      <span class="verdict-badge-specialized">Specialized Tool</span>
+      <span style="font-size:14px;color:#444444;">Best-in-class AI image generation. Only relevant for professions where visual content is a meaningful part of the workflow.</span>
+    </div>
+
+    <!-- CONSISTENCY BLOCK 1: Bottom line -->
+    <div style="background:#ffffff;border:1px solid #f0f0f0;border-radius:12px;padding:24px 28px;margin-bottom:28px;max-width:760px;">
+      <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#7c3aed;margin:0 0 10px;">Bottom Line</p>
+      <p style="font-size:14px;color:#333333;line-height:1.7;margin:0;">Midjourney produces the highest quality AI-generated images available as of early 2026. For architects doing conceptual presentations, creative professionals building mood boards, and design-adjacent workflows where visual quality matters, it is the right tool. It has no text capabilities and is irrelevant for professions where the primary need is writing, research, or document work. Do not use it unless generating high-quality images is a genuine professional requirement.</p>
+    </div>
+
+    <!-- CONSISTENCY BLOCK 2: Key takeaways -->
+    <div style="background:#ffffff;border:1px solid #f0f0f0;border-radius:12px;padding:24px 28px;margin-bottom:28px;max-width:760px;">
+      <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#7c3aed;margin:0 0 14px;">Key Takeaways</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">&#8594;</span> Image quality is Midjourney's defining advantage over DALL-E 3, Stable Diffusion, and other AI image generators</li>
+        <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">&#8594;</span> Web interface now available at midjourney.com; Discord is no longer required for most users [VERIFY DETAILS]</li>
+        <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">&#8594;</span> Commercial use rights require Pro or Mega plan. Verify current terms before using generated images in client deliverables [VERIFY DETAILS]</li>
+        <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">&#8594;</span> No text generation, document analysis, or language capabilities. It generates images only</li>
+        <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">&#8594;</span> Precise control is limited. Midjourney produces conceptual imagery, not technically accurate engineering drawings</li>
+        <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">&#8594;</span> Prompt skill matters significantly. Output quality improves with experience writing effective Midjourney prompts</li>
+      </ul>
+    </div>
+
+    <!-- CONSISTENCY BLOCK 3 & 4: Best use cases + Avoid -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin-bottom:28px;">
+      <div style="background:#f5f3ff;border:1px solid #ddd6fe;border-radius:12px;padding:20px 24px;">
+        <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#6d28d9;margin:0 0 12px;">Best Use Cases</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+          <li style="font-size:13px;color:#4c1d95;">Architectural conceptual renderings for early-stage client presentations</li>
+          <li style="font-size:13px;color:#4c1d95;">Mood boards and visual direction for creative and marketing campaigns</li>
+          <li style="font-size:13px;color:#4c1d95;">Interior design concept imagery for client visualization</li>
+          <li style="font-size:13px;color:#4c1d95;">Lifestyle and property imagery for real estate marketing materials</li>
+          <li style="font-size:13px;color:#4c1d95;">Brand visual exploration and style direction for creative professionals</li>
+        </ul>
+      </div>
+      <div style="background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:20px 24px;">
+        <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#dc2626;margin:0 0 12px;">Avoid Using It For</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+          <li style="font-size:13px;color:#991b1b;">Technical drawings, floor plans, or dimensionally accurate architectural output</li>
+          <li style="font-size:13px;color:#991b1b;">Any text generation, document analysis, or writing assistance</li>
+          <li style="font-size:13px;color:#991b1b;">Images that will be used professionally without confirming commercial use rights</li>
+          <li style="font-size:13px;color:#991b1b;">Professions where visual content is not a core deliverable</li>
+          <li style="font-size:13px;color:#991b1b;">Any workflow requiring precise reproduction of a specific design or layout</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CONSISTENCY BLOCK 5: If you only do one thing -->
+    <div style="background:#f5f3ff;border:1px solid #ddd6fe;border-radius:12px;padding:24px 28px;max-width:760px;margin-bottom:0;">
+      <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#6d28d9;margin:0 0 12px;">If You Only Do One Thing</p>
+      <p style="font-size:13px;color:#4c1d95;margin:0 0 12px;">Generate a conceptual image for a current project to understand what Midjourney can produce:</p>
+      <ol style="padding:0 0 0 18px;margin:0;display:flex;flex-direction:column;gap:6px;">
+        <li style="font-size:13px;color:#4c1d95;">Sign up at midjourney.com and start with a Basic plan for initial evaluation</li>
+        <li style="font-size:13px;color:#4c1d95;">Write a detailed prompt describing a project: material, lighting, style, setting, and atmosphere</li>
+        <li style="font-size:13px;color:#4c1d95;">Generate four variations and upscale the best result to review quality</li>
+        <li style="font-size:13px;color:#4c1d95;">Compare the output to what you would typically source from stock photography or commission from a renderer and evaluate the time and cost difference</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- QUICK FACTS BAR -->
+  <section style="padding:0 min(6.5rem,8vw) min(3rem,4vw);">
+    <div class="fact-bar" style="max-width:900px;">
+      <div class="fact-item">
+        <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Made by</p>
+        <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Midjourney, Inc.</p>
+      </div>
+      <div class="fact-item">
+        <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Best for</p>
+        <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">AI image generation</p>
+      </div>
+      <div class="fact-item">
+        <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Starting price</p>
+        <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">$10/mo Basic [VERIFY DETAILS]</p>
+      </div>
+      <div class="fact-item">
+        <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Interface</p>
+        <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Web + Discord [VERIFY DETAILS]</p>
+      </div>
+      <div class="fact-item">
+        <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Commercial rights</p>
+        <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Pro/Mega plan [VERIFY DETAILS]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT MIDJOURNEY IS AND ISN'T -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw);">
+    <div style="max-width:760px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 20px;">What Midjourney Is — And What It Isn't</h2>
+
+      <p style="font-size:14px;color:#444444;line-height:1.8;margin:0 0 16px;">Midjourney is an AI image generation model. You provide a text prompt describing the image you want, and Midjourney generates four image variations for you to review, upscale, and iterate on. The core workflow is entirely visual: input is a text description, output is a set of images. There are no writing features, no document analysis, no chat interface for general questions. Midjourney does one thing, and it does it at a quality level that consistently outperforms alternatives for professional visual work.</p>
+
+      <h3 style="font-size:16px;font-weight:600;color:#111111;margin:24px 0 12px;">What professional tasks does Midjourney handle reliably?</h3>
+      <p style="font-size:14px;color:#444444;line-height:1.8;margin:0 0 14px;">Midjourney's professional strength is in generating high-quality, aesthetically refined images from descriptive prompts. For architects, this means photorealistic exterior and interior concept renderings that communicate design intent to clients before technical drawings are produced. For creative professionals, it means rapid generation of visual concepts, mood boards, and campaign imagery that would otherwise require stock photography searches, photography commissions, or hours of design work. The speed-to-quality ratio is Midjourney's defining professional advantage.</p>
+      <ul style="list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:8px;">
+        <li style="font-size:14px;color:#444444;padding-left:16px;border-left:2px solid #e5e7eb;">Architectural concept renderings for client presentations and design exploration</li>
+        <li style="font-size:14px;color:#444444;padding-left:16px;border-left:2px solid #e5e7eb;">Interior design and space planning visualizations at the concept stage</li>
+        <li style="font-size:14px;color:#444444;padding-left:16px;border-left:2px solid #e5e7eb;">Campaign mood boards and visual direction for creative and marketing work</li>
+        <li style="font-size:14px;color:#444444;padding-left:16px;border-left:2px solid #e5e7eb;">Brand visual exploration and style concept development</li>
+        <li style="font-size:14px;color:#444444;padding-left:16px;border-left:2px solid #e5e7eb;">Lifestyle imagery for real estate marketing and property presentation</li>
+      </ul>
+
+      <h3 style="font-size:16px;font-weight:600;color:#111111;margin:24px 0 12px;">What Midjourney is not designed for</h3>
+      <p style="font-size:14px;color:#444444;line-height:1.8;margin:0 0 14px;">Midjourney does not produce technically accurate drawings. It cannot render a specific floor plan, honor dimensional constraints, or produce construction documentation. The images it generates are conceptual and aesthetically driven, not technically precise. Architects and engineers who need accurate technical output use Midjourney for client communication and concept exploration, then transition to proper rendering software for production-quality technical visualization.</p>
+      <p style="font-size:14px;color:#444444;line-height:1.8;margin:0;">For professionals who do not regularly produce or source visual content as part of their work, Midjourney has no professional relevance. Legal, medical, financial, and insurance professionals do not need an AI image generator in their primary workflow. For those professions, ChatGPT, Claude, or Perplexity are the relevant tools to evaluate.</p>
+    </div>
+  </section>
+
+  <!-- WHO IT'S RIGHT FOR -->
+  <section style="padding:min(2rem,3vw) min(6.5rem,8vw) min(3rem,4vw);background:#ffffff;">
+    <div style="max-width:760px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 24px;">Who Midjourney Is Right For</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <div style="border:1px solid #ddd6fe;border-radius:12px;padding:24px;">
+          <p style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6d28d9;margin:0 0 14px;">Good Fit</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+            <li style="font-size:14px;color:#4c1d95;line-height:1.6;">Architects who want concept-stage visual output for client presentations</li>
+            <li style="font-size:14px;color:#4c1d95;line-height:1.6;">Interior designers who visualize spatial concepts before committing to full renders</li>
+            <li style="font-size:14px;color:#4c1d95;line-height:1.6;">Creative directors and visual strategists who build mood boards and visual briefs</li>
+            <li style="font-size:14px;color:#4c1d95;line-height:1.6;">Marketing and brand professionals who need rapid visual concept generation</li>
+            <li style="font-size:14px;color:#4c1d95;line-height:1.6;">Real estate marketing teams creating lifestyle imagery for property presentations</li>
+          </ul>
+        </div>
+        <div style="border:1px solid #fecaca;border-radius:12px;padding:24px;">
+          <p style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#dc2626;margin:0 0 14px;">Poor Fit</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+            <li style="font-size:14px;color:#991b1b;line-height:1.6;">Professionals whose primary AI need is writing, research, or document analysis</li>
+            <li style="font-size:14px;color:#991b1b;line-height:1.6;">Engineers needing precise technical visualization or CAD-quality drawings</li>
+            <li style="font-size:14px;color:#991b1b;line-height:1.6;">Legal, medical, or financial professionals with no visual content requirement</li>
+            <li style="font-size:14px;color:#991b1b;line-height:1.6;">Anyone who needs text-in-image precision (Midjourney handles text poorly [VERIFY DETAILS])</li>
+            <li style="font-size:14px;color:#991b1b;line-height:1.6;">Professionals who need to reproduce or precisely match a specific existing design</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES THAT MATTER -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw);">
+    <div style="max-width:760px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 8px;">Features That Matter for Professional Workflows</h2>
+      <p style="font-size:14px;color:#636363;margin:0 0 32px;">An honest assessment of seven capabilities professionals actually rely on, with real-world caveats for each.</p>
+
+      <div style="display:flex;flex-direction:column;gap:24px;">
+
+        <div style="border-bottom:1px solid #f0f0f0;padding-bottom:24px;">
+          <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Image Quality</h3>
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Midjourney consistently produces images with higher aesthetic quality, more realistic lighting, and more coherent spatial relationships than competing AI image generators. For professional use where the image will be presented to clients or appear in published materials, the quality difference from DALL-E 3 or Stable Diffusion is meaningful in architectural and design contexts. Output quality varies significantly by prompt specificity and model version. The V6 model [VERIFY DETAILS] produced the strongest results for architectural and lifestyle imagery as of early 2026.</p>
+        </div>
+
+        <div style="border-bottom:1px solid #f0f0f0;padding-bottom:24px;">
+          <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Prompt Control and Style Parameters</h3>
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Midjourney supports detailed prompt engineering with parameters controlling aspect ratio, style weight, chaos level, image quality, and reference image influence. Professionals who invest time learning Midjourney's parameter system gain significantly more control over output. Common professional parameters include aspect ratio for landscape or portrait orientation, stylize for aesthetic intensity, and image prompts for referencing existing visual styles. The learning curve is real: Midjourney rewards prompt investment, and generic prompts produce generic results.</p>
+        </div>
+
+        <div style="border-bottom:1px solid #f0f0f0;padding-bottom:24px;">
+          <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Upscaling and Variation</h3>
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Each Midjourney generation produces four image variations. Users can upscale any result to a higher resolution suitable for presentation use, request subtle or strong variations on a specific result, and iterate rapidly from a starting point. This variation-and-select workflow is the standard professional Midjourney workflow: generate several rounds of four images, identify the most promising direction, then refine through variations and upscaling. Most professional outputs require three to five rounds of iteration.</p>
+        </div>
+
+        <div style="border-bottom:1px solid #f0f0f0;padding-bottom:24px;">
+          <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Web Interface</h3>
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Midjourney's web interface at midjourney.com provides a cleaner workflow for professionals who prefer browser-based tools. Image history, organization, prompt reuse, and upscaling are all accessible without the Discord interface. For professionals who found the Discord workflow unfamiliar or disorganized, the web interface is a meaningful usability improvement. [VERIFY DETAILS]</p>
+        </div>
+
+        <div style="border-bottom:1px solid #f0f0f0;padding-bottom:24px;">
+          <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Style Reference and Image Prompting</h3>
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Midjourney allows users to reference existing images as style guides, using image URLs in prompts to influence the aesthetic direction of generated output. For architects referencing a specific material palette or design movement, for creatives referencing an approved brand visual style, and for interior designers working within a defined aesthetic, this style referencing capability provides more consistent and direction-aligned outputs than text-only prompting.</p>
+        </div>
+
+        <div style="border-bottom:1px solid #f0f0f0;padding-bottom:24px;">
+          <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Fast vs. Relaxed Generation</h3>
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Midjourney plans include fast GPU hours for priority generation and relaxed hours for off-peak generation that is slower but unlimited on higher-tier plans. For professionals with time-sensitive client presentations, fast hours matter. For exploratory work or batch generation, relaxed hours are adequate. Managing fast hours across a team workflow is a practical consideration for studios or agencies that use Midjourney heavily. Pro and Mega plans include more fast hours per month. [VERIFY DETAILS]</p>
+        </div>
+
+        <div>
+          <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Commercial Rights and Plan Requirements</h3>
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Commercial use of Midjourney-generated images requires a paid plan. Basic, Standard, Pro, and Mega plans differ in GPU hours, fast generation access, and commercial use rights. For professional use where images will appear in client deliverables, architecture portfolios, or marketing materials, verify that your current plan includes the commercial use terms you need before using generated images in professional work. The terms of service are the authoritative source on use rights. [VERIFY DETAILS]</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw);background:#ffffff;">
+    <div style="max-width:760px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 8px;">Pricing — What You Actually Need</h2>
+      <p style="font-size:14px;color:#636363;margin:0 0 28px;">Current pricing as of February 2026. [VERIFY DETAILS]</p>
+
+      <div style="border:1px solid #f0f0f0;border-radius:12px;overflow:hidden;margin-bottom:24px;">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f9fafb;border-bottom:1px solid #f0f0f0;">
+              <th style="text-align:left;padding:12px 16px;font-weight:700;color:#111111;">Plan</th>
+              <th style="text-align:left;padding:12px 16px;font-weight:700;color:#111111;">Price</th>
+              <th style="text-align:left;padding:12px 16px;font-weight:700;color:#111111;">For professionals</th>
+              <th style="text-align:left;padding:12px 16px;font-weight:700;color:#111111;">Commercial use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #f5f5f5;">
+              <td style="padding:12px 16px;color:#444444;font-weight:500;">Basic</td>
+              <td style="padding:12px 16px;color:#444444;">~$10/mo [VERIFY DETAILS]</td>
+              <td style="padding:12px 16px;color:#636363;">Limited fast GPU hours. Useful for evaluation and occasional generation. Insufficient for regular professional use.</td>
+              <td style="padding:12px 16px;color:#636363;font-size:12px;">Verify TOS for commercial rights</td>
+            </tr>
+            <tr style="border-bottom:1px solid #f5f5f5;background:#f5f3ff;">
+              <td style="padding:12px 16px;color:#111111;font-weight:700;">Standard</td>
+              <td style="padding:12px 16px;color:#111111;font-weight:700;">~$30/mo [VERIFY DETAILS]</td>
+              <td style="padding:12px 16px;color:#4c1d95;font-size:13px;font-weight:500;">Right tier for solo professionals. More fast GPU hours and relaxed generation access for daily workflow use.</td>
+              <td style="padding:12px 16px;color:#15803d;font-size:12px;">Commercial use included [VERIFY DETAILS]</td>
+            </tr>
+            <tr style="border-bottom:1px solid #f5f5f5;">
+              <td style="padding:12px 16px;color:#444444;font-weight:500;">Pro</td>
+              <td style="padding:12px 16px;color:#444444;">~$60/mo [VERIFY DETAILS]</td>
+              <td style="padding:12px 16px;color:#636363;">High-volume generation, stealth mode for private image generation, and more fast hours for studios and agencies.</td>
+              <td style="padding:12px 16px;color:#15803d;font-size:12px;">Commercial use included [VERIFY DETAILS]</td>
+            </tr>
+            <tr>
+              <td style="padding:12px 16px;color:#444444;font-weight:500;">Mega</td>
+              <td style="padding:12px 16px;color:#444444;">~$120/mo [VERIFY DETAILS]</td>
+              <td style="padding:12px 16px;color:#636363;">Maximum fast GPU hours for high-throughput professional studios generating large volumes of images daily.</td>
+              <td style="padding:12px 16px;color:#15803d;font-size:12px;">Commercial use included [VERIFY DETAILS]</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 12px;">Which plan does a solo professional actually need?</h3>
+      <p style="font-size:14px;color:#444444;line-height:1.75;margin:0 0 14px;">Standard at approximately $30/month is the right starting point for solo professionals who generate images regularly for professional projects. It provides sufficient fast GPU hours for typical architectural or creative workflows. Basic is adequate only for initial evaluation. Pro is appropriate for studios or professionals with high-volume generation needs.</p>
+      <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Verify commercial use rights at midjourney.com/tos before using generated images in any client deliverable. Pricing and terms have changed multiple times; the authoritative source is always the current Midjourney terms of service, not third-party summaries.</p>
+    </div>
+  </section>
+
+  <!-- PROFESSION CARDS -->
+  <section id="professions" style="padding:min(3rem,4vw) min(6.5rem,8vw) min(4rem,5vw);">
+    <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 8px;">How Midjourney Works for Your Profession</h2>
+    <p style="color:#636363;font-size:14px;margin:0 0 32px;">I've reviewed Midjourney for two professional fields where visual content generation is a meaningful part of the workflow.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;">
+      <div class="industry-card"><h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Architects</h3><p style="color:#636363;font-size:13px;line-height:1.6;margin:0 0 20px;">Conceptual renderings, exterior and interior visualizations, and design exploration before committing to technical rendering software. Includes specific prompt strategies for architectural output.</p><a href="midjourney/architects.html" class="read-guide-link">Midjourney for Architects <span>&#8594;</span></a></div>
+      <div class="industry-card"><h3 style="font-size:15px;font-weight:700;color:#111111;margin:0 0 8px;">Creative Professionals</h3><p style="color:#636363;font-size:13px;line-height:1.6;margin:0 0 20px;">Mood boards, campaign concept imagery, brand visual exploration, and visual direction. How Midjourney fits into a creative professional's concept development workflow.</p><a href="midjourney/creatives.html" class="read-guide-link">Midjourney for Creatives <span>&#8594;</span></a></div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw);background:#ffffff;">
+    <div style="max-width:900px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 8px;">Midjourney vs. The Alternatives</h2>
+      <p style="font-size:14px;color:#636363;margin:0 0 28px;">Compared to AI image generation alternatives. Midjourney is compared to image generation tools, not general AI assistants.</p>
+
+      <div style="border:1px solid #f0f0f0;border-radius:12px;overflow:hidden;">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f9fafb;border-bottom:1px solid #f0f0f0;">
+              <th style="text-align:left;padding:14px 16px;font-weight:700;color:#111111;min-width:120px;">Tool</th>
+              <th style="text-align:left;padding:14px 16px;font-weight:700;color:#111111;">Best for</th>
+              <th style="text-align:left;padding:14px 16px;font-weight:700;color:#111111;">Weak for</th>
+              <th style="text-align:left;padding:14px 16px;font-weight:700;color:#111111;">Price range</th>
+              <th style="text-align:left;padding:14px 16px;font-weight:700;color:#111111;">One-line verdict</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #f5f5f5;background:#f5f3ff;">
+              <td style="padding:14px 16px;font-weight:700;color:#7c3aed;">Midjourney</td>
+              <td style="padding:14px 16px;color:#444444;">Highest aesthetic image quality, architectural and design imagery</td>
+              <td style="padding:14px 16px;color:#444444;">Precise control, text in images, any non-visual task</td>
+              <td style="padding:14px 16px;color:#444444;">~$10–$120/mo [VERIFY DETAILS]</td>
+              <td style="padding:14px 16px;color:#444444;">Best image quality. Right for design-adjacent professions.</td>
+            </tr>
+            <tr style="border-bottom:1px solid #f5f5f5;">
+              <td style="padding:14px 16px;font-weight:600;color:#111111;">DALL-E 3 (via ChatGPT)</td>
+              <td style="padding:14px 16px;color:#444444;">Integrated text+image workflow, accurate text in images</td>
+              <td style="padding:14px 16px;color:#444444;">Aesthetic quality on architectural and design imagery</td>
+              <td style="padding:14px 16px;color:#444444;">Included in ChatGPT Plus ($20/mo)</td>
+              <td style="padding:14px 16px;color:#444444;">More convenient when image generation is occasional. Lower quality ceiling.</td>
+            </tr>
+            <tr style="border-bottom:1px solid #f5f5f5;">
+              <td style="padding:14px 16px;font-weight:600;color:#111111;">Adobe Firefly</td>
+              <td style="padding:14px 16px;color:#444444;">Adobe Creative Cloud integration, commercially safe training data</td>
+              <td style="padding:14px 16px;color:#444444;">Raw image quality at the top end</td>
+              <td style="padding:14px 16px;color:#444444;">Included in Creative Cloud plans</td>
+              <td style="padding:14px 16px;color:#444444;">Right for Creative Cloud users who need confirmed commercial safety.</td>
+            </tr>
+            <tr>
+              <td style="padding:14px 16px;font-weight:600;color:#111111;">Stable Diffusion</td>
+              <td style="padding:14px 16px;color:#444444;">Local deployment, custom fine-tuning, open-source flexibility</td>
+              <td style="padding:14px 16px;color:#444444;">Out-of-the-box quality without fine-tuning expertise</td>
+              <td style="padding:14px 16px;color:#444444;">Free (local) or hosted API pricing</td>
+              <td style="padding:14px 16px;color:#444444;">For developers and studios who want model control. Not turnkey.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="font-size:13px;color:#636363;margin:16px 0 0;">Many creative professionals use both Midjourney for high-quality concept imagery and DALL-E via ChatGPT for quick image generation within text workflows. They are not strict alternatives for professionals who need both capabilities.</p>
+    </div>
+  </section>
+
+  <!-- VERDICT -->
+  <section id="verdict" style="padding:min(3rem,4vw) min(6.5rem,8vw);">
+    <div style="max-width:760px;background:#ffffff;border-radius:16px;padding:36px;border:1px solid #f0f0f0;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 20px;">My Verdict</h2>
+      <p style="font-size:14px;color:#444444;line-height:1.8;margin:0 0 16px;">For architects and creative professionals, Midjourney has become a standard tool in the concept and exploration phase of professional work. The ability to generate photorealistic architectural renderings or compelling visual concepts in minutes, rather than days, changes the economics of early-stage client work. Studios that previously could not afford speculative rendering for pitch presentations can now produce client-ready concept imagery at a fraction of the cost.</p>
+      <p style="font-size:14px;color:#444444;line-height:1.8;margin:0 0 16px;">The quality advantage over alternatives is real and meaningful for professional visual work. Architects and creative directors who have used DALL-E and Midjourney side by side consistently prefer Midjourney's output for design and lifestyle imagery. For professionals where image quality is a professional standard, not just a convenience, that quality gap matters.</p>
+      <p style="font-size:14px;color:#444444;line-height:1.8;margin:0 0 24px;">The honest limitation: Midjourney requires prompt skill investment that is not immediately obvious. Generic prompts produce generic results. Professionals who spend the first few hours learning effective prompting strategies, including parameter use, style referencing, and iterative refinement, get substantially better professional outputs than those who treat it as a simple text-to-image converter.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid #f0f0f0;">
+        <p style="font-size:14px;color:#111111;margin:0;"><strong>Best for:</strong> Architects, interior designers, creative directors, and visual professionals who regularly produce or source high-quality imagery as part of client-facing work.</p>
+        <p style="font-size:14px;color:#111111;margin:0;"><strong>Skip it if:</strong> Your professional work is primarily text-based, or your visual needs are occasional enough to be served by DALL-E within ChatGPT without a separate subscription.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw);background:#ffffff;">
+    <div style="max-width:760px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 32px;">Frequently Asked Questions</h2>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <div style="border-top:1px solid #e5e7eb;padding:22px 0;">
+          <h3 style="font-size:15px;font-weight:600;color:#111111;margin:0 0 10px;">Is Midjourney worth it for professionals?</h3>
+          <p style="font-size:14px;color:#636363;line-height:1.75;margin:0;">Yes, for professionals in design-adjacent fields who need high-quality visual concepts quickly. Architects use it for conceptual renderings and client presentations. Creatives use it for mood boards, campaign concepts, and visual direction. If generating or sourcing visual content is a meaningful part of your professional work, Midjourney's image quality is the best available from any AI image generator as of early 2026 [VERIFY DETAILS]. If your work is primarily text-based, it has no professional relevance.</p>
+        </div>
+        <div style="border-top:1px solid #e5e7eb;padding:22px 0;">
+          <h3 style="font-size:15px;font-weight:600;color:#111111;margin:0 0 10px;">How does Midjourney compare to DALL-E in ChatGPT?</h3>
+          <p style="font-size:14px;color:#636363;line-height:1.75;margin:0;">It depends on the use case. Midjourney produces more aesthetically refined and photorealistic images on average. DALL-E 3 (accessed through ChatGPT) is more convenient for professionals who want image generation alongside text generation in a single interface, and it handles specific text-in-image requests more reliably. For serious visual work where image quality is the primary criterion, most professionals in design and architecture fields use Midjourney. For occasional image generation as part of a broader AI workflow, ChatGPT's DALL-E integration is more convenient.</p>
+        </div>
+        <div style="border-top:1px solid #e5e7eb;padding:22px 0;">
+          <h3 style="font-size:15px;font-weight:600;color:#111111;margin:0 0 10px;">Do I need a Discord account to use Midjourney?</h3>
+          <p style="font-size:14px;color:#636363;line-height:1.75;margin:0;">No, not anymore for most users. Midjourney launched a web interface at midjourney.com that no longer requires Discord for image generation. The Discord bot interface still exists for users who prefer it. The web interface is more accessible for professionals who are not regular Discord users and provides a cleaner workflow for managing generated images. [VERIFY DETAILS]</p>
+        </div>
+        <div style="border-top:1px solid #e5e7eb;padding:22px 0;">
+          <h3 style="font-size:15px;font-weight:600;color:#111111;margin:0 0 10px;">What are the commercial use rights for Midjourney images?</h3>
+          <p style="font-size:14px;color:#636363;line-height:1.75;margin:0;">It depends on your plan. Midjourney Pro and Mega plans include commercial use rights for generated images. Free and Basic plans may have restrictions on commercial use [VERIFY DETAILS]. For professional use where generated images will appear in client deliverables, marketing materials, or published work, confirm your plan tier includes the necessary commercial license before using generated images in client-facing work.</p>
+        </div>
+        <div style="border-top:1px solid #e5e7eb;padding:22px 0;">
+          <h3 style="font-size:15px;font-weight:600;color:#111111;margin:0 0 10px;">Can Midjourney generate architectural renderings?</h3>
+          <p style="font-size:14px;color:#636363;line-height:1.75;margin:0;">Yes, and this is one of its strongest professional applications. Midjourney can generate photorealistic architectural exterior and interior renderings from descriptive prompts, including specific materials, lighting conditions, styles, and spatial relationships. Architects use these for early-stage client presentations and concept exploration. The key limitation is precise control: Midjourney cannot render a specific floor plan or honor exact dimensional constraints. It produces conceptual imagery, not technical documentation.</p>
+        </div>
+        <div style="border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;padding:22px 0;">
+          <h3 style="font-size:15px;font-weight:600;color:#111111;margin:0 0 10px;">Is Midjourney HIPAA compliant?</h3>
+          <p style="font-size:14px;color:#636363;line-height:1.75;margin:0;">No, and this is not relevant to its intended professional use. Midjourney is an image generation tool. It processes text prompts to generate images and does not store or process protected health information in any meaningful way. Healthcare professionals should not input patient-identifying information into Midjourney prompts, but the tool itself is not designed for any healthcare data workflow. The HIPAA question does not apply to Midjourney in the same way it applies to AI writing or documentation tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOURCES CHECKED -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw);">
+    <div style="max-width:760px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 20px;">Sources Checked</h2>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li style="font-size:13px;color:#636363;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:#7c3aed;font-weight:700;">[1]</span> Midjourney — midjourney.com/account/plans (plan pricing, GPU hours, features by tier) [VERIFY DETAILS]</li>
+        <li style="font-size:13px;color:#636363;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:#7c3aed;font-weight:700;">[2]</span> Midjourney — midjourney.com/tos (terms of service, commercial use rights by plan) [VERIFY DETAILS]</li>
+        <li style="font-size:13px;color:#636363;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:#7c3aed;font-weight:700;">[3]</span> Midjourney — docs.midjourney.com (parameter reference, prompt documentation, model version specs) [VERIFY DETAILS]</li>
+        <li style="font-size:13px;color:#636363;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:#7c3aed;font-weight:700;">[4]</span> Midjourney — midjourney.com (web interface availability and features) [VERIFY DETAILS]</li>
+        <li style="font-size:13px;color:#636363;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:#7c3aed;font-weight:700;">[5]</span> Midjourney — community comparisons and third-party model quality benchmarks [VERIFY DETAILS]</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHAT MOST REVIEWS MISS -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw);background:#ffffff;">
+    <div style="max-width:760px;">
+      <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 20px;">What Most Reviews Miss</h2>
+
+      <div style="display:flex;flex-direction:column;gap:20px;margin-bottom:28px;">
+        <div style="background:#f9fafb;border-radius:10px;padding:20px 24px;">
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Most Midjourney reviews focus on comparing it to other AI image generators based on example images. The more useful professional question is: what is the actual workflow change for a practicing architect or creative director? The answer is that Midjourney compresses the concept exploration phase significantly. A project that previously required a dedicated rendering session or stock photography research now has visual concept options within an hour. For architects pitching new clients and creative directors developing campaign concepts, that compression changes what early-stage work looks like economically.</p>
+        </div>
+        <div style="background:#f9fafb;border-radius:10px;padding:20px 24px;">
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">The commercial rights issue receives insufficient attention in professional coverage. Many professionals use Midjourney-generated images in client presentations and published materials without checking whether their plan tier includes commercial use rights. Basic plan users in particular may be operating outside Midjourney's terms without realizing it. For professional use, verify your plan's commercial rights before using generated images in any deliverable that will be presented to clients or published externally.</p>
+        </div>
+        <div style="background:#f9fafb;border-radius:10px;padding:20px 24px;">
+          <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;">Midjourney's prompt skill curve is significantly steeper than reviews convey. The difference between a beginner prompt and an experienced prompt for the same subject can be dramatic in output quality. Professionals who invest a few hours learning parameter usage, studying successful prompts in Midjourney's community, and practicing iterative refinement get results that look nothing like what beginners generate. This learning investment is front-loaded and pays dividends quickly, but it is not zero.</p>
+        </div>
+      </div>
+
+      <p style="font-size:15px;font-weight:600;color:#111111;background:#fffbeb;border-left:3px solid #f59e0b;padding:14px 18px;border-radius:0 8px 8px 0;margin:0 0 16px;">The single most underappreciated professional use of Midjourney is client communication at the concept stage. Showing a client a photorealistic image of what their building or campaign could look like, before any formal design commitment has been made, changes the quality of early-stage client conversations in ways that verbal descriptions or rough sketches cannot.</p>
+
+      <p style="font-size:14px;color:#444444;line-height:1.75;margin:0 0 10px;"><strong>One thing Midjourney does better than most:</strong> Architectural and lifestyle photorealism at the concept stage. Other AI image generators produce usable images; Midjourney produces images that read as professionally generated, which matters when presenting to clients who associate image quality with the quality of the work behind it.</p>
+      <p style="font-size:14px;color:#444444;line-height:1.75;margin:0;"><strong>One thing Midjourney gets wrong in real workflows:</strong> Precise spatial and dimensional accuracy. Architects who use Midjourney for early client communication sometimes find clients developing attachments to specific conceptual renderings that cannot be honored in the actual design. Managing client expectations about what a Midjourney image represents versus what the final deliverable will look like is a communication challenge that requires active management.</p>
+    </div>
+  </section>
+
+  <!-- RELATED GUIDES -->
+  <section style="padding:min(3rem,4vw) min(6.5rem,8vw) min(5rem,6vw);">
+    <div style="max-width:760px;">
+      <h2 style="font-size:20px;font-weight:700;color:#111111;margin:0 0 20px;">Related Guides</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <a href="chatgpt.html" style="font-size:14px;color:#2563EB;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">ChatGPT overview: DALL-E integration for professionals who need occasional image generation</a>
+        <a href="claude.html" style="font-size:14px;color:#2563EB;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Claude overview: text and document workflows to pair with Midjourney visual work</a>
+        <a href="midjourney/architects.html" style="font-size:14px;color:#2563EB;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Midjourney for Architects: conceptual rendering workflows and prompt strategies</a>
+        <a href="midjourney/creatives.html" style="font-size:14px;color:#2563EB;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Midjourney for Creative Professionals: mood boards, campaign concepts, and visual direction</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHOR PROFILE -->
+  <section style="padding:0 min(6.5rem,8vw) min(4rem,6vw);">
+    <div style="max-width:760px;border-top:1px solid #f0f0f0;padding-top:36px;">
+      <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#636363;margin:0 0 20px;">About the Author</p>
+      <div style="display:flex;align-items:flex-start;gap:24px;">
+        <div style="flex-shrink:0;">
+          <div style="width:72px;height:72px;border-radius:50%;overflow:hidden;background:#e2ecf4;">
+            <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" width="72" height="72">
+              <circle cx="70" cy="70" r="70" fill="#e2ecf4"/>
+              <path d="M 0 140 Q 5 105 28 96 Q 45 89 70 91 Q 95 89 112 96 Q 135 105 140 140 Z" fill="#1e293b"/>
+              <path d="M 58 93 L 70 112 L 82 93 Q 70 88 58 93 Z" fill="#f8fafc"/>
+              <rect x="61" y="82" width="18" height="16" rx="5" fill="#e8b090"/>
+              <ellipse cx="70" cy="64" rx="30" ry="33" fill="#e8b090"/>
+              <path d="M 40 58 Q 40 28 70 26 Q 100 28 100 58 Q 98 36 70 33 Q 42 36 40 58 Z" fill="#2c1f14"/>
+              <path d="M 40 58 Q 39 50 41 44 Q 39 52 41 62 Z" fill="#2c1f14"/>
+              <path d="M 100 58 Q 101 50 99 44 Q 101 52 99 62 Z" fill="#2c1f14"/>
+              <ellipse cx="40" cy="67" rx="5.5" ry="7" fill="#d4956a"/>
+              <ellipse cx="100" cy="67" rx="5.5" ry="7" fill="#d4956a"/>
+              <rect x="44" y="58" width="20" height="14" rx="3.5" fill="none" stroke="#1a1a2e" stroke-width="2"/>
+              <rect x="76" y="58" width="20" height="14" rx="3.5" fill="none" stroke="#1a1a2e" stroke-width="2"/>
+              <line x1="64" y1="64" x2="76" y2="64" stroke="#1a1a2e" stroke-width="2"/>
+              <line x1="36" y1="64" x2="44" y2="64" stroke="#1a1a2e" stroke-width="1.8"/>
+              <line x1="96" y1="64" x2="104" y2="64" stroke="#1a1a2e" stroke-width="1.8"/>
+              <circle cx="54" cy="65" r="4" fill="#3d5a80"/>
+              <circle cx="86" cy="65" r="4" fill="#3d5a80"/>
+              <circle cx="55.5" cy="63.5" r="1.2" fill="#ffffff" opacity="0.7"/>
+              <circle cx="87.5" cy="63.5" r="1.2" fill="#ffffff" opacity="0.7"/>
+              <path d="M 70 73 Q 67 78 69 80 Q 70 81 71 80 Q 73 78 70 73" fill="none" stroke="#c07850" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M 61 87 Q 70 93 79 87" stroke="#b07040" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:15px;font-weight:600;color:#111111;margin:0 0 2px;">Rich M.</p>
+          <p style="font-size:12px;color:#636363;margin:0 0 12px;">Founder, AI Tools for Pros &nbsp;&middot;&nbsp; 8+ years in SEO</p>
+          <p style="font-size:14px;color:#444444;line-height:1.7;margin:0 0 12px;">Rich has spent over eight years in SEO across demanding industries including iGaming, sports entertainment, and affiliate marketing. He built AI Tools for Pros to give working professionals honest, independent guidance on AI tools, without the hype and without vendor influence.</p>
+          <a href="about-us.html" style="font-size:12px;font-weight:600;color:#2563EB;text-decoration:none;letter-spacing:0.03em;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">More about Rich &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="background:#07091a;border-radius:28px 28px 0 0;padding:56px min(6.5rem,8vw);">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:52px;">
+      <div>
+        <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Directory</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="index.html" style="color:#5a6e94;font-size:13px;text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Legal Counsel</a></li>
+          <li><a href="index.html" style="color:#5a6e94;font-size:13px;text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Architects</a></li>
+          <li><a href="index.html" style="color:#5a6e94;font-size:13px;text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Physicians</a></li>
+          <li><a href="index.html" style="color:#5a6e94;font-size:13px;text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Engineers</a></li>
+          <li><a href="index.html" style="color:#5a6e94;font-size:13px;text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Finance</a></li>
+          <li><a href="index.html" style="color:#5a6e94;font-size:13px;text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Creatives</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Company</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="about-us.html" style="color:#5a6e94;font-size:13px;text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">About</a></li>
+          <li><a href="our-process.html" style="color:#5a6e94;font-size:13px;text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Our Process</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Resources</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="newsletter.html" style="color:#5a6e94;font-size:13px;text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Legal</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="privacy-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid #111e38;margin-bottom:48px;"></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;">
+      <div>
+        <p style="color:#1e2a45;font-size:11px;font-weight:500;margin:0 0 4px;letter-spacing:0.05em;opacity:0.6;">AI Tools for Pros</p>
+        <p class="font-heading" style="color:#2563EB;font-size:48px;font-weight:700;margin:0 0 10px;line-height:1;">2026.</p>
+        <p style="color:#4a5568;font-size:13px;margin:0;">Join 15,000+ professionals receiving our monthly tool audit.</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="position:relative;display:flex;align-items:center;">
+          <input type="email" placeholder="professional@email.com" style="background:#0d1228;color:#4a5568;font-size:13px;padding:13px 48px 13px 18px;border-radius:999px;border:1px solid #1a2444;outline:none;width:248px;font-family:'Inter',sans-serif;">
+          <div style="position:absolute;right:8px;width:28px;height:28px;background:#1a2444;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="#4a5568" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <button style="background:#ffffff;color:#111111;font-size:13px;font-weight:500;padding:13px 24px;border-radius:999px;border:none;cursor:pointer;font-family:'Inter',sans-serif;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='#ffffff'">Subscribe</button>
+      </div>
+    </div>
+  </footer>
+
+<!-- Back to top -->
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:28px;right:28px;width:44px;height:44px;background:#111111;color:#ffffff;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.2);z-index:999;opacity:0;transition:opacity 0.25s,background 0.15s,transform 0.15s;pointer-events:none;" onmouseover="this.style.background='#7c3aed';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#111111';this.style.transform='translateY(0)'">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<script>
+(function(){
+  var btn=document.getElementById('btt');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>300){btn.style.opacity='1';btn.style.pointerEvents='auto';}
+    else{btn.style.opacity='0';btn.style.pointerEvents='none';}
+  },{passive:true});
+})();
+</script>
+
+</body>
+</html>

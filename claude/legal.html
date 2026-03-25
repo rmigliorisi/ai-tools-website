@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude for Lawyers — An Honest Review (2026) | AI Tools for Pros</title>
+  <meta name="description" content="Claude's long context window makes it the strongest AI tool for full-contract review and multi-document legal analysis. Honest assessment of what it does well, where it falls short, and which plan matters for confidentiality.">
+  <meta property="og:title" content="Claude for Lawyers — An Honest Review (2026) | AI Tools for Pros">
+  <meta property="og:description" content="Claude's long context window makes it the strongest AI tool for full-contract review and multi-document legal analysis. Honest assessment of what it does well, where it falls short, and which plan matters for confidentiality.">
+  <meta property="og:image" content="https://aitoolsforpros.com/og-image.jpg">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aitoolsforpros.com/claude/legal.html">
+  <link rel="canonical" href="https://aitoolsforpros.com/claude/legal.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cardo:wght@700&display=swap" rel="stylesheet">
+  <!-- Google Analytics — replace G-XXXXXXXXXX with your Measurement ID to activate -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Claude for Lawyers — An Honest Review (2026)",
+        "description": "Claude's long context window makes it the strongest AI tool for full-contract review and multi-document legal analysis. Honest assessment of what it does well, where it falls short, and which plan matters for confidentiality.",
+        "url": "https://aitoolsforpros.com/claude/legal.html",
+        "datePublished": "2026-02-01",
+        "dateModified": "2026-03-18",
+        "author": {
+          "@type": "Person",
+          "name": "Rich M.",
+          "url": "https://aitoolsforpros.com/about-us.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AI Tools for Pros",
+          "url": "https://aitoolsforpros.com"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://aitoolsforpros.com/"},
+          {"@type":"ListItem","position":2,"name":"Claude","item":"https://aitoolsforpros.com/claude.html"},
+          {"@type":"ListItem","position":3,"name":"Lawyers","item":"https://aitoolsforpros.com/claude/legal.html"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can Claude review an entire contract at once?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Claude's context window (200,000 tokens on Pro and Team plans) can ingest a 150-page agreement in a single session. You can ask it to identify indemnification clauses, flag unusual representations, or extract all defined terms without pasting sections piecemeal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Claude safe to use with confidential client documents?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on your plan. Anthropic's free and Pro (individual) plans do not include a Business Associate Agreement or enterprise data processing terms. The Claude Team and Claude for Work (Enterprise) plans include data privacy commitments and conversation data is not used for training. Consult your firm's data governance policy before uploading client documents."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Claude hallucinate case citations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, like all large language models, Claude can generate plausible-sounding but fabricated citations. Never submit a brief or memo that includes citations you have not independently verified in Westlaw, Lexis, or a primary source. Use Claude for drafting structure and argument framing, not for citation sourcing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Claude compare to ChatGPT for legal work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on the task. For long-document analysis (full contracts, deposition transcripts, large discovery sets), Claude's context window and tendency toward careful, qualified responses give it an edge. For open-ended drafting and general research synthesis, both tools are comparable. ChatGPT's web-browsing mode is more capable for real-time regulatory lookups. Most serious legal AI users run both."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use Claude to draft briefs and motions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, with the standard caveat that all AI-drafted legal content must be reviewed and revised by the supervising attorney. Claude produces well-structured, formally toned legal prose and follows a provided framework closely. It performs best when given the legal standard, key facts, and a rough outline rather than being asked to create everything from scratch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the biggest limitation of Claude for legal professionals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No real-time legal research. Claude's knowledge has a training cutoff and it cannot search Westlaw, Lexis, or court dockets. It also has no law-firm-specific integrations (e.g., case management software, document management systems). For verified, current case law you still need a dedicated legal research platform."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    /* ── NAV ── */
+    .site-nav {
+      background: #0f172a;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { height: 28px; width: auto; }
+    .nav-logo span { color: #fff; font-weight: 700; font-size: 15px; letter-spacing: -0.01em; }
+    .nav-links { display: flex; align-items: center; gap: 4px; }
+    .nav-links a {
+      color: #94a3b8;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: color .15s, background .15s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,.07); }
+    .nav-links a.active { color: #fff; }
+    /* dropdown */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { cursor: pointer; user-select: none; }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 6px;
+      min-width: 200px;
+      z-index: 200;
+    }
+    .dropdown-menu.open { display: block; }
+    .dropdown-menu a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #cbd5e1;
+      font-size: 13.5px;
+      font-weight: 500;
+      padding: 7px 10px;
+      border-radius: 6px;
+      transition: background .12s, color .12s;
+    }
+    .dropdown-menu a:hover { background: rgba(255,255,255,.07); color: #fff; }
+    .submenu-wrap { position: relative; }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      margin-left: 4px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 6px;
+      min-width: 190px;
+      z-index: 300;
+    }
+    .submenu-wrap:hover .submenu { display: block; }
+    /* ── MAIN ── */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 28px 24px 56px;
+    }
+    /* breadcrumb */
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: #6b7280;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: #6b7280; }
+    .breadcrumb a:hover { color: #2563eb; }
+    .breadcrumb span { color: #9ca3af; }
+    /* page header */
+    .tool-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: 10px;
+    }
+    .tool-badge .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #d97706;
+    }
+    h1 {
+      font-family: 'Cardo', Georgia, serif;
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 700;
+      line-height: 1.18;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+    .page-subtitle {
+      font-size: 17px;
+      color: #4b5563;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      max-width: 720px;
+    }
+    .meta-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .verdict-badge-recommended {
+      display: inline-block;
+      background: #2563eb;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .meta-date { font-size: 13px; color: #6b7280; }
+    .meta-read { font-size: 13px; color: #6b7280; }
+    /* verdict banner */
+    .verdict-banner {
+      border-left: 4px solid #2563eb;
+      background: #eff6ff;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin-bottom: 28px;
+    }
+    .verdict-banner p {
+      font-size: 15px;
+      color: #1e3a5f;
+      line-height: 1.65;
+    }
+    .verdict-banner strong { font-weight: 700; }
+    /* consistency blocks */
+    .consistency-block {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+    }
+    .cb-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: #6b7280;
+      margin-bottom: 4px;
+    }
+    .cb-text {
+      font-size: 14.5px;
+      color: #1f2937;
+      line-height: 1.55;
+    }
+    .cb-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .cb-workflow-highlight {
+      background: #eff6ff;
+      border-radius: 6px;
+      padding: 10px 14px;
+    }
+    /* fact bar */
+    .fact-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      margin-bottom: 36px;
+      overflow: hidden;
+    }
+    .fact-item {
+      padding: 14px 16px;
+      border-right: 1px solid #f0f0f0;
+    }
+    .fact-item:last-child { border-right: none; }
+    .fact-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: #6b7280;
+      margin-bottom: 4px;
+    }
+    .fact-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: #0f172a;
+      line-height: 1.4;
+    }
+    .fact-sub {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 2px;
+    }
+    /* section headings */
+    h2 {
+      font-family: 'Cardo', Georgia, serif;
+      font-size: clamp(20px, 3.5vw, 26px);
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 14px;
+      margin-top: 40px;
+    }
+    h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 8px;
+      margin-top: 24px;
+    }
+    p { margin-bottom: 14px; color: #374151; }
+    ul { margin: 0 0 16px 0; padding-left: 20px; }
+    li { margin-bottom: 6px; color: #374151; font-size: 15px; line-height: 1.6; }
+    /* prompt blocks */
+    .prompt-block {
+      background: #f8fafc;
+      border-left: 4px solid #2563eb;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-family: 'Courier New', monospace;
+      font-size: 13.5px;
+      color: #1e293b;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+    .prompt-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: #2563eb;
+      margin-bottom: 8px;
+    }
+    /* caution block */
+    .caution-block {
+      background: #fef9c3;
+      border-left: 4px solid #eab308;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 20px 0;
+    }
+    .caution-block p {
+      font-size: 14px;
+      color: #713f12;
+      margin: 0;
+      line-height: 1.6;
+    }
+    .caution-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: #92400e;
+      margin-bottom: 6px;
+    }
+    /* limitation cards */
+    .limitation-card {
+      border: 1px solid #fee2e2;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+      display: flex;
+      gap: 12px;
+    }
+    .limitation-icon {
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .limitation-body h4 {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #b91c1c;
+      margin-bottom: 4px;
+    }
+    .limitation-body p {
+      font-size: 13.5px;
+      color: #374151;
+      margin: 0;
+      line-height: 1.55;
+    }
+    /* comparison table */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin: 20px 0 32px;
+    }
+    .comparison-table th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: #374151;
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 2px solid #e5e7eb;
+      font-size: 12.5px;
+    }
+    .comparison-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #f0f0f0;
+      color: #374151;
+      vertical-align: top;
+    }
+    .comparison-table tr.highlight-row td {
+      background: #eff6ff;
+      font-weight: 600;
+      color: #1e3a5f;
+    }
+    .comparison-table td:first-child { font-weight: 600; color: #0f172a; }
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid #f0f0f0;
+      padding: 18px 0;
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+    .faq-a {
+      font-size: 14.5px;
+      color: #374151;
+      line-height: 1.65;
+    }
+    /* sources */
+    .sources-list { list-style: none; padding: 0; margin: 0; }
+    .sources-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #374151;
+    }
+    .source-badge {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #dbeafe;
+      color: #2563eb;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    /* related guides */
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .related-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 14px;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .related-card:hover {
+      border-color: #2563eb;
+      box-shadow: 0 2px 8px rgba(37,99,235,.1);
+    }
+    .related-card .rc-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: #2563eb;
+      margin-bottom: 4px;
+    }
+    .related-card .rc-title {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #0f172a;
+      line-height: 1.4;
+    }
+    .read-guide-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #2563eb;
+      margin-top: 8px;
+      text-decoration: none;
+    }
+    .read-guide-link:hover { color: #1e40af; }
+    /* insights */
+    .insight-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .insight-number {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: #2563eb;
+      margin-bottom: 6px;
+    }
+    .insight-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 6px;
+    }
+    .insight-card p {
+      font-size: 14px;
+      color: #374151;
+      margin: 0;
+      line-height: 1.6;
+    }
+    .insight-banner {
+      background: #eff6ff;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-top: 16px;
+    }
+    .insight-banner p {
+      font-size: 14px;
+      color: #1e3a5f;
+      margin: 0;
+      line-height: 1.6;
+    }
+    /* author card */
+    .author-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 18px;
+      margin-top: 40px;
+    }
+    .author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .author-name { font-size: 15px; font-weight: 700; color: #0f172a; }
+    .author-title { font-size: 13px; color: #6b7280; margin-top: 2px; }
+    .author-bio { font-size: 13.5px; color: #374151; margin-top: 6px; line-height: 1.55; }
+    /* footer */
+    .site-footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 48px 24px 32px;
+      margin-top: 64px;
+    }
+    .footer-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-brand p { font-size: 14px; line-height: 1.6; margin-top: 10px; max-width: 280px; }
+    .footer-col h4 {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      margin-bottom: 14px;
+    }
+    .footer-col a {
+      display: block;
+      color: #94a3b8;
+      font-size: 14px;
+      margin-bottom: 8px;
+      transition: color .15s;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid #1e293b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .newsletter-form { display: flex; gap: 8px; margin-top: 10px; }
+    .newsletter-form input {
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      background: #1e293b;
+      color: #fff;
+      font-size: 13px;
+    }
+    .newsletter-form button {
+      padding: 8px 14px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    /* back to top */
+    .back-to-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      background: #2563eb;
+      color: #fff;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 32px auto 0;
+      display: flex;
+      width: fit-content;
+      transition: background .15s;
+    }
+    .back-to-top:hover { background: #1e40af; }
+    @media (max-width: 700px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .fact-bar { grid-template-columns: 1fr 1fr; }
+      .cb-grid { grid-template-columns: 1fr; }
+      .comparison-table { font-size: 12.5px; }
+      .comparison-table th, .comparison-table td { padding: 8px; }
+    }
+  </style>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav style="padding:18px min(2rem,8vw);position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;justify-content:space-between;">
+  <a href="../index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+    <img src="../logo.svg" width="32" height="32" alt="AI Tools for Pros" style="border-radius:8px;display:block;">
+    <span style="font-size:13px;font-weight:500;color:#111111;">AI Tools for Pros</span>
+  </a>
+  <div id="nav-desktop" style="display:flex;align-items:center;gap:36px;">
+    <a href="../our-process.html" class="nav-link">Our Process</a>
+    <div class="nav-dropdown">
+      <span class="nav-link-caret">AI Tools <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="dropdown-menu">
+        <a href="../chatgpt.html" class="dropdown-item">ChatGPT</a>
+        <a href="../claude.html" class="dropdown-item">Claude</a>
+        <a href="../perplexity.html" class="dropdown-item">Perplexity AI</a>
+        <a href="../gemini.html" class="dropdown-item">Google Gemini</a>
+        <a href="../copilot.html" class="dropdown-item">Microsoft Copilot</a>
+        <a href="../midjourney.html" class="dropdown-item">Midjourney</a>
+        <a href="../cursor.html" class="dropdown-item">Cursor</a>
+        <a href="../notion-ai.html" class="dropdown-item">Notion AI</a>
+        <a href="../grammarly.html" class="dropdown-item">Grammarly</a>
+        <a href="../otter.html" class="dropdown-item">Otter.ai</a>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <span class="nav-link-caret">Professions <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="dropdown-menu">
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../legal.html">Legal Counsel <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/legal.html">ChatGPT</a>
+            <a href="../claude/legal.html">Claude</a>
+            <a href="../perplexity/legal.html">Perplexity AI</a>
+            <a href="../gemini/legal.html">Google Gemini</a>
+            <a href="../copilot/legal.html">Microsoft Copilot</a>
+            <a href="../grammarly/legal.html">Grammarly</a>
+            <a href="../notion-ai/legal.html">Notion AI</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../physicians.html">Physicians <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/physicians.html">ChatGPT</a>
+            <a href="../claude/physicians.html">Claude</a>
+            <a href="../perplexity/physicians.html">Perplexity AI</a>
+            <a href="../copilot/physicians.html">Microsoft Copilot</a>
+            <a href="../otter/physicians.html">Otter.ai</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../real-estate.html">Real Estate <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/real-estate.html">ChatGPT</a>
+            <a href="../claude/real-estate.html">Claude</a>
+            <a href="../gemini/real-estate.html">Google Gemini</a>
+            <a href="../copilot/real-estate.html">Microsoft Copilot</a>
+            <a href="../grammarly/real-estate.html">Grammarly</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../engineers.html">Engineers <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/engineers.html">ChatGPT</a>
+            <a href="../claude/engineers.html">Claude</a>
+            <a href="../cursor/engineers.html">Cursor</a>
+            <a href="../copilot/engineers.html">Microsoft Copilot</a>
+            <a href="../notion-ai/engineers.html">Notion AI</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../finance.html">Finance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/finance.html">ChatGPT</a>
+            <a href="../claude/finance.html">Claude</a>
+            <a href="../perplexity/finance.html">Perplexity AI</a>
+            <a href="../copilot/finance.html">Microsoft Copilot</a>
+            <a href="../gemini/finance.html">Google Gemini</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../insurance.html">Insurance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/insurance.html">ChatGPT</a>
+            <a href="../claude/insurance.html">Claude</a>
+            <a href="../copilot/insurance.html">Microsoft Copilot</a>
+            <a href="../perplexity/insurance.html">Perplexity AI</a>
+            <a href="../grammarly/insurance.html">Grammarly</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../architects.html">Architects <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/architects.html">ChatGPT</a>
+            <a href="../claude/architects.html">Claude</a>
+            <a href="../gemini/architects.html">Google Gemini</a>
+            <a href="../midjourney/architects.html">Midjourney</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../creatives.html">Creatives <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/creatives.html">ChatGPT</a>
+            <a href="../claude/creatives.html">Claude</a>
+            <a href="../midjourney/creatives.html">Midjourney</a>
+            <a href="../grammarly/creatives.html">Grammarly</a>
+            <a href="../notion-ai/creatives.html">Notion AI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="../newsletter.html" class="nav-link">Newsletter</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../claude.html">Claude</a>
+    <span>›</span>
+    <span>Lawyers</span>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="tool-badge">
+    <span class="dot"></span>
+    Claude by Anthropic
+  </div>
+
+  <h1>Claude for Lawyers — An Honest Review (2026)</h1>
+
+  <p class="page-subtitle">Claude's extended context window can ingest an entire contract, deposition transcript, or discovery set in one pass. Here is an honest look at where that advantage matters, where it does not, and what every firm should know before uploading client documents.</p>
+
+  <div class="meta-row">
+    <span class="verdict-badge-recommended">Recommended</span>
+    <span class="meta-date">March 19, 2026</span>
+    <span class="meta-read">9 min read</span>
+  </div>
+
+  <!-- VERDICT BANNER -->
+  <div class="verdict-banner">
+    <p><strong>Bottom line:</strong> Claude is the strongest general-purpose AI for legal work that involves long documents. Its ability to read and reason across a full 100-page contract in a single session is a genuine workflow advantage that <a href="../chatgpt.html" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a> and <a href="../copilot.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a> cannot match at equivalent price points. The critical caveat: the free and Pro (individual) plans do not include a Business Associate Agreement or enterprise data handling terms. Firms handling sensitive client matters should evaluate the Team or Enterprise plans before making Claude a standard tool.</p>
+  </div>
+
+  <!-- CONSISTENCY BLOCKS -->
+  <div class="consistency-block">
+    <div class="cb-label">Key Takeaway</div>
+    <div class="cb-text">Most lawyers who try Claude use it like ChatGPT and miss what makes it different. The real value is not drafting assistance (both tools do that) but the ability to load an entire document and ask nuanced questions without losing context partway through.</div>
+  </div>
+
+  <div class="cb-grid">
+    <div class="consistency-block" style="margin-bottom:0; background:#f0fdf4; border-color:#bbf7d0;">
+      <div class="cb-label" style="color:#166534;">Best For</div>
+      <div class="cb-text" style="color:#166534;">Contract review, deposition summaries, discovery analysis, brief drafting from a fact pattern, multi-document synthesis</div>
+    </div>
+    <div class="consistency-block" style="margin-bottom:0; background:#fef2f2; border-color:#fecaca;">
+      <div class="cb-label" style="color:#991b1b;">Avoid If</div>
+      <div class="cb-text" style="color:#991b1b;">You need real-time case law search, current regulatory lookups, or integration with your document management or case management system</div>
+    </div>
+  </div>
+
+  <div class="consistency-block" style="margin-top:10px">
+    <div class="cb-label">Mini Workflow</div>
+    <div class="cb-text">
+      <div class="cb-workflow-highlight" style="font-size:14px; color:#1e3a5f; line-height:1.6;">
+        Paste full contract into Claude (Team plan) → Ask: "List every indemnification obligation, identify the party responsible, and flag any unusual carve-outs" → Review output, ask follow-ups → Draft summary memo from Claude's analysis
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK FACTS BAR -->
+  <div class="fact-bar">
+    <div class="fact-item">
+      <div class="fact-label">Made By</div>
+      <div class="fact-value">Anthropic</div>
+      <div class="fact-sub">Founded 2021, safety-focused AI lab</div>
+    </div>
+    <div class="fact-item">
+      <div class="fact-label">Best For</div>
+      <div class="fact-value">Long-document legal analysis</div>
+      <div class="fact-sub">Full contracts, depos, discovery</div>
+    </div>
+    <div class="fact-item">
+      <div class="fact-label">Pricing</div>
+      <div class="fact-value">Free / Pro $20/mo / Team $30/mo [VERIFY DETAILS]</div>
+      <div class="fact-sub">Enterprise pricing available</div>
+    </div>
+    <div class="fact-item">
+      <div class="fact-label">Confidentiality</div>
+      <div class="fact-value">BAA: Team and Enterprise only [VERIFY DETAILS]</div>
+      <div class="fact-sub">Free/Pro data not enterprise-protected</div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: USE CASES -->
+  <h2>What Claude Does Well for Legal Work</h2>
+
+  <p>Claude's strongest legal use cases are concentrated in document analysis and drafting, not research. Lawyers who frame their expectations around that distinction get the most out of the tool and avoid the most common frustration (asking it to look something up when it cannot).</p>
+
+  <h3>Full-Contract Review and Issue Spotting</h3>
+  <p>This is the use case that separates Claude from most competitors. A standard commercial agreement of 60 to 100 pages can be pasted directly into Claude in its entirety on a Team or Enterprise plan. You can then ask it to extract all indemnification clauses, list every representation and warranty by party, identify any non-standard survival periods, or flag provisions that deviate from market norms. Claude holds the complete document in context throughout the conversation, so a follow-up question about a specific defined term does not require repasting the relevant section.</p>
+  <p>The practical result is that a first-pass review that might take 45 to 60 minutes of document navigation can be compressed to 10 to 15 minutes of reviewing and refining Claude's extracted summary. Attorneys still need to read the flagged provisions and apply professional judgment; Claude surfaces them rather than evaluating them.</p>
+
+  <div class="prompt-label">Try this prompt</div>
+  <div class="prompt-block">You are a commercial contracts associate. I am going to paste a purchase agreement. When you have read it, do the following:
+1. List every indemnification obligation with the responsible party and any caps or carve-outs.
+2. Identify all representations and warranties by seller and note their survival period.
+3. Flag any non-standard provisions that a buyer's counsel would typically negotiate.
+Output as a structured list with clause references.
+
+[PASTE FULL AGREEMENT HERE]</div>
+
+  <h3>Deposition Transcript Summarization</h3>
+  <p>Deposition transcripts are long, repetitive, and time-consuming to synthesize. A one-day deposition often runs 250 to 400 pages. Claude can ingest a full transcript on Team or Enterprise plans and produce a structured summary organized by topic, a chronological timeline of events as described by the witness, or a list of admissions and inconsistencies relevant to a specific legal theory. This replaces hours of highlighter-and-sticky-note work with a structured starting point for the reviewing attorney.</p>
+  <p>The key to useful output is telling Claude what the legal theory is before it summarizes. An unguided summary will capture factual background well but may miss what is legally significant for your specific dispute.</p>
+
+  <div class="prompt-label">Try this prompt</div>
+  <div class="prompt-block">This is the deposition transcript of [witness name], taken in [case description]. My client is the plaintiff claiming [brief claim description].
+
+Please:
+1. Summarize the witness's account of [key event] in chronological order.
+2. List any statements that could constitute admissions relevant to [claim].
+3. Identify any internal inconsistencies in the testimony.
+4. Note topics where the witness said "I don't recall" or gave evasive answers.
+
+[PASTE TRANSCRIPT]</div>
+
+  <h3>Brief Drafting from a Fact Pattern</h3>
+  <p>Claude produces well-structured, formally toned legal prose that is closer to attorney-quality output than most general AI tools. Given a legal standard, a fact pattern, and an argument framework, it will draft sections of a motion or brief that require relatively light editing rather than wholesale rewriting. The most effective approach is to paste the legal standard you are arguing under, the key facts, and the argument structure you want, then ask Claude to draft the argument section. Asking it to "draft a motion to dismiss" without those inputs produces generic output.</p>
+  <p>Important: Claude cannot verify citations. Any case law references it includes must be independently confirmed before the document is filed or sent to opposing counsel. This is a genuine limitation and not a caution that can be worked around with better prompting.</p>
+
+  <div class="prompt-label">Try this prompt</div>
+  <div class="prompt-block">Draft the argument section of a motion for summary judgment on the following issue. Use formal brief style with topic sentences, supporting analysis, and a concluding sentence for each subpoint.
+
+Legal standard: [paste the applicable standard, e.g., Rule 56 standard in your jurisdiction]
+Key facts: [list 5-7 bullet points of undisputed facts favorable to your argument]
+Argument structure:
+  A. [First subpoint heading]
+  B. [Second subpoint heading]
+  C. [Third subpoint heading]
+
+Do not include case citations in the draft. I will add verified citations after review.</div>
+
+  <h3>Multi-Document Synthesis and Research Memos</h3>
+  <p>Legal matters often require synthesizing multiple documents: a contract, a series of emails, and meeting notes, for example. Claude can hold all of these in context simultaneously (on Team or Enterprise plans) and answer questions that cut across all of them. "Based on the contract and the email chain I have provided, did the parties appear to modify the notice provision by course of dealing?" is a question Claude can engage with substantively rather than giving a generic answer about contract modification law.</p>
+  <p>This multi-document synthesis is also valuable for preparing research memos. You can paste several secondary sources or legal briefs from other jurisdictions and ask Claude to synthesize the legal analysis, identify where courts have disagreed, and draft a memo section summarizing the current state of the law. Always verify every cited case or statute independently before relying on the output.</p>
+
+  <!-- SECTION 2: SETUP AND PROMPTS -->
+  <h2>Getting the Most Out of Claude for Legal Work</h2>
+
+  <p>A few configuration and workflow habits significantly improve Claude's usefulness in a legal context. None require technical expertise, but they are not obvious to first-time users.</p>
+
+  <h3>Use Projects to Maintain Document Context</h3>
+  <p>Claude's Projects feature (available on Team and Enterprise plans) lets you store documents and background instructions that persist across conversation sessions. For an active matter, you can store the governing agreement, a background memo, and standing instructions ("always flag indemnification and limitation of liability provisions; always note when a defined term is used but not defined in the section I paste") in the project. Every new conversation in that project starts with that context loaded, saving significant prompt overhead.</p>
+
+  <div class="prompt-label">Project instruction template</div>
+  <div class="prompt-block">You are assisting a commercial litigation attorney at a mid-size law firm. You have access to the documents in this project.
+
+Standing instructions:
+- When reviewing contracts, always flag: indemnification, limitation of liability, dispute resolution, and IP ownership provisions.
+- Always note clause numbers or section references in your output.
+- Do not invent case citations. If a legal standard is relevant, describe it in plain terms and note that I will add verified citations.
+- When drafting, use formal legal prose consistent with a BigLaw associate style guide.
+- Flag any provision that departs from what you would expect as market standard.</div>
+
+  <h3>Tell Claude the Legal Theory Before It Reads the Document</h3>
+  <p>Claude's output improves significantly when it understands the legal question before it reads the document. "Summarize this deposition" produces a generic chronological summary. "Summarize this deposition from the perspective of a plaintiff's attorney arguing breach of a non-compete agreement, and flag every statement about geographic scope and duration of the restriction" produces a summary organized around what actually matters for that theory. Front-loading the legal theory is the single highest-leverage prompt adjustment most lawyers can make.</p>
+
+  <h3>Ask Claude to Show Its Reasoning</h3>
+  <p>For complex contract analysis or multi-issue legal questions, appending "Show your reasoning for each conclusion" or "For each flag, quote the specific language and explain why it is notable" produces output that is significantly easier to evaluate and correct than confident-sounding assertions. Claude's tendency toward careful, qualified language (compared to ChatGPT's more assertive tone) is an asset in legal work, but you should still force explicit reasoning rather than accept conclusions at face value.</p>
+
+  <!-- SECTION 3: LIMITATIONS -->
+  <h2>Where Claude Falls Short for Lawyers</h2>
+
+  <div class="limitation-card">
+    <div class="limitation-icon">✗</div>
+    <div class="limitation-body">
+      <h4>No real-time legal research</h4>
+      <p>Claude has a training cutoff and cannot search Westlaw, Lexis, or any court docket. Any citation it generates must be independently verified. This is a hard limitation, not something prompt engineering can fix. For current case law, regulatory guidance, or recent statutory changes, use a dedicated legal research platform.</p>
+    </div>
+  </div>
+
+  <div class="limitation-card">
+    <div class="limitation-icon">✗</div>
+    <div class="limitation-body">
+      <h4>No native law-firm integrations</h4>
+      <p>Claude has no connectors to Clio, iManage, NetDocuments, Relativity, or other legal practice management or document management systems. Documents must be manually pasted or uploaded. Workflows involving many documents across an active matter are cumbersome without a third-party integration or custom API setup.</p>
+    </div>
+  </div>
+
+  <div class="limitation-card">
+    <div class="limitation-icon">✗</div>
+    <div class="limitation-body">
+      <h4>Context window limits on the free and Pro plans</h4>
+      <p>The free and standard Pro plans have a smaller context window than the Team and Enterprise tiers. Long agreements (100+ pages) or full-length depositions may be truncated or require chunking on lower-tier plans. If your primary use case is long-document analysis, the Team plan or above is the appropriate tier.</p>
+    </div>
+  </div>
+
+  <div class="limitation-card">
+    <div class="limitation-icon">✗</div>
+    <div class="limitation-body">
+      <h4>Hallucination risk for citations and legal standards</h4>
+      <p>Like all large language models, Claude can produce plausible-sounding but fabricated case citations, statute numbers, or descriptions of legal standards. The risk is not eliminated by Claude's generally careful tone. Any legal claim, citation, or regulatory reference in Claude's output must be independently verified before use in any professional work product.</p>
+    </div>
+  </div>
+
+  <div class="caution-block">
+    <div class="caution-label">Professional Responsibility Note</div>
+    <p>Anthropic's free and individual Pro plans do not include enterprise data handling agreements. Using these plans with identifiable client documents may implicate attorney-client privilege, confidentiality obligations, and applicable bar ethics rules on attorney use of third-party technology vendors. The Team plan includes data privacy terms; the Enterprise plan provides a BAA equivalent [VERIFY DETAILS]. Before making Claude a standard tool for client work, confirm which plan your firm is using and obtain guidance from your ethics counsel or the applicable bar's ethics hotline. Several state bars have issued formal opinions on AI use in legal practice; check whether your jurisdiction has published guidance.</p>
+  </div>
+
+  <!-- SECTION 4: COMPARISON TABLE -->
+  <h2>How Claude Compares for Legal Work</h2>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Tool</th>
+        <th>Long-Document Analysis</th>
+        <th>Brief Drafting</th>
+        <th>Real-Time Research</th>
+        <th>Data Privacy (paid plans)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="highlight-row">
+        <td>Claude (Team)</td>
+        <td>Best-in-class (200K context)</td>
+        <td>Strong, formal tone</td>
+        <td>No</td>
+        <td>Data privacy terms; no training on data [VERIFY DETAILS]</td>
+      </tr>
+      <tr>
+        <td>ChatGPT (Team/Enterprise)</td>
+        <td>Good (128K context)</td>
+        <td>Strong, assertive tone</td>
+        <td>Yes (with browsing)</td>
+        <td>BAA on Enterprise only [VERIFY DETAILS]</td>
+      </tr>
+      <tr>
+        <td>Microsoft Copilot (M365)</td>
+        <td>Limited (works on open files)</td>
+        <td>Good in Word</td>
+        <td>Yes (Bing-based)</td>
+        <td>Microsoft DPA; BAA available [VERIFY DETAILS]</td>
+      </tr>
+      <tr>
+        <td>Perplexity (Pro)</td>
+        <td>Limited</td>
+        <td>Basic</td>
+        <td>Yes (best for research)</td>
+        <td>Limited enterprise terms [VERIFY DETAILS]</td>
+      </tr>
+      <tr>
+        <td>Grammarly (Business)</td>
+        <td>No (editing tool only)</td>
+        <td>Quality/tone polish only</td>
+        <td>No</td>
+        <td>SOC 2 Type II; no BAA [VERIFY DETAILS]</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- FAQ -->
+  <h2>Frequently Asked Questions</h2>
+
+  <div itemscope itemtype="https://schema.org/FAQPage">
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" itemprop="name">Can Claude review an entire contract at once?</div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <span itemprop="text">Yes. Claude's context window (200,000 tokens on Pro and Team plans) can ingest a 150-page agreement in a single session. You can ask it to identify indemnification clauses, flag unusual representations, or extract all defined terms without pasting sections piecemeal.</span>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" itemprop="name">Is Claude safe to use with confidential client documents?</div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <span itemprop="text">It depends on your plan. Anthropic's free and Pro (individual) plans do not include a Business Associate Agreement or enterprise data processing terms. The Claude Team and Claude for Work (Enterprise) plans include data privacy commitments and conversation data is not used for training. Consult your firm's data governance policy before uploading client documents.</span>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" itemprop="name">Does Claude hallucinate case citations?</div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <span itemprop="text">Yes, like all large language models, Claude can generate plausible-sounding but fabricated citations. Never submit a brief or memo that includes citations you have not independently verified in Westlaw, Lexis, or a primary source. Use Claude for drafting structure and argument framing, not for citation sourcing.</span>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" itemprop="name">How does Claude compare to ChatGPT for legal work?</div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <span itemprop="text">It depends on the task. For long-document analysis (full contracts, deposition transcripts, large discovery sets), Claude's context window and tendency toward careful, qualified responses give it an edge. For open-ended drafting and general research synthesis, both tools are comparable. ChatGPT's web-browsing mode is more capable for real-time regulatory lookups. Most serious legal AI users run both.</span>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" itemprop="name">Can I use Claude to draft briefs and motions?</div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <span itemprop="text">Yes, with the standard caveat that all AI-drafted legal content must be reviewed and revised by the supervising attorney. Claude produces well-structured, formally toned legal prose and follows a provided framework closely. It performs best when given the legal standard, key facts, and a rough outline rather than being asked to create everything from scratch.</span>
+      </div>
+    </div>
+
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" itemprop="name">What is the biggest limitation of Claude for legal professionals?</div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <span itemprop="text">No real-time legal research. Claude's knowledge has a training cutoff and it cannot search Westlaw, Lexis, or court dockets. It also has no law-firm-specific integrations (e.g., case management software, document management systems). For verified, current case law you still need a dedicated legal research platform.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SOURCES -->
+  <h2>Sources Checked</h2>
+  <ul class="sources-list">
+    <li>
+      <span class="source-badge">1</span>
+      <span>Anthropic — Claude model context window and pricing documentation [VERIFY DETAILS]</span>
+    </li>
+    <li>
+      <span class="source-badge">2</span>
+      <span>Anthropic — Claude Team and Enterprise data privacy and usage policies [VERIFY DETAILS]</span>
+    </li>
+    <li>
+      <span class="source-badge">3</span>
+      <span>American Bar Association — Formal Opinion 512 on generative AI use by lawyers (2024)</span>
+    </li>
+    <li>
+      <span class="source-badge">4</span>
+      <span>Anthropic — Claude Projects feature documentation and Teams plan overview [VERIFY DETAILS]</span>
+    </li>
+    <li>
+      <span class="source-badge">5</span>
+      <span>State bar ethics opinions on attorney use of AI tools (multiple jurisdictions, 2024-2026)</span>
+    </li>
+  </ul>
+
+  <!-- RELATED GUIDES -->
+  <h2>Related Guides</h2>
+  <div class="related-grid">
+    <a href="../chatgpt/legal.html" class="related-card">
+      <div class="rc-label">ChatGPT</div>
+      <div class="rc-title">ChatGPT for Lawyers</div>
+      <span class="read-guide-link">Read guide →</span>
+    </a>
+    <a href="../copilot/legal.html" class="related-card">
+      <div class="rc-label">Microsoft Copilot</div>
+      <div class="rc-title">Copilot for Lawyers</div>
+      <span class="read-guide-link">Read guide →</span>
+    </a>
+    <a href="../grammarly/legal.html" class="related-card">
+      <div class="rc-label">Grammarly</div>
+      <div class="rc-title">Grammarly for Lawyers</div>
+      <span class="read-guide-link">Read guide →</span>
+    </a>
+    <a href="../claude.html" class="related-card">
+      <div class="rc-label">Claude Hub</div>
+      <div class="rc-title">Claude for All Professions</div>
+      <span class="read-guide-link">Read guide →</span>
+    </a>
+    <a href="../perplexity/finance.html" class="related-card">
+      <div class="rc-label">Perplexity</div>
+      <div class="rc-title">Perplexity for Finance Pros</div>
+      <span class="read-guide-link">Read guide →</span>
+    </a>
+      <a href="../legal.html" class="related-card">
+      <div class="rc-label">All Legal Tools</div>
+      <div class="rc-title">All AI tools for legal counsel</div>
+      <span class="read-guide-link">View overview →</span>
+    </a>
+</div>
+
+  <!-- WHAT MOST REVIEWS MISS -->
+  <h2>What Most Reviews Miss</h2>
+
+  <div class="insight-card">
+    <div class="insight-number">Insight 1</div>
+    <h4>The context window is not just about document length — it is about reasoning continuity</h4>
+    <p>Most reviews lead with "Claude has a 200K context window" as if it is a storage specification. The actual advantage is different: when you ask Claude a follow-up question about a clause it identified 20,000 tokens earlier, it can reason about that clause in relation to everything it has read since. With tools that have smaller context windows, long documents must be chunked, and chunking breaks the cross-document reasoning that makes document analysis valuable. The right way to think about Claude's context window is not "it can hold a lot of text" but "it can hold the entire argument at once."</p>
+  </div>
+
+  <div class="insight-card">
+    <div class="insight-number">Insight 2</div>
+    <h4>Claude's cautious tone is an asset in legal work, not a limitation</h4>
+    <p>Reviewers who come from heavy ChatGPT use sometimes note that Claude "hedges too much" or "qualifies everything." In a legal context, this is exactly the right behavior. A model that says "This clause appears to shift the standard of care to a gross negligence threshold, though you should confirm whether your jurisdiction enforces such modifications in this context" is more useful than one that confidently asserts the same conclusion without flagging the jurisdictional variability. The hedging is accurate epistemics. Legal output that sounds certain is more dangerous than output that correctly signals its limitations.</p>
+  </div>
+
+  <div class="insight-card">
+    <div class="insight-number">Insight 3</div>
+    <h4>The plan choice matters more for lawyers than for almost any other profession</h4>
+    <p>For most professions, the difference between Claude Pro and Claude Team is mostly about usage volume. For lawyers, it is about whether the tool is professionally appropriate to use at all on client matters. The free and individual Pro plans have no enterprise data handling terms. Uploading a client contract under those plans may violate confidentiality obligations depending on your jurisdiction and your firm's policies. This is not a minor caveat buried in terms of service; it is the first question any law firm should answer before deploying Claude, and almost no general review of Claude raises it.</p>
+  </div>
+
+  <div class="insight-banner">
+    <p>The practical takeaway: Claude Team plan at $30 per user per month is a legitimate billable-matter tool for most law firms. Claude Pro at $20 per month is an excellent personal productivity tool for tasks that do not involve client-identifying information. The distinction matters and almost no review article draws it clearly.</p>
+  </div>
+
+  <!-- AUTHOR CARD -->
+  <div class="author-card">
+    <div class="author-avatar"><img src="../author.svg" width="48" height="48" alt="Rich M., Founder of AI Tools for Pros" style="border-radius:50%;display:block;"></div>
+    <div>
+      <div class="author-name">Rich M.</div>
+      <div class="author-title">Editor, AI Tools for Pros</div>
+      <div class="author-bio">We review AI tools for professionals who need honest, practical information rather than hype. No sponsored placements. No affiliate links on tool reviews. We test what we recommend.</div>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="nav-logo" style="text-decoration:none;">
+        <img src="../logo.svg" alt="AI Tools for Pros" style="height:26px;">
+        <span style="color:#fff;font-weight:700;font-size:15px;">AI Tools for Pros</span>
+      </a>
+      <p>Honest reviews of AI tools for working professionals. No sponsored placements. No hype.</p>
+      <div class="newsletter-form" style="margin-top:14px;">
+        <input type="email" placeholder="your@email.com" aria-label="Email for newsletter">
+        <button type="submit">Subscribe</button>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>AI Tools</h4>
+      <a href="../chatgpt.html">ChatGPT</a>
+      <a href="../claude.html">Claude</a>
+      <a href="../perplexity.html">Perplexity</a>
+      <a href="../gemini.html">Gemini</a>
+      <a href="../copilot.html">Microsoft Copilot</a>
+    </div>
+    <div class="footer-col">
+      <h4>More Tools</h4>
+      <a href="../midjourney.html">Midjourney</a>
+      <a href="../cursor.html">Cursor</a>
+      <a href="../notion-ai.html">Notion AI</a>
+      <a href="../grammarly.html">Grammarly</a>
+      <a href="../otter.html">Otter.ai</a>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <a href="../about-us.html">About</a>
+      <a href="../newsletter.html">Newsletter</a>
+      <a href="../index.html">Home</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 AI Tools for Pros. All rights reserved.</span>
+    <span>Independent reviews. Not affiliated with Anthropic or any AI company.</span>
+  </div>
+</footer>
+
+<a href="#" class="back-to-top">↑ Back to top</a>
+
+<script>
+  function toggleDropdown(id) {
+    const el = document.getElementById(id);
+    const isOpen = el.classList.contains('open');
+    document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('open'));
+    if (!isOpen) el.classList.add('open');
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-dropdown')) {
+      document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('open'));
+    }
+  });
+</script>
+
+  <script src="../site.js" defer></script>
+</body>
+</html>

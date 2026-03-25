@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude for Real Estate Agents — 2026 Guide | AI Tools for Pros</title>
+  <meta name="description" content="How real estate agents use Claude in 2026 — full contract analysis, HOA document review, CC&R summaries, and listing copy. Why Claude's 200K context window changes the game.">
+  <meta property="og:title" content="Claude for Real Estate Agents — 2026 Guide | AI Tools for Pros">
+  <meta property="og:description" content="How real estate agents use Claude in 2026 — full contract analysis, HOA document review, CC&R summaries, and listing copy. Why Claude's 200K context window changes the game.">
+  <meta property="og:image" content="https://aitoolsforpros.com/og-image.jpg">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://aitoolsforpros.com/claude/real-estate">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { body: ['Inter','sans-serif'], heading: ['Cardo','serif'] } } } }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #111111; margin: 0; padding: 0; }
+    .font-heading { font-family: 'Cardo', serif; }
+    .nav-link { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #636363; text-decoration: none; transition: color 0.15s; }
+    .nav-link:hover { color: #111111; }
+    .nav-dropdown { position: relative; }
+    .nav-link-caret { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #636363; cursor: default; display: inline-flex; align-items: center; gap: 5px; transition: color 0.15s; user-select: none; }
+    .nav-link-caret:hover, .nav-dropdown:hover .nav-link-caret { color: #111111; }
+    .dropdown-menu { position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%); background: #ffffff; border: 1px solid #ebebeb; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.09); padding: 6px; min-width: 196px; opacity: 0; visibility: hidden; transition: opacity 0.15s, visibility 0.15s; z-index: 200; }
+    .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; }
+    .dropdown-item { display: block; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .dropdown-item:hover { background: #f5f5f5; color: #111111; }
+    .submenu-item { position: relative; }
+    .submenu-trigger { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; cursor: pointer; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .submenu-item:hover .submenu-trigger { background: #f5f5f5; color: #111111; }
+    .submenu { position: absolute; left: calc(100% + 6px); top: -6px; background: #ffffff; border: 1px solid #ebebeb; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.09); padding: 6px; min-width: 196px; opacity: 0; visibility: hidden; transition: opacity 0.15s, visibility 0.15s; z-index: 201; }
+    .submenu-item:hover .submenu { opacity: 1; visibility: visible; }
+    .submenu a { display: block; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .submenu a:hover { background: #f5f5f5; color: #111111; }
+    .prompt-block { background: #f8f9fa; border-left: 3px solid #2563EB; padding: 16px 20px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 13px; color: #333333; line-height: 1.7; margin-bottom: 20px; }
+  </style>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../site.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Claude for Real Estate Agents — 2026 Guide",
+        "description": "How real estate agents use Claude in 2026 — full contract analysis, HOA document review, CC&R summaries, and listing copy. Why Claude's 200K context window changes the game.",
+        "author": {"@type": "Person", "name": "Rich M."},
+        "publisher": {"@type": "Organization", "name": "AI Tools for Pros", "url": "https://aitoolsforpros.com"},
+        "datePublished": "2026-02-23",
+        "dateModified": "2026-03-19",
+        "mainEntityOfPage": {"@type": "WebPage", "@id": "https://aitoolsforpros.com/claude/real-estate"},
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoolsforpros.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Claude", "item": "https://aitoolsforpros.com/claude"},
+          {"@type": "ListItem", "position": 3, "name": "Real Estate Agents", "item": "https://aitoolsforpros.com/claude/real-estate"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is Claude different from ChatGPT for real estate?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Claude's key advantage for real estate agents is its 200,000-token context window, which allows it to process entire purchase agreements, HOA documents, and disclosure packages in a single session. Claude also tends to produce more careful, nuanced prose that holds up better for client-facing documents. For real-time market data and web research, Perplexity AI has the edge; for volume drafting with CRM integrations, ChatGPT may be faster."}
+          },
+          {
+            "@type": "Question",
+            "name": "Can Claude review full real estate contracts?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes. Claude can process complete purchase and sale agreements, listing agreements, and HOA disclosure packets in one session without truncating. You can paste the full document and ask it to summarize key terms, flag unusual clauses, or explain specific provisions in plain language. Claude's output is not legal advice — always defer to a real estate attorney for contract interpretation."}
+          },
+          {
+            "@type": "Question",
+            "name": "Can Claude summarize HOA CC&Rs and bylaws?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes. Claude's large context window means you can paste a full HOA document package and get a comprehensive organized summary of dues, rental restrictions, upcoming assessments, and use restrictions. This saves significant time before buyer consultations and helps agents explain HOA terms without reading through dense legal language themselves."}
+          },
+          {
+            "@type": "Question",
+            "name": "Does Claude write listing copy for MLS descriptions?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes. Claude writes listing copy that tends to be more distinctive and less formulaic than ChatGPT's, especially when you give it specific property details and neighborhood character. For Fair Housing compliance, you still need to review any copy before publishing — Claude does not automatically screen for Fair Housing violations."}
+          },
+          {
+            "@type": "Question",
+            "name": "Does Claude have access to live MLS or market data?",
+            "acceptedAnswer": {"@type": "Answer", "text": "No. Claude does not have access to live MLS data or current market statistics. You need to supply the data in your prompt. For real-time market intelligence, Perplexity AI has a strong advantage. Claude is most useful when you bring the documents and data and ask it to analyze, organize, or communicate."}
+          },
+          {
+            "@type": "Question",
+            "name": "Is Claude safe for real estate client information?",
+            "acceptedAnswer": {"@type": "Answer", "text": "It depends on your plan and firm policy. Claude's standard consumer interface should not be used for personally identifiable client data. Anthropic offers Claude for Enterprise with data handling controls. Verify your plan's terms and your brokerage's AI data policy before pasting contract details with client names or financial information. [VERIFY DETAILS]"}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<!-- NAV -->
+<nav style="padding:18px min(2rem,8vw);position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;justify-content:space-between;">
+  <a href="../index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+    <img src="../logo.svg" width="32" height="32" alt="AI Tools for Pros" style="border-radius:8px;display:block;">
+    <span style="font-size:13px;font-weight:500;color:#111111;">AI Tools for Pros</span>
+  </a>
+  <div id="nav-desktop" style="display:flex;align-items:center;gap:36px;">
+    <a href="../our-process.html" class="nav-link">Our Process</a>
+    <div class="nav-dropdown">
+      <span class="nav-link-caret">AI Tools <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="dropdown-menu">
+        <a href="../chatgpt.html" class="dropdown-item">ChatGPT</a>
+        <a href="../claude.html" class="dropdown-item">Claude</a>
+        <a href="../perplexity.html" class="dropdown-item">Perplexity AI</a>
+        <a href="../gemini.html" class="dropdown-item">Google Gemini</a>
+        <a href="../copilot.html" class="dropdown-item">Microsoft Copilot</a>
+        <a href="../midjourney.html" class="dropdown-item">Midjourney</a>
+        <a href="../cursor.html" class="dropdown-item">Cursor</a>
+        <a href="../notion-ai.html" class="dropdown-item">Notion AI</a>
+        <a href="../grammarly.html" class="dropdown-item">Grammarly</a>
+        <a href="../otter.html" class="dropdown-item">Otter.ai</a>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <span class="nav-link-caret">Professions <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="dropdown-menu">
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../legal.html">Legal Counsel <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/legal.html">ChatGPT</a>
+            <a href="../claude/legal.html">Claude</a>
+            <a href="../perplexity/legal.html">Perplexity AI</a>
+            <a href="../gemini/legal.html">Google Gemini</a>
+            <a href="../copilot/legal.html">Microsoft Copilot</a>
+            <a href="../grammarly/legal.html">Grammarly</a>
+            <a href="../notion-ai/legal.html">Notion AI</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../physicians.html">Physicians <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/physicians.html">ChatGPT</a>
+            <a href="../claude/physicians.html">Claude</a>
+            <a href="../perplexity/physicians.html">Perplexity AI</a>
+            <a href="../copilot/physicians.html">Microsoft Copilot</a>
+            <a href="../otter/physicians.html">Otter.ai</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../real-estate.html">Real Estate <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/real-estate.html">ChatGPT</a>
+            <a href="../claude/real-estate.html">Claude</a>
+            <a href="../gemini/real-estate.html">Google Gemini</a>
+            <a href="../copilot/real-estate.html">Microsoft Copilot</a>
+            <a href="../grammarly/real-estate.html">Grammarly</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../engineers.html">Engineers <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/engineers.html">ChatGPT</a>
+            <a href="../claude/engineers.html">Claude</a>
+            <a href="../cursor/engineers.html">Cursor</a>
+            <a href="../copilot/engineers.html">Microsoft Copilot</a>
+            <a href="../notion-ai/engineers.html">Notion AI</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../finance.html">Finance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/finance.html">ChatGPT</a>
+            <a href="../claude/finance.html">Claude</a>
+            <a href="../perplexity/finance.html">Perplexity AI</a>
+            <a href="../copilot/finance.html">Microsoft Copilot</a>
+            <a href="../gemini/finance.html">Google Gemini</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../insurance.html">Insurance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/insurance.html">ChatGPT</a>
+            <a href="../claude/insurance.html">Claude</a>
+            <a href="../copilot/insurance.html">Microsoft Copilot</a>
+            <a href="../perplexity/insurance.html">Perplexity AI</a>
+            <a href="../grammarly/insurance.html">Grammarly</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../architects.html">Architects <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/architects.html">ChatGPT</a>
+            <a href="../claude/architects.html">Claude</a>
+            <a href="../gemini/architects.html">Google Gemini</a>
+            <a href="../midjourney/architects.html">Midjourney</a>
+          </div>
+        </div>
+        <div class="submenu-item">
+          <a class="submenu-trigger" href="../creatives.html">Creatives <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="submenu">
+            <a href="../chatgpt/creatives.html">ChatGPT</a>
+            <a href="../claude/creatives.html">Claude</a>
+            <a href="../midjourney/creatives.html">Midjourney</a>
+            <a href="../grammarly/creatives.html">Grammarly</a>
+            <a href="../notion-ai/creatives.html">Notion AI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="../newsletter.html" class="nav-link">Newsletter</a>
+  </div>
+</nav>
+
+<main style="max-width:860px;margin:0 auto;padding:28px 24px 56px;">
+
+  <!-- Breadcrumb -->
+  <div style="font-size:12px;color:#636363;margin:8px 0 18px;">
+    <a href="../index.html" style="color:#636363;text-decoration:none;" onmouseover="this.style.color='#111111'" onmouseout="this.style.color='#636363'">Home</a>
+    <span style="margin:0 8px;color:#c0c0c0;">/</span>
+    <a href="../claude.html" style="color:#636363;text-decoration:none;" onmouseover="this.style.color='#111111'" onmouseout="this.style.color='#636363'">Claude</a>
+    <span style="margin:0 8px;color:#c0c0c0;">/</span>
+    <span style="color:#111111;">Real Estate Agents</span>
+  </div>
+
+  <!-- Page header -->
+  <p style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#636363;margin:0 0 10px;">Claude · Real Estate Agents</p>
+  <h1 class="font-heading" style="font-size:40px;line-height:1.12;margin:0 0 10px;">Claude for Real Estate Agents: What Actually Works in 2026</h1>
+
+  <p style="font-size:17px;line-height:1.7;color:#636363;margin:0 0 14px;">
+    Claude is my go-to when I need to read a dense document and come out with something useful. That includes 80-page HOA packages, purchase agreements with stacked addenda, and disclosure packets that would take two hours to parse manually.
+    This is what Claude for real estate actually looks like in practice, not a marketing summary.
+  </p>
+
+  <p style="font-size:13px;color:#636363;margin:0 0 20px;">By <strong style="color:#111111;font-weight:600;">Rich M.</strong>&nbsp;&middot;&nbsp;Fact-checked by <strong style="color:#111111;font-weight:600;">Rob M.</strong>&nbsp;&middot;&nbsp;March 19, 2026&nbsp;&middot;&nbsp;March 19, 2026<span id="reading-time"></span></p>
+
+  <!-- Verdict banner -->
+  <div style="background:#eff6ff;border-left:4px solid #2563EB;border-radius:10px;padding:18px 22px;margin:0 0 28px;max-width:760px;">
+    <div style="display:flex;align-items:center;gap:12px;margin:0 0 8px;flex-wrap:wrap;">
+      <span class="verdict-badge-recommended">Recommended</span>
+    </div>
+    <p style="font-size:14px;color:#1e40af;line-height:1.55;margin:0;"><strong>Bottom line:</strong> Claude is the strongest tool for real estate agents who regularly read long documents. Its 200K context window is not a talking point — it changes what you can do in a single session.</p>
+  </div>
+
+  <!-- Consistency blocks -->
+  <div style="background:#ffffff;border:1px solid #f0f0f0;border-radius:12px;padding:24px 28px;margin-bottom:20px;max-width:760px;">
+    <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#2563EB;margin:0 0 14px;">Key Takeaway</p>
+    <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+      <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> The 200K context window lets you paste a full HOA package or purchase agreement and get a working summary in minutes.</li>
+      <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> Listing copy tends to be more distinctive than ChatGPT's, especially for high-end or unique properties.</li>
+      <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> Claude does not have live MLS access, so you have to supply the data.</li>
+      <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> Fair Housing review is your responsibility, not Claude's.</li>
+      <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#2563EB;flex-shrink:0;font-weight:700;">&#8594;</span> Offer comparison summaries and client communication letters are consistent strengths.</li>
+    </ul>
+  </div>
+
+  <!-- Best For / Avoid If grid -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin-bottom:20px;">
+    <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:20px 24px;">
+      <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#166534;margin:0 0 12px;">Best For</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+        <li style="font-size:13px;color:#166534;">Reviewing HOA CC&Rs, bylaws, and disclosure packets</li>
+        <li style="font-size:13px;color:#166534;">Summarizing purchase agreements by section</li>
+        <li style="font-size:13px;color:#166534;">Comparing multiple offers in a clear table</li>
+        <li style="font-size:13px;color:#166534;">Writing listing copy with a distinct voice</li>
+        <li style="font-size:13px;color:#166534;">Drafting relocation guides and neighborhood overviews</li>
+      </ul>
+    </div>
+    <div style="background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:20px 24px;">
+      <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#991b1b;margin:0 0 12px;">Avoid If</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+        <li style="font-size:13px;color:#991b1b;">You need live MLS data or current market prices</li>
+        <li style="font-size:13px;color:#991b1b;">You need CRM or email platform integration</li>
+        <li style="font-size:13px;color:#991b1b;">Volume tasks where speed matters most</li>
+        <li style="font-size:13px;color:#991b1b;">You want automated Fair Housing copy screening</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Mini Workflow -->
+  <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;padding:24px 28px;max-width:760px;margin-bottom:28px;">
+    <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#1d4ed8;margin:0 0 12px;">If You Only Do One Thing</p>
+    <p style="font-size:13px;color:#1e40af;margin:0 0 12px;">Use Claude to process your next HOA document package before a buyer consultation.</p>
+    <ol style="padding:0 0 0 18px;margin:0;display:flex;flex-direction:column;gap:6px;">
+      <li style="font-size:13px;color:#1e40af;">Paste the HOA disclosures (CC&Rs, bylaws, financial statements) into Claude.</li>
+      <li style="font-size:13px;color:#1e40af;">Ask: "Summarize the monthly dues, rental restrictions, upcoming assessments, and any unusual use restrictions."</li>
+      <li style="font-size:13px;color:#1e40af;">Review and verify the key points against the original documents.</li>
+      <li style="font-size:13px;color:#1e40af;">Use the summary as a starting point for your buyer briefing, not as the final word.</li>
+    </ol>
+  </div>
+
+  <!-- Quick Facts Bar -->
+  <div class="fact-bar" style="max-width:860px;margin:0 0 28px;">
+    <div class="fact-item">
+      <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Made By</p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Anthropic</p>
+    </div>
+    <div class="fact-item">
+      <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Best For</p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Long document analysis</p>
+    </div>
+    <div class="fact-item">
+      <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Pricing</p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Free / Pro $20/mo [VERIFY DETAILS]</p>
+    </div>
+    <div class="fact-item">
+      <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Context Window</p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">200,000 tokens</p>
+    </div>
+  </div>
+
+  <!-- Main content intro -->
+  <p style="margin:0 0 12px;color:#111111;line-height:1.65;">
+    Claude is Anthropic's flagship AI assistant, built with a strong emphasis on careful reasoning and handling long, complex text. For real estate agents, the practical advantage is not the writing quality alone. It is the ability to process documents that would otherwise require hours of manual reading.
+  </p>
+
+  <p style="margin:0 0 28px;color:#111111;line-height:1.65;">
+    This guide focuses specifically on how Claude performs inside real estate workflows, not on what the marketing materials say. Most agents use it wrong initially because they treat it like a search engine instead of a reading and writing partner.
+  </p>
+
+  <!-- H2 #1 -->
+  <h2 class="font-heading" style="font-size:28px;margin:0 0 10px;">HOA Document Review: Where Claude Has a Clear Edge</h2>
+  <p style="margin:0 0 16px;color:#636363;line-height:1.7;">
+    The average HOA disclosure package runs 40 to 80 pages. Buyers ask agents to explain it. Claude can read the full package and extract the information buyers actually care about, in minutes.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">CC&Rs and rental restrictions</h3>
+  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+    Paste the full CC&Rs and ask Claude to identify rental restrictions, pet policies, leasing caps, short-term rental rules, and any clauses that limit how a buyer can use the property. The output gives you a clear talking-points list for buyer consultations.
+    Unlike <a href="../chatgpt.html" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>, which hits its context limit on very long documents, Claude processes the full text without losing detail from the first pages by the time it reaches the last ones.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Special assessments and financial health</h3>
+  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+    I ask Claude to review HOA financial statements and flag upcoming special assessments, reserve fund adequacy, and any recent or pending litigation. This is the kind of detail that can affect a buyer's decision and is often buried on page 60 of a document package.
+    The caveat is that I verify any financial figures against the original documents before repeating them to clients.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Prompt to try: HOA document summary</h3>
+  <div class="prompt-block">Goal: Summarize key HOA disclosures for a buyer briefing
+Input: Full HOA document package (CC&Rs, bylaws, financial statements)
+Ask Claude: "Summarize: 1) monthly dues and what they cover 2) rental restrictions and leasing caps 3) upcoming special assessments or known litigation 4) unusual use restrictions that would affect daily life 5) any red flags worth discussing with an attorney. Do not add information that is not in the document."
+Output format: Numbered list with section references where possible</div>
+  <p style="margin:0 0 24px;color:#111111;line-height:1.7;">
+    The guardrail at the end matters. Without it, Claude may fill gaps with plausible-sounding assumptions. For HOA documents, I only want what is actually in the text.
+  </p>
+
+  <!-- H2 #2 -->
+  <h2 class="font-heading" style="font-size:28px;margin:0 0 10px;">Purchase Agreement Analysis and Offer Comparison</h2>
+  <p style="margin:0 0 16px;color:#636363;line-height:1.7;">
+    Long purchase agreements with multiple addenda are the other area where Claude's context window matters. Agents who use it for contract review report saving 30 to 60 minutes per transaction on document prep.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Contingency and timeline extraction</h3>
+  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+    I paste the full purchase agreement and ask Claude to extract all contingency deadlines, seller disclosure requirements, and key milestone dates into a single timeline. This becomes the document I use for client check-ins and calendar blocking.
+    Claude is accurate on extraction tasks when you give it clear instructions, but I cross-check every date against the original before it goes into a calendar.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Multi-offer comparison for sellers</h3>
+  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+    In competitive markets, sellers often receive three or four offers within 48 hours. I paste the key terms of each offer and ask Claude to produce a comparison table with purchase price, down payment amount, financing contingency, inspection contingency, and closing timeline. Then I ask for a two-sentence summary of the relative strengths of each offer.
+    The comparison table is not Claude's opinion. It is structured information that helps sellers see the differences clearly.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Prompt to try: multi-offer comparison for seller</h3>
+  <div class="prompt-block">Goal: Give my seller a clear comparison of three offers
+Input: Key terms of each offer (price, down payment, contingencies, closing date, any unusual terms)
+Ask Claude: "Create a comparison table with columns for Purchase Price, Down Payment, Financing Contingency, Inspection Contingency, Closing Timeline, and Notable Terms. Then write two sentences summarizing the strongest aspect of each offer and one sentence noting any risk."
+Output format: Table first, then short narrative for each offer</div>
+  <p style="margin:0 0 24px;color:#111111;line-height:1.7;">
+    I do not ask Claude to recommend which offer to accept. That is the agent's job. The comparison is a tool, not a recommendation.
+  </p>
+
+  <!-- H2 #3 -->
+  <h2 class="font-heading" style="font-size:28px;margin:0 0 10px;">Listing Copy and Client Communication</h2>
+  <p style="margin:0 0 16px;color:#636363;line-height:1.7;">
+    Claude's writing quality for listing descriptions tends to be more distinctive than ChatGPT's. When you give it specific property details and neighborhood context, it avoids the over-used adjectives that make listings sound identical. The Fair Housing caveat applies here as always.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">MLS listing descriptions</h3>
+  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+    I give Claude specific property details: square footage, layout, lot characteristics, recent updates, and what I observed about the property's character during the walkthrough. The more specific my input, the better the output. Generic input produces generic copy.
+    After Claude drafts the description, I review it specifically for Fair Housing compliance before it goes anywhere near the MLS. Claude does not automatically screen for Fair Housing language issues.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Relocation and neighborhood guides</h3>
+  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+    For relocation buyers, I use Claude to draft neighborhood guides, school district summaries, and lifestyle overviews from the information I provide. These become reusable assets that I can update and share with multiple clients moving into the same area.
+    The output is based entirely on what I tell it. For current data on schools or neighborhoods, I still use live sources.
+  </p>
+
+  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Prompt to try: listing description with Fair Housing flag</h3>
+  <div class="prompt-block">Goal: Write an MLS listing description
+Input: Address (no client names), bedrooms/bathrooms, square footage, notable features, neighborhood character, target buyer type, desired tone
+Ask Claude: "Write an MLS listing description of approximately 150 words. After the description, review it and flag any language that could raise Fair Housing concerns, including familial status, neighborhood descriptors, or proximity-based language. List any flags separately."
+Output: Description + separate Fair Housing review section</div>
+  <p style="margin:0 0 24px;color:#111111;line-height:1.7;">
+    This prompt builds the review step in. I still read the flagged items and apply my own judgment, but it catches obvious issues before I copy-paste into the MLS.
+  </p>
+
+  <!-- H2 #4 — Limitations -->
+  <h2 class="font-heading" style="font-size:28px;margin:0 0 10px;">Where Claude Falls Short for Real Estate</h2>
+  <p style="margin:0 0 14px;color:#636363;line-height:1.7;">
+    The weaknesses matter more in some workflows than others. If you know what Claude cannot do, you can route around it instead of hitting a wall mid-task.
+  </p>
+
+  <div style="background:#fff;border:1px solid #fca5a5;border-radius:12px;padding:20px 24px;margin-bottom:16px;">
+    <p style="font-size:14px;font-weight:700;color:#991b1b;margin:0 0 8px;">No live MLS or market data access</p>
+    <p style="font-size:14px;color:#333333;line-height:1.7;margin:0;">Claude has no connection to live MLS feeds, Zillow, or public record databases. If you ask about current list prices or recent sales, it cannot help unless you paste the data yourself. For real-time market lookups, <a href="../perplexity.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity AI</a> is the better tool in the stack.</p>
+  </div>
+  <div style="background:#fff;border:1px solid #fca5a5;border-radius:12px;padding:20px 24px;margin-bottom:16px;">
+    <p style="font-size:14px;font-weight:700;color:#991b1b;margin:0 0 8px;">Fewer direct platform integrations</p>
+    <p style="font-size:14px;color:#333333;line-height:1.7;margin:0;">Claude has fewer native integrations with CRM and email platforms than ChatGPT or <a href="../copilot.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Microsoft Copilot</a>. Most workflows involve copy-paste. If you need an AI tool that lives inside your email client or CRM, Copilot or a ChatGPT-based integration may be more practical.</p>
+  </div>
+  <div style="background:#fff;border:1px solid #fca5a5;border-radius:12px;padding:20px 24px;margin-bottom:24px;">
+    <p style="font-size:14px;font-weight:700;color:#991b1b;margin:0 0 8px;">Not optimal for high-volume simple tasks</p>
+    <p style="font-size:14px;color:#333333;line-height:1.7;margin:0;">For generating 20 follow-up emails from a single template or quickly re-writing 10 short bios, ChatGPT's speed can feel faster. Claude's strengths show most on nuanced, long-form, or document-heavy tasks, not on high-volume simple repetition.</p>
+  </div>
+
+  <!-- Fair Housing caution -->
+  <div style="background:#fef9c3;border:1px solid #fde68a;border-radius:12px;padding:20px 24px;margin-bottom:28px;">
+    <p style="font-size:13px;font-weight:700;color:#854d0e;margin:0 0 8px;">Fair Housing: Your responsibility, not Claude's</p>
+    <p style="font-size:13px;color:#713f12;line-height:1.7;margin:0;">Claude does not automatically flag Fair Housing violations in listing copy, neighborhood descriptions, or client communications. Familial status language, school district framing as a selling point to families, and neighborhood descriptors that correlate with protected class characteristics all require agent review. Always review AI-generated content for Fair Housing compliance before publishing. When in doubt, consult your brokerage's legal or compliance team.</p>
+  </div>
+
+  <!-- H2 #5 — Comparison table -->
+  <h2 class="font-heading" style="font-size:28px;margin:22px 0 10px;">How Claude Compares for Real Estate Agents</h2>
+  <p style="margin:0 0 16px;color:#636363;line-height:1.7;">
+    No single tool does everything. Here is how Claude stacks up against the alternatives real estate agents actually use.
+  </p>
+
+  <div style="overflow-x:auto;background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:14px;margin:0 0 28px;">
+    <table style="width:100%;border-collapse:collapse;font-size:14px;">
+      <thead>
+        <tr>
+          <th style="text-align:left;border-bottom:1px solid #f0f0f0;padding:10px 8px;color:#636363;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">Tool</th>
+          <th style="text-align:left;border-bottom:1px solid #f0f0f0;padding:10px 8px;color:#636363;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">Best for</th>
+          <th style="text-align:left;border-bottom:1px solid #f0f0f0;padding:10px 8px;color:#636363;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">Weak for</th>
+          <th style="text-align:left;border-bottom:1px solid #f0f0f0;padding:10px 8px;color:#636363;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">One-line verdict</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#eff6ff;">
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;font-weight:600;">Claude</td>
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">HOA docs, long contracts, offer comparison</td>
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Live data, CRM integration, volume tasks</td>
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">The document review specialist.</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">ChatGPT</td>
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Email sequences, volume copy, CRM plug-ins</td>
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Very long document analysis</td>
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Better for high-volume, faster output.</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Grammarly</td>
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Proofreading, tone checks, line edits</td>
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Document analysis, drafting from scratch</td>
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Best paired with Claude, not instead of it.</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Perplexity AI</td>
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Market news, real-time regulatory lookups</td>
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Document processing, long-form drafting</td>
+          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Where to start before opening Claude.</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 8px;">Microsoft Copilot</td>
+          <td style="padding:10px 8px;">Email drafts, Word and Outlook workflows</td>
+          <td style="padding:10px 8px;">Very long document reasoning continuity</td>
+          <td style="padding:10px 8px;">Best if your brokerage runs on Microsoft 365.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- H2 #6 — FAQ -->
+  <h2 class="font-heading" style="font-size:28px;margin:22px 0 14px;">Frequently Asked Questions</h2>
+
+  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px;margin:0 0 10px;">
+    <h3 itemprop="name" class="font-heading" style="font-size:18px;margin:0 0 8px;">How is Claude different from ChatGPT for real estate?</h3>
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
+        Claude's key advantage is its 200,000-token context window, which lets it process entire purchase agreements, HOA documents, and disclosure packages in a single session. Claude also tends to produce more careful, nuanced prose for client-facing documents. For real-time market data and web research, Perplexity AI has the edge. For volume drafting with CRM integrations, ChatGPT may be faster.
+      </p>
+    </div>
+  </div>
+
+  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px;margin:0 0 10px;">
+    <h3 itemprop="name" class="font-heading" style="font-size:18px;margin:0 0 8px;">Can Claude review full real estate contracts?</h3>
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
+        Yes. Claude can process complete purchase and sale agreements, listing agreements, and HOA disclosure packets in one session. You can paste the full document and ask for key term summaries, unusual clause flags, or plain-language explanations of specific provisions. Claude's output is not legal advice, and contract interpretation should always involve a real estate attorney.
+      </p>
+    </div>
+  </div>
+
+  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px;margin:0 0 10px;">
+    <h3 itemprop="name" class="font-heading" style="font-size:18px;margin:0 0 8px;">Can Claude summarize HOA CC&Rs and bylaws?</h3>
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
+        Yes. Claude's large context window means you can paste a full HOA document package and get a comprehensive summary of dues, rental restrictions, upcoming assessments, and use restrictions. This saves significant time before buyer consultations. Always verify any financial figures against the original documents before presenting them to clients.
+      </p>
+    </div>
+  </div>
+
+  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px;margin:0 0 10px;">
+    <h3 itemprop="name" class="font-heading" style="font-size:18px;margin:0 0 8px;">Does Claude write listing copy for MLS descriptions?</h3>
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
+        Yes. Claude writes listing copy that tends to be more distinctive and less formulaic than ChatGPT's, especially when you give it specific property details and neighborhood character. For Fair Housing compliance, you still need to review any copy before publishing. You can also ask Claude to flag potential Fair Housing issues in the same prompt, though the review responsibility remains with you.
+      </p>
+    </div>
+  </div>
+
+  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px;margin:0 0 10px;">
+    <h3 itemprop="name" class="font-heading" style="font-size:18px;margin:0 0 8px;">Does Claude have access to live MLS or market data?</h3>
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
+        No. Claude does not have access to live MLS data or current market statistics. You need to supply the data in your prompt. For real-time market intelligence, Perplexity AI has a meaningful advantage. Claude is most useful when you bring the documents and data and ask it to analyze, organize, or communicate what is already there.
+      </p>
+    </div>
+  </div>
+
+  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px;margin:0 0 28px;">
+    <h3 itemprop="name" class="font-heading" style="font-size:18px;margin:0 0 8px;">Is Claude safe for real estate client information?</h3>
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
+        It depends on your plan and brokerage policy. Claude's standard consumer interface should not be used for personally identifiable client data. Anthropic offers Claude for Enterprise with data handling controls that may be appropriate for professional use. Verify your plan's data terms and your brokerage's AI policy before pasting contracts with client names or financial details. [VERIFY DETAILS]
+      </p>
+    </div>
+  </div>
+
+  <!-- Sources Checked -->
+  <h2 class="font-heading" style="font-size:28px;margin:0 0 14px;">Sources Checked</h2>
+  <div style="display:flex;flex-direction:column;gap:14px;margin:0 0 32px;">
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <span style="flex-shrink:0;width:28px;height:28px;background:#dbeafe;color:#2563eb;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">1</span>
+      <div style="font-size:14px;color:#333333;line-height:1.6;"><strong>Anthropic</strong> — Claude model overview and context window documentation [VERIFY DETAILS]</div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <span style="flex-shrink:0;width:28px;height:28px;background:#dbeafe;color:#2563eb;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">2</span>
+      <div style="font-size:14px;color:#333333;line-height:1.6;"><strong>Anthropic</strong> — Claude privacy policy and data handling for consumer and enterprise plans [VERIFY DETAILS]</div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <span style="flex-shrink:0;width:28px;height:28px;background:#dbeafe;color:#2563eb;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">3</span>
+      <div style="font-size:14px;color:#333333;line-height:1.6;"><strong>HUD.gov</strong> — Fair Housing Act overview and prohibited language guidance for real estate advertising</div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <span style="flex-shrink:0;width:28px;height:28px;background:#dbeafe;color:#2563eb;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">4</span>
+      <div style="font-size:14px;color:#333333;line-height:1.6;"><strong>NAR</strong> — National Association of Realtors guidance on AI tools and data handling in real estate practice</div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <span style="flex-shrink:0;width:28px;height:28px;background:#dbeafe;color:#2563eb;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">5</span>
+      <div style="font-size:14px;color:#333333;line-height:1.6;"><strong>Anthropic</strong> — Claude for Enterprise overview and compliance feature documentation [VERIFY DETAILS]</div>
+    </div>
+  </div>
+
+  <!-- Related Guides -->
+  <h2 class="font-heading" style="font-size:28px;margin:0 0 14px;">Related Guides</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:0 0 32px;">
+    <a href="../claude.html" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;display:block;transition:border-color .15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
+      <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;">claude</span>
+      <p style="font-size:13.5px;font-weight:600;color:#0f172a;margin:4px 0 0;line-height:1.4;">Claude for Professionals</p>
+    </a>
+    <a href="../claude/legal.html" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;display:block;transition:border-color .15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
+      <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;">claude</span>
+      <p style="font-size:13.5px;font-weight:600;color:#0f172a;margin:4px 0 0;line-height:1.4;">Claude for Legal Counsel</p>
+    </a>
+    <a href="../chatgpt/real-estate.html" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;display:block;transition:border-color .15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
+      <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;">chatgpt</span>
+      <p style="font-size:13.5px;font-weight:600;color:#0f172a;margin:4px 0 0;line-height:1.4;">ChatGPT for Real Estate Agents</p>
+    </a>
+    <a href="../gemini/real-estate.html" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;display:block;transition:border-color .15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
+      <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;">gemini</span>
+      <p style="font-size:13.5px;font-weight:600;color:#0f172a;margin:4px 0 0;line-height:1.4;">Google Gemini for Real Estate Agents</p>
+    </a>
+    <a href="../grammarly/real-estate.html" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;display:block;transition:border-color .15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
+      <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;">grammarly</span>
+      <p style="font-size:13.5px;font-weight:600;color:#0f172a;margin:4px 0 0;line-height:1.4;">Grammarly for Real Estate Agents</p>
+    </a>
+      <a href="../real-estate.html" style="display:block;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;text-decoration:none;background:#fff;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
+      <p style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#9ca3af;margin:0 0 4px;">All Real Estate Tools</p>
+      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;line-height:1.4;">All AI tools for real estate agents</p>
+    </a>
+</div>
+
+  <!-- What Most Reviews Miss -->
+  <h2 class="font-heading" style="font-size:28px;margin:0 0 14px;">What Most Reviews Miss</h2>
+  <div style="display:flex;flex-direction:column;gap:12px;margin:0 0 16px;">
+    <div style="border:1px solid #e5e7eb;border-radius:8px;padding:16px;">
+      <h4 style="font-size:15px;font-weight:700;color:#0f172a;margin:0 0 6px;">The context window is not a spec — it changes what you can actually do</h4>
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.6;">Most AI tool reviews compare features as checkboxes. The 200K context window is different because it unlocks a workflow that does not exist with smaller-context tools. Pasting an entire 80-page HOA package and asking a specific question about page 63 is qualitatively different from summarizing excerpts one at a time. Agents who discover this workflow do not go back.</p>
+    </div>
+    <div style="border:1px solid #e5e7eb;border-radius:8px;padding:16px;">
+      <h4 style="font-size:15px;font-weight:700;color:#0f172a;margin:0 0 6px;">Claude is a reading and writing partner, not a search engine</h4>
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.6;">Most agents initially use Claude the same way they use Google — asking it general questions and expecting factual answers. Claude's real value for real estate is the opposite of that. Bring a document. Bring data. Ask Claude to help you understand, organize, or communicate what is already in front of you. That shift changes the results dramatically.</p>
+    </div>
+    <div style="border:1px solid #e5e7eb;border-radius:8px;padding:16px;">
+      <h4 style="font-size:15px;font-weight:700;color:#0f172a;margin:0 0 6px;">Claude and Grammarly is a better combination than Claude alone</h4>
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.6;">Claude drafts well but does not catch all line-level tone and grammar inconsistencies across a document you have edited back and forth. Grammarly applied after Claude's draft catches the leftover issues before client copy goes anywhere. The combination gives you Claude's drafting quality and Grammarly's proofreading, which is meaningfully better than either tool alone for client-facing materials.</p>
+    </div>
+  </div>
+  <div style="background:#eff6ff;border-radius:8px;padding:16px 20px;margin:0 0 28px;">
+    <p style="font-size:14px;color:#1e40af;line-height:1.7;margin:0;font-style:italic;">"Use Claude for the document you cannot read fast enough, not for the question you could Google. That is where the 200K context window actually matters."</p>
+  </div>
+
+</main>
+
+<!-- AUTHOR PROFILE CARD -->
+<section style="padding:48px 24px;background:#f9fafb;border-top:1px solid #e5e7eb;">
+  <div style="max-width:860px;margin:0 auto;">
+    <div style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:28px 32px;display:flex;align-items:flex-start;gap:20px;">
+      <div style="flex-shrink:0;">
+        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="border-radius:50%;display:block;">
+          <rect width="72" height="72" rx="36" fill="#f0f4ff"/>
+          <circle cx="36" cy="28" r="12" fill="#bfcfff"/>
+          <ellipse cx="36" cy="56" rx="20" ry="14" fill="#bfcfff"/>
+          <circle cx="36" cy="28" r="10" fill="#d6e0ff">
+            <animate attributeName="r" values="10;10.5;10" dur="4s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+      </div>
+      <div>
+        <p style="font-size:14px;font-weight:600;color:#111111;margin:0 0 4px;">Rich M.</p>
+        <p style="font-size:12px;color:#9ca3af;margin:0 0 10px;">Editor, AI Tools for Pros</p>
+        <p style="font-size:13px;color:#636363;line-height:1.7;margin:0 0 10px;">I test AI tools inside real professional workflows and write honest, first-person assessments. My goal is straightforward guidance on AI tools, without agenda or affiliate incentives.</p>
+        <a href="../about-us.html" style="font-size:12px;color:#2563EB;text-decoration:none;font-weight:500;" onmouseover="this.style.color='#1d4ed8'" onmouseout="this.style.color='#2563EB'">Read more about our editorial process</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#07091a;border-radius:28px 28px 0 0;padding:56px min(6.5rem,8vw);">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:52px;">
+    <div>
+      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Directory</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li><a href="../legal.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Legal Counsel</a></li>
+        <li><a href="../architects.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Architects</a></li>
+        <li><a href="../physicians.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Physicians</a></li>
+        <li><a href="../engineers.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Engineers</a></li>
+        <li><a href="../finance.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Finance</a></li>
+        <li><a href="../creatives.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Creatives</a></li>
+      </ul>
+    </div>
+    <div>
+      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Company</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li><a href="../about-us.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">About</a></li>
+        <li><a href="../our-process.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Our Process</a></li>
+      </ul>
+    </div>
+    <div>
+      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Resources</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li><a href="../newsletter.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Newsletter</a></li>
+      </ul>
+    </div>
+    <div>
+      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Legal</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li><a href="../privacy-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Privacy Policy</a></li>
+        <li><a href="../cookie-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div style="border-top:1px solid #111e38;margin-bottom:48px;"></div>
+  <div style="display:flex;align-items:center;justify-content:space-between;">
+    <div>
+      <p style="color:#1e2a45;font-size:11px;font-weight:500;margin:0 0 4px;letter-spacing:0.05em;opacity:0.6;">AI Tools for Pros</p>
+      <p class="font-heading" style="color:#2563EB;font-size:48px;font-weight:700;margin:0 0 10px;line-height:1;">2026.</p>
+      <p style="color:#4a5568;font-size:13px;margin:0;">Join 15,000+ professionals receiving our monthly tool audit.</p>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="position:relative;display:flex;align-items:center;">
+        <input type="email" placeholder="professional@email.com" style="background:#0d1228;color:#4a5568;font-size:13px;padding:13px 48px 13px 18px;border-radius:999px;border:1px solid #1a2444;outline:none;width:248px;font-family:'Inter',sans-serif;">
+        <div style="position:absolute;right:8px;width:28px;height:28px;background:#1a2444;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="#4a5568" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+      <button style="background:#ffffff;color:#111111;font-size:13px;font-weight:500;padding:13px 24px;border-radius:999px;border:none;cursor:pointer;font-family:'Inter',sans-serif;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='#ffffff'">Subscribe</button>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:28px;right:28px;width:44px;height:44px;background:#111111;color:#ffffff;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.2);z-index:999;opacity:0;transition:opacity 0.25s,background 0.15s,transform 0.15s;pointer-events:none;" onmouseover="this.style.background='#2563eb';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#111111';this.style.transform='translateY(0)'">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<script>
+(function(){
+  var btn=document.getElementById('btt');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>300){btn.style.opacity='1';btn.style.pointerEvents='auto';}
+    else{btn.style.opacity='0';btn.style.pointerEvents='none';}
+  },{passive:true});
+})();
+</script>
+
+</body>
+</html>
