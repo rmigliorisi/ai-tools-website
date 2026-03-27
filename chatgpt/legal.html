@@ -12,9 +12,6 @@
   <meta property="og:url" content="https://aitoolsforpros.com/chatgpt/legal.html">
   <link rel="canonical" href="https://aitoolsforpros.com/chatgpt/legal.html">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cardo:wght@700&display=swap" rel="stylesheet">
   <!-- Google Analytics — replace G-XXXXXXXXXX with your Measurement ID to activate -->
   <!--
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -24,6 +21,48 @@
     gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');
   </script>
   -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { body: ['Inter','sans-serif'], heading: ['Cardo','serif'] } } }
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #111111; margin: 0; padding: 0; }
+    .font-heading { font-family: 'Cardo', serif; }
+    .nav-link { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #636363; text-decoration: none; transition: color 0.15s; }
+    .nav-link:hover { color: #111111; }
+    .nav-dropdown { position: relative; }
+    .nav-link-caret { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #636363; cursor: default; display: inline-flex; align-items: center; gap: 5px; transition: color 0.15s; user-select: none; }
+    .nav-link-caret:hover, .nav-dropdown:hover .nav-link-caret { color: #111111; }
+    .dropdown-menu { position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%); background: #ffffff; border: 1px solid #ebebeb; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.09); padding: 6px; min-width: 196px; opacity: 0; visibility: hidden; transition: opacity 0.15s, visibility 0.15s; z-index: 200; }
+    .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; }
+    .dropdown-item { display: block; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .dropdown-item:hover { background: #f5f5f5; color: #111111; }
+    .submenu-item { position: relative; }
+    .submenu-trigger { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; cursor: pointer; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .submenu-item:hover .submenu-trigger { background: #f5f5f5; color: #111111; }
+    .submenu { position: absolute; left: calc(100% + 6px); top: -6px; background: #ffffff; border: 1px solid #ebebeb; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.09); padding: 6px; min-width: 196px; opacity: 0; visibility: hidden; transition: opacity 0.15s, visibility 0.15s; z-index: 201; }
+    .submenu-item:hover .submenu { opacity: 1; visibility: visible; }
+    .submenu a { display: block; padding: 9px 14px; font-size: 13px; color: #333333; text-decoration: none; border-radius: 7px; transition: background 0.1s, color 0.1s; white-space: nowrap; }
+    .submenu a:hover { background: #f5f5f5; color: #111111; }
+    .verdict-badge-recommended { display: inline-flex; align-items: center; gap: 8px; background: #2563eb; color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 16px; border-radius: 999px; }
+    .fact-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: #ffffff; border: 1px solid #f0f0f0; border-radius: 12px; overflow: hidden; }
+    .fact-item { padding: 16px 20px; border-right: 1px solid #f0f0f0; }
+    .fact-item:last-child { border-right: none; }
+    .fact-label { font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #9ca3af; margin-bottom: 6px; }
+    .fact-value { font-size: 13px; font-weight: 600; color: #111111; line-height: 1.4; }
+    .fact-sub { font-size: 11px; color: #636363; margin-top: 3px; }
+    .prompt-block { background: #f8f9fa; border-left: 3px solid #2563eb; padding: 16px 20px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 13px; color: #333333; line-height: 1.7; margin-bottom: 20px; }
+    .read-guide-link { font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #111111; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+    .read-guide-link:hover { color: #2563eb; }
+    .source-badge { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; background: #dbeafe; color: #2563eb; font-size: 11px; font-weight: 700; border-radius: 50%; flex-shrink: 0; }
+  </style>
+  <link rel="stylesheet" href="../style.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,7 +76,7 @@
         "dateModified": "2026-03-18",
         "author": {
           "@type": "Person",
-          "name": "Rich M.",
+          "name": "Richard Migliorisi",
           "url": "https://aitoolsforpros.com/about-us.html"
         },
         "publisher": {
@@ -110,235 +149,7 @@
     ]
   }
   </script>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #fff;
-      color: #1a1a1a;
-      font-size: 16px;
-      line-height: 1.7;
-    }
-    a { color: inherit; text-decoration: none; }
-    /* ── NAV ── */
-    .site-nav {
-      background: #0f172a;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 56px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav-logo img { height: 28px; width: auto; }
-    .nav-logo span { color: #fff; font-weight: 700; font-size: 15px; letter-spacing: -0.01em; }
-    .nav-links { display: flex; align-items: center; gap: 4px; }
-    .nav-links a {
-      color: #94a3b8;
-      font-size: 14px;
-      font-weight: 500;
-      padding: 6px 12px;
-      border-radius: 6px;
-      transition: color .15s, background .15s;
-      white-space: nowrap;
-    }
-    .nav-links a:hover { color: #fff; background: rgba(255,255,255,.07); }
-    .nav-links a.active { color: #fff; }
-    .nav-dropdown { position: relative; }
-    .nav-dropdown > a { cursor: pointer; user-select: none; }
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: calc(100% + 4px);
-      left: 0;
-      background: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 8px;
-      padding: 6px;
-      min-width: 200px;
-      z-index: 200;
-    }
-    .dropdown-menu.open { display: block; }
-    .dropdown-menu a {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: #cbd5e1;
-      font-size: 13.5px;
-      font-weight: 500;
-      padding: 7px 10px;
-      border-radius: 6px;
-      transition: background .12s, color .12s;
-    }
-    .dropdown-menu a:hover { background: rgba(255,255,255,.07); color: #fff; }
-    .submenu-wrap { position: relative; }
-    .submenu {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 100%;
-      margin-left: 4px;
-      background: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 8px;
-      padding: 6px;
-      min-width: 190px;
-      z-index: 300;
-    }
-    .submenu-wrap:hover .submenu { display: block; }
-    /* ── MAIN ── */
-    main { max-width: 860px; margin: 0 auto; padding: 28px 24px 56px; }
-    .breadcrumb {
-      display: flex; align-items: center; gap: 6px;
-      font-size: 13px; color: #6b7280; margin-bottom: 20px; flex-wrap: wrap;
-    }
-    .breadcrumb a { color: #6b7280; }
-    .breadcrumb a:hover { color: #2563eb; }
-    .breadcrumb span { color: #9ca3af; }
-    .tool-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 12px; font-weight: 600; color: #6b7280;
-      text-transform: uppercase; letter-spacing: .05em; margin-bottom: 10px;
-    }
-    .tool-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #10a37f; }
-    h1 {
-      font-family: 'Cardo', Georgia, serif;
-      font-size: clamp(26px, 5vw, 38px);
-      font-weight: 700; line-height: 1.18; color: #0f172a; margin-bottom: 12px;
-    }
-    .page-subtitle { font-size: 17px; color: #4b5563; line-height: 1.6; margin-bottom: 16px; max-width: 720px; }
-    .meta-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
-    .verdict-badge-recommended {
-      display: inline-block; background: #2563eb; color: #fff;
-      font-size: 12px; font-weight: 700; padding: 4px 10px;
-      border-radius: 4px; letter-spacing: .04em; text-transform: uppercase;
-    }
-    .meta-date, .meta-read { font-size: 13px; color: #6b7280; }
-    .verdict-banner {
-      border-left: 4px solid #2563eb; background: #eff6ff;
-      border-radius: 0 8px 8px 0; padding: 16px 20px; margin-bottom: 28px;
-    }
-    .verdict-banner p { font-size: 15px; color: #1e3a5f; line-height: 1.65; }
-    .verdict-banner strong { font-weight: 700; }
-    /* consistency blocks */
-    .consistency-block {
-      border: 1px solid #e5e7eb; border-radius: 8px;
-      padding: 14px 16px; margin-bottom: 10px;
-    }
-    .cb-label {
-      font-size: 11px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .07em; color: #6b7280; margin-bottom: 4px;
-    }
-    .cb-text { font-size: 14.5px; color: #1f2937; line-height: 1.55; }
-    .cb-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
-    .cb-workflow-highlight { background: #eff6ff; border-radius: 6px; padding: 10px 14px; }
-    /* fact bar */
-    .fact-bar {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      border: 1px solid #e5e7eb; border-radius: 8px; margin-bottom: 36px; overflow: hidden;
-    }
-    .fact-item { padding: 14px 16px; border-right: 1px solid #f0f0f0; }
-    .fact-item:last-child { border-right: none; }
-    .fact-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #6b7280; margin-bottom: 4px; }
-    .fact-value { font-size: 14px; font-weight: 600; color: #0f172a; line-height: 1.4; }
-    .fact-sub { font-size: 12px; color: #6b7280; margin-top: 2px; }
-    h2 {
-      font-family: 'Cardo', Georgia, serif;
-      font-size: clamp(20px, 3.5vw, 26px); font-weight: 700;
-      color: #0f172a; margin-bottom: 14px; margin-top: 40px;
-    }
-    h3 { font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px; margin-top: 24px; }
-    p { margin-bottom: 14px; color: #374151; }
-    ul { margin: 0 0 16px 0; padding-left: 20px; }
-    li { margin-bottom: 6px; color: #374151; font-size: 15px; line-height: 1.6; }
-    .prompt-block {
-      background: #f8fafc; border-left: 4px solid #2563eb;
-      border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 16px 0;
-      font-family: 'Courier New', monospace; font-size: 13.5px;
-      color: #1e293b; line-height: 1.65; white-space: pre-wrap;
-    }
-    .prompt-label {
-      font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
-      text-transform: uppercase; letter-spacing: .07em; color: #2563eb; margin-bottom: 8px;
-    }
-    .caution-block {
-      background: #fef9c3; border-left: 4px solid #eab308;
-      border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 20px 0;
-    }
-    .caution-block p { font-size: 14px; color: #713f12; margin: 0; line-height: 1.6; }
-    .caution-label {
-      font-size: 11px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .07em; color: #92400e; margin-bottom: 6px;
-    }
-    .limitation-card {
-      border: 1px solid #fee2e2; border-radius: 8px;
-      padding: 14px 16px; margin-bottom: 10px; display: flex; gap: 12px;
-    }
-    .limitation-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
-    .limitation-body h4 { font-size: 14.5px; font-weight: 700; color: #b91c1c; margin-bottom: 4px; }
-    .limitation-body p { font-size: 13.5px; color: #374151; margin: 0; line-height: 1.55; }
-    .comparison-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 20px 0 32px; }
-    .comparison-table th {
-      background: #f8fafc; font-weight: 700; color: #374151;
-      padding: 10px 12px; text-align: left; border-bottom: 2px solid #e5e7eb; font-size: 12.5px;
-    }
-    .comparison-table td { padding: 10px 12px; border-bottom: 1px solid #f0f0f0; color: #374151; vertical-align: top; }
-    .comparison-table tr.highlight-row td { background: #eff6ff; font-weight: 600; color: #1e3a5f; }
-    .comparison-table td:first-child { font-weight: 600; color: #0f172a; }
-    .faq-item { border-bottom: 1px solid #f0f0f0; padding: 18px 0; }
-    .faq-item:last-child { border-bottom: none; }
-    .faq-q { font-size: 15.5px; font-weight: 700; color: #0f172a; margin-bottom: 8px; }
-    .faq-a { font-size: 14.5px; color: #374151; line-height: 1.65; }
-    .sources-list { list-style: none; padding: 0; margin: 0; }
-    .sources-list li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; font-size: 14px; color: #374151; }
-    .source-badge {
-      flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
-      background: #dbeafe; color: #2563eb;
-      font-size: 11px; font-weight: 700;
-      display: flex; align-items: center; justify-content: center; margin-top: 1px;
-    }
-    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-top: 16px; }
-    .related-card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px; transition: border-color .15s, box-shadow .15s; }
-    .related-card:hover { border-color: #2563eb; box-shadow: 0 2px 8px rgba(37,99,235,.1); }
-    .related-card .rc-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: #2563eb; margin-bottom: 4px; }
-    .related-card .rc-title { font-size: 13.5px; font-weight: 600; color: #0f172a; line-height: 1.4; }
-    .read-guide-link { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; color: #2563eb; margin-top: 8px; }
-    .read-guide-link:hover { color: #1e40af; }
-    .insight-card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin-bottom: 12px; }
-    .insight-number { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: #2563eb; margin-bottom: 6px; }
-    .insight-card h4 { font-size: 15px; font-weight: 700; color: #0f172a; margin-bottom: 6px; }
-    .insight-card p { font-size: 14px; color: #374151; margin: 0; line-height: 1.6; }
-    .insight-banner { background: #eff6ff; border-radius: 8px; padding: 16px 20px; margin-top: 16px; }
-    .insight-banner p { font-size: 14px; color: #1e3a5f; margin: 0; line-height: 1.6; }
-    .author-card { display: flex; align-items: flex-start; gap: 14px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 18px; margin-top: 40px; }
-    .author-avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #1e40af); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 18px; font-weight: 700; flex-shrink: 0; }
-    .author-name { font-size: 15px; font-weight: 700; color: #0f172a; }
-    .author-title { font-size: 13px; color: #6b7280; margin-top: 2px; }
-    .author-bio { font-size: 13.5px; color: #374151; margin-top: 6px; line-height: 1.55; }
-    .site-footer { background: #0f172a; color: #94a3b8; padding: 48px 24px 32px; margin-top: 64px; }
-    .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-    .footer-brand p { font-size: 14px; line-height: 1.6; margin-top: 10px; max-width: 280px; }
-    .footer-col h4 { color: #fff; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; margin-bottom: 14px; }
-    .footer-col a { display: block; color: #94a3b8; font-size: 14px; margin-bottom: 8px; transition: color .15s; }
-    .footer-col a:hover { color: #fff; }
-    .footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 24px; border-top: 1px solid #1e293b; display: flex; justify-content: space-between; align-items: center; font-size: 13px; flex-wrap: wrap; gap: 8px; }
-    .newsletter-form { display: flex; gap: 8px; margin-top: 10px; }
-    .newsletter-form input { flex: 1; padding: 8px 12px; border-radius: 6px; border: 1px solid #334155; background: #1e293b; color: #fff; font-size: 13px; }
-    .newsletter-form button { padding: 8px 14px; background: #2563eb; color: #fff; border: none; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; }
-    .back-to-top { display: flex; width: fit-content; align-items: center; gap: 6px; padding: 10px 20px; background: #2563eb; color: #fff; border-radius: 20px; font-size: 14px; font-weight: 600; margin: 32px auto 0; transition: background .15s; }
-    .back-to-top:hover { background: #1e40af; }
-    @media (max-width: 700px) {
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .fact-bar { grid-template-columns: 1fr 1fr; }
-      .cb-grid { grid-template-columns: 1fr; }
-      .comparison-table { font-size: 12.5px; }
-      .comparison-table th, .comparison-table td { padding: 8px; }
-    }
-  </style>
-  <link rel="stylesheet" href="../style.css">
+  <script src="../site.js" defer></script>
 </head>
 <body>
 
@@ -455,7 +266,7 @@
   </div>
 </nav>
 
-<main>
+<main class="prose-page">
 
   <!-- BREADCRUMB -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -488,7 +299,7 @@
   </div>
 
   <!-- CONSISTENCY BLOCKS -->
-  <div class="consistency-block">
+  <div class="consistency-block" style="background:#f5f3ff;border-color:#7c3aed;">
     <div class="cb-label">Key Takeaway</div>
     <div class="cb-text">ChatGPT is a drafting tool, not a legal research tool. That one distinction separates the attorneys who benefit from it and the ones who create liability. Contract first drafts, client letters, and document summarization are where it genuinely saves time.</div>
   </div>
@@ -504,7 +315,7 @@
     </div>
   </div>
 
-  <div class="consistency-block" style="margin-top:10px">
+  <div class="consistency-block" style="margin-top:10px;background:#ffffff;border:1px solid #bfdbfe;">
     <div class="cb-label">Mini Workflow</div>
     <div class="cb-text">
       <div class="cb-workflow-highlight" style="font-size:14px; color:#1e3a5f; line-height:1.6;">
@@ -698,42 +509,42 @@ Tone: professional, reassuring, plain language (no jargon). Under 250 words. Inc
   <div itemscope itemtype="https://schema.org/FAQPage">
 
     <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <div class="faq-q" itemprop="name">Can ChatGPT draft legal contracts?</div>
+      <h3 class="faq-q" itemprop="name">Can ChatGPT draft legal contracts?</h3>
       <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
         <span itemprop="text">Yes. ChatGPT can generate solid first drafts of standard agreements including NDAs, employment contracts, independent contractor agreements, service agreements, and demand letters. These drafts provide a useful starting structure but must be reviewed and revised by a licensed attorney. They will not reflect jurisdiction-specific nuances or the client's specific commercial circumstances.</span>
       </div>
     </div>
 
     <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <div class="faq-q" itemprop="name">Does ChatGPT hallucinate legal citations?</div>
+      <h3 class="faq-q" itemprop="name">Does ChatGPT hallucinate legal citations?</h3>
       <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
         <span itemprop="text">Yes. This is the most important limitation for legal professionals. ChatGPT fabricates plausible-sounding case citations, statute numbers, and legal authorities that do not exist. Real sanctions have been issued against attorneys who submitted AI-generated citations without verification. Never use any ChatGPT-generated case citation in filed work without independently verifying it in Westlaw, LexisNexis, or official court records.</span>
       </div>
     </div>
 
     <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <div class="faq-q" itemprop="name">Is ChatGPT confidentiality-safe for legal work?</div>
+      <h3 class="faq-q" itemprop="name">Is ChatGPT confidentiality-safe for legal work?</h3>
       <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
         <span itemprop="text">It depends on the plan. ChatGPT Free and Plus accounts do not include enterprise data processing terms. ChatGPT Team does not use your conversations to train the model. ChatGPT Enterprise includes a BAA and advanced data security controls. Before entering any client-identifying information into ChatGPT, confirm which plan your firm uses and review OpenAI's current data handling policy.</span>
       </div>
     </div>
 
     <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <div class="faq-q" itemprop="name">How does ChatGPT compare to Claude for legal work?</div>
+      <h3 class="faq-q" itemprop="name">How does ChatGPT compare to Claude for legal work?</h3>
       <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
         <span itemprop="text">It depends on the task. For long-document analysis (100+ page contracts, full deposition transcripts), Claude's larger context window gives it an edge. For general drafting, open-ended communication, and tasks where current web access matters, ChatGPT is more capable. Most attorneys who use AI seriously run both tools.</span>
       </div>
     </div>
 
     <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <div class="faq-q" itemprop="name">What is ChatGPT best for in a law firm?</div>
+      <h3 class="faq-q" itemprop="name">What is ChatGPT best for in a law firm?</h3>
       <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
         <span itemprop="text">Yes, ChatGPT is best for tasks where drafting quality matters more than factual authority: first-pass contract drafts, client update letters, engagement letters, demand letter scaffolding, document summarization, issue-spotting from fact patterns, and brief argument outlines. It is not reliable as a legal research tool and should not be used to source citations.</span>
       </div>
     </div>
 
     <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <div class="faq-q" itemprop="name">Can ChatGPT help with legal research?</div>
+      <h3 class="faq-q" itemprop="name">Can ChatGPT help with legal research?</h3>
       <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
         <span itemprop="text">No, not in the way most lawyers think. ChatGPT should not be your source for case law because it fabricates citations with high confidence. The browsing feature (available on Plus and higher) can retrieve current web content, but it is not a substitute for Westlaw or LexisNexis. Use ChatGPT to organize your research outline and draft argument structure after you have found the actual authorities.</span>
       </div>
@@ -827,61 +638,70 @@ Tone: professional, reassuring, plain language (no jargon). Under 250 words. Inc
   </div>
 
   <!-- AUTHOR CARD -->
-  <div class="author-card">
-    <div class="author-avatar"><img src="../author.svg" width="48" height="48" alt="Rich M., Founder of AI Tools for Pros" style="border-radius:50%;display:block;"></div>
+    <div class="author-card">
+    <div class="author-avatar"><img src="../author.svg" width="48" height="48" alt="Richard Migliorisi, Founder of AI Tools for Pros" style="border-radius:50%;display:block;"></div>
     <div>
-      <div class="author-name">Rich M.</div>
-      <div class="author-title">Editor, AI Tools for Pros</div>
-      <div class="author-bio">We review AI tools for professionals who need honest, practical information rather than hype. No sponsored placements. No affiliate links on tool reviews. We test what we recommend.</div>
+      <div class="author-name">Richard Migliorisi <a href="https://www.linkedin.com/in/richardmigliorisi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
+      <div class="author-title">Founder, AI Tools for Pros &nbsp;&middot;&nbsp; Fact-checked by Ryan Cooper</div>
+      <div class="author-bio">Richard Migliorisi is an SEO and organic growth leader with 8+ years of experience building search into a primary revenue channel in competitive markets. He most recently led SEO, content, and web operations at The Game Day, helping drive the site from zero to nearly $10M in web revenue in under three years. He built AI Tools for Pros to give working professionals honest, independent assessments of AI tools, without sponsored placements or vendor influence.</div>
     </div>
   </div>
 
 </main>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="../index.html" class="nav-logo" style="text-decoration:none;">
-        <img src="../logo.svg" alt="AI Tools for Pros" style="height:26px;">
-        <span style="color:#fff;font-weight:700;font-size:15px;">AI Tools for Pros</span>
-      </a>
-      <p>Honest reviews of AI tools for working professionals. No sponsored placements. No hype.</p>
-      <div class="newsletter-form" style="margin-top:14px;">
-        <input type="email" placeholder="your@email.com" aria-label="Email for newsletter">
-        <button type="submit">Subscribe</button>
-      </div>
+<footer style="background:#07091a;border-radius:28px 28px 0 0;padding:56px min(6.5rem,8vw);">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:52px;">
+    <div>
+      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Directory</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li><a href="../legal.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Legal Counsel</a></li>
+        <li><a href="../architects.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Architects</a></li>
+        <li><a href="../physicians.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Physicians</a></li>
+        <li><a href="../engineers.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Engineers</a></li>
+        <li><a href="../finance.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Finance</a></li>
+        <li><a href="../creatives.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Creatives</a></li>
+      </ul>
     </div>
-    <div class="footer-col">
-      <h4>AI Tools</h4>
-      <a href="../chatgpt.html">ChatGPT</a>
-      <a href="../claude.html">Claude</a>
-      <a href="../perplexity.html">Perplexity</a>
-      <a href="../gemini.html">Gemini</a>
-      <a href="../copilot.html">Microsoft Copilot</a>
+    <div>
+      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Company</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li><a href="../about-us.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">About</a></li>
+        <li><a href="../our-process.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Our Process</a></li>
+      </ul>
     </div>
-    <div class="footer-col">
-      <h4>More Tools</h4>
-      <a href="../midjourney.html">Midjourney</a>
-      <a href="../cursor.html">Cursor</a>
-      <a href="../notion-ai.html">Notion AI</a>
-      <a href="../grammarly.html">Grammarly</a>
-      <a href="../otter.html">Otter.ai</a>
+    <div>
+      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Resources</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li><a href="../newsletter.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Newsletter</a></li>
+      </ul>
     </div>
-    <div class="footer-col">
-      <h4>Site</h4>
-      <a href="../about-us.html">About</a>
-      <a href="../newsletter.html">Newsletter</a>
-      <a href="../index.html">Home</a>
+    <div>
+      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Legal</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li><a href="../privacy-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Privacy Policy</a></li>
+        <li><a href="../cookie-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Cookie Policy</a></li>
+      </ul>
     </div>
   </div>
-  <div class="footer-bottom">
-    <span>© 2026 AI Tools for Pros. All rights reserved.</span>
-    <span>Independent reviews. Not affiliated with OpenAI or any AI company.</span>
+  <div style="border-top:1px solid #111e38;margin-bottom:48px;"></div>
+  <div style="display:flex;align-items:center;justify-content:space-between;">
+    <div>
+      <p style="color:#1e2a45;font-size:11px;font-weight:500;margin:0 0 4px;letter-spacing:0.05em;opacity:0.6;">AI Tools for Pros</p>
+      <p class="font-heading" style="color:#2563EB;font-size:48px;font-weight:700;margin:0 0 10px;line-height:1;">2026.</p>
+      <p style="color:#4a5568;font-size:13px;margin:0;">Join 15,000+ professionals receiving our monthly tool audit.</p>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="position:relative;display:flex;align-items:center;">
+        <input type="email" placeholder="professional@email.com" style="background:#0d1228;color:#4a5568;font-size:13px;padding:13px 48px 13px 18px;border-radius:999px;border:1px solid #1a2444;outline:none;width:248px;font-family:'Inter',sans-serif;">
+        <div style="position:absolute;right:8px;width:28px;height:28px;background:#1a2444;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="#4a5568" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+      <button style="background:#ffffff;color:#111111;font-size:13px;font-weight:500;padding:13px 24px;border-radius:999px;border:none;cursor:pointer;font-family:'Inter',sans-serif;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='#ffffff'">Subscribe</button>
+    </div>
   </div>
 </footer>
-
-<a href="#" class="back-to-top">↑ Back to top</a>
 
 <script>
   function toggleDropdown(id) {
@@ -896,7 +716,10 @@ Tone: professional, reassuring, plain language (no jargon). Under 250 words. Inc
     }
   });
 </script>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:28px;right:28px;width:44px;height:44px;background:#111111;color:#ffffff;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.2);z-index:999;opacity:0;transition:opacity 0.25s,background 0.15s,transform 0.15s;pointer-events:none;" onmouseover="this.style.background='#2563eb';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#111111';this.style.transform='translateY(0)'">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<script>(function(){var btn=document.getElementById('btt');window.addEventListener('scroll',function(){if(window.scrollY>300){btn.style.opacity='1';btn.style.pointerEvents='auto';}else{btn.style.opacity='0';btn.style.pointerEvents='none';}},{passive:true});})();</script>
 
-  <script src="../site.js" defer></script>
 </body>
 </html>
