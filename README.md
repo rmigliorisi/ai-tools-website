@@ -75,9 +75,13 @@ AI Tools for Pros reviews 10 major AI tools across 8 professional fields, produc
 ├── sitemap.xml                 # XML sitemap for search engines
 ├── robots.txt                  # Crawler directives
 │
-├── AIFORPROS.md                # Master content prompt (page generation rules)
-├── AIFORPROS-REFERENCE.md      # HTML boilerplate reference (nav, footer, etc.)
-└── AIFORPROS-QA.md             # QA validation checklist
+├── docs/                        # Content generation system
+│   ├── AIFORPROS.md             # Master content prompt (page generation rules)
+│   ├── AIFORPROS-REFERENCE.md   # HTML boilerplate reference (nav, footer, etc.)
+│   └── AIFORPROS-QA.md          # QA validation checklist
+│
+└── dev/                         # Development/testing files
+    └── browser-test.html        # Browser compatibility test page
 ```
 
 ## Page Architecture
@@ -114,10 +118,10 @@ All pages share a consistent nav structure with dropdowns for tools and professi
 
 Pages are generated using a structured prompt system:
 
-1. **AIFORPROS.md** — Master prompt with all content rules, section templates, and tone guidelines
-2. **AIFORPROS-REFERENCE.md** — HTML boilerplate for nav, footer, and author cards
+1. **docs/AIFORPROS.md** — Master prompt with all content rules, section templates, and tone guidelines
+2. **docs/AIFORPROS-REFERENCE.md** — HTML boilerplate for nav, footer, and author cards
 3. Content is generated via ChatGPT using page-specific variables
-4. **AIFORPROS-QA.md** — QA validation checklist run in Claude Code to catch errors
+4. **docs/AIFORPROS-QA.md** — QA validation checklist run in Claude Code to catch errors
 5. Validated HTML is written directly to the repo
 
 ## Content Rules

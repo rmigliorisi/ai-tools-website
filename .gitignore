@@ -1,3 +1,9 @@
+# OS artifacts
 .DS_Store
 *.DS_Store
 Thumbs.db
+
+# Large media (keep out of repo)
+*.gif
+*.mov
+*.mp4

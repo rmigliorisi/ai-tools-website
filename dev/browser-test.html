@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Device Preview — AI Tools for Pros</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+      background: #0f0f11;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── Top toolbar ── */
+    #toolbar {
+      background: #1a1a1f;
+      border-bottom: 1px solid #2a2a30;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+    #toolbar h1 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 0;
+      white-space: nowrap;
+      letter-spacing: 0.05em;
+    }
+    #toolbar .sep { width: 1px; height: 20px; background: #333; flex-shrink: 0; }
+
+    /* Device buttons */
+    .device-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      background: #252530;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 6px 10px;
+      cursor: pointer;
+      color: #b0b0c0;
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      transition: background 0.1s, border-color 0.1s, color 0.1s;
+      min-width: 64px;
+    }
+    .device-btn .dim { font-size: 9px; color: #606070; }
+    .device-btn:hover { background: #2e2e3c; border-color: #4a4a60; color: #e0e0f0; }
+    .device-btn.active { background: #1d2a4a; border-color: #3b60c4; color: #a8c0ff; }
+    .device-btn.active .dim { color: #5a80d0; }
+
+    /* URL bar */
+    #url-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      min-width: 200px;
+    }
+    #url-input {
+      flex: 1;
+      background: #252530;
+      border: 1px solid #333;
+      border-radius: 6px;
+      color: #e0e0e0;
+      font-size: 12px;
+      padding: 6px 10px;
+      outline: none;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+    #url-input:focus { border-color: #3b60c4; }
+    #go-btn {
+      background: #2563EB;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.1s;
+      white-space: nowrap;
+    }
+    #go-btn:hover { background: #1d4ed8; }
+    #popup-btn {
+      background: #1a2040;
+      color: #8090d0;
+      border: 1px solid #2a3060;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.1s, color 0.1s;
+      white-space: nowrap;
+      letter-spacing: 0.03em;
+    }
+    #popup-btn:hover { background: #222850; color: #a0b0f0; }
+
+    /* Quick links */
+    .quick-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .quick-links span { font-size: 10px; color: #606070; white-space: nowrap; }
+    .ql-btn {
+      background: #1f1f28;
+      border: 1px solid #2a2a35;
+      border-radius: 5px;
+      color: #9090b0;
+      font-size: 10px;
+      padding: 4px 8px;
+      cursor: pointer;
+      transition: background 0.1s, color 0.1s;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    .ql-btn:hover { background: #28283a; color: #d0d0f0; }
+
+    /* ── Main content area ── */
+    #stage {
+      flex: 1;
+      overflow: auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 24px 24px 40px;
+      background: #0f0f11;
+    }
+
+    /* ── Device frame ── */
+    #device-frame {
+      position: relative;
+      flex-shrink: 0;
+      transition: width 0.25s ease, height 0.25s ease;
+    }
+    #device-frame .frame-label {
+      text-align: center;
+      font-size: 10px;
+      color: #404050;
+      margin-bottom: 8px;
+      letter-spacing: 0.05em;
+    }
+    #device-frame .frame-border {
+      position: relative;
+      background: #18181e;
+      border-radius: 14px;
+      padding: 10px;
+      box-shadow: 0 0 0 1px #2a2a35, 0 24px 64px rgba(0,0,0,0.6);
+    }
+    #device-frame.mobile .frame-border { border-radius: 32px; padding: 14px 10px; }
+    #device-frame.mobile .frame-border::before {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 5px;
+      background: #2a2a35;
+      border-radius: 3px;
+      margin: 0 auto 12px;
+    }
+    #device-frame.mobile .frame-border::after {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: #1e1e26;
+      border: 2px solid #2a2a35;
+      border-radius: 50%;
+      margin: 12px auto 0;
+    }
+
+    /* The iframe lives inside the frame border */
+    #preview-frame {
+      display: block;
+      border: none;
+      border-radius: 4px;
+      background: #ffffff;
+    }
+
+    /* ── Info bar under frame ── */
+    #info-bar {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 11px;
+      color: #404050;
+      line-height: 1.7;
+    }
+    #info-bar b { color: #6070a0; }
+
+    /* ── Checklist panel (right side on wide screens) ── */
+    #checklist-panel {
+      width: 280px;
+      flex-shrink: 0;
+      margin-left: 24px;
+      background: #1a1a1f;
+      border: 1px solid #2a2a30;
+      border-radius: 12px;
+      padding: 18px 20px;
+      align-self: flex-start;
+      position: sticky;
+      top: 24px;
+    }
+    #checklist-panel h2 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #5060a0;
+      margin: 0 0 14px;
+    }
+    .check-group { margin-bottom: 16px; }
+    .check-group h3 {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #404050;
+      margin: 0 0 8px;
+    }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+    .check-item input[type="checkbox"] {
+      margin-top: 2px;
+      accent-color: #2563EB;
+      flex-shrink: 0;
+    }
+    .check-item label {
+      font-size: 12px;
+      color: #909090;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+    .check-item:has(input:checked) label {
+      color: #4a7a4a;
+      text-decoration: line-through;
+      text-decoration-color: #3a5a3a;
+    }
+    .firefox-note {
+      background: #1e1812;
+      border: 1px solid #3a3020;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 11px;
+      color: #9a7a40;
+      line-height: 1.6;
+      margin-top: 14px;
+    }
+    .firefox-note b { color: #c0963a; }
+
+    @media (max-width: 900px) {
+      #stage { flex-direction: column; align-items: center; }
+      #checklist-panel { width: 100%; max-width: 600px; margin-left: 0; margin-top: 24px; position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Toolbar ── -->
+<div id="toolbar">
+  <h1>Device Preview</h1>
+  <div class="sep"></div>
+
+  <!-- Device buttons — 2024/2025 viewport sizes -->
+  <button class="device-btn" data-w="375"  data-h="667"  data-type="mobile"  onclick="setDevice(this)">
+    iPhone SE<div class="dim">375 × 667</div>
+  </button>
+  <button class="device-btn active" data-w="390"  data-h="844"  data-type="mobile"  onclick="setDevice(this)">
+    iPhone 16<div class="dim">390 × 844</div>
+  </button>
+  <button class="device-btn" data-w="393"  data-h="852"  data-type="mobile"  onclick="setDevice(this)">
+    iPhone 16 Pro<div class="dim">393 × 852</div>
+  </button>
+  <button class="device-btn" data-w="440"  data-h="956"  data-type="mobile"  onclick="setDevice(this)">
+    iPhone 16 Pro Max<div class="dim">440 × 956</div>
+  </button>
+  <button class="device-btn" data-w="360"  data-h="780"  data-type="mobile"  onclick="setDevice(this)">
+    Galaxy S25<div class="dim">360 × 780</div>
+  </button>
+  <button class="device-btn" data-w="412"  data-h="916"  data-type="mobile"  onclick="setDevice(this)">
+    Pixel 9<div class="dim">412 × 916</div>
+  </button>
+  <button class="device-btn" data-w="744"  data-h="1133" data-type="tablet"  onclick="setDevice(this)">
+    iPad Mini 7<div class="dim">744 × 1133</div>
+  </button>
+  <button class="device-btn" data-w="1024" data-h="1366" data-type="tablet"  onclick="setDevice(this)">
+    iPad Air 13"<div class="dim">1024 × 1366</div>
+  </button>
+  <button class="device-btn" data-w="1280" data-h="800"  data-type="desktop" onclick="setDevice(this)">
+    Laptop<div class="dim">1280 × 800</div>
+  </button>
+  <button class="device-btn" data-w="1440" data-h="900"  data-type="desktop" onclick="setDevice(this)">
+    Desktop<div class="dim">1440 × 900</div>
+  </button>
+
+  <div class="sep"></div>
+
+  <!-- URL bar -->
+  <div id="url-row">
+    <input type="text" id="url-input" value="index.html" placeholder="page path e.g. chatgpt.html">
+    <button id="go-btn" onclick="loadUrl()">Load</button>
+    <button id="popup-btn" onclick="openPopup()" title="Open in a real popup window. CSS media queries will work correctly">↗ Pop out</button>
+  </div>
+
+  <div class="sep"></div>
+
+  <!-- Quick links -->
+  <div class="quick-links">
+    <span>Quick:</span>
+    <a class="ql-btn" href="#" onclick="loadPage('index.html')">Home</a>
+    <a class="ql-btn" href="#" onclick="loadPage('chatgpt.html')">ChatGPT</a>
+    <a class="ql-btn" href="#" onclick="loadPage('gemini.html')">Gemini</a>
+    <a class="ql-btn" href="#" onclick="loadPage('notion-ai.html')">Notion AI</a>
+    <a class="ql-btn" href="#" onclick="loadPage('chatgpt/legal.html')">ChatGPT/Legal</a>
+    <a class="ql-btn" href="#" onclick="loadPage('gemini/legal.html')">Gemini/Legal</a>
+    <a class="ql-btn" href="#" onclick="loadPage('notion-ai/legal.html')">NotionAI/Legal</a>
+  </div>
+</div>
+
+<!-- ── Stage ── -->
+<div id="stage">
+  <div>
+    <div id="device-frame" class="mobile">
+      <div class="frame-label" id="frame-label">iPhone 16. 390 × 844</div>
+      <div class="frame-border">
+        <iframe id="preview-frame" src="index.html" width="390" height="844" scrolling="yes"></iframe>
+      </div>
+    </div>
+    <div id="info-bar">
+      <b>⚠ Iframe limitation:</b> CSS media queries inside the iframe respond to the <b>outer window width</b>, not the device size shown.<br>
+      This means the hamburger menu and responsive layout won't trigger at the right breakpoints.<br>
+      <b>For accurate testing → use ↗ Pop out</b> (opens a real popup at the exact device size, so all breakpoints work correctly).<br>
+      In Firefox: use <b>F12 → Responsive Design Mode</b> (Ctrl+Shift+M) instead.
+    </div>
+  </div>
+
+  <!-- Checklist -->
+  <div id="checklist-panel">
+    <h2>Test Checklist</h2>
+
+    <div class="check-group">
+      <h3>Hamburger Menu</h3>
+      <div class="check-item"><input type="checkbox" id="c1"><label for="c1">Opens smoothly (tap burger icon)</label></div>
+      <div class="check-item"><input type="checkbox" id="c2"><label for="c2">Closes via X button</label></div>
+      <div class="check-item"><input type="checkbox" id="c3"><label for="c3">Closes via Escape key</label></div>
+      <div class="check-item"><input type="checkbox" id="c4"><label for="c4">Page doesn't scroll behind overlay</label></div>
+      <div class="check-item"><input type="checkbox" id="c5"><label for="c5">AI Tools panel slides in correctly</label></div>
+      <div class="check-item"><input type="checkbox" id="c6"><label for="c6">Professions panel slides in correctly</label></div>
+      <div class="check-item"><input type="checkbox" id="c7"><label for="c7">Sub-profession panel (e.g. Legal → tools) works</label></div>
+      <div class="check-item"><input type="checkbox" id="c8"><label for="c8">Back button returns to previous panel</label></div>
+      <div class="check-item"><input type="checkbox" id="c9"><label for="c9">Clicking a link navigates and closes menu</label></div>
+      <div class="check-item"><input type="checkbox" id="c10"><label for="c10">Browse Tools CTA visible at bottom</label></div>
+      <div class="check-item"><input type="checkbox" id="c11"><label for="c11">After back/forward nav, menu opens at root</label></div>
+    </div>
+
+    <div class="check-group">
+      <h3>Dark Mode</h3>
+      <div class="check-item"><input type="checkbox" id="d1"><label for="d1">Toggle button visible on all viewport sizes</label></div>
+      <div class="check-item"><input type="checkbox" id="d2"><label for="d2">Dark mode persists across page navigations</label></div>
+      <div class="check-item"><input type="checkbox" id="d3"><label for="d3">Dark mode does NOT auto-activate on fresh load</label></div>
+      <div class="check-item"><input type="checkbox" id="d4"><label for="d4">Turns off cleanly (no flash back to dark)</label></div>
+      <div class="check-item"><input type="checkbox" id="d5"><label for="d5">Dark mode nav panel looks correct</label></div>
+    </div>
+
+    <div class="check-group">
+      <h3>Layout — Mobile (&lt;390px)</h3>
+      <div class="check-item"><input type="checkbox" id="m1"><label for="m1">No horizontal scroll on any page</label></div>
+      <div class="check-item"><input type="checkbox" id="m2"><label for="m2">Consistency blocks stack vertically</label></div>
+      <div class="check-item"><input type="checkbox" id="m3"><label for="m3">Best/Avoid grid stacks to 1 column</label></div>
+      <div class="check-item"><input type="checkbox" id="m4"><label for="m4">Quick Facts Bar: 2 cols on phone, 1 on tiny</label></div>
+      <div class="check-item"><input type="checkbox" id="m5"><label for="m5">Footer email field: full width, stacked</label></div>
+      <div class="check-item"><input type="checkbox" id="m6"><label for="m6">H1 font size doesn't clip or overflow</label></div>
+    </div>
+
+    <div class="check-group">
+      <h3>Layout — Tablet (768px)</h3>
+      <div class="check-item"><input type="checkbox" id="t1"><label for="t1">Desktop nav visible (not hamburger)</label></div>
+      <div class="check-item"><input type="checkbox" id="t2"><label for="t2">Hover dropdowns work on Professions</label></div>
+      <div class="check-item"><input type="checkbox" id="t3"><label for="t3">Quick Facts Bar: 2-col grid</label></div>
+      <div class="check-item"><input type="checkbox" id="t4"><label for="t4">Comparison table scrolls horizontally</label></div>
+    </div>
+
+    <div class="check-group">
+      <h3>Cross-Browser</h3>
+      <div class="check-item"><input type="checkbox" id="b1"><label for="b1">Chrome desktop, all nav interactions</label></div>
+      <div class="check-item"><input type="checkbox" id="b2"><label for="b2">Firefox desktop, dark mode stays off</label></div>
+      <div class="check-item"><input type="checkbox" id="b3"><label for="b3">Firefox, hover dropdowns work</label></div>
+      <div class="check-item"><input type="checkbox" id="b4"><label for="b4">Safari desktop, nav + dropdowns</label></div>
+    </div>
+
+    <div class="firefox-note">
+      <b>Firefox iframes &amp; file://</b><br>
+      Firefox blocks cross-origin file:// iframes. If the preview is blank in Firefox, open pages directly and use <b>F12 → Responsive Design Mode</b> (Ctrl+Shift+M) to simulate device sizes.
+    </div>
+  </div>
+</div>
+
+<script>
+  var frame   = document.getElementById('preview-frame');
+  var urlInput = document.getElementById('url-input');
+  var frameLabel = document.getElementById('frame-label');
+  var deviceFrameEl = document.getElementById('device-frame');
+
+  var deviceNames = {
+    '375x667':   'iPhone SE (3rd gen)',
+    '390x844':   'iPhone 16',
+    '393x852':   'iPhone 16 Pro',
+    '440x956':   'iPhone 16 Pro Max',
+    '360x780':   'Samsung Galaxy S25',
+    '412x916':   'Google Pixel 9',
+    '744x1133':  'iPad Mini 7',
+    '1024x1366': 'iPad Air 13"',
+    '1280x800':  'Laptop',
+    '1440x900':  'Desktop',
+  };
+
+  function setDevice(btn) {
+    document.querySelectorAll('.device-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+
+    var w    = parseInt(btn.dataset.w);
+    var h    = parseInt(btn.dataset.h);
+    var type = btn.dataset.type;
+    var key  = w + 'x' + h;
+    var name = deviceNames[key] || (w + ' × ' + h);
+
+    frame.width  = w;
+    frame.height = h;
+    frameLabel.textContent = name + '. ' + w + ' × ' + h;
+
+    deviceFrameEl.className = 'device-' + type;
+    deviceFrameEl.classList.add(type === 'mobile' ? 'mobile' : (type === 'tablet' ? 'tablet' : 'desktop'));
+  }
+
+  function loadUrl() {
+    var val = urlInput.value.trim();
+    if (!val) return;
+    // Ensure .html extension
+    if (!val.includes('.html') && !val.startsWith('http')) val += '.html';
+    frame.src = val;
+  }
+
+  function loadPage(path) {
+    urlInput.value = path;
+    frame.src = path;
+    return false;
+  }
+
+  urlInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') loadUrl();
+  });
+
+  // Pop out, open current page in a properly-sized window.
+  // Unlike the iframe, a popup window has its own viewport so CSS media
+  // queries fire at the correct breakpoints (hamburger, responsive layout, etc.)
+  function openPopup() {
+    var btn = document.querySelector('.device-btn.active');
+    var w = btn ? parseInt(btn.dataset.w) : 390;
+    var h = btn ? parseInt(btn.dataset.h) : 844;
+    var url = frame.src || urlInput.value || 'index.html';
+    // Add ~100px for browser chrome (address bar etc.) on top of the CSS viewport height
+    window.open(url, '_blank',
+      'width=' + w + ',height=' + (h + 100) +
+      ',menubar=no,toolbar=no,location=yes,scrollbars=yes,resizable=yes'
+    );
+  }
+
+  // Reset all checkboxes (keyboard shortcut: Shift+R)
+  document.addEventListener('keydown', function(e) {
+    if (e.shiftKey && e.key === 'R') {
+      document.querySelectorAll('input[type="checkbox"]').forEach(function(cb) { cb.checked = false; });
+    }
+  });
+</script>
+
+</body>
+</html>
