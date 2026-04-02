@@ -318,7 +318,7 @@
   <div id="url-row">
     <input type="text" id="url-input" value="index.html" placeholder="page path e.g. chatgpt.html">
     <button id="go-btn" onclick="loadUrl()">Load</button>
-    <button id="popup-btn" onclick="openPopup()" title="Open in a real popup window — CSS media queries will work correctly">↗ Pop out</button>
+    <button id="popup-btn" onclick="openPopup()" title="Open in a real popup window. CSS media queries will work correctly">↗ Pop out</button>
   </div>
 
   <div class="sep"></div>
@@ -340,7 +340,7 @@
 <div id="stage">
   <div>
     <div id="device-frame" class="mobile">
-      <div class="frame-label" id="frame-label">iPhone 16 — 390 × 844</div>
+      <div class="frame-label" id="frame-label">iPhone 16. 390 × 844</div>
       <div class="frame-border">
         <iframe id="preview-frame" src="index.html" width="390" height="844" scrolling="yes"></iframe>
       </div>
@@ -401,10 +401,10 @@
 
     <div class="check-group">
       <h3>Cross-Browser</h3>
-      <div class="check-item"><input type="checkbox" id="b1"><label for="b1">Chrome desktop — all nav interactions</label></div>
-      <div class="check-item"><input type="checkbox" id="b2"><label for="b2">Firefox desktop — dark mode stays off</label></div>
-      <div class="check-item"><input type="checkbox" id="b3"><label for="b3">Firefox — hover dropdowns work</label></div>
-      <div class="check-item"><input type="checkbox" id="b4"><label for="b4">Safari desktop — nav + dropdowns</label></div>
+      <div class="check-item"><input type="checkbox" id="b1"><label for="b1">Chrome desktop, all nav interactions</label></div>
+      <div class="check-item"><input type="checkbox" id="b2"><label for="b2">Firefox desktop, dark mode stays off</label></div>
+      <div class="check-item"><input type="checkbox" id="b3"><label for="b3">Firefox, hover dropdowns work</label></div>
+      <div class="check-item"><input type="checkbox" id="b4"><label for="b4">Safari desktop, nav + dropdowns</label></div>
     </div>
 
     <div class="firefox-note">
@@ -445,7 +445,7 @@
 
     frame.width  = w;
     frame.height = h;
-    frameLabel.textContent = name + ' — ' + w + ' × ' + h;
+    frameLabel.textContent = name + '. ' + w + ' × ' + h;
 
     deviceFrameEl.className = 'device-' + type;
     deviceFrameEl.classList.add(type === 'mobile' ? 'mobile' : (type === 'tablet' ? 'tablet' : 'desktop'));
@@ -469,7 +469,7 @@
     if (e.key === 'Enter') loadUrl();
   });
 
-  // Pop out — open current page in a properly-sized window.
+  // Pop out, open current page in a properly-sized window.
   // Unlike the iframe, a popup window has its own viewport so CSS media
   // queries fire at the correct breakpoints (hamburger, responsive layout, etc.)
   function openPopup() {

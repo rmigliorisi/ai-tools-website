@@ -293,6 +293,8 @@
     <span class="meta-read">9 min read</span>
   </div>
 
+  <p style="font-size:13px;color:#636363;margin:4px 0 0;">By <strong style="color:#111111;font-weight:600;">Richard Migliorisi</strong><a href="https://www.linkedin.com/in/richardmigliorisi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>&nbsp;&middot;&nbsp;Fact-checked by <strong style="color:#111111;font-weight:600;">Ryan Cooper</strong>&nbsp;&middot;&nbsp;March 19, 2026</p>
+
   <!-- VERDICT BANNER -->
   <div class="verdict-banner">
     <p><strong>Bottom line:</strong> Claude is the strongest general-purpose AI for legal work that involves long documents. Its ability to read and reason across a full 100-page contract in a single session is a genuine workflow advantage that <a href="../chatgpt.html" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a> and <a href="../copilot.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a> cannot match at equivalent price points. The critical caveat: the free and Pro (individual) plans do not include a Business Associate Agreement or enterprise data handling terms. Firms handling sensitive client matters should evaluate the Team or Enterprise plans before making Claude a standard tool.</p>
@@ -423,7 +425,7 @@ Standing instructions:
   <p>Claude's output improves significantly when it understands the legal question before it reads the document. "Summarize this deposition" produces a generic chronological summary. "Summarize this deposition from the perspective of a plaintiff's attorney arguing breach of a non-compete agreement, and flag every statement about geographic scope and duration of the restriction" produces a summary organized around what actually matters for that theory. Front-loading the legal theory is the single highest-leverage prompt adjustment most lawyers can make.</p>
 
   <h3>Ask Claude to Show Its Reasoning</h3>
-  <p>For complex contract analysis or multi-issue legal questions, appending "Show your reasoning for each conclusion" or "For each flag, quote the specific language and explain why it is notable" produces output that is significantly easier to evaluate and correct than confident-sounding assertions. Claude's tendency toward careful, qualified language (compared to ChatGPT's more assertive tone) is an asset in legal work, but you should still force explicit reasoning rather than accept conclusions at face value.</p>
+  <p>For complex contract analysis or multi-issue legal questions, appending "Show your reasoning for each conclusion" or "For each flag, quote the specific language and explain why it is notable" produces output that is significantly easier to evaluate and correct than confident-sounding assertions. Claude's tendency toward careful, qualified language (compared to <a href="../chatgpt.html" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>'s more assertive tone) is an asset in legal work, but you should still force explicit reasoning rather than accept conclusions at face value.</p>
 
   <!-- SECTION 3: LIMITATIONS -->
   <h2>Where Claude Falls Short for Lawyers</h2>
@@ -571,19 +573,19 @@ Standing instructions:
   <ul class="sources-list">
     <li>
       <span class="source-badge">1</span>
-      <span>Anthropic — Claude model context window and pricing documentation [VERIFY DETAILS]</span>
+      <span>Anthropic. Claude model context window and pricing documentation [VERIFY DETAILS]</span>
     </li>
     <li>
       <span class="source-badge">2</span>
-      <span>Anthropic — Claude Team and Enterprise data privacy and usage policies [VERIFY DETAILS]</span>
+      <span>Anthropic. Claude Team and Enterprise data privacy and usage policies [VERIFY DETAILS]</span>
     </li>
     <li>
       <span class="source-badge">3</span>
-      <span>American Bar Association — Formal Opinion 512 on generative AI use by lawyers (2024)</span>
+      <span>American Bar Association. Formal Opinion 512 on generative AI use by lawyers (2024)</span>
     </li>
     <li>
       <span class="source-badge">4</span>
-      <span>Anthropic — Claude Projects feature documentation and Teams plan overview [VERIFY DETAILS]</span>
+      <span>Anthropic. Claude Projects feature documentation and Teams plan overview [VERIFY DETAILS]</span>
     </li>
     <li>
       <span class="source-badge">5</span>
@@ -631,7 +633,7 @@ Standing instructions:
 
   <div class="insight-card">
     <div class="insight-number">Insight 1</div>
-    <h4>The context window is not just about document length — it is about reasoning continuity</h4>
+    <h4>The context window is not just about document length, it is about reasoning continuity</h4>
     <p>Most reviews lead with "Claude has a 200K context window" as if it is a storage specification. The actual advantage is different: when you ask Claude a follow-up question about a clause it identified 20,000 tokens earlier, it can reason about that clause in relation to everything it has read since. With tools that have smaller context windows, long documents must be chunked, and chunking breaks the cross-document reasoning that makes document analysis valuable. The right way to think about Claude's context window is not "it can hold a lot of text" but "it can hold the entire argument at once."</p>
   </div>
 

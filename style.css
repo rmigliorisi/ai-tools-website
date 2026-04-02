@@ -652,6 +652,15 @@ main[style] {
 /* Remove H2 underline — Template B pages define h2 { border-bottom: 2px solid … }
    in their own <style> block. Reference page (legal.html) has no h2 underline.
    Also restores heading/paragraph sizing lost to Tailwind preflight. */
+.page-wrap h1 {
+  font-family: 'Cardo', Georgia, serif;
+  font-size: clamp(26px, 5vw, 38px);
+  font-weight: 700;
+  line-height: 1.18;
+  color: #0f172a;
+  margin: 8px 0 12px;
+}
+
 .page-wrap h2 {
   font-family: 'Cardo', Georgia, serif;
   font-size: clamp(20px, 3.5vw, 26px);
@@ -905,6 +914,10 @@ body { overflow-x: hidden; max-width: 100%; }
     grid-template-columns: 1fr !important;
   }
 }
+
+/* — Pricing table: prevent first-column text from wrapping — */
+table td:first-child,
+table th:first-child { white-space: nowrap; }
 
 /* — Hub page comparison table — horizontal scroll on mobile — */
 @media (max-width: 768px) {
@@ -1584,7 +1597,24 @@ body.dark-mode .sources-list li    { color: #d1d5db !important; }
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   padding: 18px;
-  margin: 40px 0 16px;
+  margin: 40px auto 16px;
+  max-width: 860px;
+  /* On hub pages the card sits outside <section> — needs its own side padding */
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Profession hub pages: author-card inside full-width <main> (no [style], no .prose-page) — align with section content */
+main:not([style]):not(.prose-page) > .author-card,
+main:not([style]):not(.prose-page) > section > .author-card {
+  max-width: 760px;
+  margin: 16px min(6.5rem, 8vw) 16px;
+}
+@media (min-width: 1060px) {
+  main:not([style]):not(.prose-page) > .author-card,
+  main:not([style]):not(.prose-page) > section > .author-card {
+    margin-left:  calc((100% - 900px) / 2);
+    margin-right: calc((100% - 900px) / 2);
+  }
 }
 
 .author-avatar { width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0; overflow: hidden; }
@@ -1923,3 +1953,70 @@ body.dark-mode .back-to-top:hover   { border-color: #7c3aed !important; }
   .prose-page { padding: 20px 16px 48px; }
   .container  { padding: 20px 16px 48px; }
 }
+
+/* ================================================================
+   CROSS-REFERENCE PAGE NORMALIZATION
+   Forces visual consistency across all 4 template families
+   (page-wrap, inline-860, prose-page, hybrid).
+   These rules use !important to override inline styles.
+   ================================================================ */
+
+/* ── H1: canonical heading style for ALL cross-reference pages ──
+   Targets inline-860 pages that set font-size:40px inline,
+   AND bare <h1> tags in any template. The .page-wrap h1 and
+   .prose-page h1 rules above handle those families already;
+   this catches everything else (main[style] h1, .font-heading). */
+main[style] h1 {
+  font-family: 'Cardo', Georgia, serif !important;
+  font-size: clamp(26px, 5vw, 38px) !important;
+  font-weight: 700 !important;
+  line-height: 1.18 !important;
+  color: #0f172a !important;
+  margin: 8px 0 12px !important;
+}
+
+/* ── Consistency block colors: blue default ──
+   Provides blue styling as the default. Inline styles for green/red
+   Best For / Avoid If blocks override these (no !important needed
+   since all inline purple has been fixed site-wide). */
+.consistency-block {
+  background: #eff6ff;
+  border-left: 4px solid #2563EB;
+}
+.consistency-label {
+  color: #2563EB !important;
+}
+
+/* ── Verdict banner: force blue styling ── */
+.verdict-banner {
+  background: #eff6ff !important;
+  border-left: 4px solid #2563EB !important;
+}
+.verdict-banner p {
+  color: #1e40af;
+}
+
+/* ── Prompt blocks: force blue border ── */
+.prompt-block {
+  border-left: 3px solid #2563EB !important;
+}
+
+/* ── Insight elements: force blue accents ── */
+.insight-number { color: #2563EB !important; }
+.insight-banner {
+  background: #eff6ff !important;
+  border-left: 4px solid #2563EB !important;
+}
+
+/* ── Source badges: force blue ── */
+.source-badge {
+  background: #eff6ff !important;
+  color: #2563EB !important;
+}
+
+/* ── Read guide links: force blue accents ── */
+.read-guide-link { --badge-color: #2563EB; }
+.read-guide-link:hover { border-color: #2563EB !important; }
+
+/* ── Back-to-top: force blue accent ── */
+.back-to-top { --btn-hover-color: #2563EB; }

@@ -88,12 +88,12 @@
           {
             "@type": "Question",
             "name": "How does Claude compare to ChatGPT for insurance policy review?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Claude is significantly better for long or complex policies. ChatGPT has a smaller context window and may miss provisions in longer commercial policies when reviewing the full document. Claude's 200K window allows the entire policy -- base form plus endorsements -- to be reviewed in a single session with full context. For shorter personal lines policies, both tools handle the task adequately."}
+            "acceptedAnswer": {"@type": "Answer", "text": "Claude is significantly better for long or complex policies. ChatGPT has a smaller context window and may miss provisions in longer commercial policies when reviewing the full document. Claude's 200K window allows the entire policy, base form plus endorsements, to be reviewed in a single session with full context. For shorter personal lines policies, both tools handle the task adequately."}
           },
           {
             "@type": "Question",
             "name": "Can Claude identify coverage gaps between two policies?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Yes. Claude can compare coverage provisions across two policies simultaneously -- for example, comparing a client's current policy to a proposed replacement at renewal -- and identify meaningful differences in coverage, exclusions, limits, and conditions. Always verify Claude's comparison against the original policy documents before relying on it for client advice."}
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes. Claude can compare coverage provisions across two policies simultaneously, for example, comparing a client's current policy to a proposed replacement at renewal, and identify meaningful differences in coverage, exclusions, limits, and conditions. Always verify Claude's comparison against the original policy documents before relying on it for client advice."}
           },
           {
             "@type": "Question",
@@ -273,13 +273,13 @@
     </div>
 
     <div class="consistency-block" style="border-left:4px solid #7c3aed; background:#f5f3ff; margin-top:1rem;">
-      <div class="consistency-label" style="color:#2563EB;">Key Takeaway</div>
+      <div class="consistency-label" style="color:#7c3aed;">Key Takeaway</div>
       <ul class="consistency-list">
-        <li><span style="color:#2563EB;">&#8250;</span> 200K context window handles full commercial policies including base form plus all endorsements</li>
-        <li><span style="color:#2563EB;">&#8250;</span> Can compare coverage provisions across expiring and renewal policies to flag meaningful differences</li>
-        <li><span style="color:#2563EB;">&#8250;</span> Strong for drafting coverage analysis narratives, proposal sections, and long client-facing reports</li>
-        <li><span style="color:#2563EB;">&#8250;</span> No current carrier rates, underwriting data, or regulatory updates -- training data has a cutoff</li>
-        <li><span style="color:#2563EB;">&#8250;</span> All AI-generated coverage analysis must be verified against policy language before client distribution</li>
+        <li><span style="color:#7c3aed;">&#8250;</span> 200K context window handles full commercial policies including base form plus all endorsements</li>
+        <li><span style="color:#7c3aed;">&#8250;</span> Can compare coverage provisions across expiring and renewal policies to flag meaningful differences</li>
+        <li><span style="color:#7c3aed;">&#8250;</span> Strong for drafting coverage analysis narratives, proposal sections, and long client-facing reports</li>
+        <li><span style="color:#7c3aed;">&#8250;</span> No current carrier rates, underwriting data, or regulatory updates, training data has a cutoff</li>
+        <li><span style="color:#7c3aed;">&#8250;</span> All AI-generated coverage analysis must be verified against policy language before client distribution</li>
       </ul>
     </div>
 
@@ -345,10 +345,10 @@
     <!-- SECTION 1: Complex Policy Review -->
     <h2>Complex Commercial Policy Review</h2>
 
-    <p>The core use case for Claude in commercial insurance is reviewing policies that are too long or complex for simpler tools to handle effectively. Standard personal lines policies -- a homeowners or auto policy -- are well within ChatGPT's capability. A complex commercial program with stacked endorsements and multiple lines is where Claude's context advantage becomes material.</p>
+    <p>The core use case for Claude in commercial insurance is reviewing policies that are too long or complex for simpler tools to handle effectively. Standard personal lines policies, a homeowners or auto policy, are well within <a href="../chatgpt.html" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>'s capability. A complex commercial program with stacked endorsements and multiple lines is where Claude's context advantage becomes material.</p>
 
     <h3>Identifying key exclusions and coverage conditions</h3>
-    <p>Commercial policies are full of exclusions, conditions, and definitions that interact with each other. An exclusion in one endorsement may be modified by another. A coverage condition may eliminate a coverage that appears to exist in the base form. Claude can review the full policy -- base form plus all endorsements -- and identify the provisions that most affect the client's actual coverage for their specific type of operation.</p>
+    <p>Commercial policies are full of exclusions, conditions, and definitions that interact with each other. An exclusion in one endorsement may be modified by another. A coverage condition may eliminate a coverage that appears to exist in the base form. Claude can review the full policy, base form plus all endorsements, and identify the provisions that most affect the client's actual coverage for their specific type of operation.</p>
     <p>Always verify Claude's exclusion analysis against the actual policy language. Exclusions are the provisions most likely to matter when a claim occurs, and mischaracterizing an exclusion to a client creates real E&O exposure.</p>
 
     <h3>Expiring-to-renewal comparison</h3>
@@ -356,20 +356,20 @@
 
     <div class="prompt-block" style="border-left:3px solid #2563EB;">
       <div class="prompt-label">Prompt to try in Claude</div>
-      <p>I am pasting the relevant sections of two commercial general liability policies: the expiring policy (clearly labeled) and the renewal policy (clearly labeled). Please compare them and produce: (1) a list of any coverage changes -- limits, sublimits, or coverage grants that changed; (2) a list of any exclusions that were added to the renewal that were not in the expiring policy; (3) any exclusions that were removed; (4) any endorsement changes. Flag any change that could materially affect coverage for a general contractor with residential and commercial work. I will verify all findings against the original policy language.</p>
+      <p>I am pasting the relevant sections of two commercial general liability policies: the expiring policy (clearly labeled) and the renewal policy (clearly labeled). Please compare them and produce: (1) a list of any coverage changes, limits, sublimits, or coverage grants that changed; (2) a list of any exclusions that were added to the renewal that were not in the expiring policy; (3) any exclusions that were removed; (4) any endorsement changes. Flag any change that could materially affect coverage for a general contractor with residential and commercial work. I will verify all findings against the original policy language.</p>
       <p class="prompt-note">Verify all comparison findings against both source policy documents. Do not rely on AI analysis alone for coverage advice. Include no client PII.</p>
     </div>
 
     <!-- SECTION 2: Coverage Analysis Reports -->
     <h2>Coverage Analysis and Client-Facing Reports</h2>
 
-    <p>Commercial clients -- especially larger accounts -- often receive coverage analysis reports that explain their program, identify gaps, and document coverage recommendations. These reports are time-consuming to produce from scratch. Claude can draft the analysis narrative from structured notes or from the policy documents themselves, producing a first draft that the professional reviews, corrects, and personalizes.</p>
+    <p>Commercial clients, especially larger accounts, often receive coverage analysis reports that explain their program, identify gaps, and document coverage recommendations. These reports are time-consuming to produce from scratch. Claude can draft the analysis narrative from structured notes or from the policy documents themselves, producing a first draft that the professional reviews, corrects, and personalizes.</p>
 
     <h3>Drafting coverage analysis narratives</h3>
     <p>From a structured outline of the client's coverage program, Claude can produce a narrative that explains the coverage structure, notes key limitations, identifies coverage gaps relative to the client's risk profile, and explains the recommendations. The quality of the output depends on the quality of the input: specific, accurate notes from the professional's analysis produce better output than vague general descriptions.</p>
 
     <h3>Coverage gap identification for specific industries</h3>
-    <p>For clients in specific industries -- contractors, technology companies, healthcare-adjacent businesses -- certain coverage gaps are predictable. Claude can review a client's current program and identify standard coverage gaps for their industry, which the professional then verifies, adds to, and uses as the basis for coverage recommendations. This is faster than starting the gap analysis from a blank framework each time.</p>
+    <p>For clients in specific industries, contractors, technology companies, healthcare-adjacent businesses, certain coverage gaps are predictable. Claude can review a client's current program and identify standard coverage gaps for their industry, which the professional then verifies, adds to, and uses as the basis for coverage recommendations. This is faster than starting the gap analysis from a blank framework each time.</p>
 
     <div class="prompt-block" style="border-left:3px solid #2563EB;">
       <div class="prompt-label">Prompt to try in Claude</div>
@@ -405,11 +405,11 @@
       </div>
       <div class="limitation-card" style="border:1px solid #fecaca; background:#fef2f2;">
         <div class="limitation-title">Can mischaracterize specific coverage language</div>
-        <p>Claude can produce plausible-sounding but inaccurate interpretations of specific policy provisions -- particularly for unusual endorsements, jurisdiction-specific forms, or provisions that interact with each other in non-obvious ways. All coverage analysis must be verified against the original policy language by the licensed professional before client use.</p>
+        <p>Claude can produce plausible-sounding but inaccurate interpretations of specific policy provisions, particularly for unusual endorsements, jurisdiction-specific forms, or provisions that interact with each other in non-obvious ways. All coverage analysis must be verified against the original policy language by the licensed professional before client use.</p>
       </div>
       <div class="limitation-card" style="border:1px solid #fecaca; background:#fef2f2;">
         <div class="limitation-title">Not embedded in office productivity tools</div>
-        <p>Claude is a standalone chat interface. If you need AI assistance directly inside Word, Excel, or Outlook for your proposal and correspondence workflow, <a href="../copilot.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Microsoft Copilot</a> offers better integration. Many professionals use both: Claude for document analysis, Copilot for the M365 writing workflow.</p>
+        <p>Claude is a standalone chat interface. If you need AI assistance directly inside Word, Excel, or Outlook for your proposal and correspondence workflow, <a href="../copilot.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Microsoft Copilot</a> offers better integration. Many professionals use both: Claude for document analysis, <a href="../copilot.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a> for the M365 writing workflow.</p>
       </div>
     </div>
 
@@ -482,14 +482,14 @@
         <h3 style="margin:0;font-size:inherit;font-weight:inherit;"><button class="faq-question" aria-expanded="false" itemprop="name">How does Claude compare to ChatGPT for insurance policy review?<span class="faq-icon">+</span></button>
         </h3>
         <div class="faq-answer" itemscope itemtype="https://schema.org/Answer">
-          <p itemprop="text">Claude is significantly better for long or complex policies. ChatGPT has a smaller context window and may miss provisions in longer commercial policies when reviewing the full document. Claude's 200K window allows the entire policy -- base form plus endorsements -- to be reviewed in a single session with full context. For shorter personal lines policies, both tools handle the task adequately.</p>
+          <p itemprop="text">Claude is significantly better for long or complex policies. ChatGPT has a smaller context window and may miss provisions in longer commercial policies when reviewing the full document. Claude's 200K window allows the entire policy, base form plus endorsements, to be reviewed in a single session with full context. For shorter personal lines policies, both tools handle the task adequately.</p>
         </div>
       </div>
       <div class="faq-item" itemscope itemtype="https://schema.org/Question">
         <h3 style="margin:0;font-size:inherit;font-weight:inherit;"><button class="faq-question" aria-expanded="false" itemprop="name">Can Claude identify coverage gaps between two policies?<span class="faq-icon">+</span></button>
         </h3>
         <div class="faq-answer" itemscope itemtype="https://schema.org/Answer">
-          <p itemprop="text">Yes. Claude can compare coverage provisions across two policies simultaneously -- for example, comparing a client's current policy to a proposed replacement at renewal -- and identify meaningful differences in coverage, exclusions, limits, and conditions. Always verify Claude's comparison against the original policy documents before relying on it for client advice.</p>
+          <p itemprop="text">Yes. Claude can compare coverage provisions across two policies simultaneously, for example, comparing a client's current policy to a proposed replacement at renewal, and identify meaningful differences in coverage, exclusions, limits, and conditions. Always verify Claude's comparison against the original policy documents before relying on it for client advice.</p>
         </div>
       </div>
       <div class="faq-item" itemscope itemtype="https://schema.org/Question">
@@ -503,7 +503,7 @@
         <h3 style="margin:0;font-size:inherit;font-weight:inherit;"><button class="faq-question" aria-expanded="false" itemprop="name">Does Claude have current insurance carrier or pricing data?<span class="faq-icon">+</span></button>
         </h3>
         <div class="faq-answer" itemscope itemtype="https://schema.org/Answer">
-          <p itemprop="text">No. Claude does not have access to current carrier rates, underwriting guidelines, or state-specific regulatory changes since its training cutoff. For current regulatory research, use Perplexity AI. Claude handles document analysis and writing; Perplexity handles current information lookup.</p>
+          <p itemprop="text">No. Claude does not have access to current carrier rates, underwriting guidelines, or state-specific regulatory changes since its training cutoff. For current regulatory research, use <a href="../perplexity.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity AI</a>. Claude handles document analysis and writing; Perplexity handles current information lookup.</p>
         </div>
       </div>
       <div class="faq-item" itemscope itemtype="https://schema.org/Question">
@@ -520,23 +520,23 @@
     <div class="sources-list">
       <div class="source-item">
         <span class="source-badge" style="background:#dbeafe;color:#1e40af;">1</span>
-        Anthropic — Claude model overview, context window specifications, and capabilities
+        Anthropic. Claude model overview, context window specifications, and capabilities
       </div>
       <div class="source-item">
         <span class="source-badge" style="background:#dbeafe;color:#1e40af;">2</span>
-        Anthropic — Privacy policy and enterprise data handling commitments [VERIFY DETAILS]
+        Anthropic. Privacy policy and enterprise data handling commitments [VERIFY DETAILS]
       </div>
       <div class="source-item">
         <span class="source-badge" style="background:#dbeafe;color:#1e40af;">3</span>
-        NAIC — Guidance on artificial intelligence and technology use in insurance
+        NAIC. Guidance on artificial intelligence and technology use in insurance
       </div>
       <div class="source-item">
         <span class="source-badge" style="background:#dbeafe;color:#1e40af;">4</span>
-        Big I (Independent Insurance Agents and Brokers of America) — E&O resources and technology guidance for independent agents
+        Big I (Independent Insurance Agents and Brokers of America). E&O resources and technology guidance for independent agents
       </div>
       <div class="source-item">
         <span class="source-badge" style="background:#dbeafe;color:#1e40af;">5</span>
-        Insurance Information Institute — AI adoption and best practices in the insurance industry
+        Insurance Information Institute. AI adoption and best practices in the insurance industry
       </div>
     </div>
 
@@ -553,7 +553,7 @@
         <span class="read-guide-title">ChatGPT for Insurance Professionals</span>
         <span class="read-guide-arrow">→</span>
       </a>
-      <a href="../perplexity/insurance.html" class="read-guide-link" style="--badge-color:#7c3aed;">
+      <a href="../perplexity/insurance.html" class="read-guide-link" style="--badge-color:#2563EB;">
         <span class="read-guide-label">Compare</span>
         <span class="read-guide-title">Perplexity AI for Insurance Professionals</span>
         <span class="read-guide-arrow">→</span>
@@ -582,7 +582,7 @@
       <div class="insight-card">
         <div class="insight-number" style="color:#2563EB;">01</div>
         <h3>The context window is the differentiator for commercial work</h3>
-        <p>Reviews that test ChatGPT and Claude against simple, short policy documents miss where Claude pulls ahead. A personal auto policy is 30 pages. A commercial package for a mid-size contractor might be 150 pages after you stack all endorsements. Claude holds the full 150 pages in context. ChatGPT doesn't. For commercial brokers, this is not an edge case -- it is the core use case for every major account review.</p>
+        <p>Reviews that test ChatGPT and Claude against simple, short policy documents miss where Claude pulls ahead. A personal auto policy is 30 pages. A commercial package for a mid-size contractor might be 150 pages after you stack all endorsements. Claude holds the full 150 pages in context. ChatGPT doesn't. For commercial brokers, this is not an edge case, it is the core use case for every major account review.</p>
       </div>
       <div class="insight-card">
         <div class="insight-number" style="color:#2563EB;">02</div>

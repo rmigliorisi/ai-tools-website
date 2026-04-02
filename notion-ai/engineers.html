@@ -276,8 +276,8 @@
     <!-- CONSISTENCY BLOCKS -->
 
     <!-- Bottom Line -->
-    <div class="consistency-block" style="border-left:4px solid #7c3aed; background:#f5f3ff;">
-      <div class="consistency-label" style="color:#7c3aed;">Bottom Line</div>
+    <div class="consistency-block" style="border-left:4px solid #2563EB; background:#eff6ff;">
+      <div class="consistency-label" style="color:#2563EB;">Bottom Line</div>
       <p>Notion AI is not a general-purpose engineering AI. It is an AI layer embedded inside your existing Notion workspace. For engineering teams that use Notion as their documentation and project management hub, it removes friction from runbook drafting, wiki summarization, and meeting note cleanup. For teams that don't already use Notion, it offers no value at all.</p>
     </div>
 
@@ -319,7 +319,7 @@
 
     <!-- Mini Workflow -->
     <div class="mini-workflow" style="background:#ffffff; border:1px solid #bfdbfe;">
-      <div class="consistency-label" style="color:#7c3aed;">Mini Workflow</div>
+      <div class="consistency-label" style="color:#2563EB;">Mini Workflow</div>
       <p class="mini-workflow-title">Draft a runbook for a new deployment process without leaving Notion</p>
       <ol class="mini-workflow-steps">
         <li>Create a new Notion page in your engineering wiki under the relevant service</li>
@@ -369,7 +369,7 @@
     <h3>Keeping runbooks current after process changes</h3>
     <p>More useful than initial drafting is update assistance. When a deployment process changes, Notion AI can help rewrite the affected sections from a short description of what changed. Engineers describe the delta; Notion AI generates updated prose. This removes a common failure mode where runbooks go stale because the update requires more writing effort than the change seems to warrant.</p>
 
-    <div class="prompt-block" style="border-left:3px solid #7c3aed;">
+    <div class="prompt-block" style="border-left:3px solid #2563EB;">
       <div class="prompt-label">Prompt to try in Notion AI</div>
       <p>Below are rough notes on our updated deployment process for [service name]. Convert these into a structured runbook section with numbered steps, a rollback procedure, and an on-call contacts section. Flag any step that seems incomplete with [NEEDS REVIEW].</p>
       <p class="prompt-note">Replace [service name] with the actual service. Add your bullet-point notes after the prompt. Review all generated steps before publishing.</p>
@@ -387,7 +387,7 @@
     <h3>Post-mortem and incident write-up structure</h3>
     <p>Incident post-mortems are a known source of pain: they should be written promptly, but incidents are exhausting and writing is not the priority. Notion AI can generate an initial post-mortem structure from a timeline of events and a description of the root cause, producing a document that engineers can review, correct, and expand rather than write from scratch under time pressure.</p>
 
-    <div class="prompt-block" style="border-left:3px solid #7c3aed;">
+    <div class="prompt-block" style="border-left:3px solid #2563EB;">
       <div class="prompt-label">Prompt to try in Notion AI</div>
       <p>The following are raw meeting notes from our sprint retrospective on [date]. Summarize into: (1) key decisions made, (2) action items with owners if mentioned, (3) open questions that need follow-up, and (4) a one-sentence summary of the sprint's overall health.</p>
       <p class="prompt-note">Paste your meeting notes after the prompt. Assign owners to action items if the summary doesn't capture them clearly.</p>
@@ -400,12 +400,12 @@
 
     <h3>First-pass technical specification drafts</h3>
     <p>For teams that scope features and services in Notion before building, Notion AI can generate a first-pass technical spec from a set of requirements notes or a product brief. The output is a structured spec with sections for overview, requirements, technical approach, and open questions, not a complete engineering design, but a starting point that speeds the review and revision cycle.</p>
-    <p>For deeper technical specification work, Claude's 200K context window and stronger reasoning make it better for complex architectural specs. Notion AI is appropriate for smaller, well-scoped features where the goal is speed over depth.</p>
+    <p>For deeper technical specification work, <a href="../claude.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a>'s 200K context window and stronger reasoning make it better for complex architectural specs. Notion AI is appropriate for smaller, well-scoped features where the goal is speed over depth.</p>
 
     <h3>Wiki cleanup and formatting consistency</h3>
     <p>Notion AI can reformat, expand, or improve existing Notion pages on demand. For engineering wikis that have accumulated pages of varying quality, this is a way to bring older pages up to current standards without a dedicated documentation sprint. Highlight the page, prompt Notion AI to improve clarity and structure, and review the output.</p>
 
-    <div class="prompt-block" style="border-left:3px solid #7c3aed;">
+    <div class="prompt-block" style="border-left:3px solid #2563EB;">
       <div class="prompt-label">Prompt to try in Notion AI</div>
       <p>This is a rough engineering spec for [feature name]. Expand it into a structured technical specification with the following sections: Overview, Goals and Non-Goals, Technical Approach, Data Model Changes (if applicable), API Changes (if applicable), and Open Questions. Flag anything that requires additional input from the team with [NEEDS DISCUSSION].</p>
       <p class="prompt-note">Replace [feature name] with the actual feature. Review all technical details before sharing with the team. Notion AI does not know your codebase.</p>
@@ -449,12 +449,12 @@
         </thead>
         <tbody>
           <!-- Notion AI highlighted row -->
-          <tr class="highlight-row" style="background:#f5f3ff; font-weight:600;">
+          <tr class="highlight-row" style="background:#eff6ff; font-weight:600;">
             <td>Notion AI</td>
             <td>Runbooks, wikis, meeting notes inside Notion</td>
             <td>Minimal</td>
             <td>Strong (in Notion)</td>
-            <td>Yes — Notion only</td>
+            <td>Yes. Notion only</td>
           </tr>
           <tr>
             <td>Cursor</td>
@@ -482,7 +482,7 @@
             <td>Teams summaries, Word specs, Outlook status updates</td>
             <td>Minimal</td>
             <td>Good (in M365)</td>
-            <td>Yes — M365 only</td>
+            <td>Yes. M365 only</td>
           </tr>
         </tbody>
       </table>
@@ -510,7 +510,7 @@
         </button>
         </h3>
         <div class="faq-answer" itemscope itemtype="https://schema.org/Answer">
-          <p itemprop="text">Yes, in a limited sense. Notion AI can generate code snippets and include them in Notion pages, but it is not a coding assistant and cannot execute code, run tests, or integrate with your IDE. For real engineering coding work, Cursor or ChatGPT are more appropriate.</p>
+          <p itemprop="text">Yes, in a limited sense. Notion AI can generate code snippets and include them in Notion pages, but it is not a coding assistant and cannot execute code, run tests, or integrate with your IDE. For real engineering coding work, <a href="../cursor.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Cursor</a> or <a href="../chatgpt.html" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a> are more appropriate.</p>
         </div>
       </div>
 
@@ -565,34 +565,34 @@
       <div class="source-item">
         <span class="source-badge" style="background:#dbeafe;color:#1e40af;">1</span>
         <!-- Notion AI overview — notion.so/product/ai -->
-        Notion Labs — Notion AI product overview and feature documentation
+        Notion Labs. Notion AI product overview and feature documentation
       </div>
       <div class="source-item">
         <span class="source-badge" style="background:#dbeafe;color:#1e40af;">2</span>
         <!-- Notion pricing — notion.so/pricing -->
-        Notion Labs — Plan comparison and Notion AI add-on pricing [VERIFY DETAILS]
+        Notion Labs. Plan comparison and Notion AI add-on pricing [VERIFY DETAILS]
       </div>
       <div class="source-item">
         <span class="source-badge" style="background:#dbeafe;color:#1e40af;">3</span>
         <!-- Stack Overflow Dev Survey 2024 -->
-        Stack Overflow — 2024 Developer Survey: AI tools used in the development workflow
+        Stack Overflow. 2024 Developer Survey: AI tools used in the development workflow
       </div>
       <div class="source-item">
         <span class="source-badge" style="background:#dbeafe;color:#1e40af;">4</span>
         <!-- GitHub Octoverse 2024 -->
-        GitHub — Octoverse 2024: State of open source and AI adoption among developers
+        GitHub. Octoverse 2024: State of open source and AI adoption among developers
       </div>
       <div class="source-item">
         <span class="source-badge" style="background:#dbeafe;color:#1e40af;">5</span>
         <!-- Notion AI help docs -->
-        Notion Labs — Notion AI help documentation: using AI in pages and databases
+        Notion Labs. Notion AI help documentation: using AI in pages and databases
       </div>
     </div>
 
     <!-- RELATED GUIDES -->
     <h2>Related Guides</h2>
     <div class="related-guides-grid">
-      <a href="../notion-ai.html" class="read-guide-link" style="--badge-color:#7c3aed;">
+      <a href="../notion-ai.html" class="read-guide-link" style="--badge-color:#2563EB;">
         <span class="read-guide-label">Full Review</span>
         <span class="read-guide-title">Notion AI for Professionals</span>
         <span class="read-guide-arrow">→</span>
@@ -617,7 +617,7 @@
         <span class="read-guide-title">Microsoft Copilot for Engineers</span>
         <span class="read-guide-arrow">→</span>
       </a>
-          <a href="../engineers.html" class="read-guide-link" style="--badge-color:#7c3aed;">
+          <a href="../engineers.html" class="read-guide-link" style="--badge-color:#2563EB;">
         <span class="read-guide-label">Overview</span>
         <span class="read-guide-title">All AI tools for engineers</span>
         <span class="read-guide-arrow">→</span>
@@ -629,25 +629,25 @@
 
     <div class="insights-grid">
       <div class="insight-card">
-        <div class="insight-number" style="color:#7c3aed;">01</div>
+        <div class="insight-number" style="color:#2563EB;">01</div>
         <h3>The output location is the feature</h3>
         <p>Most reviews compare Notion AI to Claude and ChatGPT on output quality, and Claude wins that comparison easily. But they miss the key advantage: when you use Notion AI to draft a runbook, the runbook is already in Notion when you're done. With Claude, you draft in chat and paste it in. That copy-paste step sounds trivial. It is not. Copy-paste introduces formatting errors, formatting mismatches, and the temptation to skip the step entirely. Notion AI removes the step.</p>
       </div>
       <div class="insight-card">
-        <div class="insight-number" style="color:#7c3aed;">02</div>
+        <div class="insight-number" style="color:#2563EB;">02</div>
         <h3>The documentation debt problem is real</h3>
         <p>Engineering teams consistently underinvest in documentation not because they don't value it, but because writing takes time and the payoff is diffuse. Notion AI lowers the time cost enough that documentation gets written more often. This is a meaningful operational improvement for engineering organizations. Reviews that focus on AI capability miss the organizational dynamics that make "good enough, in the right place, written now" more valuable than "excellent, in a chat window, never pasted in."</p>
       </div>
       <div class="insight-card">
-        <div class="insight-number" style="color:#7c3aed;">03</div>
+        <div class="insight-number" style="color:#2563EB;">03</div>
         <h3>The right stack is Cursor + Claude + Notion AI, not a winner</h3>
         <p>Engineers looking for "the best AI tool" are asking the wrong question. Cursor handles code in the IDE. Claude handles complex documents and long-context reasoning. Notion AI handles the documentation layer inside the team workspace. These tools do not compete with each other in practice. Teams that use all three appropriately get more out of each than teams that try to force one tool into every role.</p>
       </div>
     </div>
 
     <!-- Insight banner -->
-    <div class="insight-banner" style="background:#f5f3ff; border-left:4px solid #7c3aed;">
-      <p>"Documentation that lives in a chat window doesn't help your team. Notion AI's advantage isn't quality -- it's location."</p>
+    <div class="insight-banner" style="background:#eff6ff; border-left:4px solid #2563EB;">
+      <p>"Documentation that lives in a chat window doesn't help your team. Notion AI's advantage isn't quality, it's location."</p>
     </div>
 
     <!-- AUTHOR CARD -->
