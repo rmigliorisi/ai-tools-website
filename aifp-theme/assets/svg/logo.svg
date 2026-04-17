@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background -->
+  <rect width="200" height="200" rx="30" fill="#2575C4"/>
+
+  <!-- Cloud shape (white) -->
+  <circle cx="56" cy="68" r="20" fill="white"/>
+  <circle cx="80" cy="50" r="26" fill="white"/>
+  <circle cx="106" cy="62" r="21" fill="white"/>
+  <rect x="36" y="66" width="91" height="32" fill="white"/>
+
+  <!-- AI text in blue -->
+  <text x="79" y="90" text-anchor="middle" fill="#2575C4"
+    font-family="Arial Black, Arial, sans-serif" font-size="26" font-weight="900">AI</text>
+
+  <!-- Circuit: circle node (white) -->
+  <circle cx="158" cy="44" r="13" fill="white"/>
+
+  <!-- Circuit: left branch — stepped trace from circle to left rect -->
+  <polyline
+    points="158,57 158,100 122,100 122,118 82,118 82,132"
+    fill="none" stroke="white" stroke-width="11" stroke-linecap="square" stroke-linejoin="miter"/>
+
+  <!-- Circuit: right branch — straight down from junction to right rect -->
+  <line x1="158" y1="100" x2="158" y2="132"
+    stroke="white" stroke-width="11" stroke-linecap="square"/>
+
+  <!-- Left rectangle (larger) -->
+  <rect x="50" y="132" width="58" height="50" rx="5" fill="white"/>
+
+  <!-- Right rectangle -->
+  <rect x="132" y="132" width="50" height="44" rx="5" fill="white"/>
+</svg>
