@@ -144,3 +144,58 @@ remove_action('wp_head', 'wlmanifest_link');
 add_action('wp_head', function () {
     echo '<link rel="icon" type="image/svg+xml" href="' . esc_url(get_theme_file_uri('assets/svg/favicon.svg')) . '">' . "\n";
 });
+
+/* ──────────────────────────────────────────────
+   7. Open Graph + Twitter Card Meta Tags
+   ────────────────────────────────────────────── */
+add_action('wp_head', function () {
+    if (!is_singular()) return;
+
+    $post_id   = get_the_ID();
+    $post_type = get_post_type($post_id);
+    $data      = aifp_get_data($post_id);
+    $site_name = 'AI Tools for Pros';
+    $default_img = 'https://aitoolsforpros.com/wp-content/uploads/2025/11/cropped-aitoolsforpros.png';
+    $url       = get_permalink($post_id);
+
+    if ($post_type === 'tool_review') {
+        $tool_name = $data['tool_name'] ?? get_the_title();
+        $title     = $tool_name . ' for Professionals: An Honest Review (' . date('Y') . ')';
+        $desc      = wp_strip_all_tags($data['definition_sentence'] ?? $data['positioning_statement'] ?? '');
+        if (!$desc) $desc = 'An independent, in-depth review of ' . $tool_name . ' for professional use.';
+
+    } elseif ($post_type === 'cross_reference') {
+        $tool = aifp_get_linked_post($post_id, 'linked_tool');
+        $prof = aifp_get_linked_post($post_id, 'linked_profession');
+        $tool_name = $tool ? (aifp_get_data($tool->ID)['tool_name'] ?? $tool->post_title) : '';
+        $prof_name = $prof ? (aifp_get_data($prof->ID)['profession_name'] ?? $prof->post_title) : '';
+        $title = $data['title'] ?? ($tool_name . ' for ' . $prof_name . ': Practical AI Guide');
+        $desc  = wp_strip_all_tags($data['subtitle'] ?? '');
+        if (!$desc) $desc = 'How ' . $tool_name . ' helps ' . $prof_name . ' work smarter.';
+
+    } elseif ($post_type === 'profession_hub') {
+        $prof_name = $data['profession_name'] ?? get_the_title();
+        $title     = 'Best AI Tools for ' . $prof_name . ' (2026 Guide)';
+        $desc      = wp_strip_all_tags($data['intro_text'] ?? $data['subtitle'] ?? '');
+        if (!$desc) $desc = 'The top AI tools for ' . $prof_name . ', reviewed and ranked.';
+
+    } else {
+        $title = get_the_title();
+        $desc  = get_the_excerpt();
+    }
+
+    $desc = mb_strimwidth(wp_strip_all_tags($desc), 0, 160, '...');
+
+    echo '<meta name="description" content="' . esc_attr($desc) . '">' . "\n";
+    echo '<link rel="canonical" href="' . esc_url($url) . '">' . "\n";
+    echo '<meta property="og:title" content="' . esc_attr($title) . '">' . "\n";
+    echo '<meta property="og:description" content="' . esc_attr($desc) . '">' . "\n";
+    echo '<meta property="og:url" content="' . esc_url($url) . '">' . "\n";
+    echo '<meta property="og:type" content="article">' . "\n";
+    echo '<meta property="og:site_name" content="' . esc_attr($site_name) . '">' . "\n";
+    echo '<meta property="og:image" content="' . esc_url($default_img) . '">' . "\n";
+    echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
+    echo '<meta name="twitter:title" content="' . esc_attr($title) . '">' . "\n";
+    echo '<meta name="twitter:description" content="' . esc_attr($desc) . '">' . "\n";
+    echo '<meta name="twitter:image" content="' . esc_url($default_img) . '">' . "\n";
+}, 5);
