@@ -111,6 +111,9 @@ def clean_html(html):
     # Remove any remaining ../ patterns (WAF trigger)
     h = h.replace('../', '').replace('..\\', '')
 
+    # Strip section-label divs (static HTML presentational labels — replaced by template headings in WP)
+    h = re.sub(r'<div[^>]*class="section-label"[^>]*>.*?</div>', '', h, flags=re.DOTALL)
+
     # Remove SVG elements entirely (inline icons etc.)
     h = re.sub(r'<svg[^>]*>.*?</svg>', '', h, flags=re.DOTALL)
 
@@ -312,6 +315,13 @@ def extract_faq(html):
     faq_end = faq_section.find('</section>')
     if faq_end > 0:
         faq_section = faq_section[:faq_end]
+    else:
+        # Class-based pages use divs, not <section> — cut at next natural boundary
+        for stopper in ['Sources Checked', '<!-- Sources', 'class="source-item"', '<!-- What Most']:
+            idx = faq_section.find(stopper)
+            if idx > 0:
+                faq_section = faq_section[:idx]
+                break
 
     q_matches = list(re.finditer(r'<h3[^>]*>(.*?)</h3>', faq_section, re.DOTALL))
     for i, qm in enumerate(q_matches):
@@ -334,9 +344,13 @@ def extract_sources(html):
     if src_start == -1:
         return sources
     src_section = html[src_start:]
-    next_h2 = re.search(r'<h2[^>]*>', src_section[20:])
+    # Skip past the section heading h2 before finding the end boundary.
+    # Class-based pages have a separate .section-label + h2; standard pages have only the h2.
+    first_h2_m = re.search(r'<h2[^>]*>.*?</h2>', src_section, re.DOTALL)
+    search_from = first_h2_m.end() if first_h2_m else 20
+    next_h2 = re.search(r'<h2[^>]*>', src_section[search_from:])
     if next_h2:
-        src_section = src_section[:20 + next_h2.start()]
+        src_section = src_section[:search_from + next_h2.start()]
 
     li_items = re.findall(
         r'<li[^>]*>\s*<span class="source-badge">\d+</span>\s*<span>(.*?)</span>\s*</li>',
@@ -353,6 +367,17 @@ def extract_sources(html):
         for item in li_items:
             name = sanitize(item)
             if name and 'Read guide' not in name and len(name) > 10:
+                sources.append({"source_name": name, "source_url": ""})
+
+    if not sources:
+        # Class-based format: <div class="source-item">...<span class="source-text">...</span>
+        si_items = re.findall(
+            r'<div[^>]*class="source-item"[^>]*>.*?<span[^>]*class="source-text"[^>]*>(.*?)</span>',
+            src_section, re.DOTALL
+        )
+        for item in si_items:
+            name = sanitize(item)
+            if name:
                 sources.append({"source_name": name, "source_url": ""})
 
     return sources[:5]
@@ -388,15 +413,27 @@ def extract_reviews_miss(html):
         })
 
     # --- Fallback: inline background:#f9fafb style (hub pages) ---
+    # Require border-radius so we don't match the outer section wrapper
     if not insights:
         insight_blocks = re.findall(
-            r'<div[^>]*background:#f9fafb[^>]*>(.*?)</div>',
+            r'<div[^>]*background:#f9fafb[^>]*border-radius[^>]*>(.*?)</div>',
             section, re.DOTALL
         )
         for block in insight_blocks:
             body = clean_html(block)
             if body and len(body) > 20:
                 insights.append({"insight_title": "", "insight_body": body})
+
+    # --- Fallback: class-based .prose format with numbered bold paragraphs ---
+    if not insights:
+        prose_m = re.search(r'<div[^>]*class="prose"[^>]*>(.*?)</div>', section, re.DOTALL)
+        if prose_m:
+            for p_m in re.finditer(r'<p[^>]*><strong>\d+\.\s*(.*?)</strong>(.*?)</p>',
+                                   prose_m.group(1), re.DOTALL):
+                title = sanitize(p_m.group(1)).rstrip('.')
+                body = sanitize(p_m.group(2))
+                if title:
+                    insights.append({"insight_title": title, "insight_body": body})
 
     # --- Fallback: font-weight:600 titles + line-height:1.7 bodies ---
     if not insights:
@@ -423,6 +460,14 @@ def extract_reviews_miss(html):
         )
         if banner_match:
             banner = clean_html(banner_match.group(1))
+    if not banner:
+        # Class-based: insight-banner with inner .insight-text div (not a <p>)
+        it_m = re.search(
+            r'<div[^>]*class="insight-banner"[^>]*>.*?<div[^>]*class="insight-text"[^>]*>(.*?)</div>',
+            section, re.DOTALL
+        )
+        if it_m:
+            banner = sanitize(it_m.group(1))
 
     # Extract "One thing better" and "One thing wrong" paragraphs
     one_better = ""
@@ -513,6 +558,25 @@ def extract_quick_facts_tool(html):
     return facts
 
 
+def extract_section_by_label(html, label_text):
+    """Extract content for class-based pages using .section-label div as the section marker."""
+    label_pat = rf'<div[^>]*class="section-label"[^>]*>[^<]*{re.escape(label_text)}[^<]*</div>'
+    label_m = re.search(label_pat, html, re.IGNORECASE)
+    if not label_m:
+        return ""
+    after_label = html[label_m.end():]
+    h2_m = re.search(r'<h2[^>]*>.*?</h2>', after_label, re.DOTALL)
+    if not h2_m:
+        return ""
+    content_start = label_m.end() + h2_m.end()
+    next_boundary = re.search(
+        r'<h2[^>]*>|<div[^>]*class="section-label"|<div[^>]*background:#f9fafb',
+        html[content_start:]
+    )
+    end = content_start + next_boundary.start() if next_boundary else len(html)
+    return clean_html(html[content_start:end])
+
+
 def extract_section_html(html, heading_text):
     """Extract a section by heading text, returning the raw inner HTML
     (everything between this H2 and the next H2 or </section>).
@@ -591,11 +655,39 @@ def extract_profession_cards(html):
     return cards
 
 
+def _inline_pricing_table(h):
+    """Convert class-based pricing table to inline styles for reliable rendering in WordPress."""
+    h = re.sub(
+        r'<table[^>]*class="pricing-table"[^>]*>',
+        '<table style="width:100%;border-collapse:collapse;font-size:0.9rem;">',
+        h
+    )
+    h = re.sub(
+        r'<th(\s[^>]*)?>',
+        '<th style="text-align:left;padding:0.75rem 1rem;background:#f9fafb;font-size:0.75rem;'
+        'font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#6b7280;'
+        'border-bottom:2px solid #e5e7eb;">',
+        h
+    )
+    h = re.sub(
+        r'<td(\s[^>]*)?>',
+        '<td style="padding:0.75rem 1rem;border-bottom:1px solid #f3f4f6;color:#374151;vertical-align:top;">',
+        h
+    )
+    h = re.sub(
+        r'<span[^>]*class="tier-name"[^>]*>(.*?)</span>',
+        r'<span style="font-weight:600;color:#111111;">\1</span>',
+        h, flags=re.DOTALL
+    )
+    return h
+
+
 def extract_pricing_html(html):
     """Extract the entire pricing section inner HTML (table + paragraphs below it)."""
     raw = extract_section_html(html, "Pricing")
     if raw:
-        return clean_html(raw)
+        result = clean_html(raw)
+        return _inline_pricing_table(result)
     return ""
 
 
@@ -699,12 +791,18 @@ def migrate_tool_review(tool_def):
     what_it_is = extract_section_clean_html(html, "What .* Is")
     if not what_it_is:
         what_it_is = extract_section_clean_html(html, "What It Is")
+    if not what_it_is:
+        what_it_is = extract_section_by_label(html, "Overview")
     who_right_for = extract_section_clean_html(html, "Who .* Right For")
     if not who_right_for:
         who_right_for = extract_section_clean_html(html, "Who It")
+    if not who_right_for:
+        who_right_for = extract_section_by_label(html, "Fit Assessment")
     verdict_text = extract_section_clean_html(html, "My Verdict")
     if not verdict_text:
         verdict_text = extract_section_clean_html(html, "Our Verdict")
+    if not verdict_text:
+        verdict_text = extract_section_by_label(html, "My Verdict")
 
     # Features - preserve HTML in descriptions
     features = []
@@ -720,6 +818,20 @@ def migrate_tool_review(tool_def):
                 "feature_name": name,
                 "feature_icon": "",
                 "feature_description": clean_html(desc_html),
+            })
+    # Fallback: class-based .feature-item format (cursor, notion-ai, grammarly, otter)
+    if not features:
+        fi_items = re.findall(
+            r'<li[^>]*class="feature-item"[^>]*>.*?'
+            r'<div[^>]*class="feature-name"[^>]*>(.*?)</div>.*?'
+            r'<div[^>]*class="feature-desc"[^>]*>(.*?)</div>.*?</li>',
+            features_section or html, re.DOTALL
+        )
+        for name, desc in fi_items[:7]:
+            features.append({
+                "feature_name": sanitize(name),
+                "feature_icon": "",
+                "feature_description": sanitize(desc),
             })
 
     # Pricing - preserve full HTML

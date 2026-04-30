@@ -2020,3 +2020,11 @@ main[style] h1 {
 
 /* ── Back-to-top: force blue accent ── */
 .back-to-top { --btn-hover-color: #2563EB; }
+
+
+/* ── Class-based pricing tables (cursor, notion-ai, grammarly, otter) ── */
+.pricing-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.pricing-table th { text-align: left; padding: 0.75rem 1rem; background: #f9fafb; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #6b7280; border-bottom: 2px solid #e5e7eb; }
+.pricing-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #f3f4f6; color: #374151; vertical-align: top; }
+.pricing-table tr:last-child td { border-bottom: none; }
+.pricing-table .tier-name { font-weight: 600; color: #111111; }
