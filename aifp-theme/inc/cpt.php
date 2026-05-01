@@ -24,7 +24,7 @@ add_action('init', function () {
         'menu_icon'    => 'dashicons-star-filled',
         'menu_position'=> 5,
         'supports'     => ['title', 'editor', 'custom-fields', 'revisions'],
-        'rewrite'      => ['slug' => '/', 'with_front' => false],
+        'rewrite'      => false, // Handled explicitly in functions.php
         'show_in_rest' => true,
     ]);
 
@@ -43,7 +43,7 @@ add_action('init', function () {
         'menu_icon'    => 'dashicons-groups',
         'menu_position'=> 6,
         'supports'     => ['title', 'editor', 'custom-fields', 'revisions'],
-        'rewrite'      => ['slug' => '/', 'with_front' => false],
+        'rewrite'      => false, // Handled explicitly in functions.php
         'show_in_rest' => true,
     ]);
 

@@ -87,6 +87,13 @@ add_action('init', function () {
         'top'
     );
 
+    // Profession Hubs: /legal/, /physicians/, etc.
+    add_rewrite_rule(
+        '^(legal|physicians|engineers|real-estate|finance|insurance|architects|creatives)/?$',
+        'index.php?post_type=profession_hub&name=$matches[1]',
+        'top'
+    );
+
     // Cross-Reference: /chatgpt/legal/, /claude/engineers/, etc.
     add_rewrite_rule(
         '^(chatgpt|claude|perplexity|gemini|copilot|midjourney|cursor|notion-ai|grammarly|otter)/([^/]+)/?$',
