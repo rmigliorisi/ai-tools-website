@@ -65,7 +65,7 @@ $tool_count = $data['tool_count'] ?? 0;
       <h2 class="font-heading" style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;line-height:1.1;color:#111111;margin:0 0 16px;"><?php echo esc_html($uc_title); ?></h2>
       <?php endif; ?>
       <?php if ($uc_intro) : ?>
-      <p style="font-size:15px;color:#636363;line-height:1.75;max-width:680px;margin:0 0 36px;"><?php echo esc_html($uc_intro); ?></p>
+      <div style="font-size:15px;color:#636363;line-height:1.75;max-width:680px;margin:0 0 36px;"><?php echo wp_kses_post($uc_intro); ?></div>
       <?php endif; ?>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;margin-bottom:40px;">
         <?php foreach ($use_cases as $uc) : ?>

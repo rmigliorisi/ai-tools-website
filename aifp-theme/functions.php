@@ -31,7 +31,7 @@ add_action('wp_enqueue_scripts', function () {
     );
 
     // Theme version for cache busting
-    $ver = '1.0.5';
+    $ver = '1.0.6';
 
     // Main stylesheet (the migrated style.css from the static site)
     wp_enqueue_style('aifp-site',
