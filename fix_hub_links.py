@@ -9,15 +9,12 @@ Idempotent: running twice is safe (new sentinel phrase won't be present the seco
 we check for the FIXED_SENTINEL before adding).
 """
 
-import urllib.request, json, ssl, base64, re
+import urllib.request, json, ssl, re
+from wp_creds import HEADERS, BASE
 
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
-
-CREDS = base64.b64encode(b'rmigliorisi:pj60 SqmD OSRD pSe1 9DsV BEeh').decode()
-HEADERS = {'Authorization': f'Basic {CREDS}', 'Content-Type': 'application/json'}
-BASE = 'https://aitoolsforpros.com/wp-json/wp/v2'
 
 OLD_TOOL_SENTINEL  = 'profession-specific guide'  # old paragraph to strip
 OLD_PROF_SENTINEL  = 'tool-specific guide'         # old paragraph to strip

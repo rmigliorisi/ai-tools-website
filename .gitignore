@@ -3,7 +3,29 @@
 *.DS_Store
 Thumbs.db
 
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment and secrets — never commit credentials
+.env
+.env.*
+!.env.example
+
+# Zip/archive files — use GitHub releases or CDN instead
+*.zip
+*.tar.gz
+*.gz
+
 # Large media (keep out of repo)
 *.gif
 *.mov
 *.mp4
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log

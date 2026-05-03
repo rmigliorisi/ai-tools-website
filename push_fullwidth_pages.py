@@ -5,16 +5,13 @@ The full-width template (page-fullwidth.php) renders content without any
 max-width constraint, so section padding/grids work exactly like the static site.
 """
 
-import urllib.request, json, ssl, base64
+import urllib.request, json, ssl
 from bs4 import BeautifulSoup
+from wp_creds import HEADERS, BASE
 
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
-
-CREDS = base64.b64encode(b'rmigliorisi:pj60 SqmD OSRD pSe1 9DsV BEeh').decode()
-HEADERS = {'Authorization': f'Basic {CREDS}', 'Content-Type': 'application/json'}
-BASE = 'https://aitoolsforpros.com/wp-json/wp/v2'
 BASE_DIR = '/Users/rmigs/Projects/aitoolsforpros website'
 
 SLUG_MAP = {

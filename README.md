@@ -14,19 +14,32 @@ AI Tools for Pros reviews 10 major AI tools across 8 professional fields, produc
 
 ## Tech Stack
 
-- **Pure static HTML/CSS/JS** — no frameworks, no build step, no dependencies
-- **Single shared stylesheet** (`style.css`) — ~1,800 lines covering all page types
-- **Vanilla JS** (`site.js`) — mobile nav, cookie consent, scroll behavior
-- **Hand-coded SVG avatars** — `author.svg`, `ryan-cooper.svg`
-- **Structured data** — JSON-LD schema on every page (FAQ, Review, Article types)
-- **SEO-first architecture** — semantic HTML, Open Graph tags, sitemap.xml, robots.txt
+- **WordPress CMS** — live site runs on WordPress with a custom theme (`aifp-theme/`)
+- **Custom post types** — `tool_review`, `profession_hub`, `cross_reference` (registered in theme)
+- **JSON content storage** — page content stored as JSON in `post_content`; fetched via REST API
+- **Custom theme** (`aifp-theme/`) — PHP templates, assets in `aifp-theme/assets/`
+- **Static HTML files** — original static site source kept as reference/archive
+- **Python scripts** — one-off migration and content push scripts (credentials in `.env`)
+- **SEO-first architecture** — custom sitemap, robots.txt, Open Graph tags, JSON-LD schema
 
 ## Project Structure
 
 ```
-├── index.html                  # Homepage
-├── style.css                   # Shared stylesheet (all pages)
-├── site.js                     # Shared JavaScript
+├── aifp-theme/                 # Live WordPress custom theme
+│   ├── functions.php           # Theme setup, CPTs, REST API, rewrites, sitemap
+│   ├── single-tool_review.php  # Tool hub page template
+│   ├── single-profession_hub.php # Profession hub page template
+│   ├── single-cross_reference.php # Cross-reference page template
+│   ├── assets/css/             # site.css, components.css
+│   └── assets/js/              # site.js (dark mode, mobile nav, etc.)
+│
+├── docs/                        # Content generation system (see below)
+│
+├── [tool].py / push_*.py       # One-off migration/content scripts (see Scripts section)
+│
+├── index.html                  # Static homepage (source reference)
+├── style.css                   # Static shared stylesheet (source reference)
+├── site.js                     # Static shared JavaScript (source reference)
 ├── logo.svg                    # Site logo
 ├── favicon.svg                 # Browser favicon
 ├── author.svg                  # Rich Migliorisi avatar (used in author bylines)
@@ -78,9 +91,11 @@ AI Tools for Pros reviews 10 major AI tools across 8 professional fields, produc
 ├── docs/                        # Content generation system
 │   ├── AIFORPROS.md             # Master content prompt (page generation rules)
 │   ├── AIFORPROS-REFERENCE.md   # HTML boilerplate reference (nav, footer, etc.)
-│   └── AIFORPROS-QA.md          # QA validation checklist
+│   ├── AIFORPROS-QA.md          # QA validation checklist
+│   ├── AIFORPROS-GITHUB-CLEANUP.md  # Repo cleanup rules
+│   └── aitoolsforpros-internal-linking-rules.md  # Internal linking audit rules
 │
-└── dev/                         # Development/testing files
+└── dev/                         # Development/testing files (not used in production)
     └── browser-test.html        # Browser compatibility test page
 ```
 
@@ -113,6 +128,26 @@ Each cross-reference page covers a specific tool for a specific profession (e.g.
 ### Navigation
 
 All pages share a consistent nav structure with dropdowns for tools and professions. The nav is defined inline in each HTML file (no templating system). Cross-reference pages use `../` relative paths for root assets.
+
+## WordPress API Scripts
+
+Python scripts in the root push content to WordPress via the REST API. To run any of them:
+
+1. Copy `.env.example` to `.env`
+2. Fill in your WordPress username and a fresh Application Password
+3. Run: `python3 script_name.py`
+
+**Credential safety**: Never commit `.env`. The `.gitignore` excludes it. If a credential is ever accidentally committed, revoke it in WordPress Admin > Users > Profile > Application Passwords immediately.
+
+| Script | Purpose |
+|--------|---------|
+| `add_internal_links.py` | Adds contextual links to cross-reference pages |
+| `add_hub_links.py` | Adds child links to tool and profession hub pages |
+| `fix_hub_links_bullets.py` | Reformats hub links as bullet lists |
+| `push_static_pages.py` | Pushes static pages (newsletter, about, etc.) |
+| `migrate_v2.py` | Original site migration script (one-off, complete) |
+
+---
 
 ## Content Generation Workflow
 

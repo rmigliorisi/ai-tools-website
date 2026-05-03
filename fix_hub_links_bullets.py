@@ -8,15 +8,12 @@ Profession hubs: strip paragraph from use_cases_intro, insert <ul> block
 Idempotent: skips pages where a <ul> block with the sentinel href is already present.
 """
 
-import urllib.request, json, ssl, base64, re
+import urllib.request, json, ssl, re
+from wp_creds import HEADERS, BASE
 
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
-
-CREDS = base64.b64encode(b'rmigliorisi:pj60 SqmD OSRD pSe1 9DsV BEeh').decode()
-HEADERS = {'Authorization': f'Basic {CREDS}', 'Content-Type': 'application/json'}
-BASE = 'https://aitoolsforpros.com/wp-json/wp/v2'
 
 # Phrases that mark the old injected content (either run)
 OLD_SENTINELS = ['profession-focused guides', 'profession-specific guide', 'tool-specific guide', 'tool-specific guidance']

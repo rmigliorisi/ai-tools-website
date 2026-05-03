@@ -1,14 +1,11 @@
 #!/usr/bin/env python3
 """Verify links in chatgpt-architects content_sections and comparison_notes."""
-import urllib.request, json, ssl, base64, re
+import urllib.request, json, ssl, re
+from wp_creds import HEADERS, BASE
 
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
-
-CREDS = base64.b64encode(b'rmigliorisi:pj60 SqmD OSRD pSe1 9DsV BEeh').decode()
-HEADERS = {'Authorization': f'Basic {CREDS}'}
-BASE = 'https://aitoolsforpros.com/wp-json/wp/v2'
 
 req = urllib.request.Request(
     f'{BASE}/cross_reference/367?context=edit&_fields=id,slug,content',

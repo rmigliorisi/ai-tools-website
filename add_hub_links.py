@@ -8,15 +8,12 @@ Profession hub pages: append a paragraph to use_cases_intro listing the tool-spe
 Idempotent: skips pages that already contain the sentinel phrase.
 """
 
-import urllib.request, json, ssl, base64
+import urllib.request, json, ssl
+from wp_creds import HEADERS, BASE
 
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
-
-CREDS = base64.b64encode(b'rmigliorisi:pj60 SqmD OSRD pSe1 9DsV BEeh').decode()
-HEADERS = {'Authorization': f'Basic {CREDS}', 'Content-Type': 'application/json'}
-BASE = 'https://aitoolsforpros.com/wp-json/wp/v2'
 
 
 def api_get(path):

@@ -17,10 +17,7 @@ import time
 import requests
 from pathlib import Path
 
-WP_URL = "https://aitoolsforpros.com/wp-json"
-WP_USER = "rmigliorisi"
-WP_PASS = "W75u mqKN Rf9S lE4u PJn7 vQyd"
-AUTH = (WP_USER, WP_PASS)
+from wp_creds import AUTH, WP_URL
 
 BASE_DIR = Path("/Users/rmigs/Projects/aitoolsforpros website")
 
