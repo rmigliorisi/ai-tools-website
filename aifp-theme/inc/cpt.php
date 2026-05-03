@@ -107,6 +107,10 @@ add_filter('wp_unique_post_slug', function ($slug, $post_id, $status, $type) {
 /* ── Cross-Reference Pretty Permalinks ── */
 // Output /{tool-slug}/{profession-slug}/ instead of /?cross_reference=slug
 add_filter('post_type_link', function ($link, $post) {
+    if ($post->post_type === 'tool_review' || $post->post_type === 'profession_hub') {
+        return home_url('/' . $post->post_name . '/');
+    }
+
     if ($post->post_type !== 'cross_reference') {
         return $link;
     }

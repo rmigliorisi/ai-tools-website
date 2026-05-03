@@ -31,7 +31,7 @@ add_action('wp_enqueue_scripts', function () {
     );
 
     // Theme version for cache busting
-    $ver = '1.0.0';
+    $ver = '1.0.5';
 
     // Main stylesheet (the migrated style.css from the static site)
     wp_enqueue_style('aifp-site',
@@ -103,13 +103,33 @@ add_action('init', function () {
 });
 
 /* ──────────────────────────────────────────────
+   4b. Disable redirect_canonical for custom post types
+   CPTs with rewrite=>false have no default permalink structure,
+   so redirect_canonical redirects clean URLs to ?post_type=slug.
+   Returning false stops that redirect; clean rewrite rules handle routing.
+   ────────────────────────────────────────────── */
+add_filter('redirect_canonical', function ($redirect_url) {
+    if (is_singular(['tool_review', 'profession_hub', 'cross_reference'])) {
+        return false;
+    }
+    return $redirect_url;
+});
+
+/* ──────────────────────────────────────────────
    4. Preserve JSON + inline styles in post_content
    ────────────────────────────────────────────── */
 add_filter('wp_insert_post_data', function ($data) {
-    if (in_array($data['post_type'] ?? '', ['tool_review', 'profession_hub', 'cross_reference'])) {
+    if (in_array($data['post_type'] ?? '', ['tool_review', 'profession_hub', 'cross_reference', 'page'])) {
         remove_filter('the_content', 'wpautop');
     }
     return $data;
+});
+
+// Also disable wpautop on page output — content is raw HTML, not prose paragraphs
+add_action('template_redirect', function () {
+    if (is_page()) {
+        remove_filter('the_content', 'wpautop');
+    }
 });
 
 // Allow modern CSS properties (grid, flex, clamp, etc.) so wp_kses_post
@@ -132,7 +152,93 @@ add_filter('safe_style_css', function ($styles) {
 });
 
 /* ──────────────────────────────────────────────
-   5. Disable Unnecessary WordPress Features
+   5. Custom sitemap at /sitemap.xml
+   Priority 1 fires before Jetpack (priority 10).
+   Checks raw REQUEST_URI so it intercepts the URL
+   before any plugin can handle it.
+   ────────────────────────────────────────────── */
+add_action('init', function () {
+    $path = parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH);
+    if (trim($path, '/') !== 'sitemap-pages.xml') return;
+
+    status_header(200);
+    header('Content-Type: application/xml; charset=UTF-8');
+    nocache_headers();
+
+    $base    = 'https://aitoolsforpros.com';
+    $entries = [];
+
+    $mod = function ($post) {
+        return get_post_modified_time('Y-m-d', true, $post);
+    };
+
+    // Homepage — use most recently modified post across all types
+    $latest = get_posts(['post_type' => ['page','tool_review','profession_hub','cross_reference'], 'post_status' => 'publish', 'posts_per_page' => 1, 'orderby' => 'modified', 'order' => 'DESC']);
+    $entries[] = ['url' => $base . '/', 'lastmod' => $latest ? $mod($latest[0]) : current_time('Y-m-d'), 'priority' => '1.0', 'changefreq' => 'daily'];
+
+    // Standard pages
+    $page_priority = [
+        'newsletter'     => '0.7',
+        'about-us'       => '0.6',
+        'our-process'    => '0.6',
+        'privacy-policy' => '0.3',
+        'cookie-policy'  => '0.3',
+    ];
+    $pages = get_posts(['post_type' => 'page', 'post_status' => 'publish', 'posts_per_page' => -1]);
+    foreach ($pages as $p) {
+        if (get_permalink($p) === $base . '/') continue;
+        $entries[] = [
+            'url'        => rtrim(get_permalink($p), '/') . '/',
+            'lastmod'    => $mod($p),
+            'priority'   => $page_priority[$p->post_name] ?? '0.5',
+            'changefreq' => 'monthly',
+        ];
+    }
+
+    // Tool review hub pages: /{slug}/
+    $reviews = get_posts(['post_type' => 'tool_review', 'post_status' => 'publish', 'posts_per_page' => -1]);
+    foreach ($reviews as $p) {
+        $entries[] = ['url' => $base . '/' . $p->post_name . '/', 'lastmod' => $mod($p), 'priority' => '0.9', 'changefreq' => 'monthly'];
+    }
+
+    // Profession hub pages: /{slug}/
+    $hubs = get_posts(['post_type' => 'profession_hub', 'post_status' => 'publish', 'posts_per_page' => -1]);
+    foreach ($hubs as $p) {
+        $entries[] = ['url' => $base . '/' . $p->post_name . '/', 'lastmod' => $mod($p), 'priority' => '0.9', 'changefreq' => 'monthly'];
+    }
+
+    // Cross-reference pages: /{tool}/{profession}/
+    $xrefs = get_posts(['post_type' => 'cross_reference', 'post_status' => 'publish', 'posts_per_page' => -1]);
+    foreach ($xrefs as $p) {
+        $url = get_permalink($p);
+        if ($url && strpos($url, '?') === false) {
+            $entries[] = ['url' => rtrim($url, '/') . '/', 'lastmod' => $mod($p), 'priority' => '0.8', 'changefreq' => 'monthly'];
+        }
+    }
+
+    echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+    echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+    foreach ($entries as $e) {
+        echo "  <url>\n";
+        echo "    <loc>" . esc_url($e['url']) . "</loc>\n";
+        echo "    <lastmod>" . esc_html($e['lastmod']) . "</lastmod>\n";
+        echo "    <changefreq>" . esc_html($e['changefreq']) . "</changefreq>\n";
+        echo "    <priority>" . esc_html($e['priority']) . "</priority>\n";
+        echo "  </url>\n";
+    }
+    echo '</urlset>';
+    exit;
+}, 1);
+
+/* ──────────────────────────────────────────────
+   5b. robots.txt
+   ────────────────────────────────────────────── */
+add_filter('robots_txt', function () {
+    return "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://aitoolsforpros.com/sitemap-pages.xml\n";
+}, 99);
+
+/* ──────────────────────────────────────────────
+   6. Disable Unnecessary WordPress Features
    ────────────────────────────────────────────── */
 // Remove emoji scripts
 remove_action('wp_head', 'print_emoji_detection_script', 7);
@@ -146,14 +252,14 @@ remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlmanifest_link');
 
 /* ──────────────────────────────────────────────
-   6. Favicon
+   7. Favicon
    ────────────────────────────────────────────── */
 add_action('wp_head', function () {
     echo '<link rel="icon" type="image/svg+xml" href="' . esc_url(get_theme_file_uri('assets/svg/favicon.svg')) . '">' . "\n";
 });
 
 /* ──────────────────────────────────────────────
-   7. Open Graph + Twitter Card Meta Tags
+   8. Open Graph + Twitter Card Meta Tags
    ────────────────────────────────────────────── */
 add_action('wp_head', function () {
     if (!is_singular()) return;

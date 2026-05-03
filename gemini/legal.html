@@ -1,28 +1,28 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Gemini for Legal Counsel — 2026 Guide | AI Tools for Pros</title>
-  <meta name="description" content="My hands-on take on Google Gemini for Legal Counsel in 2026: best workflows, prompt packs, compliance pitfalls, and where it beats or loses to ChatGPT.">
-  <meta property="og:title" content="Google Gemini for Legal Counsel — 2026 Guide | AI Tools for Pros">
-  <meta property="og:description" content="My hands-on take on Google Gemini for Legal Counsel in 2026: best workflows, prompt packs, compliance pitfalls, and where it beats or loses to ChatGPT.">
-  <meta property="og:image" content="https://aitoolsforpros.com/og-image.jpg">
-  <meta property="og:type" content="article">
-  <link rel="canonical" href="https://aitoolsforpros.com/gemini/legal">
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <!-- Shared stylesheet: responsive layout + dark mode -->
-
-    <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Google Gemini for Legal Counsel — 2026 Guide | AI Tools for Pros</title>
+<meta content="My hands-on take on Google Gemini for Legal Counsel in 2026: best workflows, prompt packs, compliance pitfalls, and where it beats or loses to ChatGPT." name="description"/>
+<meta content="Google Gemini for Legal Counsel — 2026 Guide | AI Tools for Pros" property="og:title"/>
+<meta content="My hands-on take on Google Gemini for Legal Counsel in 2026: best workflows, prompt packs, compliance pitfalls, and where it beats or loses to ChatGPT." property="og:description"/>
+<meta content="https://aitoolsforpros.com/og-image.jpg" property="og:image"/>
+<meta content="article" property="og:type"/>
+<link href="https://aitoolsforpros.com/gemini/legal" rel="canonical"/>
+<link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
+<!-- Shared stylesheet: responsive layout + dark mode -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&amp;family=Inter:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<script>
     tailwind.config = {
       theme: { extend: { fontFamily: { body: ['Inter','sans-serif'], heading: ['Cardo','serif'] } } }
     }
   </script>
-  <style>
+<style>
     *, *::before, *::after { box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #111111; margin: 0; padding: 0; }
     .font-heading { font-family: 'Cardo', serif; }
@@ -54,8 +54,8 @@
     .read-guide-link:hover { color: #2563eb; }
     .source-badge { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; background: #dbeafe; color: #2563eb; font-size: 11px; font-weight: 700; border-radius: 50%; flex-shrink: 0; }
   </style>
-  <link rel="stylesheet" href="../style.css">
-  <script type="application/ld+json">
+<link href="../style.css" rel="stylesheet"/>
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -116,623 +116,570 @@
     ]
   }
   </script>
-  <!-- Shared site script: dark mode toggle + mobile hamburger nav -->
-  <script src="../site.js" defer></script>
+<!-- Shared site script: dark mode toggle + mobile hamburger nav -->
+<script defer="" src="../site.js"></script>
 </head>
 <body>
-
 <!-- NAV -->
 <nav style="padding:18px min(2rem,8vw);position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;justify-content:space-between;">
-  <a href="../index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-    <img src="../logo.svg" width="32" height="32" alt="AI Tools for Pros" style="border-radius:8px;display:block;">
-    <span style="font-size:13px;font-weight:500;color:#111111;">AI Tools for Pros</span>
-  </a>
-  <div id="nav-desktop" style="display:flex;align-items:center;gap:36px;">
-    <a href="../our-process.html" class="nav-link">Our Process</a>
-    <div class="nav-dropdown">
-      <span class="nav-link-caret">AI Tools <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <div class="dropdown-menu">
-        <a href="../chatgpt.html" class="dropdown-item">ChatGPT</a>
-        <a href="../claude.html" class="dropdown-item">Claude</a>
-        <a href="../perplexity.html" class="dropdown-item">Perplexity AI</a>
-        <a href="../gemini.html" class="dropdown-item">Google Gemini</a>
-        <a href="../copilot.html" class="dropdown-item">Microsoft Copilot</a>
-        <a href="../midjourney.html" class="dropdown-item">Midjourney</a>
-        <a href="../cursor.html" class="dropdown-item">Cursor</a>
-        <a href="../notion-ai.html" class="dropdown-item">Notion AI</a>
-        <a href="../grammarly.html" class="dropdown-item">Grammarly</a>
-        <a href="../otter.html" class="dropdown-item">Otter.ai</a>
-      </div>
-    </div>
-    <div class="nav-dropdown">
-      <span class="nav-link-caret">Professions <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <div class="dropdown-menu">
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../legal.html">Legal Counsel <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/legal.html">ChatGPT</a>
-            <a href="../claude/legal.html">Claude</a>
-            <a href="../perplexity/legal.html">Perplexity AI</a>
-            <a href="../gemini/legal.html">Google Gemini</a>
-            <a href="../copilot/legal.html">Microsoft Copilot</a>
-            <a href="../grammarly/legal.html">Grammarly</a>
-            <a href="../notion-ai/legal.html">Notion AI</a>
-          </div>
-        </div>
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../physicians.html">Physicians <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/physicians.html">ChatGPT</a>
-            <a href="../claude/physicians.html">Claude</a>
-            <a href="../perplexity/physicians.html">Perplexity AI</a>
-            <a href="../copilot/physicians.html">Microsoft Copilot</a>
-            <a href="../otter/physicians.html">Otter.ai</a>
-          </div>
-        </div>
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../real-estate.html">Real Estate <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/real-estate.html">ChatGPT</a>
-            <a href="../claude/real-estate.html">Claude</a>
-            <a href="../gemini/real-estate.html">Google Gemini</a>
-            <a href="../copilot/real-estate.html">Microsoft Copilot</a>
-            <a href="../grammarly/real-estate.html">Grammarly</a>
-          </div>
-        </div>
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../engineers.html">Engineers <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/engineers.html">ChatGPT</a>
-            <a href="../claude/engineers.html">Claude</a>
-            <a href="../cursor/engineers.html">Cursor</a>
-            <a href="../copilot/engineers.html">Microsoft Copilot</a>
-            <a href="../notion-ai/engineers.html">Notion AI</a>
-          </div>
-        </div>
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../finance.html">Finance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/finance.html">ChatGPT</a>
-            <a href="../claude/finance.html">Claude</a>
-            <a href="../perplexity/finance.html">Perplexity AI</a>
-            <a href="../copilot/finance.html">Microsoft Copilot</a>
-            <a href="../gemini/finance.html">Google Gemini</a>
-          </div>
-        </div>
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../insurance.html">Insurance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/insurance.html">ChatGPT</a>
-            <a href="../claude/insurance.html">Claude</a>
-            <a href="../copilot/insurance.html">Microsoft Copilot</a>
-            <a href="../perplexity/insurance.html">Perplexity AI</a>
-            <a href="../grammarly/insurance.html">Grammarly</a>
-          </div>
-        </div>
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../architects.html">Architects <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/architects.html">ChatGPT</a>
-            <a href="../claude/architects.html">Claude</a>
-            <a href="../gemini/architects.html">Google Gemini</a>
-            <a href="../midjourney/architects.html">Midjourney</a>
-          </div>
-        </div>
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../creatives.html">Creatives <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/creatives.html">ChatGPT</a>
-            <a href="../claude/creatives.html">Claude</a>
-            <a href="../midjourney/creatives.html">Midjourney</a>
-            <a href="../grammarly/creatives.html">Grammarly</a>
-            <a href="../notion-ai/creatives.html">Notion AI</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a href="../newsletter.html" class="nav-link">Newsletter</a>
-  </div>
+<a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+<img alt="AI Tools for Pros" height="32" src="../logo.svg" style="border-radius:8px;display:block;" width="32"/>
+<span style="font-size:13px;font-weight:500;color:#111111;">AI Tools for Pros</span>
+</a>
+<div id="nav-desktop" style="display:flex;align-items:center;gap:36px;">
+<a class="nav-link" href="/our-process/">Our Process</a>
+<div class="nav-dropdown">
+<span class="nav-link-caret">AI Tools <svg fill="none" height="5" viewbox="0 0 8 5" width="8"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/chatgpt/">ChatGPT</a>
+<a class="dropdown-item" href="/claude/">Claude</a>
+<a class="dropdown-item" href="/perplexity/">Perplexity AI</a>
+<a class="dropdown-item" href="/gemini/">Google Gemini</a>
+<a class="dropdown-item" href="/copilot/">Microsoft Copilot</a>
+<a class="dropdown-item" href="/midjourney/">Midjourney</a>
+<a class="dropdown-item" href="/cursor/">Cursor</a>
+<a class="dropdown-item" href="/notion-ai/">Notion AI</a>
+<a class="dropdown-item" href="/grammarly/">Grammarly</a>
+<a class="dropdown-item" href="/otter/">Otter.ai</a>
+</div>
+</div>
+<div class="nav-dropdown">
+<span class="nav-link-caret">Professions <svg fill="none" height="5" viewbox="0 0 8 5" width="8"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span>
+<div class="dropdown-menu">
+<div class="submenu-item">
+<a class="submenu-trigger" href="/legal/">Legal Counsel <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/legal/">ChatGPT</a>
+<a href="/claude/legal/">Claude</a>
+<a href="/perplexity/legal/">Perplexity AI</a>
+<a href="/gemini/legal/">Google Gemini</a>
+<a href="/copilot/legal/">Microsoft Copilot</a>
+<a href="/grammarly/legal/">Grammarly</a>
+<a href="/notion-ai/legal/">Notion AI</a>
+</div>
+</div>
+<div class="submenu-item">
+<a class="submenu-trigger" href="/physicians/">Physicians <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/physicians/">ChatGPT</a>
+<a href="/claude/physicians/">Claude</a>
+<a href="/perplexity/physicians/">Perplexity AI</a>
+<a href="/copilot/physicians/">Microsoft Copilot</a>
+<a href="/otter/physicians/">Otter.ai</a>
+</div>
+</div>
+<div class="submenu-item">
+<a class="submenu-trigger" href="/real-estate/">Real Estate <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/real-estate/">ChatGPT</a>
+<a href="/claude/real-estate/">Claude</a>
+<a href="/gemini/real-estate/">Google Gemini</a>
+<a href="/copilot/real-estate/">Microsoft Copilot</a>
+<a href="/grammarly/real-estate/">Grammarly</a>
+</div>
+</div>
+<div class="submenu-item">
+<a class="submenu-trigger" href="/engineers/">Engineers <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/engineers/">ChatGPT</a>
+<a href="/claude/engineers/">Claude</a>
+<a href="/cursor/engineers/">Cursor</a>
+<a href="/copilot/engineers/">Microsoft Copilot</a>
+<a href="/notion-ai/engineers/">Notion AI</a>
+</div>
+</div>
+<div class="submenu-item">
+<a class="submenu-trigger" href="/finance/">Finance <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/finance/">ChatGPT</a>
+<a href="/claude/finance/">Claude</a>
+<a href="/perplexity/finance/">Perplexity AI</a>
+<a href="/copilot/finance/">Microsoft Copilot</a>
+<a href="/gemini/finance/">Google Gemini</a>
+</div>
+</div>
+<div class="submenu-item">
+<a class="submenu-trigger" href="/insurance/">Insurance <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/insurance/">ChatGPT</a>
+<a href="/claude/insurance/">Claude</a>
+<a href="/copilot/insurance/">Microsoft Copilot</a>
+<a href="/perplexity/insurance/">Perplexity AI</a>
+<a href="/grammarly/insurance/">Grammarly</a>
+</div>
+</div>
+<div class="submenu-item">
+<a class="submenu-trigger" href="/architects/">Architects <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/architects/">ChatGPT</a>
+<a href="/claude/architects/">Claude</a>
+<a href="/gemini/architects/">Google Gemini</a>
+<a href="/midjourney/architects/">Midjourney</a>
+</div>
+</div>
+<div class="submenu-item">
+<a class="submenu-trigger" href="/creatives/">Creatives <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/creatives/">ChatGPT</a>
+<a href="/claude/creatives/">Claude</a>
+<a href="/midjourney/creatives/">Midjourney</a>
+<a href="/grammarly/creatives/">Grammarly</a>
+<a href="/notion-ai/creatives/">Notion AI</a>
+</div>
+</div>
+</div>
+</div>
+<a class="nav-link" href="/newsletter/">Newsletter</a>
+</div>
 </nav>
-
 <main style="max-width:860px;margin:0 auto;padding:28px 24px 56px;">
-
-  <!-- Breadcrumb strip -->
-  <div style="font-size:12px;color:#636363;margin:8px 0 18px;">
-    <a href="../index.html" style="color:#636363;text-decoration:none;" onmouseover="this.style.color='#111111'" onmouseout="this.style.color='#636363'">Home</a>
-    <span style="margin:0 8px;color:#c0c0c0;">/</span>
-    <a href="../gemini.html" style="color:#636363;text-decoration:none;" onmouseover="this.style.color='#111111'" onmouseout="this.style.color='#636363'">Google Gemini</a>
-    <span style="margin:0 8px;color:#c0c0c0;">/</span>
-    <span style="color:#111111;">Legal Counsel</span>
-  </div>
-
-  <!-- Page header -->
-  <p style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#636363;margin:0 0 10px;">Google Gemini · Legal Counsel</p>
-  <h1 class="font-heading">Google Gemini for Legal Counsel: What Actually Works in 2026</h1>
-
-  <p style="font-size:17px;line-height:1.7;color:#636363;margin:0 0 14px;">
+<!-- Breadcrumb strip -->
+<div style="font-size:12px;color:#636363;margin:8px 0 18px;">
+<a href="/" onmouseout="this.style.color='#636363'" onmouseover="this.style.color='#111111'" style="color:#636363;text-decoration:none;">Home</a>
+<span style="margin:0 8px;color:#c0c0c0;">/</span>
+<a href="/gemini/" onmouseout="this.style.color='#636363'" onmouseover="this.style.color='#111111'" style="color:#636363;text-decoration:none;">Google Gemini</a>
+<span style="margin:0 8px;color:#c0c0c0;">/</span>
+<span style="color:#111111;">Legal Counsel</span>
+</div>
+<!-- Page header -->
+<p style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#636363;margin:0 0 10px;">Google Gemini · Legal Counsel</p>
+<h1 class="font-heading">Google Gemini for Legal Counsel: What Actually Works in 2026</h1>
+<p style="font-size:17px;line-height:1.7;color:#636363;margin:0 0 14px;">
     I use Gemini when I need fast organization of messy inputs, especially emails, meeting notes, and rough document sets.
     This is not a marketing recap. It is how Google Gemini for lawyers behaves in real drafting, review, and research workflows.
     My verdict: it is useful for intake, summarization, and structure, but risky when you let it sound confident about the law.
   </p>
-
-  <p style="font-size:13px;color:#636363;margin:0 0 20px;">By <strong style="color:#111111;font-weight:600;">Richard Migliorisi</strong><a href="https://www.linkedin.com/in/richardmigliorisi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>&nbsp;&middot;&nbsp;Fact-checked by <strong style="color:#111111;font-weight:600;">Ryan Cooper</strong><a href="https://www.linkedin.com/in/ryan-cooper-nyc/" target="_blank" rel="noopener noreferrer" aria-label="Ryan Cooper LinkedIn" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>&nbsp;&middot;&nbsp;Published February 25, 2026<span id="reading-time"></span></p>
-
-  <!-- Verdict badge banner -->
-  <div style="background:#eff6ff;border-left:4px solid #2563EB;border-radius:10px;padding:18px 22px;margin:0 0 32px;max-width:760px;">
-    <div style="display:flex;align-items:center;gap:12px;margin:0 0 8px;flex-wrap:wrap;">
-      <span class="verdict-badge-recommended">Recommended with caveats</span>
-    </div>
-    <p style="font-size:14px;color:#1e40af;line-height:1.55;margin:0;">Best when you need structure, not legal conclusions.</p>
-  </div>
-
-  <!-- Block 2: Key Takeaways -->
-  <div style="background:#f5f3ff;border:1px solid #ddd6fe;border-radius:12px;padding:24px 28px;margin-bottom:20px;max-width:760px;">
-    <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#7c3aed;margin:0 0 14px;">Key Takeaways</p>
-    <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-      <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">&#8594;</span> Strong at email thread compression and issue lists.</li>
-      <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">&#8594;</span> Useful for first-pass clause structure and checklists.</li>
-      <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">&#8594;</span> Risky with citations unless you verify every reference.</li>
-      <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">&#8594;</span> Best results come from tight inputs and constraints.</li>
-      <li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">&#8594;</span> Workspace context can speed up routine legal admin.</li>
-    </ul>
-  </div>
-
-  <!-- Blocks 3 + 4: Best Use Cases + Avoid — side by side -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin-bottom:20px;">
-    <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:20px 24px;">
-      <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#15803d;margin:0 0 12px;">Best Use Cases</p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
-        <li style="font-size:13px;color:#166534;">Turn client emails into an intake memo.</li>
-        <li style="font-size:13px;color:#166534;">Summarize deposition transcripts into themes.</li>
-        <li style="font-size:13px;color:#166534;">Create redline checklists for common agreements.</li>
-        <li style="font-size:13px;color:#166534;">Draft discovery requests from a fact outline.</li>
-        <li style="font-size:13px;color:#166534;">Convert notes into a clean client update.</li>
-      </ul>
-    </div>
-    <div style="background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:20px 24px;">
-      <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#dc2626;margin:0 0 12px;">Avoid Using It For</p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
-        <li style="font-size:13px;color:#991b1b;">Unverified legal conclusions or jurisdiction calls.</li>
-        <li style="font-size:13px;color:#991b1b;">Copying privileged facts into a consumer workspace.</li>
-        <li style="font-size:13px;color:#991b1b;">Submitting citations without checking primary sources.</li>
-        <li style="font-size:13px;color:#991b1b;">Anything that replaces attorney judgment or review.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Block 5: Mini Workflow -->
-    <div style="background:#ffffff;border:1px solid #bfdbfe;border-radius:12px;padding:24px 28px;max-width:760px;margin-bottom:28px;">
-    <p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#1d4ed8;margin:0 0 12px;">If You Only Do One Thing</p>
-    <p style="font-size:13px;color:#1e40af;margin:0 0 12px;">Use Gemini at the start of a new matter to turn messy inputs into a clean, reviewable structure.</p>
-    <ol style="padding:0 0 0 18px;margin:0;display:flex;flex-direction:column;gap:6px;">
-      <li style="font-size:13px;color:#1e40af;">Paste a redacted fact outline and your goal.</li>
-      <li style="font-size:13px;color:#1e40af;">Ask for a structured issue list plus next steps.</li>
-      <li style="font-size:13px;color:#1e40af;">Have Gemini draft a checklist, not a conclusion.</li>
-      <li style="font-size:13px;color:#1e40af;">Verify every citation and legal claim manually.</li>
-    </ol>
-  </div>
-
-  <!-- Quick Facts Bar -->
-  <div class="fact-bar" style="max-width:860px;margin:0 0 28px;">
-    <div class="fact-item">
-      <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Best for</p>
-      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Intake triage</p>
-    </div>
-    <div class="fact-item">
-      <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Pricing</p>
-      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Free / paid tiers available</p>
-    </div>
-    <div class="fact-item">
-      <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Compliance</p>
-      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Workspace controls available</p>
-    </div>
-    <div class="fact-item">
-      <p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Compared to</p>
-      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;"><a href="../chatgpt.html" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a></p>
-    </div>
-  </div>
-
-  <!-- Retrieval anchors -->
-  <p style="margin:0 0 12px;color:#111111;line-height:1.65;">
+<p style="font-size:13px;color:#636363;margin:0 0 20px;">By <strong style="color:#111111;font-weight:600;">Richard Migliorisi</strong><a aria-label="LinkedIn" href="https://www.linkedin.com/in/richardmigliorisi/" rel="noopener noreferrer" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;" target="_blank"><svg fill="currentColor" height="13" viewbox="0 0 24 24" width="13"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a> · Fact-checked by <strong style="color:#111111;font-weight:600;">Ryan Cooper</strong><a aria-label="Ryan Cooper LinkedIn" href="https://www.linkedin.com/in/ryan-cooper-nyc/" rel="noopener noreferrer" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;" target="_blank"><svg fill="currentColor" height="13" viewbox="0 0 24 24" width="13"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a> · Published February 25, 2026<span id="reading-time"></span></p>
+<!-- Verdict badge banner -->
+<div style="background:#eff6ff;border-left:4px solid #2563EB;border-radius:10px;padding:18px 22px;margin:0 0 32px;max-width:760px;">
+<div style="display:flex;align-items:center;gap:12px;margin:0 0 8px;flex-wrap:wrap;">
+<span class="verdict-badge-recommended">Recommended with caveats</span>
+</div>
+<p style="font-size:14px;color:#1e40af;line-height:1.55;margin:0;">Best when you need structure, not legal conclusions.</p>
+</div>
+<!-- Block 2: Key Takeaways -->
+<div style="background:#f5f3ff;border:1px solid #ddd6fe;border-radius:12px;padding:24px 28px;margin-bottom:20px;max-width:760px;">
+<p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#7c3aed;margin:0 0 14px;">Key Takeaways</p>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+<li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">→</span> Strong at email thread compression and issue lists.</li>
+<li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">→</span> Useful for first-pass clause structure and checklists.</li>
+<li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">→</span> Risky with citations unless you verify every reference.</li>
+<li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">→</span> Best results come from tight inputs and constraints.</li>
+<li style="display:flex;gap:10px;font-size:14px;color:#333333;line-height:1.6;"><span style="color:#7c3aed;flex-shrink:0;font-weight:700;">→</span> Workspace context can speed up routine legal admin.</li>
+</ul>
+</div>
+<!-- Blocks 3 + 4: Best Use Cases + Avoid — side by side -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin-bottom:20px;">
+<div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:20px 24px;">
+<p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#15803d;margin:0 0 12px;">Best Use Cases</p>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+<li style="font-size:13px;color:#166534;">Turn client emails into an intake memo.</li>
+<li style="font-size:13px;color:#166534;">Summarize deposition transcripts into themes.</li>
+<li style="font-size:13px;color:#166534;">Create redline checklists for common agreements.</li>
+<li style="font-size:13px;color:#166534;">Draft discovery requests from a fact outline.</li>
+<li style="font-size:13px;color:#166534;">Convert notes into a clean client update.</li>
+</ul>
+</div>
+<div style="background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:20px 24px;">
+<p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#dc2626;margin:0 0 12px;">Avoid Using It For</p>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+<li style="font-size:13px;color:#991b1b;">Unverified legal conclusions or jurisdiction calls.</li>
+<li style="font-size:13px;color:#991b1b;">Copying privileged facts into a consumer workspace.</li>
+<li style="font-size:13px;color:#991b1b;">Submitting citations without checking primary sources.</li>
+<li style="font-size:13px;color:#991b1b;">Anything that replaces attorney judgment or review.</li>
+</ul>
+</div>
+</div>
+<!-- Block 5: Mini Workflow -->
+<div style="background:#ffffff;border:1px solid #bfdbfe;border-radius:12px;padding:24px 28px;max-width:760px;margin-bottom:28px;">
+<p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#1d4ed8;margin:0 0 12px;">If You Only Do One Thing</p>
+<p style="font-size:13px;color:#1e40af;margin:0 0 12px;">Use Gemini at the start of a new matter to turn messy inputs into a clean, reviewable structure.</p>
+<ol style="padding:0 0 0 18px;margin:0;display:flex;flex-direction:column;gap:6px;">
+<li style="font-size:13px;color:#1e40af;">Paste a redacted fact outline and your goal.</li>
+<li style="font-size:13px;color:#1e40af;">Ask for a structured issue list plus next steps.</li>
+<li style="font-size:13px;color:#1e40af;">Have Gemini draft a checklist, not a conclusion.</li>
+<li style="font-size:13px;color:#1e40af;">Verify every citation and legal claim manually.</li>
+</ol>
+</div>
+<!-- Quick Facts Bar -->
+<div class="fact-bar" style="max-width:860px;margin:0 0 28px;">
+<div class="fact-item">
+<p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Best for</p>
+<p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Intake triage</p>
+</div>
+<div class="fact-item">
+<p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Pricing</p>
+<p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Free / paid tiers available</p>
+</div>
+<div class="fact-item">
+<p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Compliance</p>
+<p style="font-size:14px;font-weight:600;color:#111111;margin:0;">Workspace controls available</p>
+</div>
+<div class="fact-item">
+<p style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;margin:0 0 6px;">Compared to</p>
+<p style="font-size:14px;font-weight:600;color:#111111;margin:0;"><a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a></p>
+</div>
+</div>
+<!-- Retrieval anchors -->
+<p style="margin:0 0 12px;color:#111111;line-height:1.65;">
     Google Gemini is Google's AI assistant that helps legal teams research, draft, and summarize faster when every output is reviewed like a junior associate's work.
   </p>
-
-  <p style="margin:0 0 12px;color:#111111;line-height:1.65;">
+<p style="margin:0 0 12px;color:#111111;line-height:1.65;">
     This guide focuses specifically on how Google Gemini performs inside real Legal Counsel workflows, not as a general AI overview.
   </p>
-
-  <p style="margin:0 0 12px;color:#111111;line-height:1.65;">
+<p style="margin:0 0 12px;color:#111111;line-height:1.65;">
     Do not paste confidential client or patient information unless you are using an approved secure workspace.
   </p>
-
-  <p style="margin:0 0 28px;color:#111111;line-height:1.65;">
+<p style="margin:0 0 28px;color:#111111;line-height:1.65;">
     Gemini's biggest legal win is turning messy Gmail threads into clean issue lists.
   </p>
-
-  <!-- H2 #1 -->
-  <h2 class="font-heading" style="font-size:28px;margin:0 0 10px;">What Legal Counsel Are Using Google Gemini For</h2>
-  <p style="margin:0 0 16px;color:#636363;line-height:1.7;">
+<!-- H2 #1 -->
+<h2 class="font-heading" style="font-size:28px;margin:0 0 10px;">What Legal Counsel Are Using Google Gemini For</h2>
+<p style="margin:0 0 16px;color:#636363;line-height:1.7;">
     Gemini is best used when I need to turn unstructured inputs into a clear legal work product outline.
     It saves time when the bottleneck is organization, not substantive judgment.
   </p>
-
-  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Email intake to issue map</h3>
-  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+<h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Email intake to issue map</h3>
+<p style="margin:0 0 14px;color:#111111;line-height:1.7;">
     I paste a redacted client email thread and ask Gemini to produce an issue list, missing facts, and a short next-step plan.
-    Compared to <a href="../claude.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a>, Gemini feels faster at turning conversation into a structured memo when the raw input is messy.
+    Compared to <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a>, Gemini feels faster at turning conversation into a structured memo when the raw input is messy.
     I still sanity-check for invented facts and overconfident labels.
   </p>
-
-  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">First-pass drafting scaffolds</h3>
-  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+<h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">First-pass drafting scaffolds</h3>
+<p style="margin:0 0 14px;color:#111111;line-height:1.7;">
     I use Gemini to draft section headings, clause checklists, and defined terms tables for common agreements.
     I do not treat the language as final. The win is a clean starting shape that I can redline quickly.
   </p>
-
-  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Deposition and meeting summaries with action items</h3>
-  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+<h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Deposition and meeting summaries with action items</h3>
+<p style="margin:0 0 14px;color:#111111;line-height:1.7;">
     When I have transcripts or notes, I ask for themes, contradictions, and questions for follow-up.
     The practical rule is simple: if it sounds like a quote, I confirm it against the transcript.
   </p>
-
-  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Discovery planning and theme building</h3>
-  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+<h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Discovery planning and theme building</h3>
+<p style="margin:0 0 14px;color:#111111;line-height:1.7;">
     Gemini is good at turning a fact outline into a discovery plan: what to request, why it matters, and how it maps to elements.
     It is not good at knowing what your judge will tolerate, so I keep it on structure and rationale, not tactics.
   </p>
-
-  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Client communications and status updates</h3>
-  <p style="margin:0 0 18px;color:#111111;line-height:1.7;">
+<h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Client communications and status updates</h3>
+<p style="margin:0 0 18px;color:#111111;line-height:1.7;">
     I draft client updates in Gemini when I want a calm, clear tone with a short timeline and decisions needed.
-    Compared to <a href="../copilot.html" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a>, Gemini can feel less tied to Word formatting, but the quality depends on how specific my inputs are.
+    Compared to <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a>, Gemini can feel less tied to Word formatting, but the quality depends on how specific my inputs are.
   </p>
-
-  <!-- H2 #2 -->
-  <h2 class="font-heading" style="font-size:28px;margin:22px 0 10px;">Prompts That Work for Legal Counsel</h2>
-  <p style="margin:0 0 16px;color:#636363;line-height:1.7;">
+<!-- H2 #2 -->
+<h2 class="font-heading" style="font-size:28px;margin:22px 0 10px;">Prompts That Work for Legal Counsel</h2>
+<p style="margin:0 0 16px;color:#636363;line-height:1.7;">
     These prompts are designed to produce reviewable structure. I avoid prompts that ask for final legal conclusions.
   </p>
-
-  <div class="prompt-block">Goal: Turn a client email thread into an intake memo
+<div class="prompt-block">Goal: Turn a client email thread into an intake memo
 Inputs: Redacted email thread + matter type + jurisdiction + what I need next
 Output format: 1) Issue list 2) Missing facts 3) Risks 4) Next steps 5) Questions for client
 Guardrails: Do not invent facts. Mark assumptions explicitly. No legal advice; provide drafting and organization support only.</div>
-  <p style="margin:0 0 16px;color:#111111;line-height:1.7;">
+<p style="margin:0 0 16px;color:#111111;line-height:1.7;">
     I use this when a thread is long and I need a clean handoff to myself or a teammate.
   </p>
-
-  <div class="prompt-block">Goal: Build a redline checklist for a common agreement type
+<div class="prompt-block">Goal: Build a redline checklist for a common agreement type
 Inputs: Agreement type + my standard positions + deal context + the sections that matter most
 Output format: Table with Clause, My preferred position, Fallback, Rationale, Red flags
 Guardrails: No jurisdiction-specific claims. If unsure, flag. Keep it practical and negotiator-friendly.</div>
-  <p style="margin:0 0 16px;color:#111111;line-height:1.7;">
+<p style="margin:0 0 16px;color:#111111;line-height:1.7;">
     This is the fastest way I have found to avoid missing obvious review points under time pressure.
   </p>
-
-  <div class="prompt-block">Goal: Create a deposition summary that supports motion practice
+<div class="prompt-block">Goal: Create a deposition summary that supports motion practice
 Inputs: Transcript excerpts or notes + the legal elements I care about + opponent theory
 Output format: 1) Theme summary 2) Key admissions with transcript locations (if provided) 3) Contradictions 4) Follow-up questions
 Guardrails: If transcript locations are not provided, do not fabricate them. Use neutral language. Separate quotes from paraphrases.</div>
-  <p style="margin:0 0 16px;color:#111111;line-height:1.7;">
+<p style="margin:0 0 16px;color:#111111;line-height:1.7;">
     I keep this prompt narrow so the output stays tied to elements instead of storytelling.
   </p>
-
-  <div class="prompt-block">Goal: Draft a discovery plan from a fact outline
+<div class="prompt-block">Goal: Draft a discovery plan from a fact outline
 Inputs: Fact outline + claims/defenses + jurisdiction level (state/federal) + what I want to prove
 Output format: Bulleted plan with Request category, What it proves, Likely objections, Narrowing language
 Guardrails: Do not cite rules unless I provide them. No boilerplate. Keep requests specific and defensible.</div>
-  <p style="margin:0 0 18px;color:#111111;line-height:1.7;">
+<p style="margin:0 0 18px;color:#111111;line-height:1.7;">
     This is best when I need structure fast, then I tailor to local rules and opposing counsel.
   </p>
-
-  <!-- H2 #3 -->
-  <h2 class="font-heading" style="font-size:28px;margin:22px 0 10px;">Compliance and Professional Risk</h2>
-  <p style="margin:0 0 14px;color:#636363;line-height:1.7;">
+<!-- H2 #3 -->
+<h2 class="font-heading" style="font-size:28px;margin:22px 0 10px;">Compliance and Professional Risk</h2>
+<p style="margin:0 0 14px;color:#636363;line-height:1.7;">
     The risk with any AI assistant in legal work is not only hallucinations. It is confidentiality, privilege, and over-reliance when the output sounds polished.
   </p>
-
-  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Confidentiality and privilege boundaries</h3>
-  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+<h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Confidentiality and privilege boundaries</h3>
+<p style="margin:0 0 14px;color:#111111;line-height:1.7;">
     I treat client facts as toxic data by default. If I cannot confidently say the workspace is approved for confidential information, I redact names, dates, account numbers, and unique identifiers.
     If the task cannot be done with redaction, I do not run it through Gemini.
   </p>
-
-  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Competence and explainability</h3>
-  <p style="margin:0 0 14px;color:#111111;line-height:1.7;">
+<h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Competence and explainability</h3>
+<p style="margin:0 0 14px;color:#111111;line-height:1.7;">
     AI output still needs attorney judgment. For anything that touches law or procedure, I require a verification step: primary sources, trusted research tools, or internal templates.
     If I cannot explain why a clause is there, it does not ship.
   </p>
-
-  <h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Citations and invented authority</h3>
-  <p style="margin:0 0 18px;color:#111111;line-height:1.7;">
+<h3 class="font-heading" style="font-size:20px;margin:0 0 6px;">Citations and invented authority</h3>
+<p style="margin:0 0 18px;color:#111111;line-height:1.7;">
     Gemini can produce citations that look plausible. I assume any citation is wrong until proven otherwise.
     The rule of thumb is short: verify every authority, every time.
   </p>
-
-  <!-- H2 #4 -->
-  <h2 class="font-heading" style="font-size:28px;margin:22px 0 10px;">Where Google Gemini Falls Short for Legal Counsel</h2>
-  <p style="margin:0 0 14px;color:#636363;line-height:1.7;">
+<!-- H2 #4 -->
+<h2 class="font-heading" style="font-size:28px;margin:22px 0 10px;">Where Google Gemini Falls Short for Legal Counsel</h2>
+<p style="margin:0 0 14px;color:#636363;line-height:1.7;">
     The failures that matter in legal work are specific. Gemini is not uniquely bad here, but it can fail in predictable ways.
   </p>
-
-  <ul style="margin:0 0 18px;padding-left:18px;color:#111111;line-height:1.7;">
-    <li><strong>Jurisdiction nuance:</strong> it can gloss over local practice and treat rules as universal.</li>
-    <li><strong>False confidence:</strong> polished language can hide uncertainty, so I force it to label assumptions.</li>
-    <li><strong>Citation risk:</strong> it may produce plausible but incorrect authorities unless you provide the source set.</li>
-    <li><strong>Clause drift:</strong> it can change defined terms subtly across a long draft without noticing.</li>
-  </ul>
-
-  <p style="margin:0 0 18px;color:#111111;line-height:1.7;">
+<ul style="margin:0 0 18px;padding-left:18px;color:#111111;line-height:1.7;">
+<li><strong>Jurisdiction nuance:</strong> it can gloss over local practice and treat rules as universal.</li>
+<li><strong>False confidence:</strong> polished language can hide uncertainty, so I force it to label assumptions.</li>
+<li><strong>Citation risk:</strong> it may produce plausible but incorrect authorities unless you provide the source set.</li>
+<li><strong>Clause drift:</strong> it can change defined terms subtly across a long draft without noticing.</li>
+</ul>
+<p style="margin:0 0 18px;color:#111111;line-height:1.7;">
     Most professionals underestimate how much output review time Gemini actually requires.
   </p>
-
-  <!-- H2 #5 -->
-  <h2 class="font-heading" style="font-size:28px;margin:22px 0 10px;">How Google Gemini Compares for Legal Counsel</h2>
-  <p style="margin:0 0 16px;color:#636363;line-height:1.7;">
-    Compared to <a href="../chatgpt.html" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>, Gemini is often better at turning Google-native chaos into structure, but worse when you need consistent long-form drafting with tight internal logic.
+<!-- H2 #5 -->
+<h2 class="font-heading" style="font-size:28px;margin:22px 0 10px;">How Google Gemini Compares for Legal Counsel</h2>
+<p style="margin:0 0 16px;color:#636363;line-height:1.7;">
+    Compared to <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>, Gemini is often better at turning Google-native chaos into structure, but worse when you need consistent long-form drafting with tight internal logic.
   </p>
-
-  <div style="overflow-x:auto;background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:14px 14px;margin:0 0 18px;">
-    <table style="width:100%;border-collapse:collapse;font-size:14px;">
-      <thead>
-        <tr>
-          <th style="text-align:left;border-bottom:1px solid #f0f0f0;padding:10px 8px;color:#636363;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">Tool</th>
-          <th style="text-align:left;border-bottom:1px solid #f0f0f0;padding:10px 8px;color:#636363;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">Best for</th>
-          <th style="text-align:left;border-bottom:1px solid #f0f0f0;padding:10px 8px;color:#636363;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">Weak for</th>
-          <th style="text-align:left;border-bottom:1px solid #f0f0f0;padding:10px 8px;color:#636363;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">Pricing range</th>
-          <th style="text-align:left;border-bottom:1px solid #f0f0f0;padding:10px 8px;color:#636363;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">One-line verdict</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Google Gemini</td>
-          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Workspace-driven intake and summaries</td>
-          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Final legal analysis and citations</td>
-          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;"></td>
-          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Great organizer, not a substitute for legal judgment.</td>
-        </tr>
-        <tr>
-          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">ChatGPT</td>
-          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Drafting and structured redlines</td>
-          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Workspace-native email workflows</td>
-          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;"></td>
-          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">My default for long drafts, with strict review.</td>
-        </tr>
-        <tr>
-          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Claude</td>
-          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Careful writing and document reasoning</td>
-          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Tight integration into Google workflows</td>
-          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;"></td>
-          <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Often cleaner prose, still needs verification.</td>
-        </tr>
-        <tr>
-          <td style="padding:10px 8px;">Microsoft Copilot</td>
-          <td style="padding:10px 8px;">Word-first drafting and formatting</td>
-          <td style="padding:10px 8px;">Cross-document reasoning consistency</td>
-          <td style="padding:10px 8px;"></td>
-          <td style="padding:10px 8px;">Best if your firm lives in Microsoft 365.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- H2 #6 -->
-  <h2 class="font-heading" style="font-size:28px;margin:22px 0 10px;">My Verdict: Google Gemini for Legal Counsel</h2>
-  <p style="margin:0 0 12px;color:#111111;line-height:1.7;">
+<div style="overflow-x:auto;background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:14px 14px;margin:0 0 18px;">
+<table style="width:100%;border-collapse:collapse;font-size:14px;">
+<thead>
+<tr>
+<th style="text-align:left;border-bottom:1px solid #f0f0f0;padding:10px 8px;color:#636363;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">Tool</th>
+<th style="text-align:left;border-bottom:1px solid #f0f0f0;padding:10px 8px;color:#636363;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">Best for</th>
+<th style="text-align:left;border-bottom:1px solid #f0f0f0;padding:10px 8px;color:#636363;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">Weak for</th>
+<th style="text-align:left;border-bottom:1px solid #f0f0f0;padding:10px 8px;color:#636363;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">Pricing range</th>
+<th style="text-align:left;border-bottom:1px solid #f0f0f0;padding:10px 8px;color:#636363;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">One-line verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Google Gemini</td>
+<td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Workspace-driven intake and summaries</td>
+<td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Final legal analysis and citations</td>
+<td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;"></td>
+<td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Great organizer, not a substitute for legal judgment.</td>
+</tr>
+<tr>
+<td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">ChatGPT</td>
+<td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Drafting and structured redlines</td>
+<td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Workspace-native email workflows</td>
+<td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;"></td>
+<td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">My default for long drafts, with strict review.</td>
+</tr>
+<tr>
+<td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Claude</td>
+<td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Careful writing and document reasoning</td>
+<td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Tight integration into Google workflows</td>
+<td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;"></td>
+<td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;">Often cleaner prose, still needs verification.</td>
+</tr>
+<tr>
+<td style="padding:10px 8px;">Microsoft Copilot</td>
+<td style="padding:10px 8px;">Word-first drafting and formatting</td>
+<td style="padding:10px 8px;">Cross-document reasoning consistency</td>
+<td style="padding:10px 8px;"></td>
+<td style="padding:10px 8px;">Best if your firm lives in Microsoft 365.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- H2 #6 -->
+<h2 class="font-heading" style="font-size:28px;margin:22px 0 10px;">My Verdict: Google Gemini for Legal Counsel</h2>
+<p style="margin:0 0 12px;color:#111111;line-height:1.7;">
     I recommend Gemini for legal teams that already run on Google Workspace and want faster intake, summarization, and first-pass structure.
     It can cut down the time I spend turning chaos into a plan.
   </p>
-  <p style="margin:0 0 16px;color:#111111;line-height:1.7;">
+<p style="margin:0 0 16px;color:#111111;line-height:1.7;">
     I do not recommend Gemini as a legal authority. If you treat outputs as polished suggestions that must be verified, it is useful.
     If you treat outputs as correct because they sound correct, it will eventually burn you.
   </p>
-  <p style="margin:0 0 6px;color:#111111;line-height:1.7;"><strong>Best for:</strong> intake memos, summaries, issue maps, drafting scaffolds.</p>
-  <p style="margin:0 0 18px;color:#111111;line-height:1.7;"><strong>Skip it if:</strong> your workflow requires trusted citations or you cannot use an approved secure workspace.</p>
-
-  <!-- H2 #7 -->
-  <h2 class="font-heading" style="font-size:28px;margin:22px 0 10px;">Frequently Asked Questions</h2>
-
-  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px 16px;margin:0 0 10px;">
-    <h3 itemprop="name" class="font-heading" style="font-size:18px;margin:0 0 8px;">Can Google Gemini draft contracts or legal clauses I can use?</h3>
-    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-      <p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
+<p style="margin:0 0 6px;color:#111111;line-height:1.7;"><strong>Best for:</strong> intake memos, summaries, issue maps, drafting scaffolds.</p>
+<p style="margin:0 0 18px;color:#111111;line-height:1.7;"><strong>Skip it if:</strong> your workflow requires trusted citations or you cannot use an approved secure workspace.</p>
+<!-- H2 #7 -->
+<h2 class="font-heading" style="font-size:28px;margin:22px 0 10px;">Frequently Asked Questions</h2>
+<div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px 16px;margin:0 0 10px;">
+<h3 class="font-heading" itemprop="name" style="font-size:18px;margin:0 0 8px;">Can Google Gemini draft contracts or legal clauses I can use?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
         It depends. Gemini can draft first-pass language, but I treat it like a junior associate and require attorney review, jurisdiction checks, and cite checking before anything is used.
       </p>
-    </div>
-  </div>
-
-  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px 16px;margin:0 0 10px;">
-    <h3 itemprop="name" class="font-heading" style="font-size:18px;margin:0 0 8px;">Is Google Gemini safe for privileged or confidential client information?</h3>
-    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-      <p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
+</div>
+</div>
+<div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px 16px;margin:0 0 10px;">
+<h3 class="font-heading" itemprop="name" style="font-size:18px;margin:0 0 8px;">Is Google Gemini safe for privileged or confidential client information?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
         No. I do not paste confidential client information unless I am using an approved secure workspace, and even then I minimize data and redact identifiers.
       </p>
-    </div>
-  </div>
-
-  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px 16px;margin:0 0 10px;">
-    <h3 itemprop="name" class="font-heading" style="font-size:18px;margin:0 0 8px;">Is Google Gemini better than ChatGPT for legal research?</h3>
-    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-      <p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
+</div>
+</div>
+<div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px 16px;margin:0 0 10px;">
+<h3 class="font-heading" itemprop="name" style="font-size:18px;margin:0 0 8px;">Is Google Gemini better than ChatGPT for legal research?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
         It depends. Gemini can be strong for quick issue spotting and organizing sources, but accuracy varies by query and I still verify against primary law and trusted databases.
       </p>
-    </div>
-  </div>
-
-  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px 16px;margin:0 0 10px;">
-    <h3 itemprop="name" class="font-heading" style="font-size:18px;margin:0 0 8px;">What are the best Google Gemini workflows for Legal Counsel?</h3>
-    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-      <p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
+</div>
+</div>
+<div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px 16px;margin:0 0 10px;">
+<h3 class="font-heading" itemprop="name" style="font-size:18px;margin:0 0 8px;">What are the best Google Gemini workflows for Legal Counsel?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
         Yes. The workflows I use most are intake triage, email-thread compression into issues, deposition and meeting summaries, discovery theme maps, and first-pass redlines with a strict checklist.
       </p>
-    </div>
-  </div>
-
-  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px 16px;margin:0 0 18px;">
-    <h3 itemprop="name" class="font-heading" style="font-size:18px;margin:0 0 8px;">What should I avoid using Google Gemini for in legal work?</h3>
-    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-      <p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
+</div>
+</div>
+<div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px 16px;margin:0 0 18px;">
+<h3 class="font-heading" itemprop="name" style="font-size:18px;margin:0 0 8px;">What should I avoid using Google Gemini for in legal work?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
         Yes. I avoid relying on Gemini for jurisdiction-specific legal conclusions, citations without verification, and any task that would expose privileged facts or confidential client data.
       </p>
-    </div>
-  </div>
-
-  <!-- 6th FAQ -->
-  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px 16px;margin:0 0 18px;">
-    <h3 itemprop="name" class="font-heading" style="font-size:18px;margin:0 0 8px;">Does Google Gemini integrate with Google Workspace apps like Gmail and Docs?</h3>
-    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-      <p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
+</div>
+</div>
+<!-- 6th FAQ -->
+<div itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question" style="background:#ffffff;border:1px solid #f0f0f0;border-radius:16px;padding:16px 16px;margin:0 0 18px;">
+<h3 class="font-heading" itemprop="name" style="font-size:18px;margin:0 0 8px;">Does Google Gemini integrate with Google Workspace apps like Gmail and Docs?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<p itemprop="text" style="margin:0;color:#111111;line-height:1.7;">
         Yes. If your firm uses Google Workspace, Gemini can be activated inside Gmail, Google Docs, and Drive, which lets you summarize email threads and documents without switching apps. The depth of integration depends on your Workspace plan and admin settings, so verify data handling terms before using it for client work.
       </p>
-    </div>
-  </div>
-
-  <!-- Sources Checked -->
-  <h2 class="font-heading" style="font-size:28px;margin:28px 0 14px;">Sources Checked</h2>
-  <div style="display:flex;flex-direction:column;gap:14px;margin:0 0 32px;">
-    <div style="display:flex;align-items:flex-start;gap:14px;">
-      <span style="flex-shrink:0;width:28px;height:28px;background:#dbeafe;color:#2563eb;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">1</span>
-      <div style="font-size:14px;color:#333333;line-height:1.6;"><strong>Google</strong>. Gemini Help Center, core features and product behavior</div>
-    </div>
-    <div style="display:flex;align-items:flex-start;gap:14px;">
-      <span style="flex-shrink:0;width:28px;height:28px;background:#dbeafe;color:#2563eb;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">2</span>
-      <div style="font-size:14px;color:#333333;line-height:1.6;"><strong>Google</strong>. Gemini for Workspace overview. Workspace integration claims</div>
-    </div>
-    <div style="display:flex;align-items:flex-start;gap:14px;">
-      <span style="flex-shrink:0;width:28px;height:28px;background:#dbeafe;color:#2563eb;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">3</span>
-      <div style="font-size:14px;color:#333333;line-height:1.6;"><strong>Google</strong>. Privacy and data handling pages for Gemini, data use and retention</div>
-    </div>
-    <div style="display:flex;align-items:flex-start;gap:14px;">
-      <span style="flex-shrink:0;width:28px;height:28px;background:#dbeafe;color:#2563eb;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">4</span>
-      <div style="font-size:14px;color:#333333;line-height:1.6;"><strong>ABA and state bar guidance</strong>. AI technology competence and confidentiality obligations for legal professionals</div>
-    </div>
-    <div style="display:flex;align-items:flex-start;gap:14px;">
-      <span style="flex-shrink:0;width:28px;height:28px;background:#dbeafe;color:#2563eb;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">5</span>
-      <div style="font-size:14px;color:#333333;line-height:1.6;"><strong>Google</strong>. Security and compliance documentation for Workspace plans, admin controls</div>
-    </div>
-  </div>
-
-  <!-- Related Guides -->
-  <h2 class="font-heading" style="font-size:28px;margin:0 0 14px;">Related Guides</h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:0 0 32px;">
-    <a href="../gemini.html" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;display:block;transition:border-color .15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
-      <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;">gemini</span>
-      <p style="font-size:13.5px;font-weight:600;color:#0f172a;margin:4px 0 0;line-height:1.4;">Google Gemini for Professionals</p>
-    </a>
-    <a href="../gemini/finance.html" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;display:block;transition:border-color .15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
-      <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;">gemini</span>
-      <p style="font-size:13.5px;font-weight:600;color:#0f172a;margin:4px 0 0;line-height:1.4;">Google Gemini for Finance Professionals</p>
-    </a>
-    <a href="../gemini/real-estate.html" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;display:block;transition:border-color .15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
-      <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;">gemini</span>
-      <p style="font-size:13.5px;font-weight:600;color:#0f172a;margin:4px 0 0;line-height:1.4;">Google Gemini for Real Estate Agents</p>
-    </a>
-    <a href="../chatgpt/legal.html" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;display:block;transition:border-color .15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
-      <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;">chatgpt</span>
-      <p style="font-size:13.5px;font-weight:600;color:#0f172a;margin:4px 0 0;line-height:1.4;">ChatGPT for Legal Counsel</p>
-    </a>
-    <a href="../claude/legal.html" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;display:block;transition:border-color .15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
-      <span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;">claude</span>
-      <p style="font-size:13.5px;font-weight:600;color:#0f172a;margin:4px 0 0;line-height:1.4;">Claude for Legal Counsel</p>
-    </a>
-      <a href="../legal.html" style="display:block;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;text-decoration:none;background:#fff;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e5e7eb'">
-      <p style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#9ca3af;margin:0 0 4px;">All Legal Tools</p>
-      <p style="font-size:14px;font-weight:600;color:#111111;margin:0;line-height:1.4;">All AI tools for legal counsel</p>
-    </a>
 </div>
-
-  <!-- What Most Reviews Miss -->
-  <h2 class="font-heading" style="font-size:28px;margin:0 0 14px;">What Most Reviews Miss</h2>
-  <div style="display:flex;flex-direction:column;gap:12px;margin:0 0 16px;">
-    <div style="border:1px solid #e5e7eb;border-radius:8px;padding:16px;">
-      <h4 style="font-size:15px;font-weight:700;color:#0f172a;margin:0 0 6px;">Workspace context is the real differentiator</h4>
-      <p style="font-size:14px;color:#374151;margin:0;line-height:1.6;">Gemini looks average until you point it at the exact thread, document, or notes that created the problem. Most reviewers test it as a standalone chatbot. Legal teams who route Gmail threads and Drive documents through Gemini see faster turnaround because the input quality is already high and structured.</p>
-    </div>
-    <div style="border:1px solid #e5e7eb;border-radius:8px;padding:16px;">
-      <h4 style="font-size:15px;font-weight:700;color:#0f172a;margin:0 0 6px;">Structure beats brilliance in legal work</h4>
-      <p style="font-size:14px;color:#374151;margin:0;line-height:1.6;">A reliable checklist from Gemini saves more time than a polished analytical paragraph. The best legal use of Gemini is producing structured outputs: issue lists, clause tables, next-step plans. Prose that sounds smart but is hard to verify creates more risk than it removes.</p>
-    </div>
-    <div style="border:1px solid #e5e7eb;border-radius:8px;padding:16px;">
-      <h4 style="font-size:15px;font-weight:700;color:#0f172a;margin:0 0 6px;">Verification time is the hidden cost</h4>
-      <p style="font-size:14px;color:#374151;margin:0;line-height:1.6;">The more confident Gemini sounds, the more careful the review needs to be. Polished AI output tends to lower the reviewer's guard. Building explicit verification steps into every Gemini workflow, not treating them as optional, is what separates safe AI use from risky AI use in legal practice.</p>
-    </div>
-  </div>
-  <div style="background:#eff6ff;border-radius:8px;padding:16px 20px;margin:0 0 28px;">
-    <p style="font-size:14px;color:#1e40af;line-height:1.7;margin:0;font-style:italic;">"Run Gemini at the start of a matter, before opinions form. Ask for missing facts and a clean plan. Then verify everything that touches law and treat the output as a checklist, not an answer."</p>
-  </div>
-
-
-  <div class="author-card">
-    <div class="author-avatar"><img src="../author.svg" width="48" height="48" alt="Richard Migliorisi, Founder of AI Tools for Pros" style="border-radius:50%;display:block;"></div>
-    <div>
-      <div class="author-name">Richard Migliorisi <a href="https://www.linkedin.com/in/richardmigliorisi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
-      <div class="author-title">Founder, AI Tools for Pros &nbsp;&middot;&nbsp; Fact-checked by Ryan Cooper <a href="https://www.linkedin.com/in/ryan-cooper-nyc/" target="_blank" rel="noopener noreferrer" aria-label="Ryan Cooper LinkedIn" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
-      <div class="author-bio">Richard Migliorisi is an SEO and organic growth leader with 8+ years of experience building search into a primary revenue channel in competitive markets. He most recently led SEO, content, and web operations at The Game Day, helping drive the site from zero to nearly $10M in web revenue in under three years. He built AI Tools for Pros to give working professionals honest, independent assessments of AI tools, without sponsored placements or vendor influence.</div>
-    </div>
-  </div>
-
+</div>
+<!-- Sources Checked -->
+<h2 class="font-heading" style="font-size:28px;margin:28px 0 14px;">Sources Checked</h2>
+<div style="display:flex;flex-direction:column;gap:14px;margin:0 0 32px;">
+<div style="display:flex;align-items:flex-start;gap:14px;">
+<span style="flex-shrink:0;width:28px;height:28px;background:#dbeafe;color:#2563eb;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">1</span>
+<div style="font-size:14px;color:#333333;line-height:1.6;"><strong>Google</strong>. Gemini Help Center, core features and product behavior</div>
+</div>
+<div style="display:flex;align-items:flex-start;gap:14px;">
+<span style="flex-shrink:0;width:28px;height:28px;background:#dbeafe;color:#2563eb;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">2</span>
+<div style="font-size:14px;color:#333333;line-height:1.6;"><strong>Google</strong>. Gemini for Workspace overview. Workspace integration claims</div>
+</div>
+<div style="display:flex;align-items:flex-start;gap:14px;">
+<span style="flex-shrink:0;width:28px;height:28px;background:#dbeafe;color:#2563eb;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">3</span>
+<div style="font-size:14px;color:#333333;line-height:1.6;"><strong>Google</strong>. Privacy and data handling pages for Gemini, data use and retention</div>
+</div>
+<div style="display:flex;align-items:flex-start;gap:14px;">
+<span style="flex-shrink:0;width:28px;height:28px;background:#dbeafe;color:#2563eb;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">4</span>
+<div style="font-size:14px;color:#333333;line-height:1.6;"><strong>ABA and state bar guidance</strong>. AI technology competence and confidentiality obligations for legal professionals</div>
+</div>
+<div style="display:flex;align-items:flex-start;gap:14px;">
+<span style="flex-shrink:0;width:28px;height:28px;background:#dbeafe;color:#2563eb;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;">5</span>
+<div style="font-size:14px;color:#333333;line-height:1.6;"><strong>Google</strong>. Security and compliance documentation for Workspace plans, admin controls</div>
+</div>
+</div>
+<!-- Related Guides -->
+<h2 class="font-heading" style="font-size:28px;margin:0 0 14px;">Related Guides</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:0 0 32px;">
+<a href="/gemini/" onmouseout="this.style.borderColor='#e5e7eb'" onmouseover="this.style.borderColor='#2563eb'" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;display:block;transition:border-color .15s;">
+<span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;">gemini</span>
+<p style="font-size:13.5px;font-weight:600;color:#0f172a;margin:4px 0 0;line-height:1.4;">Google Gemini for Professionals</p>
+</a>
+<a href="/gemini/finance/" onmouseout="this.style.borderColor='#e5e7eb'" onmouseover="this.style.borderColor='#2563eb'" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;display:block;transition:border-color .15s;">
+<span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;">gemini</span>
+<p style="font-size:13.5px;font-weight:600;color:#0f172a;margin:4px 0 0;line-height:1.4;">Google Gemini for Finance Professionals</p>
+</a>
+<a href="/gemini/real-estate/" onmouseout="this.style.borderColor='#e5e7eb'" onmouseover="this.style.borderColor='#2563eb'" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;display:block;transition:border-color .15s;">
+<span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;">gemini</span>
+<p style="font-size:13.5px;font-weight:600;color:#0f172a;margin:4px 0 0;line-height:1.4;">Google Gemini for Real Estate Agents</p>
+</a>
+<a href="/chatgpt/legal/" onmouseout="this.style.borderColor='#e5e7eb'" onmouseover="this.style.borderColor='#2563eb'" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;display:block;transition:border-color .15s;">
+<span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;">chatgpt</span>
+<p style="font-size:13.5px;font-weight:600;color:#0f172a;margin:4px 0 0;line-height:1.4;">ChatGPT for Legal Counsel</p>
+</a>
+<a href="/claude/legal/" onmouseout="this.style.borderColor='#e5e7eb'" onmouseover="this.style.borderColor='#2563eb'" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;display:block;transition:border-color .15s;">
+<span style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2563eb;">claude</span>
+<p style="font-size:13.5px;font-weight:600;color:#0f172a;margin:4px 0 0;line-height:1.4;">Claude for Legal Counsel</p>
+</a>
+<a href="/legal/" onmouseout="this.style.borderColor='#e5e7eb'" onmouseover="this.style.borderColor='#2563eb'" style="display:block;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;text-decoration:none;background:#fff;transition:border-color 0.15s;">
+<p style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#9ca3af;margin:0 0 4px;">All Legal Tools</p>
+<p style="font-size:14px;font-weight:600;color:#111111;margin:0;line-height:1.4;">All AI tools for legal counsel</p>
+</a>
+</div>
+<!-- What Most Reviews Miss -->
+<h2 class="font-heading" style="font-size:28px;margin:0 0 14px;">What Most Reviews Miss</h2>
+<div style="display:flex;flex-direction:column;gap:12px;margin:0 0 16px;">
+<div style="border:1px solid #e5e7eb;border-radius:8px;padding:16px;">
+<h4 style="font-size:15px;font-weight:700;color:#0f172a;margin:0 0 6px;">Workspace context is the real differentiator</h4>
+<p style="font-size:14px;color:#374151;margin:0;line-height:1.6;">Gemini looks average until you point it at the exact thread, document, or notes that created the problem. Most reviewers test it as a standalone chatbot. Legal teams who route Gmail threads and Drive documents through Gemini see faster turnaround because the input quality is already high and structured.</p>
+</div>
+<div style="border:1px solid #e5e7eb;border-radius:8px;padding:16px;">
+<h4 style="font-size:15px;font-weight:700;color:#0f172a;margin:0 0 6px;">Structure beats brilliance in legal work</h4>
+<p style="font-size:14px;color:#374151;margin:0;line-height:1.6;">A reliable checklist from Gemini saves more time than a polished analytical paragraph. The best legal use of Gemini is producing structured outputs: issue lists, clause tables, next-step plans. Prose that sounds smart but is hard to verify creates more risk than it removes.</p>
+</div>
+<div style="border:1px solid #e5e7eb;border-radius:8px;padding:16px;">
+<h4 style="font-size:15px;font-weight:700;color:#0f172a;margin:0 0 6px;">Verification time is the hidden cost</h4>
+<p style="font-size:14px;color:#374151;margin:0;line-height:1.6;">The more confident Gemini sounds, the more careful the review needs to be. Polished AI output tends to lower the reviewer's guard. Building explicit verification steps into every Gemini workflow, not treating them as optional, is what separates safe AI use from risky AI use in legal practice.</p>
+</div>
+</div>
+<div style="background:#eff6ff;border-radius:8px;padding:16px 20px;margin:0 0 28px;">
+<p style="font-size:14px;color:#1e40af;line-height:1.7;margin:0;font-style:italic;">"Run Gemini at the start of a matter, before opinions form. Ask for missing facts and a clean plan. Then verify everything that touches law and treat the output as a checklist, not an answer."</p>
+</div>
+<div class="author-card">
+<div class="author-avatar"><img alt="Richard Migliorisi, Founder of AI Tools for Pros" height="48" src="../author.svg" style="border-radius:50%;display:block;" width="48"/></div>
+<div>
+<div class="author-name">Richard Migliorisi <a aria-label="LinkedIn" href="https://www.linkedin.com/in/richardmigliorisi/" rel="noopener noreferrer" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;" target="_blank"><svg fill="currentColor" height="13" viewbox="0 0 24 24" width="13"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a></div>
+<div class="author-title">Founder, AI Tools for Pros  ·  Fact-checked by Ryan Cooper <a aria-label="Ryan Cooper LinkedIn" href="https://www.linkedin.com/in/ryan-cooper-nyc/" rel="noopener noreferrer" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;" target="_blank"><svg fill="currentColor" height="13" viewbox="0 0 24 24" width="13"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a></div>
+<div class="author-bio">Richard Migliorisi is an SEO and organic growth leader with 8+ years of experience building search into a primary revenue channel in competitive markets. He most recently led SEO, content, and web operations at The Game Day, helping drive the site from zero to nearly $10M in web revenue in under three years. He built AI Tools for Pros to give working professionals honest, independent assessments of AI tools, without sponsored placements or vendor influence.</div>
+</div>
+</div>
 </main>
-
 <!-- Back to top -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:28px;right:28px;width:44px;height:44px;background:#2563eb;color:#fff;border:none;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 12px rgba(37,99,235,.35);z-index:99;display:flex;align-items:center;justify-content:center;" title="Back to top">&#8593;</button>
-
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:28px;right:28px;width:44px;height:44px;background:#2563eb;color:#fff;border:none;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 12px rgba(37,99,235,.35);z-index:99;display:flex;align-items:center;justify-content:center;" title="Back to top">↑</button>
 <!-- AUTHOR PROFILE CARD -->
 <section style="padding:48px 24px;background:#f9fafb;border-top:1px solid #e5e7eb;">
-  <div style="max-width:860px;margin:0 auto;">
-</section>
-
+<div style="max-width:860px;margin:0 auto;">
+</div></section>
 <footer style="background:#07091a;border-radius:28px 28px 0 0;padding:56px min(6.5rem,8vw);">
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:52px;">
-    <div>
-      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Directory</p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-        <li><a href="../legal.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Legal Counsel</a></li>
-        <li><a href="../architects.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Architects</a></li>
-        <li><a href="../physicians.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Physicians</a></li>
-        <li><a href="../engineers.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Engineers</a></li>
-        <li><a href="../finance.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Finance</a></li>
-        <li><a href="../creatives.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Creatives</a></li>
-      </ul>
-    </div>
-    <div>
-      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Company</p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-        <li><a href="../about-us.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">About</a></li>
-        <li><a href="../our-process.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Our Process</a></li>
-      </ul>
-    </div>
-    <div>
-      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Resources</p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-        <li><a href="../newsletter.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Newsletter</a></li>
-      </ul>
-    </div>
-    <div>
-      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Legal</p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-        <li><a href="../privacy-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Privacy Policy</a></li>
-        <li><a href="../cookie-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Cookie Policy</a></li>
-      </ul>
-    </div>
-  </div>
-  <div style="border-top:1px solid #111e38;margin-bottom:48px;"></div>
-  <div style="display:flex;align-items:center;justify-content:space-between;">
-    <div>
-      <p style="color:#1e2a45;font-size:11px;font-weight:500;margin:0 0 4px;letter-spacing:0.05em;opacity:0.6;">AI Tools for Pros</p>
-      <p class="font-heading" style="color:#2563EB;font-size:48px;font-weight:700;margin:0 0 10px;line-height:1;">2026.</p>
-      <p style="color:#4a5568;font-size:13px;margin:0;">Join 15,000+ professionals receiving our monthly tool audit.</p>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;">
-      <div style="position:relative;display:flex;align-items:center;">
-        <input type="email" placeholder="professional@email.com" style="background:#0d1228;color:#4a5568;font-size:13px;padding:13px 48px 13px 18px;border-radius:999px;border:1px solid #1a2444;outline:none;width:248px;font-family:'Inter',sans-serif;">
-        <div style="position:absolute;right:8px;width:28px;height:28px;background:#1a2444;border-radius:50%;display:flex;align-items:center;justify-content:center;">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="#4a5568" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-      </div>
-      <button style="background:#ffffff;color:#111111;font-size:13px;font-weight:500;padding:13px 24px;border-radius:999px;border:none;cursor:pointer;font-family:'Inter',sans-serif;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='#ffffff'">Subscribe</button>
-    </div>
-  </div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:52px;">
+<div>
+<p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Directory</p>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+<li><a href="/legal/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Legal Counsel</a></li>
+<li><a href="/architects/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Architects</a></li>
+<li><a href="/physicians/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Physicians</a></li>
+<li><a href="/engineers/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Engineers</a></li>
+<li><a href="/finance/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Finance</a></li>
+<li><a href="/creatives/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Creatives</a></li>
+</ul>
+</div>
+<div>
+<p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Company</p>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+<li><a href="/about-us/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">About</a></li>
+<li><a href="/our-process/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Our Process</a></li>
+</ul>
+</div>
+<div>
+<p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Resources</p>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+<li><a href="/newsletter/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Legal</p>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+<li><a href="/privacy-policy/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Privacy Policy</a></li>
+<li><a href="/cookie-policy/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div style="border-top:1px solid #111e38;margin-bottom:48px;"></div>
+<div style="display:flex;align-items:center;justify-content:space-between;">
+<div>
+<p style="color:#1e2a45;font-size:11px;font-weight:500;margin:0 0 4px;letter-spacing:0.05em;opacity:0.6;">AI Tools for Pros</p>
+<p class="font-heading" style="color:#2563EB;font-size:48px;font-weight:700;margin:0 0 10px;line-height:1;">2026.</p>
+<p style="color:#4a5568;font-size:13px;margin:0;">Join 15,000+ professionals receiving our monthly tool audit.</p>
+</div>
+<div style="display:flex;align-items:center;gap:10px;">
+<div style="position:relative;display:flex;align-items:center;">
+<input placeholder="professional@email.com" style="background:#0d1228;color:#4a5568;font-size:13px;padding:13px 48px 13px 18px;border-radius:999px;border:1px solid #1a2444;outline:none;width:248px;font-family:'Inter',sans-serif;" type="email"/>
+<div style="position:absolute;right:8px;width:28px;height:28px;background:#1a2444;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+<svg fill="none" height="12" viewbox="0 0 12 12" width="12"><path d="M2 6h8M6 2l4 4-4 4" stroke="#4a5568" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+</div>
+<button onmouseout="this.style.background='#ffffff'" onmouseover="this.style.background='#f0f0f0'" style="background:#ffffff;color:#111111;font-size:13px;font-weight:500;padding:13px 24px;border-radius:999px;border:none;cursor:pointer;font-family:'Inter',sans-serif;">Subscribe</button>
+</div>
+</div>
 </footer>
-
 </body>
 </html>

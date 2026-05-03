@@ -341,17 +341,73 @@
       profDropdown.querySelectorAll('.submenu-item').forEach(function (item) {
         var triggerEl = item.querySelector('.submenu-trigger');
         var profName  = triggerEl ? triggerEl.firstChild.textContent.trim() : '';
+        var profHref  = triggerEl ? triggerEl.href : '';
         if (!profName) return;
         var subLinks = Array.from(item.querySelectorAll('.submenu a'));
         if (!subLinks.length) return;
 
-        // Each profession is a collapsed accordion — click to reveal tool links
-        var subAcc = makeAccordion(profName, 2);
-        profAcc.content.appendChild(subAcc.row);
-        subLinks.forEach(function (link) {
-          subAcc.content.appendChild(makeLink(link.href, link.textContent.trim(), true));
+        // Split row: underlined link to profession hub (left) + chevron toggle (right)
+        // Inline styles used deliberately to bypass Jetpack CSS bundle caching
+        var rowWrap = document.createElement('div');
+        rowWrap.className = 'mnav-prof-row';
+        rowWrap.style.cssText = 'display:flex;align-items:center;padding:0 8px 0 32px;';
+
+        var profLink = document.createElement('a');
+        profLink.href = profHref;
+        profLink.className = 'mnav-prof-link';
+        profLink.textContent = profName;
+        profLink.style.cssText = 'flex:1;padding:10px 0;font-family:Inter,sans-serif;font-size:14px;font-weight:500;color:#111111;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#d1d5db;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:color 0.1s,text-decoration-color 0.1s;';
+        profLink.addEventListener('mouseover', function () { this.style.color='#2563EB'; this.style.textDecorationColor='#2563EB'; });
+        profLink.addEventListener('mouseout',  function () { this.style.color='#111111'; this.style.textDecorationColor='#d1d5db'; });
+        profLink.addEventListener('click', function () {
+          closeMobileNav(document.getElementById('nav-burger'), wrapper);
         });
-        profAcc.content.appendChild(subAcc.content);
+        rowWrap.appendChild(profLink);
+
+        var toggleNs = 'http://www.w3.org/2000/svg';
+        var toggleBtn = document.createElement('button');
+        toggleBtn.type = 'button';
+        toggleBtn.className = 'mnav-prof-toggle';
+        toggleBtn.style.cssText = 'display:flex;align-items:center;justify-content:center;width:44px;height:44px;background:none;border:none;cursor:pointer;color:#9ca3af;border-radius:8px;flex-shrink:0;transition:background 0.1s,color 0.1s;';
+        toggleBtn.addEventListener('mouseover', function () { this.style.background='#f5f5f5'; this.style.color='#111111'; });
+        toggleBtn.addEventListener('mouseout',  function () { this.style.background='none';   this.style.color='#9ca3af'; });
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.setAttribute('aria-label', 'Show ' + profName + ' tools');
+
+        var tSvg = document.createElementNS(toggleNs, 'svg');
+        tSvg.setAttribute('width', '12');
+        tSvg.setAttribute('height', '12');
+        tSvg.setAttribute('viewBox', '0 0 12 12');
+        tSvg.setAttribute('fill', 'none');
+        tSvg.setAttribute('aria-hidden', 'true');
+        tSvg.setAttribute('class', 'mnav-chevron');
+        var tPath = document.createElementNS(toggleNs, 'path');
+        tPath.setAttribute('d', 'M2 4l4 4 4-4');
+        tPath.setAttribute('stroke', 'currentColor');
+        tPath.setAttribute('stroke-width', '1.8');
+        tPath.setAttribute('stroke-linecap', 'round');
+        tPath.setAttribute('stroke-linejoin', 'round');
+        tSvg.appendChild(tPath);
+        toggleBtn.appendChild(tSvg);
+        rowWrap.appendChild(toggleBtn);
+
+        var subContent = document.createElement('div');
+        subContent.className = 'mnav-acc-content';
+        subContent.hidden = true;
+
+        toggleBtn.addEventListener('click', function () {
+          var open = toggleBtn.getAttribute('aria-expanded') === 'true';
+          toggleBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+          subContent.hidden = open;
+          tSvg.classList.toggle('mnav-chevron-open', !open);
+        });
+
+        subLinks.forEach(function (link) {
+          subContent.appendChild(makeLink(link.href, link.textContent.trim(), true));
+        });
+
+        profAcc.content.appendChild(rowWrap);
+        profAcc.content.appendChild(subContent);
       });
 
       body.appendChild(profAcc.content);

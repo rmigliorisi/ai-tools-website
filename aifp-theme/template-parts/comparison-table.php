@@ -16,7 +16,7 @@ if (empty($tools)) return;
 <section style="padding:48px 0;max-width:760px;">
   <h2 class="font-heading" style="font-size:28px;font-weight:700;color:#111111;margin:0 0 24px;">How It Compares</h2>
   <div style="overflow-x:auto;">
-    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+    <table style="min-width:600px;width:auto;border-collapse:collapse;font-size:13px;">
       <thead>
         <tr style="border-bottom:2px solid #e5e7eb;">
           <th style="text-align:left;padding:12px 14px;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#9ca3af;">Tool</th>

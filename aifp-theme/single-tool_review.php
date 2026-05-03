@@ -113,8 +113,8 @@ $read_time = aifp_reading_time($post_id);
   <section style="padding:min(3rem,4vw) min(6.5rem,8vw);background:#ffffff;">
     <div style="max-width:760px;">
       <h2 style="font-size:26px;font-weight:700;color:#111111;margin:0 0 24px;">Pricing</h2>
-      <div style="border:1px solid #f0f0f0;border-radius:12px;overflow:hidden;">
-        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <div style="border:1px solid #f0f0f0;border-radius:12px;overflow-x:auto;">
+        <table style="min-width:520px;width:auto;border-collapse:collapse;font-size:13px;">
           <thead>
             <tr style="background:#f9fafb;border-bottom:1px solid #f0f0f0;">
               <th style="text-align:left;padding:12px 16px;font-weight:700;color:#111111;">Plan</th>

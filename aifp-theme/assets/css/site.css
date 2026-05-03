@@ -416,6 +416,47 @@ body.dark-mode th { color: #a0a0a0 !important; border-color: #222 !important; }
 }
 .mnav-acc-l2:hover { background: #f5f5f5; color: #111111; }
 
+/* Split profession row: clickable name (left) + chevron toggle (right) */
+.mnav-prof-row {
+  display: flex;
+  align-items: center;
+  padding: 0 8px 0 32px;
+  transition: background 0.1s;
+}
+.mnav-prof-row:has(.mnav-prof-link:hover),
+.mnav-prof-row:has(.mnav-prof-toggle:hover) { background: #f5f5f5; }
+.mnav-prof-link {
+  flex: 1;
+  padding: 10px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111111;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #d1d5db;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.1s, text-decoration-color 0.1s;
+}
+.mnav-prof-link:hover { color: #2563EB; text-decoration-color: #2563EB; }
+.mnav-prof-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: background 0.1s, color 0.1s;
+}
+.mnav-prof-toggle:hover { background: #ebebeb; color: #111111; }
+
 /* Chevron icon — rotates when open */
 .mnav-chevron { flex-shrink: 0; color: #9ca3af; transition: transform 0.2s; }
 .mnav-chevron-open { transform: rotate(180deg); }
@@ -464,6 +505,12 @@ body.dark-mode .mnav-sub-link      { color: #aaaaaa; }
 body.dark-mode .mnav-sub-link:hover { background: #1a1a1a; color: #e0e0e0; }
 body.dark-mode .mnav-acc-row       { color: #e0e0e0; }
 body.dark-mode .mnav-acc-row:hover { background: #1a1a1a; }
+body.dark-mode .mnav-prof-row:has(.mnav-prof-link:hover),
+body.dark-mode .mnav-prof-row:has(.mnav-prof-toggle:hover) { background: #1a1a1a; }
+body.dark-mode .mnav-prof-link     { color: #c0c0c0; text-decoration-color: #444; }
+body.dark-mode .mnav-prof-link:hover { color: #93c5fd; text-decoration-color: #93c5fd; }
+body.dark-mode .mnav-prof-toggle   { color: #666; }
+body.dark-mode .mnav-prof-toggle:hover { background: #222; color: #e0e0e0; }
 body.dark-mode .mnav-acc-l2        { color: #aaaaaa; }
 body.dark-mode .mnav-acc-l2:hover  { background: #1a1a1a; color: #e0e0e0; }
 body.dark-mode .mnav-chevron       { color: #555555; }
@@ -2027,4 +2074,158 @@ main[style] h1 {
 .pricing-table th { text-align: left; padding: 0.75rem 1rem; background: #f9fafb; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #6b7280; border-bottom: 2px solid #e5e7eb; }
 .pricing-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #f3f4f6; color: #374151; vertical-align: top; }
 .pricing-table tr:last-child td { border-bottom: none; }
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE UX OVERHAUL — Pixel 7 Pro / 390–430px viewport
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── 1. Tables: stop word-break from splitting every cell character-by-character ── */
+table, table td, table th {
+  word-break: normal !important;
+  hyphens: none !important;
+  overflow-wrap: break-word;
+}
+table td, table th { min-width: 72px; }
+
+/* ── 2. Scrollable tables on mobile ── */
+@media (max-width: 768px) {
+  /* Force tables wider than their container so overflow-x:auto wrappers can scroll */
+  main table {
+    min-width: 520px !important;
+    width: auto !important;
+  }
+  /* Migrated pricing_html / comparison_html: div wrapper uses overflow:hidden which
+     blocks scrolling — override to overflow-x:auto so the table can scroll out */
+  main [style*="overflow:hidden"]:has(table) {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+}
+
+/* ── 3. About-us author bio cards: 200px fixed column → stacked on mobile ── */
+@media (max-width: 768px) {
+  [style*="grid-template-columns:200px 1fr"] {
+    grid-template-columns: 1fr !important;
+    padding: 28px 24px !important;
+    gap: 24px !important;
+  }
+  /* Centre the avatar column when stacked */
+  [style*="grid-template-columns:200px 1fr"] > div:first-child {
+    align-items: center !important;
+  }
+}
+
+/* ── 4. About-us dark "Why we built this" card: 2-col → 1-col ── */
+@media (max-width: 768px) {
+  [style*="background:#07091a;border-radius:24px"] {
+    grid-template-columns: 1fr !important;
+    padding: 32px 24px !important;
+    gap: 28px !important;
+  }
+}
+
+/* ── 5. 3-column feature / value prop cards → 1-col on phones ── */
+@media (max-width: 640px) {
+  [style*="grid-template-columns:1fr 1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 900px) and (min-width: 641px) {
+  [style*="grid-template-columns:1fr 1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* ── 6. Our-process stats bar: wrap on mobile (class added in HTML) ── */
+@media (max-width: 640px) {
+  .stats-bar {
+    flex-wrap: wrap !important;
+    gap: 20px 32px !important;
+  }
+  .stats-bar .stats-divider { display: none !important; }
+}
+
+/* ── 7. Homepage tool cards: horizontal scroll on mobile ── */
+@media (max-width: 768px) {
+  .tools-grid {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 12px !important;
+    padding-bottom: 12px !important;
+    scrollbar-width: none !important;
+  }
+  .tools-grid::-webkit-scrollbar { display: none !important; }
+  .tools-grid > a {
+    flex: 0 0 260px !important;
+    min-width: 260px !important;
+    scroll-snap-align: start !important;
+  }
+}
+
+/* ── 8. Homepage profession cards: 2-col on tablet, 1-col on small phones ── */
+@media (max-width: 768px) {
+  .professions-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+  }
+}
+@media (max-width: 440px) {
+  .professions-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── 9. Section horizontal padding: reduce for pages with large inline padding ── */
+@media (max-width: 600px) {
+  section[style*="padding"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* ── 10. Headings inside narrow columns: prevent character-level overflow ── */
+@media (max-width: 600px) {
+  main h1, main h2, main h3 {
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+}
 .pricing-table .tier-name { font-weight: 600; color: #111111; }
+
+/* ── 11. Newsletter form: stack vertically on mobile ── */
+@media (max-width: 600px) {
+  .newsletter-form-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+  .newsletter-input-wrap {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .newsletter-form-row button {
+    width: 100% !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* ── 12. 3-col repeat() grids → 1-col on mobile ── */
+@media (max-width: 640px) {
+  [style*="grid-template-columns: repeat(3, 1fr)"],
+  [style*="grid-template-columns:repeat(3,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── 13. Dark CTA box: reduce padding + stack form on mobile ── */
+@media (max-width: 600px) {
+  [style*="background: #111111; border-radius: 20px"],
+  [style*="background:#111111;border-radius:20px"] {
+    padding: 36px 24px !important;
+  }
+}

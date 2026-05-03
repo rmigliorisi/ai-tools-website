@@ -1,26 +1,26 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Midjourney for Architects — Visual Concept Exploration | AI Tools for Pros</title>
-  <meta name="description" content="Midjourney for architects: how to use AI image generation for design direction exploration, mood boards, and client presentation imagery before committing to full renders.">
-  <meta property="og:title" content="Midjourney for Architects — Visual Concept Exploration Before the First Render">
-  <meta property="og:description" content="Midjourney is the only AI tool in the architects' stack that generates images. Here is how to use it for design direction, mood boards, and client presentations.">
-  <meta property="og:image" content="https://aitoolsforpros.com/og-image.jpg">
-  <meta property="og:type" content="article">
-  <link rel="canonical" href="https://aitoolsforpros.com/midjourney/architects.html">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Midjourney for Architects — Visual Concept Exploration | AI Tools for Pros</title>
+<meta content="Midjourney for architects: how to use AI image generation for design direction exploration, mood boards, and client presentation imagery before committing to full renders." name="description"/>
+<meta content="Midjourney for Architects — Visual Concept Exploration Before the First Render" property="og:title"/>
+<meta content="Midjourney is the only AI tool in the architects' stack that generates images. Here is how to use it for design direction, mood boards, and client presentations." property="og:description"/>
+<meta content="https://aitoolsforpros.com/og-image.jpg" property="og:image"/>
+<meta content="article" property="og:type"/>
+<link href="https://aitoolsforpros.com/midjourney/architects.html" rel="canonical"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&amp;family=Inter:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<script>
     tailwind.config = {
       theme: { extend: { fontFamily: { body: ['Inter','sans-serif'], heading: ['Cardo','serif'] } } }
     }
   </script>
-  <style>
+<style>
     *, *::before, *::after { box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #111111; margin: 0; padding: 0; }
     .font-heading { font-family: 'Cardo', serif; }
@@ -52,8 +52,8 @@
     .read-guide-link:hover { color: #2563eb; }
     .source-badge { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; background: #dbeafe; color: #2563eb; font-size: 11px; font-weight: 700; border-radius: 50%; flex-shrink: 0; }
   </style>
-  <link rel="stylesheet" href="../style.css">
-  <script type="application/ld+json">
+<link href="../style.css" rel="stylesheet"/>
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -111,591 +111,535 @@
     ]
   }
   </script>
-  <script src="../site.js" defer></script>
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<script defer="" src="../site.js"></script>
+<link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
 </head>
 <body>
-
 <!-- ── Navigation ── -->
 <!-- NAV -->
 <nav style="padding:18px min(2rem,8vw);position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;justify-content:space-between;">
-  <a href="../index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-    <img src="../logo.svg" width="32" height="32" alt="AI Tools for Pros" style="border-radius:8px;display:block;">
-    <span style="font-size:13px;font-weight:500;color:#111111;">AI Tools for Pros</span>
-  </a>
-  <div id="nav-desktop" style="display:flex;align-items:center;gap:36px;">
-    <a href="../our-process.html" class="nav-link">Our Process</a>
-    <div class="nav-dropdown">
-      <span class="nav-link-caret">AI Tools <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <div class="dropdown-menu">
-        <a href="../chatgpt.html" class="dropdown-item">ChatGPT</a>
-        <a href="../claude.html" class="dropdown-item">Claude</a>
-        <a href="../perplexity.html" class="dropdown-item">Perplexity AI</a>
-        <a href="../gemini.html" class="dropdown-item">Google Gemini</a>
-        <a href="../copilot.html" class="dropdown-item">Microsoft Copilot</a>
-        <a href="../midjourney.html" class="dropdown-item">Midjourney</a>
-        <a href="../cursor.html" class="dropdown-item">Cursor</a>
-        <a href="../notion-ai.html" class="dropdown-item">Notion AI</a>
-        <a href="../grammarly.html" class="dropdown-item">Grammarly</a>
-        <a href="../otter.html" class="dropdown-item">Otter.ai</a>
-      </div>
-    </div>
-    <div class="nav-dropdown">
-      <span class="nav-link-caret">Professions <svg width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <div class="dropdown-menu">
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../legal.html">Legal Counsel <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/legal.html">ChatGPT</a>
-            <a href="../claude/legal.html">Claude</a>
-            <a href="../perplexity/legal.html">Perplexity AI</a>
-            <a href="../gemini/legal.html">Google Gemini</a>
-            <a href="../copilot/legal.html">Microsoft Copilot</a>
-            <a href="../grammarly/legal.html">Grammarly</a>
-            <a href="../notion-ai/legal.html">Notion AI</a>
-          </div>
-        </div>
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../physicians.html">Physicians <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/physicians.html">ChatGPT</a>
-            <a href="../claude/physicians.html">Claude</a>
-            <a href="../perplexity/physicians.html">Perplexity AI</a>
-            <a href="../copilot/physicians.html">Microsoft Copilot</a>
-            <a href="../otter/physicians.html">Otter.ai</a>
-          </div>
-        </div>
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../real-estate.html">Real Estate <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/real-estate.html">ChatGPT</a>
-            <a href="../claude/real-estate.html">Claude</a>
-            <a href="../gemini/real-estate.html">Google Gemini</a>
-            <a href="../copilot/real-estate.html">Microsoft Copilot</a>
-            <a href="../grammarly/real-estate.html">Grammarly</a>
-          </div>
-        </div>
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../engineers.html">Engineers <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/engineers.html">ChatGPT</a>
-            <a href="../claude/engineers.html">Claude</a>
-            <a href="../cursor/engineers.html">Cursor</a>
-            <a href="../copilot/engineers.html">Microsoft Copilot</a>
-            <a href="../notion-ai/engineers.html">Notion AI</a>
-          </div>
-        </div>
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../finance.html">Finance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/finance.html">ChatGPT</a>
-            <a href="../claude/finance.html">Claude</a>
-            <a href="../perplexity/finance.html">Perplexity AI</a>
-            <a href="../copilot/finance.html">Microsoft Copilot</a>
-            <a href="../gemini/finance.html">Google Gemini</a>
-          </div>
-        </div>
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../insurance.html">Insurance <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/insurance.html">ChatGPT</a>
-            <a href="../claude/insurance.html">Claude</a>
-            <a href="../copilot/insurance.html">Microsoft Copilot</a>
-            <a href="../perplexity/insurance.html">Perplexity AI</a>
-            <a href="../grammarly/insurance.html">Grammarly</a>
-          </div>
-        </div>
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../architects.html">Architects <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/architects.html">ChatGPT</a>
-            <a href="../claude/architects.html">Claude</a>
-            <a href="../gemini/architects.html">Google Gemini</a>
-            <a href="../midjourney/architects.html">Midjourney</a>
-          </div>
-        </div>
-        <div class="submenu-item">
-          <a class="submenu-trigger" href="../creatives.html">Creatives <svg width="5" height="8" viewBox="0 0 5 8" fill="none"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <div class="submenu">
-            <a href="../chatgpt/creatives.html">ChatGPT</a>
-            <a href="../claude/creatives.html">Claude</a>
-            <a href="../midjourney/creatives.html">Midjourney</a>
-            <a href="../grammarly/creatives.html">Grammarly</a>
-            <a href="../notion-ai/creatives.html">Notion AI</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a href="../newsletter.html" class="nav-link">Newsletter</a>
-  </div>
+<a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+<img alt="AI Tools for Pros" height="32" src="../logo.svg" style="border-radius:8px;display:block;" width="32"/>
+<span style="font-size:13px;font-weight:500;color:#111111;">AI Tools for Pros</span>
+</a>
+<div id="nav-desktop" style="display:flex;align-items:center;gap:36px;">
+<a class="nav-link" href="/our-process/">Our Process</a>
+<div class="nav-dropdown">
+<span class="nav-link-caret">AI Tools <svg fill="none" height="5" viewbox="0 0 8 5" width="8"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/chatgpt/">ChatGPT</a>
+<a class="dropdown-item" href="/claude/">Claude</a>
+<a class="dropdown-item" href="/perplexity/">Perplexity AI</a>
+<a class="dropdown-item" href="/gemini/">Google Gemini</a>
+<a class="dropdown-item" href="/copilot/">Microsoft Copilot</a>
+<a class="dropdown-item" href="/midjourney/">Midjourney</a>
+<a class="dropdown-item" href="/cursor/">Cursor</a>
+<a class="dropdown-item" href="/notion-ai/">Notion AI</a>
+<a class="dropdown-item" href="/grammarly/">Grammarly</a>
+<a class="dropdown-item" href="/otter/">Otter.ai</a>
+</div>
+</div>
+<div class="nav-dropdown">
+<span class="nav-link-caret">Professions <svg fill="none" height="5" viewbox="0 0 8 5" width="8"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span>
+<div class="dropdown-menu">
+<div class="submenu-item">
+<a class="submenu-trigger" href="/legal/">Legal Counsel <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/legal/">ChatGPT</a>
+<a href="/claude/legal/">Claude</a>
+<a href="/perplexity/legal/">Perplexity AI</a>
+<a href="/gemini/legal/">Google Gemini</a>
+<a href="/copilot/legal/">Microsoft Copilot</a>
+<a href="/grammarly/legal/">Grammarly</a>
+<a href="/notion-ai/legal/">Notion AI</a>
+</div>
+</div>
+<div class="submenu-item">
+<a class="submenu-trigger" href="/physicians/">Physicians <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/physicians/">ChatGPT</a>
+<a href="/claude/physicians/">Claude</a>
+<a href="/perplexity/physicians/">Perplexity AI</a>
+<a href="/copilot/physicians/">Microsoft Copilot</a>
+<a href="/otter/physicians/">Otter.ai</a>
+</div>
+</div>
+<div class="submenu-item">
+<a class="submenu-trigger" href="/real-estate/">Real Estate <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/real-estate/">ChatGPT</a>
+<a href="/claude/real-estate/">Claude</a>
+<a href="/gemini/real-estate/">Google Gemini</a>
+<a href="/copilot/real-estate/">Microsoft Copilot</a>
+<a href="/grammarly/real-estate/">Grammarly</a>
+</div>
+</div>
+<div class="submenu-item">
+<a class="submenu-trigger" href="/engineers/">Engineers <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/engineers/">ChatGPT</a>
+<a href="/claude/engineers/">Claude</a>
+<a href="/cursor/engineers/">Cursor</a>
+<a href="/copilot/engineers/">Microsoft Copilot</a>
+<a href="/notion-ai/engineers/">Notion AI</a>
+</div>
+</div>
+<div class="submenu-item">
+<a class="submenu-trigger" href="/finance/">Finance <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/finance/">ChatGPT</a>
+<a href="/claude/finance/">Claude</a>
+<a href="/perplexity/finance/">Perplexity AI</a>
+<a href="/copilot/finance/">Microsoft Copilot</a>
+<a href="/gemini/finance/">Google Gemini</a>
+</div>
+</div>
+<div class="submenu-item">
+<a class="submenu-trigger" href="/insurance/">Insurance <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/insurance/">ChatGPT</a>
+<a href="/claude/insurance/">Claude</a>
+<a href="/copilot/insurance/">Microsoft Copilot</a>
+<a href="/perplexity/insurance/">Perplexity AI</a>
+<a href="/grammarly/insurance/">Grammarly</a>
+</div>
+</div>
+<div class="submenu-item">
+<a class="submenu-trigger" href="/architects/">Architects <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/architects/">ChatGPT</a>
+<a href="/claude/architects/">Claude</a>
+<a href="/gemini/architects/">Google Gemini</a>
+<a href="/midjourney/architects/">Midjourney</a>
+</div>
+</div>
+<div class="submenu-item">
+<a class="submenu-trigger" href="/creatives/">Creatives <svg fill="none" height="8" viewbox="0 0 5 8" width="5"><path d="M1 1l3 3-3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a>
+<div class="submenu">
+<a href="/chatgpt/creatives/">ChatGPT</a>
+<a href="/claude/creatives/">Claude</a>
+<a href="/midjourney/creatives/">Midjourney</a>
+<a href="/grammarly/creatives/">Grammarly</a>
+<a href="/notion-ai/creatives/">Notion AI</a>
+</div>
+</div>
+</div>
+</div>
+<a class="nav-link" href="/newsletter/">Newsletter</a>
+</div>
 </nav>
-
 <!-- ── Page Content ── -->
 <div class="page-wrapper">
 <div class="container">
-
-  <!-- Breadcrumb -->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="../index.html">Home</a>
-    <span>›</span>
-    <a href="../midjourney.html">Midjourney</a>
-    <span>›</span>
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="breadcrumb">
+<a href="/">Home</a>
+<span>›</span>
+<a href="/midjourney/">Midjourney</a>
+<span>›</span>
     Architects
   </nav>
-
-  <!-- Tool Badge -->
-  <div class="tool-badge">
-    <span>&#127775;</span> Midjourney
+<!-- Tool Badge -->
+<div class="tool-badge">
+<span>🌟</span> Midjourney
   </div>
-
-  <!-- H1 -->
-  <h1>Midjourney for Architects: Visual Concept Exploration Before the First Render (2026)</h1>
-  <p style="font-size:1.1rem; color:#4b5563; margin-bottom:1.25rem;">The only AI tool in the architects' stack that generates images. How to use it for design direction, mood boards, and client presentations before committing to a full 3D render.</p>
-
-  <!-- Meta Row -->
-  <div class="meta-row">
-    <span class="verdict-badge-specialized">Specialized Tool</span>
-    <span>March 19, 2026</span>
-    <span>&#183;</span>
-    <span>9 min read</span>
-  </div>
-
-  <p style="font-size:13px;color:#636363;margin:4px 0 0;">By <strong style="color:#111111;font-weight:600;">Richard Migliorisi</strong><a href="https://www.linkedin.com/in/richardmigliorisi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>&nbsp;&middot;&nbsp;Fact-checked by <strong style="color:#111111;font-weight:600;">Ryan Cooper</strong><a href="https://www.linkedin.com/in/ryan-cooper-nyc/" target="_blank" rel="noopener noreferrer" aria-label="Ryan Cooper LinkedIn" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>&nbsp;&middot;&nbsp;March 19, 2026</p>
-
-  <!-- ── Consistency Blocks ── -->
-  <div class="consistency-blocks">
-
-    <div class="c-block">
-      <div class="c-block-label">Bottom Line</div>
-      <p>Midjourney is the only AI tool in most architects' stacks that generates images. Its value is not producing final renderings, it is exploring visual direction across dozens of options before a single model is built or render commissioned.</p>
-    </div>
-
-    <div class="c-block" style="background:#f5f3ff;border-left-color:#7c3aed;">
-      <div class="c-block-label">Key Takeaway</div>
-      <p>Architects who get the most from Midjourney use it early: during schematic design, before committing to a direction, to generate five visual interpretations of a design brief and show clients the range of what is possible.</p>
-    </div>
-
-    <div class="c-block-grid">
-      <div class="c-block-green">
-        <div class="c-block-label">Best For</div>
-        <p>Design direction exploration, mood board generation, client presentation imagery, pre-production visual reference for photography, and materiality studies during schematic design</p>
-      </div>
-      <div class="c-block-red">
-        <div class="c-block-label">Avoid If</div>
-        <p>You need technical drawings, accurate floor plans, BIM documentation, or images representing a specific real site from survey data. Midjourney cannot produce accurate architectural documents</p>
-      </div>
-    </div>
-
-    <div class="mini-workflow">
-      <div class="c-block-label">Mini Workflow</div>
-      <div class="workflow-steps">
-        <span class="workflow-step">Write design brief summary</span>
-        <span class="workflow-arrow">&#8594;</span>
-        <span class="workflow-step">Generate 5 direction prompts</span>
-        <span class="workflow-arrow">&#8594;</span>
-        <span class="workflow-step">Upscale top candidates</span>
-        <span class="workflow-arrow">&#8594;</span>
-        <span class="workflow-step">Present to client for alignment</span>
-        <span class="workflow-arrow">&#8594;</span>
-        <span class="workflow-step">Commit to full render</span>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ── Quick Facts Bar ── -->
-  <div class="quick-facts">
-    <div class="qf-item">
-      <div class="qf-label">Made By</div>
-      <div class="qf-value">Midjourney, Inc.</div>
-    </div>
-    <div class="qf-item">
-      <div class="qf-label">Best For</div>
-      <div class="qf-value">Visual concept exploration</div>
-      <div class="qf-sub">Mood boards, design direction</div>
-    </div>
-    <div class="qf-item">
-      <div class="qf-label">Pricing</div>
-      <div class="qf-value">From ~$10/mo</div>
-      <div class="qf-sub"> midjourney.com</div>
-    </div>
-    <div class="qf-item">
-      <div class="qf-label">Commercial Use</div>
-      <div class="qf-value">Paid plans only</div>
-      <div class="qf-sub"> confirm license terms</div>
-    </div>
-  </div>
-
-  <hr class="section-divider">
-
-  <!-- ── What It Is ── -->
-  <div class="content-section">
-    <h2>What Midjourney Is (and Is Not) for Architects</h2>
-    <p>Midjourney is a text-to-image AI that generates photorealistic and stylized images from natural language descriptions. It is not a drafting tool, a BIM platform, or a rendering engine in the conventional sense. It cannot read a floor plan and render it. It cannot represent a specific site accurately from survey coordinates.</p>
-    <p>What it does exceptionally well is generate visual interpretations of design intent. Give it a well-written description of a building's character, material palette, and context, and it will produce multiple visual interpretations within seconds. The value for architects is breadth before commitment, exploring ten visual directions in a morning instead of commissioning one rendering and discovering it does not resonate with a client three weeks later.</p>
-    <p>For architects who do their own 3D modeling and rendering, Midjourney accelerates the schematic phase. For architects who outsource rendering, it reduces the number of expensive revision cycles by arriving at client alignment before the renderer is briefed.</p>
-  </div>
-
-  <hr class="section-divider">
-
-  <!-- ── Section 1: Design Direction Exploration ── -->
-  <div class="content-section">
-    <h2>Design Direction Exploration and Mood Boards</h2>
-    <p>The most common use case for Midjourney in architecture is generating visual options during schematic design. Rather than describing a design direction in words and hoping a client understands, you generate five images representing five interpretations of a brief and let the client point to what resonates.</p>
-
-    <h3>Generating Multiple Directions from a Single Brief</h3>
-    <p>Start with a description of the building's program, site context, and design intent, then vary the architectural character across separate prompts. A community library brief might generate one prompt emphasizing timber warmth and civic accessibility, another referencing Scandinavian minimalism, and a third exploring more institutional concrete and glass. Each direction takes under a minute. Showing clients three visual directions in the first presentation is a different conversation than describing them verbally.</p>
-    <p>The --ar parameter controls aspect ratio (use 16:9 for presentation slides, 3:2 for print). The --style and --stylize parameters shift between photorealistic and more illustrative or rendered aesthetics. Keep a library of tested parameter combinations for different presentation contexts.</p>
-
-    <div class="prompt-block">
-      <div class="prompt-label">Sample Prompt. Early-Stage Direction Exploration</div>
+<!-- H1 -->
+<h1>Midjourney for Architects: Visual Concept Exploration Before the First Render (2026)</h1>
+<p style="font-size:1.1rem; color:#4b5563; margin-bottom:1.25rem;">The only AI tool in the architects' stack that generates images. How to use it for design direction, mood boards, and client presentations before committing to a full 3D render.</p>
+<!-- Meta Row -->
+<div class="meta-row">
+<span class="verdict-badge-specialized">Specialized Tool</span>
+<span>March 19, 2026</span>
+<span>·</span>
+<span>9 min read</span>
+</div>
+<p style="font-size:13px;color:#636363;margin:4px 0 0;">By <strong style="color:#111111;font-weight:600;">Richard Migliorisi</strong><a aria-label="LinkedIn" href="https://www.linkedin.com/in/richardmigliorisi/" rel="noopener noreferrer" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;" target="_blank"><svg fill="currentColor" height="13" viewbox="0 0 24 24" width="13"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a> · Fact-checked by <strong style="color:#111111;font-weight:600;">Ryan Cooper</strong><a aria-label="Ryan Cooper LinkedIn" href="https://www.linkedin.com/in/ryan-cooper-nyc/" rel="noopener noreferrer" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;" target="_blank"><svg fill="currentColor" height="13" viewbox="0 0 24 24" width="13"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a> · March 19, 2026</p>
+<!-- ── Consistency Blocks ── -->
+<div class="consistency-blocks">
+<div class="c-block">
+<div class="c-block-label">Bottom Line</div>
+<p>Midjourney is the only AI tool in most architects' stacks that generates images. Its value is not producing final renderings, it is exploring visual direction across dozens of options before a single model is built or render commissioned.</p>
+</div>
+<div class="c-block" style="background:#f5f3ff;border-left-color:#7c3aed;">
+<div class="c-block-label">Key Takeaway</div>
+<p>Architects who get the most from Midjourney use it early: during schematic design, before committing to a direction, to generate five visual interpretations of a design brief and show clients the range of what is possible.</p>
+</div>
+<div class="c-block-grid">
+<div class="c-block-green">
+<div class="c-block-label">Best For</div>
+<p>Design direction exploration, mood board generation, client presentation imagery, pre-production visual reference for photography, and materiality studies during schematic design</p>
+</div>
+<div class="c-block-red">
+<div class="c-block-label">Avoid If</div>
+<p>You need technical drawings, accurate floor plans, BIM documentation, or images representing a specific real site from survey data. Midjourney cannot produce accurate architectural documents</p>
+</div>
+</div>
+<div class="mini-workflow">
+<div class="c-block-label">Mini Workflow</div>
+<div class="workflow-steps">
+<span class="workflow-step">Write design brief summary</span>
+<span class="workflow-arrow">→</span>
+<span class="workflow-step">Generate 5 direction prompts</span>
+<span class="workflow-arrow">→</span>
+<span class="workflow-step">Upscale top candidates</span>
+<span class="workflow-arrow">→</span>
+<span class="workflow-step">Present to client for alignment</span>
+<span class="workflow-arrow">→</span>
+<span class="workflow-step">Commit to full render</span>
+</div>
+</div>
+</div>
+<!-- ── Quick Facts Bar ── -->
+<div class="quick-facts">
+<div class="qf-item">
+<div class="qf-label">Made By</div>
+<div class="qf-value">Midjourney, Inc.</div>
+</div>
+<div class="qf-item">
+<div class="qf-label">Best For</div>
+<div class="qf-value">Visual concept exploration</div>
+<div class="qf-sub">Mood boards, design direction</div>
+</div>
+<div class="qf-item">
+<div class="qf-label">Pricing</div>
+<div class="qf-value">From ~$10/mo</div>
+<div class="qf-sub"> midjourney.com</div>
+</div>
+<div class="qf-item">
+<div class="qf-label">Commercial Use</div>
+<div class="qf-value">Paid plans only</div>
+<div class="qf-sub"> confirm license terms</div>
+</div>
+</div>
+<hr class="section-divider"/>
+<!-- ── What It Is ── -->
+<div class="content-section">
+<h2>What Midjourney Is (and Is Not) for Architects</h2>
+<p>Midjourney is a text-to-image AI that generates photorealistic and stylized images from natural language descriptions. It is not a drafting tool, a BIM platform, or a rendering engine in the conventional sense. It cannot read a floor plan and render it. It cannot represent a specific site accurately from survey coordinates.</p>
+<p>What it does exceptionally well is generate visual interpretations of design intent. Give it a well-written description of a building's character, material palette, and context, and it will produce multiple visual interpretations within seconds. The value for architects is breadth before commitment, exploring ten visual directions in a morning instead of commissioning one rendering and discovering it does not resonate with a client three weeks later.</p>
+<p>For architects who do their own 3D modeling and rendering, Midjourney accelerates the schematic phase. For architects who outsource rendering, it reduces the number of expensive revision cycles by arriving at client alignment before the renderer is briefed.</p>
+</div>
+<hr class="section-divider"/>
+<!-- ── Section 1: Design Direction Exploration ── -->
+<div class="content-section">
+<h2>Design Direction Exploration and Mood Boards</h2>
+<p>The most common use case for Midjourney in architecture is generating visual options during schematic design. Rather than describing a design direction in words and hoping a client understands, you generate five images representing five interpretations of a brief and let the client point to what resonates.</p>
+<h3>Generating Multiple Directions from a Single Brief</h3>
+<p>Start with a description of the building's program, site context, and design intent, then vary the architectural character across separate prompts. A community library brief might generate one prompt emphasizing timber warmth and civic accessibility, another referencing Scandinavian minimalism, and a third exploring more institutional concrete and glass. Each direction takes under a minute. Showing clients three visual directions in the first presentation is a different conversation than describing them verbally.</p>
+<p>The --ar parameter controls aspect ratio (use 16:9 for presentation slides, 3:2 for print). The --style and --stylize parameters shift between photorealistic and more illustrative or rendered aesthetics. Keep a library of tested parameter combinations for different presentation contexts.</p>
+<div class="prompt-block">
+<div class="prompt-label">Sample Prompt. Early-Stage Direction Exploration</div>
 exterior architectural photography, small public library, Pacific Northwest forest context, exposed heavy timber structure, large overhanging roof, floor-to-ceiling glass reading room, warm interior light, evening photography, cinematic quality --ar 16:9 --style raw --v 6
     </div>
-
-    <h3>Materiality Studies Before Specification</h3>
-    <p>Midjourney is useful for testing material combinations visually before writing specifications. Generate the same building massing with weathering steel, fiber cement board, and dark brick cladding in separate prompts to understand the visual weight of each option. This is not substitute for actual material samples, but it gives clients and design teams a shared visual reference for conversations that otherwise require significant verbal explanation.</p>
-  </div>
-
-  <hr class="section-divider">
-
-  <!-- ── Section 2: Client Presentation Imagery ── -->
-  <div class="content-section">
-    <h2>Client Presentation Imagery and Pre-Render Alignment</h2>
-    <p>Full architectural renderings are expensive and time-consuming. A single high-quality exterior render from a professional rendering firm or an in-house Lumion or V-Ray workflow can take days. Midjourney images are not replacements for those deliverables, but they serve a different purpose: getting client alignment on visual direction before the rendering investment begins.</p>
-
-    <h3>Briefing Clients in Schematic Design</h3>
-    <p>In schematic design presentations, Midjourney images work well alongside hand sketches and diagram boards to convey design intent. They are particularly effective for clients who struggle to read 2D drawings and need photorealistic reference to understand spatial character. Clearly label all Midjourney outputs as AI-generated concept references rather than architectural renderings, the visual quality can be mistaken for committed design decisions.</p>
-    <p>The workflow: draft the design intent narrative from the project brief, convert it into 3-4 Midjourney prompts, generate 4 images per prompt, select the top 2-3, and include them in a concept deck alongside plans and sections. This is a morning's work, not a week's.</p>
-
-    <div class="prompt-block">
-      <div class="prompt-label">Sample Prompt. Client Presentation Reference Image</div>
+<h3>Materiality Studies Before Specification</h3>
+<p>Midjourney is useful for testing material combinations visually before writing specifications. Generate the same building massing with weathering steel, fiber cement board, and dark brick cladding in separate prompts to understand the visual weight of each option. This is not substitute for actual material samples, but it gives clients and design teams a shared visual reference for conversations that otherwise require significant verbal explanation.</p>
+</div>
+<hr class="section-divider"/>
+<!-- ── Section 2: Client Presentation Imagery ── -->
+<div class="content-section">
+<h2>Client Presentation Imagery and Pre-Render Alignment</h2>
+<p>Full architectural renderings are expensive and time-consuming. A single high-quality exterior render from a professional rendering firm or an in-house Lumion or V-Ray workflow can take days. Midjourney images are not replacements for those deliverables, but they serve a different purpose: getting client alignment on visual direction before the rendering investment begins.</p>
+<h3>Briefing Clients in Schematic Design</h3>
+<p>In schematic design presentations, Midjourney images work well alongside hand sketches and diagram boards to convey design intent. They are particularly effective for clients who struggle to read 2D drawings and need photorealistic reference to understand spatial character. Clearly label all Midjourney outputs as AI-generated concept references rather than architectural renderings, the visual quality can be mistaken for committed design decisions.</p>
+<p>The workflow: draft the design intent narrative from the project brief, convert it into 3-4 Midjourney prompts, generate 4 images per prompt, select the top 2-3, and include them in a concept deck alongside plans and sections. This is a morning's work, not a week's.</p>
+<div class="prompt-block">
+<div class="prompt-label">Sample Prompt. Client Presentation Reference Image</div>
 architectural rendering style, contemporary single-family residence, sloped hillside site, cantilevered living space over landscape, floor-to-ceiling glazing, concrete base with warm cedar cladding, mountain context, overcast Pacific light, professional architectural photography --ar 3:2 --v 6
     </div>
-
-    <h3>Pre-Production Visual Reference for Architectural Photography</h3>
-    <p>Architects working with photographers on completed projects can use Midjourney to generate pre-production visual references, the kind of shot list imagery that communicates to a photographer what emotional quality and composition direction is desired. This is faster than pulling reference images from Dezeen and Archdaily and more specifically tailored to the building's character. Brief the photographer with Midjourney outputs showing lighting quality, angle, and framing intent.</p>
-  </div>
-
-  <hr class="section-divider">
-
-  <!-- ── Section 3: Brand Identity and Marketing ── -->
-  <div class="content-section">
-    <h2>Practice Marketing and Brand Identity Imagery</h2>
-    <p>Beyond project work, Midjourney is useful for generating imagery for architectural practice marketing, website backgrounds, social media content, and presentation templates that convey design sensibility without requiring completed project photography.</p>
-
-    <h3>Website and Social Media Imagery</h3>
-    <p>Small practices and sole proprietors often launch websites before accumulating a deep portfolio of photogenic completed work. Midjourney can generate high-quality architectural imagery consistent with a firm's design sensibility to fill that gap. Use it to create hero images, background textures, and atmospheric photography that communicates design values. Be transparent in any context where the imagery might be mistaken for completed work.</p>
-    <p>Generate a consistent visual language across multiple images by keeping architectural references, material descriptions, and lighting descriptors consistent across prompts. This creates a recognizable visual style rather than a collection of unrelated images.</p>
-
-    <div class="prompt-block">
-      <div class="prompt-label">Sample Prompt. Practice Identity Imagery</div>
+<h3>Pre-Production Visual Reference for Architectural Photography</h3>
+<p>Architects working with photographers on completed projects can use Midjourney to generate pre-production visual references, the kind of shot list imagery that communicates to a photographer what emotional quality and composition direction is desired. This is faster than pulling reference images from Dezeen and Archdaily and more specifically tailored to the building's character. Brief the photographer with Midjourney outputs showing lighting quality, angle, and framing intent.</p>
+</div>
+<hr class="section-divider"/>
+<!-- ── Section 3: Brand Identity and Marketing ── -->
+<div class="content-section">
+<h2>Practice Marketing and Brand Identity Imagery</h2>
+<p>Beyond project work, Midjourney is useful for generating imagery for architectural practice marketing, website backgrounds, social media content, and presentation templates that convey design sensibility without requiring completed project photography.</p>
+<h3>Website and Social Media Imagery</h3>
+<p>Small practices and sole proprietors often launch websites before accumulating a deep portfolio of photogenic completed work. Midjourney can generate high-quality architectural imagery consistent with a firm's design sensibility to fill that gap. Use it to create hero images, background textures, and atmospheric photography that communicates design values. Be transparent in any context where the imagery might be mistaken for completed work.</p>
+<p>Generate a consistent visual language across multiple images by keeping architectural references, material descriptions, and lighting descriptors consistent across prompts. This creates a recognizable visual style rather than a collection of unrelated images.</p>
+<div class="prompt-block">
+<div class="prompt-label">Sample Prompt. Practice Identity Imagery</div>
 architectural photography, minimalist residential interior, raw concrete ceiling, white oak millwork, indirect warm lighting, morning light through narrow high window, single orchid, editorial quality, muted tones --ar 16:9 --style raw --v 6
     </div>
-
-    <h3>Proposal and RFQ Visual Support</h3>
-    <p>Project qualification submittals and RFQ responses benefit from strong visual communication of design sensibility. For project types a firm has not yet built, Midjourney can generate representative imagery showing design capability in that building type. Again, label clearly as conceptual imagery, presenting AI-generated images as built project photography would be misleading in a professional context.</p>
-  </div>
-
-  <hr class="section-divider">
-
-  <!-- ── Limitations ── -->
-  <div class="content-section">
-    <h2>Where Midjourney Falls Short for Architects</h2>
-    <div class="limitations-grid">
-      <div class="limitation-card">
-        <div class="limitation-title">No Technical Drawing Capability</div>
-        <p>Midjourney cannot produce floor plans, sections, elevations, or any document with dimensional accuracy. Any geometry that appears in Midjourney outputs is illustrative only and should never be interpreted as design documentation.</p>
-      </div>
-      <div class="limitation-card">
-        <div class="limitation-title">Inconsistent Text and Signage Rendering</div>
-        <p>AI image generators struggle with readable text. Any signage, wayfinding, or dimensional annotation that appears in Midjourney output is typically garbled. Do not use Midjourney to generate imagery where legible text or numbers matter.</p>
-      </div>
-      <div class="limitation-card">
-        <div class="limitation-title">Cannot Represent a Specific Real Site</div>
-        <p>Midjourney generates plausible environments, not accurate representations of a specific address, neighboring context, or survey-defined site. For contextual rendering showing real surroundings, conventional rendering workflows are required.</p>
-      </div>
-      <div class="limitation-card">
-        <div class="limitation-title">Commercial Licensing Requires Verification</div>
-        <p> Commercial use of Midjourney outputs requires a paid subscription. Free tier (when available) typically restricts commercial rights. Confirm current licensing terms at midjourney.com before using outputs in client deliverables or marketing materials.</p>
-      </div>
-    </div>
-  </div>
-
-  <hr class="section-divider">
-
-  <!-- ── Comparison Table ── -->
-  <div class="content-section">
-    <h2>How Midjourney Compares for Architects</h2>
-    <div style="overflow-x:auto;">
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th>Tool</th>
-            <th>Primary Use for Architects</th>
-            <th>Generates Images</th>
-            <th>Context Window</th>
-            <th>Best Fit</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="../chatgpt/architects.html">ChatGPT</a></td>
-            <td>Specs, narratives, RFP writing</td>
-            <td>Limited (DALL-E)</td>
-            <td>128K tokens</td>
-            <td>Writing and documentation at volume</td>
-          </tr>
-          <tr>
-            <td><a href="../claude/architects.html">Claude</a></td>
-            <td>Large document review, RFP analysis</td>
-            <td>No</td>
-            <td>200K tokens</td>
-            <td>Full spec packages and lengthy documents</td>
-          </tr>
-          <tr>
-            <td><a href="../gemini/architects.html">Google Gemini</a></td>
-            <td>Google Workspace integration</td>
-            <td>Limited</td>
-            <td>1M tokens</td>
-            <td>G Suite firms, current materials research</td>
-          </tr>
-          <tr class="highlight-row">
-            <td>Midjourney</td>
-            <td>Visual concept exploration, mood boards</td>
-            <td>Yes, core capability</td>
-            <td>N/A (image tool)</td>
-            <td>Design direction before rendering commitment</td>
-          </tr>
-          <tr>
-            <td>Perplexity AI</td>
-            <td>Building code and materials research</td>
-            <td>No</td>
-            <td>Standard</td>
-            <td>Current sourced research with citations</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <hr class="section-divider">
-
-  <!-- ── Our Verdict ── -->
-  <div class="content-section">
-    <h2>Our Verdict</h2>
-    <p>Midjourney is a specialized tool with a specific, high-value role in the architectural design process. It is not a writing tool, a documentation tool, or a code research tool. It is the only AI in the stack that generates images, and that distinction matters more than any comparison of text generation quality.</p>
-    <p>The architects who get the most from Midjourney treat it as a front-end investment in client alignment. Every hour spent generating and selecting visual directions before a design is modeled and rendered is time not spent on expensive revision cycles after the fact. The tool does not replace architectural judgment, it gives that judgment a faster path to visual expression.</p>
-    <p>If image generation is not part of your current workflow and you do your own rendering, Midjourney is worth a one-month paid subscription to evaluate. If you outsource rendering and regularly arrive at alignment issues during revision, it is likely worth adding to the schematic design phase permanently.</p>
-  </div>
-
-  <hr class="section-divider">
-
-  <!-- ── FAQ ── -->
-  <div class="content-section">
-    <h2>Frequently Asked Questions</h2>
-    <ul class="faq-list" id="faq-list">
-
-      <li class="faq-item" itemscope itemtype="https://schema.org/Question">
-        <h3 style="margin:0;font-size:inherit;font-weight:inherit;"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)" itemprop="name">Can architects use Midjourney for client presentations?</button>
-        </h3>
-        <div class="faq-answer" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-          <div itemprop="text">Yes, many architects use Midjourney to generate mood boards and design direction imagery for early-stage client presentations before committing to full 3D renders. The images are useful for establishing visual vocabulary and design intent, though they should be clearly labeled as concept references rather than architectural renderings.</div>
-        </div>
-      </li>
-
-      <li class="faq-item" itemscope itemtype="https://schema.org/Question">
-        <h3 style="margin:0;font-size:inherit;font-weight:inherit;"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)" itemprop="name">Does Midjourney produce accurate architectural drawings or plans?</button>
-        </h3>
-        <div class="faq-answer" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-          <div itemprop="text">No, Midjourney generates photorealistic or stylized images but cannot produce accurate technical drawings, floor plans, sections, or construction documents. It is a visual concept exploration tool, not a drafting or BIM tool. Any structural or dimensional representation in Midjourney output should be treated as illustrative only.</div>
-        </div>
-      </li>
-
-      <li class="faq-item" itemscope itemtype="https://schema.org/Question">
-        <h3 style="margin:0;font-size:inherit;font-weight:inherit;"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)" itemprop="name">Is Midjourney output suitable for design review board submissions?</button>
-        </h3>
-        <div class="faq-answer" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-          <div itemprop="text">It depends on the jurisdiction and board. Some design review boards accept concept imagery to convey design intent and materiality, while others require accurate renderings or technical drawings. Midjourney images should always be supplemented with conventional documentation when used in formal submission contexts.</div>
-        </div>
-      </li>
-
-      <li class="faq-item" itemscope itemtype="https://schema.org/Question">
-        <h3 style="margin:0;font-size:inherit;font-weight:inherit;"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)" itemprop="name">How do architects control the architectural style in Midjourney outputs?</button>
-        </h3>
-        <div class="faq-answer" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-          <div itemprop="text">Yes, style control is possible through detailed prompts referencing specific architects, materials, context, and Midjourney parameters. Referencing architects like Tadao Ando, Zaha Hadid, or Renzo Piano shifts the visual direction significantly. The --style, --ar (aspect ratio), and --v (version) parameters also shape output. Consistent style requires building a library of tested prompts.</div>
-        </div>
-      </li>
-
-      <li class="faq-item" itemscope itemtype="https://schema.org/Question">
-        <h3 style="margin:0;font-size:inherit;font-weight:inherit;"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)" itemprop="name">Does Midjourney require a paid subscription for commercial architectural work?</button>
-        </h3>
-        <div class="faq-answer" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-          <div itemprop="text">Yes, commercial use of Midjourney-generated images generally requires a paid subscription. The free tier (when available) typically restricts commercial rights. Confirm current plan terms and commercial licensing requirements at midjourney.com before using outputs in client deliverables or marketing materials.</div>
-        </div>
-      </li>
-
-      <li class="faq-item" itemscope itemtype="https://schema.org/Question">
-        <h3 style="margin:0;font-size:inherit;font-weight:inherit;"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)" itemprop="name">Can Midjourney help with site context and urban design visualization?</button>
-        </h3>
-        <div class="faq-answer" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-          <div itemprop="text">Yes, with limitations. Midjourney can generate urban streetscape and site context imagery to communicate how a proposed building might feel within its environment. However, it cannot accurately represent a specific real-world site or existing neighboring buildings from survey data. Use it for visual character and scale studies rather than precise contextual documentation.</div>
-        </div>
-      </li>
-
-    </ul>
-  </div>
-
-  <hr class="section-divider">
-
-  <!-- ── Sources Checked ── -->
-  <div class="content-section">
-    <h2>Sources Checked</h2>
-    <ul class="sources-list">
-      <li class="source-item">
-        <span class="source-badge">1</span>
-        <span>Midjourney Documentation, official prompt parameters, subscription tiers, and commercial licensing terms</span>
-      </li>
-      <li class="source-item">
-        <span class="source-badge">2</span>
-        <span>Architectural Record, coverage of AI tools in architectural practice workflows</span>
-      </li>
-      <li class="source-item">
-        <span class="source-badge">3</span>
-        <span>Dezeen, reporting on AI image generation tools used in architecture and design</span>
-      </li>
-      <li class="source-item">
-        <span class="source-badge">4</span>
-        <span>AIA, guidance on AI tool use disclosures in professional architectural documentation</span>
-      </li>
-      <li class="source-item">
-        <span class="source-badge">5</span>
-        <span>Practitioner review, feedback from licensed architects using Midjourney in schematic design workflows</span>
-      </li>
-    </ul>
-  </div>
-
-  <hr class="section-divider">
-
-  <!-- ── What Most Reviews Miss ── -->
-  <div class="content-section">
-    <h2>What Most Reviews Miss</h2>
-    <div class="insight-cards">
-      <div class="insight-card">
-        <h3>The Value Is Exploration Width, Not Image Quality</h3>
-        <p>Reviews focus on whether Midjourney images look good. The actual value for architects is generating ten visual directions in a morning rather than one. Width of exploration before commitment is the product, not the final image quality of any individual output.</p>
-      </div>
-      <div class="insight-card">
-        <h3>It Changes the Client Conversation, Not Just the Output</h3>
-        <p>Showing clients three visual directions and asking which resonates is a different dynamic than presenting one concept and defending it. Midjourney makes design alignment a collaborative selection process rather than a one-directional presentation. That shift in dynamics is underreported.</p>
-      </div>
-      <div class="insight-card">
-        <h3>Prompt Quality Is a Learnable Skill with Compounding Returns</h3>
-        <p>Most architects get mediocre results from Midjourney initially because effective prompting requires learning the tool's vocabulary. Architects who invest two or three sessions in understanding parameter combinations and architectural references accumulate a library of reliable prompt templates that pays dividends on every subsequent project.</p>
-      </div>
-    </div>
-    <div class="insight-banner">
+<h3>Proposal and RFQ Visual Support</h3>
+<p>Project qualification submittals and RFQ responses benefit from strong visual communication of design sensibility. For project types a firm has not yet built, Midjourney can generate representative imagery showing design capability in that building type. Again, label clearly as conceptual imagery, presenting AI-generated images as built project photography would be misleading in a professional context.</p>
+</div>
+<hr class="section-divider"/>
+<!-- ── Limitations ── -->
+<div class="content-section">
+<h2>Where Midjourney Falls Short for Architects</h2>
+<div class="limitations-grid">
+<div class="limitation-card">
+<div class="limitation-title">No Technical Drawing Capability</div>
+<p>Midjourney cannot produce floor plans, sections, elevations, or any document with dimensional accuracy. Any geometry that appears in Midjourney outputs is illustrative only and should never be interpreted as design documentation.</p>
+</div>
+<div class="limitation-card">
+<div class="limitation-title">Inconsistent Text and Signage Rendering</div>
+<p>AI image generators struggle with readable text. Any signage, wayfinding, or dimensional annotation that appears in Midjourney output is typically garbled. Do not use Midjourney to generate imagery where legible text or numbers matter.</p>
+</div>
+<div class="limitation-card">
+<div class="limitation-title">Cannot Represent a Specific Real Site</div>
+<p>Midjourney generates plausible environments, not accurate representations of a specific address, neighboring context, or survey-defined site. For contextual rendering showing real surroundings, conventional rendering workflows are required.</p>
+</div>
+<div class="limitation-card">
+<div class="limitation-title">Commercial Licensing Requires Verification</div>
+<p> Commercial use of Midjourney outputs requires a paid subscription. Free tier (when available) typically restricts commercial rights. Confirm current licensing terms at midjourney.com before using outputs in client deliverables or marketing materials.</p>
+</div>
+</div>
+</div>
+<hr class="section-divider"/>
+<!-- ── Comparison Table ── -->
+<div class="content-section">
+<h2>How Midjourney Compares for Architects</h2>
+<div style="overflow-x:auto;">
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Tool</th>
+<th>Primary Use for Architects</th>
+<th>Generates Images</th>
+<th>Context Window</th>
+<th>Best Fit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/chatgpt/architects/">ChatGPT</a></td>
+<td>Specs, narratives, RFP writing</td>
+<td>Limited (DALL-E)</td>
+<td>128K tokens</td>
+<td>Writing and documentation at volume</td>
+</tr>
+<tr>
+<td><a href="/claude/architects/">Claude</a></td>
+<td>Large document review, RFP analysis</td>
+<td>No</td>
+<td>200K tokens</td>
+<td>Full spec packages and lengthy documents</td>
+</tr>
+<tr>
+<td><a href="/gemini/architects/">Google Gemini</a></td>
+<td>Google Workspace integration</td>
+<td>Limited</td>
+<td>1M tokens</td>
+<td>G Suite firms, current materials research</td>
+</tr>
+<tr class="highlight-row">
+<td>Midjourney</td>
+<td>Visual concept exploration, mood boards</td>
+<td>Yes, core capability</td>
+<td>N/A (image tool)</td>
+<td>Design direction before rendering commitment</td>
+</tr>
+<tr>
+<td>Perplexity AI</td>
+<td>Building code and materials research</td>
+<td>No</td>
+<td>Standard</td>
+<td>Current sourced research with citations</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr class="section-divider"/>
+<!-- ── Our Verdict ── -->
+<div class="content-section">
+<h2>Our Verdict</h2>
+<p>Midjourney is a specialized tool with a specific, high-value role in the architectural design process. It is not a writing tool, a documentation tool, or a code research tool. It is the only AI in the stack that generates images, and that distinction matters more than any comparison of text generation quality.</p>
+<p>The architects who get the most from Midjourney treat it as a front-end investment in client alignment. Every hour spent generating and selecting visual directions before a design is modeled and rendered is time not spent on expensive revision cycles after the fact. The tool does not replace architectural judgment, it gives that judgment a faster path to visual expression.</p>
+<p>If image generation is not part of your current workflow and you do your own rendering, Midjourney is worth a one-month paid subscription to evaluate. If you outsource rendering and regularly arrive at alignment issues during revision, it is likely worth adding to the schematic design phase permanently.</p>
+</div>
+<hr class="section-divider"/>
+<!-- ── FAQ ── -->
+<div class="content-section">
+<h2>Frequently Asked Questions</h2>
+<ul class="faq-list" id="faq-list">
+<li class="faq-item" itemscope="" itemtype="https://schema.org/Question">
+<h3 style="margin:0;font-size:inherit;font-weight:inherit;"><button aria-expanded="false" class="faq-question" itemprop="name" onclick="toggleFaq(this)">Can architects use Midjourney for client presentations?</button>
+</h3>
+<div class="faq-answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">Yes, many architects use Midjourney to generate mood boards and design direction imagery for early-stage client presentations before committing to full 3D renders. The images are useful for establishing visual vocabulary and design intent, though they should be clearly labeled as concept references rather than architectural renderings.</div>
+</div>
+</li>
+<li class="faq-item" itemscope="" itemtype="https://schema.org/Question">
+<h3 style="margin:0;font-size:inherit;font-weight:inherit;"><button aria-expanded="false" class="faq-question" itemprop="name" onclick="toggleFaq(this)">Does Midjourney produce accurate architectural drawings or plans?</button>
+</h3>
+<div class="faq-answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">No, Midjourney generates photorealistic or stylized images but cannot produce accurate technical drawings, floor plans, sections, or construction documents. It is a visual concept exploration tool, not a drafting or BIM tool. Any structural or dimensional representation in Midjourney output should be treated as illustrative only.</div>
+</div>
+</li>
+<li class="faq-item" itemscope="" itemtype="https://schema.org/Question">
+<h3 style="margin:0;font-size:inherit;font-weight:inherit;"><button aria-expanded="false" class="faq-question" itemprop="name" onclick="toggleFaq(this)">Is Midjourney output suitable for design review board submissions?</button>
+</h3>
+<div class="faq-answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">It depends on the jurisdiction and board. Some design review boards accept concept imagery to convey design intent and materiality, while others require accurate renderings or technical drawings. Midjourney images should always be supplemented with conventional documentation when used in formal submission contexts.</div>
+</div>
+</li>
+<li class="faq-item" itemscope="" itemtype="https://schema.org/Question">
+<h3 style="margin:0;font-size:inherit;font-weight:inherit;"><button aria-expanded="false" class="faq-question" itemprop="name" onclick="toggleFaq(this)">How do architects control the architectural style in Midjourney outputs?</button>
+</h3>
+<div class="faq-answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">Yes, style control is possible through detailed prompts referencing specific architects, materials, context, and Midjourney parameters. Referencing architects like Tadao Ando, Zaha Hadid, or Renzo Piano shifts the visual direction significantly. The --style, --ar (aspect ratio), and --v (version) parameters also shape output. Consistent style requires building a library of tested prompts.</div>
+</div>
+</li>
+<li class="faq-item" itemscope="" itemtype="https://schema.org/Question">
+<h3 style="margin:0;font-size:inherit;font-weight:inherit;"><button aria-expanded="false" class="faq-question" itemprop="name" onclick="toggleFaq(this)">Does Midjourney require a paid subscription for commercial architectural work?</button>
+</h3>
+<div class="faq-answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">Yes, commercial use of Midjourney-generated images generally requires a paid subscription. The free tier (when available) typically restricts commercial rights. Confirm current plan terms and commercial licensing requirements at midjourney.com before using outputs in client deliverables or marketing materials.</div>
+</div>
+</li>
+<li class="faq-item" itemscope="" itemtype="https://schema.org/Question">
+<h3 style="margin:0;font-size:inherit;font-weight:inherit;"><button aria-expanded="false" class="faq-question" itemprop="name" onclick="toggleFaq(this)">Can Midjourney help with site context and urban design visualization?</button>
+</h3>
+<div class="faq-answer" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">Yes, with limitations. Midjourney can generate urban streetscape and site context imagery to communicate how a proposed building might feel within its environment. However, it cannot accurately represent a specific real-world site or existing neighboring buildings from survey data. Use it for visual character and scale studies rather than precise contextual documentation.</div>
+</div>
+</li>
+</ul>
+</div>
+<hr class="section-divider"/>
+<!-- ── Sources Checked ── -->
+<div class="content-section">
+<h2>Sources Checked</h2>
+<ul class="sources-list">
+<li class="source-item">
+<span class="source-badge">1</span>
+<span>Midjourney Documentation, official prompt parameters, subscription tiers, and commercial licensing terms</span>
+</li>
+<li class="source-item">
+<span class="source-badge">2</span>
+<span>Architectural Record, coverage of AI tools in architectural practice workflows</span>
+</li>
+<li class="source-item">
+<span class="source-badge">3</span>
+<span>Dezeen, reporting on AI image generation tools used in architecture and design</span>
+</li>
+<li class="source-item">
+<span class="source-badge">4</span>
+<span>AIA, guidance on AI tool use disclosures in professional architectural documentation</span>
+</li>
+<li class="source-item">
+<span class="source-badge">5</span>
+<span>Practitioner review, feedback from licensed architects using Midjourney in schematic design workflows</span>
+</li>
+</ul>
+</div>
+<hr class="section-divider"/>
+<!-- ── What Most Reviews Miss ── -->
+<div class="content-section">
+<h2>What Most Reviews Miss</h2>
+<div class="insight-cards">
+<div class="insight-card">
+<h3>The Value Is Exploration Width, Not Image Quality</h3>
+<p>Reviews focus on whether Midjourney images look good. The actual value for architects is generating ten visual directions in a morning rather than one. Width of exploration before commitment is the product, not the final image quality of any individual output.</p>
+</div>
+<div class="insight-card">
+<h3>It Changes the Client Conversation, Not Just the Output</h3>
+<p>Showing clients three visual directions and asking which resonates is a different dynamic than presenting one concept and defending it. Midjourney makes design alignment a collaborative selection process rather than a one-directional presentation. That shift in dynamics is underreported.</p>
+</div>
+<div class="insight-card">
+<h3>Prompt Quality Is a Learnable Skill with Compounding Returns</h3>
+<p>Most architects get mediocre results from Midjourney initially because effective prompting requires learning the tool's vocabulary. Architects who invest two or three sessions in understanding parameter combinations and architectural references accumulate a library of reliable prompt templates that pays dividends on every subsequent project.</p>
+</div>
+</div>
+<div class="insight-banner">
       "Midjourney does not replace the judgment that goes into a design. It removes the constraint that used to limit how much visual territory you could explore before your budget ran out."
     </div>
-  </div>
-
-  <hr class="section-divider">
-
-  <!-- ── Author Card ── -->
-    <div class="author-card">
-    <div class="author-avatar"><img src="../author.svg" width="48" height="48" alt="Richard Migliorisi, Founder of AI Tools for Pros" style="border-radius:50%;display:block;"></div>
-    <div>
-      <div class="author-name">Richard Migliorisi <a href="https://www.linkedin.com/in/richardmigliorisi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
-      <div class="author-title">Founder, AI Tools for Pros &nbsp;&middot;&nbsp; Fact-checked by Ryan Cooper <a href="https://www.linkedin.com/in/ryan-cooper-nyc/" target="_blank" rel="noopener noreferrer" aria-label="Ryan Cooper LinkedIn" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
-      <div class="author-bio">Richard Migliorisi is an SEO and organic growth leader with 8+ years of experience building search into a primary revenue channel in competitive markets. He most recently led SEO, content, and web operations at The Game Day, helping drive the site from zero to nearly $10M in web revenue in under three years. He built AI Tools for Pros to give working professionals honest, independent assessments of AI tools, without sponsored placements or vendor influence.</div>
-    </div>
-  </div>
-
-  <!-- ── Related Guides ── -->
-  <div class="content-section">
-    <h2>Related Guides</h2>
-    <div class="related-grid">
-      <div class="related-card">
-        <div class="related-card-label">Hub Page</div>
-        <a href="../midjourney.html">Midjourney for Professionals: Full Review</a>
-      </div>
-      <div class="related-card">
-        <div class="related-card-label">Architects + ChatGPT</div>
-        <a href="../chatgpt/architects.html">ChatGPT for Architects</a>
-      </div>
-      <div class="related-card">
-        <div class="related-card-label">Architects + Claude</div>
-        <a href="../claude/architects.html">Claude for Architects</a>
-      </div>
-      <div class="related-card">
-        <div class="related-card-label">Architects + Google Gemini</div>
-        <a href="../gemini/architects.html">Google Gemini for Architects</a>
-      </div>
-        <a href="../architects.html" class="related-card">
-      <div class="rc-label">All Architects Tools</div>
-      <div class="rc-title">All AI tools for architects</div>
-      <span class="read-guide-link">View overview →</span>
-    </a>
 </div>
-  </div>
-
+<hr class="section-divider"/>
+<!-- ── Author Card ── -->
+<div class="author-card">
+<div class="author-avatar"><img alt="Richard Migliorisi, Founder of AI Tools for Pros" height="48" src="../author.svg" style="border-radius:50%;display:block;" width="48"/></div>
+<div>
+<div class="author-name">Richard Migliorisi <a aria-label="LinkedIn" href="https://www.linkedin.com/in/richardmigliorisi/" rel="noopener noreferrer" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;" target="_blank"><svg fill="currentColor" height="13" viewbox="0 0 24 24" width="13"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a></div>
+<div class="author-title">Founder, AI Tools for Pros  ·  Fact-checked by Ryan Cooper <a aria-label="Ryan Cooper LinkedIn" href="https://www.linkedin.com/in/ryan-cooper-nyc/" rel="noopener noreferrer" style="display:inline-flex;align-items:center;margin-left:4px;color:#0a66c2;text-decoration:none;vertical-align:middle;" target="_blank"><svg fill="currentColor" height="13" viewbox="0 0 24 24" width="13"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a></div>
+<div class="author-bio">Richard Migliorisi is an SEO and organic growth leader with 8+ years of experience building search into a primary revenue channel in competitive markets. He most recently led SEO, content, and web operations at The Game Day, helping drive the site from zero to nearly $10M in web revenue in under three years. He built AI Tools for Pros to give working professionals honest, independent assessments of AI tools, without sponsored placements or vendor influence.</div>
+</div>
+</div>
+<!-- ── Related Guides ── -->
+<div class="content-section">
+<h2>Related Guides</h2>
+<div class="related-grid">
+<div class="related-card">
+<div class="related-card-label">Hub Page</div>
+<a href="/midjourney/">Midjourney for Professionals: Full Review</a>
+</div>
+<div class="related-card">
+<div class="related-card-label">Architects + ChatGPT</div>
+<a href="/chatgpt/architects/">ChatGPT for Architects</a>
+</div>
+<div class="related-card">
+<div class="related-card-label">Architects + Claude</div>
+<a href="/claude/architects/">Claude for Architects</a>
+</div>
+<div class="related-card">
+<div class="related-card-label">Architects + Google Gemini</div>
+<a href="/gemini/architects/">Google Gemini for Architects</a>
+</div>
+<a class="related-card" href="/architects/">
+<div class="rc-label">All Architects Tools</div>
+<div class="rc-title">All AI tools for architects</div>
+<span class="read-guide-link">View overview →</span>
+</a>
+</div>
+</div>
 </div><!-- /.container -->
 </div><!-- /.page-wrapper -->
-
 <!-- ── Footer ── -->
 <footer style="background:#07091a;border-radius:28px 28px 0 0;padding:56px min(6.5rem,8vw);">
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:52px;">
-    <div>
-      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Directory</p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-        <li><a href="../legal.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Legal Counsel</a></li>
-        <li><a href="../architects.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Architects</a></li>
-        <li><a href="../physicians.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Physicians</a></li>
-        <li><a href="../engineers.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Engineers</a></li>
-        <li><a href="../finance.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Finance</a></li>
-        <li><a href="../creatives.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Creatives</a></li>
-      </ul>
-    </div>
-    <div>
-      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Company</p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-        <li><a href="../about-us.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">About</a></li>
-        <li><a href="../our-process.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Our Process</a></li>
-      </ul>
-    </div>
-    <div>
-      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Resources</p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-        <li><a href="../newsletter.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Newsletter</a></li>
-      </ul>
-    </div>
-    <div>
-      <p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Legal</p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-        <li><a href="../privacy-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Privacy Policy</a></li>
-        <li><a href="../cookie-policy.html" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Cookie Policy</a></li>
-      </ul>
-    </div>
-  </div>
-  <div style="border-top:1px solid #111e38;margin-bottom:48px;"></div>
-  <div style="display:flex;align-items:center;justify-content:space-between;">
-    <div>
-      <p style="color:#1e2a45;font-size:11px;font-weight:500;margin:0 0 4px;letter-spacing:0.05em;opacity:0.6;">AI Tools for Pros</p>
-      <p class="font-heading" style="color:#2563EB;font-size:48px;font-weight:700;margin:0 0 10px;line-height:1;">2026.</p>
-      <p style="color:#4a5568;font-size:13px;margin:0;">Join 15,000+ professionals receiving our monthly tool audit.</p>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;">
-      <div style="position:relative;display:flex;align-items:center;">
-        <input type="email" placeholder="professional@email.com" style="background:#0d1228;color:#4a5568;font-size:13px;padding:13px 48px 13px 18px;border-radius:999px;border:1px solid #1a2444;outline:none;width:248px;font-family:'Inter',sans-serif;">
-        <div style="position:absolute;right:8px;width:28px;height:28px;background:#1a2444;border-radius:50%;display:flex;align-items:center;justify-content:center;">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="#4a5568" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-      </div>
-      <button style="background:#ffffff;color:#111111;font-size:13px;font-weight:500;padding:13px 24px;border-radius:999px;border:none;cursor:pointer;font-family:'Inter',sans-serif;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='#ffffff'">Subscribe</button>
-    </div>
-  </div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:52px;">
+<div>
+<p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Directory</p>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+<li><a href="/legal/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Legal Counsel</a></li>
+<li><a href="/architects/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Architects</a></li>
+<li><a href="/physicians/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Physicians</a></li>
+<li><a href="/engineers/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Engineers</a></li>
+<li><a href="/finance/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Finance</a></li>
+<li><a href="/creatives/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Creatives</a></li>
+</ul>
+</div>
+<div>
+<p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Company</p>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+<li><a href="/about-us/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">About</a></li>
+<li><a href="/our-process/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Our Process</a></li>
+</ul>
+</div>
+<div>
+<p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Resources</p>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+<li><a href="/newsletter/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<p style="color:#4a5568;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 16px;">Legal</p>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+<li><a href="/privacy-policy/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Privacy Policy</a></li>
+<li><a href="/cookie-policy/" onmouseout="this.style.color='#5a6e94'" onmouseover="this.style.color='#ffffff'" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div style="border-top:1px solid #111e38;margin-bottom:48px;"></div>
+<div style="display:flex;align-items:center;justify-content:space-between;">
+<div>
+<p style="color:#1e2a45;font-size:11px;font-weight:500;margin:0 0 4px;letter-spacing:0.05em;opacity:0.6;">AI Tools for Pros</p>
+<p class="font-heading" style="color:#2563EB;font-size:48px;font-weight:700;margin:0 0 10px;line-height:1;">2026.</p>
+<p style="color:#4a5568;font-size:13px;margin:0;">Join 15,000+ professionals receiving our monthly tool audit.</p>
+</div>
+<div style="display:flex;align-items:center;gap:10px;">
+<div style="position:relative;display:flex;align-items:center;">
+<input placeholder="professional@email.com" style="background:#0d1228;color:#4a5568;font-size:13px;padding:13px 48px 13px 18px;border-radius:999px;border:1px solid #1a2444;outline:none;width:248px;font-family:'Inter',sans-serif;" type="email"/>
+<div style="position:absolute;right:8px;width:28px;height:28px;background:#1a2444;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+<svg fill="none" height="12" viewbox="0 0 12 12" width="12"><path d="M2 6h8M6 2l4 4-4 4" stroke="#4a5568" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+</div>
+<button onmouseout="this.style.background='#ffffff'" onmouseover="this.style.background='#f0f0f0'" style="background:#ffffff;color:#111111;font-size:13px;font-weight:500;padding:13px 24px;border-radius:999px;border:none;cursor:pointer;font-family:'Inter',sans-serif;">Subscribe</button>
+</div>
+</div>
 </footer>
-
 <script>
   function toggleDropdown(id) {
     const el = document.getElementById(id);
@@ -715,10 +659,9 @@ architectural photography, minimalist residential interior, raw concrete ceiling
     if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
   }
 </script>
-<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:28px;right:28px;width:44px;height:44px;background:#111111;color:#ffffff;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.2);z-index:999;opacity:0;transition:opacity 0.25s,background 0.15s,transform 0.15s;pointer-events:none;" onmouseover="this.style.background='#2563eb';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#111111';this.style.transform='translateY(0)'">
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<button aria-label="Back to top" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" onmouseout="this.style.background='#111111';this.style.transform='translateY(0)'" onmouseover="this.style.background='#2563eb';this.style.transform='translateY(-2px)'" style="position:fixed;bottom:28px;right:28px;width:44px;height:44px;background:#111111;color:#ffffff;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.2);z-index:999;opacity:0;transition:opacity 0.25s,background 0.15s,transform 0.15s;pointer-events:none;">
+<svg fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </button>
 <script>(function(){var btn=document.getElementById('btt');window.addEventListener('scroll',function(){if(window.scrollY>300){btn.style.opacity='1';btn.style.pointerEvents='auto';}else{btn.style.opacity='0';btn.style.pointerEvents='none';}},{passive:true});})();</script>
-
 </body>
 </html>

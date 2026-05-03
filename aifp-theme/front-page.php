@@ -73,7 +73,7 @@ $professions = aifp_get_profession_hubs();
   <h2 style="font-size:22px;font-weight:700;color:#111111;margin:0 0 8px;">Explore by Profession</h2>
   <p style="color:#636363;font-size:13px;margin:0 0 40px;">Find AI tools reviewed specifically for your field, not generic rankings.</p>
 
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+  <div class="professions-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
     <?php foreach ($professions as $prof) :
       $pd = aifp_get_data($prof->ID);
       $name = $pd['profession_name'] ?? $prof->post_title;
@@ -95,7 +95,7 @@ $professions = aifp_get_profession_hubs();
   <h2 style="font-size:22px;font-weight:700;color:#111111;margin:0 0 8px;">AI Tools We Review</h2>
   <p style="color:#636363;font-size:13px;margin:0 0 40px;">In-depth, independent assessments of the tools professionals are actually using.</p>
 
-  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;">
+  <div class="tools-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;">
     <?php foreach ($tools as $tool) :
       $td = aifp_get_data($tool->ID);
       $name    = $td['tool_name'] ?? $tool->post_title;
