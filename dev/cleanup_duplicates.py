@@ -7,7 +7,7 @@ Canonical slugs: chatgpt, claude, perplexity, gemini, copilot, midjourney, curso
 import sys, requests
 
 sys.path.insert(0, __import__('pathlib').Path(__file__).parent.parent.__str__())
-from migrate_v2 import WP_URL, AUTH
+from wp_creds import AUTH, WP_URL
 
 KEEP_SLUGS = {
     'tool_review': {

@@ -14,8 +14,8 @@ from migrate_v2 import (extract_consistency_blocks, extract_quick_facts_tool,
                         extract_faq, extract_sources, extract_reviews_miss,
                         extract_section_clean_html, extract_section_by_label,
                         extract_section_html, extract_pricing_html, extract_comparison_html,
-                        clean_html, sanitize,
-                        WP_URL, AUTH)
+                        clean_html, sanitize)
+from wp_creds import AUTH, WP_URL
 
 BASE_DIR = Path("/Users/rmigs/Projects/aitoolsforpros website")
 
