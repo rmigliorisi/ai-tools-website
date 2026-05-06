@@ -48,8 +48,13 @@ add_action('wp_head', function () {
             '@type'              => 'Article',
             'headline'           => $headline,
             'description'        => $data['subtitle'] ?? get_the_excerpt($post_id),
-            'author'             => ['@type' => 'Person', 'name' => 'Rich M.'],
-            'publisher'          => ['@type' => 'Organization', 'name' => 'AI Tools for Pros', 'url' => home_url('/')],
+            'author'             => ['@type' => 'Person', 'name' => 'Richard Migliorisi'],
+            'publisher'          => [
+                '@type' => 'Organization',
+                'name'  => 'AI Tools for Pros',
+                'url'   => home_url('/'),
+                'logo'  => ['@type' => 'ImageObject', 'url' => 'https://aitoolsforpros.com/wp-content/uploads/2025/11/cropped-aitoolsforpros.png'],
+            ],
             'datePublished'      => $date,
             'dateModified'       => $modified,
             'mainEntityOfPage'   => ['@type' => 'WebPage', '@id' => $url],
@@ -106,6 +111,34 @@ add_action('wp_head', function () {
     $schema = [
         '@context' => 'https://schema.org',
         '@graph'   => $graph,
+    ];
+
+    echo '<script type="application/ld+json">' . "\n";
+    echo wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+    echo "\n</script>\n";
+}, 5);
+
+/* ── Homepage: Organization + WebSite schema ── */
+add_action('wp_head', function () {
+    if (!is_front_page()) return;
+
+    $logo_url = 'https://aitoolsforpros.com/wp-content/uploads/2025/11/cropped-aitoolsforpros.png';
+
+    $schema = [
+        '@context' => 'https://schema.org',
+        '@graph'   => [
+            [
+                '@type' => 'Organization',
+                'name'  => 'AI Tools for Pros',
+                'url'   => home_url('/'),
+                'logo'  => ['@type' => 'ImageObject', 'url' => $logo_url],
+            ],
+            [
+                '@type' => 'WebSite',
+                'name'  => 'AI Tools for Pros',
+                'url'   => home_url('/'),
+            ],
+        ],
     ];
 
     echo '<script type="application/ld+json">' . "\n";

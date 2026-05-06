@@ -267,13 +267,33 @@ add_action('wp_head', function () {
    8. Open Graph + Twitter Card Meta Tags
    ────────────────────────────────────────────── */
 add_action('wp_head', function () {
+    $site_name   = 'AI Tools for Pros';
+    $default_img = 'https://aitoolsforpros.com/wp-content/uploads/2025/11/cropped-aitoolsforpros.png';
+
+    // Homepage: explicit metadata — WordPress defaults leave og:title="Home" and description empty
+    if (is_front_page()) {
+        $title = 'AI Tools for Professionals: Honest Reviews by Pros';
+        $desc  = 'Independent AI tool reviews and workflows for professionals in law, medicine, finance, real estate, content, SEO, and more.';
+        $url   = home_url('/');
+        echo '<meta name="description" content="' . esc_attr($desc) . '">' . "\n";
+        echo '<meta property="og:title" content="' . esc_attr($title) . '">' . "\n";
+        echo '<meta property="og:description" content="' . esc_attr($desc) . '">' . "\n";
+        echo '<meta property="og:url" content="' . esc_url($url) . '">' . "\n";
+        echo '<meta property="og:type" content="website">' . "\n";
+        echo '<meta property="og:site_name" content="' . esc_attr($site_name) . '">' . "\n";
+        echo '<meta property="og:image" content="' . esc_url($default_img) . '">' . "\n";
+        echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
+        echo '<meta name="twitter:title" content="' . esc_attr($title) . '">' . "\n";
+        echo '<meta name="twitter:description" content="' . esc_attr($desc) . '">' . "\n";
+        echo '<meta name="twitter:image" content="' . esc_url($default_img) . '">' . "\n";
+        return;
+    }
+
     if (!is_singular()) return;
 
     $post_id   = get_the_ID();
     $post_type = get_post_type($post_id);
     $data      = aifp_get_data($post_id);
-    $site_name = 'AI Tools for Pros';
-    $default_img = 'https://aitoolsforpros.com/wp-content/uploads/2025/11/cropped-aitoolsforpros.png';
     $url       = get_permalink($post_id);
 
     if ($post_type === 'tool_review') {
@@ -302,7 +322,7 @@ add_action('wp_head', function () {
         $desc  = get_the_excerpt();
     }
 
-    $desc = mb_strimwidth(wp_strip_all_tags($desc), 0, 160, '...');
+    $desc = mb_strimwidth(wp_strip_all_tags($desc), 0, 155);
 
     echo '<meta name="description" content="' . esc_attr($desc) . '">' . "\n";
     echo '<link rel="canonical" href="' . esc_url($url) . '">' . "\n";
