@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /wp-admin/
 Allow: /wp-admin/admin-ajax.php
 
-Sitemap: https://aitoolsforpros.com/sitemap-pages.xml
+Sitemap: https://aitoolsforpros.com/wp-sitemap.xml

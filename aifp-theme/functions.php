@@ -234,7 +234,7 @@ add_action('init', function () {
    5b. robots.txt
    ────────────────────────────────────────────── */
 add_filter('robots_txt', function () {
-    return "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://aitoolsforpros.com/sitemap-pages.xml\n";
+    return "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://aitoolsforpros.com/wp-sitemap.xml\n";
 }, 99);
 
 /* ──────────────────────────────────────────────
@@ -250,6 +250,11 @@ remove_action('wp_head', 'wp_generator');
 // Remove RSD and WLW links
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlmanifest_link');
+
+// Suppress user archive from sitemap — author page is empty with no content
+add_filter('wp_sitemaps_add_provider', function ($provider, $name) {
+    return $name === 'users' ? false : $provider;
+}, 10, 2);
 
 /* ──────────────────────────────────────────────
    7. Favicon
