@@ -361,3 +361,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <?php
 }, 1);
+
+/* ──────────────────────────────────────────────
+   10. Newsletter Subscribe (AJAX)
+   ────────────────────────────────────────────── */
+function aifp_handle_subscribe() {
+    check_ajax_referer('aifp_subscribe', 'nonce');
+
+    $email = sanitize_email(wp_unslash($_POST['email'] ?? ''));
+    if (!is_email($email)) {
+        wp_send_json_error(['message' => 'Please enter a valid email address.']);
+    }
+
+    global $wpdb;
+    $exists = $wpdb->get_var($wpdb->prepare(
+        "SELECT ID FROM {$wpdb->posts} WHERE post_type = 'aifp_subscriber' AND post_status = 'publish' AND post_title = %s LIMIT 1",
+        $email
+    ));
+
+    if ($exists) {
+        wp_send_json_success(['message' => "You're already on the list. We'll be in touch!"]); // treat as success so UX is clean
+    }
+
+    $result = wp_insert_post([
+        'post_type'   => 'aifp_subscriber',
+        'post_title'  => $email,
+        'post_status' => 'publish',
+    ]);
+
+    if (is_wp_error($result)) {
+        wp_send_json_error(['message' => 'Something went wrong. Please try again.']);
+    }
+
+    wp_send_json_success(['message' => "Thanks for subscribing! Keep an eye on your inbox for future updates from AI Tools for Pros."]);
+}
+add_action('wp_ajax_nopriv_aifp_subscribe', 'aifp_handle_subscribe');
+add_action('wp_ajax_aifp_subscribe', 'aifp_handle_subscribe');

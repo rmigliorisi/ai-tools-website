@@ -97,6 +97,24 @@ add_action('init', function () {
         'show_in_rest' => true,
         'rewrite'      => false,
     ]);
+
+    /* ── Newsletter Subscriber CPT ── */
+    register_post_type('aifp_subscriber', [
+        'labels' => [
+            'name'          => 'Subscribers',
+            'singular_name' => 'Subscriber',
+            'all_items'     => 'All Subscribers',
+            'search_items'  => 'Search Subscribers',
+        ],
+        'public'        => false,
+        'show_ui'       => true,
+        'show_in_menu'  => true,
+        'menu_icon'     => 'dashicons-email-alt',
+        'menu_position' => 8,
+        'supports'      => ['title'],
+        'show_in_rest'  => false,
+    ]);
+
 });
 
 /* ── Fix permalink conflicts between CPTs sharing "/" slug ── */

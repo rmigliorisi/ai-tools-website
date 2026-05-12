@@ -48,14 +48,50 @@
       <p class="font-heading" style="color:#2563EB;font-size:48px;font-weight:700;margin:0 0 10px;line-height:1;"><?php echo esc_html(date('Y')); ?>.</p>
       <p style="color:#4a5568;font-size:13px;margin:0;">Join 15,000+ professionals receiving our monthly tool audit.</p>
     </div>
-    <div style="display:flex;align-items:center;gap:10px;">
-      <div style="position:relative;display:flex;align-items:center;">
-        <input type="email" placeholder="professional@email.com" style="background:#0d1228;color:#4a5568;font-size:13px;padding:13px 48px 13px 18px;border-radius:999px;border:1px solid #1a2444;outline:none;width:248px;font-family:'Inter',sans-serif;">
-        <div style="position:absolute;right:8px;width:28px;height:28px;background:#1a2444;border-radius:50%;display:flex;align-items:center;justify-content:center;">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="#4a5568" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div>
+      <div id="aifp-subscribe-wrap" style="display:flex;align-items:center;gap:10px;">
+        <div style="position:relative;display:flex;align-items:center;">
+          <input id="aifp-email-input" type="email" placeholder="professional@email.com" style="background:#0d1228;color:#e2e8f0;font-size:13px;padding:13px 48px 13px 18px;border-radius:999px;border:1px solid #1a2444;outline:none;width:248px;font-family:'Inter',sans-serif;">
+          <div style="position:absolute;right:8px;width:28px;height:28px;background:#1a2444;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="#4a5568" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
         </div>
+        <button id="aifp-subscribe-btn" style="background:#ffffff;color:#111111;font-size:13px;font-weight:500;padding:13px 24px;border-radius:999px;border:none;cursor:pointer;font-family:'Inter',sans-serif;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='#ffffff'">Subscribe</button>
       </div>
-      <button style="background:#ffffff;color:#111111;font-size:13px;font-weight:500;padding:13px 24px;border-radius:999px;border:none;cursor:pointer;font-family:'Inter',sans-serif;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='#ffffff'">Subscribe</button>
+      <p id="aifp-subscribe-msg" style="display:none;color:#4ade80;font-size:13px;margin:12px 0 0;max-width:340px;line-height:1.6;"></p>
+      <script>
+      (function(){
+        var btn = document.getElementById('aifp-subscribe-btn');
+        var inp = document.getElementById('aifp-email-input');
+        var msg = document.getElementById('aifp-subscribe-msg');
+        var wrap = document.getElementById('aifp-subscribe-wrap');
+        if (!btn) return;
+        btn.addEventListener('click', function(){
+          var email = inp.value.trim();
+          if (!email) { inp.focus(); return; }
+          btn.disabled = true;
+          btn.textContent = 'Subscribing…';
+          fetch('<?php echo esc_url(admin_url('admin-ajax.php')); ?>', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: 'action=aifp_subscribe&nonce=<?php echo wp_create_nonce('aifp_subscribe'); ?>&email=' + encodeURIComponent(email)
+          })
+          .then(function(r){ return r.json(); })
+          .then(function(data){
+            wrap.style.display = 'none';
+            msg.textContent = data.data.message;
+            msg.style.display = 'block';
+          })
+          .catch(function(){
+            btn.disabled = false;
+            btn.textContent = 'Subscribe';
+            msg.textContent = 'Something went wrong. Please try again.';
+            msg.style.display = 'block';
+            msg.style.color = '#f87171';
+          });
+        });
+      })();
+      </script>
     </div>
   </div>
 </footer>
