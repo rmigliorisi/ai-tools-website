@@ -405,7 +405,7 @@ add_action('wp_footer', function () {
     ?>
 <script>
 (function(){
-  var forms = document.querySelectorAll('.newsletter-input-wrap');
+  var forms = document.querySelectorAll('.newsletter-form-row');
   if (!forms.length) return;
   forms.forEach(function(wrap){
     var inp = wrap.querySelector('input[type="email"]');
