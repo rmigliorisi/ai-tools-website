@@ -397,3 +397,44 @@ function aifp_handle_subscribe() {
 }
 add_action('wp_ajax_nopriv_aifp_subscribe', 'aifp_handle_subscribe');
 add_action('wp_ajax_aifp_subscribe', 'aifp_handle_subscribe');
+
+/* Wire up .newsletter-input-wrap buttons (newsletter page content) */
+add_action('wp_footer', function () {
+    $ajax_url = esc_url(admin_url('admin-ajax.php'));
+    $nonce    = wp_create_nonce('aifp_subscribe');
+    ?>
+<script>
+(function(){
+  var forms = document.querySelectorAll('.newsletter-input-wrap');
+  if (!forms.length) return;
+  forms.forEach(function(wrap){
+    var inp = wrap.querySelector('input[type="email"]');
+    var btn = wrap.querySelector('button');
+    if (!inp || !btn) return;
+    btn.addEventListener('click', function(){
+      var email = inp.value.trim();
+      if (!email) { inp.focus(); return; }
+      btn.disabled = true;
+      btn.textContent = 'Subscribing…';
+      fetch('<?php echo $ajax_url; ?>', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: 'action=aifp_subscribe&nonce=<?php echo $nonce; ?>&email=' + encodeURIComponent(email)
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        wrap.innerHTML = '<p style="color:#059669;font-size:14px;font-weight:500;margin:0;line-height:1.6;">' + data.data.message + '</p>';
+      })
+      .catch(function(){
+        btn.disabled = false;
+        btn.textContent = 'Subscribe Free';
+        var err = wrap.querySelector('.aifp-err');
+        if (!err) { err = document.createElement('p'); err.className = 'aifp-err'; err.style.cssText = 'color:#dc2626;font-size:12px;margin:8px 0 0;'; wrap.appendChild(err); }
+        err.textContent = 'Something went wrong. Please try again.';
+      });
+    });
+  });
+})();
+</script>
+    <?php
+}, 20);
