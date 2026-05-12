@@ -81,6 +81,10 @@
             wrap.style.display = 'none';
             msg.textContent = data.data.message;
             msg.style.display = 'block';
+            if (data.success) {
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({ event: 'newsletter_subscribe', subscribe_location: 'footer' });
+            }
           })
           .catch(function(){
             btn.disabled = false;

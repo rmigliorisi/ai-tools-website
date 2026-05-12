@@ -424,6 +424,10 @@ add_action('wp_footer', function () {
       .then(function(r){ return r.json(); })
       .then(function(data){
         wrap.innerHTML = '<p style="color:#059669;font-size:14px;font-weight:500;margin:0;line-height:1.6;">' + data.data.message + '</p>';
+        if (data.success) {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'newsletter_subscribe', subscribe_location: 'newsletter_page' });
+        }
       })
       .catch(function(){
         btn.disabled = false;
