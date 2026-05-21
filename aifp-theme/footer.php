@@ -25,6 +25,7 @@
       <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
         <li><a href="<?php echo esc_url(home_url('/about-us')); ?>" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">About</a></li>
         <li><a href="<?php echo esc_url(home_url('/our-process')); ?>" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Our Process</a></li>
+        <li><a href="<?php echo esc_url(home_url('/contact')); ?>" style="color:#5a6e94;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#5a6e94'">Contact</a></li>
       </ul>
     </div>
     <div>

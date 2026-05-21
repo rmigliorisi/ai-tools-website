@@ -115,6 +115,26 @@ add_action('init', function () {
         'show_in_rest'  => false,
     ]);
 
+    /* ── Contact Form Submission CPT ── */
+    register_post_type('aifp_contact', [
+        'labels' => [
+            'name'          => 'Contact Submissions',
+            'singular_name' => 'Contact Submission',
+            'all_items'     => 'All Contact Submissions',
+            'search_items'  => 'Search Submissions',
+        ],
+        'public'              => false,
+        'publicly_queryable'  => false,
+        'exclude_from_search' => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => false,
+        'menu_icon'           => 'dashicons-format-chat',
+        'menu_position'       => 9,
+        'supports'            => ['title', 'custom-fields'],
+        'show_in_rest'        => false,
+    ]);
+
 });
 
 /* ── Fix permalink conflicts between CPTs sharing "/" slug ── */

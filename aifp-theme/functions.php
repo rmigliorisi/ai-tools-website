@@ -398,6 +398,71 @@ function aifp_handle_subscribe() {
 add_action('wp_ajax_nopriv_aifp_subscribe', 'aifp_handle_subscribe');
 add_action('wp_ajax_aifp_subscribe', 'aifp_handle_subscribe');
 
+/* ──────────────────────────────────────────────
+   11. Contact Form (AJAX)
+   ────────────────────────────────────────────── */
+function aifp_handle_contact() {
+    check_ajax_referer('aifp_contact', 'nonce');
+
+    // Honeypot: bots fill this hidden field, humans don't
+    if (!empty($_POST['hp'])) {
+        wp_send_json_success(['message' => 'Thanks for your message. We will be in touch.']);
+    }
+
+    $name    = sanitize_text_field(wp_unslash($_POST['name'] ?? ''));
+    $email   = sanitize_email(wp_unslash($_POST['email'] ?? ''));
+    $company = sanitize_text_field(wp_unslash($_POST['company'] ?? ''));
+    $reason  = sanitize_text_field(wp_unslash($_POST['reason'] ?? ''));
+    $message = sanitize_textarea_field(wp_unslash($_POST['message'] ?? ''));
+
+    if (!$name || !is_email($email) || !$reason || !$message) {
+        wp_send_json_error(['message' => 'Please fill in all required fields.']);
+    }
+
+    $allowed_reasons = [
+        'Suggest an AI tool for review',
+        'SEO / AI search consulting',
+        'Partnership or media inquiry',
+        'General question',
+    ];
+    if (!in_array($reason, $allowed_reasons, true)) {
+        wp_send_json_error(['message' => 'Invalid reason selected.']);
+    }
+
+    // Store in WordPress admin
+    $post_id = wp_insert_post([
+        'post_type'   => 'aifp_contact',
+        'post_title'  => $name . ' — ' . $reason,
+        'post_status' => 'publish',
+    ]);
+
+    if (!is_wp_error($post_id)) {
+        update_post_meta($post_id, 'contact_name',    $name);
+        update_post_meta($post_id, 'contact_email',   $email);
+        update_post_meta($post_id, 'contact_company', $company);
+        update_post_meta($post_id, 'contact_reason',  $reason);
+        update_post_meta($post_id, 'contact_message', $message);
+    }
+
+    // Email notification to site admin (address never exposed to frontend)
+    $admin_email = get_option('admin_email');
+    $subject     = '[AI Tools for Pros] ' . $reason . ' from ' . $name;
+    $body        = "Name: {$name}\nEmail: {$email}\n";
+    if ($company) {
+        $body .= "Company / URL: {$company}\n";
+    }
+    $body .= "Reason: {$reason}\n\nMessage:\n{$message}";
+    $headers = [
+        'Content-Type: text/plain; charset=UTF-8',
+        'Reply-To: ' . $name . ' <' . $email . '>',
+    ];
+    wp_mail($admin_email, $subject, $body, $headers);
+
+    wp_send_json_success(['message' => "Thanks, {$name}. Your message has been received. We typically respond within 2 business days."]);
+}
+add_action('wp_ajax_nopriv_aifp_contact', 'aifp_handle_contact');
+add_action('wp_ajax_aifp_contact', 'aifp_handle_contact');
+
 /* Wire up .newsletter-input-wrap buttons (newsletter page content) */
 add_action('wp_footer', function () {
     $ajax_url = esc_url(admin_url('admin-ajax.php'));
