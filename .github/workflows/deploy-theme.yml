@@ -1,46 +1,31 @@
 # ─────────────────────────────────────────────────────────────────────────────
-# AI Tools for Pros — Theme Deploy Pipeline
+# AI Tools for Pros — Theme QA Check
 #
 # Triggers:
 #   • Any push to `main` that touches aifp-theme/ files
-#   • Manual "Run workflow" button in the GitHub Actions tab
+#   • Any pull request targeting `main` that touches aifp-theme/ files
 #
-# Pipeline:
-#   1. QA      — PHP syntax check + [VERIFY DETAILS] flag scan (blocks deploy on failure)
-#   2. Backup  — SSH into server, zip live theme → ~/theme-backups/ (keeps last 10)
-#   3. Deploy  — SCP upload aifp-theme/ to server (overwrites changed files)
+# What it does:
+#   1. PHP syntax check  — fails if any .php file has a parse/fatal error
+#   2. Flag scan         — fails if any [VERIFY DETAILS] flags remain in PHP files
 #
-# Required GitHub Secrets (Settings → Secrets and variables → Actions):
-#   SSH_HOST          — server hostname, e.g. aitoolsforpros.com
-#   SSH_USER          — cPanel / SSH username
-#   SSH_PASS          — cPanel / SSH password
-#   SSH_PORT          — SSH port (almost always 22)
-#   SERVER_THEMES_DIR — absolute path to wp-content/themes on the server
-#                       e.g. /home/rmigliorisi/public_html/wp-content/themes
+# Deployment is handled by WordPress.com's native GitHub Deployments.
+# This workflow only acts as a quality gate before code goes live.
 # ─────────────────────────────────────────────────────────────────────────────
 
-name: Deploy Theme to Production
+name: Theme QA
 
 on:
   push:
     branches: [main]
     paths:
       - 'aifp-theme/**'
-  workflow_dispatch:
-    inputs:
-      reason:
-        description: 'Reason for manual deploy'
-        required: false
-        default: 'Manual trigger'
-
-# Prevent two deploys running at the same time
-concurrency:
-  group: deploy-production
-  cancel-in-progress: false
+  pull_request:
+    branches: [main]
+    paths:
+      - 'aifp-theme/**'
 
 jobs:
-
-  # ── 1. QA ──────────────────────────────────────────────────────────────────
   qa:
     name: "QA — Syntax & Flag Checks"
     runs-on: ubuntu-latest
@@ -64,7 +49,7 @@ jobs:
 
           if [ "$ERRORS" -gt 0 ]; then
             echo ""
-            echo "❌ $ERRORS PHP file(s) failed syntax check. Deploy blocked."
+            echo "❌ $ERRORS PHP file(s) failed syntax check. Fix before merging."
             exit 1
           fi
 
@@ -79,71 +64,8 @@ jobs:
             echo ""
             echo "$FOUND"
             echo ""
-            echo "❌ [VERIFY DETAILS] flags found in theme files. Resolve them before deploying."
+            echo "❌ [VERIFY DETAILS] flags found in theme files. Resolve them before merging."
             exit 1
           fi
 
           echo "✅ No [VERIFY DETAILS] flags found."
-
-  # ── 2. Backup ──────────────────────────────────────────────────────────────
-  backup:
-    name: "Backup — Zip Live Theme on Server"
-    runs-on: ubuntu-latest
-    needs: qa  # Only runs if QA passes
-
-    steps:
-      - name: SSH — create timestamped zip of live theme
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.SSH_PASS }}
-          port: ${{ secrets.SSH_PORT }}
-          script: |
-            THEME_DIR="${{ secrets.SERVER_THEMES_DIR }}/aifp-theme"
-            BACKUP_DIR="$HOME/theme-backups"
-
-            mkdir -p "$BACKUP_DIR"
-
-            if [ -d "$THEME_DIR" ]; then
-              BACKUP_FILE="$BACKUP_DIR/aifp-theme-$(date +%Y-%m-%d_%H-%M-%S).zip"
-              cd "${{ secrets.SERVER_THEMES_DIR }}"
-              zip -rq "$BACKUP_FILE" aifp-theme/
-              echo "✅ Backup saved: $BACKUP_FILE"
-
-              # Keep only the 10 most recent backups
-              PRUNED=$(ls -t "$BACKUP_DIR"/aifp-theme-*.zip 2>/dev/null | tail -n +11)
-              if [ -n "$PRUNED" ]; then
-                echo "$PRUNED" | xargs rm -f
-                echo "🗑 Pruned old backups — keeping 10 most recent."
-              fi
-            else
-              echo "⚠️ Theme directory not found at $THEME_DIR — skipping backup."
-            fi
-
-  # ── 3. Deploy ──────────────────────────────────────────────────────────────
-  deploy:
-    name: "Deploy — Upload Theme to Server"
-    runs-on: ubuntu-latest
-    needs: backup  # Only runs if Backup succeeds
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: SCP — upload aifp-theme/ to server
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.SSH_PASS }}
-          port: ${{ secrets.SSH_PORT }}
-          source: "aifp-theme/"
-          target: "${{ secrets.SERVER_THEMES_DIR }}"
-          overwrite: true
-          strip_components: 1
-
-      - name: Confirm deploy
-        run: |
-          echo "✅ aifp-theme deployed to ${{ secrets.SERVER_THEMES_DIR }}"
-          echo "🔗 https://aitoolsforpros.com"
