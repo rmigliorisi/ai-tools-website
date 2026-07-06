@@ -1,0 +1,83 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# AI Tools for Pros — WordPress.com Theme Deployment
+#
+# This workflow is required by WordPress.com's GitHub Deployments feature.
+# It runs QA checks then uploads ONLY the aifp-theme/ directory as an artifact.
+# WordPress.com picks up the artifact and deploys it to:
+#   /wp-content/themes/aifp-theme/
+#
+# Triggers:
+#   • Push to `main` that changes any file inside aifp-theme/
+#   • Manual "Run workflow" button in the GitHub Actions tab
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Deploy Theme to WordPress.com
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'aifp-theme/**'
+  workflow_dispatch:
+
+# Prevent two deploys running simultaneously
+concurrency:
+  group: wpcom-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: "QA + Deploy"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── QA: PHP syntax check ───────────────────────────────────────────────
+      - name: PHP syntax check
+        run: |
+          echo "🔍 Checking PHP syntax..."
+          ERRORS=0
+          while IFS= read -r -d '' file; do
+            result=$(php -l "$file" 2>&1)
+            if echo "$result" | grep -qE "Parse error|Fatal error"; then
+              echo "❌ $file"
+              echo "   $result"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done < <(find aifp-theme -name "*.php" -print0)
+
+          if [ "$ERRORS" -gt 0 ]; then
+            echo ""
+            echo "❌ $ERRORS PHP file(s) failed. Deploy blocked."
+            exit 1
+          fi
+          echo "✅ All PHP files passed syntax check."
+
+      # ── QA: [VERIFY DETAILS] flag scan ────────────────────────────────────
+      - name: Check for [VERIFY DETAILS] flags
+        run: |
+          echo "🔍 Scanning for [VERIFY DETAILS] flags..."
+          FOUND=$(grep -rn "\[VERIFY DETAILS\]" aifp-theme/ --include="*.php" || true)
+
+          if [ -n "$FOUND" ]; then
+            echo ""
+            echo "$FOUND"
+            echo ""
+            echo "❌ [VERIFY DETAILS] flags found. Resolve before deploying."
+            exit 1
+          fi
+          echo "✅ No [VERIFY DETAILS] flags found."
+
+      # ── Deploy: upload ONLY aifp-theme/ as the artifact ───────────────────
+      # WordPress.com reads the artifact named "wpcom" and syncs its contents
+      # to the destination directory set in the Deployments dashboard.
+      # path: aifp-theme/ uploads the folder's CONTENTS (not the folder itself),
+      # so files land at /wp-content/themes/aifp-theme/functions.php etc.
+      - name: Upload theme artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: wpcom
+          path: aifp-theme/
+          retention-days: 1
