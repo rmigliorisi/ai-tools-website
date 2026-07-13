@@ -3,12 +3,18 @@
 #
 # This workflow is required by WordPress.com's GitHub Deployments feature.
 # It runs QA checks then uploads ONLY the aifp-theme/ directory as an artifact.
-# WordPress.com picks up the artifact and deploys it to:
+# WordPress.com picks up the artifact named "wpcom" and deploys its contents to:
 #   /wp-content/themes/aifp-theme/
 #
 # Triggers:
 #   • Push to `main` that changes any file inside aifp-theme/
 #   • Manual "Run workflow" button in the GitHub Actions tab
+#
+# QA checks (all must pass before artifact is uploaded):
+#   1. PHP syntax check    — parse/fatal errors block deploy
+#   2. [VERIFY DETAILS]    — content flags block deploy
+#   3. Debug code          — var_dump/print_r/die() block deploy
+#   4. Required files      — critical theme assets must exist
 # ─────────────────────────────────────────────────────────────────────────────
 
 name: Deploy Theme to WordPress.com
@@ -34,7 +40,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # ── QA: PHP syntax check ───────────────────────────────────────────────
+      # ── 1. PHP syntax check ────────────────────────────────────────────────
       - name: PHP syntax check
         run: |
           echo "🔍 Checking PHP syntax..."
@@ -50,12 +56,12 @@ jobs:
 
           if [ "$ERRORS" -gt 0 ]; then
             echo ""
-            echo "❌ $ERRORS PHP file(s) failed. Deploy blocked."
+            echo "❌ $ERRORS PHP file(s) failed syntax check. Deploy blocked."
             exit 1
           fi
           echo "✅ All PHP files passed syntax check."
 
-      # ── QA: [VERIFY DETAILS] flag scan ────────────────────────────────────
+      # ── 2. [VERIFY DETAILS] flag scan ─────────────────────────────────────
       - name: Check for [VERIFY DETAILS] flags
         run: |
           echo "🔍 Scanning for [VERIFY DETAILS] flags..."
@@ -70,10 +76,64 @@ jobs:
           fi
           echo "✅ No [VERIFY DETAILS] flags found."
 
+      # ── 3. Debug code check ───────────────────────────────────────────────
+      # Catches leftover debugging statements that would expose output on the live site
+      - name: Check for debug code leftovers
+        run: |
+          echo "🔍 Scanning for debug code..."
+          FOUND=$(grep -rn "var_dump\|print_r\|var_export\b" aifp-theme/ --include="*.php" || true)
+
+          # die() / exit() are sometimes legitimate — only flag bare debug uses
+          DEBUG_DIE=$(grep -rn "^\s*die(\|^\s*exit(" aifp-theme/ --include="*.php" | grep -v "ABSPATH\|defined(" || true)
+
+          if [ -n "$FOUND" ] || [ -n "$DEBUG_DIE" ]; then
+            echo ""
+            [ -n "$FOUND" ] && echo "$FOUND"
+            [ -n "$DEBUG_DIE" ] && echo "$DEBUG_DIE"
+            echo ""
+            echo "❌ Debug code found. Remove before deploying."
+            exit 1
+          fi
+          echo "✅ No debug code found."
+
+      # ── 4. Required files check ───────────────────────────────────────────
+      # Verifies that critical theme files are present before deploying
+      - name: Check required theme files exist
+        run: |
+          echo "🔍 Checking required theme files..."
+          MISSING=0
+          REQUIRED=(
+            "aifp-theme/functions.php"
+            "aifp-theme/style.css"
+            "aifp-theme/footer.php"
+            "aifp-theme/header.php"
+            "aifp-theme/inc/cpt.php"
+            "aifp-theme/inc/helpers.php"
+            "aifp-theme/inc/json-ld.php"
+            "aifp-theme/assets/css/site.css"
+            "aifp-theme/assets/css/components.css"
+            "aifp-theme/assets/js/site.js"
+            "aifp-theme/page-templates/page-contact.php"
+          )
+
+          for file in "${REQUIRED[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "❌ Missing: $file"
+              MISSING=$((MISSING + 1))
+            fi
+          done
+
+          if [ "$MISSING" -gt 0 ]; then
+            echo ""
+            echo "❌ $MISSING required file(s) missing. Deploy blocked."
+            exit 1
+          fi
+          echo "✅ All required theme files present."
+
       # ── Deploy: upload ONLY aifp-theme/ as the artifact ───────────────────
       # WordPress.com reads the artifact named "wpcom" and syncs its contents
       # to the destination directory set in the Deployments dashboard.
-      # path: aifp-theme/ uploads the folder's CONTENTS (not the folder itself),
+      # "path: aifp-theme/" uploads the folder's CONTENTS (not the folder itself),
       # so files land at /wp-content/themes/aifp-theme/functions.php etc.
       - name: Upload theme artifact
         uses: actions/upload-artifact@v4

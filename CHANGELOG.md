@@ -2,7 +2,57 @@
 
 All notable changes to the AI Tools for Pros website are documented here.
 
-This project was developed iteratively with AI assistance (Claude Code). GitHub was connected partway through development, so early work is captured in the initial commit.
+---
+
+## [2026-07-06] — Auto-Deploy Pipeline, Contact Page Live, Docs Overhaul
+
+### Added
+- **GitHub Actions deploy pipeline** — `wpcom.yml` workflow: runs QA checks then uploads `aifp-theme/` as an artifact to WordPress.com Deployments on every push to `main` that touches theme files
+- **GitHub Actions QA workflow** — `deploy-theme.yml`: PHP syntax check + flag scan on push and pull requests (no deploy, acts as a gate for PRs)
+- **QA checks in pipeline**: PHP syntax check, `[VERIFY DETAILS]` flag scan, debug code scan (`var_dump`/`print_r`/`die()`), required files existence check
+- **Contact page live** — `/contact/` page created in WordPress using `page-templates/page-contact.php` template (Page ID: 976)
+
+### Changed
+- **README.md** — Complete overhaul: reflects WordPress.com Business hosting, auto-deploy pipeline, all custom post types, WordPress page inventory, deployment instructions
+- **CLAUDE.md** — Updated to reflect current state: WordPress.com hosting, deploy pipeline, contact page, removed outdated manual upload references
+
+---
+
+## [2026-05-21] — Contact Page Template
+
+### Added
+- **Contact page template** (`aifp-theme/page-templates/page-contact.php`) — Full contact form with AJAX submission, honeypot spam protection, client-side and server-side validation
+- **Contact AJAX handler** in `functions.php` — validates, sanitizes, stores submission as `aifp_contact` CPT, sends email notification to admin with Reply-To set to submitter
+- **`aifp_contact` custom post type** in `inc/cpt.php` — contact form submissions viewable in WP Admin → Contact Submissions
+- **Footer contact link** added to `footer.php`
+
+---
+
+## [2026-05-12] — Newsletter Subscriber Capture + Google Tag Manager
+
+### Added
+- **Newsletter subscriber AJAX** — subscribe buttons on newsletter page captured via `wp_footer` JS; stores email as `aifp_subscriber` CPT
+- **GTM dataLayer push** on newsletter subscribe success (`event: newsletter_subscribe`)
+- **Google Tag Manager container** (`GTM-KCVDNRMV`) added to `<head>` and `<body>` via `functions.php`
+
+### Fixed
+- **Newsletter button selector** — fixed incorrect selector; button is a sibling of the input, not a child
+
+---
+
+## [2026-05-11] — Profession Hub Lede Fix
+
+### Fixed
+- **Profession hub lede HTML rendering** — fixed raw HTML appearing as text instead of rendered markup
+
+---
+
+## [2026-05-06] — SEO / GEO / AEO Requirements Docs
+
+### Added
+- **`docs/seo-geo-aeo/`** — 13 detailed SEO, GEO (geographic), and AEO (answer engine optimization) requirement documents covering technical SEO, schema, internal linking, content quality, accessibility, robots/sitemaps, and AI search readiness
+- **SEO improvements** — improved homepage metadata and JSON-LD schema
+- **robots.txt** — updated to point to `wp-sitemap.xml`; suppressed empty author archive from sitemap
 
 ---
 
@@ -42,22 +92,10 @@ This project was developed iteratively with AI assistance (Claude Code). GitHub 
 ## [2026-03-27] — Site-Wide CSS Normalization and QA
 
 ### Changed
-- **Cross-reference page CSS overhaul** — Normalized styles across all 41 cross-reference pages:
-  - Standardized heading styles, spacing, and font sizes
-  - Fixed inconsistent padding and margins
-  - Unified author card and byline formatting
-  - Normalized comparison table layouts
-  - Cleaned up FAQ section formatting
+- **Cross-reference page CSS overhaul** — Normalized styles across all 41 cross-reference pages
 - **Hub page CSS cleanup** — Minor style fixes across all 10 tool hub pages
 - **Profession hub page fixes** — Standardized nav link styling and section spacing across all 8 profession pages
 - **style.css expansion** — Added ~220 lines of new CSS rules for consistent cross-page styling, responsive layout fixes, and component normalization
-
----
-
-## [2026-03-25] — Homepage Padding Test
-
-### Changed
-- Minor padding adjustment on `index.html` for testing layout spacing
 
 ---
 
@@ -65,22 +103,19 @@ This project was developed iteratively with AI assistance (Claude Code). GitHub 
 
 ### Added
 - **Complete website launch** — 84 files, ~48,000 lines of code
-- **10 Tool Hub Pages** — In-depth reviews of ChatGPT, Claude, Perplexity, Google Gemini, Microsoft Copilot, Midjourney, Cursor, Notion AI, Grammarly, and Otter.ai
-- **8 Profession Hub Pages** — Landing pages for Legal, Physicians, Real Estate, Engineers, Finance, Insurance, Architects, and Creatives
-- **41 Cross-Reference Pages** — Tool-specific guides for each profession (e.g., `chatgpt/legal.html`, `claude/engineers.html`)
-- **Homepage** (`index.html`) — Main landing page with tool grid and profession navigation
-- **About Us** (`about-us.html`) — Founder profile with hand-coded SVG avatar
-- **Our Process** (`our-process.html`) — Editorial methodology explanation
-- **Newsletter** (`newsletter.html`) — Email signup page (Recent Issues section hidden until content exists)
-- **Policy pages** — Cookie policy and privacy policy
-- **Global stylesheet** (`style.css`) — ~1,700 lines covering all page types, responsive design, dark/light components
-- **JavaScript** (`site.js`) — Mobile navigation, cookie consent banner, scroll-to-top, dropdown menus
+- **10 Tool Hub Pages** — ChatGPT, Claude, Perplexity, Google Gemini, Microsoft Copilot, Midjourney, Cursor, Notion AI, Grammarly, and Otter.ai
+- **8 Profession Hub Pages** — Legal, Physicians, Real Estate, Engineers, Finance, Insurance, Architects, and Creatives
+- **41 Cross-Reference Pages** — Tool-specific guides for each profession
+- **Homepage** (`index.html`) — Main landing page
+- **About Us**, **Our Process**, **Newsletter**, policy pages
+- **Global stylesheet** (`style.css`) — ~1,700 lines
+- **JavaScript** (`site.js`) — Mobile navigation, cookie consent, scroll-to-top, dropdowns
 - **SVG assets** — Logo, favicon, author avatar
-- **SEO infrastructure** — JSON-LD structured data on every page, sitemap.xml, robots.txt, Open Graph tags
-- **Content generation system** — `AIFORPROS.md` (master prompt), `AIFORPROS-REFERENCE.md` (HTML boilerplate), `AIFORPROS-QA.md` (validation checklist)
+- **SEO infrastructure** — JSON-LD, sitemap.xml, robots.txt, Open Graph tags
+- **Content generation system** — `AIFORPROS.md`, `AIFORPROS-REFERENCE.md`, `AIFORPROS-QA.md`
 
 ---
 
 ## Removed Pages
 
-- **`cursor/architects.html`** — Deleted (below-average content quality, no genuine fit per the tool-profession combo matrix). Nav links removed from all pages.
+- **`cursor/architects.html`** — Deleted (below-average content quality). Nav links removed from all pages.

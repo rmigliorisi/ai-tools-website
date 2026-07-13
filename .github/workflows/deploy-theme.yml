@@ -1,16 +1,20 @@
 # ─────────────────────────────────────────────────────────────────────────────
 # AI Tools for Pros — Theme QA Check
 #
+# Runs the same QA checks as wpcom.yml but WITHOUT deploying.
+# Primary purpose: catch problems on pull requests before code reaches main.
+#
 # Triggers:
-#   • Any push to `main` that touches aifp-theme/ files
-#   • Any pull request targeting `main` that touches aifp-theme/ files
+#   • Push to `main` that touches aifp-theme/ files
+#   • Pull requests targeting `main` that touch aifp-theme/ files
 #
-# What it does:
-#   1. PHP syntax check  — fails if any .php file has a parse/fatal error
-#   2. Flag scan         — fails if any [VERIFY DETAILS] flags remain in PHP files
+# QA checks:
+#   1. PHP syntax check    — parse/fatal errors fail the check
+#   2. [VERIFY DETAILS]    — content flags fail the check
+#   3. Debug code          — var_dump/print_r/die() fail the check
+#   4. Required files      — critical theme assets must exist
 #
-# Deployment is handled by WordPress.com's native GitHub Deployments.
-# This workflow only acts as a quality gate before code goes live.
+# Deployment is handled by wpcom.yml + WordPress.com GitHub Deployments.
 # ─────────────────────────────────────────────────────────────────────────────
 
 name: Theme QA
@@ -27,14 +31,15 @@ on:
 
 jobs:
   qa:
-    name: "QA — Syntax & Flag Checks"
+    name: "QA — Syntax, Flags & Safety Checks"
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: PHP syntax check (all .php files in aifp-theme)
+      # ── 1. PHP syntax check ────────────────────────────────────────────────
+      - name: PHP syntax check
         run: |
           echo "🔍 Running PHP syntax check..."
           ERRORS=0
@@ -52,10 +57,10 @@ jobs:
             echo "❌ $ERRORS PHP file(s) failed syntax check. Fix before merging."
             exit 1
           fi
-
           echo "✅ All PHP files passed syntax check."
 
-      - name: Check for [VERIFY DETAILS] flags in theme PHP files
+      # ── 2. [VERIFY DETAILS] flag scan ─────────────────────────────────────
+      - name: Check for [VERIFY DETAILS] flags
         run: |
           echo "🔍 Scanning for [VERIFY DETAILS] flags..."
           FOUND=$(grep -rn "\[VERIFY DETAILS\]" aifp-theme/ --include="*.php" || true)
@@ -67,5 +72,54 @@ jobs:
             echo "❌ [VERIFY DETAILS] flags found in theme files. Resolve them before merging."
             exit 1
           fi
-
           echo "✅ No [VERIFY DETAILS] flags found."
+
+      # ── 3. Debug code check ───────────────────────────────────────────────
+      - name: Check for debug code leftovers
+        run: |
+          echo "🔍 Scanning for debug code..."
+          FOUND=$(grep -rn "var_dump\|print_r\|var_export\b" aifp-theme/ --include="*.php" || true)
+          DEBUG_DIE=$(grep -rn "^\s*die(\|^\s*exit(" aifp-theme/ --include="*.php" | grep -v "ABSPATH\|defined(" || true)
+
+          if [ -n "$FOUND" ] || [ -n "$DEBUG_DIE" ]; then
+            echo ""
+            [ -n "$FOUND" ] && echo "$FOUND"
+            [ -n "$DEBUG_DIE" ] && echo "$DEBUG_DIE"
+            echo ""
+            echo "❌ Debug code found. Remove before merging."
+            exit 1
+          fi
+          echo "✅ No debug code found."
+
+      # ── 4. Required files check ───────────────────────────────────────────
+      - name: Check required theme files exist
+        run: |
+          echo "🔍 Checking required theme files..."
+          MISSING=0
+          REQUIRED=(
+            "aifp-theme/functions.php"
+            "aifp-theme/style.css"
+            "aifp-theme/footer.php"
+            "aifp-theme/header.php"
+            "aifp-theme/inc/cpt.php"
+            "aifp-theme/inc/helpers.php"
+            "aifp-theme/inc/json-ld.php"
+            "aifp-theme/assets/css/site.css"
+            "aifp-theme/assets/css/components.css"
+            "aifp-theme/assets/js/site.js"
+            "aifp-theme/page-templates/page-contact.php"
+          )
+
+          for file in "${REQUIRED[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "❌ Missing: $file"
+              MISSING=$((MISSING + 1))
+            fi
+          done
+
+          if [ "$MISSING" -gt 0 ]; then
+            echo ""
+            echo "❌ $MISSING required file(s) missing."
+            exit 1
+          fi
+          echo "✅ All required theme files present."

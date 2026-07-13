@@ -1,24 +1,24 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to AI coding assistants working with this repository.
 
 ## Project Overview
 
-AI Tools for Pros is a static HTML website reviewing 10 AI tools across 8 professions. No frameworks, no build step, no dependencies. 66 HTML pages total.
+AI Tools for Pros is a WordPress site reviewing 10 AI tools across 8 professions. The live site runs on **WordPress.com Business** with a custom PHP theme (`aifp-theme/`). 66 content pages total (10 tool hubs + 8 profession hubs + 41 cross-references + contact + static pages).
 
 **Live site:** aitoolsforpros.com
 
 ## Architecture
 
-Three page types, all sharing `style.css` (~2,000 lines) and `site.js` (~550 lines):
+Three content page types, all served by the custom `aifp-theme/`:
 
-- **Tool Hub Pages** (10 root-level files: `chatgpt.html`, `claude.html`, etc.) — 15-section template reviewing one AI tool
-- **Profession Hub Pages** (8 root-level files: `legal.html`, `physicians.html`, etc.) — landing pages per profession
-- **Cross-Reference Pages** (41 files in subdirectories: `chatgpt/legal.html`, `claude/engineers.html`, etc.) — tool × profession deep dives
+- **Tool Hub Pages** (10) — `single-tool_review.php` — 15-section template reviewing one AI tool
+- **Profession Hub Pages** (8) — `single-profession_hub.php` — landing pages per profession
+- **Cross-Reference Pages** (41) — `single-cross_reference.php` — tool × profession deep dives
 
-### Path Conventions
-- Root pages: `logo.svg`, `style.css`, `site.js`, `author.svg`
-- Subdirectory pages: `../logo.svg`, `../style.css`, `../site.js`, `../author.svg`
+Plus standard WordPress pages:
+- `/contact/` — uses `page-templates/page-contact.php`
+- `/newsletter/`, `/about-us/`, `/our-process/`, `/privacy-policy/`, `/cookie-policy/` — standard WP pages
 
 ### CSS Architecture
 - CSS custom properties for theming (light mode default)
@@ -31,15 +31,48 @@ Three page types, all sharing `style.css` (~2,000 lines) and `site.js` (~550 lin
 - Reading time calculation injected into `<span id="reading-time">`
 - Mobile nav toggle, cookie consent banner
 
+### Path Conventions
+- Root pages: `logo.svg`, `style.css`, `site.js`, `author.svg`
+- Subdirectory pages: `../logo.svg`, `../style.css`, `../site.js`, `../author.svg`
+- (These conventions apply to the static HTML source files, not the WordPress theme)
+
+## Deployment Pipeline
+
+**Never manually upload theme files.** Changes deploy automatically:
+
+1. Edit files in `aifp-theme/`
+2. `git push` to `main`
+3. GitHub Actions (`wpcom.yml`) runs QA checks — **blocks deploy if anything fails**
+4. WordPress.com picks up the artifact and deploys to `/wp-content/themes/aifp-theme/`
+
+**Manual deploy:** GitHub Actions tab → "Deploy Theme to WordPress.com" → "Run workflow"
+
+The QA checks that run before every deploy:
+- PHP syntax check on all `.php` files
+- `[VERIFY DETAILS]` flag scan
+- Debug code scan (`var_dump`, `print_r`, `die()`)
+- Required files existence check
+
+## WordPress Custom Post Types
+
+| Post Type | Purpose |
+|-----------|---------|
+| `tool_review` | Tool hub pages (10) |
+| `profession_hub` | Profession hub pages (8) |
+| `cross_reference` | Cross-reference pages (41) |
+| `aifp_subscriber` | Newsletter email signups |
+| `aifp_contact` | Contact form submissions |
+
+Contact submissions appear in **WP Admin → Contact Submissions** and also trigger an email to the admin address.
+
 ## Content Generation Workflow
 
 Pages are generated externally and validated here:
 
 1. Paste `docs/AIFORPROS.md` + `docs/AIFORPROS-REFERENCE.md` + PAGE VARIABLES into ChatGPT (one page per session)
 2. ChatGPT outputs full HTML
-3. Paste PAGE VARIABLES + HTML into Claude Code with `docs/AIFORPROS-QA.md` loaded
-4. Claude Code validates against repo state + content rules → PASS/FAIL report + corrected HTML
-5. Write passing HTML to repo
+3. Validate against repo state + content rules → PASS/FAIL report + corrected HTML
+4. Write passing HTML to repo
 
 ### Key Reference Files (in `docs/`)
 - **docs/AIFORPROS.md** — Master content prompt (all section templates, tone, word counts)
@@ -64,7 +97,7 @@ Use `[VERIFY DETAILS]` (not `[VERIFY]`) on any claim needing vendor confirmation
 Pattern: `[Tool Name] for Professionals: An Honest Review (2026)`
 
 ### Profession Cards
-Only link to cross-reference pages that actually exist in the nav. No dead links.
+Only link to cross-reference pages that actually exist. No dead links.
 
 ## Hub Page Template (15 Sections, In Order)
 
@@ -99,8 +132,9 @@ Hand-coded SVG illustrations, not image files:
 ## Special Notes
 
 - **newsletter.html** — "Recent Issues" section is hidden (`display:none`). Restore when real content exists.
-- **Nav boilerplate** — Copy verbatim from `docs/AIFORPROS-REFERENCE.md`. Do not rebuild or modify the nav structure.
-- **No templating system** — Each HTML file is self-contained. Site-wide changes (nav links, footer text) require touching all 66 files.
+- **No templating system** — Each static HTML file is self-contained. The WordPress theme uses PHP includes via `header.php` and `footer.php`.
+- **WordPress.com hosting** — No SSH access. No cPanel. Theme files are deployed via GitHub Actions only.
+- **Jetpack backups** — WordPress.com/Jetpack handles automatic site backups. No manual backup step needed.
 
 ## Team
 
