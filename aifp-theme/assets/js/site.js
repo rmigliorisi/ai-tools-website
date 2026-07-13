@@ -317,9 +317,7 @@
       return { row: row, content: content };
     }
 
-    // Our Process
-    var ourProcess = navDesktop.querySelector('a.nav-link[href*="our-process"]');
-    if (ourProcess) body.appendChild(makeLink(ourProcess.href, 'Our Process', false));
+    // Our Process — appended after Professions (see below)
 
     // AI Tools accordion
     var aiDropdown = navDesktop.querySelectorAll('.nav-dropdown')[0];
@@ -413,8 +411,16 @@
       body.appendChild(profAcc.content);
     }
 
-    // Newsletter
-    var newsletter = navDesktop.querySelector('a.nav-link[href*="newsletter"]');
+    // Our Process
+    var ourProcess = navDesktop.querySelector('a.nav-link[href*="our-process"]');
+    if (ourProcess) body.appendChild(makeLink(ourProcess.href, 'Our Process', false));
+
+    // Contact Us
+    var contactUs = navDesktop.querySelector('a.nav-link[href*="/contact"]');
+    if (contactUs) body.appendChild(makeLink(contactUs.href, 'Contact Us', false));
+
+    // Newsletter (now uses .nav-link-newsletter class, not .nav-link)
+    var newsletter = navDesktop.querySelector('a.nav-link-newsletter[href*="newsletter"]');
     if (newsletter) body.appendChild(makeLink(newsletter.href, 'Newsletter', false));
 
     panel.appendChild(body);

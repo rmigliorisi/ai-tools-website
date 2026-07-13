@@ -14,7 +14,6 @@
     <span style="font-size:13px;font-weight:500;color:#111111;">AI Tools for Pros</span>
   </a>
   <div id="nav-desktop" style="display:flex;align-items:center;gap:36px;">
-    <a href="<?php echo esc_url(home_url('/our-process')); ?>" class="nav-link">Our Process</a>
 
     <!-- AI Tools Dropdown -->
     <div class="nav-dropdown">
@@ -60,6 +59,8 @@
       </div>
     </div>
 
-    <a href="<?php echo esc_url(home_url('/newsletter')); ?>" class="nav-link">Newsletter</a>
+    <a href="<?php echo esc_url(home_url('/our-process')); ?>" class="nav-link">Our Process</a>
+    <a href="<?php echo esc_url(home_url('/contact')); ?>" class="nav-link">Contact Us</a>
+    <a href="<?php echo esc_url(home_url('/newsletter')); ?>" class="nav-link-newsletter">Newsletter</a>
   </div>
 </nav>
