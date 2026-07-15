@@ -9,7 +9,7 @@
 defined('ABSPATH') || exit;
 
 add_action('wp_head', function () {
-    if (!is_singular(['tool_review', 'profession_hub', 'cross_reference'])) return;
+    if (!is_singular(['tool_review', 'profession_hub', 'cross_reference', 'aifp_update'])) return;
 
     $post_id   = get_the_ID();
     $post_type = get_post_type($post_id);
@@ -44,10 +44,16 @@ add_action('wp_head', function () {
             $headline  = $tool_name . ' for ' . $prof_name . ' — ' . date('Y') . ' Guide';
         }
 
+        if ($post_type === 'aifp_update') {
+            $headline = get_the_title($post_id);
+        }
+
+        $description = $data['subtitle'] ?? $data['intro'] ?? get_the_excerpt($post_id);
+
         $graph[] = [
             '@type'              => 'Article',
             'headline'           => $headline,
-            'description'        => $data['subtitle'] ?? get_the_excerpt($post_id),
+            'description'        => $description,
             'author'             => ['@type' => 'Person', 'name' => 'Richard Migliorisi'],
             'publisher'          => [
                 '@type' => 'Organization',
@@ -80,6 +86,8 @@ add_action('wp_head', function () {
         if ($prof) {
             $breadcrumbs[] = ['@type' => 'ListItem', 'position' => 3, 'name' => aifp_get_data($prof->ID)['profession_name'] ?? '', 'item' => $url];
         }
+    } elseif ($post_type === 'aifp_update') {
+        $breadcrumbs[] = ['@type' => 'ListItem', 'position' => 2, 'name' => $data['month_label'] ?? get_the_title($post_id), 'item' => $url];
     }
 
     $graph[] = [

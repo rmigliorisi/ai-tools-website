@@ -100,6 +100,15 @@ add_action('init', function () {
         'index.php?post_type=cross_reference&name=$matches[1]-$matches[2]',
         'top'
     );
+
+    // AI Updates: /july-2026-updates/, /august-2026-updates/, etc.
+    // Slug changes every month, so this matches the shape (month-year-updates)
+    // rather than a hardcoded list like the rules above.
+    add_rewrite_rule(
+        '^([a-z]+-[0-9]{4}-updates)/?$',
+        'index.php?post_type=aifp_update&name=$matches[1]',
+        'top'
+    );
 });
 
 /* ──────────────────────────────────────────────
@@ -109,7 +118,7 @@ add_action('init', function () {
    Returning false stops that redirect; clean rewrite rules handle routing.
    ────────────────────────────────────────────── */
 add_filter('redirect_canonical', function ($redirect_url) {
-    if (is_singular(['tool_review', 'profession_hub', 'cross_reference'])) {
+    if (is_singular(['tool_review', 'profession_hub', 'cross_reference', 'aifp_update'])) {
         return false;
     }
     return $redirect_url;
@@ -173,7 +182,7 @@ add_action('init', function () {
     };
 
     // Homepage — use most recently modified post across all types
-    $latest = get_posts(['post_type' => ['page','tool_review','profession_hub','cross_reference'], 'post_status' => 'publish', 'posts_per_page' => 1, 'orderby' => 'modified', 'order' => 'DESC']);
+    $latest = get_posts(['post_type' => ['page','tool_review','profession_hub','cross_reference','aifp_update'], 'post_status' => 'publish', 'posts_per_page' => 1, 'orderby' => 'modified', 'order' => 'DESC']);
     $entries[] = ['url' => $base . '/', 'lastmod' => $latest ? $mod($latest[0]) : current_time('Y-m-d'), 'priority' => '1.0', 'changefreq' => 'daily'];
 
     // Standard pages
@@ -214,6 +223,12 @@ add_action('init', function () {
         if ($url && strpos($url, '?') === false) {
             $entries[] = ['url' => rtrim($url, '/') . '/', 'lastmod' => $mod($p), 'priority' => '0.8', 'changefreq' => 'monthly'];
         }
+    }
+
+    // AI Updates pages: /{month}-{year}-updates/ (only ever published manually, see docs/AIFORPROS-AUTOMATED-CONTENT.md)
+    $ai_updates = get_posts(['post_type' => 'aifp_update', 'post_status' => 'publish', 'posts_per_page' => -1]);
+    foreach ($ai_updates as $p) {
+        $entries[] = ['url' => $base . '/' . $p->post_name . '/', 'lastmod' => $mod($p), 'priority' => '0.6', 'changefreq' => 'yearly'];
     }
 
     echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
@@ -462,6 +477,82 @@ function aifp_handle_contact() {
 }
 add_action('wp_ajax_nopriv_aifp_contact', 'aifp_handle_contact');
 add_action('wp_ajax_aifp_contact', 'aifp_handle_contact');
+
+/* ──────────────────────────────────────────────
+   12. Weekly Update Digest (custom REST route for the automated
+   tool-page update system — see docs/AIFORPROS-AUTOMATED-CONTENT.md)
+
+   aifp_update_log has show_in_rest = false (matches aifp_contact's
+   pattern — internal-only data, not meant to be publicly queryable),
+   so the scheduled task can't log entries via the standard
+   /wp-json/wp/v2/aifp_update_log route. This authenticated custom
+   route is the write path instead: it logs each change as its own
+   aifp_update_log post (visible in WP Admin, same as Contact
+   Submissions) and sends the weekly digest email in one call.
+   ────────────────────────────────────────────── */
+add_action('rest_api_init', function () {
+    register_rest_route('aifp/v1', '/update-digest', [
+        'methods'             => 'POST',
+        'callback'            => 'aifp_handle_update_digest',
+        'permission_callback' => function () {
+            return current_user_can('edit_posts');
+        },
+    ]);
+});
+
+function aifp_handle_update_digest(WP_REST_Request $request) {
+    // Each item: { tool, field, old_value, new_value, source, status, reason }
+    // status is one of: applied | held | flagged
+    $changes  = $request->get_param('changes');
+    $changes  = is_array($changes) ? $changes : [];
+    $run_date = date('F j, Y');
+
+    $counts = ['applied' => 0, 'held' => 0, 'flagged' => 0];
+    $body_sections = ['applied' => '', 'held' => '', 'flagged' => ''];
+
+    foreach ($changes as $item) {
+        $tool     = sanitize_text_field($item['tool'] ?? '');
+        $field    = sanitize_text_field($item['field'] ?? '');
+        $old      = sanitize_text_field($item['old_value'] ?? '');
+        $new      = sanitize_text_field($item['new_value'] ?? '');
+        $source   = esc_url_raw($item['source'] ?? '');
+        $status   = in_array($item['status'] ?? '', ['applied', 'held', 'flagged'], true) ? $item['status'] : 'held';
+        $reason   = sanitize_text_field($item['reason'] ?? '');
+
+        $counts[$status]++;
+        $body_sections[$status] .= "- [{$tool}] {$field}: \"{$old}\" -> \"{$new}\"" . ($reason ? " ({$reason})" : '') . "\n";
+
+        $log_id = wp_insert_post([
+            'post_type'   => 'aifp_update_log',
+            'post_title'  => "{$tool} — {$field} — {$run_date}",
+            'post_status' => 'publish',
+        ]);
+        if (!is_wp_error($log_id)) {
+            update_post_meta($log_id, 'tool',      $tool);
+            update_post_meta($log_id, 'field',     $field);
+            update_post_meta($log_id, 'old_value', $old);
+            update_post_meta($log_id, 'new_value', $new);
+            update_post_meta($log_id, 'source',    $source);
+            update_post_meta($log_id, 'status',    $status);
+            update_post_meta($log_id, 'reason',    $reason);
+            update_post_meta($log_id, 'run_date',  $run_date);
+        }
+    }
+
+    $admin_email = get_option('admin_email');
+    $subject     = '[AI Tools for Pros] Weekly Tool Update Digest — ' . $run_date;
+    $body  = "Weekly automated tool-page update run — {$run_date}\n\n";
+    $body .= "APPLIED ({$counts['applied']}):\n" . ($body_sections['applied'] ?: "- none\n");
+    $body .= "\nHELD FOR REVIEW ({$counts['held']}):\n" . ($body_sections['held'] ?: "- none\n");
+    if ($counts['flagged'] > 0) {
+        $body .= "\nFLAGGED — VERDICT MAY NEED A LOOK ({$counts['flagged']}):\n" . $body_sections['flagged'];
+    }
+    $body .= "\nFull detail for each change is logged in WP Admin under Weekly Update Log.\n";
+
+    wp_mail($admin_email, $subject, $body);
+
+    return new WP_REST_Response(['sent' => true, 'counts' => $counts], 200);
+}
 
 /* Wire up .newsletter-input-wrap buttons (newsletter page content) */
 add_action('wp_footer', function () {

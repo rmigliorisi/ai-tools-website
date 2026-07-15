@@ -98,6 +98,25 @@ add_action('init', function () {
         'rewrite'      => false,
     ]);
 
+    /* ── AI Update CPT (monthly "/[month]-[year]-updates/" page) ── */
+    register_post_type('aifp_update', [
+        'labels' => [
+            'name'          => 'AI Updates',
+            'singular_name' => 'AI Update',
+            'add_new_item'  => 'Add New AI Update',
+            'edit_item'     => 'Edit AI Update',
+            'all_items'     => 'All AI Updates',
+            'search_items'  => 'Search AI Updates',
+        ],
+        'public'       => true,
+        'has_archive'  => false,
+        'menu_icon'    => 'dashicons-megaphone',
+        'menu_position'=> 8,
+        'supports'     => ['title', 'editor', 'custom-fields', 'revisions'],
+        'rewrite'      => false, // Handled explicitly in functions.php, same as tool_review/profession_hub
+        'show_in_rest' => true,
+    ]);
+
     /* ── Newsletter Subscriber CPT ── */
     register_post_type('aifp_subscriber', [
         'labels' => [
@@ -110,7 +129,7 @@ add_action('init', function () {
         'show_ui'       => true,
         'show_in_menu'  => true,
         'menu_icon'     => 'dashicons-email-alt',
-        'menu_position' => 8,
+        'menu_position' => 9,
         'supports'      => ['title'],
         'show_in_rest'  => false,
     ]);
@@ -130,7 +149,27 @@ add_action('init', function () {
         'show_in_menu'        => true,
         'show_in_nav_menus'   => false,
         'menu_icon'           => 'dashicons-format-chat',
-        'menu_position'       => 9,
+        'menu_position'       => 10,
+        'supports'            => ['title', 'custom-fields'],
+        'show_in_rest'        => false,
+    ]);
+
+    /* ── Weekly Update Log CPT (audit trail for automated tool-page edits) ── */
+    register_post_type('aifp_update_log', [
+        'labels' => [
+            'name'          => 'Update Log',
+            'singular_name' => 'Update Log Entry',
+            'all_items'     => 'Weekly Update Log',
+            'search_items'  => 'Search Update Log',
+        ],
+        'public'              => false,
+        'publicly_queryable'  => false,
+        'exclude_from_search' => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => false,
+        'menu_icon'           => 'dashicons-clock',
+        'menu_position'       => 11,
         'supports'            => ['title', 'custom-fields'],
         'show_in_rest'        => false,
     ]);
@@ -145,7 +184,7 @@ add_filter('wp_unique_post_slug', function ($slug, $post_id, $status, $type) {
 /* ── Cross-Reference Pretty Permalinks ── */
 // Output /{tool-slug}/{profession-slug}/ instead of /?cross_reference=slug
 add_filter('post_type_link', function ($link, $post) {
-    if ($post->post_type === 'tool_review' || $post->post_type === 'profession_hub') {
+    if ($post->post_type === 'tool_review' || $post->post_type === 'profession_hub' || $post->post_type === 'aifp_update') {
         return home_url('/' . $post->post_name . '/');
     }
 
