@@ -19,6 +19,31 @@ $intro         = $data['intro'] ?? '';
 $news_items    = $data['news_items'] ?? [];
 $what_to_watch = $data['what_to_watch'] ?? '';
 
+// Internal linking is structural, not left to content generation to remember.
+// See docs/AIFORPROS-AUTOMATED-CONTENT.md "Content Optimization Guardrails".
+$related_tool_slugs       = $data['related_tool_slugs'] ?? [];
+$related_profession_slugs = $data['related_profession_slugs'] ?? [];
+
+$related_tools = [];
+if (!empty($related_tool_slugs)) {
+    foreach (aifp_get_tool_reviews() as $tool) {
+        $td = aifp_get_data($tool->ID);
+        if (in_array($td['tool_slug'] ?? $tool->post_name, $related_tool_slugs, true)) {
+            $related_tools[] = ['name' => $td['tool_name'] ?? $tool->post_title, 'url' => get_permalink($tool->ID)];
+        }
+    }
+}
+
+$related_professions = [];
+if (!empty($related_profession_slugs)) {
+    foreach (aifp_get_profession_hubs() as $prof) {
+        $pd = aifp_get_data($prof->ID);
+        if (in_array($pd['profession_slug'] ?? $prof->post_name, $related_profession_slugs, true)) {
+            $related_professions[] = ['name' => $pd['profession_name'] ?? $prof->post_title, 'url' => get_permalink($prof->ID)];
+        }
+    }
+}
+
 $pub_date_raw = $data['publish_date'] ?? '';
 if ($pub_date_raw && preg_match('/^\d{4}-\d{2}-\d{2}$/', $pub_date_raw)) {
     $pub_date = date('F j, Y', strtotime($pub_date_raw));
@@ -71,6 +96,23 @@ if ($pub_date_raw && preg_match('/^\d{4}-\d{2}-\d{2}$/', $pub_date_raw)) {
         <?php endif; ?>
       </div>
       <?php endforeach; ?>
+    </div>
+  </section>
+  <?php endif; ?>
+
+  <!-- RELATED REVIEWS (structural internal linking — always present when tools are mentioned) -->
+  <?php if (!empty($related_tools) || !empty($related_professions)) : ?>
+  <section style="padding:0 min(6.5rem,8vw) min(3rem,4vw);">
+    <div style="max-width:760px;">
+      <h2 class="font-heading" style="font-size:16px;font-weight:700;color:#111111;margin:0 0 14px;">Related Reviews</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;">
+        <?php foreach ($related_tools as $rt) : ?>
+        <a href="<?php echo esc_url($rt['url']); ?>" style="font-size:13px;color:#2563EB;text-decoration:none;font-weight:500;background:#eff6ff;padding:6px 14px;border-radius:999px;">Our <?php echo esc_html($rt['name']); ?> review &rarr;</a>
+        <?php endforeach; ?>
+        <?php foreach ($related_professions as $rp) : ?>
+        <a href="<?php echo esc_url($rp['url']); ?>" style="font-size:13px;color:#2563EB;text-decoration:none;font-weight:500;background:#eff6ff;padding:6px 14px;border-radius:999px;">AI tools for <?php echo esc_html($rp['name']); ?> &rarr;</a>
+        <?php endforeach; ?>
+      </div>
     </div>
   </section>
   <?php endif; ?>

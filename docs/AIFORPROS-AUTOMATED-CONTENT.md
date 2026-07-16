@@ -175,8 +175,11 @@ content, not maintenance, so it always lands as a draft.
   matching `migrate_v2.py`'s `create_post()`), read back by `aifp_get_data()`. No ACF field group
   needed for this to function; something like `{"month_label": "July 2026", "intro": "...",
   "news_items": [{"headline":..., "summary":..., "source_name":..., "source_url":...}, ...],
-  "what_to_watch": "..."}` is enough. (A matching `acf-fields.php` entry could be added later purely
-  as a wp-admin editing convenience, same caveat as the other three CPTs — optional, not required.)
+  "related_tool_slugs": ["claude", "cursor", ...], "related_profession_slugs": [...],
+  "what_to_watch": "..."}` is enough. `related_tool_slugs`/`related_profession_slugs` drive the
+  structural internal-linking section in `single-aifp_update.php` — see "Content Optimization
+  Guardrails" below. (A matching `acf-fields.php` entry could be added later purely as a
+  wp-admin editing convenience, same caveat as the other three CPTs — optional, not required.)
 - Needs a `single-aifp_update.php` template (or reuse `page-fullwidth.php` if the layout is close
   enough). Because each monthly page is now a root-level slug (`/july-2026-updates/`) rather than
   nested under a shared `/updates/` path, there's no automatic WP archive at that URL — if an
@@ -200,7 +203,9 @@ matches what happened in it.
    here.
 2. **Draft** — compose the page: intro, news items grouped sensibly (not just a flat list),
    optional forward-looking section. Written in the same first-person editorial voice used
-   elsewhere on the site per `AIFORPROS.md`.
+   elsewhere on the site per `AIFORPROS.md`. Also populate `related_tool_slugs` (and
+   `related_profession_slugs` if relevant) with every one of the 10 reviewed tools mentioned this
+   month — see "Content Optimization Guardrails" below for why this is structural, not optional.
 3. **Guardrail QA** — same fail-closed sourcing standard as System 1: every factual claim needs
    a real, current source. No `[VERIFY DETAILS]` placeholders left in publicly-facing draft copy
    without an accompanying real value — same rule already enforced in `AIFORPROS-QA.md` Step 5.
@@ -214,6 +219,60 @@ matches what happened in it.
 5. **Notify** — Rich gets a heads-up that the draft is ready for review, with a link to it in
    WP Admin.
 6. **Publish** — manual, whenever Rich reviews and clicks Publish.
+
+---
+
+## Content Optimization Guardrails (SEO / GEO / AEO)
+
+Applies to every run of both systems. Grounded in the site's existing strategy docs
+(`docs/seo-geo-aeo/08_INTERNAL_LINKING_REQUIREMENTS.md` and
+`docs/seo-geo-aeo/02_AI_SEARCH_GEO_AEO_REQUIREMENTS.md`) rather than inventing separate rules for
+automated content. Found and fixed after the first live proof-of-concept (the July 2026 draft)
+shipped with zero internal links.
+
+### Internal linking is structural, not a writing reminder
+
+Content generation reliably forgets to add links; a template can't. `single-aifp_update.php`
+renders a "Related Reviews" section directly from `related_tool_slugs` /
+`related_profession_slugs` in the data object, so every monthly page that mentions a reviewed
+tool automatically links to that tool's review page, no matter what the generated prose does.
+Every run must populate these arrays with every reviewed tool (and profession, where relevant)
+mentioned that month. Same principle applies to System 1: any weekly fact update that touches a
+tool with existing `cross_reference` pages should be checked for consistency with those pages
+(already required above) rather than left to prose to reference correctly.
+
+Per `08_INTERNAL_LINKING_REQUIREMENTS.md` section 9 ("AI agents may suggest links, but should not
+auto-publish without approval"), this system stays inside a narrow, safe exception: linking a
+tool's own name to its own already-published review page is mechanical and requires no subjective
+judgment, so it's fine to auto-apply on both systems. Anything less obvious, a suggested link to a
+page that isn't a direct, unambiguous match, gets logged as a suggestion in the weekly digest
+rather than silently added.
+
+Anchor text follows section 3 of that doc: descriptive and natural ("Our Claude review," "AI
+tools for Legal Counsel"), never "click here" or bare repeated tool names.
+
+### Answer-led structure (AEO)
+
+Per `02_AI_SEARCH_GEO_AEO_REQUIREMENTS.md` section 1, the intro paragraph on the monthly page
+must be able to stand alone if lifted verbatim into an AI-generated answer: a direct, concrete
+statement of what happened this month, not scene-setting or vague preamble. Same standard for any
+weekly page-level summary text. Avoid burying the substantive point after throat-clearing.
+
+### Entity clarity
+
+Every news item's first mention of a tool or company must use the full, unambiguous name (e.g.
+"Anthropic," "Cursor"), not a pronoun or vague reference, per section 2 of the same doc.
+
+### Information gain
+
+Per section 3, a rewritten press release is not enough. Each item should carry a sentence of
+relevance to this site's specific audience (working professionals), not just restate the news.
+
+### QA gate addition
+
+Add to both systems' existing QA checks: reject/hold any draft where `related_tool_slugs` is
+empty despite a reviewed tool being named in the body text, and reject any anchor text that is
+generic ("click here," "read more," bare "link").
 
 ---
 
