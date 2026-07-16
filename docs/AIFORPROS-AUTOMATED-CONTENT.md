@@ -28,6 +28,13 @@ Keep the 10 `tool_review` pages factually current — pricing, plan names, featu
 status — without Rich having to manually re-check 10 vendor sites every week. This is the same
 job the `[VERIFY DETAILS]` flag already does manually; this system does it on a schedule.
 
+Freshness is also a direct AEO/GEO signal, not just accuracy upkeep. Recent data shows the large
+majority of AI citations for commercial/evaluation queries come from pages updated within the past
+12 months, and pages left unrefreshed for a full quarter are markedly more likely to lose AI
+citations than recently updated ones. Weekly updates keep these pages inside that freshness window,
+which is a second, independent reason (beyond factual accuracy) this system runs on a schedule
+instead of ad hoc.
+
 ### Schedule
 
 Weekly, recommended **Monday morning**, so any changes are visible for the rest of the week.
@@ -250,6 +257,12 @@ rather than silently added.
 
 Anchor text follows section 3 of that doc: descriptive and natural ("Our Claude review," "AI
 tools for Legal Counsel"), never "click here" or bare repeated tool names.
+
+**Link each destination once per page.** If a tool is mentioned in multiple items on the same
+page, only the first meaningful mention gets linked; later mentions of the same destination stay
+plain text. The exception is an image or thumbnail pointing to the same destination later in the
+page, that's a distinct, additional link, not a duplicate. This applies per-page, not per-item:
+don't re-link Claude in the third item just because it's a different news item on the same page.
 
 ### Answer-led structure (AEO)
 

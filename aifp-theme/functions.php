@@ -249,7 +249,10 @@ add_action('init', function () {
    5b. robots.txt
    ────────────────────────────────────────────── */
 add_filter('robots_txt', function () {
-    return "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://aitoolsforpros.com/wp-sitemap.xml\n";
+    // OAI-SearchBot (ChatGPT search citations) is allowed; GPTBot (OpenAI model
+    // training crawler) is disallowed. These are independent per OpenAI's docs —
+    // see docs/seo-geo-aeo/02_AI_SEARCH_GEO_AEO_REQUIREMENTS.md section 7.
+    return "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: GPTBot\nDisallow: /\n\nSitemap: https://aitoolsforpros.com/wp-sitemap.xml\n";
 }, 99);
 
 /* ──────────────────────────────────────────────
