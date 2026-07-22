@@ -249,10 +249,38 @@ add_action('init', function () {
    5b. robots.txt
    ────────────────────────────────────────────── */
 add_filter('robots_txt', function () {
-    // OAI-SearchBot (ChatGPT search citations) is allowed; GPTBot (OpenAI model
-    // training crawler) is disallowed. These are independent per OpenAI's docs —
-    // see docs/seo-geo-aeo/02_AI_SEARCH_GEO_AEO_REQUIREMENTS.md section 7.
-    return "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: GPTBot\nDisallow: /\n\nSitemap: https://aitoolsforpros.com/wp-sitemap.xml\n";
+    // Policy: allow each AI company's citation/search crawler (what lets us show up
+    // in ChatGPT/Claude/Perplexity answers with a source link — the whole point of
+    // the AEO/GEO work in docs/seo-geo-aeo/), disallow their separate model-training
+    // crawler. Same split for all three companies with reviewed tools on this site
+    // (see docs/seo-geo-aeo/02_AI_SEARCH_GEO_AEO_REQUIREMENTS.md section 7 and
+    // docs/seo-geo-aeo/10_ROBOTS_SITEMAPS_CRAWLER_ACCESS.md section 5). Bot names
+    // confirmed against each company's current published crawler docs as of this
+    // edit — these tokens do change over time, so re-verify before major changes.
+    //   OpenAI:    OAI-SearchBot (citations) allow / GPTBot (training) disallow
+    //   Anthropic: Claude-SearchBot + Claude-User (citations/live fetch) allow /
+    //              ClaudeBot (training) disallow
+    //   Google:    Google-Extended (Gemini/AI training + product-improvement opt-out,
+    //              separate from Googlebot — regular Search crawling is untouched)
+    //              disallow
+    //   Perplexity: PerplexityBot + Perplexity-User (citations/live fetch) allow —
+    //              note Perplexity has been reported ignoring robots.txt for
+    //              Perplexity-User in the past; declaring the policy is still
+    //              correct practice regardless of their compliance record.
+    // Sitemap points at the real, final URL (Rank Math's sitemap_index.xml) instead
+    // of /wp-sitemap.xml, which just 301s there — avoids a needless redirect hop.
+    return "User-agent: *\n"
+        . "Disallow: /wp-admin/\n"
+        . "Allow: /wp-admin/admin-ajax.php\n\n"
+        . "User-agent: OAI-SearchBot\nAllow: /\n\n"
+        . "User-agent: GPTBot\nDisallow: /\n\n"
+        . "User-agent: Claude-SearchBot\nAllow: /\n\n"
+        . "User-agent: Claude-User\nAllow: /\n\n"
+        . "User-agent: ClaudeBot\nDisallow: /\n\n"
+        . "User-agent: PerplexityBot\nAllow: /\n\n"
+        . "User-agent: Perplexity-User\nAllow: /\n\n"
+        . "User-agent: Google-Extended\nDisallow: /\n\n"
+        . "Sitemap: https://aitoolsforpros.com/sitemap_index.xml\n";
 }, 99);
 
 /* ──────────────────────────────────────────────

@@ -1,0 +1,71 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# AI Tools for Pros — Weekly Tool Page Update (System 1)
+#
+# Runs automation/weekly_tool_update.py: researches each of the 10 tool_review
+# pages via the Claude API's web_search tool (restricted to that vendor's own
+# official domains), diffs against the live page content, applies only changes
+# that pass the guardrail QA gate, and emails a digest of everything that was
+# applied, held, or flagged. See docs/AIFORPROS-AUTOMATED-CONTENT.md for the
+# full spec and guardrails.
+#
+# This runs on GitHub Actions rather than as a Cowork scheduled task because
+# the actual WordPress writes need real outbound network access that Cowork's
+# sandbox doesn't have.
+#
+# IMPORTANT — before the weekly schedule is turned on:
+#   1. Add these repository secrets (Settings → Secrets and variables →
+#      Actions → New repository secret):
+#        ANTHROPIC_API_KEY
+#        WORDPRESS_USERNAME
+#        WORDPRESS_APP_PASSWORD
+#   2. Run this workflow manually once via the "Run workflow" button with
+#      "Dry run" left checked, and read the run's log output (and, on a live
+#      run, the digest email) before trusting it unattended.
+#   3. Only after that dry run looks right, uncomment the `schedule:` trigger
+#      below and push — from then on it runs automatically every Monday.
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Weekly Tool Page Update
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (research + QA gate only, no writes, no email)"
+        type: boolean
+        default: true
+  # schedule:
+  #   - cron: '0 13 * * 1'  # Monday ~9am ET (13:00 UTC) — uncomment after a supervised dry run
+
+jobs:
+  update:
+    name: "Research + Diff + QA Gate + Apply"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r automation/requirements.txt
+
+      - name: Run weekly tool update
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          WORDPRESS_USERNAME: ${{ secrets.WORDPRESS_USERNAME }}
+          WORDPRESS_APP_PASSWORD: ${{ secrets.WORDPRESS_APP_PASSWORD }}
+          WORDPRESS_SITE_URL: https://aitoolsforpros.com
+        run: |
+          FLAG=""
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
+            FLAG="--dry-run"
+            echo "Running in DRY RUN mode — no writes, no digest email."
+          else
+            echo "Running LIVE — changes that pass the QA gate will be written."
+          fi
+          python3 automation/weekly_tool_update.py $FLAG

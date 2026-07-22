@@ -7,6 +7,7 @@ daily human involvement, but with different risk postures matched to what each o
 |---|---|---|---|
 | Weekly Tool Page Updates | Existing, already-published `tool_review` pages | Weekly | Automatically, no approval step |
 | Monthly AI Updates Page | New page at `/[month]-[year]-updates/` | Monthly | Only when Rich clicks Publish |
+| Monthly Editorial Review | Existing `cross_reference` (41) / `profession_hub` (8) pages | Monthly | Suggest-only — Rich approves each change before anything is applied |
 
 The difference in risk posture is deliberate. Weekly updates are factual maintenance on pages a
 human already wrote and vetted — small, verifiable deltas (a price changed, a feature shipped).
@@ -38,8 +39,26 @@ instead of ad hoc.
 ### Schedule
 
 Weekly, recommended **Monday morning**, so any changes are visible for the rest of the week.
-Runs as a Claude Cowork scheduled task — no new hosting or service needed. Uses the same
-`wp_creds.py` WordPress Application Password already in `.env` for every write.
+
+Runs as a **GitHub Actions workflow** (`.github/workflows/weekly-tool-update.yml`), not a Cowork
+scheduled task. Cowork's sandbox cannot make authenticated writes to any external host — outbound
+HTTPS to third-party services is blocked at the proxy, confirmed by testing both `git push` and a
+plain authenticated `GET` against the WP REST API from inside a Cowork session. A GitHub Actions
+runner has normal outbound network access, so that's where the actual research-and-write logic
+(`automation/weekly_tool_update.py`) lives and runs. Cowork remains the place for one-off/interactive
+work (the monthly page, ad hoc fixes) but isn't the execution environment for a recurring
+unattended job that needs to reach the live site.
+
+### How the research step works
+
+Each of the 10 tools gets one Claude API call using the **web search tool**
+(`web_search_20250305`), with `allowed_domains` locked to that vendor's own official site(s) —
+Claude physically cannot cite a result from outside that list. This is what makes the "vendor's
+own official page" confidence tier in the QA gate meaningful rather than just self-reported.
+Findings come back as structured JSON (value, source URL, confidence tier) and are diffed against
+the live page's decoded content before anything is written. Cost is bounded and small: at most 5
+searches per tool × 10 tools × 52 weeks/year, at $10 per 1,000 searches plus token costs — a
+few dollars a year, not a metered per-user cost like the chatbot idea that was passed on earlier.
 
 ### Process
 
@@ -229,6 +248,70 @@ matches what happened in it.
 
 ---
 
+## System 3: Monthly Cross-Reference & Profession Hub Editorial Review (suggest-only)
+
+### Purpose
+
+System 1 keeps the 10 tool_review pages factually current, but it deliberately never touches
+verdict-level judgment calls — "is Claude now a better fit for architects than it used to be" is
+not a fact you can confirm on a vendor's pricing page, it's a synthesis across several capability
+changes plus a call about whether that synthesis is strong enough to justify updating a page a
+human already wrote and stands behind. That's exactly the kind of claim the guardrails in System 1
+and the SEO docs (fail-closed sourcing, no unverifiable claims stated as fact) exist to keep out of
+anything that auto-publishes.
+
+So this system does the research and the noticing, but never the writing. It surfaces candidate
+verdict-level updates to the 41 `cross_reference` pages (tool × profession) and, more rarely, the 8
+`profession_hub` pages, as a reviewable report — evidence, reasoning, and a specific suggested edit
+to a specific section — and Rich decides what actually changes. Nothing here auto-publishes, ever.
+This is the same posture as System 2 (draft/suggestion, human in the loop) rather than System 1
+(auto-publish), because the content itself is a different kind of claim.
+
+This also protects against a real, current risk: Google's spam policy update in 2026 specifically
+targets "scaled content abuse" — large volumes of pages edited or generated with little real value
+to users. A system that touched dozens of editorial verdicts every month on autopilot, even with
+good intentions, would look exactly like what that policy targets. Keeping a human decision at the
+point of publish, and keeping the volume of suggested changes deliberately small and well-evidenced,
+is what keeps this system firmly on the right side of that line.
+
+### Schedule
+
+Monthly, timed alongside System 2's research pass (2-3 days before month end) since the two share
+research ground — System 2 is already looking at what changed across the AI tools market that
+month; this system asks the follow-up question of whether anything found is significant enough to
+change a specific page's positioning.
+
+### Process
+
+1. **Research** — for each of the 10 tools, look at what's changed since the page was last
+   substantively edited (`publish_date` on the page vs. this month): new capabilities, model
+   upgrades, workflow-relevant features. Cross-reference against what each of the 8 professions'
+   pages says that tool is good or weak at.
+2. **Identify candidates** — a page becomes a candidate only when there's a specific, named
+   capability change that plausibly affects a specific claim already on that page (e.g., a
+   materially larger context window or improved image/document analysis bearing on a page that
+   says the tool struggles with long specs or drawings). "The model got a version bump" alone is
+   not sufficient reason — the change has to connect to something the page actually claims.
+3. **Draft the suggestion, not the rewrite** — for each candidate, produce: the exact current
+   sentence/section being questioned, the specific evidence (with source), and one concrete
+   proposed replacement (not a vague "consider updating this"). Small, targeted edits to the
+   specific claim — not a full rewrite of the page's verdict.
+4. **Guardrail QA** — same fail-closed sourcing standard as the other systems: every piece of
+   evidence needs a real, current, ideally vendor-official source. No suggestion ships without one.
+   Additionally: cap suggestions at a small number per cycle (a handful, not dozens) — if research
+   turns up more candidates than that, only the ones with the strongest evidence get surfaced, the
+   rest wait for next cycle. Volume discipline here is itself a guardrail, not just an editorial
+   nicety (see "Purpose" above on scaled content abuse).
+5. **Deliver the report** — to Rich, for review. Nothing is written to WordPress at this stage.
+6. **Apply approved changes** — for whichever suggestions Rich approves, apply them the same way
+   the July monthly page was patched: fetch the current page's JSON via the WP REST API
+   (`context=edit` to get `content.raw`, same pattern as `automation/weekly_tool_update.py`), change
+   only the approved field(s), re-encode, `PUT` back. Because this always requires a human decision
+   first, it doesn't need to live in a GitHub Actions schedule the way System 1 does — a short
+   script generated at approval time, run once locally, is enough.
+
+---
+
 ## Content Optimization Guardrails (SEO / GEO / AEO)
 
 Applies to every run of both systems. Grounded in the site's existing strategy docs
@@ -291,12 +374,16 @@ generic ("click here," "read more," bare "link").
 
 ## Shared implementation notes
 
-- Both systems reuse the existing `.env` / `wp_creds.py` Application Password auth — no new
-  credentials needed.
-- Both run as scheduled Claude Cowork tasks doing the research + drafting + REST calls directly,
-  rather than requiring a separately hosted service. This keeps the "not costly" requirement from
-  the earlier chatbot discussion intact — no per-message API meter, just a bounded weekly and
-  monthly job.
+- Both systems reuse the existing `.env` / `wp_creds.py` Application Password auth (read via
+  `WORDPRESS_USERNAME` / `WORDPRESS_APP_PASSWORD` env vars — from GitHub Actions secrets in CI,
+  from `.env` locally) — no new credential *format* needed, just a second place (GitHub repo
+  secrets) it also has to live for System 1.
+- System 1 runs as a scheduled **GitHub Actions workflow** calling the Claude API directly
+  (see "How the research step works" above) — not a Cowork scheduled task, because Cowork's
+  sandbox can't make the authenticated write. System 2 (monthly) still runs interactively through
+  Cowork today, since a draft-only page with a human publish step doesn't need to run unattended.
+  This keeps the "not costly" requirement from the earlier chatbot discussion intact either way —
+  no per-message API meter, just a bounded weekly job (a few dollars a year, see above).
 - Neither system touches theme code (`aifp-theme/`), so neither goes through the GitHub Actions
   QA/deploy pipeline — that pipeline validates PHP files, not WordPress content. The QA gates
   described above are the content-level equivalent, purpose-built for this.
@@ -311,7 +398,16 @@ generic ("click here," "read more," bare "link").
 - [x] Weekly digest email function — `POST /wp-json/aifp/v1/update-digest` in `functions.php`
 - [x] Article/BreadcrumbList JSON-LD support for `aifp_update` — `inc/json-ld.php`
 - [x] `aifp_update` added to the custom sitemap generator
-- [ ] The two Cowork scheduled tasks themselves (Monday weekly run, end-of-month monthly run) —
-      not yet built; this is the actual research + diff + QA-gate + write logic described above
-- [ ] One supervised dry run of each before switching System 1 to fully unattended
+- [x] System 1 research + diff + QA-gate + write logic — `automation/weekly_tool_update.py`
+- [x] System 1 scheduled execution — `.github/workflows/weekly-tool-update.yml` (GitHub Actions,
+      `workflow_dispatch` only for now; `schedule:` trigger is commented out on purpose)
+- [ ] Add `ANTHROPIC_API_KEY`, `WORDPRESS_USERNAME`, `WORDPRESS_APP_PASSWORD` as GitHub repo secrets
+- [ ] One supervised dry run of System 1 (via `workflow_dispatch` with dry run checked), then
+      uncomment the `schedule:` trigger once the output looks right
+- [ ] System 2's monthly run is still manual-via-Cowork end to end (research → draft → notify);
+      no scheduled execution built for it yet since draft-only + human-publish doesn't need one
+- [x] System 3 spec'd (Monthly Cross-Reference & Profession Hub Editorial Review, suggest-only)
+- [ ] System 3 has no automation yet — first pass run manually via Cowork as a live test
+      (Claude for Architects, prompted by Rich noticing the tool has likely improved for that
+      profession) before deciding whether it's worth scheduling at all
 - [ ] Requires a `git commit` + `push` to deploy — see repo for pending changes
