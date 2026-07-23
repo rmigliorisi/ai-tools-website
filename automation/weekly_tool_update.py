@@ -65,7 +65,9 @@ tool's own official website (the domains you've been given access to) — never 
 aggregators, or your own memory. If you cannot confirm a fact on the vendor's own current page, say so \
 rather than guessing.
 
-Return your findings as a single JSON object, and nothing else after it, with this shape:
+After you finish searching, respond with ONLY a single JSON object — no explanation before it, no
+markdown code fences (no ```json), no text after it. Your entire final message must start with `{`
+and end with `}`. This shape:
 {
   "made_by": {"value": "...", "source_url": "...", "confidence": "..."} or null,
   "pricing_fact": {"value": "...", "source_url": "...", "confidence": "..."} or null,
@@ -120,7 +122,7 @@ def research_tool(client, info):
     try:
         resp = client.messages.create(
             model=MODEL,
-            max_tokens=2048,
+            max_tokens=4096,
             system=RESEARCH_SYSTEM_PROMPT,
             tools=[{
                 "type": "web_search_20250305",
