@@ -160,7 +160,10 @@ def research_tool(client, info):
 
 
 def _extract_price(s):
-    m = re.search(r"\$?\s*([\d,]+(?:\.\d+)?)", s or "")
+    # Must start with an actual digit — otherwise a plain sentence comma (e.g.
+    # "Free tier, Pro ~$20/mo") can match in isolation, get stripped to an empty
+    # string, and crash float(""). Found via the second dry run on GitHub Actions.
+    m = re.search(r"\$?\s*(\d[\d,]*(?:\.\d+)?)", s or "")
     return float(m.group(1).replace(",", "")) if m else None
 
 
