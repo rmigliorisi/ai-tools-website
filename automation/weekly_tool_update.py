@@ -27,6 +27,7 @@ Usage:
 """
 
 import argparse
+import difflib
 import json
 import re
 import ssl
@@ -64,13 +65,18 @@ review site is still accurate. You will be given the page's CURRENT stated facts
 verify each one against the vendor's own official website (the only domains you have search access to) \
 — never third-party summaries, aggregators, or your own memory.
 
-This is a diff task, not a rewrite task. For every field, first ask: "is the CURRENT text still \
-substantively true?" If yes — even if you would phrase it differently, use different words, or format \
-it differently — return null for that field. Only return a non-null finding when you can point to a \
-SPECIFIC fact that has actually changed (a real price change, a plan renamed, a feature that now works \
-differently, a compliance status that flipped) — not a paraphrase of something that's still correct. \
-Independently re-describing an unchanged fact in your own words is exactly what this task must avoid; \
-if you catch yourself doing that, return null instead.
+This is a diff task, not a rewrite task. The single most common mistake to avoid: confirming a fact is \
+still true on the vendor's site, and then reporting it as a "finding" anyway because you can now cite a \
+source for it. Confirming something is NOT the same as it having changed. Only return a non-null finding \
+when the SUBSTANCE is different from what the page already says below — a real price change, a plan \
+renamed, a feature that now works differently, a compliance status that flipped. "made_by" in particular \
+almost never changes (only on an acquisition or rebrand) — do not return a value for it just because you \
+can confirm the company name; treat it as null unless you have specific evidence of a change.
+
+For every non-null finding, you must also include "what_changed": a one-sentence description of the \
+SPECIFIC delta (e.g. "Price increased from $20/mo to $25/mo" or "Plan renamed from Team to Business"). \
+If you cannot write a "what_changed" sentence that names both the old and new state, that is a sign \
+nothing actually changed — return null instead of forcing an answer.
 
 If you cannot confirm a fact on the vendor's own current page, say so rather than guessing — do not \
 report a "change" you're not sure about.
@@ -79,11 +85,11 @@ After you finish searching, respond with ONLY a single JSON object — no explan
 markdown code fences (no ```json), no text after it. Your entire final message must start with `{`
 and end with `}`. This shape:
 {
-  "made_by": {"value": "...", "source_url": "...", "confidence": "..."} or null,
-  "pricing_fact": {"value": "...", "source_url": "...", "confidence": "..."} or null,
-  "hipaa_fact": {"value": "...", "source_url": "...", "confidence": "..."} or null,
-  "pricing_tiers": [{"tier_name": "...", "tier_price": "...", "tier_features": "...", "source_url": "...", "confidence": "..."}] or null,
-  "feature_updates": [{"feature_name": "...", "feature_description": "...", "source_url": "...", "confidence": "..."}] or null,
+  "made_by": {"value": "...", "what_changed": "...", "source_url": "...", "confidence": "..."} or null,
+  "pricing_fact": {"value": "...", "what_changed": "...", "source_url": "...", "confidence": "..."} or null,
+  "hipaa_fact": {"value": "...", "what_changed": "...", "source_url": "...", "confidence": "..."} or null,
+  "pricing_tiers": [{"tier_name": "...", "tier_price": "...", "tier_features": "...", "what_changed": "...", "source_url": "...", "confidence": "..."}] or null,
+  "feature_updates": [{"feature_name": "...", "feature_description": "...", "what_changed": "...", "source_url": "...", "confidence": "..."}] or null,
   "notes": "anything uncertain or worth a human's attention, as plain text"
 }
 
@@ -94,7 +100,7 @@ and end with `}`. This shape:
 
 Only include a key if the underlying fact has genuinely changed versus what the page below already \
 says. If the current text is still accurate, use null. Never invent a value, and never return a finding \
-solely because you'd word something differently than the page already does.
+solely because you were able to confirm something is still true.
 """
 
 
@@ -222,6 +228,18 @@ def numeric_sanity_ok(old_value, new_value):
     return True
 
 
+def _fuzzy_unchanged(old_value, new_value, threshold=0.6):
+    """Deterministic backstop that doesn't depend on the model's own restraint.
+    Even after being told this is a diff task, the research step kept reporting
+    "confirmed" facts (e.g. made_by) as if they were changes, just because it
+    could re-verify and re-phrase them. If the new text is highly similar to
+    the old text, treat it as unchanged regardless of what the model claims."""
+    if not old_value or not new_value:
+        return False
+    ratio = difflib.SequenceMatcher(None, old_value.lower().strip(), new_value.lower().strip()).ratio()
+    return ratio >= threshold
+
+
 def evaluate_field(old_value, finding, strict):
     """
     Apply the guardrail QA gate (docs/AIFORPROS-AUTOMATED-CONTENT.md) to one
@@ -230,16 +248,35 @@ def evaluate_field(old_value, finding, strict):
       "applied" — passes every check, safe to write
       "flagged" — applied, but noted in the digest (soft warning)
       "held"    — not applied, logged for human review
+
+    Two backstops here exist independently of the model's own "is this really
+    different" judgment, because that judgment alone proved unreliable in
+    testing (see docs/AIFORPROS-AUTOMATED-CONTENT.md): a numeric-equality check
+    for price-like fields, and a fuzzy text-similarity check for everything
+    else. Both fail toward "skip" (do nothing) rather than "apply," which is
+    the safe direction — worst case we miss a subtle real change this cycle
+    and catch it next week, rather than publishing an unnecessary rewrite.
     """
     if finding is None:
         return "skip", "no finding"
 
     value = finding.get("value")
+    what_changed = (finding.get("what_changed") or "").strip()
     source_url = finding.get("source_url") or ""
     confidence = finding.get("confidence", "uncertain")
 
     if value == old_value:
         return "skip", "unchanged"
+
+    old_p, new_p = _extract_price(old_value), _extract_price(value)
+    if old_p is not None and new_p is not None and old_p == new_p:
+        return "skip", "same numeric value once parsed — unchanged despite different wording"
+
+    if _fuzzy_unchanged(old_value, value):
+        return "skip", "high textual similarity to existing text — treated as unchanged"
+
+    if not what_changed or len(what_changed) < 8:
+        return "held", "model didn't provide a specific what-changed rationale"
     if not source_url:
         return "held", "no traceable source URL"
     if not numeric_sanity_ok(old_value, value):
@@ -249,8 +286,8 @@ def evaluate_field(old_value, finding, strict):
     if confidence == "uncertain":
         return "held", "confidence too low to auto-apply"
     if confidence == "third_party":
-        return "flagged", "confirmed via a credible third-party source, not the vendor's own page"
-    return "applied", "confirmed on the vendor's current official page"
+        return "flagged", f"confirmed via a credible third-party source, not the vendor's own page — {what_changed}"
+    return "applied", what_changed
 
 
 def process_tool(slug, info, post_id, data, findings, dry_run, changes_log):
@@ -286,6 +323,7 @@ def process_tool(slug, info, post_id, data, findings, dry_run, changes_log):
             continue
         decision, reason = evaluate_field(existing.get("tier_price", ""), {
             "value": tier_finding.get("tier_price"),
+            "what_changed": tier_finding.get("what_changed"),
             "source_url": tier_finding.get("source_url"),
             "confidence": tier_finding.get("confidence"),
         }, strict=True)
@@ -321,6 +359,7 @@ def process_tool(slug, info, post_id, data, findings, dry_run, changes_log):
                 continue
             decision, reason = evaluate_field(existing.get("feature_description", ""), {
                 "value": feat_finding.get("feature_description"),
+                "what_changed": feat_finding.get("what_changed"),
                 "source_url": feat_finding.get("source_url"),
                 "confidence": feat_finding.get("confidence"),
             }, strict=False)
