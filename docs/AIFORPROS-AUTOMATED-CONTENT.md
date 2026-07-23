@@ -36,6 +36,19 @@ citations than recently updated ones. Weekly updates keep these pages inside tha
 which is a second, independent reason (beyond factual accuracy) this system runs on a schedule
 instead of ad hoc.
 
+**Known gap (found July 2026, unresolved):** the freshness argument above assumes a genuine content
+edit shows up as a fresher `lastmod` somewhere a crawler can see. In testing, Rank Math's
+`cross_reference-sitemap.xml` did not update its `lastmod` for `/claude/architects/` after either a
+REST-API write *or* a normal manual save-and-update through the WP Admin block editor — both showed
+"success," neither changed the sitemap's stated date. The underlying page content itself was
+confirmed live and correct in both cases, so this is specifically a sitemap-freshness-signal gap,
+not a publishing failure — crawlers still discover real content changes on their own recrawl
+schedule regardless of what the sitemap claims, so this doesn't hide changes, it just weakens one
+input search/AI systems may use to prioritize recrawling. Root cause not yet diagnosed (likely a
+Rank Math or WP.com-level sitemap cache that isn't invalidating on `save_post`). Worth fixing before
+leaning too hard on "weekly updates improve freshness signals" as a selling point — currently that's
+only fully true for the underlying page content, not for the sitemap's `lastmod` metadata.
+
 ### Schedule
 
 Weekly, recommended **Monday morning**, so any changes are visible for the rest of the week.
@@ -296,14 +309,22 @@ change a specific page's positioning.
    sentence/section being questioned, the specific evidence (with source), and one concrete
    proposed replacement (not a vague "consider updating this"). Small, targeted edits to the
    specific claim — not a full rewrite of the page's verdict.
-4. **Guardrail QA** — same fail-closed sourcing standard as the other systems: every piece of
+4. **Full-text sweep, not a skim** — before finalizing the suggestion list, search the *entire*
+   decoded JSON object for every literal occurrence of the fact being updated (every field, not
+   just Bottom Line/comparison table/the "obvious" spots), and propose an edit for each one found.
+   This step exists because the first live run (Claude for Architects, July 2026) missed 2 of 6
+   "200K" mentions on the first pass — they were sitting in FAQ answers that weren't part of the
+   initial visual skim. A page-wide text search catches this; reading the page for salience does
+   not. Cheap insurance against publishing an internally-inconsistent page (old number in one FAQ,
+   new number in the Bottom Line).
+5. **Guardrail QA** — same fail-closed sourcing standard as the other systems: every piece of
    evidence needs a real, current, ideally vendor-official source. No suggestion ships without one.
    Additionally: cap suggestions at a small number per cycle (a handful, not dozens) — if research
    turns up more candidates than that, only the ones with the strongest evidence get surfaced, the
    rest wait for next cycle. Volume discipline here is itself a guardrail, not just an editorial
    nicety (see "Purpose" above on scaled content abuse).
-5. **Deliver the report** — to Rich, for review. Nothing is written to WordPress at this stage.
-6. **Apply approved changes** — for whichever suggestions Rich approves, apply them the same way
+6. **Deliver the report** — to Rich, for review. Nothing is written to WordPress at this stage.
+7. **Apply approved changes** — for whichever suggestions Rich approves, apply them the same way
    the July monthly page was patched: fetch the current page's JSON via the WP REST API
    (`context=edit` to get `content.raw`, same pattern as `automation/weekly_tool_update.py`), change
    only the approved field(s), re-encode, `PUT` back. Because this always requires a human decision
@@ -407,7 +428,16 @@ generic ("click here," "read more," bare "link").
 - [ ] System 2's monthly run is still manual-via-Cowork end to end (research → draft → notify);
       no scheduled execution built for it yet since draft-only + human-publish doesn't need one
 - [x] System 3 spec'd (Monthly Cross-Reference & Profession Hub Editorial Review, suggest-only)
-- [ ] System 3 has no automation yet — first pass run manually via Cowork as a live test
-      (Claude for Architects, prompted by Rich noticing the tool has likely improved for that
-      profession) before deciding whether it's worth scheduling at all
+- [x] System 3 first live run completed successfully (Claude for Architects, 200K → 1M token
+      context window, 6 mentions found and corrected across the page) — proved the
+      research → suggest → approve → patch loop works end to end
+- [x] System 3 process gap found and fixed in the spec: "full-text sweep" step added after the
+      first run missed 2 of 6 mentions on a visual skim (see "Process" step 4 above)
+- [x] System 3 now runs on a monthly Cowork scheduled task (`system3-cross-reference-editorial-review`,
+      day 25 of each month) that produces a suggest-only report — never writes to WordPress. Requires
+      the Cowork app to be open at run time; if it's closed, the run happens on next launch instead.
+- [ ] Known gap: Rank Math's sitemap `lastmod` isn't updating on either REST-API or manual WP Admin
+      saves — tempers the "weekly updates improve freshness signals" rationale for System 1 (see
+      note under "How the research step works" above). Not yet root-caused; low priority since it
+      doesn't hide real content changes from crawlers, just weakens one freshness input
 - [ ] Requires a `git commit` + `push` to deploy — see repo for pending changes

@@ -109,26 +109,43 @@ def post_digest(changes):
 def research_tool(client, info):
     """One bounded research call per tool. web_search is a server tool — Claude
     can issue multiple searches within this single API call (up to max_uses),
-    so we don't need to manage a multi-turn loop ourselves."""
-    resp = client.messages.create(
-        model=MODEL,
-        max_tokens=2048,
-        system=RESEARCH_SYSTEM_PROMPT,
-        tools=[{
-            "type": "web_search_20250305",
-            "name": "web_search",
-            "max_uses": 5,
-            "allowed_domains": info["domains"],
-        }],
-        messages=[{
-            "role": "user",
-            "content": (
-                f"Check {info['name']}'s current official pricing, plan names, key features, and "
-                f"HIPAA/compliance status. Report only what you can directly confirm on {info['name']}'s "
-                f"own official site right now."
-            ),
-        }],
-    )
+    so we don't need to manage a multi-turn loop ourselves.
+
+    Returns (findings, text). On any API-level failure (out of credits, rate
+    limited, auth problem, network issue), findings is None and text starts
+    with "RESEARCH_FAILED:" so callers can tell "the call itself failed" apart
+    from "the call succeeded but didn't return usable JSON" — those need
+    different handling and different messages to whoever reads the log.
+    """
+    try:
+        resp = client.messages.create(
+            model=MODEL,
+            max_tokens=2048,
+            system=RESEARCH_SYSTEM_PROMPT,
+            tools=[{
+                "type": "web_search_20250305",
+                "name": "web_search",
+                "max_uses": 5,
+                "allowed_domains": info["domains"],
+            }],
+            messages=[{
+                "role": "user",
+                "content": (
+                    f"Check {info['name']}'s current official pricing, plan names, key features, and "
+                    f"HIPAA/compliance status. Report only what you can directly confirm on {info['name']}'s "
+                    f"own official site right now."
+                ),
+            }],
+        )
+    except anthropic.APIError as e:
+        # Covers billing/credit errors, rate limits, auth failures, etc. — anything
+        # the Anthropic SDK raises as a structured API error.
+        return None, f"RESEARCH_FAILED: {type(e).__name__}: {e}"
+    except Exception as e:
+        # Anything else (network blip, unexpected SDK behavior) — fail the same
+        # clean way rather than letting an uncaught exception crash the whole run.
+        return None, f"RESEARCH_FAILED: unexpected {type(e).__name__}: {e}"
+
     text_blocks = [b.text for b in resp.content if getattr(b, "type", None) == "text"]
     full_text = "\n".join(text_blocks)
     match = re.search(r"\{.*\}", full_text, re.DOTALL)
@@ -315,6 +332,21 @@ def main():
             continue
 
         findings, raw_text = research_tool(client, info)
+
+        if raw_text.startswith("RESEARCH_FAILED:"):
+            # The API call itself failed (billing/credits, rate limit, auth, network) —
+            # distinct from a call that succeeded but returned unparseable text. Log it
+            # plainly, record it in the digest as held-for-review, and move on to the
+            # next tool rather than letting this crash the whole run.
+            print(f"  RESEARCH CALL FAILED: {raw_text}")
+            changes_log.append({
+                "tool": info["name"], "field": "(research call)",
+                "old_value": "", "new_value": "",
+                "source": "", "status": "held",
+                "reason": raw_text,
+            })
+            continue
+
         if findings is None:
             print(f"  No usable findings returned. Raw model text (truncated): {raw_text[:200]}")
             continue
