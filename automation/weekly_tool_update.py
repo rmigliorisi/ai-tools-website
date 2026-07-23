@@ -170,7 +170,7 @@ def research_tool(client, info, current_state_text):
     try:
         resp = client.messages.create(
             model=MODEL,
-            max_tokens=4096,
+            max_tokens=8192,
             system=RESEARCH_SYSTEM_PROMPT,
             tools=[{
                 "type": "web_search_20250305",
@@ -294,7 +294,11 @@ def process_tool(slug, info, post_id, data, findings, dry_run, changes_log):
     dirty = False
     qf = data.setdefault("quick_facts", {})
 
-    for key, strict in (("pricing_fact", True), ("hipaa_fact", True), ("made_by", False)):
+    # made_by upgraded to strict=True after the dry run correctly found Grammarly's
+    # rebrand to Superhuman (verified real, not a hallucination) — but a company's
+    # identity is at least as consequential to get wrong as a price, so it gets the
+    # same "must be vendor-official-confirmed, no third-party auto-apply" bar.
+    for key, strict in (("pricing_fact", True), ("hipaa_fact", True), ("made_by", True)):
         finding = findings.get(key)
         decision, reason = evaluate_field(qf.get(key, ""), finding, strict)
         if decision == "skip":
