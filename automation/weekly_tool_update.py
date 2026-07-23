@@ -59,11 +59,21 @@ TOOLS = {
     "perplexity": {"name": "Perplexity",        "domains": ["perplexity.ai"]},
 }
 
-RESEARCH_SYSTEM_PROMPT = """You are a careful research assistant checking one AI tool's current, official \
-pricing, plan names, feature set, and HIPAA/compliance status. You must ONLY use information from the \
-tool's own official website (the domains you've been given access to) — never third-party summaries, \
-aggregators, or your own memory. If you cannot confirm a fact on the vendor's own current page, say so \
-rather than guessing.
+RESEARCH_SYSTEM_PROMPT = """You are a careful research assistant checking whether one AI tool's page on a \
+review site is still accurate. You will be given the page's CURRENT stated facts below, then asked to \
+verify each one against the vendor's own official website (the only domains you have search access to) \
+— never third-party summaries, aggregators, or your own memory.
+
+This is a diff task, not a rewrite task. For every field, first ask: "is the CURRENT text still \
+substantively true?" If yes — even if you would phrase it differently, use different words, or format \
+it differently — return null for that field. Only return a non-null finding when you can point to a \
+SPECIFIC fact that has actually changed (a real price change, a plan renamed, a feature that now works \
+differently, a compliance status that flipped) — not a paraphrase of something that's still correct. \
+Independently re-describing an unchanged fact in your own words is exactly what this task must avoid; \
+if you catch yourself doing that, return null instead.
+
+If you cannot confirm a fact on the vendor's own current page, say so rather than guessing — do not \
+report a "change" you're not sure about.
 
 After you finish searching, respond with ONLY a single JSON object — no explanation before it, no
 markdown code fences (no ```json), no text after it. Your entire final message must start with `{`
@@ -82,8 +92,9 @@ and end with `}`. This shape:
 - "third_party" — a credible secondary source reported it, not confirmed on the vendor's own page
 - "uncertain" — you are not confident this is current or correct
 
-Only include a key if you found something that looks NEW or CHANGED versus what a review page written a \
-few months ago would already say. If nothing looks changed for a key, use null. Never invent a value.
+Only include a key if the underlying fact has genuinely changed versus what the page below already \
+says. If the current text is still accurate, use null. Never invent a value, and never return a finding \
+solely because you'd word something differently than the page already does.
 """
 
 
@@ -108,10 +119,41 @@ def post_digest(changes):
         return json.loads(r.read())
 
 
-def research_tool(client, info):
+def summarize_current_state(data):
+    """Build a plain-text summary of what the page currently says, for embedding
+    directly in the research prompt. This is what makes the research call an
+    actual diff instead of an independent redescription — without it, Claude has
+    no way to know whether its own phrasing of a fact differs from the page's
+    phrasing versus the underlying fact actually being different."""
+    qf = data.get("quick_facts", {})
+    lines = [
+        f"- made_by: {qf.get('made_by', '(not set)')}",
+        f"- pricing_fact: {qf.get('pricing_fact', '(not set)')}",
+        f"- hipaa_fact: {qf.get('hipaa_fact', '(not set)')}",
+    ]
+    tiers = data.get("pricing_tiers", [])
+    if tiers:
+        lines.append("- pricing_tiers:")
+        for t in tiers:
+            lines.append(f"    {t.get('tier_name', '?')}: {t.get('tier_price', '?')} — {t.get('tier_features', '')}")
+    features = data.get("features", [])
+    if features:
+        lines.append("- features:")
+        for f in features:
+            lines.append(f"    {f.get('feature_name', '?')}: {f.get('feature_description', '')}")
+    return "\n".join(lines)
+
+
+def research_tool(client, info, current_state_text):
     """One bounded research call per tool. web_search is a server tool — Claude
     can issue multiple searches within this single API call (up to max_uses),
     so we don't need to manage a multi-turn loop ourselves.
+
+    current_state_text is what the page currently says (see summarize_current_state)
+    — passing it in is what turns this into a real diff against the live page
+    rather than Claude just independently redescribing the current facts in its
+    own words every time, which would look like "change" to a naive string
+    comparison even when nothing actually changed.
 
     Returns (findings, text). On any API-level failure (out of credits, rate
     limited, auth problem, network issue), findings is None and text starts
@@ -133,9 +175,10 @@ def research_tool(client, info):
             messages=[{
                 "role": "user",
                 "content": (
-                    f"Check {info['name']}'s current official pricing, plan names, key features, and "
-                    f"HIPAA/compliance status. Report only what you can directly confirm on {info['name']}'s "
-                    f"own official site right now."
+                    f"Here is what the {info['name']} review page currently says:\n\n"
+                    f"{current_state_text}\n\n"
+                    f"Verify each of these against {info['name']}'s own official site right now. Report "
+                    f"only facts that have genuinely changed — not facts you'd simply word differently."
                 ),
             }],
         )
@@ -210,18 +253,7 @@ def evaluate_field(old_value, finding, strict):
     return "applied", "confirmed on the vendor's current official page"
 
 
-def process_tool(slug, info, post, findings, dry_run, changes_log):
-    raw = post.get("content", {}).get("raw", "")
-    try:
-        data = json.loads(raw)
-    except json.JSONDecodeError as e:
-        print(f"  ERROR: existing content JSON failed to parse ({e}) — held for manual review")
-        changes_log.append({
-            "tool": info["name"], "field": "(all)", "old_value": "", "new_value": "",
-            "source": "", "status": "held", "reason": "existing content JSON failed to parse",
-        })
-        return False
-
+def process_tool(slug, info, post_id, data, findings, dry_run, changes_log):
     dirty = False
     qf = data.setdefault("quick_facts", {})
 
@@ -306,9 +338,9 @@ def process_tool(slug, info, post, findings, dry_run, changes_log):
             })
 
     if dirty and not dry_run:
-        result = api_put(f"/tool_review/{post['id']}", {"content": json.dumps(data)})
+        result = api_put(f"/tool_review/{post_id}", {"content": json.dumps(data)})
         if "id" in result:
-            print(f"  WROTE update to post {post['id']}")
+            print(f"  WROTE update to post {post_id}")
         else:
             print(f"  FAILED to write: {result}")
     elif dirty:
@@ -336,7 +368,19 @@ def main():
             print("  SKIP: no matching tool_review post found")
             continue
 
-        findings, raw_text = research_tool(client, info)
+        raw = post.get("content", {}).get("raw", "")
+        try:
+            data = json.loads(raw)
+        except json.JSONDecodeError as e:
+            print(f"  ERROR: existing content JSON failed to parse ({e}) — held for manual review")
+            changes_log.append({
+                "tool": info["name"], "field": "(all)", "old_value": "", "new_value": "",
+                "source": "", "status": "held", "reason": "existing content JSON failed to parse",
+            })
+            continue
+
+        current_state_text = summarize_current_state(data)
+        findings, raw_text = research_tool(client, info, current_state_text)
 
         if raw_text.startswith("RESEARCH_FAILED:"):
             # The API call itself failed (billing/credits, rate limit, auth, network) —
@@ -356,7 +400,7 @@ def main():
             print(f"  No usable findings returned. Raw model text (truncated): {raw_text[:200]}")
             continue
 
-        process_tool(slug, info, post, findings, args.dry_run, changes_log)
+        process_tool(slug, info, post["id"], data, findings, args.dry_run, changes_log)
 
     print(f"\n{'=' * 60}\nSUMMARY — {len(changes_log)} change entries\n{'=' * 60}")
     for c in changes_log:
