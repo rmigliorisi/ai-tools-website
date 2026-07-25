@@ -324,7 +324,7 @@ def research_tool_capabilities(client, tool_key, info):
     try:
         resp = client.messages.create(
             model=MODEL,
-            max_tokens=4096,
+            max_tokens=8192,
             system=RESEARCH_SYSTEM_PROMPT,
             tools=[{
                 "type": "web_search_20250305",
@@ -361,7 +361,7 @@ def identify_candidates(client, finding, page_text):
     try:
         resp = client.messages.create(
             model=MODEL,
-            max_tokens=4096,
+            max_tokens=8192,
             system=IDENTIFY_SYSTEM_PROMPT,
             messages=[{
                 "role": "user",
