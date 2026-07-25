@@ -38,16 +38,39 @@ instead of ad hoc.
 
 **Known gap (found July 2026, unresolved):** the freshness argument above assumes a genuine content
 edit shows up as a fresher `lastmod` somewhere a crawler can see. In testing, Rank Math's
-`cross_reference-sitemap.xml` did not update its `lastmod` for `/claude/architects/` after either a
-REST-API write *or* a normal manual save-and-update through the WP Admin block editor — both showed
-"success," neither changed the sitemap's stated date. The underlying page content itself was
-confirmed live and correct in both cases, so this is specifically a sitemap-freshness-signal gap,
-not a publishing failure — crawlers still discover real content changes on their own recrawl
-schedule regardless of what the sitemap claims, so this doesn't hide changes, it just weakens one
-input search/AI systems may use to prioritize recrawling. Root cause not yet diagnosed (likely a
-Rank Math or WP.com-level sitemap cache that isn't invalidating on `save_post`). Worth fixing before
-leaning too hard on "weekly updates improve freshness signals" as a selling point — currently that's
-only fully true for the underlying page content, not for the sitemap's `lastmod` metadata.
+`cross_reference-sitemap.xml` did not update its `lastmod` for `/claude/architects/` after a
+REST-API write. Root cause not yet diagnosed (likely a Rank Math or WP.com-level sitemap cache that
+isn't invalidating on `save_post`). Worth fixing before leaning too hard on "weekly updates improve
+freshness signals" as a selling point — currently that's only fully true for the underlying page
+content, not for the sitemap's `lastmod` metadata.
+
+**Serious bug found and fixed (July 25, 2026): never resave `tool_review` / `cross_reference` /
+`profession_hub` posts through the plain WP Admin editor.** These post types store their entire page
+as a single JSON blob in `post_content`; the theme's PHP decodes that JSON and renders each section.
+WordPress's standard post editor silently runs `wptexturize` (straight quotes → curly quotes) and
+`wpautop` (wraps detected paragraph breaks in `<p>` tags) on whatever gets saved through its UI. That
+auto-formatting is invisible and harmless for normal prose, but it's destructive to a raw JSON blob —
+every `"` becomes `&#8220;`/`&#8221;`, and blank lines inside JSON string values get wrapped in stray
+`<p>`/`</p>` tags, producing invalid JSON. When that happens, `aifp_get_data()` fails to decode the
+content and the PHP template silently falls back to only rendering what *doesn't* depend on the JSON
+blob (title, breadcrumb, taxonomy-driven related-guides grid, the static author-card include) —
+every JSON-driven section (quick facts, features, pricing, FAQ, sources, insights) just disappears
+from the page with no error.
+
+This is exactly what happened to `/claude/architects/` on 2026-07-22: a manual WP Admin resave done
+purely to test the sitemap `lastmod` gap above (see revision 984) corrupted the content JSON, and it
+went unnoticed for three days because nothing about the save looked like a failure — it showed
+"Updated" like any other successful save. It was caught only because Rich happened to view the live
+page and noticed most of the content was missing. Recovered by finding the last revision with valid
+JSON (revision 983, immediately after the July 16 "1M token" patch) via the WordPress revisions REST
+endpoint and writing that content back — see `check_architects_revisions.py` and
+`restore_architects_content.py` in the repo root.
+
+**The rule going forward: any edit to these three post types must go through the REST API (a script,
+same pattern as the patch scripts and System 1/3), never through the WP Admin editor UI.** If a
+manual admin-side check is ever needed again (e.g. re-testing the sitemap issue), verify the live
+front-end page still renders all 15 sections immediately afterward — don't assume "Updated" means the
+content survived intact.
 
 ### Schedule
 
@@ -436,8 +459,13 @@ generic ("click here," "read more," bare "link").
 - [x] System 3 now runs on a monthly Cowork scheduled task (`system3-cross-reference-editorial-review`,
       day 25 of each month) that produces a suggest-only report — never writes to WordPress. Requires
       the Cowork app to be open at run time; if it's closed, the run happens on next launch instead.
-- [ ] Known gap: Rank Math's sitemap `lastmod` isn't updating on either REST-API or manual WP Admin
-      saves — tempers the "weekly updates improve freshness signals" rationale for System 1 (see
-      note under "How the research step works" above). Not yet root-caused; low priority since it
-      doesn't hide real content changes from crawlers, just weakens one freshness input
+- [ ] Known gap: Rank Math's sitemap `lastmod` isn't updating on REST-API saves — tempers the
+      "weekly updates improve freshness signals" rationale for System 1 (see note under "How the
+      research step works" above). Not yet root-caused; low priority since it doesn't hide real
+      content changes from crawlers, just weakens one freshness input
+- [x] Serious bug found and fixed: a manual WP Admin resave corrupted `/claude/architects/`'s content
+      JSON on 2026-07-22 (WordPress's editor auto-formatting mangled the raw JSON blob), silently
+      dropping every JSON-driven section from the live page for three days. Recovered from WordPress
+      revision history (`check_architects_revisions.py` / `restore_architects_content.py`). New rule
+      documented above: never resave these post types through the WP Admin editor UI
 - [ ] Requires a `git commit` + `push` to deploy — see repo for pending changes
