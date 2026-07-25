@@ -78,6 +78,19 @@ SPECIFIC delta (e.g. "Price increased from $20/mo to $25/mo" or "Plan renamed fr
 If you cannot write a "what_changed" sentence that names both the old and new state, that is a sign \
 nothing actually changed — return null instead of forcing an answer.
 
+For made_by, pricing_fact, and hipaa_fact specifically: "value" is displayed on the page as a short \
+label in a small card, not as body text. It must stay SHORT — match the length and style of the \
+existing value shown below (typically 2-8 words). Good examples: "Superhuman (Grammarly's parent)", \
+"$25/mo (Plus)", "BAA available (Enterprise)". Do NOT write a full explanatory sentence into "value" — \
+all nuance and reasoning belongs in "what_changed" instead, which is logged for human review and never \
+displayed on the page itself. If you can't compress the new fact into roughly 8 words, put the short \
+version in "value" and the detail in "what_changed" — never the reverse.
+
+For pricing_tiers, "tier_price" must be an actual price or a short price-equivalent phrase (a dollar \
+figure, "Free", "Custom", or "Contact sales") — never a sentence explaining why a price is unclear or \
+unavailable. If a tier's current pricing is genuinely unclear, or the tier has been renamed or \
+discontinued, return null for that tier rather than writing an explanation into the price field.
+
 If you cannot confirm a fact on the vendor's own current page, say so rather than guessing — do not \
 report a "change" you're not sure about.
 
@@ -240,7 +253,22 @@ def _fuzzy_unchanged(old_value, new_value, threshold=0.6):
     return ratio >= threshold
 
 
-def evaluate_field(old_value, finding, strict):
+def _looks_like_price(s):
+    """A tier_price value should read like a price, not a sentence. Accepts a
+    dollar figure, a bare digit, or one of a small set of known non-numeric
+    price states. Rejects narrative text like "Discontinued as a standalone
+    new-signup tier" or "Not confirmed to a specific current dollar figure in
+    this search session" — both real examples the model produced once asked
+    to fill in a tier_price it wasn't confident about, instead of returning
+    null for that tier as instructed."""
+    if not s:
+        return False
+    if re.search(r"\d", s) or "$" in s:
+        return True
+    return bool(re.search(r"\b(free|custom|contact sales)\b", s, re.IGNORECASE))
+
+
+def evaluate_field(old_value, finding, strict, max_value_len=None, require_price_format=False):
     """
     Apply the guardrail QA gate (docs/AIFORPROS-AUTOMATED-CONTENT.md) to one
     candidate field change. Returns (decision, reason):
@@ -249,13 +277,21 @@ def evaluate_field(old_value, finding, strict):
       "flagged" — applied, but noted in the digest (soft warning)
       "held"    — not applied, logged for human review
 
-    Two backstops here exist independently of the model's own "is this really
-    different" judgment, because that judgment alone proved unreliable in
-    testing (see docs/AIFORPROS-AUTOMATED-CONTENT.md): a numeric-equality check
-    for price-like fields, and a fuzzy text-similarity check for everything
-    else. Both fail toward "skip" (do nothing) rather than "apply," which is
-    the safe direction — worst case we miss a subtle real change this cycle
-    and catch it next week, rather than publishing an unnecessary rewrite.
+    Several backstops here exist independently of the model's own judgment,
+    because that judgment alone proved unreliable in testing (see
+    docs/AIFORPROS-AUTOMATED-CONTENT.md): a numeric-equality check for
+    price-like fields, a fuzzy text-similarity check for everything else, an
+    optional max-length check for fields the template displays as a short
+    label (quick_facts), and an optional price-shape check for tier_price.
+    All fail toward "held" or "skip" rather than "apply" — the safe direction.
+
+    max_value_len catches the specific failure found in the first live run:
+    quick_facts.made_by and .hipaa_fact got written as full explanatory
+    paragraphs (e.g. a 40-word run-on for made_by) instead of the short label
+    the Quick Facts card is designed to hold, visibly breaking the card grid
+    on the live page. This check doesn't depend on the model following the
+    prompt's length instruction — it independently rejects anything too long
+    for that slot regardless of why it got that way.
     """
     if finding is None:
         return "skip", "no finding"
@@ -281,6 +317,13 @@ def evaluate_field(old_value, finding, strict):
         return "held", "no traceable source URL"
     if not numeric_sanity_ok(old_value, value):
         return "held", "numeric sanity check failed (looks like a scraping error, not a real change)"
+    if max_value_len and value and len(value) > max_value_len:
+        return "held", (
+            f"new value is {len(value)} chars — too long for this field's short-label format "
+            f"(max {max_value_len}); needs a human to write a concise version"
+        )
+    if require_price_format and not _looks_like_price(value or ""):
+        return "held", "new value doesn't look like a price — likely narrative text, not a value update"
     if strict and confidence != "vendor_official_current":
         return "held", f"confidence '{confidence}' below the required bar for pricing/compliance fields"
     if confidence == "uncertain":
@@ -298,9 +341,13 @@ def process_tool(slug, info, post_id, data, findings, dry_run, changes_log):
     # rebrand to Superhuman (verified real, not a hallucination) — but a company's
     # identity is at least as consequential to get wrong as a price, so it gets the
     # same "must be vendor-official-confirmed, no third-party auto-apply" bar.
+    # max_value_len=60 catches the paragraph-in-a-quick-facts-card bug found in
+    # the first live run (Grammarly's made_by/hipaa_fact, ChatGPT's hipaa_fact,
+    # Gemini's pricing_fact all came back as full sentences instead of short
+    # labels) independently of whether the prompt's length instruction is followed.
     for key, strict in (("pricing_fact", True), ("hipaa_fact", True), ("made_by", True)):
         finding = findings.get(key)
-        decision, reason = evaluate_field(qf.get(key, ""), finding, strict)
+        decision, reason = evaluate_field(qf.get(key, ""), finding, strict, max_value_len=60)
         if decision == "skip":
             continue
         print(f"  quick_facts.{key}: {decision} — {reason}")
@@ -330,7 +377,7 @@ def process_tool(slug, info, post_id, data, findings, dry_run, changes_log):
             "what_changed": tier_finding.get("what_changed"),
             "source_url": tier_finding.get("source_url"),
             "confidence": tier_finding.get("confidence"),
-        }, strict=True)
+        }, strict=True, require_price_format=True)
         if decision == "skip":
             continue
         print(f"  pricing_tiers.{tname}: {decision} — {reason}")

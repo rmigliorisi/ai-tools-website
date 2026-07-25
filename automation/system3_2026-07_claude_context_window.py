@@ -191,10 +191,57 @@ def patch_post(slug, edits, dry_run=True):
     print(f"  WRITTEN — {applied} replacement(s) applied to post {post_id}.")
 
 
+def inspect_post(slug, needle):
+    """Diagnostic only: print raw context around every occurrence of `needle`
+    so we can see exactly what's stored (markup, quote style, whitespace)
+    before trusting any replacement logic. Makes no writes."""
+    post_id = get_post_id(slug)
+    post = api_get(f"/cross_reference/{post_id}", "?context=edit")
+    raw = post["content"]["raw"]
+    print(f"\n=== RAW INSPECT: {slug} (post id {post_id}), {len(raw)} chars ===")
+    start = 0
+    hit = 0
+    while True:
+        idx = raw.find(needle, start)
+        if idx == -1:
+            break
+        hit += 1
+        lo, hi = max(0, idx - 60), min(len(raw), idx + 60)
+        print(f"  [{hit}] ...{raw[lo:hi]!r}...")
+        start = idx + len(needle)
+    if hit == 0:
+        print(f"  No occurrences of {needle!r} found at all.")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true", help="Actually write changes. Default is dry-run.")
+    parser.add_argument("--inspect", metavar="SLUG", help="Diagnostic: print raw context around --needle for one slug, no writes.")
+    parser.add_argument("--needle", default="200", help="Text to search for with --inspect (default: '200').")
+    parser.add_argument("--dump", metavar="SLUG", help="Diagnostic: write full raw content.raw for one slug to a local .json file, no writes to WordPress.")
+    parser.add_argument("--dump-all", dest="dump_all", action="store_true", help="Diagnostic: write full raw content.raw for all 7 slugs to local .json files, no writes to WordPress.")
     args = parser.parse_args()
+
+    if args.inspect:
+        inspect_post(args.inspect, args.needle)
+        sys.exit(0)
+
+    if args.dump:
+        post_id = get_post_id(args.dump)
+        post = api_get(f"/cross_reference/{post_id}", "?context=edit")
+        out_path = Path(__file__).resolve().parent / f"_debug_{args.dump}.json"
+        out_path.write_text(post["content"]["raw"])
+        print(f"Wrote raw content.raw for {args.dump} (post {post_id}) to {out_path}")
+        sys.exit(0)
+
+    if getattr(args, "dump_all", False):
+        for slug in EDITS:
+            post_id = get_post_id(slug)
+            post = api_get(f"/cross_reference/{post_id}", "?context=edit")
+            out_path = Path(__file__).resolve().parent / f"_debug_{slug}.json"
+            out_path.write_text(post["content"]["raw"])
+            print(f"Wrote raw content.raw for {slug} (post {post_id}) to {out_path}")
+        sys.exit(0)
 
     print(f"Source for every edit below:\n  {SOURCE_NOTE}\n")
     if not args.apply:
