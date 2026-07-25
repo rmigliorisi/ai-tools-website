@@ -33,6 +33,7 @@ import re
 import ssl
 import sys
 import urllib.request
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -426,6 +427,15 @@ def process_tool(slug, info, post_id, data, findings, dry_run, changes_log):
                 "old_value": old_value, "new_value": feat_finding.get("feature_description", ""),
                 "source": feat_finding.get("source_url", ""), "status": decision, "reason": reason,
             })
+
+    if dirty:
+        # The on-page date badge reads data['publish_date'] (a static field baked into
+        # the JSON blob), not WordPress's real post_modified timestamp — so it never
+        # moved even when this script wrote real changes to the page. (The JSON-LD
+        # dateModified is separately correct, since it's generated from the actual WP
+        # post each time via get_the_modified_date() — this only affects what a human
+        # visitor sees in the header.) Bump it whenever we're actually writing a change.
+        data["publish_date"] = date.today().isoformat()
 
     if dirty and not dry_run:
         result = api_put(f"/tool_review/{post_id}", {"content": json.dumps(data)})
