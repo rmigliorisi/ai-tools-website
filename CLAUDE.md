@@ -131,6 +131,18 @@ Hand-coded SVG illustrations, not image files:
 
 ## Special Notes
 
+- **Never edit `tool_review` / `profession_hub` / `cross_reference` posts via WP Admin's visual
+  or block editor — not even a no-op "Update" click.** These post types store their entire page
+  as a JSON object inside `post_content` (see "Content Generation Workflow" below). WP Admin's
+  editor parses that JSON-with-embedded-HTML as ordinary rich text and rewrites it on save,
+  mangling inline `style` attributes and double-escaping quotes in `class`/`href` attributes.
+  `aifp_get_data()` then fails to parse the corrupted HTML for whole `content_sections` entries,
+  which silently vanish from the rendered page (header/nav/footer and Related Guides still
+  render fine since those aren't sourced from this JSON, which is why the breakage is easy to
+  miss). Confirmed directly, not theoretical — see `docs/AIFORPROS-AUTOMATED-CONTENT.md`,
+  "Critical: never apply approved edits through the WP Admin visual/block editor," for the exact
+  evidence and the recovery procedure. **All edits to these three post types go through the WP
+  REST API (`content.raw`, full re-`json.dumps`, `PUT`) — never the block editor.**
 - **newsletter.html** — "Recent Issues" section is hidden (`display:none`). Restore when real content exists.
 - **No templating system** — Each static HTML file is self-contained. The WordPress theme uses PHP includes via `header.php` and `footer.php`.
 - **WordPress.com hosting** — No SSH access. No cPanel. Theme files are deployed via GitHub Actions only.

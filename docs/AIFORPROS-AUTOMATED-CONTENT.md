@@ -354,6 +354,49 @@ change a specific page's positioning.
    first, it doesn't need to live in a GitHub Actions schedule the way System 1 does — a short
    script generated at approval time, run once locally, is enough.
 
+### Critical: never apply approved edits through the WP Admin visual/block editor
+
+Found during the July 2026 System 3 cycle (Claude for Engineers, Physicians, Finance, Insurance,
+Legal, Real Estate, Creatives) and confirmed by direct evidence, not inference: **opening a
+`tool_review` / `profession_hub` / `cross_reference` post in WP Admin and clicking Update — even
+with zero visible changes — corrupts its `post_content`.** The block/classic editor parses the
+raw JSON-with-embedded-HTML this site stores in `post_content` as if it were normal rich-text
+content, runs it through its own HTML cleanup on save, and writes back a mangled result: inline
+`style` attributes get garbled (`style="margin:0 0 16px;color:#636363;line-height:1.7;"` becomes
+`style="0margin: 0;"`), and quotes inside `class`/`href` attributes get double-escaped
+(`class="font-heading"` becomes `class="\&quot;font-heading\&quot;"`). `aifp_get_data()` /
+`single-cross_reference.php` then can't parse the corrupted `section_body` HTML correctly, and
+whole `content_sections` entries silently stop rendering — the live page loses its Bottom Line,
+Quick Facts, Features, comparison table, FAQ, Sources, and Insights blocks entirely, while
+chrome (header/nav/footer, Related Guides) still renders fine because that's generated separately,
+not from this JSON.
+
+This is also the likely explanation for why a page can look "still wrong" on the live site well
+after its underlying data was already corrected: if a fix was applied cleanly via the REST API at
+some point, but someone later opens that same post in WP Admin and clicks Update for an unrelated
+reason (or just to "refresh" it), the clean REST-written content gets silently re-corrupted. What
+looks like a caching problem may actually be exactly this.
+
+**Rule going forward, no exceptions:** all edits to these three post types — the approved
+System 3 suggestions, System 1's weekly writes, anything — must go through the WP REST API
+(`content.raw` via `context=edit`, full re-`json.dumps`, `POST` with
+`X-HTTP-Method-Override: PUT`), never through WP Admin's Update button. If a post ever needs a
+human eyeball check, use "Preview" or view the live page, but do not click Update, even with no
+edits made.
+
+**If a post has already been corrupted this way:** the fastest recovery is restoring from a
+known-good `content.raw` snapshot taken before the corrupting save (not necessarily a WordPress
+revision — restoring a WP revision through the admin UI is unverified as safe here and may run
+through the same corrupting save path). `automation/system3_2026-07_claude_context_window.py`
+has two flags built for exactly this:
+- `--dump SLUG` / `--dump-all` — writes a post's current `content.raw` to
+  `automation/_debug_<slug>.json`, no writes to WordPress. Use this to snapshot state before
+  touching anything, and to diagnose whether a page's "still wrong" content is a stale-cache
+  problem or actual data corruption.
+- `--restore SLUG` — reads `automation/_restore_<slug>.json` (a known-good `content.raw` you've
+  saved) and `PUT`s it back verbatim via the REST API, then re-fetches and confirms the write
+  matches exactly. This is how the Claude for Engineers corruption from this cycle was fixed.
+
 ---
 
 ## Content Optimization Guardrails (SEO / GEO / AEO)
@@ -463,6 +506,14 @@ generic ("click here," "read more," bare "link").
       "weekly updates improve freshness signals" rationale for System 1 (see note under "How the
       research step works" above). Not yet root-caused; low priority since it doesn't hide real
       content changes from crawlers, just weakens one freshness input
+- [x] Known gap found and fixed (July 2026): WP Admin's visual/block editor corrupts
+      `post_content` on `tool_review`/`profession_hub`/`cross_reference` posts on save (mangles
+      inline CSS and double-escapes HTML attribute quotes), causing whole content sections to
+      silently stop rendering. Root cause understood, not yet patched at the WP level (would need
+      a `save_post` filter that bypasses editor sanitization for these post types, or moving these
+      fields out of `post_content` entirely). Workaround in place and documented above: never edit
+      these post types via WP Admin's Update button, REST API writes only. See "Critical: never
+      apply approved edits through the WP Admin visual/block editor" above.
 - [x] Serious bug found and fixed: a manual WP Admin resave corrupted `/claude/architects/`'s content
       JSON on 2026-07-22 (WordPress's editor auto-formatting mangled the raw JSON blob), silently
       dropping every JSON-driven section from the live page for three days. Recovered from WordPress

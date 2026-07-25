@@ -575,9 +575,9 @@ function aifp_handle_update_digest(WP_REST_Request $request) {
     }
     $body .= "\nFull detail for each change is logged in WP Admin under Weekly Update Log.\n";
 
-    wp_mail($admin_email, $subject, $body);
+    $mail_sent = wp_mail($admin_email, $subject, $body);
 
-    return new WP_REST_Response(['sent' => true, 'counts' => $counts], 200);
+    return new WP_REST_Response(['sent' => $mail_sent, 'counts' => $counts], 200);
 }
 
 /* Wire up .newsletter-input-wrap buttons (newsletter page content) */

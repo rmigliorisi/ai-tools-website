@@ -220,10 +220,30 @@ if __name__ == "__main__":
     parser.add_argument("--needle", default="200", help="Text to search for with --inspect (default: '200').")
     parser.add_argument("--dump", metavar="SLUG", help="Diagnostic: write full raw content.raw for one slug to a local .json file, no writes to WordPress.")
     parser.add_argument("--dump-all", dest="dump_all", action="store_true", help="Diagnostic: write full raw content.raw for all 7 slugs to local .json files, no writes to WordPress.")
+    parser.add_argument("--restore", metavar="SLUG", help="Recovery: PUT the contents of automation/_restore_<SLUG>.json back as that post's content, verbatim. Use to undo WP Admin corruption.")
     args = parser.parse_args()
 
     if args.inspect:
         inspect_post(args.inspect, args.needle)
+        sys.exit(0)
+
+    if args.restore:
+        slug = args.restore
+        restore_path = Path(__file__).resolve().parent / f"_restore_{slug}.json"
+        if not restore_path.exists():
+            print(f"No {restore_path} found. Nothing to restore.")
+            sys.exit(1)
+        restore_content = restore_path.read_text()
+        json.loads(restore_content)  # must be valid JSON before we send it anywhere
+        post_id = get_post_id(slug)
+        print(f"Restoring {slug} (post {post_id}) from {restore_path} ({len(restore_content)} chars)...")
+        api_put(f"/cross_reference/{post_id}", {"content": restore_content})
+        print("Done. Re-fetching to confirm the write matches what we sent...")
+        post = api_get(f"/cross_reference/{post_id}", "?context=edit")
+        if post["content"]["raw"] == restore_content:
+            print("CONFIRMED: live content.raw now matches the restore file exactly.")
+        else:
+            print("WARNING: live content.raw does NOT exactly match the restore file. Check manually.")
         sys.exit(0)
 
     if args.dump:

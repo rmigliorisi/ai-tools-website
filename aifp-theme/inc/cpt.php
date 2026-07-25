@@ -176,6 +176,40 @@ add_action('init', function () {
 
 });
 
+/* ── Weekly Update Log: show tool/field/status/change/reason as list-table
+   columns instead of requiring the Custom Fields screen option, so the
+   whole run can be reviewed at a glance from Update Log → Weekly Update Log. ── */
+add_filter('manage_edit-aifp_update_log_columns', function ($columns) {
+    $new = [];
+    foreach ($columns as $key => $label) {
+        $new[$key] = $label;
+        if ($key === 'title') {
+            $new['aifp_status'] = 'Status';
+            $new['aifp_change'] = 'Change';
+            $new['aifp_reason'] = 'Reason';
+        }
+    }
+    return $new;
+});
+
+add_action('manage_aifp_update_log_posts_custom_column', function ($column, $post_id) {
+    switch ($column) {
+        case 'aifp_status':
+            $status = get_post_meta($post_id, 'status', true);
+            echo esc_html($status ?: '—');
+            break;
+        case 'aifp_change':
+            $old = get_post_meta($post_id, 'old_value', true);
+            $new = get_post_meta($post_id, 'new_value', true);
+            echo esc_html(mb_strimwidth($old, 0, 40, '…')) . ' &rarr; ' . esc_html(mb_strimwidth($new, 0, 40, '…'));
+            break;
+        case 'aifp_reason':
+            $reason = get_post_meta($post_id, 'reason', true);
+            echo esc_html($reason ?: '—');
+            break;
+    }
+}, 10, 2);
+
 /* ── Fix permalink conflicts between CPTs sharing "/" slug ── */
 add_filter('wp_unique_post_slug', function ($slug, $post_id, $status, $type) {
     return $slug;
