@@ -12,17 +12,16 @@
 # the actual WordPress writes need real outbound network access that Cowork's
 # sandbox doesn't have.
 #
-# IMPORTANT — before the weekly schedule is turned on:
-#   1. Add these repository secrets (Settings → Secrets and variables →
-#      Actions → New repository secret):
-#        ANTHROPIC_API_KEY
-#        WORDPRESS_USERNAME
-#        WORDPRESS_APP_PASSWORD
-#   2. Run this workflow manually once via the "Run workflow" button with
-#      "Dry run" left checked, and read the run's log output (and, on a live
-#      run, the digest email) before trusting it unattended.
-#   3. Only after that dry run looks right, uncomment the `schedule:` trigger
-#      below and push — from then on it runs automatically every Monday.
+# Turned on 2026-07-25 after: a supervised live run across all 10 tool pages,
+# a full page-by-page content audit, and a review of every entry in the
+# Weekly Update Log (33 changes — real updates applied, new/unrecognized
+# tiers and features correctly held for human review, nothing fabricated).
+# Guardrails hardened as part of that review: max_value_len on quick_facts,
+# require_price_format on pricing_tiers, and the digest email/log-visibility
+# bugs found during the review are fixed. See docs/AIFORPROS-AUTOMATED-CONTENT.md
+# for the full spec.
+#
+# To go back to manual-only, re-comment the `schedule:` block below.
 # ─────────────────────────────────────────────────────────────────────────────
 
 name: Weekly Tool Page Update
@@ -34,8 +33,8 @@ on:
         description: "Dry run (research + QA gate only, no writes, no email)"
         type: boolean
         default: true
-  # schedule:
-  #   - cron: '0 13 * * 1'  # Monday ~9am ET (13:00 UTC) — uncomment after a supervised dry run
+  schedule:
+    - cron: '0 13 * * 1'  # Monday ~9am ET (13:00 UTC)
 
 jobs:
   update:
