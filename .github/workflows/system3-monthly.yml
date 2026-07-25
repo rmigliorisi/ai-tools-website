@@ -1,0 +1,92 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# AI Tools for Pros — Monthly Cross-Reference & Profession Hub Editorial Review
+# (System 3, capped autonomous apply)
+#
+# Runs automation/system3_monthly.py: researches each of the 10 tools for
+# professionally-relevant capability changes, sweeps the 41 cross_reference +
+# 8 profession_hub pages for specific claims those changes affect, applies
+# only edits that pass the guardrail QA gate (vendor-official source, exact
+# text match re-verified locally, no exceptions), caps writes at 10 pages per
+# run with any overflow queued to automation/system3_backlog.json for next
+# run, and emails a digest of everything applied/held/queued. See
+# docs/AIFORPROS-AUTOMATED-CONTENT.md, System 3 section, for the full spec.
+#
+# Runs on GitHub Actions rather than as a Cowork scheduled task for the same
+# reason System 1 does: the WordPress writes need real outbound network
+# access that Cowork's sandbox doesn't have. This replaces the old Cowork
+# scheduled task ("system3-cross-reference-editorial-review"), which only
+# ever produced a suggest-only report and never wrote anything.
+#
+# Turned on 2026-07-25, after: the manual July cycle (Claude 200K -> 1M-token
+# context window, 7 pages) went cleanly end to end; a real bug found in that
+# cycle (raw-JSON-text substring matching silently failing on quote-containing
+# sentences) was fixed and covered by the self-test suite that now runs first,
+# every run, before any network call; and post-write verification (re-fetch +
+# diff, not just trusting a 200 response) was added. Rich decided to move from
+# suggest-only to capped autonomous apply once these held up.
+#
+# To go back to suggest-only/manual, re-comment the `schedule:` block below —
+# the old Cowork scheduled task's SKILL.md and the process it followed are
+# still described in docs/AIFORPROS-AUTOMATED-CONTENT.md for reference.
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: System 3 Monthly Editorial Review
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (research + QA gate only, no writes, no email, backlog untouched)"
+        type: boolean
+        default: true
+      cap:
+        description: "Max pages to write this run (overflow queues to backlog)"
+        type: string
+        default: "10"
+  schedule:
+    - cron: '0 13 25 * *'  # day 25 of the month, ~9am ET (13:00 UTC) — same timing as System 2's research pass
+
+jobs:
+  review:
+    name: "Research + Full-Text Sweep + QA Gate + Apply"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r automation/requirements.txt
+
+      - name: Run System 3 monthly review
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          WORDPRESS_USERNAME: ${{ secrets.WORDPRESS_USERNAME }}
+          WORDPRESS_APP_PASSWORD: ${{ secrets.WORDPRESS_APP_PASSWORD }}
+          WORDPRESS_SITE_URL: https://aitoolsforpros.com
+        run: |
+          FLAGS="--cap ${{ inputs.cap || '10' }}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
+            FLAGS="$FLAGS --dry-run"
+            echo "Running in DRY RUN mode — no writes, no digest email, backlog untouched."
+          else
+            echo "Running LIVE — edits that pass the QA gate will be written (capped, overflow queued)."
+          fi
+          python3 automation/system3_monthly.py $FLAGS
+
+      - name: Commit updated backlog file, if any
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain automation/system3_backlog.json)" ]; then
+            git add automation/system3_backlog.json
+            git commit -m "System 3: update backlog queue [skip ci]"
+            git push
+          else
+            echo "No backlog changes to commit."
+          fi

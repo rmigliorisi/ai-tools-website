@@ -7,7 +7,7 @@ daily human involvement, but with different risk postures matched to what each o
 |---|---|---|---|
 | Weekly Tool Page Updates | Existing, already-published `tool_review` pages | Weekly | Automatically, no approval step |
 | Monthly AI Updates Page | New page at `/[month]-[year]-updates/` | Monthly | Only when Rich clicks Publish |
-| Monthly Editorial Review | Existing `cross_reference` (41) / `profession_hub` (8) pages | Monthly | Suggest-only — Rich approves each change before anything is applied |
+| Monthly Editorial Review | Existing `cross_reference` (41) / `profession_hub` (8) pages | Monthly | Automatically, capped at 10 pages/run + backlog rollover — no approval step (graduated from suggest-only 2026-07-25, see System 3 below) |
 
 The difference in risk posture is deliberate. Weekly updates are factual maintenance on pages a
 human already wrote and vetted — small, verifiable deltas (a price changed, a feature shipped).
@@ -284,7 +284,7 @@ matches what happened in it.
 
 ---
 
-## System 3: Monthly Cross-Reference & Profession Hub Editorial Review (suggest-only)
+## System 3: Monthly Cross-Reference & Profession Hub Editorial Review (capped autonomous apply)
 
 ### Purpose
 
@@ -292,67 +292,99 @@ System 1 keeps the 10 tool_review pages factually current, but it deliberately n
 verdict-level judgment calls — "is Claude now a better fit for architects than it used to be" is
 not a fact you can confirm on a vendor's pricing page, it's a synthesis across several capability
 changes plus a call about whether that synthesis is strong enough to justify updating a page a
-human already wrote and stands behind. That's exactly the kind of claim the guardrails in System 1
-and the SEO docs (fail-closed sourcing, no unverifiable claims stated as fact) exist to keep out of
-anything that auto-publishes.
+human already wrote and stands behind.
 
-So this system does the research and the noticing, but never the writing. It surfaces candidate
-verdict-level updates to the 41 `cross_reference` pages (tool × profession) and, more rarely, the 8
-`profession_hub` pages, as a reviewable report — evidence, reasoning, and a specific suggested edit
-to a specific section — and Rich decides what actually changes. Nothing here auto-publishes, ever.
-This is the same posture as System 2 (draft/suggestion, human in the loop) rather than System 1
-(auto-publish), because the content itself is a different kind of claim.
+This system does that research and noticing, and — as of 2026-07-25 — applies the resulting edits
+itself, without a human approval step per run. It graduated from suggest-only after the first
+manual cycle (Claude's 200K -> 1M-token context window, 7 pages, July 2026) went cleanly end to end,
+a real bug found during that cycle (see "Critical" note below) got fixed and covered by an automated
+self-test suite, and post-write verification (re-fetch + diff, never just trust a 200 response) got
+added. Rich made the call to move to autonomous apply once those held up — see chat history
+2026-07-25 for the exact exchange.
 
-This also protects against a real, current risk: Google's spam policy update in 2026 specifically
-targets "scaled content abuse" — large volumes of pages edited or generated with little real value
-to users. A system that touched dozens of editorial verdicts every month on autopilot, even with
-good intentions, would look exactly like what that policy targets. Keeping a human decision at the
-point of publish, and keeping the volume of suggested changes deliberately small and well-evidenced,
-is what keeps this system firmly on the right side of that line.
+**Why the cap and backlog design below exists, and why it isn't optional:** Google's spam policy
+update in 2026 specifically targets "scaled content abuse" — large volumes of pages edited or
+generated with little real value to users. A system that touched dozens of editorial verdicts every
+month on autopilot would look exactly like what that policy targets, autonomous or not. With the
+human-approval step gone, the cap (10 pages/run, overflow queued to `automation/system3_backlog.json`
+for next run rather than all applied at once) is now the primary thing keeping this system's volume
+profile looking like careful maintenance rather than scaled churn. Do not remove or raise the cap
+without deliberately re-considering this risk, not just as a performance tweak.
+
+The other guardrails inherited from the suggest-only era (fail-closed sourcing, full-text sweep,
+exact-source-domain matching) got *stricter*, not looser, in the move to autonomous apply — a
+verdict-level content change with no human second look before publish deserves at least the same
+bar System 1 uses for pricing/compliance (vendor-official-current confidence, no exceptions), if not
+a higher one. See "Guardrail QA" below.
 
 ### Schedule
 
-Monthly, timed alongside System 2's research pass (2-3 days before month end) since the two share
-research ground — System 2 is already looking at what changed across the AI tools market that
-month; this system asks the follow-up question of whether anything found is significant enough to
-change a specific page's positioning.
+Monthly, on **day 25** (was previously timed alongside System 2's research pass 2-3 days before
+month end; day 25 was chosen when this moved to a dedicated GitHub Actions schedule — see
+"Architecture" below). Runs via `.github/workflows/system3-monthly.yml`, calling
+`automation/system3_monthly.py`.
+
+### Architecture — why this runs on GitHub Actions, not a Cowork scheduled task
+
+This system used to run as a Cowork scheduled task (`system3-cross-reference-editorial-review`,
+retired 2026-07-25) that produced a suggest-only report every month — that worked because the only
+output was text, no write needed. Autonomous apply needs a real WordPress write, and Cowork's
+sandbox cannot make authenticated writes to any external host (outbound HTTPS to third-party
+services is blocked at the proxy — confirmed during System 1's build, see that system's
+"Schedule" section above). So, same as System 1, the actual research-and-write logic lives in a
+GitHub Actions workflow with real network access, reusing the same `ANTHROPIC_API_KEY` /
+`WORDPRESS_USERNAME` / `WORDPRESS_APP_PASSWORD` repo secrets System 1 already set up.
 
 ### Process
 
-1. **Research** — for each of the 10 tools, look at what's changed since the page was last
-   substantively edited (`publish_date` on the page vs. this month): new capabilities, model
-   upgrades, workflow-relevant features. Cross-reference against what each of the 8 professions'
-   pages says that tool is good or weak at.
+1. **Research** — for each of the 10 tools, one Claude API call (`web_search`, restricted to that
+   vendor's own domains, same `TOOLS` dict System 1 uses) asking what's changed in roughly the last
+   month that's relevant to a working professional's use of the tool: new capabilities, model
+   upgrades, workflow-relevant features.
 2. **Identify candidates** — a page becomes a candidate only when there's a specific, named
    capability change that plausibly affects a specific claim already on that page (e.g., a
    materially larger context window or improved image/document analysis bearing on a page that
    says the tool struggles with long specs or drawings). "The model got a version bump" alone is
-   not sufficient reason — the change has to connect to something the page actually claims.
-3. **Draft the suggestion, not the rewrite** — for each candidate, produce: the exact current
-   sentence/section being questioned, the specific evidence (with source), and one concrete
-   proposed replacement (not a vague "consider updating this"). Small, targeted edits to the
-   specific claim — not a full rewrite of the page's verdict.
-4. **Full-text sweep, not a skim** — before finalizing the suggestion list, search the *entire*
-   decoded JSON object for every literal occurrence of the fact being updated (every field, not
+   not sufficient reason — the change has to connect to something the page actually claims. This
+   connection is judged by a second, page-specific Claude API call (one per tool × relevant page)
+   given the finding plus the page's full decoded content, not a keyword grep — see
+   `identify_candidates()` in `automation/system3_monthly.py`.
+3. **Propose the exact edit, not the rewrite** — for each candidate, the model returns the exact
+   current substring being questioned (`old_text`) and the exact proposed replacement (`new_text`),
+   plus a one-sentence rationale. Small, targeted edits to the specific claim — not a full rewrite
+   of the page's verdict. `old_text` is re-verified as a literal, present substring of the page's
+   actual content locally, in Python, before it's trusted — a defensive check against the model
+   ever hallucinating a quote that isn't really there.
+4. **Full-text sweep, not a skim** — the identification call is explicitly instructed to search the
+   *entire* page content for every literal occurrence of the fact being updated (every field, not
    just Bottom Line/comparison table/the "obvious" spots), and propose an edit for each one found.
    This step exists because the first live run (Claude for Architects, July 2026) missed 2 of 6
    "200K" mentions on the first pass — they were sitting in FAQ answers that weren't part of the
-   initial visual skim. A page-wide text search catches this; reading the page for salience does
-   not. Cheap insurance against publishing an internally-inconsistent page (old number in one FAQ,
-   new number in the Bottom Line).
-5. **Guardrail QA** — same fail-closed sourcing standard as the other systems: every piece of
-   evidence needs a real, current, ideally vendor-official source. No suggestion ships without one.
-   Additionally: cap suggestions at a small number per cycle (a handful, not dozens) — if research
-   turns up more candidates than that, only the ones with the strongest evidence get surfaced, the
-   rest wait for next cycle. Volume discipline here is itself a guardrail, not just an editorial
-   nicety (see "Purpose" above on scaled content abuse).
-6. **Deliver the report** — to Rich, for review. Nothing is written to WordPress at this stage.
-7. **Apply approved changes** — for whichever suggestions Rich approves, apply them the same way
-   the July monthly page was patched: fetch the current page's JSON via the WP REST API
-   (`context=edit` to get `content.raw`, same pattern as `automation/weekly_tool_update.py`), change
-   only the approved field(s), re-encode, `PUT` back. Because this always requires a human decision
-   first, it doesn't need to live in a GitHub Actions schedule the way System 1 does — a short
-   script generated at approval time, run once locally, is enough.
+   initial visual skim. Cheap insurance against publishing an internally-inconsistent page (old
+   number in one FAQ, new number in the Bottom Line).
+5. **Guardrail QA** — every edit needs a source, and now (post-graduation from suggest-only) the
+   bar is the *strict* one: `confidence` must be exactly `"vendor_official_current"` — third-party
+   or uncertain findings are held/logged, never auto-applied, no soft-warning tier the way System 1
+   allows for some fields. Source URL must resolve to that tool's allowed vendor domain(s) (checked
+   in Python, not just trusted from the model's own claim). `old_text` must verify as a literal
+   substring of the actual page content (see step 3). Any edit failing any of these is dropped and
+   logged as held, never applied.
+6. **Cap + backlog rollover** — at most 10 pages get written per run (`--cap`, default 10; a
+   deliberate ceiling, see "Purpose" above). Pages already queued in `automation/system3_backlog.json`
+   from a prior run that exceeded the cap are applied first (oldest first), then this run's new
+   candidates fill any remaining room. Whatever's left over after the cap gets written back to the
+   backlog file for next run — nothing found is ever silently dropped for being over the cap, it
+   just waits its turn. If a month turns up zero real candidates, the backlog (if any) still gets
+   worked down at the same cap.
+7. **Apply** — for everything within this run's cap: fetch the current page's JSON via the WP REST
+   API (`context=edit` to get `content.raw`), decode it, walk the decoded structure doing the
+   text replacement (never raw-JSON-text matching — see "Critical" note below for why), re-encode,
+   `PUT` back, then **re-fetch and diff against what was sent** to confirm the write actually took
+   rather than trusting the HTTP response alone.
+8. **Log + notify** — every applied, held, and queued edit gets logged via the same digest endpoint
+   System 1 uses (`POST /wp-json/aifp/v1/update-digest`), so Rich gets an email summary every run
+   even though nothing is gated on his approval. Automated, not invisible — same principle as
+   System 1's "Visibility" section above.
 
 ### Critical: never apply approved edits through the WP Admin visual/block editor
 
@@ -388,7 +420,9 @@ edits made.
 known-good `content.raw` snapshot taken before the corrupting save (not necessarily a WordPress
 revision — restoring a WP revision through the admin UI is unverified as safe here and may run
 through the same corrupting save path). `automation/system3_2026-07_claude_context_window.py`
-has two flags built for exactly this:
+(the one-off script from the July 2026 manual cycle, kept around specifically as a recovery tool —
+it is not the ongoing System 3 implementation, that's `automation/system3_monthly.py` now) has two
+flags built for exactly this:
 - `--dump SLUG` / `--dump-all` — writes a post's current `content.raw` to
   `automation/_debug_<slug>.json`, no writes to WordPress. Use this to snapshot state before
   touching anything, and to diagnose whether a page's "still wrong" content is a stale-cache
@@ -396,6 +430,20 @@ has two flags built for exactly this:
 - `--restore SLUG` — reads `automation/_restore_<slug>.json` (a known-good `content.raw` you've
   saved) and `PUT`s it back verbatim via the REST API, then re-fetches and confirms the write
   matches exactly. This is how the Claude for Engineers corruption from this cycle was fixed.
+
+**A second, related bug found and fixed in the same July 2026 cycle, unrelated to WP Admin:** the
+original patch script matched `old_text`/`new_text` pairs against the raw JSON text of
+`content.raw` directly. Raw JSON text escapes an embedded `"` as `\"`; the search patterns used
+plain, unescaped quotes. Any target sentence containing a literal quotation mark could therefore
+never match, producing a false "text not found — may have already changed" even on a real apply
+run — this happened on the Claude for Legal page's "What Most Reviews Miss" insight, which quotes
+the phrase `"Claude has a 200K context window"` verbatim. **The fix, now standard in
+`automation/system3_monthly.py`:** `json.loads()` the raw content first, then do every match/replace
+against the *decoded* Python strings (where a `"` is just a character, not a JSON escape sequence),
+then `json.dumps()` once at the end before writing. Never match against raw, still-JSON-encoded
+text. This fix is covered by an automated self-test suite (`run_selftests()`) that runs
+automatically before any network call in `system3_monthly.py` and aborts the whole run if any check
+fails — fail closed on the logic itself, not just on sourcing.
 
 ---
 
@@ -465,12 +513,14 @@ generic ("click here," "read more," bare "link").
   `WORDPRESS_USERNAME` / `WORDPRESS_APP_PASSWORD` env vars — from GitHub Actions secrets in CI,
   from `.env` locally) — no new credential *format* needed, just a second place (GitHub repo
   secrets) it also has to live for System 1.
-- System 1 runs as a scheduled **GitHub Actions workflow** calling the Claude API directly
-  (see "How the research step works" above) — not a Cowork scheduled task, because Cowork's
-  sandbox can't make the authenticated write. System 2 (monthly) still runs interactively through
-  Cowork today, since a draft-only page with a human publish step doesn't need to run unattended.
-  This keeps the "not costly" requirement from the earlier chatbot discussion intact either way —
-  no per-message API meter, just a bounded weekly job (a few dollars a year, see above).
+- System 1 and System 3 both run as scheduled **GitHub Actions workflows** calling the Claude API
+  directly (see "How the research step works" above) — not Cowork scheduled tasks, because
+  Cowork's sandbox can't make the authenticated write. System 2 (monthly) still runs interactively
+  through Cowork today, since a draft-only page with a human publish step doesn't need to run
+  unattended. This keeps the "not costly" requirement from the earlier chatbot discussion intact
+  either way — bounded jobs, not a per-message API meter (System 1: a few dollars a year, see
+  above; System 3: at most 10 tool-research calls + a handful of per-page identification calls a
+  month, same order of magnitude).
 - Neither system touches theme code (`aifp-theme/`), so neither goes through the GitHub Actions
   QA/deploy pipeline — that pipeline validates PHP files, not WordPress content. The QA gates
   described above are the content-level equivalent, purpose-built for this.
@@ -503,9 +553,18 @@ generic ("click here," "read more," bare "link").
       research → suggest → approve → patch loop works end to end
 - [x] System 3 process gap found and fixed in the spec: "full-text sweep" step added after the
       first run missed 2 of 6 mentions on a visual skim (see "Process" step 4 above)
-- [x] System 3 now runs on a monthly Cowork scheduled task (`system3-cross-reference-editorial-review`,
-      day 25 of each month) that produces a suggest-only report — never writes to WordPress. Requires
-      the Cowork app to be open at run time; if it's closed, the run happens on next launch instead.
+- [x] System 3 originally ran on a monthly Cowork scheduled task
+      (`system3-cross-reference-editorial-review`, day 25 of each month) that produced a
+      suggest-only report — never wrote to WordPress. **Retired 2026-07-25** in favor of the GitHub
+      Actions workflow below, once the process had proven itself on a live manual cycle.
+- [x] System 3 graduated from suggest-only to capped autonomous apply (2026-07-25). Built
+      `automation/system3_monthly.py` (research -> per-page candidate identification -> strict
+      guardrail QA -> 10-page/run cap with backlog rollover in `automation/system3_backlog.json` ->
+      apply via REST with the decoded-JSON replace + self-tests + post-write verification proven on
+      the manual July cycle -> digest email) and `.github/workflows/system3-monthly.yml` (cron, day
+      25, same secrets as System 1). Not yet run live in this new form — first live run should be
+      watched closely (see "Before either system runs unattended for the first time" above, same
+      principle applies to this graduation).
 - [ ] Known gap: Rank Math's sitemap `lastmod` isn't updating on REST-API saves — tempers the
       "weekly updates improve freshness signals" rationale for System 1 (see note under "How the
       research step works" above). Not yet root-caused; low priority since it doesn't hide real
