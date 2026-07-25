@@ -156,28 +156,106 @@ def get_post_id(slug):
     return results[0]["id"]
 
 
+def run_selftests():
+    """Fail-closed sanity check on the replacement logic itself, run automatically
+    before any network call — dry run or --apply. Exists because of a real bug
+    found in this exact script: matching against raw (undecoded) JSON text fails
+    silently whenever the target sentence contains a literal quotation mark,
+    since the raw text has it escaped as \\" while the search pattern doesn't.
+    That bug produced a false "nothing to apply" on claude-legal for a full
+    --apply run before anyone noticed. These tests would have caught it before
+    the script ever ran against the live site. If any assertion fails, abort —
+    do not proceed to touch WordPress with logic that hasn't proven itself."""
+    tests_run = 0
+
+    def check(label, actual, expected):
+        nonlocal tests_run
+        tests_run += 1
+        if actual != expected:
+            raise AssertionError(f"Self-test FAILED [{label}]: expected {expected!r}, got {actual!r}")
+
+    # Plain substring replace.
+    c = [0]
+    check("plain replace", _replace_in_value("The 200K window", "200K", "1M", c), "The 1M window")
+    check("plain replace count", c[0], 1)
+
+    # The actual regression: sentence containing embedded double quotes, as a
+    # DECODED Python string (this is what _replace_in_value always operates on —
+    # json.loads() has already turned \" back into a real " by this point).
+    c = [0]
+    sentence = 'Most reviews lead with "Claude has a 200K context window" as if it is a spec.'
+    result = _replace_in_value(sentence, '"Claude has a 200K context window"', '"Claude has a 1M-token context window"', c)
+    check("quoted-substring replace", result, 'Most reviews lead with "Claude has a 1M-token context window" as if it is a spec.')
+    check("quoted-substring count", c[0], 1)
+
+    # Apostrophes need no special handling, but confirm anyway.
+    c = [0]
+    check("apostrophe replace", _replace_in_value("Claude's 200K window", "200K", "1M", c), "Claude's 1M window")
+
+    # Recurses into nested dict/list structures, not just top-level strings.
+    c = [0]
+    nested = {"a": ["x 200K y", {"b": "z 200K w"}], "c": "no match here"}
+    result = _replace_in_value(nested, "200K", "1M", c)
+    check("nested structure replace", result, {"a": ["x 1M y", {"b": "z 1M w"}], "c": "no match here"})
+    check("nested structure count", c[0], 2)
+
+    # No match found -> unchanged, count stays 0 (this is what SKIP relies on).
+    c = [0]
+    check("no-match unchanged", _replace_in_value("nothing relevant here", "200K", "1M", c), "nothing relevant here")
+    check("no-match count", c[0], 0)
+
+    # A full round trip through json.dumps/json.loads must survive unchanged
+    # data untouched, including unicode arrows and escaped quotes, so re-saving
+    # a page with zero real edits doesn't introduce spurious diffs.
+    sample = {"key": "value with → arrow and \"quotes\" and it's an apostrophe"}
+    round_tripped = json.loads(json.dumps(sample, ensure_ascii=False))
+    check("json round-trip", round_tripped, sample)
+
+    print(f"Self-tests passed ({tests_run} checks).")
+
+
+def _replace_in_value(value, old, new, counter):
+    """Recursively walk decoded JSON (dicts/lists/strings) and replace `old`
+    with `new` inside every string leaf. Operating on the DECODED strings
+    (not the raw JSON text) sidesteps any quote-escaping mismatch — a plain
+    `"` in a decoded Python string is just a character, not a JSON escape
+    sequence, so this can't miss a match the way raw-text substring
+    matching can when the sentence itself contains quotation marks."""
+    if isinstance(value, str):
+        count = value.count(old)
+        if count:
+            counter[0] += count
+            return value.replace(old, new)
+        return value
+    if isinstance(value, list):
+        return [_replace_in_value(v, old, new, counter) for v in value]
+    if isinstance(value, dict):
+        return {k: _replace_in_value(v, old, new, counter) for k, v in value.items()}
+    return value
+
+
 def patch_post(slug, edits, dry_run=True):
     post_id = get_post_id(slug)
     post = api_get(f"/cross_reference/{post_id}", "?context=edit")
     raw = post["content"]["raw"]
 
-    json.loads(raw)  # sanity check: must be valid JSON before we touch it
+    data = json.loads(raw)  # decode once; do all matching/replacing on the decoded strings
 
-    new_raw = raw
     applied = 0
     print(f"\n=== {slug} (post id {post_id}) ===")
     for old, new in edits:
-        count = new_raw.count(old)
+        counter = [0]
+        data = _replace_in_value(data, old, new, counter)
+        count = counter[0]
         if count == 0:
             print(f"  SKIP (text not found — may have already changed): {old[:70]}...")
             continue
         if count > 1:
             print(f"  NOTE: found {count} occurrences, replacing all: {old[:70]}...")
-        new_raw = new_raw.replace(old, new)
         applied += count
         print(f"  OK ({count}x): {old[:60]}\n        -> {new[:60]}")
 
-    json.loads(new_raw)  # sanity check: must still be valid JSON after edits
+    new_raw = json.dumps(data, ensure_ascii=False)
 
     if applied == 0:
         print("  Nothing to apply on this page.")
@@ -188,7 +266,16 @@ def patch_post(slug, edits, dry_run=True):
         return
 
     api_put(f"/cross_reference/{post_id}", {"content": new_raw})
-    print(f"  WRITTEN — {applied} replacement(s) applied to post {post_id}.")
+
+    # Verify the write actually took, rather than trusting a 200 response alone —
+    # re-fetch and confirm the live content.raw now matches what we sent. This is
+    # the same "confirmed or warn" pattern as --restore, applied here too.
+    verify = api_get(f"/cross_reference/{post_id}", "?context=edit")
+    if verify["content"]["raw"] == new_raw:
+        print(f"  WRITTEN + VERIFIED — {applied} replacement(s) applied to post {post_id}, confirmed by re-fetch.")
+    else:
+        print(f"  WRITTEN BUT UNVERIFIED — PUT succeeded but re-fetched content.raw does not exactly match "
+              f"what was sent for post {post_id}. Check this page manually before trusting the change.")
 
 
 def inspect_post(slug, needle):
@@ -214,6 +301,8 @@ def inspect_post(slug, needle):
 
 
 if __name__ == "__main__":
+    run_selftests()  # fail closed: abort before any network call if the core logic is broken
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true", help="Actually write changes. Default is dry-run.")
     parser.add_argument("--inspect", metavar="SLUG", help="Diagnostic: print raw context around --needle for one slug, no writes.")

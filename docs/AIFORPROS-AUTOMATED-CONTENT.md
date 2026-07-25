@@ -487,10 +487,14 @@ generic ("click here," "read more," bare "link").
 - [x] `aifp_update` added to the custom sitemap generator
 - [x] System 1 research + diff + QA-gate + write logic — `automation/weekly_tool_update.py`
 - [x] System 1 scheduled execution — `.github/workflows/weekly-tool-update.yml` (GitHub Actions,
-      `workflow_dispatch` only for now; `schedule:` trigger is commented out on purpose)
-- [ ] Add `ANTHROPIC_API_KEY`, `WORDPRESS_USERNAME`, `WORDPRESS_APP_PASSWORD` as GitHub repo secrets
-- [ ] One supervised dry run of System 1 (via `workflow_dispatch` with dry run checked), then
-      uncomment the `schedule:` trigger once the output looks right
+      `schedule:` trigger turned on 2026-07-25 — runs every Monday ~9am ET)
+- [x] Add `ANTHROPIC_API_KEY`, `WORDPRESS_USERNAME`, `WORDPRESS_APP_PASSWORD` as GitHub repo secrets
+- [x] Supervised live run of System 1 across all 10 tool pages, reviewed via full page-by-page
+      audit and the Weekly Update Log (33 entries — real changes applied, new/unrecognized
+      tiers and features correctly held). Two bugs found in that review and fixed: quick_facts
+      values written as long paragraphs instead of short labels (guardrail: `max_value_len`),
+      and the digest email always reporting `sent: true` regardless of `wp_mail()`'s actual
+      result. Weekly schedule turned on after these fixes landed.
 - [ ] System 2's monthly run is still manual-via-Cowork end to end (research → draft → notify);
       no scheduled execution built for it yet since draft-only + human-publish doesn't need one
 - [x] System 3 spec'd (Monthly Cross-Reference & Profession Hub Editorial Review, suggest-only)
