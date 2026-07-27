@@ -42,7 +42,7 @@ on:
       cap:
         description: "Max pages to write this run (overflow queues to backlog)"
         type: string
-        default: "10"
+        default: "20"
   schedule:
     - cron: '0 13 25 * *'  # day 25 of the month, ~9am ET (13:00 UTC) — same timing as System 2's research pass
 
@@ -70,7 +70,7 @@ jobs:
           WORDPRESS_APP_PASSWORD: ${{ secrets.WORDPRESS_APP_PASSWORD }}
           WORDPRESS_SITE_URL: https://aitoolsforpros.com
         run: |
-          FLAGS="--cap ${{ inputs.cap || '10' }}"
+          FLAGS="--cap ${{ inputs.cap || '20' }}"
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
             FLAGS="$FLAGS --dry-run"
             echo "Running in DRY RUN mode — no writes, no digest email, backlog untouched."

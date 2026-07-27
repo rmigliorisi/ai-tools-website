@@ -92,7 +92,7 @@ except ImportError:
 
 MODEL = "claude-sonnet-5"
 BACKLOG_PATH = Path(__file__).resolve().parent / "system3_backlog.json"
-DEFAULT_CAP = 10
+DEFAULT_CAP = 20
 
 RESEARCH_SYSTEM_PROMPT = """You are researching what has genuinely, substantively changed about one AI \
 tool's capabilities in roughly the last month, for a review site aimed at working professionals \
