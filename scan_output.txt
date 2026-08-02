@@ -1,0 +1,113 @@
+
+
+########## tool_review ##########
+(fetched 10 posts)
+
+=== otter (post 352) — 10 hit(s) ===
+  [Otter] 'Enable OtterPilot to join your Zoom or Teams meetings automatically. Aft'
+  [Otter] "it from a Pro or Business plan upgrade. The Business plan's OtterPilot automatic meeting joining is the feature that converts"
+  [Otter] 'OtterPilot (AI Meeting Bot)'
+  [Otter] 'OtterPilot for auto-join; team features; admin controls'
+  [Otter] 'bottom:1px solid #f3f4f6;color:#374151;vertical-align:top;">OtterPilot for auto-join; team features; admin controls</td>\n <td'
+  [Otter] 'IPAA option</td>\n <td>Accuracy drops in noisy environments; OtterPilot requires Business plan</td>\n <td>You attend many meeti'
+  [Otter] '<div class="faq-a">Yes. Otter.ai\'s OtterPilot feature joins Zoom, Microsoft Teams, and Google Meet m'
+  [Otter] 'Otter.ai. Official product documentation on OtterPilot, AI summaries, speaker identification, and Otter Chat.'
+  [Otter] 'n on Zoom, Microsoft Teams, and Google Meet integration and OtterPilot setup. otter.ai/integrations'
+  [Otter] "ood practice and frequently a legal requirement. Otter.ai's OtterPilot notifies participants of its presence, but verify appl"
+
+=== grammarly (post 351) — 2 hit(s) ===
+  [Grammarly] 'GrammarlyGO (AI Writing Assistance)'
+  [Grammarly] "The single 'GrammarlyGO' generative-AI feature has been superseded by a suite of "
+
+=== perplexity (post 345) — 2 hit(s) ===
+  [ChatGPT] 'verified facts and source links into a document or a Claude/ChatGPT session</li>\n <li style="font-size:13px;color:#4c1d95;">Use'
+  [Claude] 'py the verified facts and source links into a document or a Claude/ChatGPT session</li>\n <li style="font-size:13px;color:#4c1d'
+
+
+########## profession_hub ##########
+(fetched 8 posts)
+
+
+########## cross_reference ##########
+(fetched 41 posts)
+
+=== otter-physicians (post 401) — 4 hit(s) ===
+  [ChatGPT] 'ame, DOB, MRN, address) from the transcript.\nStep 3 (Claude/ChatGPT): "From the following de-identified clinical encounter tran'
+  [ChatGPT] '7;">\n The two-tool workflow (Otter.ai for recording, Claude/ChatGPT for structured note drafting) is more effort than a single '
+  [Claude] 'iers (name, DOB, MRN, address) from the transcript.\nStep 3 (Claude/ChatGPT): "From the following de-identified clinical encoun'
+  [Claude] 'ight:1.7;">\n The two-tool workflow (Otter.ai for recording, Claude/ChatGPT for structured note drafting) is more effort than a'
+
+=== grammarly-real-estate (post 398) — 1 hit(s) ===
+  [Claude] ' inputs. For content generation from scratch, use ChatGPT orClaude. Grammarly improves what you have already written; it canno'
+
+=== notion-ai-engineers (post 395) — 2 hit(s) ===
+  [Copilot] 'rovide the kind of code-aware assistance thatCursoror GitHubCopilotprovide. It can generate code snippets in a Notion page, but'
+  [Cursor] 'structure, or provide the kind of code-aware assistance thatCursoror GitHubCopilotprovide. It can generate code snippets in a '
+
+=== cursor-engineers (post 393) — 2 hit(s) ===
+  [ChatGPT] 'ion strategy, or non-technical tasks, supplement Cursor withChatGPTorClaude.</div>\n</div>\n</div>\n<p>Comparing your options? Als'
+  [Claude] 'egy, or non-technical tasks, supplement Cursor withChatGPTorClaude.</div>\n</div>\n</div>\n<p>Comparing your options? Also see <a'
+
+=== copilot-insurance (post 390) — 3 hit(s) ===
+  [Perplexity AI] 'idance, carrier appetite changes, or recent market news, usePerplexity AIto find current primary source information.</div>\n</div>\n<di'
+  [ChatGPT] 'or market data</div>\n<div class="limit-desc">Like Claude andChatGPT, Copilot has no live market or regulatory information. For '
+  [Claude] ', and comparing expiring to renewal across complex programs,Claudeis significantly more capable. Copilot handles the M365 writ'
+
+=== copilot-finance (post 389) — 3 hit(s) ===
+  [Perplexity AI] 'ation. For current rates and recent regulatory guidance, usePerplexity AI. Copilot handles the writing and analysis work;Perplexityha'
+  [ChatGPT] 'egulatory data</div>\n<div class="limit-desc">Like Claude andChatGPT, Copilot does not have live market data or current regulato'
+  [Claude] 'zing multiple documents, or complex financial plan analysis,Claudesignificantly outperforms Copilot. Copilot handles the offic'
+
+=== copilot-engineers (post 388) — 5 hit(s) ===
+  [Notion AI] 't. For those teams, standalone tools like Claude,ChatGPT, orNotion AIare more appropriate and do not require switching ecosystems'
+  [ChatGPT] 'this product. For those teams, standalone tools like Claude,ChatGPT, orNotion AIare more appropriate and do not require switchi'
+  [Claude] 'ge, but it is not a substitute for GitHub Copilot,Cursor, orClaudefor actual engineering work. If you are evaluating Microsoft'
+  [Claude] "tecture decision records, or reasoning over large codebases,Claudeis significantly stronger. Copilot's technical document draf"
+  [Cursor] 'eams message, but it is not a substitute for GitHub Copilot,Cursor, orClaudefor actual engineering work. If you are evaluating'
+
+=== copilot-real-estate (post 387) — 1 hit(s) ===
+  [Perplexity AI] 'ovide. For live market lookups, use your MLS directly or usePerplexity AIfor web-based research.</div>\n</div>\n<div class="limit-card"'
+
+=== copilot-physicians (post 386) — 3 hit(s) ===
+  [Perplexity AI] ' the citation rigor needed for clinical evidence review. UsePerplexity AIfor literature research tasks.</div>\n</div>\n<div class="limi'
+  [ChatGPT] ' a 60-page medical record in a single session. Use Claude orChatGPTfor that task.</div>\n</div>\n<div class="limit-card">\n<div cl'
+  [Claude] ' analysis</div>\n<div class="limit-desc">Copilot cannot matchClaude\'s 200K context window for full patient record analysis. It '
+
+=== copilot-legal (post 385) — 1 hit(s) ===
+  [Perplexity AI] 'ase law. Do not use it for legal research. For research, usePerplexity AIfor current events and regulatory lookups, or dedicated lega'
+
+=== perplexity-insurance (post 380) — 1 hit(s) ===
+  [Copilot] 'e. For drafting proposals and correspondence, use ChatGPT orCopilot. Perplexity fills the current-information research layer th'
+
+=== claude-finance (post 373) — 2 hit(s) ===
+  [Microsoft Copilot] ' need AI assistance directly inside Excel, Word, or Outlook,Microsoft Copilotoffers deeper native integration with the M365 tools many ad'
+  [Copilot] 'ssistance directly inside Excel, Word, or Outlook,Microsoft Copilotoffers deeper native integration with the M365 tools many ad'
+
+=== claude-real-estate (post 371) — 2 hit(s) ===
+  [Microsoft Copilot] 've integrations with CRM and email platforms than ChatGPT orMicrosoft Copilot. Most workflows involve copy-paste. If you need an AI tool '
+  [Copilot] ' need an AI tool that lives inside your email client or CRM,Copilotor a ChatGPT-based integration may be more practical.</div>\n'
+
+=== chatgpt-insurance (post 366) — 2 hit(s) ===
+  [Perplexity AI] ' insurance department guidance. For regulatory research, usePerplexity AIto find current state-specific guidance from primary sources'
+  [Claude] ". For thorough policy review of complex commercial coverage,Claude's larger context window is more appropriate. ChatGPT handle"
+
+=== chatgpt-finance (post 365) — 2 hit(s) ===
+  [Perplexity AI] 'that requires live data. For current market information, usePerplexity AIor your research platform alongside ChatGPT.</div>\n</div>\n<d'
+  [Claude] "andles well in a single session. For long-document analysis,Claude's 200K context window is more appropriate.</div>\n</div>\n</d"
+
+=== chatgpt-engineers (post 364) — 1 hit(s) ===
+  [Copilot] 're you want AI inline in your editing flow, Cursor or GitHubCopiloteliminates that friction. The copy-paste overhead is not sig'
+
+=== chatgpt-physicians (post 362) — 5 hit(s) ===
+  [Perplexity AI] 'or incorrect information. For cited, current literature, usePerplexity AI. Never use ChatGPT as a substitute for evidence-based clini'
+  [Otter.ai] 'er the encounter. For real-time encounter transcription, useOtter.aior a dedicated ambient documentation tool. The strongest doc'
+  [Otter.ai] 'on tool. The strongest documentation workflow combines both:Otter.aicaptures the spoken encounter, ChatGPT formats the transcrip'
+  [Otter] 'er the encounter. For real-time encounter transcription, useOtter.aior a dedicated ambient documentation tool. The strongest '
+  [Otter] 'on tool. The strongest documentation workflow combines both:Otter.aicaptures the spoken encounter, ChatGPT formats the transc'
+
+=== chatgpt-legal (post 361) — 2 hit(s) ===
+  [Microsoft Copilot] "n active file, this copy-paste overhead becomes significant.Microsoft Copilot's integration with Word and Outlook avoids this friction fo"
+  [Claude] "ty. For full-length contract review of 100+ page agreements,Claude's larger context window handles the task more reliably.</di"
+
+
+TOTAL HITS ACROSS ALL PAGES: 56

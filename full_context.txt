@@ -1,0 +1,94 @@
+
+=== grammarly-real-estate (post 398) ===
+  anchor 'orClaude. Grammarly':
+    'escriptions, CMA narratives, client emails, or social captions from property details or data inputs. For content generation from scratch, use ChatGPT orClaude. Grammarly improves what you have already written; it cannot produce it.</div>\n</div>\n<div class="limit-card">\n<div class="limit-title">Free tier too limited fo'
+
+=== notion-ai-engineers (post 395) ===
+  anchor 'thatCursoror GitHubCopilotprovide':
+    'div class="limit-desc">Notion AI cannot run code, access your IDE, understand your repository structure, or provide the kind of code-aware assistance thatCursoror GitHubCopilotprovide. It can generate code snippets in a Notion page, but this is a marginal use case compared to purpose-built coding tools.</div>\n</div>\n<div class="lim'
+
+=== cursor-engineers (post 393) ===
+  anchor 'Cursor withChatGPTorClaude':
+    'oes not involve code. For engineers who also need general AI assistance for communication, documentation strategy, or non-technical tasks, supplement Cursor withChatGPTorClaude.</div>\n</div>\n</div>\n<p>Comparing your options? Also see <a href="/chatgpt/engineers/">ChatGPT</a>, <a href="/claude/engineers/">Claude for software '
+
+=== copilot-insurance (post 390) ===
+  anchor 'usePerplexity AIto find':
+    'hatGPT, Copilot has no live market or regulatory information. For current state regulatory guidance, carrier appetite changes, or recent market news, usePerplexity AIto find current primary source information.</div>\n</div>\n<div class="limit-card">\n<div class="limit-title">Add-on cost requires business plan eligibility</di'
+  anchor 'Like Claude andChatGPT':
+    'document reasoning.</div>\n</div>\n<div class="limit-card">\n<div class="limit-title">No current regulatory or market data</div>\n<div class="limit-desc">Like Claude andChatGPT, Copilot has no live market or regulatory information. For current state regulatory guidance, carrier appetite changes, or recent market news, usePer'
+  anchor 'programs,Claudeis':
+    'is</div>\n<div class="limit-desc">For detailed commercial policy review, coverage gap identification, and comparing expiring to renewal across complex programs,Claudeis significantly more capable. Copilot handles the M365 writing and productivity work; it does not replace the deep policy analysis capability of a tool'
+
+=== copilot-finance (post 389) ===
+  anchor 'usePerplexity AI. Copilot handles':
+    '">Like Claude andChatGPT, Copilot does not have live market data or current regulatory information. For current rates and recent regulatory guidance, usePerplexity AI. Copilot handles the writing and analysis work;Perplexityhandles the current-information layer.</div>\n</div>\n<div class="limit-card">\n<div class="limit-title">Add-on '
+  anchor 'Like Claude andChatGPT':
+    ' review requires.</div>\n</div>\n<div class="limit-card">\n<div class="limit-title">No real-time market or regulatory data</div>\n<div class="limit-desc">Like Claude andChatGPT, Copilot does not have live market data or current regulatory information. For current rates and recent regulatory guidance, usePerplexity AI. Copilo'
+  anchor 'analysis,Claudesignificantly':
+    'ep financial reasoning tool</div>\n<div class="limit-desc">For reviewing a full prospectus, synthesizing multiple documents, or complex financial plan analysis,Claudesignificantly outperforms Copilot. Copilot handles the office productivity layer well; it does not handle the depth of analysis that serious document review requir'
+
+=== copilot-engineers (post 388) ===
+  anchor 'Claude,ChatGPT, orNotion AIare':
+    'ing teams using Slack, Notion, Google Workspace, or any other non-M365 stack get no benefit from this product. For those teams, standalone tools like Claude,ChatGPT, orNotion AIare more appropriate and do not require switching ecosystems.</div>\n</div>\n<div class="limit-card">\n<div class="limit-title">Meeting summary quality depe'
+  anchor 'Copilot,Cursor, orClaudefor':
+    'e code suggestions in your IDE. It can help you draft simple code snippets in a Word document or Teams message, but it is not a substitute for GitHub Copilot,Cursor, orClaudefor actual engineering work. If you are evaluating Microsoft Copilot expecting a coding assistant, it will disappoint. GitHub Copilot is a separate produ'
+  anchor 'codebases,Claudeis':
+    'ted value for deep technical reasoning</div>\n<div class="limit-desc">For complex RFC drafting, architecture decision records, or reasoning over large codebases,Claudeis significantly stronger. Copilot\'s technical document drafting in Word is useful for structuring notes but does not produce the level of technical ana'
+
+=== copilot-real-estate (post 387) ===
+  anchor 'usePerplexity AIfor web-based':
+    'bout current list prices, recent sales, or days on market, it cannot help without data you provide. For live market lookups, use your MLS directly or usePerplexity AIfor web-based research.</div>\n</div>\n<div class="limit-card">\n<div class="limit-title">Not designed for deep document analysis</div>\n<div class="limit-desc">For HO'
+
+=== copilot-physicians (post 386) ===
+  anchor 'UsePerplexity AIfor literature':
+    'rch is not a substitute for PubMed or UpToDate. It can retrieve general information but lacks the citation rigor needed for clinical evidence review. UsePerplexity AIfor literature research tasks.</div>\n</div>\n<div class="limit-card">\n<div class="limit-title">Requires M365 Business or Enterprise subscription</div>\n<div class="li'
+  anchor 'Claude orChatGPTfor that task':
+    'text window for full patient record analysis. It is not the right tool for reading and synthesizing a 60-page medical record in a single session. Use Claude orChatGPTfor that task.</div>\n</div>\n<div class="limit-card">\n<div class="limit-title">No structured medical literature access</div>\n<div class="limit-desc">Copilot\'s Bing '
+  anchor "cannot matchClaude's 200K":
+    ' class="limitations-grid">\n<div class="limit-card">\n<div class="limit-title">No deep clinical document analysis</div>\n<div class="limit-desc">Copilot cannot matchClaude\'s 200K context window for full patient record analysis. It is not the right tool for reading and synthesizing a 60-page medical record in a single session. '
+
+=== copilot-legal (post 385) ===
+  anchor 'usePerplexity AIfor current events':
+    'esc">Copilot does not search legal databases and does not have access to Westlaw, Lexis, or case law. Do not use it for legal research. For research, usePerplexity AIfor current events and regulatory lookups, or dedicated legal research platforms. Copilot can help you write about research you have already done; it cannot do the rese'
+
+=== perplexity-insurance (post 380) ===
+  anchor 'ChatGPT orCopilot. Perplexity':
+    'not for reviewing policy documents or drafting client communications. For policy analysis, use Claude. For drafting proposals and correspondence, use ChatGPT orCopilot. Perplexity fills the current-information research layer that the other tools lack.</div>\n</div>\n<div class="limit-card">\n<div class="limit-title">Cannot access '
+
+=== claude-finance (post 373) ===
+  anchor 'Outlook,Microsoft Copilotoffers':
+    'ffice or M365</div>\n<div class="limit-desc">Claude operates as a standalone chat interface. If you need AI assistance directly inside Excel, Word, or Outlook,Microsoft Copilotoffers deeper native integration with the M365 tools many advisors already use for client reports and correspondence.</div>\n</div>\n<div class="limit-card">\n'
+
+=== claude-real-estate (post 371) ===
+  anchor 'ChatGPT orMicrosoft Copilot. Most workflows':
+    '"limit-title">Fewer direct platform integrations</div>\n<div class="limit-desc">Claude has fewer native integrations with CRM and email platforms than ChatGPT orMicrosoft Copilot. Most workflows involve copy-paste. If you need an AI tool that lives inside your email client or CRM,Copilotor a ChatGPT-based integration may be more practical.</d'
+  anchor 'CRM,Copilotor a ChatGPT-based':
+    'nd email platforms than ChatGPT orMicrosoft Copilot. Most workflows involve copy-paste. If you need an AI tool that lives inside your email client or CRM,Copilotor a ChatGPT-based integration may be more practical.</div>\n</div>\n<div class="limit-card">\n<div class="limit-title">Not optimal for high-volume simple tasks</div>\n<div'
+
+=== chatgpt-insurance (post 366) ===
+  anchor 'usePerplexity AIto find current state':
+    'compliance rules. ChatGPT\'s training has a knowledge cutoff and may not reflect current state insurance department guidance. For regulatory research, usePerplexity AIto find current state-specific guidance from primary sources.</div>\n</div>\n<div class="limit-card">\n<div class="limit-title">E&O exposure from inaccurate coverage descript'
+  anchor "coverage,Claude's larger":
+    "any endorsements, exclusions, and conditions, ChatGPT may lose context or miss important provisions. For thorough policy review of complex commercial coverage,Claude's larger context window is more appropriate. ChatGPT handles standard personal and small commercial policies well; it is less reliable for complex programs.</"
+
+=== chatgpt-finance (post 365) ===
+  anchor 'usePerplexity AIor your research':
+    't tell you today\'s rates, current equity valuations, recent economic indicators, or anything that requires live data. For current market information, usePerplexity AIor your research platform alongside ChatGPT.</div>\n</div>\n<div class="limit-card">\n<div class="limit-title">Cannot replace financial planning software</div>\n<div clas'
+  anchor "analysis,Claude's 200K":
+    'full prospectus, a long financial plan, or a detailed regulatory document may exceed what ChatGPT handles well in a single session. For long-document analysis,Claude\'s 200K context window is more appropriate.</div>\n</div>\n</div>\n<p>Comparing your options? Also see <a href="/claude/finance/">Claude</a>, <a href="/copilot/'
+
+=== chatgpt-engineers (post 364) ===
+  anchor 'GitHubCopiloteliminates':
+    'es copying your code in, getting the output, and pasting it back into your editor. For tasks where you want AI inline in your editing flow, Cursor or GitHubCopiloteliminates that friction. The copy-paste overhead is not significant for occasional use; it becomes meaningfully inconvenient for high-frequency coding tasks.</'
+
+=== chatgpt-physicians (post 362) ===
+  anchor 'useOtter.aior a dedicated':
+    'it-desc">ChatGPT does not transcribe live patient encounters. It formats text you provide after the encounter. For real-time encounter transcription, useOtter.aior a dedicated ambient documentation tool. The strongest documentation workflow combines both:Otter.aicaptures the spoken encounter, ChatGPT formats the transcript '
+  anchor 'both:Otter.aicaptures':
+    'encounter. For real-time encounter transcription, useOtter.aior a dedicated ambient documentation tool. The strongest documentation workflow combines both:Otter.aicaptures the spoken encounter, ChatGPT formats the transcript into a structured clinical document.</div>\n</div>\n<div class="limit-card">\n<div class="limit-tit'
+
+=== chatgpt-legal (post 361) ===
+  anchor "significant.Microsoft Copilot's integration":
+    'tice management systems. Every document must be manually pasted in. For high-volume workflows across an active file, this copy-paste overhead becomes significant.Microsoft Copilot\'s integration with Word and Outlook avoids this friction for M365 firms.</div>\n</div>\n<div class="limit-card">\n<div class="limit-title">Context window limits on lo'
+  anchor "agreements,Claude's larger":
+    'cument productions may exceed its effective context window and result in degraded summarization quality. For full-length contract review of 100+ page agreements,Claude\'s larger context window handles the task more reliably.</div>\n</div>\n</div>\n<p>Comparing your options? Also see <a href="/claude/legal/">Claude</a>, <a href="'
