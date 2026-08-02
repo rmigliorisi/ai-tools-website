@@ -1,0 +1,170 @@
+Fetched 41 cross_reference posts.
+
+=== otter-physicians (post 401) — 2 redundant inline link(s) ===
+  [claude] href='/claude/' text='Claude'
+    context: ' alone. Some physicians copy de-identified excerpts from the transcript into <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a> or <a href="/chatgpt/" style="col'
+  [chatgpt] href='/chatgpt/' text='ChatGPT'
+    context: '/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a> or <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a> to draft structured notes, veri'
+
+=== grammarly-real-estate (post 398) — 1 redundant inline link(s) ===
+  [claude] href='/claude/' text='Claude'
+    context: ' details or data inputs. For content generation from scratch, use ChatGPT or <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a>. Grammarly improves what you have'
+
+=== notion-ai-engineers (post 395) — 2 redundant inline link(s) ===
+  [claude] href='/claude/' text='Claude'
+    context: ' review and revision cycle.</p>\n <p>For deeper technical specification work, <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a>\'s 200K context window and stronge'
+  [copilot] href='/copilot/' text='Copilot'
+    context: 'e="color:#2563eb;text-decoration:none;font-weight:500;">Cursor</a> or GitHub <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a> provide. It can generate code s'
+
+=== cursor-engineers (post 393) — 2 redundant inline link(s) ===
+  [chatgpt] href='/chatgpt/' text='ChatGPT'
+    context: 'tion, documentation strategy, or non-technical tasks, supplement Cursor with <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a> or <a href="/claude/" style="co'
+  [claude] href='/claude/' text='Claude'
+    context: '" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a> or <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a>.</div>\n</div>\n</div>\n<p>Comparing'
+
+=== copilot-insurance (post 390) — 3 redundant inline link(s) ===
+  [claude] href='/claude/' text='Claude'
+    context: 'p identification, and comparing expiring to renewal across complex programs, <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a> is significantly more capable. Co'
+  [chatgpt] href='/chatgpt/' text='ChatGPT'
+    context: 'rent regulatory or market data</div>\n<div class="limit-desc">Like Claude and <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>, Copilot has no live market or '
+  [perplexity] href='/perplexity/' text='Perplexity AI'
+    context: 'te regulatory guidance, carrier appetite changes, or recent market news, use <a href="/perplexity/" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity AI</a> to find current primar'
+
+=== copilot-finance (post 389) — 4 redundant inline link(s) ===
+  [claude] href='/claude/' text='Claude'
+    context: 'pectus, synthesizing multiple documents, or complex financial plan analysis, <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a> significantly outperforms Copilot'
+  [chatgpt] href='/chatgpt/' text='ChatGPT'
+    context: 'time market or regulatory data</div>\n<div class="limit-desc">Like Claude and <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>, Copilot does not have live mar'
+  [perplexity] href='/perplexity/' text='Perplexity AI'
+    context: 'egulatory information. For current rates and recent regulatory guidance, use <a href="/perplexity/" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity AI</a>. Copilot handles the w'
+  [perplexity] href='/perplexity/' text='Perplexity'
+    context: 'egulatory information. For current rates and recent regulatory guidance, use <a href="/perplexity/" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity AI</a>. Copilot handles the w'
+
+=== copilot-engineers (post 388) — 4 redundant inline link(s) ===
+  [claude] href='/claude/' text='Claude'
+    context: '" style="color:#2563eb;text-decoration:none;font-weight:500;">Cursor</a>, or <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a> for actual engineering work. If y'
+  [claude] href='/claude/' text='Claude'
+    context: '" style="color:#2563eb;text-decoration:none;font-weight:500;">Cursor</a>, or <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a> for actual engineering work. If y'
+  [chatgpt] href='/chatgpt/' text='ChatGPT'
+    context: 'no benefit from this product. For those teams, standalone tools like Claude, <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>, or <a href="/notion-ai/" style'
+  [notion-ai] href='/notion-ai/' text='Notion AI'
+    context: ' style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>, or <a href="/notion-ai/" style="color:#2563eb;text-decoration:none;font-weight:500;">Notion AI</a> are more appropriate and do'
+
+=== copilot-real-estate (post 387) — 2 redundant inline link(s) ===
+  [claude] href='/claude/' text='Claude'
+    context: 'ight:1.7;">\n The inline nature of this workflow is what makes it faster than <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a> or <a href="/chatgpt/" style="col'
+  [chatgpt] href='/chatgpt/' text='ChatGPT'
+    context: '/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a> or <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a> for routine email work. You do '
+
+=== copilot-physicians (post 386) — 3 redundant inline link(s) ===
+  [claude] href='/claude/' text='Claude'
+    context: 'linical document analysis</div>\n<div class="limit-desc">Copilot cannot match <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a>\'s 200K context window for full pa'
+  [chatgpt] href='/chatgpt/' text='ChatGPT'
+    context: 'and synthesizing a 60-page medical record in a single session. Use Claude or <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a> for that task.</div>\n</div>\n<di'
+  [perplexity] href='/perplexity/' text='Perplexity AI'
+    context: 'mation but lacks the citation rigor needed for clinical evidence review. Use <a href="/perplexity/" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity AI</a> for literature researc'
+
+=== copilot-legal (post 385) — 1 redundant inline link(s) ===
+  [perplexity] href='/perplexity/' text='Perplexity AI'
+    context: 'law, Lexis, or case law. Do not use it for legal research. For research, use <a href="/perplexity/" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity AI</a> for current events and'
+
+=== gemini-finance (post 383) — 4 redundant inline link(s) ===
+  [claude] href='/claude/' text='Claude'
+    context: '<p>The feature that most distinguishes Gemini from tools like <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a> and <a href="/chatgpt/" style="co'
+  [chatgpt] href='/chatgpt/' text='ChatGPT'
+    context: '" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a> and <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a> for financial research is Searc'
+  [copilot] href='/copilot/' text='Microsoft Copilot'
+    context: '-title">Only valuable in Google Workspace</div>\n<div class="limit-desc">Like <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Microsoft Copilot</a> for M365, Gemini\'s in'
+  [copilot] href='/copilot/' text='Copilot'
+    context: '-title">Only valuable in Google Workspace</div>\n<div class="limit-desc">Like <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Microsoft Copilot</a> for M365, Gemini\'s in'
+
+=== gemini-real-estate (post 382) — 2 redundant inline link(s) ===
+  [copilot] href='/copilot/' text='Copilot'
+    context: 's, Google Sheets, and Google Meet. This is the functional equivalent of what <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a> offers M365 users. AI embedded '
+  [copilot] href='/copilot/' text='Copilot'
+    context: 'Google Search grounding is genuinely different from what Claude, ChatGPT, or <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a> offer as defaults. When groundi'
+
+=== gemini-legal (post 381) — 3 redundant inline link(s) ===
+  [claude] href='/claude/' text='Claude'
+    context: 'oduce an issue list, missing facts, and a short next-step plan.\n Compared to <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a>, Gemini feels faster at turning c'
+  [copilot] href='/copilot/' text='Copilot'
+    context: ' a calm, clear tone with a short timeline and decisions needed.\n Compared to <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a>, Gemini can feel less tied to W'
+  [chatgpt] href='/chatgpt/' text='ChatGPT'
+    context: '<p style="margin:0 0 16px;color:#636363;line-height:1.7;">\n Compared to <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>, Gemini is often better at turn'
+
+=== perplexity-insurance (post 380) — 1 redundant inline link(s) ===
+  [copilot] href='/copilot/' text='Copilot'
+    context: 'lysis, use Claude. For drafting proposals and correspondence, use ChatGPT or <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a>. Perplexity fills the current-i'
+
+=== claude-insurance (post 374) — 4 redundant inline link(s) ===
+  [chatgpt] href='/chatgpt/' text='ChatGPT'
+    context: 'andard personal lines policies, a homeowners or auto policy, are well within <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>\'s capability. A complex commerc'
+  [perplexity] href='/perplexity/' text='Perplexity AI'
+    context: 'ling changes, or new coverage mandates. For current regulatory guidance, use <a href="/perplexity/" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity AI</a> to find and verify pri'
+  [copilot] href='/copilot/' text='Microsoft Copilot'
+    context: 'nside Word, Excel, or Outlook for your proposal and correspondence workflow, <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Microsoft Copilot</a> offers better integra'
+  [copilot] href='/copilot/' text='Copilot'
+    context: 'nside Word, Excel, or Outlook for your proposal and correspondence workflow, <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Microsoft Copilot</a> offers better integra'
+
+=== claude-finance (post 373) — 3 redundant inline link(s) ===
+  [perplexity] href='/perplexity/' text='Perplexity AI'
+    context: ', or recent regulatory changes. For current market context, pair Claude with <a href="/perplexity/" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity AI</a>, which provides Search'
+  [chatgpt] href='/chatgpt/' text='ChatGPT'
+    context: 'adsheet files and analyze the data directly (at least not in the same way as <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a> Plus\'s Code Interpreter). For d'
+  [copilot] href='/copilot/' text='Microsoft Copilot'
+    context: 'nterface. If you need AI assistance directly inside Excel, Word, or Outlook, <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Microsoft Copilot</a> offers deeper native '
+
+=== claude-engineers (post 372) — 2 redundant inline link(s) ===
+  [copilot] href='/copilot/' text='Copilot'
+    context: 'e="color:#2563eb;text-decoration:none;font-weight:500;">Cursor</a> or GitHub <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a>. It is not inline suggestions, '
+  [copilot] href='/copilot/' text='Copilot'
+    context: ' suggestion, and no direct file editing. For that workflow, Cursor or GitHub <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a> is the right tool. Claude\'s eng'
+
+=== claude-real-estate (post 371) — 4 redundant inline link(s) ===
+  [chatgpt] href='/chatgpt/' text='ChatGPT'
+    context: 'utput gives you a clear talking-points list for buyer consultations.\n Unlike <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>, which hits its context limit o'
+  [chatgpt] href='/chatgpt/' text='ChatGPT'
+    context: 's writing quality for listing descriptions tends to be more distinctive than <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>\'s. When you give it specific pr'
+  [copilot] href='/copilot/' text='Microsoft Copilot'
+    context: 'e has fewer native integrations with CRM and email platforms than ChatGPT or <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Microsoft Copilot</a>. Most workflows invol'
+  [copilot] href='/copilot/' text='Copilot'
+    context: 'e has fewer native integrations with CRM and email platforms than ChatGPT or <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Microsoft Copilot</a>. Most workflows invol'
+
+=== claude-physicians (post 370) — 1 redundant inline link(s) ===
+  [perplexity] href='/perplexity/' text='Perplexity AI'
+    context: ' after that date will not appear in its responses. For current evidence, use <a href="/perplexity/" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity AI</a> or access primary lite'
+
+=== claude-legal (post 369) — 1 redundant inline link(s) ===
+  [chatgpt] href='/chatgpt/' text='ChatGPT'
+    context: 'ssertions. Claude\'s tendency toward careful, qualified language (compared to <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>\'s more assertive tone) is an as'
+
+=== chatgpt-creatives (post 368) — 1 redundant inline link(s) ===
+  [claude] href='/claude/' text='Claude'
+    context: 'About page copy. ChatGPT handles first drafts competently. It will not match <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a>\'s tone consistency on extended pi'
+
+=== chatgpt-insurance (post 366) — 2 redundant inline link(s) ===
+  [perplexity] href='/perplexity/' text='Perplexity AI'
+    context: 'ct current state insurance department guidance. For regulatory research, use <a href="/perplexity/" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity AI</a> to find current state-'
+  [claude] href='/claude/' text='Claude'
+    context: 'rtant provisions. For thorough policy review of complex commercial coverage, <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a>\'s larger context window is more a'
+
+=== chatgpt-finance (post 365) — 2 redundant inline link(s) ===
+  [perplexity] href='/perplexity/' text='Perplexity AI'
+    context: 'rs, or anything that requires live data. For current market information, use <a href="/perplexity/" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity AI</a> or your research platf'
+  [claude] href='/claude/' text='Claude'
+    context: 'd what ChatGPT handles well in a single session. For long-document analysis, <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a>\'s 200K context window is more app'
+
+=== chatgpt-engineers (post 364) — 1 redundant inline link(s) ===
+  [copilot] href='/copilot/' text='Copilot'
+    context: 'r. For tasks where you want AI inline in your editing flow, Cursor or GitHub <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a> eliminates that friction. The c'
+
+=== chatgpt-legal (post 361) — 3 redundant inline link(s) ===
+  [copilot] href='/copilot/' text='Microsoft Copilot'
+    context: 'rkflows across an active file, this copy-paste overhead becomes significant. <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Microsoft Copilot</a>\'s integration with Wo'
+  [claude] href='/claude/' text='Claude'
+    context: 'marization quality. For full-length contract review of 100+ page agreements, <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a>\'s larger context window handles t'
+  [perplexity] href='/perplexity/' text='Perplexity'
+    context: 'for long-document analysis (full contract review, deposition summarization). <a href="/perplexity/" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity</a> for quickly cited prelimi'
+
+
+TOTAL: 58 redundant inline links across 25 pages.

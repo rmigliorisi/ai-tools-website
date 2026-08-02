@@ -1,0 +1,65 @@
+Fetched 41 cross_reference posts.
+
+=== copilot-finance (post 389) ===
+  [perplexity] linked 2x inline:
+    text='Perplexity AI' same_paragraph=True
+      ' or current regulatory information. For current rates and recent regulatory guidance, use <a href="/perplexity/" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity AI</a>. Copilot handles the writing and analysis work; <a href="/p'
+    text='Perplexity' same_paragraph=True
+      ':none;font-weight:500;">Perplexity AI</a>. Copilot handles the writing and analysis work; <a href="/perplexity/" style="color:#2563eb;text-decoration:none;font-weight:500;">Perplexity</a> handles the current-information layer.</div>\n</div>\n<div cl'
+
+=== copilot-engineers (post 388) ===
+  [claude] linked 2x inline:
+    text='Claude' same_paragraph=True
+      'ref="/cursor/" style="color:#2563eb;text-decoration:none;font-weight:500;">Cursor</a>, or <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a> for actual engineering work. If you are evaluating Microsof'
+    text='Claude' same_paragraph=True
+      'r complex RFC drafting, architecture decision records, or reasoning over large codebases, <a href="/claude/" style="color:#2563eb;text-decoration:none;font-weight:500;">Claude</a> is significantly stronger. Copilot\'s technical document dra'
+
+=== gemini-finance (post 383) ===
+  [copilot] linked 2x inline:
+    text='Microsoft Copilot' same_paragraph=True
+      ' class="limit-title">Only valuable in Google Workspace</div>\n<div class="limit-desc">Like <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Microsoft Copilot</a> for M365, Gemini\'s integration features only provide value '
+    text='Copilot' same_paragraph=True
+      ' practice already uses Google Workspace. If you\'re on Microsoft 365 or a different suite, <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a> is more relevant. Evaluating Gemini outside the context of '
+
+=== gemini-real-estate (post 382) ===
+  [copilot] linked 2x inline:
+    text='Copilot' same_paragraph=False
+      'l, Google Docs, Google Sheets, and Google Meet. This is the functional equivalent of what <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a> offers M365 users. AI embedded in the apps you already use,'
+    text='Copilot' same_paragraph=False
+      '">\n Gemini\'s Google Search grounding is genuinely different from what Claude, ChatGPT, or <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a> offer as defaults. When grounding is active, Gemini pulls c'
+
+=== claude-insurance (post 374) ===
+  [copilot] linked 2x inline:
+    text='Microsoft Copilot' same_paragraph=True
+      'ce directly inside Word, Excel, or Outlook for your proposal and correspondence workflow, <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Microsoft Copilot</a> offers better integration. Many professionals use both: Cla'
+    text='Copilot' same_paragraph=True
+      '/a> offers better integration. Many professionals use both: Claude for document analysis, <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a> for the M365 writing workflow.</div>\n</div>\n</div>\n<p>Compa'
+
+=== claude-engineers (post 372) ===
+  [copilot] linked 2x inline:
+    text='Copilot' same_paragraph=False
+      'cursor/" style="color:#2563eb;text-decoration:none;font-weight:500;">Cursor</a> or GitHub <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a>. It is not inline suggestions, it is design-level review of'
+    text='Copilot' same_paragraph=False
+      'tab-to-accept suggestion, and no direct file editing. For that workflow, Cursor or GitHub <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a> is the right tool. Claude\'s engineering value is in the ses'
+
+=== claude-real-estate (post 371) ===
+  [chatgpt] linked 2x inline:
+    text='ChatGPT' same_paragraph=False
+      'operty. The output gives you a clear talking-points list for buyer consultations.\n Unlike <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>, which hits its context limit on very long documents, Claud'
+    text='ChatGPT' same_paragraph=False
+      '7;">\n Claude\'s writing quality for listing descriptions tends to be more distinctive than <a href="/chatgpt/" style="color:#2563eb;text-decoration:none;font-weight:500;">ChatGPT</a>\'s. When you give it specific property details and neighborh'
+  [copilot] linked 2x inline:
+    text='Microsoft Copilot' same_paragraph=True
+      't-desc">Claude has fewer native integrations with CRM and email platforms than ChatGPT or <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Microsoft Copilot</a>. Most workflows involve copy-paste. If you need an AI tool '
+    text='Copilot' same_paragraph=True
+      'ws involve copy-paste. If you need an AI tool that lives inside your email client or CRM, <a href="/copilot/" style="color:#2563eb;text-decoration:none;font-weight:500;">Copilot</a> or a ChatGPT-based integration may be more practical.</div>'
+
+=== chatgpt-physicians (post 362) ===
+  [otter] linked 2x inline:
+    text='Otter.ai' same_paragraph=True
+      ' formats text you provide after the encounter. For real-time encounter transcription, use <a href="/otter/" style="color:#2563eb;text-decoration:none;font-weight:500;">Otter.ai</a> or a dedicated ambient documentation tool. The strongest do'
+    text='Otter.ai' same_paragraph=True
+      'dedicated ambient documentation tool. The strongest documentation workflow combines both: <a href="/otter/" style="color:#2563eb;text-decoration:none;font-weight:500;">Otter.ai</a> captures the spoken encounter, ChatGPT formats the transcri'
+
+
+TOTAL: 9 tools with 2+ inline mentions, across 8 pages.
