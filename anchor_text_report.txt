@@ -1,0 +1,47 @@
+Fetched 41 cross_reference posts.
+
+otter-physicians (post 401): ['ChatGPT', 'Claude for physician', 'Microsoft Copilot for physician'] <-- first bare, others descriptive
+grammarly-creatives (post 400): ['ChatGPT', 'Claude for creative', 'Notion AI for creative workflows'] <-- first bare, others descriptive
+grammarly-insurance (post 399): ['ChatGPT', 'Claude for insurance professional', 'Microsoft Copilot for insurance professional'] <-- first bare, others descriptive
+grammarly-real-estate (post 398): ['ChatGPT', 'Claude for real estate agent', 'Microsoft Copilot for real estate agent'] <-- first bare, others descriptive
+grammarly-legal (post 397): ['ChatGPT', 'Claude for legal professional', 'Microsoft Copilot for legal professional'] <-- first bare, others descriptive
+notion-ai-creatives (post 396): ['ChatGPT', 'Claude for creative', 'Grammarly for creative writing'] <-- first bare, others descriptive
+notion-ai-engineers (post 395): ['ChatGPT', 'Claude for software engineer', 'Microsoft Copilot for software engineer'] <-- first bare, others descriptive
+notion-ai-legal (post 394): ['ChatGPT', 'Claude for legal professional', 'Microsoft Copilot for legal professional'] <-- first bare, others descriptive
+cursor-engineers (post 393): ['ChatGPT', 'Claude for software engineer', 'Microsoft Copilot for software engineer'] <-- first bare, others descriptive
+midjourney-creatives (post 392): ['ChatGPT', 'Claude for creative', 'Grammarly for creative writing'] <-- first bare, others descriptive
+midjourney-architects (post 391): ['ChatGPT', 'Claude for architect', 'Gemini for architect'] <-- first bare, others descriptive
+copilot-insurance (post 390): ['ChatGPT', 'Claude for insurance professional', 'Perplexity AI for insurance professional'] <-- first bare, others descriptive
+copilot-finance (post 389): ['ChatGPT', 'Claude for finance professional', 'Perplexity AI for finance professional'] <-- first bare, others descriptive
+copilot-engineers (post 388): ['ChatGPT', 'Claude for software engineer', 'Notion AI for software engineer workflows'] <-- first bare, others descriptive
+copilot-real-estate (post 387): ['ChatGPT', 'Claude for real estate agent', 'Gemini for real estate agent'] <-- first bare, others descriptive
+copilot-physicians (post 386): ['ChatGPT', 'Claude for physician', 'Perplexity AI for physician'] <-- first bare, others descriptive
+copilot-legal (post 385): ['ChatGPT', 'Claude for legal professional', 'Perplexity AI for legal professional'] <-- first bare, others descriptive
+gemini-architects (post 384): ['ChatGPT', 'Claude for architect', 'Midjourney for architect work'] <-- first bare, others descriptive
+gemini-finance (post 383): ['ChatGPT', 'Claude for finance professional', 'Microsoft Copilot for finance professional'] <-- first bare, others descriptive
+gemini-real-estate (post 382): ['ChatGPT', 'Claude for real estate agent', 'Microsoft Copilot for real estate agent'] <-- first bare, others descriptive
+gemini-legal (post 381): ['ChatGPT', 'Claude for legal professional', 'Microsoft Copilot for legal professional'] <-- first bare, others descriptive
+perplexity-insurance (post 380): ['ChatGPT', 'Claude for insurance professional', 'Microsoft Copilot for insurance professional'] <-- first bare, others descriptive
+perplexity-finance (post 379): ['ChatGPT', 'Claude for finance professional', 'Microsoft Copilot for finance professional'] <-- first bare, others descriptive
+perplexity-physicians (post 378): ['ChatGPT', 'Claude for physician', 'Microsoft Copilot for physician'] <-- first bare, others descriptive
+perplexity-legal (post 377): ['ChatGPT', 'Claude for legal professional', 'Microsoft Copilot for legal professional'] <-- first bare, others descriptive
+claude-creatives (post 376): ['ChatGPT', 'Grammarly for creative', 'Notion AI for creative workflows'] <-- first bare, others descriptive
+claude-architects (post 375): ['ChatGPT', 'Google Gemini for architect', 'Midjourney for architect work'] <-- first bare, others descriptive
+claude-insurance (post 374): ['ChatGPT', 'Copilot for insurance professional', 'Perplexity AI for insurance professional'] <-- first bare, others descriptive
+claude-finance (post 373): ['ChatGPT', 'Copilot for finance professional', 'Perplexity AI for finance professional'] <-- first bare, others descriptive
+claude-engineers (post 372): ['ChatGPT', 'Copilot for software engineer', 'Notion AI for software engineer workflows'] <-- first bare, others descriptive
+claude-real-estate (post 371): ['ChatGPT', 'Copilot for real estate agent', 'Gemini for real estate agent'] <-- first bare, others descriptive
+claude-physicians (post 370): ['ChatGPT', 'Copilot for physician', 'Perplexity AI for physician'] <-- first bare, others descriptive
+claude-legal (post 369): ['ChatGPT', 'Copilot for legal professional', 'Perplexity AI for legal professional'] <-- first bare, others descriptive
+chatgpt-creatives (post 368): ['Claude', 'Grammarly for creative', 'Notion AI for creative workflows'] <-- first bare, others descriptive
+chatgpt-architects (post 367): ['Claude', 'Google Gemini for architect', 'Midjourney for architect work'] <-- first bare, others descriptive
+chatgpt-insurance (post 366): ['Claude', 'Copilot for insurance professional', 'Perplexity AI for insurance professional'] <-- first bare, others descriptive
+chatgpt-finance (post 365): ['Claude', 'Copilot for finance professional', 'Perplexity AI for finance professional'] <-- first bare, others descriptive
+chatgpt-engineers (post 364): ['Claude', 'Copilot for software engineer', 'Notion AI for software engineer workflows'] <-- first bare, others descriptive
+chatgpt-real-estate (post 363): ['Claude', 'Copilot for real estate agent', 'Gemini for real estate agent'] <-- first bare, others descriptive
+chatgpt-physicians (post 362): ['Claude', 'Copilot for physician', 'Perplexity AI for physician'] <-- first bare, others descriptive
+chatgpt-legal (post 361): ['Claude', 'Copilot for legal professional', 'Perplexity AI for legal professional'] <-- first bare, others descriptive
+
+
+TOTAL pages with a 'Comparing your options' line: 41
+Pages matching the 'first bare, rest descriptive' pattern: 41
