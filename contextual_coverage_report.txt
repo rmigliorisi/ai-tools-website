@@ -1,0 +1,47 @@
+Fetched 41 cross_reference posts.
+
+=== otter-physicians (post 401) === GAP — no contextual link for: ['copilot']
+=== grammarly-creatives (post 400) === GAP — no contextual link for: ['chatgpt', 'claude', 'notion-ai']
+=== grammarly-insurance (post 399) === GAP — no contextual link for: ['chatgpt', 'claude', 'copilot']
+=== grammarly-real-estate (post 398) === GAP — no contextual link for: ['chatgpt', 'copilot']
+=== grammarly-legal (post 397) === GAP — no contextual link for: ['chatgpt', 'claude', 'copilot']
+=== notion-ai-creatives (post 396) === GAP — no contextual link for: ['chatgpt', 'claude', 'grammarly']
+=== notion-ai-engineers (post 395) === GAP — no contextual link for: ['chatgpt']
+=== notion-ai-legal (post 394) === GAP — no contextual link for: ['chatgpt', 'claude', 'copilot', 'grammarly', 'perplexity']
+=== cursor-engineers (post 393) === GAP — no contextual link for: ['copilot']
+=== midjourney-creatives (post 392) === GAP — no contextual link for: ['chatgpt', 'claude', 'grammarly']
+=== midjourney-architects (post 391) === GAP — no contextual link for: ['chatgpt', 'claude', 'gemini']
+=== copilot-insurance (post 390) === OK — all ['chatgpt', 'claude', 'perplexity'] have contextual links elsewhere
+=== copilot-finance (post 389) === OK — all ['chatgpt', 'claude', 'perplexity'] have contextual links elsewhere
+=== copilot-engineers (post 388) === OK — all ['chatgpt', 'claude', 'notion-ai'] have contextual links elsewhere
+=== copilot-real-estate (post 387) === GAP — no contextual link for: ['gemini']
+=== copilot-physicians (post 386) === OK — all ['chatgpt', 'claude', 'perplexity'] have contextual links elsewhere
+=== copilot-legal (post 385) === GAP — no contextual link for: ['chatgpt', 'claude', 'grammarly']
+=== gemini-architects (post 384) === GAP — no contextual link for: ['chatgpt', 'claude', 'midjourney']
+=== gemini-finance (post 383) === OK — all ['chatgpt', 'claude', 'copilot'] have contextual links elsewhere
+=== gemini-real-estate (post 382) === GAP — no contextual link for: ['chatgpt', 'claude']
+=== gemini-legal (post 381) === OK — all ['chatgpt', 'claude', 'copilot'] have contextual links elsewhere
+=== perplexity-insurance (post 380) === GAP — no contextual link for: ['chatgpt', 'claude']
+=== perplexity-finance (post 379) === GAP — no contextual link for: ['chatgpt', 'claude', 'copilot']
+=== perplexity-physicians (post 378) === GAP — no contextual link for: ['chatgpt', 'claude', 'copilot']
+=== perplexity-legal (post 377) === GAP — no contextual link for: ['chatgpt', 'claude', 'copilot']
+=== claude-creatives (post 376) === GAP — no contextual link for: ['chatgpt', 'grammarly', 'notion-ai']
+=== claude-architects (post 375) === GAP — no contextual link for: ['chatgpt', 'gemini', 'midjourney']
+=== claude-insurance (post 374) === OK — all ['chatgpt', 'copilot', 'perplexity'] have contextual links elsewhere
+=== claude-finance (post 373) === OK — all ['chatgpt', 'copilot', 'perplexity'] have contextual links elsewhere
+=== claude-engineers (post 372) === GAP — no contextual link for: ['chatgpt', 'notion-ai']
+=== claude-real-estate (post 371) === GAP — no contextual link for: ['gemini']
+=== claude-physicians (post 370) === GAP — no contextual link for: ['chatgpt', 'copilot']
+=== claude-legal (post 369) === GAP — no contextual link for: ['copilot', 'perplexity']
+=== chatgpt-creatives (post 368) === GAP — no contextual link for: ['grammarly', 'notion-ai']
+=== chatgpt-architects (post 367) === GAP — no contextual link for: ['claude', 'gemini', 'midjourney']
+=== chatgpt-insurance (post 366) === GAP — no contextual link for: ['copilot']
+=== chatgpt-finance (post 365) === GAP — no contextual link for: ['copilot']
+=== chatgpt-engineers (post 364) === GAP — no contextual link for: ['claude', 'notion-ai']
+=== chatgpt-real-estate (post 363) === GAP — no contextual link for: ['claude', 'copilot', 'gemini']
+=== chatgpt-physicians (post 362) === GAP — no contextual link for: ['claude', 'copilot', 'perplexity']
+=== chatgpt-legal (post 361) === OK — all ['claude', 'copilot', 'perplexity'] have contextual links elsewhere
+
+
+Pages fully covered (safe to trim table/footer links): 9
+Total missing contextual-link gaps across all pages: 76
