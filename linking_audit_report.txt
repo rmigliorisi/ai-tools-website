@@ -1,0 +1,13 @@
+Fetching inventory (cross_reference is the only Phase 1 editable source type)...
+  41 cross_reference, 10 tool_review, 8 profession_hub posts fetched.
+
+gap_detected records: 120
+blocked_eligibility_unknown records: 0
+Total records written to /Users/rmigs/Projects/aitoolsforpros website/automation/linking_audit_output.json: 120
+
+Sample (first 5 gap_detected records):
+  rec_401_386: https://aitoolsforpros.com/otter/physicians/ -> sibling 'copilot' (https://aitoolsforpros.com/copilot/physicians/)
+  rec_401_378: https://aitoolsforpros.com/otter/physicians/ -> sibling 'perplexity' (https://aitoolsforpros.com/perplexity/physicians/)
+  rec_386_401: https://aitoolsforpros.com/copilot/physicians/ -> sibling 'otter' (https://aitoolsforpros.com/otter/physicians/)
+  rec_378_401: https://aitoolsforpros.com/perplexity/physicians/ -> sibling 'otter' (https://aitoolsforpros.com/otter/physicians/)
+  rec_378_386: https://aitoolsforpros.com/perplexity/physicians/ -> sibling 'copilot' (https://aitoolsforpros.com/copilot/physicians/)

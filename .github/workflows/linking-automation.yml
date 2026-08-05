@@ -1,0 +1,112 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# AI Tools for Pros — Internal Linking Automation (audit -> score -> apply)
+#
+# Chains the three internal-linking scripts, each doing one job:
+#   1. automation/linking_audit.py    — read-only: finds current contextual-
+#      linking gaps between cross_reference pages (governance/spec §2-§4).
+#   2. automation/linking_scoring.py  — Claude API evaluates each new gap
+#      against governance §8's genuine-contextual-mention test, applying hard
+#      gates (spec §6) the model's own verdict can't override. No writes.
+#   3. automation/linking_apply.py    — takes only records that cleared the
+#      hard gates, re-verifies both sides of the pair are still true live,
+#      writes via the same decode-JSON/replace/re-fetch-verify pattern System
+#      3 already runs unattended, capped + backlogged, logged to
+#      linking_change_log.json (the safety net if anything needs reverting).
+#
+# This is auto-apply mode: nothing here is gated on a human approving each
+# proposal before it goes live, matching Rich's 2026-08-05 decision to bring
+# internal linking up to the same standard System 1 (weekly) and System 3
+# (monthly) already run at. See docs/AIFORPROS-INTERNAL-LINKING.md and
+# docs/AIFORPROS-INTERNAL-LINKING-AUTOMATION-SPEC.md for the full policy this
+# implements.
+#
+# Runs on GitHub Actions rather than as a Cowork scheduled task for the same
+# reason System 1/3 do: Cowork's sandbox cannot make authenticated writes to
+# WordPress (outbound HTTPS to third-party hosts is blocked at the proxy).
+#
+# Turned on 2026-08-05. Weekly cadence matches spec §14's initial cap
+# ("contextual-edit batches capped at 1/week initially").
+#
+# To go back to manual-only, re-comment the `schedule:` block below.
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Internal Linking Automation
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (audit + scoring run for real; apply step only re-checks, no writes, no digest)"
+        type: boolean
+        default: true
+      score_cap:
+        description: "Max new gaps to score this run"
+        type: string
+        default: "15"
+      apply_cap:
+        description: "Max opportunity_proposed records to apply this run"
+        type: string
+        default: "5"
+  schedule:
+    - cron: '0 14 * * 3'  # Wednesday ~10am ET (14:00 UTC) — separate slot from System 1 (Mon) / System 3 (25th)
+
+jobs:
+  linking:
+    name: "Audit + Score + Apply"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r automation/requirements.txt
+
+      - name: Run internal-linking audit (read-only)
+        env:
+          WORDPRESS_USERNAME: ${{ secrets.WORDPRESS_USERNAME }}
+          WORDPRESS_APP_PASSWORD: ${{ secrets.WORDPRESS_APP_PASSWORD }}
+          WORDPRESS_SITE_URL: https://aitoolsforpros.com
+        run: python3 automation/linking_audit.py
+
+      - name: Run internal-linking scoring (Claude API, no WordPress writes)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          WORDPRESS_USERNAME: ${{ secrets.WORDPRESS_USERNAME }}
+          WORDPRESS_APP_PASSWORD: ${{ secrets.WORDPRESS_APP_PASSWORD }}
+          WORDPRESS_SITE_URL: https://aitoolsforpros.com
+        run: |
+          python3 automation/linking_scoring.py --cap "${{ inputs.score_cap || '15' }}"
+
+      - name: Run internal-linking apply
+        env:
+          WORDPRESS_USERNAME: ${{ secrets.WORDPRESS_USERNAME }}
+          WORDPRESS_APP_PASSWORD: ${{ secrets.WORDPRESS_APP_PASSWORD }}
+          WORDPRESS_SITE_URL: https://aitoolsforpros.com
+        run: |
+          FLAG=""
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
+            FLAG="--dry-run"
+            echo "Running apply step in DRY RUN mode — re-checks only, no writes, no digest, no backlog/log changes."
+          else
+            echo "Running apply step LIVE — records that pass the live re-checks will be written."
+          fi
+          python3 automation/linking_apply.py --cap "${{ inputs.apply_cap || '5' }}" $FLAG
+
+      - name: Commit updated state files, if any
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          FILES="automation/linking_audit_output.json automation/linking_proposals_output.json automation/linking_backlog.json automation/linking_change_log.json"
+          if [ -n "$(git status --porcelain $FILES)" ]; then
+            git add $FILES
+            git commit -m "Internal linking automation: update state files [skip ci]"
+            git push
+          else
+            echo "No state file changes to commit."
+          fi

@@ -1,15 +1,17 @@
 # Internal Linking Automation Spec — AI Tools for Pros
 
-Machine behavior for any tool that proposes, scores, or applies internal-link changes. This file must satisfy every rule in `AIFORPROS-INTERNAL-LINKING.md` (`policy_version` 1.1.0 or later) — where a design decision here would conflict with that document, the governance document wins and this file must change.
+Machine behavior for any tool that proposes, scores, or applies internal-link changes. This file must satisfy every rule in `AIFORPROS-INTERNAL-LINKING.md` (`policy_version` 1.3.0 or later) — where a design decision here would conflict with that document, the governance document wins and this file must change.
 
-**Status: scaffold, design-in-progress.** This revision fills in concrete schemas, transitions, thresholds, and test cases per the second review round. **No implementation should begin beyond read-only inventory and audit prototyping** until sections 1–9 below are stable and reviewed. Section 10 (the LLM prompt and opportunity-scoring logic itself) is deliberately last and not yet started — it depends on everything before it being fixed first.
+**Status: implemented and running on a weekly schedule, as of 2026-08-05.** Sections 1–9 held up through design review and are now built, not just specified: `automation/linking_audit.py` (audit-only inventory + gap detection), `automation/linking_scoring.py` (the LLM prompt/scoring logic §17 originally deferred — hard gates applied per §6), and `automation/linking_apply.py` (a working implementation of §8's write protocol, with some deliberate, disclosed deviations from the idealized version below — see the note under §8). All three are chained in `.github/workflows/linking-automation.yml` on a weekly cron. The system skipped "supervised-apply" (§1) entirely and went straight from suggestion-only to a narrow auto-apply, per Rich's 2026-08-05 decision to bring internal linking up to the same operating standard System 1 and System 3 already run at — see governance §16's 1.3.0 change-log entry for the exact conditions that decision required to be true first.
+
+Sections below are left largely as originally designed, with inline notes added only where the actual implementation deviates from the idealized version or where a section is now stale. Treat this document as the target design; the docstrings in `automation/linking_*.py` are the source of truth for what the code actually does today.
 
 ## 1. Operating modes
 
-- **Audit-only** — read-only, no writes. Default launch mode. Mode changes are explicit, human-made configuration changes; the system never graduates itself.
-- **Suggestion** — generates proposals (§3 schema), logs for review. Never writes page content.
-- **Supervised-apply** — a human approves a specific proposal *revision* (§3, §7); the system applies only approved items via the fail-closed write protocol (§9).
-- **Auto-apply** — reserved for governance §15's "safe candidates" only, each condition fully satisfied. Not enabled for contextual additions per governance §16.
+- **Audit-only** — read-only, no writes. `automation/linking_audit.py`, still runs first every cycle.
+- **Suggestion** — generates proposals (§3 schema; in practice, `linking_scoring.py`'s output shape is close to but not identical to §4's schema — see the note there). No longer the terminal mode for contextual additions as of 2026-08-05.
+- **Supervised-apply** — a human approves a specific proposal *revision* (§3, §7) before it's written. **Never built.** The system moved directly from suggestion to auto-apply for this one change class; this mode remains available in principle for any future change class where a human-in-the-loop step is wanted again.
+- **Auto-apply** — as of 2026-08-05, enabled for exactly one class: contextual link additions to `cross_reference` pages produced end-to-end by `linking_scoring.py` + `linking_apply.py`, per governance §16's 1.3.0 entry. Still reserved otherwise for governance §15's "safe candidates," each condition fully satisfied — this did not generally enable auto-apply for other change classes.
 
 ## 2. Scope inventory
 
@@ -31,6 +33,7 @@ Evidence is stored **independently and referenced by ID**, not copied into every
   "source_url": "https://docs.claude.com/...",
   "source_type": "OFFICIAL_VENDOR_DOCUMENTATION",
   "publisher": "Anthropic",
+  "_comment_source_type_note": "source_type is one of the six governance §1 evidence classifications. For the scoring step in §17, the expected common case is SITE_PUBLISHED_CONTENT — citing a sibling page's own already-published, already-reviewed content (e.g. its consistency_blocks.bottom_line) rather than fetching new external vendor documentation, which is out of scope for this system and duplicates System 1's job.",
   "retrieved_at": "2026-08-03T16:00:00Z",
   "supporting_text": "exact quoted passage or structured field from the source",
   "freshness_status": "current",
@@ -131,9 +134,10 @@ This separation exists specifically to prevent: re-proposing an already-rejected
 
 ### 6b. State-transition table
 
-Explicit valid transitions. Any transition not listed is invalid and MUST be rejected by the system, not silently allowed:
+Explicit valid transitions. Any transition not listed is invalid and MUST be rejected by the system, not silently allowed. `gap_detected` is the entry state produced by the audit-only inventory layer (`automation/linking_audit.py`) — it means "no contextual coverage exists and the target is eligible," with no judgment yet about whether a genuine opportunity exists. It is not itself a proposal and carries none of §4's scoring fields (`edit_type`, `rationale`, `evidence_ids`, `confidence`, etc.) until the not-yet-built scoring step (§17) evaluates it:
 
 ```
+gap_detected            → opportunity_proposed | needs_evidence | needs_editorial_review | no_opportunity_proposed | stale
 opportunity_proposed   → approved | rejected | needs_evidence | stale
 needs_evidence          → opportunity_proposed | rejected | stale
 needs_editorial_review  → opportunity_proposed | no_opportunity_proposed | rejected | stale
@@ -151,6 +155,8 @@ Transitions requiring a human actor — `no_opportunity_proposed → no_opportun
 
 ## 7. Reviewer workflow
 
+**As of 2026-08-05, `opportunity_proposed` records that clear `linking_scoring.py`'s hard gates go straight to `linking_apply.py` — no human sees them before publish.** This section's workflow still applies in full to `needs_editorial_review` and `no_opportunity_proposed` records (nothing auto-finalizes those to a negative or positive conclusion, per governance §14), and to any record from a different change class or page type. No reviewer UI has been built; these records are currently only inspectable by reading `automation/linking_proposals_output.json` directly.
+
 A human reviewing a record (`opportunity_proposed`, `needs_editorial_review`, or `no_opportunity_proposed`) must see, at minimum:
 
 - Source URL and target URL, with the `primary_tool` / `sibling_tool` / `profession` relationship (§2).
@@ -166,19 +172,19 @@ A human reviewing a record (`opportunity_proposed`, `needs_editorial_review`, or
 
 ## 8. Fail-closed write protocol
 
-Unchanged from the prior draft, restated for completeness — applies to every write in supervised-apply, and to any future auto-apply write:
+Restated below as originally designed, with **[IMPLEMENTED]** / **[DEVIATION]** / **[NOT BUILT]** tags showing what `automation/linking_apply.py` actually does as of 2026-08-05. This is disclosed deliberately rather than silently claiming full compliance — the deviations were accepted as reasonable for this narrow, capped, low-blast-radius change class, not oversights:
 
-1. Re-fetch the current source page content.
-2. Re-fetch the current target page; confirm it still passes §10.
-3. Confirm the source page's revision/content hash matches the approved proposal's `source_revision`; mismatch → `stale`, abort.
-4. Re-run the full eligibility check (§10) on the target.
-5. Confirm the exact intended text node occurs exactly once in the decoded content.
-6. Create an immutable pre-write snapshot of the exact content being changed.
-7. Apply exactly one allowlisted transformation matching the approved diff.
-8. Validate the full resulting document (valid JSON, §12 protected-region invariants untouched, no unrelated link altered).
-9. Re-fetch the saved page, verify the change matches intent, record a rollback identifier tied to the pre-write snapshot.
+1. Re-fetch the current source page content. **[IMPLEMENTED]**
+2. Re-fetch the current target page; confirm it still passes §10. **[IMPLEMENTED]** — reuses `linking_audit.check_eligibility()` directly rather than a second copy of the same logic.
+3. Confirm the source page's revision/content hash matches the approved proposal's `source_revision`; mismatch → `stale`, abort. **[DEVIATION]** — no `source_revision` hash is stored on the proposal record at all. Instead, step 5's exact-count check on the specific `existing_text` span serves the same practical purpose (detect drift since scoring) for this narrow case, since the only thing that matters is whether that one span is still there — but it would NOT catch every kind of page drift a full content-hash comparison would (e.g. a change elsewhere on the page that leaves the target span untouched passes silently, which is fine here since it doesn't affect this edit's correctness).
+4. Re-run the full eligibility check (§10) on the target. **[IMPLEMENTED]** — same call as step 2.
+5. Confirm the exact intended text node occurs exactly once in the decoded content. **[IMPLEMENTED]** — `_count_in_value`, imported from `system3_monthly.py` rather than re-implemented.
+6. Create an immutable pre-write snapshot of the exact content being changed. **[DEVIATION]** — no full pre-write page snapshot is stored. `linking_change_log.json` records the exact `existing_text`/`proposed_text` span (enough to manually revert this specific change by replacing one for the other) but not a snapshot of the entire page as it existed before the write.
+7. Apply exactly one allowlisted transformation matching the approved diff. **[IMPLEMENTED]** — one `_replace_in_value` call per record.
+8. Validate the full resulting document (valid JSON, §12 protected-region invariants untouched, no unrelated link altered). **[DEVIATION]** — valid JSON is guaranteed by construction (only string leaf values are mutated); there is no independent post-write check confirming protected regions or unrelated links were untouched. This relies on `linking_scoring.py`'s system prompt restricting edits to `content_sections[N].section_body` and on `existing_text` being an exact, narrow substring match — not on an explicit invariant check at write time.
+9. Re-fetch the saved page, verify the change matches intent, record a rollback identifier tied to the pre-write snapshot. **[IMPLEMENTED, differently]** — re-fetches and requires the ENTIRE `content.raw` to match what was sent (stricter than just "the change matches intent"), and logs to `linking_change_log.json`; there's no separate rollback identifier because there's no separate snapshot (§8 step 6) to tie one to — the change log entry itself is the revert reference.
 
-**Item-level failure** (step 3 mismatch, step 5 finding zero/multiple matches) → hold that item, log, continue the run. **Systemic failure** (auth failure, empty/invalid inventory, schema drift, rollback-mechanism failure) → halt **all** writes for the run immediately.
+**Item-level failure** (target ineligible, missing text fields, JSON parse failure, exact-match count ≠ 1) → hold that item, log, continue the run. **[IMPLEMENTED]** **Systemic failure** (auth failure, network outage) → **[NOT BUILT as a deliberate branch]** — an uncaught exception from `requests` currently crashes the run entirely, which does halt all remaining writes for that run (the practical effect §8 wants), but not via an intentional, clearly-logged "systemic failure" code path. Worth hardening before this pipeline's cap is ever raised significantly.
 
 ## 9. Acceptance-test matrix
 
@@ -244,11 +250,11 @@ Page text, comments, embedded metadata, and any fetched external material are **
 Batched per governance §5, applied per record (pair), not per page. **Phase 1 starting limits** (configuration values, not hardcoded forever):
 
 - Audit: unlimited read-only records.
-- Suggestions generated per run: 10–20 pairs.
-- Human-approved applications per run: maximum 5 pairs.
-- Maximum applied changes per source page per run: 1.
-- Auto-safe technical corrections per run: 10 (once that mode exists and its conditions are met).
-- Contextual-edit batches: no more than one supervised batch per week initially.
+- Suggestions (scored) generated per run: 10–20 pairs — `linking_scoring.py --cap`, default 15.
+- Applications per run: maximum 5 pairs — `linking_apply.py --cap`, default 5. (Originally scoped as "human-approved applications"; as of 2026-08-05 these are applications that cleared `linking_scoring.py`'s hard gates, not a human, for this one change class — see governance §16.)
+- Maximum applied changes per source page per run: 1 — implemented as `MAX_PER_SOURCE_PAGE` in `linking_apply.py`.
+- Auto-safe technical corrections per run: 10 (once that mode exists and its conditions are met — still not built).
+- Contextual-edit batches: no more than one batch per week — implemented as the weekly cron in `.github/workflows/linking-automation.yml`, not a manually-run supervised batch.
 
 ## 15. Change log and suppression registry
 
@@ -259,6 +265,14 @@ Batched per governance §5, applied per record (pair), not per page. **Phase 1 s
 
 Reviewer approval vs. rejection rate (with stated rejection reasons); rate of `needs_editorial_review` vs. confident proposals; §8 step 8 invariant-failure rate; rate of records reaching `stale` before being acted on; rollback rate; periodic sampled precision review — a human re-checking a random sample of `applied` and `no_opportunity_confirmed` records against governance §8's test, independent of the system's own self-reported confidence.
 
-## 17. Not yet designed
+## 17. Implementation notes (supersedes the original "Not yet designed")
 
-The LLM prompt and opportunity-scoring logic that actually produces §4's proposals is intentionally **not** specified here. It depends on sections 1–16 above being stable, reviewed, and — per the design order agreed on — is the last piece to build, not the first.
+The LLM prompt and opportunity-scoring logic this section originally deferred is now built, in `automation/linking_scoring.py`'s `SCORING_SYSTEM_PROMPT`. Summary of what it does, for anyone reading this spec without the code open:
+
+- One model call per (source, sibling) pair, given the source page's `content_sections` prose and the sibling's full page text.
+- Enforces governance §8's exact test and the §12 order of preference (link existing text > expand a sentence > new sentence) in the prompt itself.
+- Requires a verbatim quoted `evidence_supporting_text` from the sibling's own already-published content (`SITE_PUBLISHED_CONTENT`, governance §1) — the model is not authorized to introduce new facts about either tool.
+- `apply_hard_gates()` then overrides the model's own verdict: no quoted evidence → forced to `needs_evidence`; `useful_without_link: false` → forced to `needs_editorial_review`, regardless of what verdict the model returned. The model's self-report is never trusted past these two checks.
+- A separate `enforce_link_style()` post-processing pass injects the site's required inline-link style attribute onto any `<a>` tag the model forgot it on — found necessary after an early test batch came back with about half the proposals missing it. Not relied on as a suggestion to the model; enforced regardless of what the model actually output.
+
+One known gap not yet closed: linking_scoring.py has no fingerprinting/invalidation mechanism (§6a as originally envisioned for a full reviewer workflow) — it uses a simpler reconciliation instead. Each run rebuilds `linking_proposals_output.json` from the fresh audit output, carrying forward any already-scored record whose pair still appears in the fresh audit, and dropping any that don't (which almost always means `linking_apply.py` already closed that gap). This does not detect the narrower case §6a was designed for — the sibling page's own content changing enough to invalidate an already-quoted `evidence_supporting_text` without the pair disappearing from the audit entirely. `linking_apply.py`'s own live re-check (§8, this file) catches drift in the source page's `existing_text`, but not drift in evidence grounded on the sibling page. Worth closing before this pipeline's scope or caps grow.
