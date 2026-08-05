@@ -102,9 +102,18 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          FILES="automation/linking_audit_output.json automation/linking_proposals_output.json automation/linking_backlog.json automation/linking_change_log.json"
-          if [ -n "$(git status --porcelain $FILES)" ]; then
-            git add $FILES
+          CANDIDATES="automation/linking_audit_output.json automation/linking_proposals_output.json automation/linking_backlog.json automation/linking_change_log.json"
+          # git status silently ignores a pathspec that matches no file on disk, but git add
+          # treats that as fatal — a dry run legitimately never creates linking_backlog.json
+          # or linking_change_log.json, so only pass files that actually exist right now.
+          EXISTING=""
+          for f in $CANDIDATES; do
+            if [ -f "$f" ]; then
+              EXISTING="$EXISTING $f"
+            fi
+          done
+          if [ -n "$EXISTING" ] && [ -n "$(git status --porcelain $EXISTING)" ]; then
+            git add $EXISTING
             git commit -m "Internal linking automation: update state files [skip ci]"
             git push
           else
