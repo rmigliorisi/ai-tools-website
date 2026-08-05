@@ -1,2028 +1,5 @@
 [
   {
-    "record_id": "rec_401_386",
-    "source_post_id": 401,
-    "source_url": "https://aitoolsforpros.com/otter/physicians/",
-    "canonical_target_id": 386,
-    "target_url": "https://aitoolsforpros.com/copilot/physicians/",
-    "primary_tool": "otter",
-    "sibling_tool": "copilot",
-    "profession": "physicians",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_401_378",
-    "source_post_id": 401,
-    "source_url": "https://aitoolsforpros.com/otter/physicians/",
-    "canonical_target_id": 378,
-    "target_url": "https://aitoolsforpros.com/perplexity/physicians/",
-    "primary_tool": "otter",
-    "sibling_tool": "perplexity",
-    "profession": "physicians",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_386_401",
-    "source_post_id": 386,
-    "source_url": "https://aitoolsforpros.com/copilot/physicians/",
-    "canonical_target_id": 401,
-    "target_url": "https://aitoolsforpros.com/otter/physicians/",
-    "primary_tool": "copilot",
-    "sibling_tool": "otter",
-    "profession": "physicians",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_378_401",
-    "source_post_id": 378,
-    "source_url": "https://aitoolsforpros.com/perplexity/physicians/",
-    "canonical_target_id": 401,
-    "target_url": "https://aitoolsforpros.com/otter/physicians/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "otter",
-    "profession": "physicians",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_378_370",
-    "source_post_id": 378,
-    "source_url": "https://aitoolsforpros.com/perplexity/physicians/",
-    "canonical_target_id": 370,
-    "target_url": "https://aitoolsforpros.com/claude/physicians/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "claude",
-    "profession": "physicians",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_378_362",
-    "source_post_id": 378,
-    "source_url": "https://aitoolsforpros.com/perplexity/physicians/",
-    "canonical_target_id": 362,
-    "target_url": "https://aitoolsforpros.com/chatgpt/physicians/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "chatgpt",
-    "profession": "physicians",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_370_401",
-    "source_post_id": 370,
-    "source_url": "https://aitoolsforpros.com/claude/physicians/",
-    "canonical_target_id": 401,
-    "target_url": "https://aitoolsforpros.com/otter/physicians/",
-    "primary_tool": "claude",
-    "sibling_tool": "otter",
-    "profession": "physicians",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_370_386",
-    "source_post_id": 370,
-    "source_url": "https://aitoolsforpros.com/claude/physicians/",
-    "canonical_target_id": 386,
-    "target_url": "https://aitoolsforpros.com/copilot/physicians/",
-    "primary_tool": "claude",
-    "sibling_tool": "copilot",
-    "profession": "physicians",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_370_362",
-    "source_post_id": 370,
-    "source_url": "https://aitoolsforpros.com/claude/physicians/",
-    "canonical_target_id": 362,
-    "target_url": "https://aitoolsforpros.com/chatgpt/physicians/",
-    "primary_tool": "claude",
-    "sibling_tool": "chatgpt",
-    "profession": "physicians",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_362_386",
-    "source_post_id": 362,
-    "source_url": "https://aitoolsforpros.com/chatgpt/physicians/",
-    "canonical_target_id": 386,
-    "target_url": "https://aitoolsforpros.com/copilot/physicians/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "copilot",
-    "profession": "physicians",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_362_378",
-    "source_post_id": 362,
-    "source_url": "https://aitoolsforpros.com/chatgpt/physicians/",
-    "canonical_target_id": 378,
-    "target_url": "https://aitoolsforpros.com/perplexity/physicians/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "perplexity",
-    "profession": "physicians",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_362_370",
-    "source_post_id": 362,
-    "source_url": "https://aitoolsforpros.com/chatgpt/physicians/",
-    "canonical_target_id": 370,
-    "target_url": "https://aitoolsforpros.com/claude/physicians/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "claude",
-    "profession": "physicians",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_400_396",
-    "source_post_id": 400,
-    "source_url": "https://aitoolsforpros.com/grammarly/creatives/",
-    "canonical_target_id": 396,
-    "target_url": "https://aitoolsforpros.com/notion-ai/creatives/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "notion-ai",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_400_392",
-    "source_post_id": 400,
-    "source_url": "https://aitoolsforpros.com/grammarly/creatives/",
-    "canonical_target_id": 392,
-    "target_url": "https://aitoolsforpros.com/midjourney/creatives/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "midjourney",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_400_376",
-    "source_post_id": 400,
-    "source_url": "https://aitoolsforpros.com/grammarly/creatives/",
-    "canonical_target_id": 376,
-    "target_url": "https://aitoolsforpros.com/claude/creatives/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "claude",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_400_368",
-    "source_post_id": 400,
-    "source_url": "https://aitoolsforpros.com/grammarly/creatives/",
-    "canonical_target_id": 368,
-    "target_url": "https://aitoolsforpros.com/chatgpt/creatives/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "chatgpt",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_396_400",
-    "source_post_id": 396,
-    "source_url": "https://aitoolsforpros.com/notion-ai/creatives/",
-    "canonical_target_id": 400,
-    "target_url": "https://aitoolsforpros.com/grammarly/creatives/",
-    "primary_tool": "notion-ai",
-    "sibling_tool": "grammarly",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_396_392",
-    "source_post_id": 396,
-    "source_url": "https://aitoolsforpros.com/notion-ai/creatives/",
-    "canonical_target_id": 392,
-    "target_url": "https://aitoolsforpros.com/midjourney/creatives/",
-    "primary_tool": "notion-ai",
-    "sibling_tool": "midjourney",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_396_376",
-    "source_post_id": 396,
-    "source_url": "https://aitoolsforpros.com/notion-ai/creatives/",
-    "canonical_target_id": 376,
-    "target_url": "https://aitoolsforpros.com/claude/creatives/",
-    "primary_tool": "notion-ai",
-    "sibling_tool": "claude",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_396_368",
-    "source_post_id": 396,
-    "source_url": "https://aitoolsforpros.com/notion-ai/creatives/",
-    "canonical_target_id": 368,
-    "target_url": "https://aitoolsforpros.com/chatgpt/creatives/",
-    "primary_tool": "notion-ai",
-    "sibling_tool": "chatgpt",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_392_400",
-    "source_post_id": 392,
-    "source_url": "https://aitoolsforpros.com/midjourney/creatives/",
-    "canonical_target_id": 400,
-    "target_url": "https://aitoolsforpros.com/grammarly/creatives/",
-    "primary_tool": "midjourney",
-    "sibling_tool": "grammarly",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_392_396",
-    "source_post_id": 392,
-    "source_url": "https://aitoolsforpros.com/midjourney/creatives/",
-    "canonical_target_id": 396,
-    "target_url": "https://aitoolsforpros.com/notion-ai/creatives/",
-    "primary_tool": "midjourney",
-    "sibling_tool": "notion-ai",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_392_376",
-    "source_post_id": 392,
-    "source_url": "https://aitoolsforpros.com/midjourney/creatives/",
-    "canonical_target_id": 376,
-    "target_url": "https://aitoolsforpros.com/claude/creatives/",
-    "primary_tool": "midjourney",
-    "sibling_tool": "claude",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_392_368",
-    "source_post_id": 392,
-    "source_url": "https://aitoolsforpros.com/midjourney/creatives/",
-    "canonical_target_id": 368,
-    "target_url": "https://aitoolsforpros.com/chatgpt/creatives/",
-    "primary_tool": "midjourney",
-    "sibling_tool": "chatgpt",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_376_400",
-    "source_post_id": 376,
-    "source_url": "https://aitoolsforpros.com/claude/creatives/",
-    "canonical_target_id": 400,
-    "target_url": "https://aitoolsforpros.com/grammarly/creatives/",
-    "primary_tool": "claude",
-    "sibling_tool": "grammarly",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_376_396",
-    "source_post_id": 376,
-    "source_url": "https://aitoolsforpros.com/claude/creatives/",
-    "canonical_target_id": 396,
-    "target_url": "https://aitoolsforpros.com/notion-ai/creatives/",
-    "primary_tool": "claude",
-    "sibling_tool": "notion-ai",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_376_392",
-    "source_post_id": 376,
-    "source_url": "https://aitoolsforpros.com/claude/creatives/",
-    "canonical_target_id": 392,
-    "target_url": "https://aitoolsforpros.com/midjourney/creatives/",
-    "primary_tool": "claude",
-    "sibling_tool": "midjourney",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_376_368",
-    "source_post_id": 376,
-    "source_url": "https://aitoolsforpros.com/claude/creatives/",
-    "canonical_target_id": 368,
-    "target_url": "https://aitoolsforpros.com/chatgpt/creatives/",
-    "primary_tool": "claude",
-    "sibling_tool": "chatgpt",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_368_400",
-    "source_post_id": 368,
-    "source_url": "https://aitoolsforpros.com/chatgpt/creatives/",
-    "canonical_target_id": 400,
-    "target_url": "https://aitoolsforpros.com/grammarly/creatives/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "grammarly",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_368_396",
-    "source_post_id": 368,
-    "source_url": "https://aitoolsforpros.com/chatgpt/creatives/",
-    "canonical_target_id": 396,
-    "target_url": "https://aitoolsforpros.com/notion-ai/creatives/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "notion-ai",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_368_392",
-    "source_post_id": 368,
-    "source_url": "https://aitoolsforpros.com/chatgpt/creatives/",
-    "canonical_target_id": 392,
-    "target_url": "https://aitoolsforpros.com/midjourney/creatives/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "midjourney",
-    "profession": "creatives",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_399_390",
-    "source_post_id": 399,
-    "source_url": "https://aitoolsforpros.com/grammarly/insurance/",
-    "canonical_target_id": 390,
-    "target_url": "https://aitoolsforpros.com/copilot/insurance/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "copilot",
-    "profession": "insurance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_399_380",
-    "source_post_id": 399,
-    "source_url": "https://aitoolsforpros.com/grammarly/insurance/",
-    "canonical_target_id": 380,
-    "target_url": "https://aitoolsforpros.com/perplexity/insurance/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "perplexity",
-    "profession": "insurance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_399_374",
-    "source_post_id": 399,
-    "source_url": "https://aitoolsforpros.com/grammarly/insurance/",
-    "canonical_target_id": 374,
-    "target_url": "https://aitoolsforpros.com/claude/insurance/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "claude",
-    "profession": "insurance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_399_366",
-    "source_post_id": 399,
-    "source_url": "https://aitoolsforpros.com/grammarly/insurance/",
-    "canonical_target_id": 366,
-    "target_url": "https://aitoolsforpros.com/chatgpt/insurance/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "chatgpt",
-    "profession": "insurance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_390_399",
-    "source_post_id": 390,
-    "source_url": "https://aitoolsforpros.com/copilot/insurance/",
-    "canonical_target_id": 399,
-    "target_url": "https://aitoolsforpros.com/grammarly/insurance/",
-    "primary_tool": "copilot",
-    "sibling_tool": "grammarly",
-    "profession": "insurance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_380_399",
-    "source_post_id": 380,
-    "source_url": "https://aitoolsforpros.com/perplexity/insurance/",
-    "canonical_target_id": 399,
-    "target_url": "https://aitoolsforpros.com/grammarly/insurance/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "grammarly",
-    "profession": "insurance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_380_374",
-    "source_post_id": 380,
-    "source_url": "https://aitoolsforpros.com/perplexity/insurance/",
-    "canonical_target_id": 374,
-    "target_url": "https://aitoolsforpros.com/claude/insurance/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "claude",
-    "profession": "insurance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_380_366",
-    "source_post_id": 380,
-    "source_url": "https://aitoolsforpros.com/perplexity/insurance/",
-    "canonical_target_id": 366,
-    "target_url": "https://aitoolsforpros.com/chatgpt/insurance/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "chatgpt",
-    "profession": "insurance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_374_399",
-    "source_post_id": 374,
-    "source_url": "https://aitoolsforpros.com/claude/insurance/",
-    "canonical_target_id": 399,
-    "target_url": "https://aitoolsforpros.com/grammarly/insurance/",
-    "primary_tool": "claude",
-    "sibling_tool": "grammarly",
-    "profession": "insurance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_366_399",
-    "source_post_id": 366,
-    "source_url": "https://aitoolsforpros.com/chatgpt/insurance/",
-    "canonical_target_id": 399,
-    "target_url": "https://aitoolsforpros.com/grammarly/insurance/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "grammarly",
-    "profession": "insurance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_366_390",
-    "source_post_id": 366,
-    "source_url": "https://aitoolsforpros.com/chatgpt/insurance/",
-    "canonical_target_id": 390,
-    "target_url": "https://aitoolsforpros.com/copilot/insurance/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "copilot",
-    "profession": "insurance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_398_387",
-    "source_post_id": 398,
-    "source_url": "https://aitoolsforpros.com/grammarly/real-estate/",
-    "canonical_target_id": 387,
-    "target_url": "https://aitoolsforpros.com/copilot/real-estate/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "copilot",
-    "profession": "real-estate",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_398_382",
-    "source_post_id": 398,
-    "source_url": "https://aitoolsforpros.com/grammarly/real-estate/",
-    "canonical_target_id": 382,
-    "target_url": "https://aitoolsforpros.com/gemini/real-estate/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "gemini",
-    "profession": "real-estate",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_398_363",
-    "source_post_id": 398,
-    "source_url": "https://aitoolsforpros.com/grammarly/real-estate/",
-    "canonical_target_id": 363,
-    "target_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "chatgpt",
-    "profession": "real-estate",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_387_398",
-    "source_post_id": 387,
-    "source_url": "https://aitoolsforpros.com/copilot/real-estate/",
-    "canonical_target_id": 398,
-    "target_url": "https://aitoolsforpros.com/grammarly/real-estate/",
-    "primary_tool": "copilot",
-    "sibling_tool": "grammarly",
-    "profession": "real-estate",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_387_382",
-    "source_post_id": 387,
-    "source_url": "https://aitoolsforpros.com/copilot/real-estate/",
-    "canonical_target_id": 382,
-    "target_url": "https://aitoolsforpros.com/gemini/real-estate/",
-    "primary_tool": "copilot",
-    "sibling_tool": "gemini",
-    "profession": "real-estate",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_382_398",
-    "source_post_id": 382,
-    "source_url": "https://aitoolsforpros.com/gemini/real-estate/",
-    "canonical_target_id": 398,
-    "target_url": "https://aitoolsforpros.com/grammarly/real-estate/",
-    "primary_tool": "gemini",
-    "sibling_tool": "grammarly",
-    "profession": "real-estate",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_382_371",
-    "source_post_id": 382,
-    "source_url": "https://aitoolsforpros.com/gemini/real-estate/",
-    "canonical_target_id": 371,
-    "target_url": "https://aitoolsforpros.com/claude/real-estate/",
-    "primary_tool": "gemini",
-    "sibling_tool": "claude",
-    "profession": "real-estate",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_382_363",
-    "source_post_id": 382,
-    "source_url": "https://aitoolsforpros.com/gemini/real-estate/",
-    "canonical_target_id": 363,
-    "target_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
-    "primary_tool": "gemini",
-    "sibling_tool": "chatgpt",
-    "profession": "real-estate",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_371_398",
-    "source_post_id": 371,
-    "source_url": "https://aitoolsforpros.com/claude/real-estate/",
-    "canonical_target_id": 398,
-    "target_url": "https://aitoolsforpros.com/grammarly/real-estate/",
-    "primary_tool": "claude",
-    "sibling_tool": "grammarly",
-    "profession": "real-estate",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_371_382",
-    "source_post_id": 371,
-    "source_url": "https://aitoolsforpros.com/claude/real-estate/",
-    "canonical_target_id": 382,
-    "target_url": "https://aitoolsforpros.com/gemini/real-estate/",
-    "primary_tool": "claude",
-    "sibling_tool": "gemini",
-    "profession": "real-estate",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_363_398",
-    "source_post_id": 363,
-    "source_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
-    "canonical_target_id": 398,
-    "target_url": "https://aitoolsforpros.com/grammarly/real-estate/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "grammarly",
-    "profession": "real-estate",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_363_387",
-    "source_post_id": 363,
-    "source_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
-    "canonical_target_id": 387,
-    "target_url": "https://aitoolsforpros.com/copilot/real-estate/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "copilot",
-    "profession": "real-estate",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_363_382",
-    "source_post_id": 363,
-    "source_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
-    "canonical_target_id": 382,
-    "target_url": "https://aitoolsforpros.com/gemini/real-estate/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "gemini",
-    "profession": "real-estate",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_363_371",
-    "source_post_id": 363,
-    "source_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
-    "canonical_target_id": 371,
-    "target_url": "https://aitoolsforpros.com/claude/real-estate/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "claude",
-    "profession": "real-estate",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_397_394",
-    "source_post_id": 397,
-    "source_url": "https://aitoolsforpros.com/grammarly/legal/",
-    "canonical_target_id": 394,
-    "target_url": "https://aitoolsforpros.com/notion-ai/legal/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "notion-ai",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_397_385",
-    "source_post_id": 397,
-    "source_url": "https://aitoolsforpros.com/grammarly/legal/",
-    "canonical_target_id": 385,
-    "target_url": "https://aitoolsforpros.com/copilot/legal/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "copilot",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_397_381",
-    "source_post_id": 397,
-    "source_url": "https://aitoolsforpros.com/grammarly/legal/",
-    "canonical_target_id": 381,
-    "target_url": "https://aitoolsforpros.com/gemini/legal/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "gemini",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_397_377",
-    "source_post_id": 397,
-    "source_url": "https://aitoolsforpros.com/grammarly/legal/",
-    "canonical_target_id": 377,
-    "target_url": "https://aitoolsforpros.com/perplexity/legal/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "perplexity",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_397_369",
-    "source_post_id": 397,
-    "source_url": "https://aitoolsforpros.com/grammarly/legal/",
-    "canonical_target_id": 369,
-    "target_url": "https://aitoolsforpros.com/claude/legal/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "claude",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_397_361",
-    "source_post_id": 397,
-    "source_url": "https://aitoolsforpros.com/grammarly/legal/",
-    "canonical_target_id": 361,
-    "target_url": "https://aitoolsforpros.com/chatgpt/legal/",
-    "primary_tool": "grammarly",
-    "sibling_tool": "chatgpt",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_394_397",
-    "source_post_id": 394,
-    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
-    "canonical_target_id": 397,
-    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
-    "primary_tool": "notion-ai",
-    "sibling_tool": "grammarly",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_394_385",
-    "source_post_id": 394,
-    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
-    "canonical_target_id": 385,
-    "target_url": "https://aitoolsforpros.com/copilot/legal/",
-    "primary_tool": "notion-ai",
-    "sibling_tool": "copilot",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_394_381",
-    "source_post_id": 394,
-    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
-    "canonical_target_id": 381,
-    "target_url": "https://aitoolsforpros.com/gemini/legal/",
-    "primary_tool": "notion-ai",
-    "sibling_tool": "gemini",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_394_377",
-    "source_post_id": 394,
-    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
-    "canonical_target_id": 377,
-    "target_url": "https://aitoolsforpros.com/perplexity/legal/",
-    "primary_tool": "notion-ai",
-    "sibling_tool": "perplexity",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_394_369",
-    "source_post_id": 394,
-    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
-    "canonical_target_id": 369,
-    "target_url": "https://aitoolsforpros.com/claude/legal/",
-    "primary_tool": "notion-ai",
-    "sibling_tool": "claude",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_394_361",
-    "source_post_id": 394,
-    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
-    "canonical_target_id": 361,
-    "target_url": "https://aitoolsforpros.com/chatgpt/legal/",
-    "primary_tool": "notion-ai",
-    "sibling_tool": "chatgpt",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_385_397",
-    "source_post_id": 385,
-    "source_url": "https://aitoolsforpros.com/copilot/legal/",
-    "canonical_target_id": 397,
-    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
-    "primary_tool": "copilot",
-    "sibling_tool": "grammarly",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_385_394",
-    "source_post_id": 385,
-    "source_url": "https://aitoolsforpros.com/copilot/legal/",
-    "canonical_target_id": 394,
-    "target_url": "https://aitoolsforpros.com/notion-ai/legal/",
-    "primary_tool": "copilot",
-    "sibling_tool": "notion-ai",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_385_381",
-    "source_post_id": 385,
-    "source_url": "https://aitoolsforpros.com/copilot/legal/",
-    "canonical_target_id": 381,
-    "target_url": "https://aitoolsforpros.com/gemini/legal/",
-    "primary_tool": "copilot",
-    "sibling_tool": "gemini",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_385_369",
-    "source_post_id": 385,
-    "source_url": "https://aitoolsforpros.com/copilot/legal/",
-    "canonical_target_id": 369,
-    "target_url": "https://aitoolsforpros.com/claude/legal/",
-    "primary_tool": "copilot",
-    "sibling_tool": "claude",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_385_361",
-    "source_post_id": 385,
-    "source_url": "https://aitoolsforpros.com/copilot/legal/",
-    "canonical_target_id": 361,
-    "target_url": "https://aitoolsforpros.com/chatgpt/legal/",
-    "primary_tool": "copilot",
-    "sibling_tool": "chatgpt",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_381_397",
-    "source_post_id": 381,
-    "source_url": "https://aitoolsforpros.com/gemini/legal/",
-    "canonical_target_id": 397,
-    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
-    "primary_tool": "gemini",
-    "sibling_tool": "grammarly",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_381_394",
-    "source_post_id": 381,
-    "source_url": "https://aitoolsforpros.com/gemini/legal/",
-    "canonical_target_id": 394,
-    "target_url": "https://aitoolsforpros.com/notion-ai/legal/",
-    "primary_tool": "gemini",
-    "sibling_tool": "notion-ai",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_381_377",
-    "source_post_id": 381,
-    "source_url": "https://aitoolsforpros.com/gemini/legal/",
-    "canonical_target_id": 377,
-    "target_url": "https://aitoolsforpros.com/perplexity/legal/",
-    "primary_tool": "gemini",
-    "sibling_tool": "perplexity",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_377_397",
-    "source_post_id": 377,
-    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
-    "canonical_target_id": 397,
-    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "grammarly",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_377_394",
-    "source_post_id": 377,
-    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
-    "canonical_target_id": 394,
-    "target_url": "https://aitoolsforpros.com/notion-ai/legal/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "notion-ai",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_377_385",
-    "source_post_id": 377,
-    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
-    "canonical_target_id": 385,
-    "target_url": "https://aitoolsforpros.com/copilot/legal/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "copilot",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_377_381",
-    "source_post_id": 377,
-    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
-    "canonical_target_id": 381,
-    "target_url": "https://aitoolsforpros.com/gemini/legal/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "gemini",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_377_369",
-    "source_post_id": 377,
-    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
-    "canonical_target_id": 369,
-    "target_url": "https://aitoolsforpros.com/claude/legal/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "claude",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_377_361",
-    "source_post_id": 377,
-    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
-    "canonical_target_id": 361,
-    "target_url": "https://aitoolsforpros.com/chatgpt/legal/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "chatgpt",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_369_397",
-    "source_post_id": 369,
-    "source_url": "https://aitoolsforpros.com/claude/legal/",
-    "canonical_target_id": 397,
-    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
-    "primary_tool": "claude",
-    "sibling_tool": "grammarly",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_369_394",
-    "source_post_id": 369,
-    "source_url": "https://aitoolsforpros.com/claude/legal/",
-    "canonical_target_id": 394,
-    "target_url": "https://aitoolsforpros.com/notion-ai/legal/",
-    "primary_tool": "claude",
-    "sibling_tool": "notion-ai",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_369_385",
-    "source_post_id": 369,
-    "source_url": "https://aitoolsforpros.com/claude/legal/",
-    "canonical_target_id": 385,
-    "target_url": "https://aitoolsforpros.com/copilot/legal/",
-    "primary_tool": "claude",
-    "sibling_tool": "copilot",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_369_381",
-    "source_post_id": 369,
-    "source_url": "https://aitoolsforpros.com/claude/legal/",
-    "canonical_target_id": 381,
-    "target_url": "https://aitoolsforpros.com/gemini/legal/",
-    "primary_tool": "claude",
-    "sibling_tool": "gemini",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_369_377",
-    "source_post_id": 369,
-    "source_url": "https://aitoolsforpros.com/claude/legal/",
-    "canonical_target_id": 377,
-    "target_url": "https://aitoolsforpros.com/perplexity/legal/",
-    "primary_tool": "claude",
-    "sibling_tool": "perplexity",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_361_397",
-    "source_post_id": 361,
-    "source_url": "https://aitoolsforpros.com/chatgpt/legal/",
-    "canonical_target_id": 397,
-    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "grammarly",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_361_394",
-    "source_post_id": 361,
-    "source_url": "https://aitoolsforpros.com/chatgpt/legal/",
-    "canonical_target_id": 394,
-    "target_url": "https://aitoolsforpros.com/notion-ai/legal/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "notion-ai",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_361_381",
-    "source_post_id": 361,
-    "source_url": "https://aitoolsforpros.com/chatgpt/legal/",
-    "canonical_target_id": 381,
-    "target_url": "https://aitoolsforpros.com/gemini/legal/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "gemini",
-    "profession": "legal",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_395_364",
-    "source_post_id": 395,
-    "source_url": "https://aitoolsforpros.com/notion-ai/engineers/",
-    "canonical_target_id": 364,
-    "target_url": "https://aitoolsforpros.com/chatgpt/engineers/",
-    "primary_tool": "notion-ai",
-    "sibling_tool": "chatgpt",
-    "profession": "engineers",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_393_395",
-    "source_post_id": 393,
-    "source_url": "https://aitoolsforpros.com/cursor/engineers/",
-    "canonical_target_id": 395,
-    "target_url": "https://aitoolsforpros.com/notion-ai/engineers/",
-    "primary_tool": "cursor",
-    "sibling_tool": "notion-ai",
-    "profession": "engineers",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_393_388",
-    "source_post_id": 393,
-    "source_url": "https://aitoolsforpros.com/cursor/engineers/",
-    "canonical_target_id": 388,
-    "target_url": "https://aitoolsforpros.com/copilot/engineers/",
-    "primary_tool": "cursor",
-    "sibling_tool": "copilot",
-    "profession": "engineers",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_372_395",
-    "source_post_id": 372,
-    "source_url": "https://aitoolsforpros.com/claude/engineers/",
-    "canonical_target_id": 395,
-    "target_url": "https://aitoolsforpros.com/notion-ai/engineers/",
-    "primary_tool": "claude",
-    "sibling_tool": "notion-ai",
-    "profession": "engineers",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_372_364",
-    "source_post_id": 372,
-    "source_url": "https://aitoolsforpros.com/claude/engineers/",
-    "canonical_target_id": 364,
-    "target_url": "https://aitoolsforpros.com/chatgpt/engineers/",
-    "primary_tool": "claude",
-    "sibling_tool": "chatgpt",
-    "profession": "engineers",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_364_395",
-    "source_post_id": 364,
-    "source_url": "https://aitoolsforpros.com/chatgpt/engineers/",
-    "canonical_target_id": 395,
-    "target_url": "https://aitoolsforpros.com/notion-ai/engineers/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "notion-ai",
-    "profession": "engineers",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_364_393",
-    "source_post_id": 364,
-    "source_url": "https://aitoolsforpros.com/chatgpt/engineers/",
-    "canonical_target_id": 393,
-    "target_url": "https://aitoolsforpros.com/cursor/engineers/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "cursor",
-    "profession": "engineers",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_364_372",
-    "source_post_id": 364,
-    "source_url": "https://aitoolsforpros.com/chatgpt/engineers/",
-    "canonical_target_id": 372,
-    "target_url": "https://aitoolsforpros.com/claude/engineers/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "claude",
-    "profession": "engineers",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_391_384",
-    "source_post_id": 391,
-    "source_url": "https://aitoolsforpros.com/midjourney/architects/",
-    "canonical_target_id": 384,
-    "target_url": "https://aitoolsforpros.com/gemini/architects/",
-    "primary_tool": "midjourney",
-    "sibling_tool": "gemini",
-    "profession": "architects",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_391_375",
-    "source_post_id": 391,
-    "source_url": "https://aitoolsforpros.com/midjourney/architects/",
-    "canonical_target_id": 375,
-    "target_url": "https://aitoolsforpros.com/claude/architects/",
-    "primary_tool": "midjourney",
-    "sibling_tool": "claude",
-    "profession": "architects",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_391_367",
-    "source_post_id": 391,
-    "source_url": "https://aitoolsforpros.com/midjourney/architects/",
-    "canonical_target_id": 367,
-    "target_url": "https://aitoolsforpros.com/chatgpt/architects/",
-    "primary_tool": "midjourney",
-    "sibling_tool": "chatgpt",
-    "profession": "architects",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_384_391",
-    "source_post_id": 384,
-    "source_url": "https://aitoolsforpros.com/gemini/architects/",
-    "canonical_target_id": 391,
-    "target_url": "https://aitoolsforpros.com/midjourney/architects/",
-    "primary_tool": "gemini",
-    "sibling_tool": "midjourney",
-    "profession": "architects",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_384_375",
-    "source_post_id": 384,
-    "source_url": "https://aitoolsforpros.com/gemini/architects/",
-    "canonical_target_id": 375,
-    "target_url": "https://aitoolsforpros.com/claude/architects/",
-    "primary_tool": "gemini",
-    "sibling_tool": "claude",
-    "profession": "architects",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_384_367",
-    "source_post_id": 384,
-    "source_url": "https://aitoolsforpros.com/gemini/architects/",
-    "canonical_target_id": 367,
-    "target_url": "https://aitoolsforpros.com/chatgpt/architects/",
-    "primary_tool": "gemini",
-    "sibling_tool": "chatgpt",
-    "profession": "architects",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_375_391",
-    "source_post_id": 375,
-    "source_url": "https://aitoolsforpros.com/claude/architects/",
-    "canonical_target_id": 391,
-    "target_url": "https://aitoolsforpros.com/midjourney/architects/",
-    "primary_tool": "claude",
-    "sibling_tool": "midjourney",
-    "profession": "architects",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_375_384",
-    "source_post_id": 375,
-    "source_url": "https://aitoolsforpros.com/claude/architects/",
-    "canonical_target_id": 384,
-    "target_url": "https://aitoolsforpros.com/gemini/architects/",
-    "primary_tool": "claude",
-    "sibling_tool": "gemini",
-    "profession": "architects",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_375_367",
-    "source_post_id": 375,
-    "source_url": "https://aitoolsforpros.com/claude/architects/",
-    "canonical_target_id": 367,
-    "target_url": "https://aitoolsforpros.com/chatgpt/architects/",
-    "primary_tool": "claude",
-    "sibling_tool": "chatgpt",
-    "profession": "architects",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_367_391",
-    "source_post_id": 367,
-    "source_url": "https://aitoolsforpros.com/chatgpt/architects/",
-    "canonical_target_id": 391,
-    "target_url": "https://aitoolsforpros.com/midjourney/architects/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "midjourney",
-    "profession": "architects",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_367_384",
-    "source_post_id": 367,
-    "source_url": "https://aitoolsforpros.com/chatgpt/architects/",
-    "canonical_target_id": 384,
-    "target_url": "https://aitoolsforpros.com/gemini/architects/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "gemini",
-    "profession": "architects",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_367_375",
-    "source_post_id": 367,
-    "source_url": "https://aitoolsforpros.com/chatgpt/architects/",
-    "canonical_target_id": 375,
-    "target_url": "https://aitoolsforpros.com/claude/architects/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "claude",
-    "profession": "architects",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_389_383",
-    "source_post_id": 389,
-    "source_url": "https://aitoolsforpros.com/copilot/finance/",
-    "canonical_target_id": 383,
-    "target_url": "https://aitoolsforpros.com/gemini/finance/",
-    "primary_tool": "copilot",
-    "sibling_tool": "gemini",
-    "profession": "finance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_383_379",
-    "source_post_id": 383,
-    "source_url": "https://aitoolsforpros.com/gemini/finance/",
-    "canonical_target_id": 379,
-    "target_url": "https://aitoolsforpros.com/perplexity/finance/",
-    "primary_tool": "gemini",
-    "sibling_tool": "perplexity",
-    "profession": "finance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_379_389",
-    "source_post_id": 379,
-    "source_url": "https://aitoolsforpros.com/perplexity/finance/",
-    "canonical_target_id": 389,
-    "target_url": "https://aitoolsforpros.com/copilot/finance/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "copilot",
-    "profession": "finance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_379_383",
-    "source_post_id": 379,
-    "source_url": "https://aitoolsforpros.com/perplexity/finance/",
-    "canonical_target_id": 383,
-    "target_url": "https://aitoolsforpros.com/gemini/finance/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "gemini",
-    "profession": "finance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_379_373",
-    "source_post_id": 379,
-    "source_url": "https://aitoolsforpros.com/perplexity/finance/",
-    "canonical_target_id": 373,
-    "target_url": "https://aitoolsforpros.com/claude/finance/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "claude",
-    "profession": "finance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_379_365",
-    "source_post_id": 379,
-    "source_url": "https://aitoolsforpros.com/perplexity/finance/",
-    "canonical_target_id": 365,
-    "target_url": "https://aitoolsforpros.com/chatgpt/finance/",
-    "primary_tool": "perplexity",
-    "sibling_tool": "chatgpt",
-    "profession": "finance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_373_383",
-    "source_post_id": 373,
-    "source_url": "https://aitoolsforpros.com/claude/finance/",
-    "canonical_target_id": 383,
-    "target_url": "https://aitoolsforpros.com/gemini/finance/",
-    "primary_tool": "claude",
-    "sibling_tool": "gemini",
-    "profession": "finance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_365_389",
-    "source_post_id": 365,
-    "source_url": "https://aitoolsforpros.com/chatgpt/finance/",
-    "canonical_target_id": 389,
-    "target_url": "https://aitoolsforpros.com/copilot/finance/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "copilot",
-    "profession": "finance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
-    "record_id": "rec_365_383",
-    "source_post_id": 365,
-    "source_url": "https://aitoolsforpros.com/chatgpt/finance/",
-    "canonical_target_id": 383,
-    "target_url": "https://aitoolsforpros.com/gemini/finance/",
-    "primary_tool": "chatgpt",
-    "sibling_tool": "gemini",
-    "profession": "finance",
-    "policy_version": "1.1.0",
-    "created_at": "2026-08-03T19:54:04.319075+00:00",
-    "eligibility": {
-      "status": "eligible",
-      "detail": "200, canonical match, publish status confirmed"
-    },
-    "state": "gap_detected"
-  },
-  {
     "record_id": "rec_378_386",
     "source_post_id": 378,
     "source_url": "https://aitoolsforpros.com/perplexity/physicians/",
@@ -2061,5 +38,2348 @@
     "notes": "A link to /copilot/physicians/ already exists in the page's generic 'Comparing your options' footer within the same content_sections[3].section_body, so this would be a second, more contextual mention of Copilot in that section. It is still evidenced and useful on its own, but a reviewer may want to confirm two links to the same target within one section_body is acceptable under site style.",
     "scored_at": "2026-08-05T17:33:02.436466+00:00",
     "reviewed_by": null
+  },
+  {
+    "record_id": "rec_401_386",
+    "source_post_id": 401,
+    "source_url": "https://aitoolsforpros.com/otter/physicians/",
+    "canonical_target_id": 386,
+    "target_url": "https://aitoolsforpros.com/copilot/physicians/",
+    "primary_tool": "otter",
+    "sibling_tool": "copilot",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "Team Meetings, Grand Rounds, and CME Capture",
+    "existing_text": "For MDT meetings, the summary provides a record of decisions and responsible parties without requiring a dedicated note-taker.",
+    "proposed_text": "For MDT meetings, the summary provides a record of decisions and responsible parties without requiring a dedicated note-taker; physicians at institutions already running Microsoft 365 may find <a href=\"/copilot/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Microsoft Copilot</a> a simpler alternative, since it generates the same kind of meeting summary natively inside Teams without needing a separate recording app.",
+    "anchor_text": "Microsoft Copilot",
+    "rationale": "Physicians deciding how to handle MDT meeting summaries face a real tradeoff between a dedicated recorder like Otter and a tool already built into their existing meeting software; the sibling page documents that exact same capability inside Teams, making this a genuine workflow comparison rather than a bolted-on mention.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Copilot in Teams transcribes the meeting, identifies action items, and generates a structured summary without requiring anyone to take manual notes during the meeting.",
+      "source_field": "content_sections[1].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The source page already links to /copilot/physicians/ in a generic 'Comparing your options?' boilerplate list at the end of content_sections[2], but that mention is not contextual per the test criteria (no explanation of why Copilot is relevant at that point). This proposal adds a substantive, evidenced comparison at the point where Otter's MDT meeting summary feature is discussed, which directly parallels a capability Copilot's own page describes for the same use case. Reviewer should confirm whether a second link to the same target page is acceptable per site style, or whether this should replace the boilerplate mention instead.",
+    "scored_at": "2026-08-05T19:21:52.734419+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_401_378",
+    "source_post_id": 401,
+    "source_url": "https://aitoolsforpros.com/otter/physicians/",
+    "canonical_target_id": 378,
+    "target_url": "https://aitoolsforpros.com/perplexity/physicians/",
+    "primary_tool": "otter",
+    "sibling_tool": "perplexity",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "no_opportunity_proposed",
+    "edit_type": null,
+    "content_zone": null,
+    "section_title_hint": null,
+    "existing_text": null,
+    "proposed_text": null,
+    "anchor_text": null,
+    "rationale": "Otter.ai's page focuses entirely on transcription and documentation workflows (encounter recording, SOAP note drafting via Claude/ChatGPT, meeting/CME transcript capture). Perplexity's distinguishing value is real-time cited literature search, a use case that never comes up in the Otter content: none of the source's sections discuss looking up evidence, guidelines, or drug interactions, so there is no existing sentence to link and no natural point to insert a genuine comparison without inventing a workflow connecting the two tools.",
+    "useful_without_link": false,
+    "evidence": null,
+    "confidence": {
+      "relevance_confidence": "low",
+      "evidence_confidence": "low",
+      "placement_confidence": "low",
+      "editorial_naturalness_confidence": "low"
+    },
+    "notes": "The two tools serve non-overlapping workflows (transcription vs. cited literature search) and the source page's prose never touches on literature/guideline lookup, so any inserted mention of Perplexity would be a bolted-on aside rather than a reader-need-driven link.",
+    "scored_at": "2026-08-05T19:22:04.718395+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_386_401",
+    "source_post_id": 386,
+    "source_url": "https://aitoolsforpros.com/copilot/physicians/",
+    "canonical_target_id": 401,
+    "target_url": "https://aitoolsforpros.com/otter/physicians/",
+    "primary_tool": "copilot",
+    "sibling_tool": "otter",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "Multidisciplinary Team Meetings and Care Coordination in Teams",
+    "existing_text": "Copilot in Teams transcribes the meeting, identifies action items, and generates a structured summary without requiring anyone to take manual notes during the meeting.",
+    "proposed_text": "Copilot in Teams transcribes the meeting, identifies action items, and generates a structured summary without requiring anyone to take manual notes during the meeting, but this only works for scheduled Teams meetings and does not extend to recording a patient encounter in the exam room, a task <a href=\"/otter/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Otter.ai</a> is built for instead.",
+    "anchor_text": "Otter.ai",
+    "rationale": "Physicians reading about Copilot's Teams meeting transcription may wonder if the same ambient capability applies to patient encounters; clarifying that Copilot's transcription is confined to Teams meetings while pointing to Otter.ai's purpose-built encounter recording addresses a real workflow gap.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Otter.ai does one thing for physicians that Claude, ChatGPT, and Copilot cannot: it records the encounter.",
+      "source_field": "[subtitle]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/otter/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The sibling page's own subtitle explicitly states Copilot cannot record the encounter, which directly supports the contrast drawn in the modified sentence. This is a natural place to note the boundary of Copilot's Teams transcription and route interested readers to Otter.ai's encounter-recording use case.",
+    "scored_at": "2026-08-05T19:22:37.152188+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_378_401",
+    "source_post_id": 378,
+    "source_url": "https://aitoolsforpros.com/perplexity/physicians/",
+    "canonical_target_id": 401,
+    "target_url": "https://aitoolsforpros.com/otter/physicians/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "otter",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "no_opportunity_proposed",
+    "edit_type": null,
+    "content_zone": null,
+    "section_title_hint": null,
+    "existing_text": null,
+    "proposed_text": null,
+    "anchor_text": null,
+    "rationale": "The source page is entirely about Perplexity's literature search, guideline lookup, and drug interaction research workflows for physicians, while Otter.ai addresses an unrelated workflow (ambient encounter transcription). None of the source's content_sections prose touches documentation, transcription, or encounter recording in a way that would justify a genuine comparison to Otter without fabricating a connection.",
+    "useful_without_link": false,
+    "evidence": null,
+    "confidence": {
+      "relevance_confidence": "low",
+      "evidence_confidence": "low",
+      "placement_confidence": "low",
+      "editorial_naturalness_confidence": "low"
+    },
+    "notes": "The source's limitation card 'Not a clinical documentation tool' already directs readers to Claude or ChatGPT for drafting tasks, which is the tool actually relevant to that limitation. Inserting Otter here would require inventing a connection between literature/citation research and ambient transcription that neither page supports.",
+    "scored_at": "2026-08-05T19:22:46.152322+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_378_370",
+    "source_post_id": 378,
+    "source_url": "https://aitoolsforpros.com/perplexity/physicians/",
+    "canonical_target_id": 370,
+    "target_url": "https://aitoolsforpros.com/claude/physicians/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "claude",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Perplexity Falls Short for Physicians",
+    "existing_text": "For drafting tasks, use Claude or ChatGPT.",
+    "proposed_text": "For drafting tasks, use <a href=\"/claude/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a> or ChatGPT.",
+    "anchor_text": "Claude",
+    "rationale": "Physicians who use Perplexity to find literature or guidelines will often need to turn that evidence into a protocol, patient letter, or structured note, which the source page explicitly says Perplexity cannot do; linking to Claude's physician page is useful here because Claude's own page documents exactly that drafting strength for department protocols and structured clinical documents.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Department protocols, quality improvement checklists, and complex H&P templates are tasks where the formatting precision pays off.",
+      "source_field": "[content_sections[2].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "Claude is already linked once at the bottom comparison paragraph of this same section, but that is a generic 'see also' list. This inline mention inside the limitation card is a more contextually grounded, need-specific reference and is currently unlinked plain text naming Claude by name.",
+    "scored_at": "2026-08-05T19:23:15.363231+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_378_362",
+    "source_post_id": 378,
+    "source_url": "https://aitoolsforpros.com/perplexity/physicians/",
+    "canonical_target_id": 362,
+    "target_url": "https://aitoolsforpros.com/chatgpt/physicians/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "chatgpt",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Perplexity Falls Short for Physicians",
+    "existing_text": "For drafting tasks, use Claude or ChatGPT.",
+    "proposed_text": "For drafting tasks, use Claude or <a href=\"/chatgpt/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a>.",
+    "anchor_text": "ChatGPT",
+    "rationale": "Physicians reading that Perplexity cannot draft clinical notes or letters need a concrete alternative, and ChatGPT is already named in the sentence as that alternative; linking it lets readers verify ChatGPT's documentation capabilities directly.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "ChatGPT is a documentation and communication tool for physicians, not a clinical decision support system.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "ChatGPT is already named by name in the existing limitation-card prose within content_sections[3].section_body, which is an editable field per the task rules. Converting the existing mention into a link is the cleanest, most natural fix, consistent with how Claude and Copilot are already linked elsewhere on the same page.",
+    "scored_at": "2026-08-05T19:23:33.988061+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_370_401",
+    "source_post_id": 370,
+    "source_url": "https://aitoolsforpros.com/claude/physicians/",
+    "canonical_target_id": 401,
+    "target_url": "https://aitoolsforpros.com/otter/physicians/",
+    "primary_tool": "claude",
+    "sibling_tool": "otter",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "Protocol and Clinical Documentation Drafting",
+    "existing_text": "Claude can take a set of clinical notes or a dictated narrative and restructure it into a standard H&amp;P format with appropriate sections.",
+    "proposed_text": "Claude can take a set of clinical notes or a dictated narrative, including a de-identified transcript from an ambient recording tool like <a href=\"/otter/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Otter.ai</a>, and restructure it into a standard H&amp;P format with appropriate sections.",
+    "anchor_text": "Otter.ai",
+    "rationale": "Physicians using Claude for H&P structuring often need a source transcript to feed it, and the sibling page explicitly documents this exact two-tool workflow (Otter.ai records/transcribes, then physicians paste de-identified excerpts into Claude for structured note drafting).",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Some physicians copy de-identified excerpts from the transcript into Claude or ChatGPT to draft structured notes, verifying the output against the original recording.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/otter/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "This creates a natural cross-tool workflow link: Otter.ai's own page describes physicians feeding its transcripts into Claude for note drafting, so linking from Claude's H&P drafting section to Otter.ai closes the loop on that documented workflow.",
+    "scored_at": "2026-08-05T19:23:49.789956+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_370_386",
+    "source_post_id": 370,
+    "source_url": "https://aitoolsforpros.com/claude/physicians/",
+    "canonical_target_id": 386,
+    "target_url": "https://aitoolsforpros.com/copilot/physicians/",
+    "primary_tool": "claude",
+    "sibling_tool": "copilot",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "Protocol and Clinical Documentation Drafting",
+    "existing_text": "Claude's output handles technical medical language accurately, though clinical review remains essential before any protocol goes into use.",
+    "proposed_text": "Claude's output handles technical medical language accurately, though clinical review remains essential before any protocol goes into use. Physicians whose protocol drafting already happens in Word may prefer <a href=\"/copilot/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Copilot for physicians</a>, which can draft the same guideline-based protocol directly inside the document rather than requiring a copy-paste step into a separate tool.",
+    "anchor_text": "Copilot for physicians",
+    "rationale": "Physicians drafting department protocols from guideline text face a real workflow choice between copy-pasting into a standalone tool like Claude versus drafting in-app; the sibling page documents this exact same protocol-drafting task done natively inside Word, which is directly relevant at this point in the source's protocol-drafting section.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Paste a clinical guideline section into a Word document and ask Copilot to draft a department protocol in numbered format, adapted to your institutional context. The draft requires clinical review but provides the structural scaffolding that makes protocol writing significantly faster.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The source page already links to Copilot's physician page in a generic 'Comparing your options' footer sentence within content_sections[3]. This proposal adds a more specific, evidenced contextual mention earlier in the prose (the protocol-drafting section) where a genuine workflow tradeoff (copy-paste vs. in-app drafting) exists and is supported by the sibling's own stated capability.",
+    "scored_at": "2026-08-05T19:24:31.451600+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_370_362",
+    "source_post_id": 370,
+    "source_url": "https://aitoolsforpros.com/claude/physicians/",
+    "canonical_target_id": 362,
+    "target_url": "https://aitoolsforpros.com/chatgpt/physicians/",
+    "primary_tool": "claude",
+    "sibling_tool": "chatgpt",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "no_opportunity_proposed",
+    "edit_type": null,
+    "content_zone": null,
+    "section_title_hint": null,
+    "existing_text": null,
+    "proposed_text": null,
+    "anchor_text": null,
+    "rationale": "ChatGPT is not mentioned anywhere in the source page's substantive content_sections prose (sections 0-2 on record analysis, evidence synthesis, and protocol drafting focus entirely on Claude's own capabilities). The only existing reference is the generic 'Comparing your options?' footer link in section 3, which already links to ChatGPT and is boilerplate rather than a contextual mention tied to a specific workflow point. Inserting a new comparison sentence elsewhere would require manufacturing a rationale not organically motivated by the surrounding paragraphs.",
+    "useful_without_link": false,
+    "evidence": null,
+    "confidence": {
+      "relevance_confidence": "low",
+      "evidence_confidence": "low",
+      "placement_confidence": "low",
+      "editorial_naturalness_confidence": "low"
+    },
+    "notes": "A link to ChatGPT's physician page already exists in the source's footer comparison sentence (content_sections[3].section_body), so no new link is needed there. No other section_body paragraph presents a natural, evidence-grounded point of comparison between Claude and ChatGPT that would pass the genuine-need test without feeling bolted on.",
+    "scored_at": "2026-08-05T19:24:52.759611+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_362_386",
+    "source_post_id": 362,
+    "source_url": "https://aitoolsforpros.com/chatgpt/physicians/",
+    "canonical_target_id": 386,
+    "target_url": "https://aitoolsforpros.com/copilot/physicians/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "copilot",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "insert_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "What ChatGPT Does Well for Physicians",
+    "existing_text": "This is particularly useful for high-volume primary care practices where referral letter volume is substantial.",
+    "proposed_text": "This is particularly useful for high-volume primary care practices where referral letter volume is substantial. Physicians whose referral correspondence already runs through Outlook may prefer <a href=\"/copilot/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Copilot</a>, which drafts these letters directly inside the email client rather than requiring a copy-paste step from a separate chat window.",
+    "anchor_text": "Copilot",
+    "rationale": "Physicians choosing between drafting referral letters in a standalone chat tool versus their existing email client have a real workflow tradeoff, and Copilot's Outlook integration directly addresses the copy-paste friction ChatGPT's workflow implies.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Copilot in Outlook drafts patient letters, referral follow-ups, and administrative correspondence directly in your email client.",
+      "source_field": "content_sections[1].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The source page already links to Copilot's physicians page in a generic 'Comparing your options?' boilerplate list at the end of the limitations section. That existing link satisfies basic presence but is not a contextual, needs-based mention per the test. This proposal adds a genuinely contextual comparison point in the referral-letters subsection, grounded in Copilot's own stated Outlook integration capability, without duplicating or removing the existing boilerplate link.",
+    "scored_at": "2026-08-05T19:25:40.090586+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_362_378",
+    "source_post_id": 362,
+    "source_url": "https://aitoolsforpros.com/chatgpt/physicians/",
+    "canonical_target_id": 378,
+    "target_url": "https://aitoolsforpros.com/perplexity/physicians/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "perplexity",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where ChatGPT Falls Short for Physicians",
+    "existing_text": "For cited, current literature, usePerplexity AI.",
+    "proposed_text": "For cited, current literature, use <a href=\"/perplexity/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Perplexity AI</a>.",
+    "anchor_text": "Perplexity AI",
+    "rationale": "The source page already tells physicians that ChatGPT cannot search current medical literature and points them to Perplexity as the alternative, so turning this existing mention into a link lets readers act on the recommendation immediately.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Perplexity AI solves a specific problem that Claude and ChatGPT cannot: getting cited, current medical literature fast.",
+      "source_field": "[subtitle]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/perplexity/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "The existing sentence has a minor typo ('usePerplexity AI' missing a space), which naturally gets fixed when wrapping 'Perplexity AI' in the anchor tag, improving both readability and linking in one edit.",
+    "scored_at": "2026-08-05T19:25:49.644307+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_362_370",
+    "source_post_id": 362,
+    "source_url": "https://aitoolsforpros.com/chatgpt/physicians/",
+    "canonical_target_id": 370,
+    "target_url": "https://aitoolsforpros.com/claude/physicians/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "claude",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "no_opportunity_proposed",
+    "edit_type": null,
+    "content_zone": null,
+    "section_title_hint": null,
+    "existing_text": null,
+    "proposed_text": null,
+    "anchor_text": null,
+    "rationale": "The source page's prose is focused on the specific administrative tasks where ChatGPT excels (SOAP note formatting, prior authorization letters, after-visit summaries, referral letters), none of which turn on long-document synthesis or full-record analysis, which is Claude's stated differentiator. Claude is already linked in the standard 'Comparing your options?' sentence at the end of the limitations section, so the tool is not unlinked anywhere in the prose; there is no additional passage in the source's content_sections that describes a specific limitation or workflow need (e.g., context-window constraints or multi-document synthesis) that would justify a second, more contextual mention grounded in the sibling's own claims.",
+    "useful_without_link": null,
+    "evidence": null,
+    "confidence": {
+      "relevance_confidence": "low",
+      "evidence_confidence": "low",
+      "placement_confidence": "low",
+      "editorial_naturalness_confidence": "low"
+    },
+    "notes": "Claude is already linked via the boilerplate 'Comparing your options?' sentence in content_sections[2].section_body, satisfying the basic cross-link requirement. No other section discusses long-document/context-window limitations or multi-record synthesis needs that would map to Claude's stated strengths ('1M-token context window,' 'full-record analysis'), so a second, more deeply contextual link cannot be grounded without inventing a limitation the source page doesn't actually describe.",
+    "scored_at": "2026-08-05T19:26:19.932018+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_400_396",
+    "source_post_id": 400,
+    "source_url": "https://aitoolsforpros.com/grammarly/creatives/",
+    "canonical_target_id": 396,
+    "target_url": "https://aitoolsforpros.com/notion-ai/creatives/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "notion-ai",
+    "profession": "creatives",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "no_opportunity_proposed",
+    "edit_type": null,
+    "content_zone": null,
+    "section_title_hint": null,
+    "existing_text": null,
+    "proposed_text": null,
+    "anchor_text": null,
+    "rationale": "A link to /notion-ai/creatives/ already exists in content_sections[3].section_body's closing 'Comparing your options' sentence, so the sibling is already linked from the source page's prose. Beyond that boilerplate mention, none of the other content_sections paragraphs (copy editing volume, client email quality, team consistency, editing AI drafts) discuss project management workspaces or Notion in a way that would let a deeper, evidence-grounded comparison be inserted without manufacturing a claim.",
+    "useful_without_link": true,
+    "evidence": null,
+    "confidence": {
+      "relevance_confidence": "low",
+      "evidence_confidence": "low",
+      "placement_confidence": "low",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "Existing link in the closing 'Comparing your options' sentence already satisfies the linking need; no additional content_sections paragraph offers a natural, evidenced tie-in between Grammarly's workflow (inline editing across apps) and Notion AI's workspace-bound value proposition without fabricating a connection.",
+    "scored_at": "2026-08-05T19:26:39.735987+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_400_392",
+    "source_post_id": 400,
+    "source_url": "https://aitoolsforpros.com/grammarly/creatives/",
+    "canonical_target_id": 392,
+    "target_url": "https://aitoolsforpros.com/midjourney/creatives/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "midjourney",
+    "profession": "creatives",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Grammarly Falls Short for Creatives",
+    "existing_text": "Grammarly is purely a text tool. For image generation, concept exploration, and visual creative work, Midjourney handles the tasks Grammarly cannot touch.",
+    "proposed_text": "Grammarly is purely a text tool. For image generation, concept exploration, and visual creative work, <a href=\"/midjourney/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Midjourney</a> handles the tasks Grammarly cannot touch.",
+    "anchor_text": "Midjourney",
+    "rationale": "Creative professionals reading about Grammarly's text-only limitation need a pointer to the tool that actually covers image and visual concept work, and the source page already names Midjourney for exactly that purpose without linking it.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "The strongest use of Midjourney in professional creative work is at the concept exploration stage.",
+      "source_field": "[content_sections[0].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/midjourney/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "The source page already names Midjourney by name in a limitation card contrasting Grammarly's text-only scope with Midjourney's visual/concept-exploration strength; this is a straightforward link_existing_text case with no invented claims.",
+    "scored_at": "2026-08-05T19:26:55.236406+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_400_376",
+    "source_post_id": 400,
+    "source_url": "https://aitoolsforpros.com/grammarly/creatives/",
+    "canonical_target_id": 376,
+    "target_url": "https://aitoolsforpros.com/claude/creatives/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "claude",
+    "profession": "creatives",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "feature_section",
+    "section_title_hint": "Editing AI-Generated Copy Before Delivery",
+    "existing_text": "One of the most practical Grammarly workflows for creative professionals is using it specifically to polish ChatGPT or Claude output before client delivery.",
+    "proposed_text": "One of the most practical Grammarly workflows for creative professionals is using it specifically to polish ChatGPT or <a href=\"/claude/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a> output before client delivery.",
+    "anchor_text": "Claude",
+    "rationale": "The source already names Claude as one of the two generators whose output Grammarly is meant to polish, so linking that mention lets readers who use Claude for long-form drafts jump straight to guidance on how Grammarly fits into that specific workflow.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Most creative professionals benefit from using both: Claude for substantive editing, Grammarly for final-pass polish.",
+      "source_field": "faq[5].answer",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "The sentence already mentions Claude by name without a link; converting that existing mention into a link is the cleanest, least invasive option and is directly supported by the sibling page's own stated Claude+Grammarly workflow pairing (also echoed in consistency_blocks.avoid_if and consistency_blocks.mini_workflow on the sibling page).",
+    "scored_at": "2026-08-05T19:27:13.571206+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_400_368",
+    "source_post_id": 400,
+    "source_url": "https://aitoolsforpros.com/grammarly/creatives/",
+    "canonical_target_id": 368,
+    "target_url": "https://aitoolsforpros.com/chatgpt/creatives/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "chatgpt",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_396_400",
+    "source_post_id": 396,
+    "source_url": "https://aitoolsforpros.com/notion-ai/creatives/",
+    "canonical_target_id": 400,
+    "target_url": "https://aitoolsforpros.com/grammarly/creatives/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "grammarly",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_396_392",
+    "source_post_id": 396,
+    "source_url": "https://aitoolsforpros.com/notion-ai/creatives/",
+    "canonical_target_id": 392,
+    "target_url": "https://aitoolsforpros.com/midjourney/creatives/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "midjourney",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_396_376",
+    "source_post_id": 396,
+    "source_url": "https://aitoolsforpros.com/notion-ai/creatives/",
+    "canonical_target_id": 376,
+    "target_url": "https://aitoolsforpros.com/claude/creatives/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "claude",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_396_368",
+    "source_post_id": 396,
+    "source_url": "https://aitoolsforpros.com/notion-ai/creatives/",
+    "canonical_target_id": 368,
+    "target_url": "https://aitoolsforpros.com/chatgpt/creatives/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "chatgpt",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_392_400",
+    "source_post_id": 392,
+    "source_url": "https://aitoolsforpros.com/midjourney/creatives/",
+    "canonical_target_id": 400,
+    "target_url": "https://aitoolsforpros.com/grammarly/creatives/",
+    "primary_tool": "midjourney",
+    "sibling_tool": "grammarly",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_392_396",
+    "source_post_id": 392,
+    "source_url": "https://aitoolsforpros.com/midjourney/creatives/",
+    "canonical_target_id": 396,
+    "target_url": "https://aitoolsforpros.com/notion-ai/creatives/",
+    "primary_tool": "midjourney",
+    "sibling_tool": "notion-ai",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_392_376",
+    "source_post_id": 392,
+    "source_url": "https://aitoolsforpros.com/midjourney/creatives/",
+    "canonical_target_id": 376,
+    "target_url": "https://aitoolsforpros.com/claude/creatives/",
+    "primary_tool": "midjourney",
+    "sibling_tool": "claude",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_392_368",
+    "source_post_id": 392,
+    "source_url": "https://aitoolsforpros.com/midjourney/creatives/",
+    "canonical_target_id": 368,
+    "target_url": "https://aitoolsforpros.com/chatgpt/creatives/",
+    "primary_tool": "midjourney",
+    "sibling_tool": "chatgpt",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_376_400",
+    "source_post_id": 376,
+    "source_url": "https://aitoolsforpros.com/claude/creatives/",
+    "canonical_target_id": 400,
+    "target_url": "https://aitoolsforpros.com/grammarly/creatives/",
+    "primary_tool": "claude",
+    "sibling_tool": "grammarly",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_376_396",
+    "source_post_id": 376,
+    "source_url": "https://aitoolsforpros.com/claude/creatives/",
+    "canonical_target_id": 396,
+    "target_url": "https://aitoolsforpros.com/notion-ai/creatives/",
+    "primary_tool": "claude",
+    "sibling_tool": "notion-ai",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_376_392",
+    "source_post_id": 376,
+    "source_url": "https://aitoolsforpros.com/claude/creatives/",
+    "canonical_target_id": 392,
+    "target_url": "https://aitoolsforpros.com/midjourney/creatives/",
+    "primary_tool": "claude",
+    "sibling_tool": "midjourney",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_376_368",
+    "source_post_id": 376,
+    "source_url": "https://aitoolsforpros.com/claude/creatives/",
+    "canonical_target_id": 368,
+    "target_url": "https://aitoolsforpros.com/chatgpt/creatives/",
+    "primary_tool": "claude",
+    "sibling_tool": "chatgpt",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_368_400",
+    "source_post_id": 368,
+    "source_url": "https://aitoolsforpros.com/chatgpt/creatives/",
+    "canonical_target_id": 400,
+    "target_url": "https://aitoolsforpros.com/grammarly/creatives/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "grammarly",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_368_396",
+    "source_post_id": 368,
+    "source_url": "https://aitoolsforpros.com/chatgpt/creatives/",
+    "canonical_target_id": 396,
+    "target_url": "https://aitoolsforpros.com/notion-ai/creatives/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "notion-ai",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_368_392",
+    "source_post_id": 368,
+    "source_url": "https://aitoolsforpros.com/chatgpt/creatives/",
+    "canonical_target_id": 392,
+    "target_url": "https://aitoolsforpros.com/midjourney/creatives/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "midjourney",
+    "profession": "creatives",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_399_390",
+    "source_post_id": 399,
+    "source_url": "https://aitoolsforpros.com/grammarly/insurance/",
+    "canonical_target_id": 390,
+    "target_url": "https://aitoolsforpros.com/copilot/insurance/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "copilot",
+    "profession": "insurance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_399_380",
+    "source_post_id": 399,
+    "source_url": "https://aitoolsforpros.com/grammarly/insurance/",
+    "canonical_target_id": 380,
+    "target_url": "https://aitoolsforpros.com/perplexity/insurance/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "perplexity",
+    "profession": "insurance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_399_374",
+    "source_post_id": 399,
+    "source_url": "https://aitoolsforpros.com/grammarly/insurance/",
+    "canonical_target_id": 374,
+    "target_url": "https://aitoolsforpros.com/claude/insurance/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "claude",
+    "profession": "insurance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_399_366",
+    "source_post_id": 399,
+    "source_url": "https://aitoolsforpros.com/grammarly/insurance/",
+    "canonical_target_id": 366,
+    "target_url": "https://aitoolsforpros.com/chatgpt/insurance/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "chatgpt",
+    "profession": "insurance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_390_399",
+    "source_post_id": 390,
+    "source_url": "https://aitoolsforpros.com/copilot/insurance/",
+    "canonical_target_id": 399,
+    "target_url": "https://aitoolsforpros.com/grammarly/insurance/",
+    "primary_tool": "copilot",
+    "sibling_tool": "grammarly",
+    "profession": "insurance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_380_399",
+    "source_post_id": 380,
+    "source_url": "https://aitoolsforpros.com/perplexity/insurance/",
+    "canonical_target_id": 399,
+    "target_url": "https://aitoolsforpros.com/grammarly/insurance/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "grammarly",
+    "profession": "insurance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_380_374",
+    "source_post_id": 380,
+    "source_url": "https://aitoolsforpros.com/perplexity/insurance/",
+    "canonical_target_id": 374,
+    "target_url": "https://aitoolsforpros.com/claude/insurance/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "claude",
+    "profession": "insurance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_380_366",
+    "source_post_id": 380,
+    "source_url": "https://aitoolsforpros.com/perplexity/insurance/",
+    "canonical_target_id": 366,
+    "target_url": "https://aitoolsforpros.com/chatgpt/insurance/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "chatgpt",
+    "profession": "insurance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_374_399",
+    "source_post_id": 374,
+    "source_url": "https://aitoolsforpros.com/claude/insurance/",
+    "canonical_target_id": 399,
+    "target_url": "https://aitoolsforpros.com/grammarly/insurance/",
+    "primary_tool": "claude",
+    "sibling_tool": "grammarly",
+    "profession": "insurance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_366_399",
+    "source_post_id": 366,
+    "source_url": "https://aitoolsforpros.com/chatgpt/insurance/",
+    "canonical_target_id": 399,
+    "target_url": "https://aitoolsforpros.com/grammarly/insurance/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "grammarly",
+    "profession": "insurance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_366_390",
+    "source_post_id": 366,
+    "source_url": "https://aitoolsforpros.com/chatgpt/insurance/",
+    "canonical_target_id": 390,
+    "target_url": "https://aitoolsforpros.com/copilot/insurance/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "copilot",
+    "profession": "insurance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_398_387",
+    "source_post_id": 398,
+    "source_url": "https://aitoolsforpros.com/grammarly/real-estate/",
+    "canonical_target_id": 387,
+    "target_url": "https://aitoolsforpros.com/copilot/real-estate/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "copilot",
+    "profession": "real-estate",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_398_382",
+    "source_post_id": 398,
+    "source_url": "https://aitoolsforpros.com/grammarly/real-estate/",
+    "canonical_target_id": 382,
+    "target_url": "https://aitoolsforpros.com/gemini/real-estate/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "gemini",
+    "profession": "real-estate",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_398_363",
+    "source_post_id": 398,
+    "source_url": "https://aitoolsforpros.com/grammarly/real-estate/",
+    "canonical_target_id": 363,
+    "target_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "chatgpt",
+    "profession": "real-estate",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_387_398",
+    "source_post_id": 387,
+    "source_url": "https://aitoolsforpros.com/copilot/real-estate/",
+    "canonical_target_id": 398,
+    "target_url": "https://aitoolsforpros.com/grammarly/real-estate/",
+    "primary_tool": "copilot",
+    "sibling_tool": "grammarly",
+    "profession": "real-estate",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_387_382",
+    "source_post_id": 387,
+    "source_url": "https://aitoolsforpros.com/copilot/real-estate/",
+    "canonical_target_id": 382,
+    "target_url": "https://aitoolsforpros.com/gemini/real-estate/",
+    "primary_tool": "copilot",
+    "sibling_tool": "gemini",
+    "profession": "real-estate",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_382_398",
+    "source_post_id": 382,
+    "source_url": "https://aitoolsforpros.com/gemini/real-estate/",
+    "canonical_target_id": 398,
+    "target_url": "https://aitoolsforpros.com/grammarly/real-estate/",
+    "primary_tool": "gemini",
+    "sibling_tool": "grammarly",
+    "profession": "real-estate",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_382_371",
+    "source_post_id": 382,
+    "source_url": "https://aitoolsforpros.com/gemini/real-estate/",
+    "canonical_target_id": 371,
+    "target_url": "https://aitoolsforpros.com/claude/real-estate/",
+    "primary_tool": "gemini",
+    "sibling_tool": "claude",
+    "profession": "real-estate",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_382_363",
+    "source_post_id": 382,
+    "source_url": "https://aitoolsforpros.com/gemini/real-estate/",
+    "canonical_target_id": 363,
+    "target_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
+    "primary_tool": "gemini",
+    "sibling_tool": "chatgpt",
+    "profession": "real-estate",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_371_398",
+    "source_post_id": 371,
+    "source_url": "https://aitoolsforpros.com/claude/real-estate/",
+    "canonical_target_id": 398,
+    "target_url": "https://aitoolsforpros.com/grammarly/real-estate/",
+    "primary_tool": "claude",
+    "sibling_tool": "grammarly",
+    "profession": "real-estate",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_371_382",
+    "source_post_id": 371,
+    "source_url": "https://aitoolsforpros.com/claude/real-estate/",
+    "canonical_target_id": 382,
+    "target_url": "https://aitoolsforpros.com/gemini/real-estate/",
+    "primary_tool": "claude",
+    "sibling_tool": "gemini",
+    "profession": "real-estate",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_363_398",
+    "source_post_id": 363,
+    "source_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
+    "canonical_target_id": 398,
+    "target_url": "https://aitoolsforpros.com/grammarly/real-estate/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "grammarly",
+    "profession": "real-estate",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_363_387",
+    "source_post_id": 363,
+    "source_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
+    "canonical_target_id": 387,
+    "target_url": "https://aitoolsforpros.com/copilot/real-estate/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "copilot",
+    "profession": "real-estate",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_363_382",
+    "source_post_id": 363,
+    "source_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
+    "canonical_target_id": 382,
+    "target_url": "https://aitoolsforpros.com/gemini/real-estate/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "gemini",
+    "profession": "real-estate",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_363_371",
+    "source_post_id": 363,
+    "source_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
+    "canonical_target_id": 371,
+    "target_url": "https://aitoolsforpros.com/claude/real-estate/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "claude",
+    "profession": "real-estate",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_397_394",
+    "source_post_id": 397,
+    "source_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "canonical_target_id": 394,
+    "target_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "notion-ai",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_397_385",
+    "source_post_id": 397,
+    "source_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "canonical_target_id": 385,
+    "target_url": "https://aitoolsforpros.com/copilot/legal/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "copilot",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_397_381",
+    "source_post_id": 397,
+    "source_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "canonical_target_id": 381,
+    "target_url": "https://aitoolsforpros.com/gemini/legal/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "gemini",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_397_377",
+    "source_post_id": 397,
+    "source_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "canonical_target_id": 377,
+    "target_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "perplexity",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_397_369",
+    "source_post_id": 397,
+    "source_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "canonical_target_id": 369,
+    "target_url": "https://aitoolsforpros.com/claude/legal/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "claude",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_397_361",
+    "source_post_id": 397,
+    "source_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "canonical_target_id": 361,
+    "target_url": "https://aitoolsforpros.com/chatgpt/legal/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "chatgpt",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_394_397",
+    "source_post_id": 394,
+    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "canonical_target_id": 397,
+    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "grammarly",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_394_385",
+    "source_post_id": 394,
+    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "canonical_target_id": 385,
+    "target_url": "https://aitoolsforpros.com/copilot/legal/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "copilot",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_394_381",
+    "source_post_id": 394,
+    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "canonical_target_id": 381,
+    "target_url": "https://aitoolsforpros.com/gemini/legal/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "gemini",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_394_377",
+    "source_post_id": 394,
+    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "canonical_target_id": 377,
+    "target_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "perplexity",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_394_369",
+    "source_post_id": 394,
+    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "canonical_target_id": 369,
+    "target_url": "https://aitoolsforpros.com/claude/legal/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "claude",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_394_361",
+    "source_post_id": 394,
+    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "canonical_target_id": 361,
+    "target_url": "https://aitoolsforpros.com/chatgpt/legal/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "chatgpt",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_385_397",
+    "source_post_id": 385,
+    "source_url": "https://aitoolsforpros.com/copilot/legal/",
+    "canonical_target_id": 397,
+    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "primary_tool": "copilot",
+    "sibling_tool": "grammarly",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_385_394",
+    "source_post_id": 385,
+    "source_url": "https://aitoolsforpros.com/copilot/legal/",
+    "canonical_target_id": 394,
+    "target_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "primary_tool": "copilot",
+    "sibling_tool": "notion-ai",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_385_381",
+    "source_post_id": 385,
+    "source_url": "https://aitoolsforpros.com/copilot/legal/",
+    "canonical_target_id": 381,
+    "target_url": "https://aitoolsforpros.com/gemini/legal/",
+    "primary_tool": "copilot",
+    "sibling_tool": "gemini",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_385_369",
+    "source_post_id": 385,
+    "source_url": "https://aitoolsforpros.com/copilot/legal/",
+    "canonical_target_id": 369,
+    "target_url": "https://aitoolsforpros.com/claude/legal/",
+    "primary_tool": "copilot",
+    "sibling_tool": "claude",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_385_361",
+    "source_post_id": 385,
+    "source_url": "https://aitoolsforpros.com/copilot/legal/",
+    "canonical_target_id": 361,
+    "target_url": "https://aitoolsforpros.com/chatgpt/legal/",
+    "primary_tool": "copilot",
+    "sibling_tool": "chatgpt",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_381_397",
+    "source_post_id": 381,
+    "source_url": "https://aitoolsforpros.com/gemini/legal/",
+    "canonical_target_id": 397,
+    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "primary_tool": "gemini",
+    "sibling_tool": "grammarly",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_381_394",
+    "source_post_id": 381,
+    "source_url": "https://aitoolsforpros.com/gemini/legal/",
+    "canonical_target_id": 394,
+    "target_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "primary_tool": "gemini",
+    "sibling_tool": "notion-ai",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_381_377",
+    "source_post_id": 381,
+    "source_url": "https://aitoolsforpros.com/gemini/legal/",
+    "canonical_target_id": 377,
+    "target_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "primary_tool": "gemini",
+    "sibling_tool": "perplexity",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_377_397",
+    "source_post_id": 377,
+    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "canonical_target_id": 397,
+    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "grammarly",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_377_394",
+    "source_post_id": 377,
+    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "canonical_target_id": 394,
+    "target_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "notion-ai",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_377_385",
+    "source_post_id": 377,
+    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "canonical_target_id": 385,
+    "target_url": "https://aitoolsforpros.com/copilot/legal/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "copilot",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_377_381",
+    "source_post_id": 377,
+    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "canonical_target_id": 381,
+    "target_url": "https://aitoolsforpros.com/gemini/legal/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "gemini",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_377_369",
+    "source_post_id": 377,
+    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "canonical_target_id": 369,
+    "target_url": "https://aitoolsforpros.com/claude/legal/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "claude",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_377_361",
+    "source_post_id": 377,
+    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "canonical_target_id": 361,
+    "target_url": "https://aitoolsforpros.com/chatgpt/legal/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "chatgpt",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_369_397",
+    "source_post_id": 369,
+    "source_url": "https://aitoolsforpros.com/claude/legal/",
+    "canonical_target_id": 397,
+    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "primary_tool": "claude",
+    "sibling_tool": "grammarly",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_369_394",
+    "source_post_id": 369,
+    "source_url": "https://aitoolsforpros.com/claude/legal/",
+    "canonical_target_id": 394,
+    "target_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "primary_tool": "claude",
+    "sibling_tool": "notion-ai",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_369_385",
+    "source_post_id": 369,
+    "source_url": "https://aitoolsforpros.com/claude/legal/",
+    "canonical_target_id": 385,
+    "target_url": "https://aitoolsforpros.com/copilot/legal/",
+    "primary_tool": "claude",
+    "sibling_tool": "copilot",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_369_381",
+    "source_post_id": 369,
+    "source_url": "https://aitoolsforpros.com/claude/legal/",
+    "canonical_target_id": 381,
+    "target_url": "https://aitoolsforpros.com/gemini/legal/",
+    "primary_tool": "claude",
+    "sibling_tool": "gemini",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_369_377",
+    "source_post_id": 369,
+    "source_url": "https://aitoolsforpros.com/claude/legal/",
+    "canonical_target_id": 377,
+    "target_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "primary_tool": "claude",
+    "sibling_tool": "perplexity",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_361_397",
+    "source_post_id": 361,
+    "source_url": "https://aitoolsforpros.com/chatgpt/legal/",
+    "canonical_target_id": 397,
+    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "grammarly",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_361_394",
+    "source_post_id": 361,
+    "source_url": "https://aitoolsforpros.com/chatgpt/legal/",
+    "canonical_target_id": 394,
+    "target_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "notion-ai",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_361_381",
+    "source_post_id": 361,
+    "source_url": "https://aitoolsforpros.com/chatgpt/legal/",
+    "canonical_target_id": 381,
+    "target_url": "https://aitoolsforpros.com/gemini/legal/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "gemini",
+    "profession": "legal",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_395_364",
+    "source_post_id": 395,
+    "source_url": "https://aitoolsforpros.com/notion-ai/engineers/",
+    "canonical_target_id": 364,
+    "target_url": "https://aitoolsforpros.com/chatgpt/engineers/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "chatgpt",
+    "profession": "engineers",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_393_395",
+    "source_post_id": 393,
+    "source_url": "https://aitoolsforpros.com/cursor/engineers/",
+    "canonical_target_id": 395,
+    "target_url": "https://aitoolsforpros.com/notion-ai/engineers/",
+    "primary_tool": "cursor",
+    "sibling_tool": "notion-ai",
+    "profession": "engineers",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_393_388",
+    "source_post_id": 393,
+    "source_url": "https://aitoolsforpros.com/cursor/engineers/",
+    "canonical_target_id": 388,
+    "target_url": "https://aitoolsforpros.com/copilot/engineers/",
+    "primary_tool": "cursor",
+    "sibling_tool": "copilot",
+    "profession": "engineers",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_372_395",
+    "source_post_id": 372,
+    "source_url": "https://aitoolsforpros.com/claude/engineers/",
+    "canonical_target_id": 395,
+    "target_url": "https://aitoolsforpros.com/notion-ai/engineers/",
+    "primary_tool": "claude",
+    "sibling_tool": "notion-ai",
+    "profession": "engineers",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_372_364",
+    "source_post_id": 372,
+    "source_url": "https://aitoolsforpros.com/claude/engineers/",
+    "canonical_target_id": 364,
+    "target_url": "https://aitoolsforpros.com/chatgpt/engineers/",
+    "primary_tool": "claude",
+    "sibling_tool": "chatgpt",
+    "profession": "engineers",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_364_395",
+    "source_post_id": 364,
+    "source_url": "https://aitoolsforpros.com/chatgpt/engineers/",
+    "canonical_target_id": 395,
+    "target_url": "https://aitoolsforpros.com/notion-ai/engineers/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "notion-ai",
+    "profession": "engineers",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_364_393",
+    "source_post_id": 364,
+    "source_url": "https://aitoolsforpros.com/chatgpt/engineers/",
+    "canonical_target_id": 393,
+    "target_url": "https://aitoolsforpros.com/cursor/engineers/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "cursor",
+    "profession": "engineers",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_364_372",
+    "source_post_id": 364,
+    "source_url": "https://aitoolsforpros.com/chatgpt/engineers/",
+    "canonical_target_id": 372,
+    "target_url": "https://aitoolsforpros.com/claude/engineers/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "claude",
+    "profession": "engineers",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_391_384",
+    "source_post_id": 391,
+    "source_url": "https://aitoolsforpros.com/midjourney/architects/",
+    "canonical_target_id": 384,
+    "target_url": "https://aitoolsforpros.com/gemini/architects/",
+    "primary_tool": "midjourney",
+    "sibling_tool": "gemini",
+    "profession": "architects",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_391_375",
+    "source_post_id": 391,
+    "source_url": "https://aitoolsforpros.com/midjourney/architects/",
+    "canonical_target_id": 375,
+    "target_url": "https://aitoolsforpros.com/claude/architects/",
+    "primary_tool": "midjourney",
+    "sibling_tool": "claude",
+    "profession": "architects",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_391_367",
+    "source_post_id": 391,
+    "source_url": "https://aitoolsforpros.com/midjourney/architects/",
+    "canonical_target_id": 367,
+    "target_url": "https://aitoolsforpros.com/chatgpt/architects/",
+    "primary_tool": "midjourney",
+    "sibling_tool": "chatgpt",
+    "profession": "architects",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_384_391",
+    "source_post_id": 384,
+    "source_url": "https://aitoolsforpros.com/gemini/architects/",
+    "canonical_target_id": 391,
+    "target_url": "https://aitoolsforpros.com/midjourney/architects/",
+    "primary_tool": "gemini",
+    "sibling_tool": "midjourney",
+    "profession": "architects",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_384_375",
+    "source_post_id": 384,
+    "source_url": "https://aitoolsforpros.com/gemini/architects/",
+    "canonical_target_id": 375,
+    "target_url": "https://aitoolsforpros.com/claude/architects/",
+    "primary_tool": "gemini",
+    "sibling_tool": "claude",
+    "profession": "architects",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_384_367",
+    "source_post_id": 384,
+    "source_url": "https://aitoolsforpros.com/gemini/architects/",
+    "canonical_target_id": 367,
+    "target_url": "https://aitoolsforpros.com/chatgpt/architects/",
+    "primary_tool": "gemini",
+    "sibling_tool": "chatgpt",
+    "profession": "architects",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_375_391",
+    "source_post_id": 375,
+    "source_url": "https://aitoolsforpros.com/claude/architects/",
+    "canonical_target_id": 391,
+    "target_url": "https://aitoolsforpros.com/midjourney/architects/",
+    "primary_tool": "claude",
+    "sibling_tool": "midjourney",
+    "profession": "architects",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_375_384",
+    "source_post_id": 375,
+    "source_url": "https://aitoolsforpros.com/claude/architects/",
+    "canonical_target_id": 384,
+    "target_url": "https://aitoolsforpros.com/gemini/architects/",
+    "primary_tool": "claude",
+    "sibling_tool": "gemini",
+    "profession": "architects",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_375_367",
+    "source_post_id": 375,
+    "source_url": "https://aitoolsforpros.com/claude/architects/",
+    "canonical_target_id": 367,
+    "target_url": "https://aitoolsforpros.com/chatgpt/architects/",
+    "primary_tool": "claude",
+    "sibling_tool": "chatgpt",
+    "profession": "architects",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_367_391",
+    "source_post_id": 367,
+    "source_url": "https://aitoolsforpros.com/chatgpt/architects/",
+    "canonical_target_id": 391,
+    "target_url": "https://aitoolsforpros.com/midjourney/architects/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "midjourney",
+    "profession": "architects",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_367_384",
+    "source_post_id": 367,
+    "source_url": "https://aitoolsforpros.com/chatgpt/architects/",
+    "canonical_target_id": 384,
+    "target_url": "https://aitoolsforpros.com/gemini/architects/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "gemini",
+    "profession": "architects",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_367_375",
+    "source_post_id": 367,
+    "source_url": "https://aitoolsforpros.com/chatgpt/architects/",
+    "canonical_target_id": 375,
+    "target_url": "https://aitoolsforpros.com/claude/architects/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "claude",
+    "profession": "architects",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_389_383",
+    "source_post_id": 389,
+    "source_url": "https://aitoolsforpros.com/copilot/finance/",
+    "canonical_target_id": 383,
+    "target_url": "https://aitoolsforpros.com/gemini/finance/",
+    "primary_tool": "copilot",
+    "sibling_tool": "gemini",
+    "profession": "finance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_383_379",
+    "source_post_id": 383,
+    "source_url": "https://aitoolsforpros.com/gemini/finance/",
+    "canonical_target_id": 379,
+    "target_url": "https://aitoolsforpros.com/perplexity/finance/",
+    "primary_tool": "gemini",
+    "sibling_tool": "perplexity",
+    "profession": "finance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_379_389",
+    "source_post_id": 379,
+    "source_url": "https://aitoolsforpros.com/perplexity/finance/",
+    "canonical_target_id": 389,
+    "target_url": "https://aitoolsforpros.com/copilot/finance/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "copilot",
+    "profession": "finance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_379_383",
+    "source_post_id": 379,
+    "source_url": "https://aitoolsforpros.com/perplexity/finance/",
+    "canonical_target_id": 383,
+    "target_url": "https://aitoolsforpros.com/gemini/finance/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "gemini",
+    "profession": "finance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_379_373",
+    "source_post_id": 379,
+    "source_url": "https://aitoolsforpros.com/perplexity/finance/",
+    "canonical_target_id": 373,
+    "target_url": "https://aitoolsforpros.com/claude/finance/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "claude",
+    "profession": "finance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_379_365",
+    "source_post_id": 379,
+    "source_url": "https://aitoolsforpros.com/perplexity/finance/",
+    "canonical_target_id": 365,
+    "target_url": "https://aitoolsforpros.com/chatgpt/finance/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "chatgpt",
+    "profession": "finance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_373_383",
+    "source_post_id": 373,
+    "source_url": "https://aitoolsforpros.com/claude/finance/",
+    "canonical_target_id": 383,
+    "target_url": "https://aitoolsforpros.com/gemini/finance/",
+    "primary_tool": "claude",
+    "sibling_tool": "gemini",
+    "profession": "finance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_365_389",
+    "source_post_id": 365,
+    "source_url": "https://aitoolsforpros.com/chatgpt/finance/",
+    "canonical_target_id": 389,
+    "target_url": "https://aitoolsforpros.com/copilot/finance/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "copilot",
+    "profession": "finance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
+  },
+  {
+    "record_id": "rec_365_383",
+    "source_post_id": 365,
+    "source_url": "https://aitoolsforpros.com/chatgpt/finance/",
+    "canonical_target_id": 383,
+    "target_url": "https://aitoolsforpros.com/gemini/finance/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "gemini",
+    "profession": "finance",
+    "policy_version": "1.1.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "gap_detected"
   }
 ]
