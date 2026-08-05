@@ -46,6 +46,11 @@ on:
   schedule:
     - cron: '0 13 25 * *'  # day 25 of the month, ~9am ET (13:00 UTC) — same timing as System 2's research pass
 
+permissions:
+  contents: write  # needed for the "Commit updated backlog file" step below — the default
+                   # GITHUB_TOKEN is read-only otherwise, which fails that push with a 403.
+                   # Latent until now because no real run had ever produced backlog overflow.
+
 jobs:
   review:
     name: "Research + Full-Text Sweep + QA Gate + Apply"

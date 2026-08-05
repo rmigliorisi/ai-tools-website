@@ -50,6 +50,11 @@ on:
   schedule:
     - cron: '0 14 * * 3'  # Wednesday ~10am ET (14:00 UTC) — separate slot from System 1 (Mon) / System 3 (25th)
 
+permissions:
+  contents: write  # needed for the "Commit updated state files" step below — the default
+                   # GITHUB_TOKEN is read-only otherwise, which fails that push with a 403
+                   # (confirmed by run #3's failure before this was added).
+
 jobs:
   linking:
     name: "Audit + Score + Apply"
