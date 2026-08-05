@@ -1,0 +1,2282 @@
+[
+  {
+    "record_id": "rec_378_370",
+    "source_post_id": 378,
+    "source_url": "https://aitoolsforpros.com/perplexity/physicians/",
+    "canonical_target_id": 370,
+    "target_url": "https://aitoolsforpros.com/claude/physicians/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "claude",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Perplexity Falls Short for Physicians",
+    "existing_text": "For drafting tasks, use Claude or ChatGPT.",
+    "proposed_text": "For drafting tasks, use <a href=\"/claude/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a> or ChatGPT.",
+    "anchor_text": "Claude",
+    "rationale": "Physicians who use Perplexity to find literature or guidelines will often need to turn that evidence into a protocol, patient letter, or structured note, which the source page explicitly says Perplexity cannot do; linking to Claude's physician page is useful here because Claude's own page documents exactly that drafting strength for department protocols and structured clinical documents.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Department protocols, quality improvement checklists, and complex H&P templates are tasks where the formatting precision pays off.",
+      "source_field": "[content_sections[2].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "Claude is already linked once at the bottom comparison paragraph of this same section, but that is a generic 'see also' list. This inline mention inside the limitation card is a more contextually grounded, need-specific reference and is currently unlinked plain text naming Claude by name.",
+    "scored_at": "2026-08-05T19:23:15.363231+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_378_362",
+    "source_post_id": 378,
+    "source_url": "https://aitoolsforpros.com/perplexity/physicians/",
+    "canonical_target_id": 362,
+    "target_url": "https://aitoolsforpros.com/chatgpt/physicians/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "chatgpt",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Perplexity Falls Short for Physicians",
+    "existing_text": "For drafting tasks, use Claude or ChatGPT.",
+    "proposed_text": "For drafting tasks, use Claude or <a href=\"/chatgpt/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a>.",
+    "anchor_text": "ChatGPT",
+    "rationale": "Physicians reading that Perplexity cannot draft clinical notes or letters need a concrete alternative, and ChatGPT is already named in the sentence as that alternative; linking it lets readers verify ChatGPT's documentation capabilities directly.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "ChatGPT is a documentation and communication tool for physicians, not a clinical decision support system.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "ChatGPT is already named by name in the existing limitation-card prose within content_sections[3].section_body, which is an editable field per the task rules. Converting the existing mention into a link is the cleanest, most natural fix, consistent with how Claude and Copilot are already linked elsewhere on the same page.",
+    "scored_at": "2026-08-05T19:23:33.988061+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_370_386",
+    "source_post_id": 370,
+    "source_url": "https://aitoolsforpros.com/claude/physicians/",
+    "canonical_target_id": 386,
+    "target_url": "https://aitoolsforpros.com/copilot/physicians/",
+    "primary_tool": "claude",
+    "sibling_tool": "copilot",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "Protocol and Clinical Documentation Drafting",
+    "existing_text": "Claude's output handles technical medical language accurately, though clinical review remains essential before any protocol goes into use.",
+    "proposed_text": "Claude's output handles technical medical language accurately, though clinical review remains essential before any protocol goes into use. Physicians whose protocol drafting already happens in Word may prefer <a href=\"/copilot/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Copilot for physicians</a>, which can draft the same guideline-based protocol directly inside the document rather than requiring a copy-paste step into a separate tool.",
+    "anchor_text": "Copilot for physicians",
+    "rationale": "Physicians drafting department protocols from guideline text face a real workflow choice between copy-pasting into a standalone tool like Claude versus drafting in-app; the sibling page documents this exact same protocol-drafting task done natively inside Word, which is directly relevant at this point in the source's protocol-drafting section.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Paste a clinical guideline section into a Word document and ask Copilot to draft a department protocol in numbered format, adapted to your institutional context. The draft requires clinical review but provides the structural scaffolding that makes protocol writing significantly faster.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The source page already links to Copilot's physician page in a generic 'Comparing your options' footer sentence within content_sections[3]. This proposal adds a more specific, evidenced contextual mention earlier in the prose (the protocol-drafting section) where a genuine workflow tradeoff (copy-paste vs. in-app drafting) exists and is supported by the sibling's own stated capability.",
+    "scored_at": "2026-08-05T19:24:31.451600+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_362_378",
+    "source_post_id": 362,
+    "source_url": "https://aitoolsforpros.com/chatgpt/physicians/",
+    "canonical_target_id": 378,
+    "target_url": "https://aitoolsforpros.com/perplexity/physicians/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "perplexity",
+    "profession": "physicians",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where ChatGPT Falls Short for Physicians",
+    "existing_text": "For cited, current literature, usePerplexity AI.",
+    "proposed_text": "For cited, current literature, use <a href=\"/perplexity/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Perplexity AI</a>.",
+    "anchor_text": "Perplexity AI",
+    "rationale": "The source page already tells physicians that ChatGPT cannot search current medical literature and points them to Perplexity as the alternative, so turning this existing mention into a link lets readers act on the recommendation immediately.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Perplexity AI solves a specific problem that Claude and ChatGPT cannot: getting cited, current medical literature fast.",
+      "source_field": "[subtitle]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/perplexity/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "The existing sentence has a minor typo ('usePerplexity AI' missing a space), which naturally gets fixed when wrapping 'Perplexity AI' in the anchor tag, improving both readability and linking in one edit.",
+    "scored_at": "2026-08-05T19:25:49.644307+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_400_376",
+    "source_post_id": 400,
+    "source_url": "https://aitoolsforpros.com/grammarly/creatives/",
+    "canonical_target_id": 376,
+    "target_url": "https://aitoolsforpros.com/claude/creatives/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "claude",
+    "profession": "creatives",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "feature_section",
+    "section_title_hint": "Editing AI-Generated Copy Before Delivery",
+    "existing_text": "One of the most practical Grammarly workflows for creative professionals is using it specifically to polish ChatGPT or Claude output before client delivery.",
+    "proposed_text": "One of the most practical Grammarly workflows for creative professionals is using it specifically to polish ChatGPT or <a href=\"/claude/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a> output before client delivery.",
+    "anchor_text": "Claude",
+    "rationale": "The source already names Claude as one of the two generators whose output Grammarly is meant to polish, so linking that mention lets readers who use Claude for long-form drafts jump straight to guidance on how Grammarly fits into that specific workflow.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Most creative professionals benefit from using both: Claude for substantive editing, Grammarly for final-pass polish.",
+      "source_field": "faq[5].answer",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "The sentence already mentions Claude by name without a link; converting that existing mention into a link is the cleanest, least invasive option and is directly supported by the sibling page's own stated Claude+Grammarly workflow pairing (also echoed in consistency_blocks.avoid_if and consistency_blocks.mini_workflow on the sibling page).",
+    "scored_at": "2026-08-05T19:27:13.571206+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_400_368",
+    "source_post_id": 400,
+    "source_url": "https://aitoolsforpros.com/grammarly/creatives/",
+    "canonical_target_id": 368,
+    "target_url": "https://aitoolsforpros.com/chatgpt/creatives/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "chatgpt",
+    "profession": "creatives",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "feature_section",
+    "section_title_hint": "Inline Writing Quality Across All Creative Output",
+    "existing_text": "Creative professionals who use ChatGPT for content production often generate batches of social captions, email sequences, or ad variations quickly.",
+    "proposed_text": "Creative professionals who use <a href=\"/chatgpt/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> for content production often generate batches of social captions, email sequences, or ad variations quickly.",
+    "anchor_text": "ChatGPT",
+    "rationale": "The sentence already names ChatGPT as the source of high-volume copy that needs Grammarly's cleanup, and linking it lets readers who want more detail on ChatGPT's creative workflow (volume copywriting, caption/ad variation generation) navigate directly to that page.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "The most straightforward creative use of ChatGPT is volume copywriting. Not final-draft copy, but competent first drafts produced quickly from a clear brief. Taglines, headlines, ad variations, social captions, email subject lines, the kinds of deliverables creative professionals produce at high volume.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "This is a straightforward existing-text linking case: the sentence already names ChatGPT and describes exactly the workflow (batch caption/ad/email generation) that the sibling page documents in detail, so no new claims are introduced.",
+    "scored_at": "2026-08-05T22:55:34.359148+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_396_376",
+    "source_post_id": 396,
+    "source_url": "https://aitoolsforpros.com/notion-ai/creatives/",
+    "canonical_target_id": 376,
+    "target_url": "https://aitoolsforpros.com/claude/creatives/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "claude",
+    "profession": "creatives",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "insert_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "Creative Brief Generation from Project Notes",
+    "existing_text": null,
+    "proposed_text": "For substantially longer or more detailed briefs that need to synthesize a full brand guide, competitive research, and audience personas together, <a href=\"/claude/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a> is built to hold and reason across that much source material in a single conversation, a heavier lift than the quick note-to-brief conversion Notion AI handles here.",
+    "anchor_text": "Claude",
+    "rationale": "Creative teams often need to decide whether a quick in-workspace brief conversion is enough or whether a more complex, research-heavy brief warrants a different tool, and Claude's stated strength at synthesizing large source documents into strategy-level deliverables (which its own page explicitly lists as including 'creative briefs with depth') gives readers a concrete decision point right where brief generation is being discussed.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Claude handles these well because the 1M-token context window means it can hold a full brand guide, a competitive landscape document, and a set of audience personas in a single conversation and reason across all of them when building a strategy document.",
+      "source_field": "content_sections[2].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "medium",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "Note that the source page already links to /claude/creatives/ in the closing 'Comparing your options' boilerplate paragraph of content_sections[3]; that existing link is a generic cross-link list rather than a contextual explanation, so it does not satisfy the test on its own. The proposed insertion adds a genuine, evidenced comparison point (simple note-to-brief conversion vs. depth-heavy, multi-document brief synthesis) that extends the section's existing 'which tool for which job' framing (it already contrasts with ChatGPT in the same section) rather than bolting on an unrelated aside.",
+    "scored_at": "2026-08-05T22:57:34.004238+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_396_368",
+    "source_post_id": 396,
+    "source_url": "https://aitoolsforpros.com/notion-ai/creatives/",
+    "canonical_target_id": 368,
+    "target_url": "https://aitoolsforpros.com/chatgpt/creatives/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "chatgpt",
+    "profession": "creatives",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Notion AI Falls Short for Creatives",
+    "existing_text": "For rapid concept generation, tagline brainstorming, and high-volume creative output, ChatGPT is meaningfully better at the ideation speed and variety that creative work requires.",
+    "proposed_text": "For rapid concept generation, tagline brainstorming, and high-volume creative output, <a href=\"/chatgpt/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> is meaningfully better at the ideation speed and variety that creative work requires.",
+    "anchor_text": "ChatGPT",
+    "rationale": "A creative professional reading this limitation card is told ChatGPT is the better tool for ideation speed and volume; linking to ChatGPT's own creatives page lets them immediately see how it delivers that (the 5-angle technique, headline variation volume) rather than just taking the claim on faith.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "ChatGPT can produce 10-20 variations of a headline or tagline in the time it would take to write 2 by hand.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "This sentence already names ChatGPT explicitly and makes a specific comparative claim (ideation speed/variety, high-volume output) that is directly supported by the sibling page's own copywriting and ideation sections. The existing 'see also' link at the bottom already points to the same URL, but this in-context mention is a stronger, more natural anchor point since it occurs where the comparative claim is actually made.",
+    "scored_at": "2026-08-05T22:57:51.180472+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_392_368",
+    "source_post_id": 392,
+    "source_url": "https://aitoolsforpros.com/midjourney/creatives/",
+    "canonical_target_id": 368,
+    "target_url": "https://aitoolsforpros.com/chatgpt/creatives/",
+    "primary_tool": "midjourney",
+    "sibling_tool": "chatgpt",
+    "profession": "creatives",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Midjourney Falls Short for Creatives",
+    "existing_text": "For copywriting, brief development, strategy documents, and any text-based creative work, you need ChatGPT or Claude.",
+    "proposed_text": "For copywriting, brief development, strategy documents, and any text-based creative work, you need <a href=\"/chatgpt/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> or Claude.",
+    "anchor_text": "ChatGPT",
+    "rationale": "This limitation card explicitly tells creatives that Midjourney has no text capability and points them to ChatGPT for text-based work, which is exactly the need the sibling page addresses; linking the existing mention gives readers a direct path to that coverage.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "ChatGPT is the most versatile AI tool for creative professionals. It handles copywriting, ideation, brief structuring, and content strategy without requiring a specialized subscription for each task.",
+      "source_field": "consistency_blocks.bottom_line",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "Note: a generic 'Comparing your options' link roundup at the end of this same section already links to /chatgpt/creatives/, but that is a bolted-on link list, not a contextual mention. The limit-card sentence is a stronger, evidence-grounded contextual opportunity that currently names ChatGPT without linking it.",
+    "scored_at": "2026-08-05T22:59:14.660415+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_376_396",
+    "source_post_id": 376,
+    "source_url": "https://aitoolsforpros.com/claude/creatives/",
+    "canonical_target_id": 396,
+    "target_url": "https://aitoolsforpros.com/notion-ai/creatives/",
+    "primary_tool": "claude",
+    "sibling_tool": "notion-ai",
+    "profession": "creatives",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "insert_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "Creative Strategy Documents and Content Frameworks",
+    "existing_text": "Claude handles these well because the 1M-token context window means it can hold a full brand guide, a competitive landscape document, and a set of audience personas in a single conversation and reason across all of them when building a strategy document. You are not starting from scratch, you are processing everything you already know into structured output.",
+    "proposed_text": "Claude handles these well because the 1M-token context window means it can hold a full brand guide, a competitive landscape document, and a set of audience personas in a single conversation and reason across all of them when building a strategy document. You are not starting from scratch, you are processing everything you already know into structured output. If your creative briefs and content calendars already live in Notion, <a href=\"/notion-ai/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Notion AI</a> can generate them directly inside that same workspace without a copy-paste step, though the tradeoff is output quality that is comparable rather than superior to what a dedicated long-form tool produces.",
+    "anchor_text": "Notion AI",
+    "rationale": "The section explicitly lists creative briefs and editorial calendars as the deliverables under discussion, which is exactly Notion AI's stated use case, so a reader managing those documents inside Notion benefits from knowing there's a workspace-native alternative with a clear quality/convenience tradeoff versus Claude.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "The output quality is comparable. Notion AI is powered by a capable language model and produces reasonable brief structures. The advantage is not that it writes better, it is that the brief lives immediately in your project page where your team can see and edit it.",
+      "source_field": "[content_sections[0].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/notion-ai/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "Source page already includes a generic catch-all link to /notion-ai/creatives/ in the limitations section's closing 'Comparing your options?' paragraph, but that is a list-style mention, not a contextual one. This proposal adds a genuinely evidenced, workflow-specific mention in the strategy/briefs section instead, which better satisfies the contextual-relevance test.",
+    "scored_at": "2026-08-05T23:00:02.054011+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_376_392",
+    "source_post_id": 376,
+    "source_url": "https://aitoolsforpros.com/claude/creatives/",
+    "canonical_target_id": 392,
+    "target_url": "https://aitoolsforpros.com/midjourney/creatives/",
+    "primary_tool": "claude",
+    "sibling_tool": "midjourney",
+    "profession": "creatives",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Claude Falls Short for Creatives",
+    "existing_text": "Claude is a text-only model. For visual creative work, Midjourney is the professional standard. These tools serve entirely different functions in a creative stack.",
+    "proposed_text": "Claude is a text-only model. For visual creative work, <a href=\"/midjourney/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Midjourney</a> is the professional standard. These tools serve entirely different functions in a creative stack.",
+    "anchor_text": "Midjourney",
+    "rationale": "The source page already tells creatives that Claude cannot do image generation and names Midjourney as the alternative for visual work; linking that existing mention lets a reader who needs visual output go directly to the tool that actually handles it, which the sibling page confirms is its specialty.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Midjourney produces professional-quality images that no other AI image tool consistently matches.",
+      "source_field": "[consistency_blocks.bottom_line]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/midjourney/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "The existing limitations-grid text already names Midjourney by name but does not currently link to it, while the closing paragraph of the same section links to ChatGPT, Grammarly, and Notion AI but omits Midjourney entirely. This is a straightforward case of linking existing, already-accurate prose rather than inventing new claims.",
+    "scored_at": "2026-08-05T23:00:16.950842+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_376_368",
+    "source_post_id": 376,
+    "source_url": "https://aitoolsforpros.com/claude/creatives/",
+    "canonical_target_id": 368,
+    "target_url": "https://aitoolsforpros.com/chatgpt/creatives/",
+    "primary_tool": "claude",
+    "sibling_tool": "chatgpt",
+    "profession": "creatives",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "feature_section",
+    "section_title_hint": "Long-Form Brand Writing and Narratives",
+    "existing_text": "When ChatGPT writes a 2,000-word piece, subtle voice drift is common, the second half sounds like a slightly different writer than the first.",
+    "proposed_text": "When <a href=\"/chatgpt/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> writes a 2,000-word piece, subtle voice drift is common, the second half sounds like a slightly different writer than the first.",
+    "anchor_text": "ChatGPT",
+    "rationale": "The source page already names ChatGPT as the comparison point for long-form voice consistency, and the sibling's own page admits this exact limitation, so linking here gives the reader a direct path to verify the claim from ChatGPT's own review.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "It will not match Claude's tone consistency on extended pieces, but for most creative professionals, the workflow is draft, edit, refine, not accept the output as-written.",
+      "source_field": "content_sections[2].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "The sentence already exists in the source prose and names ChatGPT directly in a substantive comparison; it simply lacks a hyperlink. This is a clean case of order-of-preference #1 (link existing text) with strong mutual evidence from both pages.",
+    "scored_at": "2026-08-05T23:00:35.001086+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_368_396",
+    "source_post_id": 368,
+    "source_url": "https://aitoolsforpros.com/chatgpt/creatives/",
+    "canonical_target_id": 396,
+    "target_url": "https://aitoolsforpros.com/notion-ai/creatives/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "notion-ai",
+    "profession": "creatives",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "Creative Ideation and Concept Development",
+    "existing_text": "When a client gives you a rough objective and calls it a brief, ChatGPT is useful for turning that into a structured document. Paste the client's vague notes and ask it to draft a brief with audience definition, tone guidelines, objectives, and success criteria. You will then edit the output substantially, but you will spend less time staring at a blank page.",
+    "proposed_text": "When a client gives you a rough objective and calls it a brief, ChatGPT is useful for turning that into a structured document. Paste the client's vague notes and ask it to draft a brief with audience definition, tone guidelines, objectives, and success criteria. You will then edit the output substantially, but you will spend less time staring at a blank page. If your client notes already live in a Notion workspace, <a href=\"/notion-ai/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Notion AI</a> can generate that same structured brief directly on the page, skipping the copy-paste round trip ChatGPT requires.",
+    "anchor_text": "Notion AI",
+    "rationale": "Readers doing this exact brief-structuring task may already have their client notes in Notion, and the sibling page directly addresses this workflow tradeoff (copy-paste friction) that this paragraph's ChatGPT workflow has.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "The practical difference is the copy-paste step. In ChatGPT, you would copy your notes out of Notion, paste them into the ChatGPT interface, get the brief, and bring it back. In Notion AI, you select the notes, invoke AI, and the brief appears in the same document.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/notion-ai/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "Note the source page already has a generic 'Also see Notion AI for creative workflows' link in the limitations section (content_sections[3]), but that is a boilerplate cross-link list, not a contextual mention. This proposed edit adds a distinct, evidenced contextual link in the brief-structuring paragraph of section 1, which directly parallels the sibling's stated strongest use case.",
+    "scored_at": "2026-08-05T23:01:11.080664+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_368_392",
+    "source_post_id": 368,
+    "source_url": "https://aitoolsforpros.com/chatgpt/creatives/",
+    "canonical_target_id": 392,
+    "target_url": "https://aitoolsforpros.com/midjourney/creatives/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "midjourney",
+    "profession": "creatives",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where ChatGPT Falls Short for Creatives",
+    "existing_text": "The DALL-E integration is included in ChatGPT but the output quality for professional visual creative work is meaningfully below Midjourney. If images are a core deliverable, Midjourney is not optional.",
+    "proposed_text": "The DALL-E integration is included in ChatGPT but the output quality for professional visual creative work is meaningfully below <a href=\"/midjourney/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Midjourney</a>. If images are a core deliverable, Midjourney is not optional.",
+    "anchor_text": "Midjourney",
+    "rationale": "A creative professional reading this limitation card needs to know where to go for image work; the source already names Midjourney as the superior option, so linking it directly to Midjourney's creative-specific review answers that need immediately.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "For visual creatives, it is not optional.",
+      "source_field": "[subtitle]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/midjourney/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "The mention of Midjourney already exists verbatim in the limitation card's body text (within content_sections[3].section_body); it just needs to be converted into a hyperlink rather than adding new prose. This satisfies preference 1 (link existing text) cleanly.",
+    "scored_at": "2026-08-05T23:01:24.961859+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_399_374",
+    "source_post_id": 399,
+    "source_url": "https://aitoolsforpros.com/grammarly/insurance/",
+    "canonical_target_id": 374,
+    "target_url": "https://aitoolsforpros.com/claude/insurance/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "claude",
+    "profession": "insurance",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Grammarly Falls Short for Insurance Professionals",
+    "existing_text": "Grammarly can help with short email drafts through its generative features, but for drafting complete coverage explanations, proposals, and multi-section client reports from scratch, ChatGPT is substantially more capable.",
+    "proposed_text": "Grammarly can help with short email drafts through its generative features, but for drafting complete coverage explanations, proposals, and multi-section client reports from scratch, ChatGPT is substantially more capable, and for especially long commercial policy analyses or multi-section reports, <a href=\"/claude/insurance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a>'s extended context makes it well suited to drafting the longer document in one pass.",
+    "anchor_text": "Claude",
+    "rationale": "This limitation card already contrasts Grammarly's lack of generative depth with ChatGPT's drafting capability for longer insurance documents; adding Claude here addresses agents dealing with especially long commercial policy analyses or multi-section reports, a distinct case the sibling page specifically claims to handle well.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Claude's writing quality and extended context make it well-suited for drafting these longer documents.",
+      "source_field": "content_sections[2].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/insurance/"
+    },
+    "confidence": {
+      "relevance_confidence": "medium",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "Claude is already linked once in the source page's generic 'Comparing your options?' footer paragraph within content_sections[3].section_body, so this proposal adds a second, more contextually grounded mention rather than being the first link to the sibling. Reviewer should confirm whether a second link to the same sibling within the same section is desired per site style, or whether the existing catch-all link is considered sufficient.",
+    "scored_at": "2026-08-05T23:03:04.795596+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_399_366",
+    "source_post_id": 399,
+    "source_url": "https://aitoolsforpros.com/grammarly/insurance/",
+    "canonical_target_id": 366,
+    "target_url": "https://aitoolsforpros.com/chatgpt/insurance/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "chatgpt",
+    "profession": "insurance",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "feature_section",
+    "section_title_hint": "The ChatGPT + Grammarly Workflow",
+    "existing_text": "The most productive use of Grammarly for insurance professionals is not as a standalone tool, it is as the final pass in a workflow that starts with ChatGPT for drafting.",
+    "proposed_text": "The most productive use of Grammarly for insurance professionals is not as a standalone tool, it is as the final pass in a workflow that starts with <a href=\"/chatgpt/insurance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> for drafting.",
+    "anchor_text": "ChatGPT",
+    "rationale": "This section already names ChatGPT as the drafting tool that precedes Grammarly's polish pass, so linking to ChatGPT's own insurance page lets readers who want to evaluate that half of the workflow go directly to it, and the sibling page independently confirms this exact pairing is a recommended workflow.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Insurance professionals who use ChatGPT to draft and Grammarly to polish get better results from both than those who rely on either tool alone.",
+      "source_field": "[reviews_miss.insights[2].insight_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/insurance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "ChatGPT is already named in plain prose in this exact sentence with no existing link, making this a straightforward link_existing_text case. The sibling page's reviews_miss insight explicitly validates the ChatGPT-draft-then-Grammarly-polish workflow described in the source paragraph, satisfying the evidence requirement even though that specific field sits outside content_sections on the sibling side (only the source-side edit restriction applies).",
+    "scored_at": "2026-08-05T23:03:23.242988+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_380_374",
+    "source_post_id": 380,
+    "source_url": "https://aitoolsforpros.com/perplexity/insurance/",
+    "canonical_target_id": 374,
+    "target_url": "https://aitoolsforpros.com/claude/insurance/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "claude",
+    "profession": "insurance",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Perplexity AI Falls Short for Insurance Professionals",
+    "existing_text": "For policy analysis, use Claude.",
+    "proposed_text": "For policy analysis, use <a href=\"/claude/insurance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a>.",
+    "anchor_text": "Claude",
+    "rationale": "The limitation card already tells readers that Perplexity isn't suited for policy analysis and directs them to Claude by name; linking that existing mention lets readers who need to review a long commercial policy go directly to the tool built for that task.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Claude is the strongest AI for insurance work that involves long, complex policy documents.",
+      "source_field": "[consistency_blocks.bottom_line]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/insurance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "Note: the source page's closing 'Comparing your options' paragraph already contains a separate link to /claude/insurance/, so this would be a second, more contextually specific link to the same target within the same content_sections field. This is consistent with the sibling's Copilot link appearing in the same sentence structure ('use ChatGPT or Copilot'), so linking Claude here matches the existing pattern rather than adding redundant clutter.",
+    "scored_at": "2026-08-05T23:04:32.058343+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_380_366",
+    "source_post_id": 380,
+    "source_url": "https://aitoolsforpros.com/perplexity/insurance/",
+    "canonical_target_id": 366,
+    "target_url": "https://aitoolsforpros.com/chatgpt/insurance/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "chatgpt",
+    "profession": "insurance",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Perplexity AI Falls Short for Insurance Professionals",
+    "existing_text": "Perplexity is optimized for research and synthesis, not for reviewing policy documents or drafting client communications. For policy analysis, use Claude. For drafting proposals and correspondence, use ChatGPT or <a href=\"/copilot/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Copilot</a>. Perplexity fills the current-information research layer that the other tools lack.",
+    "proposed_text": "Perplexity is optimized for research and synthesis, not for reviewing policy documents or drafting client communications. For policy analysis, use Claude. For drafting proposals and correspondence, use <a href=\"/chatgpt/insurance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> or <a href=\"/copilot/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Copilot</a>. Perplexity fills the current-information research layer that the other tools lack.",
+    "anchor_text": "ChatGPT",
+    "rationale": "The source already names ChatGPT as the recommended tool for drafting proposals and correspondence in the same sentence where Copilot is hyperlinked, so linking the existing ChatGPT mention gives insurance readers a direct path to the tool best suited for that exact task.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "ChatGPT can draft the narrative portions from an outline or structured notes, significantly reducing the time required to produce a polished proposal document.",
+      "source_field": "content_sections[2].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/insurance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "ChatGPT is already named in this sentence alongside a linked mention of Copilot; the fix is simply to add the missing hyperlink to ChatGPT's insurance page, matching the existing pattern in the same sentence.",
+    "scored_at": "2026-08-05T23:04:45.720738+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_366_390",
+    "source_post_id": 366,
+    "source_url": "https://aitoolsforpros.com/chatgpt/insurance/",
+    "canonical_target_id": 390,
+    "target_url": "https://aitoolsforpros.com/copilot/insurance/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "copilot",
+    "profession": "insurance",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "Coverage Comparison Summaries and Proposal Drafting",
+    "existing_text": "ChatGPT can draft the narrative portions from an outline or structured notes, significantly reducing the time required to produce a polished proposal document.",
+    "proposed_text": "ChatGPT can draft the narrative portions from an outline or structured notes, significantly reducing the time required to produce a polished proposal document, though for agencies that produce proposals in Microsoft Word, <a href=\"/copilot/insurance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Copilot</a> keeps that drafting inside the document itself rather than requiring the copy-paste step ChatGPT's chat interface involves.",
+    "anchor_text": "Copilot",
+    "rationale": "Insurance agents who already draft proposals in Word face an extra copy-paste step with ChatGPT's chat-based output; readers evaluating tools for this workflow benefit from knowing Copilot's integration avoids that friction.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "The main advantage of Copilot is that output lands inside the M365 tool you are already working in, the proposal stays in Word, the email stays in Outlook. ChatGPT produces output in a chat window that requires copy-paste.",
+      "source_field": "faq[5].answer",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/insurance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "This mirrors the sibling page's own stated ChatGPT-vs-Copilot comparison (also echoed in its comparison_notes table and reviews_miss insight), so the workflow tradeoff is genuinely grounded rather than invented.",
+    "scored_at": "2026-08-05T23:06:07.320102+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_398_363",
+    "source_post_id": 398,
+    "source_url": "https://aitoolsforpros.com/grammarly/real-estate/",
+    "canonical_target_id": 363,
+    "target_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "chatgpt",
+    "profession": "real-estate",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "feature_section",
+    "section_title_hint": "What Grammarly Does Well for Real Estate Agents",
+    "existing_text": "Whether the first draft comes from you or ChatGPT, listing remarks benefit from a final pass.",
+    "proposed_text": "Whether the first draft comes from you or <a href=\"/chatgpt/real-estate/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a>, listing remarks benefit from a final pass.",
+    "anchor_text": "ChatGPT",
+    "rationale": "This sentence already names ChatGPT as a common source of the first listing draft that Grammarly then polishes, which directly matches the sibling page's own stated workflow of using ChatGPT to generate content and Grammarly to refine it, giving readers a natural path to the tool that fills the generation gap Grammarly explicitly does not cover.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "ChatGPT generates content from scratch (listing descriptions, emails, market reports). Grammarly polishes content you have already written. The best workflow uses both: ChatGPT to generate the first draft, Grammarly to catch tone and grammar issues before sending. They are complementary, not competing tools.",
+      "source_field": "[faq[4].answer]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/real-estate/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "ChatGPT is already linked once in this source page's limitations section as part of a boilerplate 'compare your options' list; this proposal adds a second, contextually meaningful in-prose link earlier in the content where ChatGPT is mentioned by name as the draft source, which is a distinct and stronger contextual placement than the see-also list.",
+    "scored_at": "2026-08-05T23:07:22.859466+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_382_371",
+    "source_post_id": 382,
+    "source_url": "https://aitoolsforpros.com/gemini/real-estate/",
+    "canonical_target_id": 371,
+    "target_url": "https://aitoolsforpros.com/claude/real-estate/",
+    "primary_tool": "gemini",
+    "sibling_tool": "claude",
+    "profession": "real-estate",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Google Gemini Falls Short for Real Estate",
+    "existing_text": "For HOA document review, full purchase agreement analysis, or multi-document comparison, Claude's 200K context window and document reasoning give it a meaningful edge.",
+    "proposed_text": "For HOA document review, full purchase agreement analysis, or multi-document comparison, <a href=\"/claude/real-estate/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude's</a> context window and document reasoning give it a meaningful edge.",
+    "anchor_text": "Claude's",
+    "rationale": "The source already names Claude as the stronger choice for long, complex document work, a claim readers evaluating Gemini for HOA docs or purchase agreements would want to verify or explore, and the sibling page is the direct, on-topic destination for that comparison.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Claude is the strongest tool for real estate agents who regularly read long documents. Its 1M-token context window is not a talking point, it changes what you can do in a single session.",
+      "source_field": "[consistency_blocks.bottom_line]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/real-estate/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "medium",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "The source text states Claude has a '200K context window' while the sibling page states Claude's context window is 1M tokens. This numeric discrepancy predates this proposed edit (it exists in the source's own prose already) and is not something this link edit is authorized to fix, but a human editor should reconcile the figure since it affects factual accuracy independent of the link itself.",
+    "scored_at": "2026-08-05T23:09:13.430109+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_382_363",
+    "source_post_id": 382,
+    "source_url": "https://aitoolsforpros.com/gemini/real-estate/",
+    "canonical_target_id": 363,
+    "target_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
+    "primary_tool": "gemini",
+    "sibling_tool": "chatgpt",
+    "profession": "real-estate",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "feature_section",
+    "section_title_hint": "Google Search Grounding — The Feature That Sets Gemini Apart",
+    "existing_text": "Gemini's Google Search grounding is genuinely different from what Claude, ChatGPT, or <a href=\"/copilot/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Copilot</a> offer as defaults.",
+    "proposed_text": "Gemini's Google Search grounding is genuinely different from what Claude, <a href=\"/chatgpt/real-estate/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a>, or <a href=\"/copilot/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Copilot</a> offer as defaults.",
+    "anchor_text": "ChatGPT",
+    "rationale": "The sentence already names ChatGPT as one of the tools that lacks Gemini's default search-grounding behavior, and readers comparing tools for real-estate market research would benefit from a direct link to the ChatGPT real estate page, which explicitly confirms it has no live external data access by default.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Everything it produces is based on information you provide in the prompt. You are the data source; it is the writer.",
+      "source_field": "content_sections[2].section_body (limit-desc, 'No access to MLS, comp data, or live market information')",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/real-estate/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "medium",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "ChatGPT is already named in this sentence alongside Claude and Copilot (Copilot already links to /copilot/); adding a link for ChatGPT to /chatgpt/real-estate/ completes the existing comparative mention rather than introducing new claims. Evidence is about real-estate-specific data access rather than general web browsing, so the match is reasonably strong but not a perfect one-to-one match to 'search grounding' terminology.",
+    "scored_at": "2026-08-05T23:10:01.443476+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_371_382",
+    "source_post_id": 371,
+    "source_url": "https://aitoolsforpros.com/claude/real-estate/",
+    "canonical_target_id": 382,
+    "target_url": "https://aitoolsforpros.com/gemini/real-estate/",
+    "primary_tool": "claude",
+    "sibling_tool": "gemini",
+    "profession": "real-estate",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "HOA Document Review: Where Claude Has a Clear Edge",
+    "existing_text": "Unlike <a href=\"/chatgpt/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a>, which hits its context limit on very long documents, Claude processes the full text without losing detail from the first pages by the time it reaches the last ones.",
+    "proposed_text": "Unlike <a href=\"/chatgpt/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a>, which hits its context limit on very long documents, Claude processes the full text without losing detail from the first pages by the time it reaches the last ones. <a href=\"/gemini/real-estate/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Gemini</a> handles long documents reasonably well too, but its own comparison notes that for this kind of deep continuity across a long, complex document, Claude remains the better choice.",
+    "anchor_text": "Gemini",
+    "rationale": "Agents comparing AI tools for HOA and contract review specifically need to know how Gemini stacks up on long-document reasoning, and the sibling page itself concedes this is where Claude has the edge, making the comparison directly relevant to this section's topic.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Gemini handles document tasks reasonably well, but if deep continuity across a long, complex document is the task, Claude is the better choice.",
+      "source_field": "content_sections[3].section_body (limit-desc, 'Not as strong as Claude for long document analysis' card)",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/gemini/real-estate/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The source page already links to /gemini/real-estate/ in the boilerplate 'Comparing your options?' list at the end of content_sections[3], but that is a generic cross-link list rather than a genuine contextual mention. This proposal adds a substantive, evidenced comparison point within the actual HOA document review discussion, which better satisfies the editorial test than the existing boilerplate link.",
+    "scored_at": "2026-08-05T23:11:02.679545+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_363_387",
+    "source_post_id": 363,
+    "source_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
+    "canonical_target_id": 387,
+    "target_url": "https://aitoolsforpros.com/copilot/real-estate/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "copilot",
+    "profession": "real-estate",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "What ChatGPT Does Well for Real Estate Agents",
+    "existing_text": "ChatGPT drafts offer comparison summaries, inspection response letters, and transaction update messages efficiently.",
+    "proposed_text": "ChatGPT drafts offer comparison summaries, inspection response letters, and transaction update messages efficiently. If your brokerage already runs on Microsoft 365, <a href=\"/copilot/real-estate/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Microsoft Copilot</a> can build a similar comparison directly inside Excel from the terms you paste in, keeping the analysis in the same spreadsheet you use to track offers.",
+    "anchor_text": "Microsoft Copilot",
+    "rationale": "Agents comparing multiple offers for a seller often already track terms in a spreadsheet, and readers deciding between tools benefit from knowing Copilot can do this comparison inline in Excel rather than requiring a separate app like ChatGPT.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Paste the key terms of each offer into an Excel spreadsheet and ask Copilot to add a summary column highlighting each offer's primary strength and the main risk.",
+      "source_field": "content_sections[2].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/real-estate/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The source page already links to Copilot's real estate page in the closing 'Comparing your options' paragraph of content_sections[2], but that is a generic cross-link list, not a contextual mention tied to a specific workflow. This proposed addition creates a genuine, evidence-backed workflow comparison (offer comparison in Excel vs. ChatGPT drafting) rather than duplicating the existing generic link.",
+    "scored_at": "2026-08-05T23:11:48.801642+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_363_382",
+    "source_post_id": 363,
+    "source_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
+    "canonical_target_id": 382,
+    "target_url": "https://aitoolsforpros.com/gemini/real-estate/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "gemini",
+    "profession": "real-estate",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where ChatGPT Falls Short for Real Estate Agents",
+    "existing_text": "This is the most common source of disappointment for agents who expect it to generate data-driven content autonomously.",
+    "proposed_text": "This is the most common source of disappointment for agents who expect it to generate data-driven content autonomously; agents who need at least some live market context can pair it with <a href=\"/gemini/real-estate/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Gemini for real estate agents</a>, whose Google Search grounding pulls current web results for market conditions, though any specific claims should still be verified before sharing with clients.",
+    "anchor_text": "Gemini for real estate agents",
+    "rationale": "The limitation card explains that ChatGPT has no connection to live market data and relies entirely on prompt input; this is exactly the gap Gemini's Search grounding is built to partially address, so noting it here gives readers a concrete next step rather than leaving the limitation unresolved.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Gemini's Google Search grounding is genuinely different from what Claude, ChatGPT, or Copilot offer as defaults. When grounding is active, Gemini pulls current web results inline and shows you the sources it used.",
+      "source_field": "content_sections[1].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/gemini/real-estate/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The source page already links to Gemini via a boilerplate 'Comparing your options' footer sentence in the same section, but that is a generic cross-link list rather than a contextual mention grounded in a specific limitation. This proposal adds a genuine, evidenced comparison point tied directly to the stated limitation (no live market data), which better satisfies the naturalness and usefulness test than the existing boilerplate link.",
+    "scored_at": "2026-08-05T23:12:28.521511+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_363_371",
+    "source_post_id": 363,
+    "source_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
+    "canonical_target_id": 371,
+    "target_url": "https://aitoolsforpros.com/claude/real-estate/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "claude",
+    "profession": "real-estate",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "What ChatGPT Does Well for Real Estate Agents",
+    "existing_text": "For offer summaries: provide the key terms of each offer (price, down payment, contingency periods, closing timeline, any special terms) and ask ChatGPT to format them as a side-by-side comparison with a brief recommendation of which offer serves the seller's stated priorities.",
+    "proposed_text": "For offer summaries: provide the key terms of each offer (price, down payment, contingency periods, closing timeline, any special terms) and ask ChatGPT to format them as a side-by-side comparison with a brief recommendation of which offer serves the seller's stated priorities, though if you're working from full purchase agreements with multiple addenda rather than pre-extracted terms, <a href=\"/claude/real-estate/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude for real estate agents</a> lets you paste the entire document and have it pull the terms out for you.",
+    "anchor_text": "Claude for real estate agents",
+    "rationale": "Agents comparing offers often start from lengthy purchase agreements rather than a clean list of terms, and ChatGPT's workflow here requires the agent to manually extract those terms first; the sibling page describes a workflow where the full document can be pasted directly, which is a genuinely different and relevant option for that specific bottleneck.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "I paste the full purchase agreement and ask Claude to extract all contingency deadlines, seller disclosure requirements, and key milestone dates into a single timeline.",
+      "source_field": "[content_sections[1].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/real-estate/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The added clause is grounded in Claude's own stated workflow of pasting full purchase agreements and extracting terms directly, contrasted with ChatGPT's described workflow of requiring pre-extracted key terms. The sentence remains a true, standalone statement if the link were removed, though the clause length makes it moderately dense; a human editor may want to split it into two sentences for readability.",
+    "scored_at": "2026-08-05T23:13:32.851493+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_397_369",
+    "source_post_id": 397,
+    "source_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "canonical_target_id": 369,
+    "target_url": "https://aitoolsforpros.com/claude/legal/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "claude",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Grammarly Falls Short for Lawyers",
+    "existing_text": "Grammarly cannot draft contracts, write briefs, or generate first-pass documents. For that, use ChatGPT or Claude.",
+    "proposed_text": "Grammarly cannot draft contracts, write briefs, or generate first-pass documents. For that, use ChatGPT or <a href=\"/claude/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a>.",
+    "anchor_text": "Claude",
+    "rationale": "The limitation card already names Claude as an alternative for the exact gap Grammarly has (no content generation), so linking it lets readers who need drafting help go straight to a page that documents Claude's brief and contract drafting capabilities.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Claude produces well-structured, formally toned legal prose that is closer to attorney-quality output than most general AI tools.",
+      "source_field": "[content_sections[0].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "The tool name 'Claude' already appears unlinked inside the 'No content generation' limitation card; this is a straightforward link_existing_text case rather than a new sentence. The broader 'Comparing your options' footer link to /claude/legal/ already exists separately, so this proposal adds a second, more contextually specific in-body link rather than duplicating that footer link.",
+    "scored_at": "2026-08-05T23:15:51.803588+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_397_361",
+    "source_post_id": 397,
+    "source_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "canonical_target_id": 361,
+    "target_url": "https://aitoolsforpros.com/chatgpt/legal/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "chatgpt",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Grammarly Falls Short for Lawyers",
+    "existing_text": "For that, use ChatGPT or Claude.",
+    "proposed_text": "For that, use <a href=\"/chatgpt/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> or Claude.",
+    "anchor_text": "ChatGPT",
+    "rationale": "The limitation card already tells readers that Grammarly cannot draft contracts and to use ChatGPT instead, but the mention isn't linked; pointing to ChatGPT's legal page gives readers the natural next step for the exact drafting task Grammarly explicitly cannot perform.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "ChatGPT drafts first-pass standard agreements quickly and with competent legal structure. NDAs, employment contracts, independent contractor agreements, service agreements, operating agreement boilerplate, demand letters, all of these emerge from ChatGPT as usable starting frameworks.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "This is a distinct link opportunity from the existing 'Comparing your options' footer link already present in the same section_body; it links an in-context mention rather than duplicating the generic comparison list link. Only the word 'ChatGPT' should be wrapped, leaving 'Claude' as a separate potential edit for that sibling pair.",
+    "scored_at": "2026-08-05T23:16:17.139015+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_394_385",
+    "source_post_id": 394,
+    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "canonical_target_id": 385,
+    "target_url": "https://aitoolsforpros.com/copilot/legal/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "copilot",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Notion AI Falls Short for Legal Counsel",
+    "existing_text": "Notion AI helps inside Notion pages. If the work is in PDFs, redlines, or email, I often need another tool before I land in Notion.",
+    "proposed_text": "Notion AI helps inside Notion pages. If the work is in PDFs, redlines, or email, I often need another tool, such as <a href=\"/copilot/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Microsoft Copilot</a>, which works natively inside Outlook and Word, before I land in Notion.",
+    "anchor_text": "Microsoft Copilot",
+    "rationale": "The limitation card explicitly flags that Notion AI doesn't handle PDFs, redlines, or email natively, and this is exactly the gap Copilot fills by living inside Outlook and Word without a separate workspace switch.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Copilot's genuine advantage is that it operates inside your existing Microsoft 365 environment. Every lawyer already spends their day in Word, Outlook, and Teams. Copilot makes AI assistance available exactly there, with no workflow change required.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "A boilerplate 'Comparing your options?' link to /copilot/legal/ already exists at the end of the verdict section, but this proposed edit places a substantive, evidence-grounded mention inside the actual limitation prose where it addresses a specific workflow gap (PDFs/redlines/email) rather than just appearing in a generic comparison list.",
+    "scored_at": "2026-08-05T23:17:10.872848+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_394_381",
+    "source_post_id": 394,
+    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "canonical_target_id": 381,
+    "target_url": "https://aitoolsforpros.com/gemini/legal/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "gemini",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Notion AI Falls Short for Legal Counsel",
+    "existing_text": "Notion AI helps inside Notion pages. If the work is in PDFs, redlines, or email, I often need another tool before I land in Notion.",
+    "proposed_text": "Notion AI helps inside Notion pages. If the work is in PDFs, redlines, or email, I often need another tool, like <a href=\"/gemini/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Gemini</a>, which is built for turning a redacted email thread into a structured issue list before I paste the results into Notion.",
+    "anchor_text": "Gemini",
+    "rationale": "Notion AI's own limitation card admits it needs help outside Notion for email-based work, and Gemini's page specifically describes turning email threads into structured issue lists, making it a concrete, evidenced suggestion for that exact gap.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "I paste a redacted client email thread and ask Gemini to produce an issue list, missing facts, and a short next-step plan.",
+      "source_field": "content_sections[0].section_body (Email intake to issue map)",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/gemini/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "This fills a workflow gap explicitly named on the source page (email work needing another tool) with a sibling tool whose own page describes that exact use case, keeping the claim grounded and the sentence still meaningful if the link were removed.",
+    "scored_at": "2026-08-05T23:17:27.595741+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_394_377",
+    "source_post_id": 394,
+    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "canonical_target_id": 377,
+    "target_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "perplexity",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "What Legal Counsel Are Using Notion AI For",
+    "existing_text": "The pattern is consistent: Notion AI is most valuable when the inputs are internal content and the output is internal operational clarity, not external legal conclusions.",
+    "proposed_text": "The pattern is consistent: Notion AI is most valuable when the inputs are internal content and the output is internal operational clarity, not external legal conclusions. When the task starts with external research instead, like pulling recent case law or regulatory updates, I do that work first in a tool like <a href=\"/perplexity/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Perplexity for legal professionals</a>, which returns cited sources for that kind of lookup, and only then bring the findings into Notion for organizing and packaging.",
+    "anchor_text": "Perplexity for legal professionals",
+    "rationale": "This addresses a real workflow boundary the source page already flags (Notion AI handles internal packaging, not external legal research) and points readers to a tool whose own page confirms it is built for exactly that external, cited research step.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Perplexity returns cited excerpts with links to Justia, court websites, and other public sources.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/perplexity/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The two tools are complementary rather than competing (research vs. organization), which matches the sibling's own stated positioning ('I use Perplexity AI in the research phase of a matter, not the drafting phase') and the source's stated limitation about Notion AI needing external inputs prepared elsewhere.",
+    "scored_at": "2026-08-05T23:17:45.695180+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_394_369",
+    "source_post_id": 394,
+    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "canonical_target_id": 369,
+    "target_url": "https://aitoolsforpros.com/claude/legal/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "claude",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Notion AI Falls Short for Legal Counsel",
+    "existing_text": "Notion AI helps inside Notion pages. If the work is in PDFs, redlines, or email, I often need another tool before I land in Notion.",
+    "proposed_text": "Notion AI helps inside Notion pages. If the work is in PDFs, redlines, or email, I often need another tool, like <a href=\"/claude/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a>, which can take in a full 60 to 100 page contract in one pass, before I land the finished summary in Notion.",
+    "anchor_text": "Claude",
+    "rationale": "This limitation card already flags that Notion AI can't handle source documents like PDFs and that the reader needs another tool first; Claude's page specifically documents that exact workflow (pasting a full contract for review) as its core use case, making it a natural, evidenced fill-in for 'another tool'.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "A standard commercial agreement of 60 to 100 pages can be pasted directly into Claude in its entirety on a Team or Enterprise plan.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "The existing sentence already implies a gap that a long-document tool fills; the edit only specifies which tool and cites a concrete evidenced capability (page-count handling) rather than inventing new claims.",
+    "scored_at": "2026-08-05T23:18:00.079450+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_394_361",
+    "source_post_id": 394,
+    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "canonical_target_id": 361,
+    "target_url": "https://aitoolsforpros.com/chatgpt/legal/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "chatgpt",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Notion AI Falls Short for Legal Counsel",
+    "existing_text": "If I ask it to cite laws or cases loosely, it can produce confident text that still needs verification.",
+    "proposed_text": "If I ask it to cite laws or cases loosely, it can produce confident text that still needs verification, a risk that is not unique to Notion AI since <a href=\"/chatgpt/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> is documented to fabricate case citations with the same full confidence.",
+    "anchor_text": "ChatGPT",
+    "rationale": "Legal readers evaluating Notion AI's citation limitation benefit from knowing this is a shared, well-documented risk across general-purpose assistants, and the ChatGPT legal page provides concrete, sourced evidence (including a real sanctions case) that reinforces why independent verification is a hard rule rather than a Notion-specific quirk.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "ChatGPT fabricates case citations with full confidence. The citations look real: proper case name format, plausible docket numbers, believable court attributions. They often do not exist.",
+      "source_field": "content_sections[2].section_body (limit-desc, 'Citation hallucination, the most dangerous limitation')",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The source page already has a generic 'Comparing your options' link list at the end of content_sections[3] pointing to /chatgpt/legal/, but that is boilerplate cross-linking, not a contextual mention grounded in a specific shared capability or limitation. This proposal instead ties the link to a concrete, evidenced parallel (citation fabrication risk) that both pages independently document, which better satisfies the contextual-relevance test.",
+    "scored_at": "2026-08-05T23:19:03.976530+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_385_381",
+    "source_post_id": 385,
+    "source_url": "https://aitoolsforpros.com/copilot/legal/",
+    "canonical_target_id": 381,
+    "target_url": "https://aitoolsforpros.com/gemini/legal/",
+    "primary_tool": "copilot",
+    "sibling_tool": "gemini",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Copilot Falls Short for Lawyers",
+    "existing_text": "Lawyers not already on an M365 subscription should consider standalone AI tools first.",
+    "proposed_text": "Lawyers not already on an M365 subscription, especially those already running Google Workspace, should consider standalone AI tools first, such as <a href=\"/gemini/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Gemini</a>, which is built for that environment.",
+    "anchor_text": "Gemini",
+    "rationale": "Readers weighing the M365 subscription cost need a concrete alternative path, and Gemini is explicitly positioned by its own review as the fit for firms already on Google Workspace, making it a natural pointer for lawyers not tied to Microsoft's ecosystem.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "I recommend Gemini for legal teams that already run on Google Workspace and want faster intake, summarization, and first-pass structure.",
+      "source_field": "content_sections[3].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/gemini/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "medium",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The sibling page's verdict section explicitly frames Gemini as the recommended choice for Google Workspace firms, which directly supports the cost/ecosystem tradeoff already discussed in the Copilot limitation card about requiring an M365 subscription.",
+    "scored_at": "2026-08-05T23:20:08.182395+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_385_369",
+    "source_post_id": 385,
+    "source_url": "https://aitoolsforpros.com/copilot/legal/",
+    "canonical_target_id": 369,
+    "target_url": "https://aitoolsforpros.com/claude/legal/",
+    "primary_tool": "copilot",
+    "sibling_tool": "claude",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "feature_section",
+    "section_title_hint": "What Microsoft Copilot Does Well for Legal Professionals",
+    "existing_text": "That distinction belongs to Claude or ChatGPT for complex document work.",
+    "proposed_text": "That distinction belongs to <a href=\"/claude/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a> or ChatGPT for complex document work.",
+    "anchor_text": "Claude",
+    "rationale": "The source page already names Claude as the stronger tool for complex document work but does not link it; readers weighing Copilot against alternatives for heavier legal drafting or analysis tasks benefit from a direct path to Claude's dedicated legal page, which substantiates that exact claim.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Claude is the strongest general-purpose AI for legal work that involves long documents. Its ability to read and reason across a full 100-page contract in a single session is a genuine workflow advantage that ChatGPT and Copilot cannot match at equivalent price points.",
+      "source_field": "[consistency_blocks.bottom_line]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "This is the first and most natural mention of Claude in the source's prose; linking it satisfies the top-preference 'link existing text' path and requires no new sentence or invented claims.",
+    "scored_at": "2026-08-05T23:20:24.337498+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_385_361",
+    "source_post_id": 385,
+    "source_url": "https://aitoolsforpros.com/copilot/legal/",
+    "canonical_target_id": 361,
+    "target_url": "https://aitoolsforpros.com/chatgpt/legal/",
+    "primary_tool": "copilot",
+    "sibling_tool": "chatgpt",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "feature_section",
+    "section_title_hint": "What Microsoft Copilot Does Well for Legal Professionals",
+    "existing_text": "That distinction belongs to Claude or ChatGPT for complex document work.",
+    "proposed_text": "That distinction belongs to Claude or <a href=\"/chatgpt/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> for complex document work.",
+    "anchor_text": "ChatGPT",
+    "rationale": "The source page already names ChatGPT as the stronger tool for complex document work but doesn't link it; readers evaluating Copilot's tradeoffs would benefit from a direct path to ChatGPT's dedicated legal page, which substantiates its drafting strength.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "ChatGPT drafts first-pass standard agreements quickly and with competent legal structure.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "medium",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "ChatGPT is already mentioned by name in the opening paragraph of the source page's first content section but is unlinked there; the comparison-row link at the end of the limitations section is a separate 'also see' footer, not this prose mention, so this is a distinct, valid link_existing_text opportunity.",
+    "scored_at": "2026-08-05T23:20:44.926121+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_381_377",
+    "source_post_id": 381,
+    "source_url": "https://aitoolsforpros.com/gemini/legal/",
+    "canonical_target_id": 377,
+    "target_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "primary_tool": "gemini",
+    "sibling_tool": "perplexity",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "insert_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "Compliance and Professional Risk",
+    "existing_text": "Gemini can produce citations that look plausible. I assume any citation is wrong until proven otherwise.\n The rule of thumb is short: verify every authority, every time.",
+    "proposed_text": "Gemini can produce citations that look plausible. I assume any citation is wrong until proven otherwise.\n The rule of thumb is short: verify every authority, every time. When I actually need a starting set of real, checkable citations, I turn to <a href=\"/perplexity/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Perplexity</a>, which returns cited excerpts with links to court websites and other public sources instead of generating authority from memory.",
+    "anchor_text": "Perplexity",
+    "rationale": "Legal readers who hit Gemini's citation-fabrication problem need a concrete next step, and Perplexity is documented on its own page as returning source-linked excerpts rather than invented authority, making it a natural workflow pivot for verifying or sourcing citations.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Perplexity returns cited excerpts with links to Justia, court websites, and other public sources.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/perplexity/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "This inserts a sentence rather than modifying the meaning of the existing warning; it adds a practical next step (use Perplexity for cited research) that is fully supported by the sibling page's own description of its citation-linking behavior, while still preserving Gemini's original caution about invented authority.",
+    "scored_at": "2026-08-05T23:21:52.610078+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_377_385",
+    "source_post_id": 377,
+    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "canonical_target_id": 385,
+    "target_url": "https://aitoolsforpros.com/copilot/legal/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "copilot",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Perplexity AI Falls Short",
+    "existing_text": "You cannot use it the way many lawyers use Claude for long attachments or ChatGPT for iterative redlines.",
+    "proposed_text": "You cannot use it the way many lawyers use Claude for long attachments, ChatGPT for iterative redlines, or <a href=\"/copilot/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Microsoft Copilot</a> for in-Word contract summaries and redline comparisons.",
+    "anchor_text": "Microsoft Copilot",
+    "rationale": "This limitation card is specifically about the lack of a document-upload workflow for contract analysis, and Copilot's own page describes exactly that kind of in-app workflow (contract summarization and redline comparison inside Word), making it a natural third example alongside Claude and ChatGPT.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Copilot in Word can compare two versions of a document and summarize what changed between them, which provisions were added, removed, or modified, and what the practical effect of each change is.",
+      "source_field": "content_sections[0].section_body (Document Comparison and Redline Summaries)",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "A link to Copilot's legal page already exists in the closing 'Comparing your options' paragraph of content_sections[3], but that is a generic cross-link list rather than a contextual mention. This proposal adds a genuinely evidenced, in-context mention inside the limitation card about document workflows, which is a better fit for the editorial test.",
+    "scored_at": "2026-08-05T23:23:14.606286+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_377_381",
+    "source_post_id": 377,
+    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "canonical_target_id": 381,
+    "target_url": "https://aitoolsforpros.com/gemini/legal/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "gemini",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Perplexity AI Falls Short",
+    "existing_text": "Output is research-summary style, not drafting-native. If I need a first-pass contract clause, motion outline, or client email, ChatGPT or Claude is a better fit because the interaction is built around writing, not source retrieval.",
+    "proposed_text": "Output is research-summary style, not drafting-native. If I need a first-pass contract clause, motion outline, or client email, ChatGPT, Claude, or <a href=\"/gemini/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Gemini</a> is a better fit because the interaction is built around writing, not source retrieval, and Gemini in particular is set up to produce clause checklists and defined-terms tables as a first-draft scaffold.",
+    "anchor_text": "Gemini",
+    "rationale": "Readers deciding what to use once they need actual contract or motion drafting (a stated gap for Perplexity) benefit from knowing Gemini is another option specifically built for first-pass drafting scaffolds, not just ChatGPT and Claude.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "I use Gemini to draft section headings, clause checklists, and defined terms tables for common agreements.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/gemini/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "Source page currently omits Gemini entirely from its drafting-alternative comparisons (only naming ChatGPT and Claude), even though the closing comparison list on the same page links to Claude, ChatGPT, and Copilot but not Gemini. Extending the limitation-card sentence is more natural than touching the boilerplate closing links list, which is purely a link roster and would fail the 'useful without link' test if Gemini were bolted on there instead.",
+    "scored_at": "2026-08-05T23:23:44.597056+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_377_369",
+    "source_post_id": 377,
+    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "canonical_target_id": 369,
+    "target_url": "https://aitoolsforpros.com/claude/legal/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "claude",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Perplexity AI Falls Short",
+    "existing_text": "You cannot use it the way many lawyers use Claude for long attachments or ChatGPT for iterative redlines.",
+    "proposed_text": "You cannot use it the way many lawyers use <a href=\"/claude/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a> for long attachments or ChatGPT for iterative redlines.",
+    "anchor_text": "Claude",
+    "rationale": "The source already names Claude specifically in the context of long-document uploads for contract analysis, which is exactly the sibling page's core positioning, so linking it gives readers a direct path to verify that specific workflow claim.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Claude's extended context window can ingest an entire contract, deposition transcript, or discovery set in one pass.",
+      "source_field": "[subtitle]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "Claude is mentioned by name twice unlinked in the source (limitations card and verdict section); the limitations card mention is the most specific and evidence-grounded, referencing 'long attachments' which directly matches the sibling's stated strength in full-contract and deposition ingestion.",
+    "scored_at": "2026-08-05T23:23:59.729255+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_377_361",
+    "source_post_id": 377,
+    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "canonical_target_id": 361,
+    "target_url": "https://aitoolsforpros.com/chatgpt/legal/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "chatgpt",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Perplexity AI Falls Short",
+    "existing_text": "If I need a first-pass contract clause, motion outline, or client email, ChatGPT or Claude is a better fit because the interaction is built around writing, not source retrieval.",
+    "proposed_text": "If I need a first-pass contract clause, motion outline, or client email, <a href=\"/chatgpt/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> or Claude is a better fit because the interaction is built around writing, not source retrieval.",
+    "anchor_text": "ChatGPT",
+    "rationale": "The source already tells legal readers to switch to ChatGPT for drafting tasks that Perplexity can't handle; linking to ChatGPT's legal-specific page lets the reader immediately verify and act on that recommendation with tool-specific drafting guidance.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "ChatGPT drafts first-pass standard agreements quickly and with competent legal structure.",
+      "source_field": "[content_sections[0].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "This sentence already exists verbatim in the limit-card 'Not built for long-form document drafting' and names ChatGPT without a link; the boilerplate comparison links at the end of content_sections[3] already cover the generic 'also see' pattern, so this in-context mention is a better, non-redundant placement for the actual hyperlink.",
+    "scored_at": "2026-08-05T23:24:20.291608+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_369_385",
+    "source_post_id": 369,
+    "source_url": "https://aitoolsforpros.com/claude/legal/",
+    "canonical_target_id": 385,
+    "target_url": "https://aitoolsforpros.com/copilot/legal/",
+    "primary_tool": "claude",
+    "sibling_tool": "copilot",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Claude Falls Short for Lawyers",
+    "existing_text": "Workflows involving many documents across an active matter are cumbersome without a third-party integration or custom API setup.",
+    "proposed_text": "Workflows involving many documents across an active matter are cumbersome without a third-party integration or custom API setup, though attorneys whose daily work sits inside Word and Outlook may find <a href=\"/copilot/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Microsoft Copilot</a>'s native Microsoft 365 integration reduces that friction for routine drafting and correspondence, even though it does not match Claude's depth on complex document analysis.",
+    "anchor_text": "Microsoft Copilot",
+    "rationale": "Readers frustrated by Claude's lack of native document-system integration have a real workflow alternative in Copilot, which lives inside Word and Outlook, though that convenience comes with a documented reasoning-quality tradeoff worth flagging in the same breath.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "it is the only AI tool that works natively inside Word, Outlook, and Teams with no context-switching required",
+      "source_field": "[subtitle]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "medium",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "Note that the source page already links to /copilot/legal/ in the generic 'Also see' comparison paragraph at the end of this same section_body. This proposal adds a second, more specific contextual mention tied to the 'no native integrations' limitation rather than relying solely on the boilerplate cross-link list. The limitation card discusses practice-management integrations (Clio, iManage, etc.), which Copilot also lacks, so the comparison is scoped narrowly to Microsoft 365 app embedding, not legal-specific system integration, to avoid overstating Copilot's relevance.",
+    "scored_at": "2026-08-05T23:26:19.862897+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_369_381",
+    "source_post_id": 369,
+    "source_url": "https://aitoolsforpros.com/claude/legal/",
+    "canonical_target_id": 381,
+    "target_url": "https://aitoolsforpros.com/gemini/legal/",
+    "primary_tool": "claude",
+    "sibling_tool": "gemini",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "What Claude Does Well for Legal Work",
+    "existing_text": "Legal matters often require synthesizing multiple documents: a contract, a series of emails, and meeting notes, for example.",
+    "proposed_text": "Legal matters often require synthesizing multiple documents: a contract, a series of emails, and meeting notes, for example; when the starting point is a messy email thread rather than a formal document, some lawyers instead turn to <a href=\"/gemini/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Gemini</a>, which its own reviewers note \"feels faster at turning conversation into a structured memo when the raw input is messy.\"",
+    "anchor_text": "Gemini",
+    "rationale": "Readers deciding how to handle unstructured intake (email threads, meeting notes) rather than formal contracts need to know Claude's multi-document synthesis strength is document-centric, while Gemini's own review specifically claims an edge on messy conversational input, giving a genuine workflow-based reason to route intake differently.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Compared to Claude, Gemini feels faster at turning conversation into a structured memo when the raw input is messy.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/gemini/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The source paragraph containing this sentence is truncated in the provided text after the next sentence ('Claude can hold all of these in context simultaneously... and answer ques'), so I anchored the edit to the one complete, unambiguous sentence in that paragraph rather than the cut-off one. A human editor should verify the full paragraph flow on the live page before publishing this insertion.",
+    "scored_at": "2026-08-05T23:27:24.852702+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_369_377",
+    "source_post_id": 369,
+    "source_url": "https://aitoolsforpros.com/claude/legal/",
+    "canonical_target_id": 377,
+    "target_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "primary_tool": "claude",
+    "sibling_tool": "perplexity",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Claude Falls Short for Lawyers",
+    "existing_text": "For current case law, regulatory guidance, or recent statutory changes, use a dedicated legal research platform.",
+    "proposed_text": "For current case law, regulatory guidance, or recent statutory changes, use a dedicated legal research platform, or a cited web-search tool like <a href=\"/perplexity/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Perplexity AI</a> for a fast, source-linked preliminary pass before you dig into Westlaw or Lexis.",
+    "anchor_text": "Perplexity AI",
+    "rationale": "Claude's own limitation card admits it cannot do real-time legal research and tells readers to use a dedicated research platform; Perplexity's page positions itself exactly for that preliminary, cited research gap before a full Westlaw/Lexis pass, so naming it gives readers a concrete next step.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Lawyers who need preliminary case law research with citations, regulatory lookups, or monitoring recent circuit opinions before opening Westlaw or Lexis for a full research pass.",
+      "source_field": "[consistency_blocks.best_for]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/perplexity/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "The limitation card is inside content_sections[2].section_body, so it is within the editable prose scope. The added clause names a specific tool for the gap Claude admits to (real-time research), grounded directly in Perplexity's stated best-for use case and its own emphasis on citation verification before deeper research.",
+    "scored_at": "2026-08-05T23:27:44.415972+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_361_381",
+    "source_post_id": 361,
+    "source_url": "https://aitoolsforpros.com/chatgpt/legal/",
+    "canonical_target_id": 381,
+    "target_url": "https://aitoolsforpros.com/gemini/legal/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "gemini",
+    "profession": "legal",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where ChatGPT Falls Short for Lawyers",
+    "existing_text": "ChatGPT does not connect to Clio, iManage, NetDocuments, or other legal practice management systems. Every document must be manually pasted in. For high-volume workflows across an active file, this copy-paste overhead becomes significant. <a href=\"/copilot/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Microsoft Copilot</a>'s integration with Word and Outlook avoids this friction for M365 firms.",
+    "proposed_text": "ChatGPT does not connect to Clio, iManage, NetDocuments, or other legal practice management systems. Every document must be manually pasted in. For high-volume workflows across an active file, this copy-paste overhead becomes significant. <a href=\"/copilot/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Microsoft Copilot</a>'s integration with Word and Outlook avoids this friction for M365 firms, while <a href=\"/gemini/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Gemini</a> offers a similar advantage for firms on Google Workspace since it can be activated inside Gmail and Drive to summarize email threads and documents without switching apps.",
+    "anchor_text": "Gemini",
+    "rationale": "The limitation card already flags ChatGPT's lack of practice-management integration and offers Copilot as the M365 alternative; readers on Google Workspace have an equally direct workaround worth naming, since Gemini's own page states it activates inside Gmail, Docs, and Drive to avoid copy-paste overhead.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "If your firm uses Google Workspace, Gemini can be activated inside Gmail, Google Docs, and Drive, allowing you to summarize email threads and documents without switching apps.",
+      "source_field": "[faq[5].answer]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/gemini/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "This mirrors the existing Copilot mention in the same limitation card, giving Workspace-based firms an equivalent evidenced alternative rather than only a Microsoft-centric one. Anchor points to /gemini/legal/ to match the sibling's actual location as indicated by its own navigation links.",
+    "scored_at": "2026-08-05T23:28:43.033218+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_372_364",
+    "source_post_id": 372,
+    "source_url": "https://aitoolsforpros.com/claude/engineers/",
+    "canonical_target_id": 364,
+    "target_url": "https://aitoolsforpros.com/chatgpt/engineers/",
+    "primary_tool": "claude",
+    "sibling_tool": "chatgpt",
+    "profession": "engineers",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "Code Review with Full Context",
+    "existing_text": "This is where the 1M-token context window creates a workflow that simply does not exist with smaller-context tools, you can maintain the full call chain in one session and ask specific questions at any layer.",
+    "proposed_text": "This is where the 1M-token context window creates a workflow that simply does not exist with smaller-context tools like <a href=\"/chatgpt/engineers/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a>, whose smaller context window can lose track of earlier details on very long inputs, you can maintain the full call chain in one session and ask specific questions at any layer.",
+    "anchor_text": "ChatGPT",
+    "rationale": "Engineers deciding whether to use Claude or ChatGPT for cross-file logic tracing need to know why context window size matters here; ChatGPT's own page admits its context window is smaller and can lose track of details on long inputs, which directly explains why Claude's 1M-token window enables a workflow ChatGPT cannot replicate.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "ChatGPT's context window is smaller, and on very long inputs it can lose track of details from earlier in the session.",
+      "source_field": "content_sections[3].section_body (limit-desc under 'Smaller context window than Claude for long-document reasoning')",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/engineers/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "The source page already links to ChatGPT in the boilerplate 'Comparing your options' paragraph at the end of content_sections[3], but that is a generic cross-link list, not a contextual mention within the prose. This proposal adds a genuine, evidenced contextual comparison inside the Code Review section where the context-window theme is already being discussed.",
+    "scored_at": "2026-08-05T23:31:52.473679+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_364_372",
+    "source_post_id": 364,
+    "source_url": "https://aitoolsforpros.com/chatgpt/engineers/",
+    "canonical_target_id": 372,
+    "target_url": "https://aitoolsforpros.com/claude/engineers/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "claude",
+    "profession": "engineers",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where ChatGPT Falls Short for Engineers",
+    "existing_text": "For reasoning over a full service layer, a 30-file PR, or a long technical specification, Claude's 200K context window gives it a meaningful advantage.",
+    "proposed_text": "For reasoning over a full service layer, a 30-file PR, or a long technical specification, <a href=\"/claude/engineers/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude's</a> 200K context window gives it a meaningful advantage.",
+    "anchor_text": "Claude's",
+    "rationale": "The source already names Claude specifically as the better tool for long-document engineering reasoning (full service layers, long PRs, specs), which is exactly the workflow the sibling page centers its entire pitch around; linking the existing mention lets readers who need that workflow jump directly to the tool being recommended.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "This is where the 1M-token context window creates a workflow that simply does not exist with smaller-context tools, you can maintain the full call chain in one session and ask specific questions at any layer.",
+      "source_field": "content_sections[1].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/engineers/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "medium",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "The source page states Claude's context window as '200K' while the sibling page's own text consistently states '1M-token context window' (bottom_line, key_takeaway, and content_sections[1]). This numeric discrepancy is a pre-existing factual inconsistency in the source content unrelated to the link itself; a human editor should reconcile the figure when implementing this link, but the underlying comparative claim (Claude is stronger for long-document/full-PR reasoning) is well supported by the sibling's own text regardless of the exact number used.",
+    "scored_at": "2026-08-05T23:33:06.737504+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_391_367",
+    "source_post_id": 391,
+    "source_url": "https://aitoolsforpros.com/midjourney/architects/",
+    "canonical_target_id": 367,
+    "target_url": "https://aitoolsforpros.com/chatgpt/architects/",
+    "primary_tool": "midjourney",
+    "sibling_tool": "chatgpt",
+    "profession": "architects",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "Client Presentation Imagery and Pre-Render Alignment",
+    "existing_text": "The workflow: draft the design intent narrative from the project brief, convert it into 3-4 Midjourney prompts, generate 4 images per prompt, select the top 2-3, and include them in a concept deck alongside plans and sections.",
+    "proposed_text": "The workflow: draft the design intent narrative from the project brief, a step tools like <a href=\"/chatgpt/architects/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> handle well since turning a project's design decisions into a clear written narrative is one of its most common architecture applications, then convert it into 3-4 Midjourney prompts, generate 4 images per prompt, select the top 2-3, and include them in a concept deck alongside plans and sections.",
+    "anchor_text": "ChatGPT",
+    "rationale": "This step in the Midjourney workflow explicitly involves drafting a written design intent narrative before generating images, and the sibling page positions design narrative writing as one of ChatGPT's core, evidenced strengths for architects, making it a natural pairing at this exact workflow junction.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Design narratives, the written descriptions of architectural intent that accompany drawings in client presentations, zoning applications, and design review board submissions, are one of the highest-value ChatGPT applications in architectural practice.",
+      "source_field": "[content_sections[1].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/architects/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "This ties the two tools together at a genuine workflow handoff point (narrative drafting before image prompting), and the claim about ChatGPT's narrative-writing strength is directly supported by the sibling page's own text rather than invented.",
+    "scored_at": "2026-08-05T23:34:18.501167+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_384_367",
+    "source_post_id": 384,
+    "source_url": "https://aitoolsforpros.com/gemini/architects/",
+    "canonical_target_id": 367,
+    "target_url": "https://aitoolsforpros.com/chatgpt/architects/",
+    "primary_tool": "gemini",
+    "sibling_tool": "chatgpt",
+    "profession": "architects",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Gemini Falls Short for Architects",
+    "existing_text": "Gemini as a standalone AI tool is comparable to ChatGPT but not clearly superior for architectural writing tasks.",
+    "proposed_text": "Gemini as a standalone AI tool is comparable to <a href=\"/chatgpt/architects/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> but not clearly superior for architectural writing tasks.",
+    "anchor_text": "ChatGPT",
+    "rationale": "The source page already names ChatGPT as the comparison point for Gemini's non-Workspace writing capability, so linking it lets architects who read this limitation click through to see exactly how ChatGPT handles the same documentation and writing tasks Gemini is being judged against.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "ChatGPT is the most versatile AI tool for architectural documentation and written communication. It handles specification drafting, design narratives, RFP responses, meeting minutes, and client correspondence at a level that saves meaningful time across the project cycle.",
+      "source_field": "[consistency_blocks.bottom_line]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/architects/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "medium",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "This is the strongest option: ChatGPT is already named in the source page's limitation card text, unlinked. The comparison is grounded in the sibling's own framing of itself as the versatile writing tool for architects, which matches the source's characterization of it as the non-superior-but-comparable alternative to Gemini for standalone writing tasks.",
+    "scored_at": "2026-08-05T23:35:23.340647+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_375_384",
+    "source_post_id": 375,
+    "source_url": "https://aitoolsforpros.com/claude/architects/",
+    "canonical_target_id": 384,
+    "target_url": "https://aitoolsforpros.com/gemini/architects/",
+    "primary_tool": "claude",
+    "sibling_tool": "gemini",
+    "profession": "architects",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Claude Falls Short for Architects",
+    "existing_text": "Use Perplexity AI for live code research.",
+    "proposed_text": "Use Perplexity AI for live code research, or <a href=\"/gemini/architects/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Gemini</a> if your firm already works in Google Workspace, since its Search grounding feature can surface current material standards and regulatory information for preliminary research.",
+    "anchor_text": "Gemini",
+    "rationale": "Architects facing Claude's training-cutoff limitation for current codes and material standards need a live-research alternative; Gemini's Search grounding feature addresses exactly this gap for firms already working in Google Docs/Drive, giving a workspace-native option alongside Perplexity.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Gemini's Search grounding feature addresses this for research queries.",
+      "source_field": "content_sections[1].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/gemini/architects/"
+    },
+    "confidence": {
+      "relevance_confidence": "medium",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "Gemini is already linked once in the source page's boilerplate 'Comparing your options' sentence at the end of content_sections[3]. This proposal adds a second, more contextually specific mention inside the training-cutoff limitation card, which is a genuinely different placement addressing a concrete reader need (live standards research) rather than duplicating the generic comparison link. Reviewer should confirm the added clause doesn't feel redundant given the existing Perplexity recommendation in the same sentence.",
+    "scored_at": "2026-08-05T23:36:37.208394+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_375_367",
+    "source_post_id": 375,
+    "source_url": "https://aitoolsforpros.com/claude/architects/",
+    "canonical_target_id": 367,
+    "target_url": "https://aitoolsforpros.com/chatgpt/architects/",
+    "primary_tool": "claude",
+    "sibling_tool": "chatgpt",
+    "profession": "architects",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "insert_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "RFP Analysis and Response Strategy",
+    "existing_text": null,
+    "proposed_text": "Once the evaluation criteria and language strategy are mapped, the actual drafting of firm qualifications and project approach narratives is a separate task, and <a href=\"/chatgpt/architects/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT for architect</a> handles that drafting efficiently, turning bullet-point strategy into structured RFP response sections so principals can focus on the strategic content rather than document production.",
+    "anchor_text": "ChatGPT for architect",
+    "rationale": "The source's RFP section covers analyzing and aligning language with an RFP using Claude's large context window, but stops short of the actual writing of response sections; readers doing RFP work need a next step for drafting qualifications and approach narratives, which is exactly the strength the sibling page documents.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "ChatGPT can handle the drafting of standard sections efficiently, allowing principals to focus on the strategic content rather than document production.",
+      "source_field": "[content_sections[2].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/architects/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The source page already links to ChatGPT in the generic closing 'Comparing your options?' sentence within content_sections[3].section_body. This proposal adds a second, more specific contextual link tied to the RFP workflow, which is editorially distinct (analysis vs. drafting) and grounded in the sibling's own stated strength for RFP response drafting. If the site prefers a single link per sibling per page, this could be treated as optional/secondary rather than mandatory.",
+    "scored_at": "2026-08-05T23:37:17.430595+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_367_384",
+    "source_post_id": 367,
+    "source_url": "https://aitoolsforpros.com/chatgpt/architects/",
+    "canonical_target_id": 384,
+    "target_url": "https://aitoolsforpros.com/gemini/architects/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "gemini",
+    "profession": "architects",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "Specification Writing and Technical Documentation",
+    "existing_text": "The output is not the final specification, but it is a structured starting point that is faster to edit than to write from scratch.",
+    "proposed_text": "The output is not the final specification, but it is a structured starting point that is faster to edit than to write from scratch, though firms writing specifications primarily in Google Docs may find <a href=\"/gemini/architects/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Gemini for architects</a> a smoother workflow since it drafts directly inside the document rather than requiring copy-paste from a chat window.",
+    "anchor_text": "Gemini for architects",
+    "rationale": "Architects using ChatGPT to draft spec sections must copy the output from a chat window into their document, and readers on Google Workspace have a documented alternative that avoids that step, which is a real workflow tradeoff worth surfacing at the point where the copy-paste friction is first implied.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "generating section drafts from your requirements, editing existing content, and formatting outputs in document structure rather than a chat window that requires copying and pasting back",
+      "source_field": "content_sections[0].section_body (Google Docs for specifications and narratives)",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/gemini/architects/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The sibling is already linked in the closing 'Also see' paragraph of content_sections[3], but that is a generic comparison list rather than a contextual mention, so it doesn't satisfy 'link_existing_text.' This proposal instead grounds the link in the sibling's own stated in-document vs. chat-window distinction, which is a genuine workflow tradeoff for the specification-drafting task discussed in section 0.",
+    "scored_at": "2026-08-05T23:38:20.098521+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_367_375",
+    "source_post_id": 367,
+    "source_url": "https://aitoolsforpros.com/chatgpt/architects/",
+    "canonical_target_id": 375,
+    "target_url": "https://aitoolsforpros.com/claude/architects/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "claude",
+    "profession": "architects",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "feature_section",
+    "section_title_hint": "RFP Responses and Business Development Writing",
+    "existing_text": "Request for Proposal responses are a significant time burden for architectural firms. They require structured writing about firm qualifications, project approach, team credentials, and relevant project experience, all under deadline pressure. ChatGPT can handle the drafting of standard sections efficiently, allowing principals to focus on the strategic content rather than document production.",
+    "proposed_text": "Request for Proposal responses are a significant time burden for architectural firms. They require structured writing about firm qualifications, project approach, team credentials, and relevant project experience, all under deadline pressure. ChatGPT can handle the drafting of standard sections efficiently, allowing principals to focus on the strategic content rather than document production. For unusually long or complex RFPs, it is worth analyzing the full document before drafting anything, and <a href=\"/claude/architects/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude for architect</a> is built for that step since its larger context window lets you paste the entire RFP and get a structured read on evaluation criteria and scope requirements before your team starts writing.",
+    "anchor_text": "Claude for architect",
+    "rationale": "Architects drafting RFP responses often need to first digest a long, inconsistently structured document before writing, and the sibling page specifically addresses this pre-response analysis workflow using its large context window, which is a distinct and complementary step to the drafting task ChatGPT handles in this section.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Paste the full RFP into Claude and ask for a structured analysis: key evaluation criteria and their stated weights, required qualifications, unusual scope requirements, and areas where the RFP suggests what the client values most.",
+      "source_field": "content_sections[1].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/architects/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "Source page already links to Claude in the closing comparison paragraph of section 3, so this would be a second, more contextual link earlier in the RFP section. Reviewer should confirm two links to the same sibling page in one source page is acceptable per site policy; if not, this could be dropped in favor of the existing closing-paragraph link.",
+    "scored_at": "2026-08-05T23:38:42.657565+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_379_383",
+    "source_post_id": 379,
+    "source_url": "https://aitoolsforpros.com/perplexity/finance/",
+    "canonical_target_id": 383,
+    "target_url": "https://aitoolsforpros.com/gemini/finance/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "gemini",
+    "profession": "finance",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Perplexity AI Falls Short for Financial Advisors",
+    "existing_text": "For writing tasks, ChatGPT and Claude are more appropriate.",
+    "proposed_text": "For writing tasks, ChatGPT and Claude are more appropriate, and advisors already on Google Workspace may prefer <a href=\"/gemini/finance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Gemini</a>, which can draft client reports and correspondence directly inside Google Docs and Gmail.",
+    "anchor_text": "Gemini",
+    "rationale": "This limitation card already tells advisors that Perplexity is not built for drafting and points them to ChatGPT and Claude instead; advisors whose practice runs on Google Workspace have a more specific, workflow-fit alternative in Gemini, which drafts directly inside the Docs and Gmail they already use rather than requiring a separate tool.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "For advisors who produce client quarterly letters, financial plan narratives, and meeting summaries in Google Docs, Gemini can generate first drafts from outlines and produce executive summaries from detailed content.",
+      "source_field": "[content_sections[0].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/gemini/finance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "The existing sentence already names two writing-focused alternatives (ChatGPT and Claude); extending it to include Gemini for the Google Workspace use case is a natural, evidenced addition rather than a bolted-on mention, since the sibling page explicitly supports drafting client reports and Gmail correspondence directly in-workflow.",
+    "scored_at": "2026-08-05T23:40:34.770776+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_379_373",
+    "source_post_id": 379,
+    "source_url": "https://aitoolsforpros.com/perplexity/finance/",
+    "canonical_target_id": 373,
+    "target_url": "https://aitoolsforpros.com/claude/finance/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "claude",
+    "profession": "finance",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Perplexity AI Falls Short for Financial Advisors",
+    "existing_text": "For writing tasks, ChatGPT and Claude are more appropriate.",
+    "proposed_text": "For writing tasks, ChatGPT and <a href=\"/claude/finance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a> are more appropriate.",
+    "anchor_text": "Claude",
+    "rationale": "The source explicitly flags that Perplexity is weak at long-form writing and financial plan narratives and names Claude as a better fit for that task; linking at the exact point of that recommendation helps a reader who needs drafting help find the right tool immediately rather than waiting for the generic footer link list.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Claude's writing quality and capacity for sustained reasoning over long context makes it more appropriate than tools with smaller windows or less capable writing models.",
+      "source_field": "[content_sections[2].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/finance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "Claude is already linked later in the same section_body's comparison footer paragraph ('Claude for finance professional'), so this would be a second link to the same target within one section_body. The in-context mention inside the limit-desc is more contextually meaningful than the footer nav link, so linking it is still editorially justified, but a human reviewer may want to confirm the site's policy on multiple links to the same page within one content_sections entry.",
+    "scored_at": "2026-08-05T23:41:04.424883+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_379_365",
+    "source_post_id": 379,
+    "source_url": "https://aitoolsforpros.com/perplexity/finance/",
+    "canonical_target_id": 365,
+    "target_url": "https://aitoolsforpros.com/chatgpt/finance/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "chatgpt",
+    "profession": "finance",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "link_existing_text",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where Perplexity AI Falls Short for Financial Advisors",
+    "existing_text": "For writing tasks, ChatGPT and Claude are more appropriate.",
+    "proposed_text": "For writing tasks, <a href=\"/chatgpt/finance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> and Claude are more appropriate.",
+    "anchor_text": "ChatGPT",
+    "rationale": "The limitation card already tells readers that Perplexity is not suited for drafting client reports or written analysis and points them to ChatGPT and Claude instead; linking ChatGPT here helps the advisor immediately find the tool built for that exact workflow.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "The most consistent use case financial advisors report is drafting client correspondence.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/chatgpt/finance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "notes": "The sentence already exists verbatim in the source's limitations section and names ChatGPT directly; only the anchor tag needs to be added around the existing mention, consistent with the sibling page's own stated strength in client correspondence drafting.",
+    "scored_at": "2026-08-05T23:41:20.637793+00:00",
+    "reviewed_by": null
+  },
+  {
+    "record_id": "rec_365_383",
+    "source_post_id": 365,
+    "source_url": "https://aitoolsforpros.com/chatgpt/finance/",
+    "canonical_target_id": 383,
+    "target_url": "https://aitoolsforpros.com/gemini/finance/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "gemini",
+    "profession": "finance",
+    "policy_version": "1.2.0",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
+    "eligibility": {
+      "status": "eligible",
+      "detail": "200, canonical match, publish status confirmed"
+    },
+    "state": "opportunity_proposed",
+    "edit_type": "modify_sentence",
+    "content_zone": "limitation_card",
+    "section_title_hint": "Where ChatGPT Falls Short for Financial Advisors",
+    "existing_text": "For current market information, use <a href=\"/perplexity/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Perplexity AI</a> or your research platform alongside ChatGPT.",
+    "proposed_text": "For current market information, use <a href=\"/perplexity/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Perplexity AI</a>, <a href=\"/gemini/finance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Gemini's Search grounding feature</a> if your practice runs on Google Workspace, or your research platform alongside ChatGPT.",
+    "anchor_text": "Gemini's Search grounding feature",
+    "rationale": "The limitation card already flags ChatGPT's lack of live data as a gap advisors must fill elsewhere; Gemini's Search grounding is a documented alternative for advisors already working in Google Workspace who want current market context without leaving their workflow tool.",
+    "useful_without_link": true,
+    "evidence": {
+      "supporting_text": "Gemini Advanced includes Search grounding, which allows it to retrieve current information from Google Search when answering questions. This gives it access to recent market context, economic news, and financial information that tools without Search access cannot provide.",
+      "source_field": "[faq[1].answer]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/gemini/finance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "notes": "This card already links to Perplexity for real-time data; adding Gemini as a second, workspace-specific option is a natural extension since the sibling page explicitly positions Search grounding as its real-time-data differentiator, conditioned on Google Workspace use (matching the sibling's own 'avoid_if' framing).",
+    "scored_at": "2026-08-05T23:42:47.352240+00:00",
+    "reviewed_by": null
+  }
+]

@@ -1,0 +1,1038 @@
+[
+  {
+    "record_id": "rec_378_386",
+    "source_url": "https://aitoolsforpros.com/perplexity/physicians/",
+    "target_url": "https://aitoolsforpros.com/copilot/physicians/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "copilot",
+    "profession": "physicians",
+    "anchor_text": "Microsoft Copilot",
+    "existing_text": "For drafting tasks, use Claude or ChatGPT.",
+    "proposed_text": "For drafting tasks, use Claude or ChatGPT, or <a href=\"/copilot/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Microsoft Copilot</a> if your documentation workflow already runs through Word and Outlook, since it drafts patient letters and referral correspondence directly in your email client without copy-paste.",
+    "rationale": "The limitation card already tells physicians Perplexity can't draft patient letters and to use another tool; naming Copilot specifically addresses the reader whose documentation workflow is Word/Outlook-based, which is exactly the use case Copilot's own page emphasizes.",
+    "evidence": {
+      "supporting_text": "Copilot in Outlook drafts patient letters, referral follow-ups, and administrative correspondence directly in your email client.",
+      "source_field": "content_sections[1].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:42:50.249453+00:00"
+  },
+  {
+    "record_id": "rec_401_386",
+    "source_url": "https://aitoolsforpros.com/otter/physicians/",
+    "target_url": "https://aitoolsforpros.com/copilot/physicians/",
+    "primary_tool": "otter",
+    "sibling_tool": "copilot",
+    "profession": "physicians",
+    "anchor_text": "Microsoft Copilot",
+    "existing_text": "For MDT meetings, the summary provides a record of decisions and responsible parties without requiring a dedicated note-taker.",
+    "proposed_text": "For MDT meetings, the summary provides a record of decisions and responsible parties without requiring a dedicated note-taker; physicians at institutions already running Microsoft 365 may find <a href=\"/copilot/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Microsoft Copilot</a> a simpler alternative, since it generates the same kind of meeting summary natively inside Teams without needing a separate recording app.",
+    "rationale": "Physicians deciding how to handle MDT meeting summaries face a real tradeoff between a dedicated recorder like Otter and a tool already built into their existing meeting software; the sibling page documents that exact same capability inside Teams, making this a genuine workflow comparison rather than a bolted-on mention.",
+    "evidence": {
+      "supporting_text": "Copilot in Teams transcribes the meeting, identifies action items, and generates a structured summary without requiring anyone to take manual notes during the meeting.",
+      "source_field": "content_sections[1].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:42:51.962575+00:00"
+  },
+  {
+    "record_id": "rec_386_401",
+    "source_url": "https://aitoolsforpros.com/copilot/physicians/",
+    "target_url": "https://aitoolsforpros.com/otter/physicians/",
+    "primary_tool": "copilot",
+    "sibling_tool": "otter",
+    "profession": "physicians",
+    "anchor_text": "Otter.ai",
+    "existing_text": "Copilot in Teams transcribes the meeting, identifies action items, and generates a structured summary without requiring anyone to take manual notes during the meeting.",
+    "proposed_text": "Copilot in Teams transcribes the meeting, identifies action items, and generates a structured summary without requiring anyone to take manual notes during the meeting, but this only works for scheduled Teams meetings and does not extend to recording a patient encounter in the exam room, a task <a href=\"/otter/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Otter.ai</a> is built for instead.",
+    "rationale": "Physicians reading about Copilot's Teams meeting transcription may wonder if the same ambient capability applies to patient encounters; clarifying that Copilot's transcription is confined to Teams meetings while pointing to Otter.ai's purpose-built encounter recording addresses a real workflow gap.",
+    "evidence": {
+      "supporting_text": "Otter.ai does one thing for physicians that Claude, ChatGPT, and Copilot cannot: it records the encounter.",
+      "source_field": "[subtitle]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/otter/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:42:54.222415+00:00"
+  },
+  {
+    "record_id": "rec_370_401",
+    "source_url": "https://aitoolsforpros.com/claude/physicians/",
+    "target_url": "https://aitoolsforpros.com/otter/physicians/",
+    "primary_tool": "claude",
+    "sibling_tool": "otter",
+    "profession": "physicians",
+    "anchor_text": "Otter.ai",
+    "existing_text": "Claude can take a set of clinical notes or a dictated narrative and restructure it into a standard H&amp;P format with appropriate sections.",
+    "proposed_text": "Claude can take a set of clinical notes or a dictated narrative, including a de-identified transcript from an ambient recording tool like <a href=\"/otter/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Otter.ai</a>, and restructure it into a standard H&amp;P format with appropriate sections.",
+    "rationale": "Physicians using Claude for H&P structuring often need a source transcript to feed it, and the sibling page explicitly documents this exact two-tool workflow (Otter.ai records/transcribes, then physicians paste de-identified excerpts into Claude for structured note drafting).",
+    "evidence": {
+      "supporting_text": "Some physicians copy de-identified excerpts from the transcript into Claude or ChatGPT to draft structured notes, verifying the output against the original recording.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/otter/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:42:55.903156+00:00"
+  },
+  {
+    "record_id": "rec_362_386",
+    "source_url": "https://aitoolsforpros.com/chatgpt/physicians/",
+    "target_url": "https://aitoolsforpros.com/copilot/physicians/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "copilot",
+    "profession": "physicians",
+    "anchor_text": "Copilot",
+    "existing_text": "This is particularly useful for high-volume primary care practices where referral letter volume is substantial.",
+    "proposed_text": "This is particularly useful for high-volume primary care practices where referral letter volume is substantial. Physicians whose referral correspondence already runs through Outlook may prefer <a href=\"/copilot/physicians/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Copilot</a>, which drafts these letters directly inside the email client rather than requiring a copy-paste step from a separate chat window.",
+    "rationale": "Physicians choosing between drafting referral letters in a standalone chat tool versus their existing email client have a real workflow tradeoff, and Copilot's Outlook integration directly addresses the copy-paste friction ChatGPT's workflow implies.",
+    "evidence": {
+      "supporting_text": "Copilot in Outlook drafts patient letters, referral follow-ups, and administrative correspondence directly in your email client.",
+      "source_field": "content_sections[1].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/physicians/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:42:57.985463+00:00"
+  },
+  {
+    "record_id": "rec_400_392",
+    "source_url": "https://aitoolsforpros.com/grammarly/creatives/",
+    "target_url": "https://aitoolsforpros.com/midjourney/creatives/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "midjourney",
+    "profession": "creatives",
+    "anchor_text": "Midjourney",
+    "existing_text": "Grammarly is purely a text tool. For image generation, concept exploration, and visual creative work, Midjourney handles the tasks Grammarly cannot touch.",
+    "proposed_text": "Grammarly is purely a text tool. For image generation, concept exploration, and visual creative work, <a href=\"/midjourney/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Midjourney</a> handles the tasks Grammarly cannot touch.",
+    "rationale": "Creative professionals reading about Grammarly's text-only limitation need a pointer to the tool that actually covers image and visual concept work, and the source page already names Midjourney for exactly that purpose without linking it.",
+    "evidence": {
+      "supporting_text": "The strongest use of Midjourney in professional creative work is at the concept exploration stage.",
+      "source_field": "[content_sections[0].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/midjourney/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:42:59.609044+00:00"
+  },
+  {
+    "record_id": "rec_396_392",
+    "source_url": "https://aitoolsforpros.com/notion-ai/creatives/",
+    "target_url": "https://aitoolsforpros.com/midjourney/creatives/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "midjourney",
+    "profession": "creatives",
+    "anchor_text": "Midjourney",
+    "existing_text": "For visual creative work, concept imagery, and mood boards, Midjourney handles the tasks Notion AI cannot.",
+    "proposed_text": "For visual creative work, concept imagery, and mood boards, <a href=\"/midjourney/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Midjourney</a> handles the tasks Notion AI cannot.",
+    "rationale": "A creative reader who hits Notion AI's image-generation gap needs to know where to actually go for concept imagery and mood boards, and Midjourney's own page confirms this is exactly its specialty (concept exploration and mood board generation), making the existing sentence a natural, evidence-backed link point.",
+    "evidence": {
+      "supporting_text": "The strongest use of Midjourney in professional creative work is at the concept exploration stage.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/midjourney/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:01.249288+00:00"
+  },
+  {
+    "record_id": "rec_392_376",
+    "source_url": "https://aitoolsforpros.com/midjourney/creatives/",
+    "target_url": "https://aitoolsforpros.com/claude/creatives/",
+    "primary_tool": "midjourney",
+    "sibling_tool": "claude",
+    "profession": "creatives",
+    "anchor_text": "Claude",
+    "existing_text": "For copywriting, brief development, strategy documents, and any text-based creative work, you need ChatGPT or Claude.",
+    "proposed_text": "For copywriting, brief development, strategy documents, and any text-based creative work, you need ChatGPT or <a href=\"/claude/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a>.",
+    "rationale": "The limitation card already names Claude as one of the two tools to use for text-based creative work that Midjourney cannot do, so turning that existing mention into a link gives readers a direct path to evaluate Claude for exactly the strategy-document and copywriting tasks named in the sentence.",
+    "evidence": {
+      "supporting_text": "Claude is the strongest AI tool for long-form creative writing. It holds voice, tone, and structure across extended pieces better than any alternative, making it the right tool when the deliverable is a brand narrative, a detailed content strategy, or an extended editorial piece.",
+      "source_field": "consistency_blocks.bottom_line",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:02.984661+00:00"
+  },
+  {
+    "record_id": "rec_376_400",
+    "source_url": "https://aitoolsforpros.com/claude/creatives/",
+    "target_url": "https://aitoolsforpros.com/grammarly/creatives/",
+    "primary_tool": "claude",
+    "sibling_tool": "grammarly",
+    "profession": "creatives",
+    "anchor_text": "Grammarly's job",
+    "existing_text": "Not grammar and punctuation (that is Grammarly's job), but substantive editing: restructuring arguments, improving openings, cutting repetition, tightening logic, and shifting tone without rewriting the whole piece.",
+    "proposed_text": "Not grammar and punctuation (that is <a href=\"/grammarly/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Grammarly's job</a>), but substantive editing: restructuring arguments, improving openings, cutting repetition, tightening logic, and shifting tone without rewriting the whole piece.",
+    "rationale": "The source page already draws a division of labor between Claude (substantive editing) and Grammarly (surface-level grammar/punctuation), and the sibling page explicitly confirms this same division, making the existing mention a natural link target for readers who want to understand where each tool fits in a creative workflow.",
+    "evidence": {
+      "supporting_text": "Grammarly only edits existing text, for drafting and creative work, ChatGPT, Claude, and Midjourney handle those tasks.",
+      "source_field": "consistency_blocks.avoid_if",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/grammarly/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:04.817987+00:00"
+  },
+  {
+    "record_id": "rec_368_400",
+    "source_url": "https://aitoolsforpros.com/chatgpt/creatives/",
+    "target_url": "https://aitoolsforpros.com/grammarly/creatives/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "grammarly",
+    "profession": "creatives",
+    "anchor_text": "Grammarly",
+    "existing_text": "ChatGPT drafts consistently require a writer's pass before they are client-ready. Grammarly catches surface-level issues; your creative judgment catches the parts that are technically correct but tonally off.",
+    "proposed_text": "ChatGPT drafts consistently require a writer's pass before they are client-ready. <a href=\"/grammarly/creatives/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Grammarly</a> catches surface-level issues; your creative judgment catches the parts that are technically correct but tonally off.",
+    "rationale": "The source already names Grammarly as the tool that catches surface-level issues in ChatGPT drafts before delivery, which is exactly the workflow Grammarly's own page describes as its core value proposition for creatives.",
+    "evidence": {
+      "supporting_text": "Grammarly's role in a creative stack is narrow and specific: it catches surface-level issues in text after ChatGPT or Claude have produced the draft.",
+      "source_field": "[consistency_blocks.key_takeaway]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/grammarly/creatives/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:06.593015+00:00"
+  },
+  {
+    "record_id": "rec_399_390",
+    "source_url": "https://aitoolsforpros.com/grammarly/insurance/",
+    "target_url": "https://aitoolsforpros.com/copilot/insurance/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "copilot",
+    "profession": "insurance",
+    "anchor_text": "Microsoft Copilot",
+    "existing_text": "The combination produces output that is both faster to produce and more polished than either tool alone.",
+    "proposed_text": "The combination produces output that is both faster to produce and more polished than either tool alone. For agencies already running Microsoft 365, <a href=\"/copilot/insurance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Microsoft Copilot</a> can fill the same drafting role directly inside Word and Outlook, since its output stays in the document instead of requiring copy-paste from a chat window.",
+    "rationale": "Insurance agents reading about the ChatGPT-draft-then-Grammarly-polish workflow may already be on Microsoft 365 and want to know whether they can skip the copy-paste step entirely; noting Copilot's in-app drafting is a genuine, evidenced alternative at exactly this point in the workflow discussion.",
+    "evidence": {
+      "supporting_text": "The main advantage of Copilot is that output lands inside the M365 tool you are already working in, the proposal stays in Word, the email stays in Outlook. ChatGPT produces output in a chat window that requires copy-paste.",
+      "source_field": "[faq[5].answer]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/insurance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:08.308393+00:00"
+  },
+  {
+    "record_id": "rec_390_399",
+    "source_url": "https://aitoolsforpros.com/copilot/insurance/",
+    "target_url": "https://aitoolsforpros.com/grammarly/insurance/",
+    "primary_tool": "copilot",
+    "sibling_tool": "grammarly",
+    "profession": "insurance",
+    "anchor_text": "Grammarly",
+    "existing_text": "The agent provides the accurate status information; Copilot handles structure and tone.",
+    "proposed_text": "The agent provides the accurate status information; Copilot handles structure and tone. For agencies sending high volumes of client correspondence who want a consistent final quality check before messages go out, <a href=\"/grammarly/insurance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Grammarly</a> can serve as that polishing pass, since it is designed to improve the clarity, tone, and professionalism of client communication regardless of whether it was drafted by the agent, ChatGPT, or produced in Copilot.",
+    "rationale": "Agents using Copilot to draft high-volume renewal and claims emails may want an additional tone and grammar check before sending, and Grammarly's own page explicitly states it polishes content 'produced it in Copilot,' making this a grounded, workflow-relevant addition rather than a generic mention.",
+    "evidence": {
+      "supporting_text": "It is a writing quality layer that improves the clarity, tone, and professionalism of whatever client communication an insurance professional has drafted, whether they wrote it themselves, drafted it in ChatGPT , or produced it in Copilot .",
+      "source_field": "[consistency_blocks.bottom_line]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/grammarly/insurance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:10.108909+00:00"
+  },
+  {
+    "record_id": "rec_380_399",
+    "source_url": "https://aitoolsforpros.com/perplexity/insurance/",
+    "target_url": "https://aitoolsforpros.com/grammarly/insurance/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "grammarly",
+    "profession": "insurance",
+    "anchor_text": "Grammarly",
+    "existing_text": "For policy analysis, use Claude. For drafting proposals and correspondence, use ChatGPT or <a href=\"/copilot/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Copilot</a>. Perplexity fills the current-information research layer that the other tools lack.",
+    "proposed_text": "For policy analysis, use Claude. For drafting proposals and correspondence, use ChatGPT or <a href=\"/copilot/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Copilot</a>, then run the final draft through <a href=\"/grammarly/insurance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Grammarly</a> for tone and clarity before sending. Perplexity fills the current-information research layer that the other tools lack.",
+    "rationale": "The limitation card already routes readers to ChatGPT/Copilot for drafting after Perplexity's research; the natural next workflow step for a client-facing coverage email or proposal is a writing-quality pass, which is exactly Grammarly's stated role in the insurance workflow chain.",
+    "evidence": {
+      "supporting_text": "It is a writing quality layer that improves the clarity, tone, and professionalism of whatever client communication an insurance professional has drafted, whether they wrote it themselves, drafted it in ChatGPT , or produced it in Copilot .",
+      "source_field": "[consistency_blocks.bottom_line]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/grammarly/insurance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:11.701024+00:00"
+  },
+  {
+    "record_id": "rec_374_399",
+    "source_url": "https://aitoolsforpros.com/claude/insurance/",
+    "target_url": "https://aitoolsforpros.com/grammarly/insurance/",
+    "primary_tool": "claude",
+    "sibling_tool": "grammarly",
+    "profession": "insurance",
+    "anchor_text": "Grammarly",
+    "existing_text": "Claude can draft this summary from an outline of the program, producing a client-ready document the professional reviews and personalizes.",
+    "proposed_text": "Claude can draft this summary from an outline of the program, producing a client-ready document the professional reviews and personalizes, and running it through <a href=\"/grammarly/insurance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Grammarly</a> afterward is a useful final step, since its tone detection is built to catch the overly informal, passive, or hedged phrasing that can creep into technical coverage explanations written for a non-expert business owner.",
+    "rationale": "The executive summary use case explicitly targets a 'business owner who is not an insurance expert,' and the sibling page states its tone detection is designed to catch exactly the phrasing issues that arise when writing about technical topics for a non-technical audience, making it a natural final-pass recommendation after Claude's draft.",
+    "evidence": {
+      "supporting_text": "Grammarly's tone detection can flag when a draft reads as too informal, too passive, or too hedged, common issues when writing quickly about technical topics for a non-technical audience.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/grammarly/insurance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:13.321552+00:00"
+  },
+  {
+    "record_id": "rec_366_399",
+    "source_url": "https://aitoolsforpros.com/chatgpt/insurance/",
+    "target_url": "https://aitoolsforpros.com/grammarly/insurance/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "grammarly",
+    "profession": "insurance",
+    "anchor_text": "Grammarly",
+    "existing_text": "ChatGPT reduces the time cost of all of these without requiring the professional to start from a blank page each time.",
+    "proposed_text": "ChatGPT reduces the time cost of all of these without requiring the professional to start from a blank page each time, and running the draft through <a href=\"/grammarly/insurance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Grammarly</a> afterward helps catch tone and clarity issues before high-volume correspondence goes out to clients.",
+    "rationale": "This section explicitly addresses the high-volume nature of insurance client correspondence, which is exactly the use case Grammarly's own page identifies as its strength, so a mention of the natural ChatGPT-draft-then-Grammarly-polish workflow fits the reader's actual workflow need.",
+    "evidence": {
+      "supporting_text": "Improving tone consistency across high-volume client correspondence",
+      "source_field": "[consistency_blocks.best_for]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/grammarly/insurance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:14.804420+00:00"
+  },
+  {
+    "record_id": "rec_398_382",
+    "source_url": "https://aitoolsforpros.com/grammarly/real-estate/",
+    "target_url": "https://aitoolsforpros.com/gemini/real-estate/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "gemini",
+    "profession": "real-estate",
+    "anchor_text": "Gemini's inline drafting inside Gmail",
+    "existing_text": "For agents who draft sequences directly in Gmail or a web-based CRM, the browser extension provides passive quality control across all drafts.",
+    "proposed_text": "For agents who draft sequences directly in Gmail, perhaps using <a href=\"/gemini/real-estate/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Gemini's inline drafting inside Gmail</a> to generate the first pass, or a web-based CRM, the browser extension provides passive quality control across all drafts.",
+    "rationale": "The source paragraph is specifically about agents who draft follow-up sequences directly inside Gmail, and Gemini's page describes exactly that generation step (drafting inline in Gmail) that would precede Grammarly's passive editing pass, creating a real two-tool workflow rather than a bolted-on comparison.",
+    "evidence": {
+      "supporting_text": "Gemini in Gmail can draft replies, compose follow-up sequences, and summarize long email threads directly in the compose window.",
+      "source_field": "content_sections[0].section_body (sibling)",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/gemini/real-estate/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:16.307901+00:00"
+  },
+  {
+    "record_id": "rec_382_398",
+    "source_url": "https://aitoolsforpros.com/gemini/real-estate/",
+    "target_url": "https://aitoolsforpros.com/grammarly/real-estate/",
+    "primary_tool": "gemini",
+    "sibling_tool": "grammarly",
+    "profession": "real-estate",
+    "anchor_text": "Grammarly",
+    "existing_text": "Personalize every draft before sending; AI-generated email reads as such if you do not add your own voice.",
+    "proposed_text": "Personalize every draft before sending; AI-generated email reads as such if you do not add your own voice. Running the draft through <a href=\"/grammarly/real-estate/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Grammarly</a>, which also runs inside Gmail, adds a passive tone check that flags unintended tone before you hit send.",
+    "rationale": "Agents drafting emails inline with Gemini in Gmail are told to personalize before sending to avoid an AI-sounding tone; Grammarly runs in that same Gmail environment and specifically flags unintended tone signals in real time, which is a concrete, evidenced next step for that exact reader concern.",
+    "evidence": {
+      "supporting_text": "Grammarly's tone detector flags unintended tone signals in real time inside Gmail before the email is sent.",
+      "source_field": "content_sections[0].section_body (Offer and Negotiation Email Tone)",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/grammarly/real-estate/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:18.221562+00:00"
+  },
+  {
+    "record_id": "rec_371_398",
+    "source_url": "https://aitoolsforpros.com/claude/real-estate/",
+    "target_url": "https://aitoolsforpros.com/grammarly/real-estate/",
+    "primary_tool": "claude",
+    "sibling_tool": "grammarly",
+    "profession": "real-estate",
+    "anchor_text": "Grammarly",
+    "existing_text": "After Claude drafts the description, I review it specifically for Fair Housing compliance before it goes anywhere near the MLS. Claude does not automatically screen for Fair Housing language issues.",
+    "proposed_text": "After Claude drafts the description, I review it specifically for Fair Housing compliance before it goes anywhere near the MLS. Claude does not automatically screen for Fair Housing language issues. For a final grammar and tone pass before the copy goes live, I sometimes run it through <a href=\"/grammarly/real-estate/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Grammarly</a>, which catches passive voice, run-on sentences, and tone inconsistencies in listing copy, though it has the same Fair Housing blind spot Claude does.",
+    "rationale": "Agents drafting listing copy with Claude need a clear next step for polish before publishing, and Grammarly's own page describes exactly this final-pass role for MLS listing remarks, while reinforcing that Fair Housing review still requires separate human judgment (a point the source page already stresses about Claude).",
+    "evidence": {
+      "supporting_text": "Grammarly catches passive voice overuse, run-on sentences, unclear feature descriptions, and tone inconsistencies before the copy goes live on the MLS.",
+      "source_field": "[content_sections[0].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/grammarly/real-estate/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:19.867144+00:00"
+  },
+  {
+    "record_id": "rec_363_398",
+    "source_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
+    "target_url": "https://aitoolsforpros.com/grammarly/real-estate/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "grammarly",
+    "profession": "real-estate",
+    "anchor_text": "Grammarly for real estate agent",
+    "existing_text": "Instead of starting from scratch for each property, you start with a strong draft and edit it for voice.",
+    "proposed_text": "Instead of starting from scratch for each property, you start with a strong draft and edit it for voice, often running the final version through <a href=\"/grammarly/real-estate/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Grammarly for real estate agent</a> to catch passive voice, run-on sentences, and tone inconsistencies before the copy goes live on the MLS.",
+    "rationale": "Agents using ChatGPT to draft MLS copy still need a final quality pass before publishing, and Grammarly's own page describes exactly this finishing-layer role for listing remarks drafted by ChatGPT.",
+    "evidence": {
+      "supporting_text": "Whether the first draft comes from you or ChatGPT, listing remarks benefit from a final pass. Grammarly catches passive voice overuse, run-on sentences, unclear feature descriptions, and tone inconsistencies before the copy goes live on the MLS.",
+      "source_field": "content_sections[0].section_body (Listing Remarks and MLS Copy)",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/grammarly/real-estate/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:21.559983+00:00"
+  },
+  {
+    "record_id": "rec_397_385",
+    "source_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "target_url": "https://aitoolsforpros.com/copilot/legal/",
+    "primary_tool": "grammarly",
+    "sibling_tool": "copilot",
+    "profession": "legal",
+    "anchor_text": "Microsoft Copilot for legal professionals",
+    "existing_text": "Unlike ChatGPT or Claude, which require you to open a separate interface and copy text back and forth, Grammarly catches errors in real time as you type.",
+    "proposed_text": "Unlike ChatGPT or Claude, which require you to open a separate interface and copy text back and forth, Grammarly catches errors in real time as you type; <a href=\"/copilot/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Microsoft Copilot for legal professionals</a> also works natively inside Word and Outlook, but for drafting replies and summarizing documents rather than proofreading, which is a different function than the passive editing Grammarly provides.",
+    "rationale": "Attorneys reading about Grammarly's native, no-friction integration into Word and Outlook may wonder how that compares to Microsoft's own native AI tool for the same apps; clarifying that Copilot serves a different function (drafting/summarizing versus proofreading) helps them understand the two are complementary rather than redundant.",
+    "evidence": {
+      "supporting_text": "Copilot's genuine advantage is that it operates inside your existing Microsoft 365 environment. Every lawyer already spends their day in Word, Outlook, and Teams. Copilot makes AI assistance available exactly there, with no workflow change required.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:23.106085+00:00"
+  },
+  {
+    "record_id": "rec_394_397",
+    "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "primary_tool": "notion-ai",
+    "sibling_tool": "grammarly",
+    "profession": "legal",
+    "anchor_text": "Grammarly",
+    "existing_text": "Notion AI helps inside Notion pages. If the work is in PDFs, redlines, or email, I often need another tool before I land in Notion.",
+    "proposed_text": "Notion AI helps inside Notion pages. If the work is in PDFs, redlines, or email, I often need another tool before I land in Notion, and for email correspondence I typically turn to <a href=\"/grammarly/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Grammarly</a>, since it runs natively inside Gmail and Outlook and catches errors as I type instead of requiring copy-paste into a separate window.",
+    "rationale": "The limitation card already flags that Notion AI can't help once work moves into email, which is a specific workflow gap; Grammarly's own page states it integrates natively into Gmail and Outlook without copy-paste friction, making it a concrete, evidenced tool to name at exactly this gap.",
+    "evidence": {
+      "supporting_text": "Grammarly runs as a browser extension and integrates natively with Word, Outlook, and Gmail. Unlike ChatGPT or Claude, which require you to open a separate interface and copy text back and forth, Grammarly catches errors in real time as you type.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/grammarly/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "medium",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:25.107334+00:00"
+  },
+  {
+    "record_id": "rec_385_397",
+    "source_url": "https://aitoolsforpros.com/copilot/legal/",
+    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "primary_tool": "copilot",
+    "sibling_tool": "grammarly",
+    "profession": "legal",
+    "anchor_text": "Grammarly",
+    "existing_text": "Tone and accuracy still require attorney review before sending.",
+    "proposed_text": "Tone and accuracy still require attorney review before sending; for an added check, <a href=\"/grammarly/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Grammarly</a> can flag when a client email still reads too much like a formal filing, catching tone mismatches before the message goes out.",
+    "rationale": "Attorneys drafting client emails with Copilot still need a tone check before sending, and Grammarly's stated tone-detection feature for legal writing directly addresses that specific review step without changing the Copilot workflow.",
+    "evidence": {
+      "supporting_text": "Grammarly's tone detector flags when client-facing documents still read like pleadings, which is one of the most common communication failures in legal practice.",
+      "source_field": "content_sections[0].section_body (Tone Calibration for Client Communication)",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/grammarly/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:26.581300+00:00"
+  },
+  {
+    "record_id": "rec_381_394",
+    "source_url": "https://aitoolsforpros.com/gemini/legal/",
+    "target_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "primary_tool": "gemini",
+    "sibling_tool": "notion-ai",
+    "profession": "legal",
+    "anchor_text": "Notion AI",
+    "existing_text": "I recommend Gemini for legal teams that already run on Google Workspace and want faster intake, summarization, and first-pass structure.",
+    "proposed_text": "I recommend Gemini for legal teams that already run on Google Workspace and want faster intake, summarization, and first-pass structure. If your team's knowledge base lives in Notion instead, <a href=\"/notion-ai/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Notion AI</a> is a better fit, since it is most valuable when notes, playbooks, and clause libraries already live there rather than in Google Docs or Gmail.",
+    "rationale": "Readers choosing Gemini specifically because their firm runs on Google Workspace have a real decision point if their actual system of record is Notion instead, and pointing them to the tool built around that workspace addresses that exact fork.",
+    "evidence": {
+      "supporting_text": "In my experience, Notion AI is less about \"ask a question, get a legal answer\" and more about taking the legal work you already did and packaging it into something usable. If your legal team uses Notion as a workspace, that packaging step is constant.",
+      "source_field": "content_sections[0].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/notion-ai/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "medium",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:29.245203+00:00"
+  },
+  {
+    "record_id": "rec_377_394",
+    "source_url": "https://aitoolsforpros.com/perplexity/legal/",
+    "target_url": "https://aitoolsforpros.com/notion-ai/legal/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "notion-ai",
+    "profession": "legal",
+    "anchor_text": "Notion AI",
+    "existing_text": "I would still validate authority and relevance, but as a discovery tool it saves time.",
+    "proposed_text": "I would still validate authority and relevance, but as a discovery tool it saves time, and once findings are verified, a workspace tool like <a href=\"/notion-ai/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Notion AI</a> is useful for turning that research into a standardized checklist or playbook the team can reuse.",
+    "rationale": "Attorneys using Perplexity for secondary-source discovery need a next step for capturing and reusing what they find; Notion AI's own page positions itself as the tool for converting research into internal playbooks and checklists, which is a natural complementary workflow point rather than a competing tool.",
+    "evidence": {
+      "supporting_text": "I turn past negotiation notes into a standardized checklist: preferred position, fallback, red lines, and required approvals. It saves time during review.",
+      "source_field": "content_sections[0].section_body (Contract playbooks card)",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/notion-ai/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:30.781731+00:00"
+  },
+  {
+    "record_id": "rec_369_397",
+    "source_url": "https://aitoolsforpros.com/claude/legal/",
+    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "primary_tool": "claude",
+    "sibling_tool": "grammarly",
+    "profession": "legal",
+    "anchor_text": "Grammarly",
+    "existing_text": "<p>Important: Claude cannot verify citations. Any case law references it includes must be independently confirmed before the document is filed or sent to opposing counsel. This is a genuine limitation and not a caution that can be worked around with better prompting.</p>",
+    "proposed_text": "<p>Important: Claude cannot verify citations. Any case law references it includes must be independently confirmed before the document is filed or sent to opposing counsel. This is a genuine limitation and not a caution that can be worked around with better prompting. Once the substantive draft is verified, running it through a dedicated editing tool like <a href=\"/grammarly/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Grammarly</a>, which is built to catch passive voice, unclear pronoun references, and inconsistent terminology before a brief goes to opposing counsel or the court, adds a final layer of polish that complements Claude's drafting strength.</p>",
+    "rationale": "Lawyers using Claude to draft briefs still need a final polishing pass before filing or sending to opposing counsel, and Grammarly's own page describes exactly this function for legal writing, making it a natural next step after Claude's draft is verified.",
+    "evidence": {
+      "supporting_text": "Grammarly Premium catches these systematically before the document goes to opposing counsel or the court.",
+      "source_field": "content_sections[0].section_body (Brief and Motion Polishing)",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/grammarly/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:32.559060+00:00"
+  },
+  {
+    "record_id": "rec_361_397",
+    "source_url": "https://aitoolsforpros.com/chatgpt/legal/",
+    "target_url": "https://aitoolsforpros.com/grammarly/legal/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "grammarly",
+    "profession": "legal",
+    "anchor_text": "Grammarly",
+    "existing_text": "The result is better-organized correspondence than most lawyers write when pressed for time.",
+    "proposed_text": "The result is better-organized correspondence than most lawyers write when pressed for time. Before it goes out, a quick pass through <a href=\"/grammarly/legal/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Grammarly</a> catches tone and clarity issues in the already-drafted letter, since Grammarly is built to review and improve text you have already produced rather than to draft it.",
+    "rationale": "Attorneys using ChatGPT to draft client correspondence still need a final polish step before sending, and Grammarly's stated specialty is exactly that: reviewing and improving already-drafted text rather than generating it, which fits naturally as the next workflow step after ChatGPT's draft.",
+    "evidence": {
+      "supporting_text": "It excels at polishing briefs, client letters, and correspondence that you have already drafted.",
+      "source_field": "[consistency_blocks.bottom_line]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/grammarly/legal/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:34.412737+00:00"
+  },
+  {
+    "record_id": "rec_393_395",
+    "source_url": "https://aitoolsforpros.com/cursor/engineers/",
+    "target_url": "https://aitoolsforpros.com/notion-ai/engineers/",
+    "primary_tool": "cursor",
+    "sibling_tool": "notion-ai",
+    "profession": "engineers",
+    "anchor_text": "Notion AI",
+    "existing_text": "For engineers who also need general AI assistance for communication, documentation strategy, or non-technical tasks, supplement Cursor with <a href=\"/chatgpt/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> or <a href=\"/claude/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a>.",
+    "proposed_text": "For engineers who also need general AI assistance for communication, documentation strategy, or non-technical tasks, supplement Cursor with <a href=\"/chatgpt/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> or <a href=\"/claude/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a>, or with <a href=\"/notion-ai/engineers/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Notion AI</a> if your team already drafts runbooks, specs, and wiki pages inside Notion.",
+    "rationale": "This limitation card already tells engineers to supplement Cursor for non-coding needs like documentation strategy; readers whose team documentation lives in Notion specifically need a pointer to a tool built for that workflow, and Notion AI's own page states this exact use case.",
+    "evidence": {
+      "supporting_text": "For engineering teams that use Notion as their documentation and project management hub, it removes friction from runbook drafting, wiki summarization, and meeting note cleanup.",
+      "source_field": "[consistency_blocks.bottom_line]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/notion-ai/engineers/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:35.938801+00:00"
+  },
+  {
+    "record_id": "rec_372_395",
+    "source_url": "https://aitoolsforpros.com/claude/engineers/",
+    "target_url": "https://aitoolsforpros.com/notion-ai/engineers/",
+    "primary_tool": "claude",
+    "sibling_tool": "notion-ai",
+    "profession": "engineers",
+    "anchor_text": "Notion AI",
+    "existing_text": "The draft is not finished, you review and correct the technical details, but it is meaningfully better than starting from a blank document template.",
+    "proposed_text": "The draft is not finished, you review and correct the technical details, but it is meaningfully better than starting from a blank document template. If your team's documentation already lives in Notion, <a href=\"/notion-ai/engineers/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Notion AI</a> can generate a similar first-pass draft directly inside the workspace, though it is built for smaller, well-scoped documents rather than the complex architectural specs Claude handles best.",
+    "rationale": "Engineers who already keep specs and RFCs in Notion have a real workflow choice between drafting in Claude and pasting in, versus drafting in-place with Notion AI; the sibling page itself frames this exact tradeoff (speed/location vs. reasoning depth), so surfacing it here helps readers choose the right tool for the document's complexity.",
+    "evidence": {
+      "supporting_text": "For deeper technical specification work, Claude's 200K context window and stronger reasoning make it better for complex architectural specs. Notion AI is appropriate for smaller, well-scoped features where the goal is speed over depth.",
+      "source_field": "[content_sections[2].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/notion-ai/engineers/"
+    },
+    "confidence": {
+      "relevance_confidence": "medium",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:37.487233+00:00"
+  },
+  {
+    "record_id": "rec_364_393",
+    "source_url": "https://aitoolsforpros.com/chatgpt/engineers/",
+    "target_url": "https://aitoolsforpros.com/cursor/engineers/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "cursor",
+    "profession": "engineers",
+    "anchor_text": "Cursor",
+    "existing_text": "For tasks where you want AI inline in your editing flow, Cursor or GitHub <a href=\"/copilot/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Copilot</a> eliminates that friction.",
+    "proposed_text": "For tasks where you want AI inline in your editing flow, <a href=\"/cursor/engineers/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Cursor</a> or GitHub <a href=\"/copilot/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Copilot</a> eliminates that friction.",
+    "rationale": "Cursor is already named in this ChatGPT limitation card as an alternative for engineers who want AI inline in their editor rather than copy-pasting between a browser tab and their IDE, but the mention isn't a link; Cursor's own page confirms it offers exactly that inline, in-editor workflow.",
+    "evidence": {
+      "supporting_text": "Highlight any code block and open Cursor's inline chat to ask specific questions without leaving the editor.",
+      "source_field": "[content_sections[0].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/cursor/engineers/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:39.503627+00:00"
+  },
+  {
+    "record_id": "rec_391_375",
+    "source_url": "https://aitoolsforpros.com/midjourney/architects/",
+    "target_url": "https://aitoolsforpros.com/claude/architects/",
+    "primary_tool": "midjourney",
+    "sibling_tool": "claude",
+    "profession": "architects",
+    "anchor_text": "Claude",
+    "existing_text": "It is not a drafting tool, a BIM platform, or a rendering engine in the conventional sense. It cannot read a floor plan and render it. It cannot represent a specific site accurately from survey coordinates.",
+    "proposed_text": "It is not a drafting tool, a BIM platform, or a rendering engine in the conventional sense. It cannot read a floor plan and render it. It cannot represent a specific site accurately from survey coordinates. For the document-heavy side of practice, reviewing specification packages, RFPs, or building programs, <a href=\"/claude/architects/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Claude</a> is built for that kind of large-document analysis, a different function entirely from Midjourney's visual exploration role.",
+    "rationale": "Readers assessing what Midjourney cannot do benefit from knowing which tool actually handles the text-heavy analysis tasks (specs, RFPs, programs) that architects also need, and Claude's own page is built specifically around that capability.",
+    "evidence": {
+      "supporting_text": "For reviewing full specification packages, analyzing lengthy RFPs, processing complex building programs, and drafting extended technical narratives, Claude is the right tool when the document volume exceeds what other AI tools can process.",
+      "source_field": "consistency_blocks.bottom_line",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/claude/architects/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "medium",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:41.167556+00:00"
+  },
+  {
+    "record_id": "rec_384_391",
+    "source_url": "https://aitoolsforpros.com/gemini/architects/",
+    "target_url": "https://aitoolsforpros.com/midjourney/architects/",
+    "primary_tool": "gemini",
+    "sibling_tool": "midjourney",
+    "profession": "architects",
+    "anchor_text": "Midjourney",
+    "existing_text": "For visual exploration and client presentation imagery, Midjourney is the right tool.",
+    "proposed_text": "For visual exploration and client presentation imagery, <a href=\"/midjourney/architects/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Midjourney</a> is the right tool.",
+    "rationale": "The source already names Midjourney as the correct tool for visual exploration and client presentation imagery when explaining Gemini's lack of image generation; linking that exact phrase lets architects jump directly to the sibling page that details Midjourney's use for design direction and client presentation work.",
+    "evidence": {
+      "supporting_text": "Design direction exploration, mood board generation, client presentation imagery, pre-production visual reference for photography, and materiality studies during schematic design",
+      "source_field": "[consistency_blocks.best_for]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/midjourney/architects/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:43.030474+00:00"
+  },
+  {
+    "record_id": "rec_375_391",
+    "source_url": "https://aitoolsforpros.com/claude/architects/",
+    "target_url": "https://aitoolsforpros.com/midjourney/architects/",
+    "primary_tool": "claude",
+    "sibling_tool": "midjourney",
+    "profession": "architects",
+    "anchor_text": "Midjourney",
+    "existing_text": "For visual concept exploration and client presentation imagery, Midjourney handles the tasks Claude cannot.",
+    "proposed_text": "For visual concept exploration and client presentation imagery, <a href=\"/midjourney/architects/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Midjourney</a> handles the tasks Claude cannot.",
+    "rationale": "The limitation card already names Midjourney as the tool that covers Claude's lack of image generation for visual concept work and client presentations, but the mention isn't a link; linking it lets readers who need that capability go directly to the tool's dedicated architect page.",
+    "evidence": {
+      "supporting_text": "Design direction exploration, mood board generation, client presentation imagery, pre-production visual reference for photography, and materiality studies during schematic design",
+      "source_field": "[consistency_blocks.best_for]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/midjourney/architects/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:44.524708+00:00"
+  },
+  {
+    "record_id": "rec_367_391",
+    "source_url": "https://aitoolsforpros.com/chatgpt/architects/",
+    "target_url": "https://aitoolsforpros.com/midjourney/architects/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "midjourney",
+    "profession": "architects",
+    "anchor_text": "Midjourney",
+    "existing_text": "For visual concept exploration and client presentation imagery, Midjourney handles what ChatGPT cannot.",
+    "proposed_text": "For visual concept exploration and client presentation imagery, <a href=\"/midjourney/architects/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Midjourney</a> handles what ChatGPT cannot.",
+    "rationale": "The source already names Midjourney as the tool architects should turn to for visual concept work and client presentation imagery, which is exactly the gap ChatGPT has (limited, low-quality DALL-E output). This is a direct, evidenced pointer to the sibling's specialty, so linking the existing name serves the reader who needs image generation and would otherwise not know where to go.",
+    "evidence": {
+      "supporting_text": "Design direction exploration, mood board generation, client presentation imagery, pre-production visual reference for photography, and materiality studies during schematic design",
+      "source_field": "[consistency_blocks.best_for]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/midjourney/architects/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:46.051243+00:00"
+  },
+  {
+    "record_id": "rec_389_383",
+    "source_url": "https://aitoolsforpros.com/copilot/finance/",
+    "target_url": "https://aitoolsforpros.com/gemini/finance/",
+    "primary_tool": "copilot",
+    "sibling_tool": "gemini",
+    "profession": "finance",
+    "anchor_text": "Google Gemini for finance professional",
+    "existing_text": "Copilot only works inside Microsoft 365 applications. If your practice uses Google Workspace, a Mac-native email client, or a different suite of tools, Copilot provides no benefit. The M365 subscription plus Copilot add-on cost is only justified if your primary work tools are already in Microsoft's ecosystem.",
+    "proposed_text": "Copilot only works inside Microsoft 365 applications. If your practice uses Google Workspace, a Mac-native email client, or a different suite of tools, Copilot provides no benefit. Advisors on Gmail, Google Docs, and Google Sheets should look at <a href=\"/gemini/finance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Google Gemini for finance professional</a> instead, since its integration follows the same logic for the Google ecosystem. The M365 subscription plus Copilot add-on cost is only justified if your primary work tools are already in Microsoft's ecosystem.",
+    "rationale": "This limitation card already tells advisors that Copilot is worthless outside Microsoft 365 and mentions Google Workspace as the specific alternative environment, so naming the Workspace-native AI tool (Gemini) directly answers the reader's next question about what to use instead.",
+    "evidence": {
+      "supporting_text": "Like Microsoft Copilot for M365, Gemini's integration features only provide value if your practice already uses Google Workspace. If you're on Microsoft 365 or a different suite, Copilot is more relevant.",
+      "source_field": "content_sections[3].section_body (limit-desc, 'Only valuable in Google Workspace')",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/gemini/finance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "high"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:47.599387+00:00"
+  },
+  {
+    "record_id": "rec_379_389",
+    "source_url": "https://aitoolsforpros.com/perplexity/finance/",
+    "target_url": "https://aitoolsforpros.com/copilot/finance/",
+    "primary_tool": "perplexity",
+    "sibling_tool": "copilot",
+    "profession": "finance",
+    "anchor_text": "Microsoft Copilot",
+    "existing_text": "For writing tasks, ChatGPT and Claude are more appropriate. Perplexity is the research layer; they handle the output layer.",
+    "proposed_text": "For writing tasks, ChatGPT and Claude are more appropriate, and <a href=\"/copilot/finance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Microsoft Copilot</a> is a practical option for advisors whose client reports and financial plan documents already live in Word. Perplexity is the research layer; they handle the output layer.",
+    "rationale": "The limitation card already tells readers Perplexity can't draft client reports or financial plan narratives; advisors reading that need a specific alternative, and Copilot's own page centers on exactly that task inside Word, which the current sentence only partially addresses by naming ChatGPT and Claude.",
+    "evidence": {
+      "supporting_text": "Client reports and financial plan documents are Word documents for most advisory practices. Copilot in Word can help draft, expand, reformat, and summarize these documents without requiring the advisor to switch to a separate AI tool and copy-paste the output back in.",
+      "source_field": "content_sections[1].section_body",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/finance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "high",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:49.832843+00:00"
+  },
+  {
+    "record_id": "rec_373_383",
+    "source_url": "https://aitoolsforpros.com/claude/finance/",
+    "target_url": "https://aitoolsforpros.com/gemini/finance/",
+    "primary_tool": "claude",
+    "sibling_tool": "gemini",
+    "profession": "finance",
+    "anchor_text": "Gemini's Google Sheets integration",
+    "existing_text": "Claude cannot receive uploaded spreadsheet files and analyze the data directly (at least not in the same way as <a href=\"/chatgpt/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> Plus's Code Interpreter). For data visualization and quantitative analysis from spreadsheet exports, ChatGPT Plus is more appropriate.",
+    "proposed_text": "Claude cannot receive uploaded spreadsheet files and analyze the data directly (at least not in the same way as <a href=\"/chatgpt/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">ChatGPT</a> Plus's Code Interpreter). For data visualization and quantitative analysis from spreadsheet exports, ChatGPT Plus is more appropriate, and advisors already on Google Workspace may find <a href=\"/gemini/finance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Gemini's Google Sheets integration</a> a similarly useful option for generating formulas and charts directly within their existing spreadsheets.",
+    "rationale": "Advisors reading this limitation card about Claude's lack of spreadsheet analysis are actively looking for an alternative for spreadsheet-based work; Gemini's native Google Sheets formula and chart generation is a directly relevant, evidenced alternative for those already in Google Workspace, distinct from the ChatGPT option already mentioned.",
+    "evidence": {
+      "supporting_text": "For financial advisors who track client data, model retirement scenarios, or analyze portfolio holdings in Google Sheets, Gemini can generate formulas, analyze data ranges, and create charts from plain-language requests.",
+      "source_field": "[content_sections[2].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/gemini/finance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:51.646455+00:00"
+  },
+  {
+    "record_id": "rec_365_389",
+    "source_url": "https://aitoolsforpros.com/chatgpt/finance/",
+    "target_url": "https://aitoolsforpros.com/copilot/finance/",
+    "primary_tool": "chatgpt",
+    "sibling_tool": "copilot",
+    "profession": "finance",
+    "anchor_text": "Microsoft Copilot",
+    "existing_text": "Advisors review, adjust tone and specifics, and send from their own email client.",
+    "proposed_text": "Advisors review, adjust tone and specifics, and send from their own email client, though those whose practice runs on Microsoft 365 may prefer drafting the note directly inside Outlook with <a href=\"/copilot/finance/\" style=\"color:#2563eb;text-decoration:none;font-weight:500;\">Microsoft Copilot</a>, which can draft email responses and compose new messages without leaving the email client itself.",
+    "rationale": "Advisors reading about the copy-and-send workflow for ChatGPT-drafted follow-up emails may want to know there's an alternative that avoids the tool-switching step entirely if their firm already runs on Microsoft 365, which is a real workflow tradeoff worth surfacing at this exact point.",
+    "evidence": {
+      "supporting_text": "Copilot in Outlook can draft email responses and compose new messages from brief notes without leaving the email client.",
+      "source_field": "[content_sections[2].section_body]",
+      "source_type": "SITE_PUBLISHED_CONTENT",
+      "source_url": "https://aitoolsforpros.com/copilot/finance/"
+    },
+    "confidence": {
+      "relevance_confidence": "high",
+      "evidence_confidence": "high",
+      "placement_confidence": "medium",
+      "editorial_naturalness_confidence": "medium"
+    },
+    "policy_version": "1.2.0",
+    "status": "applied",
+    "reason": "replaced 1x, verified by re-fetch",
+    "applied_at": "2026-08-05T23:43:53.327845+00:00"
+  }
+]

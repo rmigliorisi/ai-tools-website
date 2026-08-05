@@ -9,7 +9,7 @@
     "sibling_tool": "copilot",
     "profession": "physicians",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -26,7 +26,7 @@
     "sibling_tool": "perplexity",
     "profession": "physicians",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -43,7 +43,7 @@
     "sibling_tool": "otter",
     "profession": "physicians",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -60,7 +60,7 @@
     "sibling_tool": "otter",
     "profession": "physicians",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -77,7 +77,7 @@
     "sibling_tool": "copilot",
     "profession": "physicians",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -94,7 +94,7 @@
     "sibling_tool": "claude",
     "profession": "physicians",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -111,7 +111,7 @@
     "sibling_tool": "chatgpt",
     "profession": "physicians",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -128,7 +128,7 @@
     "sibling_tool": "otter",
     "profession": "physicians",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -145,7 +145,7 @@
     "sibling_tool": "copilot",
     "profession": "physicians",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -162,7 +162,7 @@
     "sibling_tool": "chatgpt",
     "profession": "physicians",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -179,7 +179,7 @@
     "sibling_tool": "copilot",
     "profession": "physicians",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -196,7 +196,7 @@
     "sibling_tool": "perplexity",
     "profession": "physicians",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -213,7 +213,7 @@
     "sibling_tool": "claude",
     "profession": "physicians",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -230,7 +230,7 @@
     "sibling_tool": "notion-ai",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -247,7 +247,7 @@
     "sibling_tool": "midjourney",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -264,7 +264,7 @@
     "sibling_tool": "claude",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -281,7 +281,7 @@
     "sibling_tool": "chatgpt",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -298,7 +298,7 @@
     "sibling_tool": "grammarly",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -315,7 +315,7 @@
     "sibling_tool": "midjourney",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -332,7 +332,7 @@
     "sibling_tool": "claude",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -349,7 +349,7 @@
     "sibling_tool": "chatgpt",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -366,7 +366,7 @@
     "sibling_tool": "grammarly",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -383,7 +383,7 @@
     "sibling_tool": "notion-ai",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -400,7 +400,7 @@
     "sibling_tool": "claude",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -417,7 +417,7 @@
     "sibling_tool": "chatgpt",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -434,7 +434,7 @@
     "sibling_tool": "grammarly",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -451,7 +451,7 @@
     "sibling_tool": "notion-ai",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -468,7 +468,7 @@
     "sibling_tool": "midjourney",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -485,7 +485,7 @@
     "sibling_tool": "chatgpt",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -502,7 +502,7 @@
     "sibling_tool": "grammarly",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -519,7 +519,7 @@
     "sibling_tool": "notion-ai",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -536,7 +536,7 @@
     "sibling_tool": "midjourney",
     "profession": "creatives",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -553,7 +553,7 @@
     "sibling_tool": "copilot",
     "profession": "insurance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -570,7 +570,7 @@
     "sibling_tool": "perplexity",
     "profession": "insurance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -587,7 +587,7 @@
     "sibling_tool": "claude",
     "profession": "insurance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -604,7 +604,7 @@
     "sibling_tool": "chatgpt",
     "profession": "insurance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -621,7 +621,7 @@
     "sibling_tool": "grammarly",
     "profession": "insurance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -638,7 +638,7 @@
     "sibling_tool": "grammarly",
     "profession": "insurance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -655,7 +655,7 @@
     "sibling_tool": "claude",
     "profession": "insurance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -672,7 +672,7 @@
     "sibling_tool": "chatgpt",
     "profession": "insurance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -689,7 +689,7 @@
     "sibling_tool": "grammarly",
     "profession": "insurance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -706,7 +706,7 @@
     "sibling_tool": "grammarly",
     "profession": "insurance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -723,7 +723,7 @@
     "sibling_tool": "copilot",
     "profession": "insurance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -740,7 +740,7 @@
     "sibling_tool": "copilot",
     "profession": "real-estate",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -757,7 +757,7 @@
     "sibling_tool": "gemini",
     "profession": "real-estate",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -774,7 +774,7 @@
     "sibling_tool": "chatgpt",
     "profession": "real-estate",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -791,7 +791,7 @@
     "sibling_tool": "grammarly",
     "profession": "real-estate",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -808,7 +808,7 @@
     "sibling_tool": "gemini",
     "profession": "real-estate",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -825,7 +825,7 @@
     "sibling_tool": "grammarly",
     "profession": "real-estate",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -842,7 +842,7 @@
     "sibling_tool": "claude",
     "profession": "real-estate",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -859,7 +859,7 @@
     "sibling_tool": "chatgpt",
     "profession": "real-estate",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -876,7 +876,7 @@
     "sibling_tool": "grammarly",
     "profession": "real-estate",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -893,7 +893,7 @@
     "sibling_tool": "gemini",
     "profession": "real-estate",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -910,7 +910,7 @@
     "sibling_tool": "grammarly",
     "profession": "real-estate",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -927,7 +927,7 @@
     "sibling_tool": "copilot",
     "profession": "real-estate",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -944,7 +944,7 @@
     "sibling_tool": "gemini",
     "profession": "real-estate",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -961,7 +961,7 @@
     "sibling_tool": "claude",
     "profession": "real-estate",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -978,7 +978,7 @@
     "sibling_tool": "notion-ai",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -995,7 +995,7 @@
     "sibling_tool": "copilot",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1012,7 +1012,7 @@
     "sibling_tool": "gemini",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1029,7 +1029,7 @@
     "sibling_tool": "perplexity",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1046,7 +1046,7 @@
     "sibling_tool": "claude",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1063,7 +1063,7 @@
     "sibling_tool": "chatgpt",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1080,7 +1080,7 @@
     "sibling_tool": "grammarly",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1097,7 +1097,7 @@
     "sibling_tool": "copilot",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1114,7 +1114,7 @@
     "sibling_tool": "gemini",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1131,7 +1131,7 @@
     "sibling_tool": "perplexity",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1148,7 +1148,7 @@
     "sibling_tool": "claude",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1165,7 +1165,7 @@
     "sibling_tool": "chatgpt",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1182,7 +1182,7 @@
     "sibling_tool": "grammarly",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1199,7 +1199,7 @@
     "sibling_tool": "notion-ai",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1216,7 +1216,7 @@
     "sibling_tool": "gemini",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1233,7 +1233,7 @@
     "sibling_tool": "claude",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1250,7 +1250,7 @@
     "sibling_tool": "chatgpt",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1267,7 +1267,7 @@
     "sibling_tool": "grammarly",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1284,7 +1284,7 @@
     "sibling_tool": "notion-ai",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1301,7 +1301,7 @@
     "sibling_tool": "perplexity",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1318,7 +1318,7 @@
     "sibling_tool": "grammarly",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1335,7 +1335,7 @@
     "sibling_tool": "notion-ai",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1352,7 +1352,7 @@
     "sibling_tool": "copilot",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1369,7 +1369,7 @@
     "sibling_tool": "gemini",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1386,7 +1386,7 @@
     "sibling_tool": "claude",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1403,7 +1403,7 @@
     "sibling_tool": "chatgpt",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1420,7 +1420,7 @@
     "sibling_tool": "grammarly",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1437,7 +1437,7 @@
     "sibling_tool": "notion-ai",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1454,7 +1454,7 @@
     "sibling_tool": "copilot",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1471,7 +1471,7 @@
     "sibling_tool": "gemini",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1488,7 +1488,7 @@
     "sibling_tool": "perplexity",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1505,7 +1505,7 @@
     "sibling_tool": "grammarly",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1522,7 +1522,7 @@
     "sibling_tool": "notion-ai",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1539,7 +1539,7 @@
     "sibling_tool": "gemini",
     "profession": "legal",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1556,7 +1556,7 @@
     "sibling_tool": "chatgpt",
     "profession": "engineers",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1573,7 +1573,7 @@
     "sibling_tool": "notion-ai",
     "profession": "engineers",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1590,7 +1590,7 @@
     "sibling_tool": "copilot",
     "profession": "engineers",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1607,7 +1607,7 @@
     "sibling_tool": "notion-ai",
     "profession": "engineers",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1624,7 +1624,7 @@
     "sibling_tool": "chatgpt",
     "profession": "engineers",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1641,7 +1641,7 @@
     "sibling_tool": "notion-ai",
     "profession": "engineers",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1658,7 +1658,7 @@
     "sibling_tool": "cursor",
     "profession": "engineers",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1675,7 +1675,7 @@
     "sibling_tool": "claude",
     "profession": "engineers",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1692,7 +1692,7 @@
     "sibling_tool": "gemini",
     "profession": "architects",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1709,7 +1709,7 @@
     "sibling_tool": "claude",
     "profession": "architects",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1726,7 +1726,7 @@
     "sibling_tool": "chatgpt",
     "profession": "architects",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1743,7 +1743,7 @@
     "sibling_tool": "midjourney",
     "profession": "architects",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1760,7 +1760,7 @@
     "sibling_tool": "claude",
     "profession": "architects",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1777,7 +1777,7 @@
     "sibling_tool": "chatgpt",
     "profession": "architects",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1794,7 +1794,7 @@
     "sibling_tool": "midjourney",
     "profession": "architects",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1811,7 +1811,7 @@
     "sibling_tool": "gemini",
     "profession": "architects",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1828,7 +1828,7 @@
     "sibling_tool": "chatgpt",
     "profession": "architects",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1845,7 +1845,7 @@
     "sibling_tool": "midjourney",
     "profession": "architects",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1862,7 +1862,7 @@
     "sibling_tool": "gemini",
     "profession": "architects",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1879,7 +1879,7 @@
     "sibling_tool": "claude",
     "profession": "architects",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1896,7 +1896,7 @@
     "sibling_tool": "gemini",
     "profession": "finance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1913,7 +1913,7 @@
     "sibling_tool": "perplexity",
     "profession": "finance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1930,7 +1930,7 @@
     "sibling_tool": "copilot",
     "profession": "finance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1947,7 +1947,7 @@
     "sibling_tool": "gemini",
     "profession": "finance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1964,7 +1964,7 @@
     "sibling_tool": "claude",
     "profession": "finance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1981,7 +1981,7 @@
     "sibling_tool": "chatgpt",
     "profession": "finance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -1998,7 +1998,7 @@
     "sibling_tool": "gemini",
     "profession": "finance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -2015,7 +2015,7 @@
     "sibling_tool": "copilot",
     "profession": "finance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
@@ -2032,7 +2032,7 @@
     "sibling_tool": "gemini",
     "profession": "finance",
     "policy_version": "1.1.0",
-    "created_at": "2026-08-05T19:20:48.006243+00:00",
+    "created_at": "2026-08-05T22:55:14.173254+00:00",
     "eligibility": {
       "status": "eligible",
       "detail": "200, canonical match, publish status confirmed"
