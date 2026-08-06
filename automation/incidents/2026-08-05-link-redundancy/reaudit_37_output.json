@@ -1,0 +1,567 @@
+{
+  "keep": [
+    {
+      "record_id": "rec_401_386",
+      "source_url": "https://aitoolsforpros.com/otter/physicians/",
+      "sibling_tool": "copilot",
+      "section_now": "Team Meetings, Grand Rounds, and CME Capture",
+      "counts": {
+        "table": 1,
+        "footer_sentence": 1,
+        "contextual": 1
+      },
+      "closing_titles": [
+        "Where Otter.ai Falls Short for Physicians"
+      ],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_386_401",
+      "source_url": "https://aitoolsforpros.com/copilot/physicians/",
+      "sibling_tool": "otter",
+      "section_now": "Multidisciplinary Team Meetings and Care Coordination in Teams",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_370_401",
+      "source_url": "https://aitoolsforpros.com/claude/physicians/",
+      "sibling_tool": "otter",
+      "section_now": "Protocol and Clinical Documentation Drafting",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_362_386",
+      "source_url": "https://aitoolsforpros.com/chatgpt/physicians/",
+      "sibling_tool": "copilot",
+      "section_now": "What ChatGPT Does Well for Physicians",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 1,
+        "contextual": 1
+      },
+      "closing_titles": [
+        "Where ChatGPT Falls Short for Physicians"
+      ],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_400_392",
+      "source_url": "https://aitoolsforpros.com/grammarly/creatives/",
+      "sibling_tool": "midjourney",
+      "section_now": "Where Grammarly Falls Short for Creatives",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_396_392",
+      "source_url": "https://aitoolsforpros.com/notion-ai/creatives/",
+      "sibling_tool": "midjourney",
+      "section_now": "Where Notion AI Falls Short for Creatives",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_376_400",
+      "source_url": "https://aitoolsforpros.com/claude/creatives/",
+      "sibling_tool": "grammarly",
+      "section_now": "Substantive Editing and Copy Refinement",
+      "counts": {
+        "table": 1,
+        "footer_sentence": 1,
+        "contextual": 1
+      },
+      "closing_titles": [
+        "Where Claude Falls Short for Creatives"
+      ],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_399_390",
+      "source_url": "https://aitoolsforpros.com/grammarly/insurance/",
+      "sibling_tool": "copilot",
+      "section_now": "The ChatGPT + Grammarly Workflow",
+      "counts": {
+        "table": 1,
+        "footer_sentence": 1,
+        "contextual": 1
+      },
+      "closing_titles": [
+        "Where Grammarly Falls Short for Insurance Professionals"
+      ],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_390_399",
+      "source_url": "https://aitoolsforpros.com/copilot/insurance/",
+      "sibling_tool": "grammarly",
+      "section_now": "Client Correspondence and Renewal Communication in Outlook",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_380_399",
+      "source_url": "https://aitoolsforpros.com/perplexity/insurance/",
+      "sibling_tool": "grammarly",
+      "section_now": "Where Perplexity AI Falls Short for Insurance Professionals",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_374_399",
+      "source_url": "https://aitoolsforpros.com/claude/insurance/",
+      "sibling_tool": "grammarly",
+      "section_now": "Long-Form Proposals and Coverage Recommendation Letters",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_366_399",
+      "source_url": "https://aitoolsforpros.com/chatgpt/insurance/",
+      "sibling_tool": "grammarly",
+      "section_now": "Client Correspondence and Renewal Communication",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_398_382",
+      "source_url": "https://aitoolsforpros.com/grammarly/real-estate/",
+      "sibling_tool": "gemini",
+      "section_now": "What Grammarly Does Well for Real Estate Agents",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_382_398",
+      "source_url": "https://aitoolsforpros.com/gemini/real-estate/",
+      "sibling_tool": "grammarly",
+      "section_now": "Google Workspace Integration \u2014 The Gmail and Docs Advantage",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_371_398",
+      "source_url": "https://aitoolsforpros.com/claude/real-estate/",
+      "sibling_tool": "grammarly",
+      "section_now": "Listing Copy and Client Communication",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_363_398",
+      "source_url": "https://aitoolsforpros.com/chatgpt/real-estate/",
+      "sibling_tool": "grammarly",
+      "section_now": "What ChatGPT Does Well for Real Estate Agents",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_397_385",
+      "source_url": "https://aitoolsforpros.com/grammarly/legal/",
+      "sibling_tool": "copilot",
+      "section_now": "What Grammarly Does Well for Legal Professionals",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 1,
+        "contextual": 1
+      },
+      "closing_titles": [
+        "Where Grammarly Falls Short for Lawyers"
+      ],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_394_397",
+      "source_url": "https://aitoolsforpros.com/notion-ai/legal/",
+      "sibling_tool": "grammarly",
+      "section_now": "Where Notion AI Falls Short for Legal Counsel",
+      "counts": {
+        "table": 1,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_385_397",
+      "source_url": "https://aitoolsforpros.com/copilot/legal/",
+      "sibling_tool": "grammarly",
+      "section_now": "What Microsoft Copilot Does Well for Legal Professionals",
+      "counts": {
+        "table": 1,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_381_394",
+      "source_url": "https://aitoolsforpros.com/gemini/legal/",
+      "sibling_tool": "notion-ai",
+      "section_now": "My Verdict: Google Gemini for Legal Counsel",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_377_394",
+      "source_url": "https://aitoolsforpros.com/perplexity/legal/",
+      "sibling_tool": "notion-ai",
+      "section_now": "What Legal Counsel Are Using Perplexity AI For",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_369_397",
+      "source_url": "https://aitoolsforpros.com/claude/legal/",
+      "sibling_tool": "grammarly",
+      "section_now": "What Claude Does Well for Legal Work",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_361_397",
+      "source_url": "https://aitoolsforpros.com/chatgpt/legal/",
+      "sibling_tool": "grammarly",
+      "section_now": "What ChatGPT Does Well for Lawyers",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_393_395",
+      "source_url": "https://aitoolsforpros.com/cursor/engineers/",
+      "sibling_tool": "notion-ai",
+      "section_now": "Where Cursor Falls Short for Engineers",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_372_395",
+      "source_url": "https://aitoolsforpros.com/claude/engineers/",
+      "sibling_tool": "notion-ai",
+      "section_now": "Architecture and Design Documentation \u2014 Claude's Clearest Engineering Strength",
+      "counts": {
+        "table": 1,
+        "footer_sentence": 1,
+        "contextual": 1
+      },
+      "closing_titles": [
+        "Where Claude Falls Short for Engineers"
+      ],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_364_393",
+      "source_url": "https://aitoolsforpros.com/chatgpt/engineers/",
+      "sibling_tool": "cursor",
+      "section_now": "Where ChatGPT Falls Short for Engineers",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_391_375",
+      "source_url": "https://aitoolsforpros.com/midjourney/architects/",
+      "sibling_tool": "claude",
+      "section_now": "What Midjourney Is (and Is Not) for Architects",
+      "counts": {
+        "table": 1,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_389_383",
+      "source_url": "https://aitoolsforpros.com/copilot/finance/",
+      "sibling_tool": "gemini",
+      "section_now": "Where Copilot Falls Short for Financial Advisors",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_373_383",
+      "source_url": "https://aitoolsforpros.com/claude/finance/",
+      "sibling_tool": "gemini",
+      "section_now": "Where Claude Falls Short for Financial Advisors",
+      "counts": {
+        "table": 0,
+        "footer_sentence": 0,
+        "contextual": 1
+      },
+      "closing_titles": [],
+      "verdict": "KEEP",
+      "reasons": []
+    },
+    {
+      "record_id": "rec_365_389",
+      "source_url": "https://aitoolsforpros.com/chatgpt/finance/",
+      "sibling_tool": "copilot",
+      "section_now": "Client Communication and Correspondence",
+      "counts": {
+        "table": 1,
+        "footer_sentence": 1,
+        "contextual": 1
+      },
+      "closing_titles": [
+        "Where ChatGPT Falls Short for Financial Advisors"
+      ],
+      "verdict": "KEEP",
+      "reasons": []
+    }
+  ],
+  "revert": [
+    {
+      "record_id": "rec_378_386",
+      "source_url": "https://aitoolsforpros.com/perplexity/physicians/",
+      "sibling_tool": "copilot",
+      "section_now": "Where Perplexity Falls Short for Physicians",
+      "counts": {
+        "table": 1,
+        "footer_sentence": 1,
+        "contextual": 1
+      },
+      "closing_titles": [
+        "Where Perplexity Falls Short for Physicians"
+      ],
+      "verdict": "REVERT",
+      "reasons": [
+        "rule 3: new link landed in 'Where Perplexity Falls Short for Physicians', which already carries table=1 / footer_sentence=1 link(s) to copilot"
+      ]
+    },
+    {
+      "record_id": "rec_392_376",
+      "source_url": "https://aitoolsforpros.com/midjourney/creatives/",
+      "sibling_tool": "claude",
+      "section_now": "Where Midjourney Falls Short for Creatives",
+      "counts": {
+        "table": 1,
+        "footer_sentence": 1,
+        "contextual": 1
+      },
+      "closing_titles": [
+        "Where Midjourney Falls Short for Creatives"
+      ],
+      "verdict": "REVERT",
+      "reasons": [
+        "rule 3: new link landed in 'Where Midjourney Falls Short for Creatives', which already carries table=1 / footer_sentence=1 link(s) to claude"
+      ]
+    },
+    {
+      "record_id": "rec_368_400",
+      "source_url": "https://aitoolsforpros.com/chatgpt/creatives/",
+      "sibling_tool": "grammarly",
+      "section_now": "Where ChatGPT Falls Short for Creatives",
+      "counts": {
+        "table": 1,
+        "footer_sentence": 1,
+        "contextual": 1
+      },
+      "closing_titles": [
+        "Where ChatGPT Falls Short for Creatives"
+      ],
+      "verdict": "REVERT",
+      "reasons": [
+        "rule 3: new link landed in 'Where ChatGPT Falls Short for Creatives', which already carries table=1 / footer_sentence=1 link(s) to grammarly"
+      ]
+    },
+    {
+      "record_id": "rec_384_391",
+      "source_url": "https://aitoolsforpros.com/gemini/architects/",
+      "sibling_tool": "midjourney",
+      "section_now": "Where Gemini Falls Short for Architects",
+      "counts": {
+        "table": 1,
+        "footer_sentence": 1,
+        "contextual": 1
+      },
+      "closing_titles": [
+        "Where Gemini Falls Short for Architects"
+      ],
+      "verdict": "REVERT",
+      "reasons": [
+        "rule 3: new link landed in 'Where Gemini Falls Short for Architects', which already carries table=1 / footer_sentence=1 link(s) to midjourney"
+      ]
+    },
+    {
+      "record_id": "rec_375_391",
+      "source_url": "https://aitoolsforpros.com/claude/architects/",
+      "sibling_tool": "midjourney",
+      "section_now": "Where Claude Falls Short for Architects",
+      "counts": {
+        "table": 1,
+        "footer_sentence": 1,
+        "contextual": 1
+      },
+      "closing_titles": [
+        "Where Claude Falls Short for Architects"
+      ],
+      "verdict": "REVERT",
+      "reasons": [
+        "rule 3: new link landed in 'Where Claude Falls Short for Architects', which already carries table=1 / footer_sentence=1 link(s) to midjourney"
+      ]
+    },
+    {
+      "record_id": "rec_367_391",
+      "source_url": "https://aitoolsforpros.com/chatgpt/architects/",
+      "sibling_tool": "midjourney",
+      "section_now": "Where ChatGPT Falls Short for Architects",
+      "counts": {
+        "table": 1,
+        "footer_sentence": 1,
+        "contextual": 1
+      },
+      "closing_titles": [
+        "Where ChatGPT Falls Short for Architects"
+      ],
+      "verdict": "REVERT",
+      "reasons": [
+        "rule 3: new link landed in 'Where ChatGPT Falls Short for Architects', which already carries table=1 / footer_sentence=1 link(s) to midjourney"
+      ]
+    },
+    {
+      "record_id": "rec_379_389",
+      "source_url": "https://aitoolsforpros.com/perplexity/finance/",
+      "sibling_tool": "copilot",
+      "section_now": "Where Perplexity AI Falls Short for Financial Advisors",
+      "counts": {
+        "table": 1,
+        "footer_sentence": 1,
+        "contextual": 1
+      },
+      "closing_titles": [
+        "Where Perplexity AI Falls Short for Financial Advisors"
+      ],
+      "verdict": "REVERT",
+      "reasons": [
+        "rule 3: new link landed in 'Where Perplexity AI Falls Short for Financial Advisors', which already carries table=1 / footer_sentence=1 link(s) to copilot"
+      ]
+    }
+  ],
+  "unclear": []
+}
