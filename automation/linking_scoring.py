@@ -59,7 +59,13 @@ from wp_creds import AUTH, WP_URL  # noqa: E402
 
 import anthropic  # noqa: E402
 
-POLICY_VERSION = "1.2.0"
+from linking_audit import (  # noqa: E402
+    classify_existing_links,
+    find_section_containing,
+    FOOTER_SENTENCE_MARKER,
+)
+
+POLICY_VERSION = "1.3.0"
 MODEL = "claude-sonnet-5"
 MAX_TOKENS = 8192
 
@@ -158,6 +164,17 @@ comparison point. edit_type "modify_sentence".
 3. PROPOSE A NEW SENTENCE — only if neither of the above is possible, and only if a genuine comparison point \
 exists per the test above. edit_type "insert_sentence".
 
+PLACEMENT — you will be told below which links to the sibling tool ALREADY exist on this page and in which zone \
+(a comparison-table row, the closing "Comparing your options?" cross-navigation sentence, or an earlier genuine \
+contextual mention). A table link plus one useful contextual link is a normal, healthy pattern — do NOT treat an \
+existing table or footer-sentence link as a reason to withhold a genuinely useful contextual mention elsewhere. \
+But if you are choosing WHERE to place a new contextual mention and more than one content_sections entry would \
+work, prefer an earlier feature/workflow section over the page's LAST content_sections entry (the "Where [Tool] \
+Falls Short" / limitations section) — that closing section already carries the footer cross-navigation sentence, \
+so a second link to the same target placed there reads as clustered even when each link is individually fine. \
+This is a placement preference, not a hard rule: if the only genuinely useful, evidenced comparison point belongs \
+in that closing section, say so honestly rather than forcing a weaker sentence into an earlier section.
+
 If you cannot satisfy the test above with real, evidenced content, the correct answer is "no_opportunity_proposed" \
 or "needs_evidence" — NOT a manufactured sentence. Do not treat this as a failure; it is a normal, expected, valid \
 outcome for many pairs. Do not add links merely to fill a quota.
@@ -190,12 +207,28 @@ introduce new facts about either tool.
 """
 
 
+def describe_existing_links(source_data, sibling_slug):
+    """Human-readable summary of classify_existing_links()'s output, for the
+    model prompt — e.g. 'table: 1, footer_sentence: 1, contextual: 0'."""
+    counts, closing_titles = classify_existing_links(source_data, sibling_slug)
+    parts = [f"{zone}: {n}" for zone, n in counts.items()]
+    line = ", ".join(parts)
+    if closing_titles:
+        line += f" (closing section: {', '.join(sorted(closing_titles))})"
+    return line, counts, closing_titles
+
+
 def score_pair(client, source_data, source_slug, sibling_data, sibling_slug, primary_tool, sibling_tool, profession):
     source_text = render_page_text(source_data, allowed_top_level_keys={"content_sections"})
     sibling_text = render_page_text(sibling_data)  # full sibling text — evidence can come from any field
+    existing_links_summary, _counts, _closing_titles = describe_existing_links(source_data, sibling_slug)
 
     user_prompt = f"""SOURCE page (primary tool: {primary_tool}, profession: {profession}), editable prose only:
 {source_text}
+
+---
+
+Existing links from the SOURCE page to the SIBLING tool ({sibling_tool}), by zone: {existing_links_summary}
 
 ---
 
@@ -242,6 +275,69 @@ def apply_hard_gates(model_output):
             model_output["notes"] = (model_output.get("notes", "") +
                 " [HARD GATE OVERRIDE: no evidence_supporting_text quoted from the sibling page — "
                 "routed to needs_evidence regardless of model's stated verdict.]")
+
+    return model_output
+
+
+def apply_placement_gates(model_output, source_data, sibling_slug):
+    """Rich's 2026-08-05 zone-aware redundancy rules, applied programmatically
+    and independently of the model's own self-report — matching the same
+    fail-closed philosophy as apply_hard_gates() and linking_apply.py's live
+    re-checks (never trust self-report where it can be verified directly).
+
+    Implements the three rules that are checkable mechanically. The other
+    four (allow table+contextual coexistence; judge usefulness, not absence
+    or presence of other links; don't treat count alone as proof either way)
+    are deliberately NOT encoded as blockers here — they're judgment calls
+    left to the model's own reasoning per the system prompt's PLACEMENT
+    section, exactly because Rich's correction was that blanket count-based
+    blocking is the wrong instrument for those:
+
+      Rule 1 (defense-in-depth) — a genuine contextual link to this sibling
+        already exists somewhere on the page. linking_audit.py's gap
+        detection already excludes these pairs upstream, so this should be
+        unreachable in practice; checked again here anyway in case source
+        content changed between the audit run and this scoring run.
+      Rule 2 — never link the same target twice in one paragraph: if the
+        model's own existing_text span already contains a link to the same
+        sibling, adding another would double-link that span.
+      Rule 3 — flag tight clustering in the same closing section: the page's
+        last content_sections entry (verified structurally, not from the
+        model's self-reported section_title_hint) already carries the
+        footer "Comparing your options?" cross-navigation sentence to this
+        same sibling, or a comparison-table row to it, AND the model wants
+        to place its new contextual mention in that very same section.
+    """
+    if model_output.get("verdict") != "opportunity_proposed":
+        return model_output
+
+    existing_text = model_output.get("existing_text") or ""
+    counts, closing_titles = classify_existing_links(source_data, sibling_slug)
+
+    if counts["contextual"] > 0:
+        model_output["verdict"] = "needs_editorial_review"
+        model_output["notes"] = (model_output.get("notes", "") +
+            " [PLACEMENT GATE — rule 1: a genuine contextual link to this sibling already exists "
+            "elsewhere on the page. Not trusting the model's verdict; this pair should not have reached "
+            "scoring as a gap at all, so source content may have changed since the last audit run.]")
+        return model_output
+
+    if f"/{sibling_slug}/" in existing_text:
+        model_output["verdict"] = "needs_editorial_review"
+        model_output["notes"] = (model_output.get("notes", "") +
+            " [PLACEMENT GATE — rule 2: existing_text already contains a link to this same sibling — "
+            "adding another would link the same target twice within one paragraph.]")
+        return model_output
+
+    actual_section = find_section_containing(source_data, existing_text)
+    if actual_section and actual_section in closing_titles and (counts["table"] or counts["footer_sentence"]):
+        model_output["verdict"] = "needs_editorial_review"
+        model_output["notes"] = (model_output.get("notes", "") +
+            f" [PLACEMENT GATE — rule 3: proposed placement is in '{actual_section}', the page's closing "
+            f"section, which already carries a table link ({counts['table']}) and/or the footer "
+            f"cross-navigation sentence ({counts['footer_sentence']}) to this same sibling — this would be "
+            "tightly clustered. Held for a human look at placement, not auto-rejected outright.]")
+        return model_output
 
     return model_output
 
@@ -325,6 +421,7 @@ def main():
                 continue
 
             model_output = apply_hard_gates(model_output)
+            model_output = apply_placement_gates(model_output, source_data, sibling_post["slug"])
 
             record.update({
                 "state": model_output["verdict"],

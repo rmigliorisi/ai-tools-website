@@ -56,8 +56,21 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import requests  # noqa: E402
 from wp_creds import AUTH, WP_URL  # noqa: E402
 
-POLICY_VERSION = "1.1.0"
+POLICY_VERSION = "1.3.0"
 STYLE_MARKER = "2563eb"  # inline body-link style used for contextual mentions
+
+# The literal, fixed lead-in text of the cross-navigation sentence at the end
+# of every cross_reference page's LAST content_sections entry (the "Where
+# [Tool] Falls Short" section) — e.g. "Comparing your options? Also see...".
+# Confirmed against a real page dump (automation/_debug_claude-creatives.json,
+# 2026-08-05): this sentence is NOT a separate top-level JSON field. It is the
+# trailing paragraph inside the SAME content_sections[-1].section_body string
+# that also holds the limitations-grid / limit-card HTML — i.e. structurally
+# adjacent to, not separate from, the genuine contextual mentions that live in
+# that same closing section. This is exactly why a new contextual link placed
+# in that section reads as clustered even though it's a different HTML zone
+# in principle.
+FOOTER_SENTENCE_MARKER = "Comparing your options?"
 
 A_TAG_RE = re.compile(
     r'<a\s+href=\\?"([^"\\]+)\\?"(?:\s+style=\\?"([^"\\]*)\\?")?[^>]*>(.*?)<\/a>',
@@ -134,6 +147,68 @@ def get_contextual_tool_slugs(decoded_content):
                 if slug:
                     contextual.add(slug)
     return contextual
+
+
+def classify_existing_links(decoded_content, target_slug):
+    """Rich's 2026-08-05 redundancy-classification rules, applied at the
+    structural level rather than as a simple link-count blocker: scan every
+    existing link to target_slug on this page and bucket it by zone/purpose
+    so the scoring/apply steps can tell a table link, a footer cross-nav
+    sentence, and a genuine contextual mention apart — because "a table link
+    plus one useful contextual link is normal" and total count alone proves
+    nothing either way (governance §14, per Rich's explicit correction).
+
+    Returns (counts, closing_section_titles):
+      counts — {"table": n, "footer_sentence": n, "contextual": n} occurrences
+        of a link to target_slug in each zone.
+      closing_section_titles — set of content_sections[*].section_title
+        values whose section_body contains the footer_sentence link to this
+        target. In practice this is always the single last content_sections
+        entry (the "Where [Tool] Falls Short" section) — a NEW contextual
+        link proposed for one of these titles is "tightly clustered in the
+        same closing section" with any existing table/footer link, per rule 3.
+    """
+    counts = {"table": 0, "footer_sentence": 0, "contextual": 0}
+    closing_section_titles = set()
+
+    table_html = decoded_content.get("comparison_notes") or ""
+    for m in A_TAG_RE.finditer(table_html):
+        if tool_slug_from_href(m.group(1)) == target_slug:
+            counts["table"] += 1
+
+    for sec in decoded_content.get("content_sections") or []:
+        body = sec.get("section_body") or ""
+        title = sec.get("section_title")
+        if FOOTER_SENTENCE_MARKER in body:
+            idx = body.index(FOOTER_SENTENCE_MARKER)
+            before, after = body[:idx], body[idx:]
+        else:
+            before, after = body, ""
+
+        for m in A_TAG_RE.finditer(after):
+            if tool_slug_from_href(m.group(1)) == target_slug:
+                counts["footer_sentence"] += 1
+                closing_section_titles.add(title)
+
+        for m in A_TAG_RE.finditer(before):
+            href, style = m.group(1), m.group(2)
+            if tool_slug_from_href(href) == target_slug and style and STYLE_MARKER in style:
+                counts["contextual"] += 1
+
+    return counts, closing_section_titles
+
+
+def find_section_containing(decoded_content, snippet):
+    """Which content_sections[*].section_title contains this exact snippet,
+    if any. Used to independently verify a model's self-reported placement
+    rather than trust it, matching the fail-closed pattern used everywhere
+    else in this pipeline (e.g. linking_apply.py's live re-checks)."""
+    if not snippet:
+        return None
+    for sec in decoded_content.get("content_sections") or []:
+        if snippet in (sec.get("section_body") or ""):
+            return sec.get("section_title")
+    return None
 
 
 # ---------------------------------------------------------------------------
